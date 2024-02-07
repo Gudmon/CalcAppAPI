@@ -1,4 +1,7 @@
+using CalcAppAPI.Data;
+using CalcAppAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Controllers
 {
@@ -12,23 +15,19 @@ namespace CalcAppAPI.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly DataContext _dbContext;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, DataContext dbContext)
         {
             _logger = logger;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public async Task<ActionResult<IEnumerable<Machine>>> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
-
+            return Ok(await _dbContext.Machines
+                .ToListAsync());
         }
     }
 }
