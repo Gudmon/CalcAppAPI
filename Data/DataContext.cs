@@ -1,6 +1,6 @@
 ﻿using CalcAppAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.Hosting;
 
 namespace CalcAppAPI.Data
 {
@@ -8,18 +8,14 @@ namespace CalcAppAPI.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options) { }
         public DbSet<Machine> Machines { get; set; }
+        public DbSet<Crane> Cranes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.Entity<Machine>().HasData(
-                new Machine()
-                {
-                   Id = 1,
-                   Name = "Test",
-                   Price = "100"
-                }
-                );
-            base.OnModelCreating(builder);
+            modelBuilder.Entity<Machine>()
+                .HasMany(e => e.Cranes)
+                .WithMany(e => e.Machines);
+
         }
     }
 }

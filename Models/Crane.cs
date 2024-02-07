@@ -2,12 +2,12 @@
 
 namespace CalcAppAPI.Models
 {
-    public class Machine
+    public class Crane
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Price { get; set; }
-        public IEnumerable<Crane> Cranes { get; set; }
+        public IEnumerable<Machine> Machines { get; set; }
     }
 }

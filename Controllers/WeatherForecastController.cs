@@ -24,9 +24,10 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Machine>>> Get()
+        public async Task<ActionResult<IEnumerable<Crane>>> Get()
         {
             return Ok(await _dbContext.Machines
+                .Include(machine => machine.Cranes)
                 .ToListAsync());
         }
     }
