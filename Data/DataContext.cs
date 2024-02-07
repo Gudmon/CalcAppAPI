@@ -7,14 +7,14 @@ namespace CalcAppAPI.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options) { }
-        public DbSet<Machine> Machines { get; set; }
-        public DbSet<Crane> Cranes { get; set; }
+        public DbSet<Machine> Machine { get; set; }
+        public DbSet<Crane> Crane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Machine>()
-                .HasMany(e => e.Cranes)
-                .WithMany(e => e.Machines);
+                .HasMany(e => e.Crane)
+                .WithMany(e => e.Machine);
 
         }
     }
