@@ -22,4 +22,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Machine\Cranes\Krpan\" />
+    <Folder Include="Models\Machine\Cranes\Palms\" />
+    <Folder Include="Models\Machine\Trailers\Krpan\" />
+    <Folder Include="Models\Machine\Trailers\Palms\DoubleBeam\" />
+    <Folder Include="Models\Machine\Trailers\Palms\SingleBeam\" />
+    <Folder Include="Models\Machine\Trailers\Palms\Unibody\" />
+    <Folder Include="Responses\" />
+  </ItemGroup>
+
 </Project>
