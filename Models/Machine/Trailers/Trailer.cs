@@ -6,7 +6,6 @@ namespace CalcAppAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        public string StanchionNumber { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }

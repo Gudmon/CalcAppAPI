@@ -29,7 +29,6 @@
     <Folder Include="Models\Machine\Trailers\Palms\DoubleBeam\" />
     <Folder Include="Models\Machine\Trailers\Palms\SingleBeam\" />
     <Folder Include="Models\Machine\Trailers\Palms\Unibody\" />
-    <Folder Include="Responses\" />
   </ItemGroup>
 
 </Project>

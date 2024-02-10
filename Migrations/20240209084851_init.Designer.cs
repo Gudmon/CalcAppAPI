@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240208185422_test")]
-    partial class test
+    [Migration("20240209084851_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -136,7 +136,7 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
                             MaxReach = "4.2",
-                            Name = "Forest crane PALMS 2.42",
+                            Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
                             Price = "5165",
                             RecommendedOilFLow = "20-35",
@@ -145,6 +145,81 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
                             WorkingPressure = "190"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BrutLiftingTorque190Bar = "26",
+                            BrutLiftingTorque215Bar = "29",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "400",
+                            Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "530",
+                            LiftAtFourMeters215Bar = "600",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "370",
+                            LiftAtFullReach215Bar = "410",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "5.4",
+                            Name = "PALMS 2.54",
+                            PillarSlewingAngle = "370",
+                            Price = "6285",
+                            RecommendedOilFLow = "20-35",
+                            RotatorMaximumLoad = "45",
+                            Series = "2",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "7.8",
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BrutLiftingTorque190Bar = "36",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "415",
+                            Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "355",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "6.3",
+                            Name = "PALMS 3.63",
+                            PillarSlewingAngle = "370",
+                            Price = "6985",
+                            RecommendedOilFLow = "20-35",
+                            RotatorMaximumLoad = "45",
+                            Series = "3",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "9",
+                            WorkingPressure = "190"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BrutLiftingTorque190Bar = "41",
+                            BrutLiftingTorque215Bar = "46",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "620",
+                            Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "820",
+                            LiftAtFourMeters215Bar = "910",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "430",
+                            LiftAtFullReach215Bar = "480",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "6.7",
+                            Name = "PALMS 3.67",
+                            PillarSlewingAngle = "370",
+                            Price = "8260",
+                            RecommendedOilFLow = "30-45",
+                            RotatorMaximumLoad = "45",
+                            Series = "3",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "12",
+                            WorkingPressure = "190/215"
                         });
                 });
 
@@ -204,10 +279,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StanchionNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("StandardWheelSize")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -239,11 +310,48 @@ namespace CalcAppAPI.Migrations
                             LoadingAreaLength = "3000",
                             MaxCraneSize = "35",
                             Name = "PALMS 6S",
-                            Price = "5285",
-                            StanchionNumber = "3",
+                            Price = "",
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "4900",
                             WidthWithStandardWheels = "1950"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BeamType = "Single",
+                            CurbWeight = "1180",
+                            Description = "PALMS 8SX is a single-beam forest trailer with a nominal load capacity of 8 tons. It stands as a popular choice among many small forest landowners and farmers. The trailer's simple yet robust construction and durability make it a reliable companion for various forestry and agricultural tasks.",
+                            DrawbarControlCylinders = "2",
+                            Frame = "160x160x8",
+                            FrameExtensionLength = "0.61",
+                            GrossWeight = "10000",
+                            LoadingAreaCross = "2",
+                            LoadingAreaLength = "3550",
+                            MaxCraneSize = "47",
+                            Name = "PALMS 8SX",
+                            Price = "",
+                            StandardWheelSize = "400/60-15,5",
+                            TotalLength = "5690",
+                            WidthWithStandardWheels = "2070"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BeamType = "Single",
+                            CurbWeight = "1425",
+                            Description = "PALMS 9SC is our largest single-beam trailer in the product lineup with a nominal load capacity of 9 tons. It is ideal for customers who prefer the simplicity of a single-beam trailer while requiring a longer reach from a forestry crane. This feature makes it a popular choice, for example, among arborists. Additionally, PALMS 9SC stands out in user convenience among other single-beam trailers with its drawbar quick-lock system and patented bolster locks.",
+                            DrawbarControlCylinders = "2",
+                            Frame = "200x200x8",
+                            FrameExtensionLength = "0.70",
+                            GrossWeight = "12000",
+                            LoadingAreaCross = "2.15",
+                            LoadingAreaLength = "3870",
+                            MaxCraneSize = "65",
+                            Name = "PALMS 9SC",
+                            Price = "",
+                            StandardWheelSize = "400/60-15,5",
+                            TotalLength = "6095",
+                            WidthWithStandardWheels = "2135"
                         });
                 });
 
@@ -259,13 +367,28 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("TrailerId");
 
-                    b.ToTable("TrailerCrane", (string)null);
+                    b.ToTable("CraneTrailer", (string)null);
 
                     b.HasData(
                         new
                         {
                             CraneId = 1,
                             TrailerId = 1
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            CraneId = 1,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            TrailerId = 2
                         });
                 });
 
