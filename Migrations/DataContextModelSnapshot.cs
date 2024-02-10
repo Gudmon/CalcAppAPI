@@ -217,6 +217,72 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "12",
                             WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BrutLiftingTorque190Bar = "48",
+                            BrutLiftingTorque215Bar = "54",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "710",
+                            Description = "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.",
+                            LiftAtFourMeters190Bar = "960",
+                            LiftAtFourMeters215Bar = "1040",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "480",
+                            LiftAtFullReach215Bar = "535",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "7.1",
+                            Name = "PALMS 4.71",
+                            PillarSlewingAngle = "370",
+                            Price = "9450",
+                            RecommendedOilFLow = "45-70",
+                            RotatorMaximumLoad = "45",
+                            Series = "4",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "15",
+                            WorkingPressure = "190/215"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stanchion");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "A3",
+                            Name = "Pótkocsi 3 pár rakoncával",
+                            Price = "5285"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "A4",
+                            Name = "Pótkocsi 4 pár rakoncával",
+                            Price = "5800"
                         });
                 });
 
@@ -389,11 +455,53 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("StanchionTrailer", b =>
+                {
+                    b.Property<int>("StanchionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("StanchionId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("StanchionTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            StanchionId = 1,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            StanchionId = 2,
+                            TrailerId = 1
+                        });
+                });
+
             modelBuilder.Entity("CraneTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("StanchionTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", null)
+                        .WithMany()
+                        .HasForeignKey("StanchionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using CalcAppAPI.Models.Machine.Configurations.Trailers;
+using System.ComponentModel.DataAnnotations;
 
 namespace CalcAppAPI.Models
 {
@@ -9,8 +10,9 @@ namespace CalcAppAPI.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }
-        public string BeamType { get; set; } = Static.BeamTypes.Single;
+        public string BeamType { get; set; }
         public IEnumerable<Crane> Crane { get; set; }
+        public IEnumerable<Stanchion> Stanchion { get; set; }
         public string LoadingAreaCross { get; set; }
         public string LoadingAreaLength { get; set; }
         public string Frame { get; set; }

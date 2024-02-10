@@ -7,7 +7,7 @@
 namespace CalcAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class test5 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -43,6 +43,21 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Crane", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Stanchion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Stanchion", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -96,6 +111,30 @@ namespace CalcAppAPI.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "StanchionTrailer",
+                columns: table => new
+                {
+                    StanchionId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StanchionTrailer", x => new { x.StanchionId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_StanchionTrailer_Stanchion_StanchionId",
+                        column: x => x.StanchionId,
+                        principalTable: "Stanchion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_StanchionTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "Crane",
                 columns: new[] { "Id", "BrutLiftingTorque190Bar", "BrutLiftingTorque215Bar", "BrutLiftingTorque240Bar", "CraneWeight", "Description", "LiftAtFourMeters190Bar", "LiftAtFourMeters215Bar", "LiftAtFourMeters240Bar", "LiftAtFullReach190Bar", "LiftAtFullReach215Bar", "LiftAtFullReach240Bar", "MaxReach", "Name", "PillarSlewingAngle", "Price", "RecommendedOilFLow", "RotatorMaximumLoad", "Series", "SlewingCylinder", "SlewingTorque", "WorkingPressure" },
@@ -104,7 +143,17 @@ namespace CalcAppAPI.Migrations
                     { 1, "26", "-", "-", "360", "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", "570", "-", "-", "540", "-", "-", "4.2", "PALMS 2.42", "370", "5165", "20-35", "45", "2", "4", "7.8", "190" },
                     { 2, "26", "29", "-", "400", "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", "530", "600", "-", "370", "410", "-", "5.4", "PALMS 2.54", "370", "6285", "20-35", "45", "2", "4", "7.8", "190/215" },
                     { 3, "36", "-", "-", "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", "355", "-", "-", "-", "-", "-", "6.3", "PALMS 3.63", "370", "6985", "20-35", "45", "3", "4", "9", "190" },
-                    { 4, "41", "46", "-", "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", "820", "910", "-", "430", "480", "-", "6.7", "PALMS 3.67", "370", "8260", "30-45", "45", "3", "4", "12", "190/215" }
+                    { 4, "41", "46", "-", "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", "820", "910", "-", "430", "480", "-", "6.7", "PALMS 3.67", "370", "8260", "30-45", "45", "3", "4", "12", "190/215" },
+                    { 5, "48", "54", "-", "710", "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.", "960", "1040", "-", "480", "535", "-", "7.1", "PALMS 4.71", "370", "9450", "45-70", "45", "4", "4", "15", "190/215" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Stanchion",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "A3", "Pótkocsi 3 pár rakoncával", "5285" },
+                    { 2, "A4", "Pótkocsi 4 pár rakoncával", "5800" }
                 });
 
             migrationBuilder.InsertData(
@@ -128,9 +177,23 @@ namespace CalcAppAPI.Migrations
                     { 2, 2 }
                 });
 
+            migrationBuilder.InsertData(
+                table: "StanchionTrailer",
+                columns: new[] { "StanchionId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_CraneTrailer_TrailerId",
                 table: "CraneTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StanchionTrailer_TrailerId",
+                table: "StanchionTrailer",
                 column: "TrailerId");
         }
 
@@ -141,7 +204,13 @@ namespace CalcAppAPI.Migrations
                 name: "CraneTrailer");
 
             migrationBuilder.DropTable(
+                name: "StanchionTrailer");
+
+            migrationBuilder.DropTable(
                 name: "Crane");
+
+            migrationBuilder.DropTable(
+                name: "Stanchion");
 
             migrationBuilder.DropTable(
                 name: "Trailer");
