@@ -7,7 +7,7 @@
 namespace CalcAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class moremachines2 : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -73,6 +73,51 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Drawbar", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OilPump",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OilPump", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OilTank",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OilTank", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Platform",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Platform", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -205,6 +250,78 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "OilPumpTrailer",
+                columns: table => new
+                {
+                    OilPumpId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OilPumpTrailer", x => new { x.OilPumpId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_OilPumpTrailer_OilPump_OilPumpId",
+                        column: x => x.OilPumpId,
+                        principalTable: "OilPump",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OilPumpTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OilTankTrailer",
+                columns: table => new
+                {
+                    OilTankId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OilTankTrailer", x => new { x.OilTankId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_OilTankTrailer_OilTank_OilTankId",
+                        column: x => x.OilTankId,
+                        principalTable: "OilTank",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OilTankTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PlatformTrailer",
+                columns: table => new
+                {
+                    PlatformId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PlatformTrailer", x => new { x.PlatformId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_PlatformTrailer_Platform_PlatformId",
+                        column: x => x.PlatformId,
+                        principalTable: "Platform",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PlatformTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "PropulsionTrailer",
                 columns: table => new
                 {
@@ -295,6 +412,40 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "OilPump",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "P01", "Szivattyú adapter a vonórúdon", "60" },
+                    { 2, "P1", "101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min", "1155" },
+                    { 3, "P2", "130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min", "1575" },
+                    { 4, "P4", "61 cm3 dugattyús olajpumpa multiplikátorral a vonórúdon, 650 p/min - 98 l/min", "1995" },
+                    { 5, "P4PTO", "P4 olajmpumla PTO-val 650 p/min - 98 l/min (rögzítő konzol nélkül)", "1995" },
+                    { 6, "P6", "LS fajtájú olajmpumpa multiplikátorral, 650 p/min - 120 l/min", "4305" },
+                    { 7, "P6PTO", "P6 olajpumpa PTO-val 650 p/min - 120 l/min (rögzítő konzol nélkül)", "4305" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OilTank",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "T2", "95 l-es olajtartály", "1000" },
+                    { 2, "T2+", "95 l-es olajtartály HVLP olajjal", "1290" },
+                    { 3, "T2SOV", "95 l-es olajtartály HVLP olajjal, elzáró csappal", "1200" },
+                    { 4, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", "1490" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Platform",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "D1", "Kezelő platform háttámlával a vonórúdon", "600" },
+                    { 2, "D2", "Kezelő platform háttámlával a vonórúdon túlfutásgátlós vonórúddal", "600" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Propulsion",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
@@ -370,6 +521,54 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "OilPumpTrailer",
+                columns: new[] { "OilPumpId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 2, 2 },
+                    { 2, 3 },
+                    { 3, 2 },
+                    { 3, 3 },
+                    { 4, 2 },
+                    { 4, 3 },
+                    { 5, 2 },
+                    { 5, 3 },
+                    { 6, 2 },
+                    { 6, 3 },
+                    { 7, 2 },
+                    { 7, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OilTankTrailer",
+                columns: new[] { "OilTankId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 2, 2 },
+                    { 2, 3 },
+                    { 3, 2 },
+                    { 3, 3 },
+                    { 4, 2 },
+                    { 4, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "PlatformTrailer",
+                columns: new[] { "PlatformId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 2, 2 },
+                    { 2, 3 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "PropulsionTrailer",
                 columns: new[] { "PropulsionId", "TrailerId" },
                 values: new object[,]
@@ -411,6 +610,21 @@ namespace CalcAppAPI.Migrations
                 column: "TrailerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_OilPumpTrailer_TrailerId",
+                table: "OilPumpTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OilTankTrailer_TrailerId",
+                table: "OilTankTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PlatformTrailer_TrailerId",
+                table: "PlatformTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PropulsionTrailer_TrailerId",
                 table: "PropulsionTrailer",
                 column: "TrailerId");
@@ -434,6 +648,15 @@ namespace CalcAppAPI.Migrations
                 name: "DrawbarTrailer");
 
             migrationBuilder.DropTable(
+                name: "OilPumpTrailer");
+
+            migrationBuilder.DropTable(
+                name: "OilTankTrailer");
+
+            migrationBuilder.DropTable(
+                name: "PlatformTrailer");
+
+            migrationBuilder.DropTable(
                 name: "PropulsionTrailer");
 
             migrationBuilder.DropTable(
@@ -447,6 +670,15 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Drawbar");
+
+            migrationBuilder.DropTable(
+                name: "OilPump");
+
+            migrationBuilder.DropTable(
+                name: "OilTank");
+
+            migrationBuilder.DropTable(
+                name: "Platform");
 
             migrationBuilder.DropTable(
                 name: "Propulsion");

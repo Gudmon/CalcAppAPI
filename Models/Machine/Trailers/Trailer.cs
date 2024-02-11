@@ -27,6 +27,9 @@ namespace CalcAppAPI.Models
         public IEnumerable<Brake> Brake { get; set; }
         public IEnumerable<Propulsion> Propulsion { get; set; }
         public IEnumerable<Drawbar> Drawbar { get; set; }
+        public IEnumerable<Platform> Platform { get; set; }
+        public IEnumerable<OilPump> OilPump { get; set; }
+        public IEnumerable<OilTank> OilTank { get; set; }
 
     }
 }

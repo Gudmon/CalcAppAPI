@@ -13,8 +13,11 @@ namespace CalcAppAPI.Data
         public DbSet<Brake> Brake { get; set; }
         public DbSet<Propulsion> Propulsion { get; set; }
         public DbSet<Drawbar> Drawbar { get; set; }
+        public DbSet<Platform> Platform { get; set; }
+        public DbSet<OilPump> OilPump { get; set; }
+        public DbSet<OilTank> OilTank { get; set; }
         public DbSet<Crane> Crane { get; set; }
-
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,9 +28,12 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsBrakes();
             modelBuilder.ConfigureMultiplePalmsDrawbars();
             modelBuilder.ConfigureMultiplePalmsPropulsions();
+            modelBuilder.ConfigureMultiplePalmsPlatforms();
+            modelBuilder.ConfigureMultiplePalmsOilPumps();
+            modelBuilder.ConfigureMultiplePalmsOilTanks();
 
 
-
+            // CRANES
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Crane)
                 .WithMany(c => c.Trailer)
@@ -36,12 +42,14 @@ namespace CalcAppAPI.Data
                     (
                         new { TrailerId = 1, CraneId = 1 },
                         new { TrailerId = 1, CraneId = 2 },
+
                         new { TrailerId = 2, CraneId = 1 },
                         new { TrailerId = 2, CraneId = 2 }
                     )
            
                 );
 
+            // STANCHIONS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Stanchion)
                 .WithMany(c => c.Trailer)
@@ -67,6 +75,7 @@ namespace CalcAppAPI.Data
 
                 );
 
+            // BRAKES
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Brake)
                 .WithMany(c => c.Trailer)
@@ -79,6 +88,7 @@ namespace CalcAppAPI.Data
 
                 );
 
+            // PROPULSIONS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Propulsion)
                 .WithMany(c => c.Trailer)
@@ -91,6 +101,7 @@ namespace CalcAppAPI.Data
 
                 );
 
+            // DRAWBARS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Drawbar)
                 .WithMany(c => c.Trailer)
@@ -111,6 +122,72 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 3, DrawbarId = 5 },
                         new { TrailerId = 3, DrawbarId = 6 },
                         new { TrailerId = 3, DrawbarId = 9 }
+                    )
+
+                );
+
+            // PLATFORMS
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.Platform)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("PlatformTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 1, PlatformId = 1 },
+
+                        new { TrailerId = 2, PlatformId = 1 },
+                        new { TrailerId = 2, PlatformId = 2 },
+
+                        new { TrailerId = 3, PlatformId = 1 },
+                        new { TrailerId = 3, PlatformId = 2 }
+                    )
+
+                );
+
+            // OIL PUMPS
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.OilPump)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("OilPumpTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 2, OilPumpId = 1 },
+                        new { TrailerId = 2, OilPumpId = 2 },
+                        new { TrailerId = 2, OilPumpId = 3 },
+                        new { TrailerId = 2, OilPumpId = 4 },
+                        new { TrailerId = 2, OilPumpId = 5 },
+                        new { TrailerId = 2, OilPumpId = 6 },
+                        new { TrailerId = 2, OilPumpId = 7 },
+
+
+                        new { TrailerId = 3, OilPumpId = 1 },
+                        new { TrailerId = 3, OilPumpId = 2 },
+                        new { TrailerId = 3, OilPumpId = 3 },
+                        new { TrailerId = 3, OilPumpId = 4 },
+                        new { TrailerId = 3, OilPumpId = 5 },
+                        new { TrailerId = 3, OilPumpId = 6 },
+                        new { TrailerId = 3, OilPumpId = 7 }
+                    )
+
+                );
+
+            // OIL TANKS
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.OilTank)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("OilTankTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 2, OilTankId = 1 },
+                        new { TrailerId = 2, OilTankId = 2 },
+                        new { TrailerId = 2, OilTankId = 3 },
+                        new { TrailerId = 2, OilTankId = 4 },
+
+
+                        new { TrailerId = 3, OilTankId = 1 },
+                        new { TrailerId = 3, OilTankId = 2 },
+                        new { TrailerId = 3, OilTankId = 3 },
+                        new { TrailerId = 3, OilTankId = 4 }
                     )
 
                 );

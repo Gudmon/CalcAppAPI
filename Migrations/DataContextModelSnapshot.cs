@@ -438,6 +438,178 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OilPump");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "P01",
+                            Name = "Szivattyú adapter a vonórúdon",
+                            Price = "60"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "P1",
+                            Name = "101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min",
+                            Price = "1155"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "P2",
+                            Name = "130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min",
+                            Price = "1575"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "P4",
+                            Name = "61 cm3 dugattyús olajpumpa multiplikátorral a vonórúdon, 650 p/min - 98 l/min",
+                            Price = "1995"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "P4PTO",
+                            Name = "P4 olajmpumla PTO-val 650 p/min - 98 l/min (rögzítő konzol nélkül)",
+                            Price = "1995"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "P6",
+                            Name = "LS fajtájú olajmpumpa multiplikátorral, 650 p/min - 120 l/min",
+                            Price = "4305"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "P6PTO",
+                            Name = "P6 olajpumpa PTO-val 650 p/min - 120 l/min (rögzítő konzol nélkül)",
+                            Price = "4305"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTank", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OilTank");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "T2",
+                            Name = "95 l-es olajtartály",
+                            Price = "1000"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "T2+",
+                            Name = "95 l-es olajtartály HVLP olajjal",
+                            Price = "1290"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "T2SOV",
+                            Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal",
+                            Price = "1200"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "T2SOV+",
+                            Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel",
+                            Price = "1490"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Platform", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Platform");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "D1",
+                            Name = "Kezelő platform háttámlával a vonórúdon",
+                            Price = "600"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "D2",
+                            Name = "Kezelő platform háttámlával a vonórúdon túlfutásgátlós vonórúddal",
+                            Price = "600"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Propulsion", b =>
                 {
                     b.Property<int>("Id")
@@ -822,6 +994,192 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("OilPumpTrailer", b =>
+                {
+                    b.Property<int>("OilPumpId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OilPumpId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("OilPumpTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            OilPumpId = 1,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 5,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 6,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 7,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilPumpId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 2,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 3,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 4,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 5,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 6,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilPumpId = 7,
+                            TrailerId = 3
+                        });
+                });
+
+            modelBuilder.Entity("OilTankTrailer", b =>
+                {
+                    b.Property<int>("OilTankId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OilTankId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("OilTankTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            OilTankId = 1,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilTankId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilTankId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilTankId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            OilTankId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilTankId = 2,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilTankId = 3,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            OilTankId = 4,
+                            TrailerId = 3
+                        });
+                });
+
+            modelBuilder.Entity("PlatformTrailer", b =>
+                {
+                    b.Property<int>("PlatformId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PlatformId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("PlatformTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            PlatformId = 1,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            PlatformId = 1,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            PlatformId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            PlatformId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            PlatformId = 2,
+                            TrailerId = 3
+                        });
+                });
+
             modelBuilder.Entity("PropulsionTrailer", b =>
                 {
                     b.Property<int>("PropulsionId")
@@ -951,6 +1309,51 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Drawbar", null)
                         .WithMany()
                         .HasForeignKey("DrawbarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OilPumpTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", null)
+                        .WithMany()
+                        .HasForeignKey("OilPumpId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OilTankTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTank", null)
+                        .WithMany()
+                        .HasForeignKey("OilTankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PlatformTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Platform", null)
+                        .WithMany()
+                        .HasForeignKey("PlatformId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

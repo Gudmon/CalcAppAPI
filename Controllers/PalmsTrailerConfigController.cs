@@ -58,5 +58,35 @@ namespace CalcAppAPI.Controllers
 
             return Ok(drawbars);
         }
+
+        [HttpGet("trailers/{id}/platforms")]
+        public async Task<ActionResult<IEnumerable<Platform>>> GetPlatforms(int id)
+        {
+            var platforms = await _dbContext.Platform
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(platforms);
+        }
+
+        [HttpGet("trailers/{id}/oilpumps")]
+        public async Task<ActionResult<IEnumerable<OilPump>>> GetOilPumps(int id)
+        {
+            var oilPumps = await _dbContext.OilPump
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(oilPumps);
+        }
+
+        [HttpGet("trailers/{id}/oiltanks")]
+        public async Task<ActionResult<IEnumerable<OilTank>>> GetOilTanks(int id)
+        {
+            var oilTanks = await _dbContext.OilTank
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(oilTanks);
+        }
     }
 }
