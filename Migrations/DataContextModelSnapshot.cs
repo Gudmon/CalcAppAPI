@@ -301,7 +301,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "B0",
-                            Name = "Fék mélkül",
+                            Name = "Fék nélkül",
                             Price = "0"
                         },
                         new
@@ -310,6 +310,41 @@ namespace CalcAppAPI.Migrations
                             Code = "B1",
                             Name = "2 keréken hidraulikus fék",
                             Price = "960"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "B2",
+                            Name = "4 keréken hidraulikus fék",
+                            Price = "1810"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "B3",
+                            Name = "2 keréken légfék",
+                            Price = "1615"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "B4",
+                            Name = "4 keréken légfék",
+                            Price = "2640"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "BA-EU",
+                            Name = "Légfék",
+                            Price = "2095"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "BH-EU",
+                            Name = "Hidraulikus fék",
+                            Price = "3450"
                         });
                 });
 
@@ -426,6 +461,22 @@ namespace CalcAppAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Propulsion");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "RWD",
+                            Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
+                            Price = "5280"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "RWD+",
+                            Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
+                            Price = "7600"
+                        });
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", b =>
@@ -466,6 +517,62 @@ namespace CalcAppAPI.Migrations
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
                             Price = "5800"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "A3",
+                            Name = "Pótkocsi 3 pár rakoncával",
+                            Price = "6930"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "A4",
+                            Name = "Pótkocsi 4 pár rakoncával",
+                            Price = "7390"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "A4Ex",
+                            Name = "Pótkocsi raktérhosszabbítással és 4 pár rakoncával",
+                            Price = "7700"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "A5Ex",
+                            Name = "Pótkocsi raktérhosszabbítással és 5 pár rakoncával",
+                            Price = "8160"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "A3",
+                            Name = "Pótkocsi 3 pár rakoncával",
+                            Price = "7340"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "A4",
+                            Name = "Pótkocsi 4 pár rakoncával",
+                            Price = "7710"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "A4Ex",
+                            Name = "Pótkocsi raktérhosszabbítással és 4 pár rakoncával",
+                            Price = "8330"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "A5Ex",
+                            Name = "Pótkocsi raktérhosszabbítással és 5 pár rakoncával",
+                            Price = "8695"
                         });
                 });
 
@@ -667,6 +774,51 @@ namespace CalcAppAPI.Migrations
                         {
                             DrawbarId = 9,
                             TrailerId = 1
+                        },
+                        new
+                        {
+                            DrawbarId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            DrawbarId = 5,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            DrawbarId = 6,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            DrawbarId = 7,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            DrawbarId = 9,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            DrawbarId = 4,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            DrawbarId = 5,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            DrawbarId = 6,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            DrawbarId = 9,
+                            TrailerId = 3
                         });
                 });
 
@@ -683,6 +835,18 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("TrailerId");
 
                     b.ToTable("PropulsionTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            PropulsionId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            PropulsionId = 2,
+                            TrailerId = 3
+                        });
                 });
 
             modelBuilder.Entity("StanchionTrailer", b =>
@@ -709,6 +873,46 @@ namespace CalcAppAPI.Migrations
                         {
                             StanchionId = 2,
                             TrailerId = 1
+                        },
+                        new
+                        {
+                            StanchionId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            StanchionId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            StanchionId = 5,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            StanchionId = 6,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            StanchionId = 7,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            StanchionId = 8,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            StanchionId = 9,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            StanchionId = 10,
+                            TrailerId = 3
                         });
                 });
 

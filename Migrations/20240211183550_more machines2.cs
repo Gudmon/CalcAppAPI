@@ -7,7 +7,7 @@
 namespace CalcAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class drawbar : Migration
+    public partial class moremachines2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -257,8 +257,13 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "B0", "Fék mélkül", "0" },
-                    { 2, "B1", "2 keréken hidraulikus fék", "960" }
+                    { 1, "B0", "Fék nélkül", "0" },
+                    { 2, "B1", "2 keréken hidraulikus fék", "960" },
+                    { 3, "B2", "4 keréken hidraulikus fék", "1810" },
+                    { 4, "B3", "2 keréken légfék", "1615" },
+                    { 5, "B4", "4 keréken légfék", "2640" },
+                    { 6, "BA-EU", "Légfék", "2095" },
+                    { 7, "BH-EU", "Hidraulikus fék", "3450" }
                 });
 
             migrationBuilder.InsertData(
@@ -290,12 +295,29 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Propulsion",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "RWD", "Robson WD dörzshajtás (traktor hidarulikáról)", "5280" },
+                    { 2, "RWD+", "Robson WD dörzshajtás elektronikus vezérlőrendszerrel", "7600" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Stanchion",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
                     { 1, "A3", "Pótkocsi 3 pár rakoncával", "5285" },
-                    { 2, "A4", "Pótkocsi 4 pár rakoncával", "5800" }
+                    { 2, "A4", "Pótkocsi 4 pár rakoncával", "5800" },
+                    { 3, "A3", "Pótkocsi 3 pár rakoncával", "6930" },
+                    { 4, "A4", "Pótkocsi 4 pár rakoncával", "7390" },
+                    { 5, "A4Ex", "Pótkocsi raktérhosszabbítással és 4 pár rakoncával", "7700" },
+                    { 6, "A5Ex", "Pótkocsi raktérhosszabbítással és 5 pár rakoncával", "8160" },
+                    { 7, "A3", "Pótkocsi 3 pár rakoncával", "7340" },
+                    { 8, "A4", "Pótkocsi 4 pár rakoncával", "7710" },
+                    { 9, "A4Ex", "Pótkocsi raktérhosszabbítással és 4 pár rakoncával", "8330" },
+                    { 10, "A5Ex", "Pótkocsi raktérhosszabbítással és 5 pár rakoncával", "8695" }
                 });
 
             migrationBuilder.InsertData(
@@ -334,8 +356,26 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 4, 1 },
+                    { 4, 2 },
+                    { 4, 3 },
                     { 5, 1 },
-                    { 9, 1 }
+                    { 5, 2 },
+                    { 5, 3 },
+                    { 6, 2 },
+                    { 6, 3 },
+                    { 7, 2 },
+                    { 9, 1 },
+                    { 9, 2 },
+                    { 9, 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "PropulsionTrailer",
+                columns: new[] { "PropulsionId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 3 },
+                    { 2, 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -344,7 +384,15 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, 1 },
-                    { 2, 1 }
+                    { 2, 1 },
+                    { 3, 2 },
+                    { 4, 2 },
+                    { 5, 2 },
+                    { 6, 2 },
+                    { 7, 3 },
+                    { 8, 3 },
+                    { 9, 3 },
+                    { 10, 3 }
                 });
 
             migrationBuilder.CreateIndex(

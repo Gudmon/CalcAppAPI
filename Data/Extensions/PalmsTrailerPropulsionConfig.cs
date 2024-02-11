@@ -15,7 +15,7 @@ namespace CalcAppAPI.Data.Extensions
                    Code = "RWD",
                    Price = "5280",
                },
-               new Stanchion
+               new Propulsion
                {
                    Id = 2,
                    Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",

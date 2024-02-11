@@ -20,9 +20,12 @@ namespace CalcAppAPI.Data
         {
             modelBuilder.ConfigureMultiplePalmsTrailers();
             modelBuilder.ConfigureMultiplePalmsCranes();
+
             modelBuilder.ConfigureMultiplePalmsStanchions();
             modelBuilder.ConfigureMultiplePalmsBrakes();
             modelBuilder.ConfigureMultiplePalmsDrawbars();
+            modelBuilder.ConfigureMultiplePalmsPropulsions();
+
 
 
             modelBuilder.Entity<Trailer>()
@@ -45,8 +48,21 @@ namespace CalcAppAPI.Data
                 .UsingEntity(j => j.ToTable("StanchionTrailer")
                     .HasData
                     (
+                        //PALMS 6S
                         new { TrailerId = 1, StanchionId = 1 },
-                        new { TrailerId = 1, StanchionId = 2 }
+                        new { TrailerId = 1, StanchionId = 2 },
+
+                        //PALMS 8SX
+                        new { TrailerId = 2, StanchionId = 3 },
+                        new { TrailerId = 2, StanchionId = 4 },
+                        new { TrailerId = 2, StanchionId = 5 },
+                        new { TrailerId = 2, StanchionId = 6 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 3, StanchionId = 7 },
+                        new { TrailerId = 3, StanchionId = 8 },
+                        new { TrailerId = 3, StanchionId = 9 },
+                        new { TrailerId = 3, StanchionId = 10 }
                     )
 
                 );
@@ -67,11 +83,11 @@ namespace CalcAppAPI.Data
                 .HasMany(t => t.Propulsion)
                 .WithMany(c => c.Trailer)
                 .UsingEntity(j => j.ToTable("PropulsionTrailer")
-                    //.HasData
-                    //(
-                    //    new { TrailerId = 1, PropulsionId = 1 },
-                    //    new { TrailerId = 1, PropulsionId = 2 }
-                    //)
+                    .HasData
+                    (
+                        new { TrailerId = 3, PropulsionId = 1 },
+                        new { TrailerId = 3, PropulsionId = 2 }
+                    )
 
                 );
 
@@ -83,7 +99,18 @@ namespace CalcAppAPI.Data
                     (
                         new { TrailerId = 1, DrawbarId = 4 },
                         new { TrailerId = 1, DrawbarId = 5 },
-                        new { TrailerId = 1, DrawbarId = 9 }
+                        new { TrailerId = 1, DrawbarId = 9 },
+
+                        new { TrailerId = 2, DrawbarId = 4 },
+                        new { TrailerId = 2, DrawbarId = 5 },
+                        new { TrailerId = 2, DrawbarId = 6 },
+                        new { TrailerId = 2, DrawbarId = 7 },
+                        new { TrailerId = 2, DrawbarId = 9 },
+
+                        new { TrailerId = 3, DrawbarId = 4 },
+                        new { TrailerId = 3, DrawbarId = 5 },
+                        new { TrailerId = 3, DrawbarId = 6 },
+                        new { TrailerId = 3, DrawbarId = 9 }
                     )
 
                 );
