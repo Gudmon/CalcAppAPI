@@ -20,11 +20,43 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("trailers/{id}/stanchions")]
-        public async Task<ActionResult<IEnumerable<Stanchion>>> GetStanchions()
+        public async Task<ActionResult<IEnumerable<Stanchion>>> GetStanchions(int id)
         {
-            var trailers = await _dbContext.Stanchion.ToListAsync();
+            var stanchions = await _dbContext.Stanchion
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
 
-            return Ok(trailers);
+            return Ok(stanchions);
+        }
+
+        [HttpGet("trailers/{id}/brakes")]
+        public async Task<ActionResult<IEnumerable<Brake>>> GetBrakes(int id)
+        {
+            var brakes = await _dbContext.Brake
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(brakes);
+        }
+
+        [HttpGet("trailers/{id}/propulsions")]
+        public async Task<ActionResult<IEnumerable<Propulsion>>> GetPropulsions(int id)
+        {
+            var propulsions = await _dbContext.Propulsion
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(propulsions);
+        }
+
+        [HttpGet("trailers/{id}/drawbars")]
+        public async Task<ActionResult<IEnumerable<Drawbar>>> GetDrawbars(int id)
+        {
+            var drawbars = await _dbContext.Drawbar
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(drawbars);
         }
     }
 }

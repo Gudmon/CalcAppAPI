@@ -10,14 +10,19 @@ namespace CalcAppAPI.Data
         public DataContext(DbContextOptions<DataContext> options) : base (options) { }
         public DbSet<Trailer> Trailer { get; set; }
         public DbSet<Stanchion> Stanchion { get; set; }
+        public DbSet<Brake> Brake { get; set; }
+        public DbSet<Propulsion> Propulsion { get; set; }
+        public DbSet<Drawbar> Drawbar { get; set; }
         public DbSet<Crane> Crane { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             modelBuilder.ConfigureMultiplePalmsTrailers();
             modelBuilder.ConfigureMultiplePalmsCranes();
             modelBuilder.ConfigureMultiplePalmsStanchions();
+            modelBuilder.ConfigureMultiplePalmsBrakes();
+            modelBuilder.ConfigureMultiplePalmsDrawbars();
 
 
             modelBuilder.Entity<Trailer>()
@@ -42,6 +47,43 @@ namespace CalcAppAPI.Data
                     (
                         new { TrailerId = 1, StanchionId = 1 },
                         new { TrailerId = 1, StanchionId = 2 }
+                    )
+
+                );
+
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.Brake)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("BrakeTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 1, BrakeId = 1 },
+                        new { TrailerId = 1, BrakeId = 2 }
+                    )
+
+                );
+
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.Propulsion)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("PropulsionTrailer")
+                    //.HasData
+                    //(
+                    //    new { TrailerId = 1, PropulsionId = 1 },
+                    //    new { TrailerId = 1, PropulsionId = 2 }
+                    //)
+
+                );
+
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.Drawbar)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("DrawbarTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 1, DrawbarId = 4 },
+                        new { TrailerId = 1, DrawbarId = 5 },
+                        new { TrailerId = 1, DrawbarId = 9 }
                     )
 
                 );

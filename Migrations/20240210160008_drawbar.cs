@@ -7,11 +7,26 @@
 namespace CalcAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class test5 : Migration
+    public partial class drawbar : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Brake",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Brake", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Crane",
                 columns: table => new
@@ -43,6 +58,36 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Crane", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Drawbar",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Drawbar", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Propulsion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Propulsion", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -88,6 +133,30 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "BrakeTrailer",
+                columns: table => new
+                {
+                    BrakeId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BrakeTrailer", x => new { x.BrakeId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_BrakeTrailer_Brake_BrakeId",
+                        column: x => x.BrakeId,
+                        principalTable: "Brake",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BrakeTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CraneTrailer",
                 columns: table => new
                 {
@@ -105,6 +174,54 @@ namespace CalcAppAPI.Migrations
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CraneTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DrawbarTrailer",
+                columns: table => new
+                {
+                    DrawbarId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DrawbarTrailer", x => new { x.DrawbarId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_DrawbarTrailer_Drawbar_DrawbarId",
+                        column: x => x.DrawbarId,
+                        principalTable: "Drawbar",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DrawbarTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PropulsionTrailer",
+                columns: table => new
+                {
+                    PropulsionId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PropulsionTrailer", x => new { x.PropulsionId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_PropulsionTrailer_Propulsion_PropulsionId",
+                        column: x => x.PropulsionId,
+                        principalTable: "Propulsion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PropulsionTrailer_Trailer_TrailerId",
                         column: x => x.TrailerId,
                         principalTable: "Trailer",
                         principalColumn: "Id",
@@ -136,6 +253,15 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Brake",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "B0", "Fék mélkül", "0" },
+                    { 2, "B1", "2 keréken hidraulikus fék", "960" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Crane",
                 columns: new[] { "Id", "BrutLiftingTorque190Bar", "BrutLiftingTorque215Bar", "BrutLiftingTorque240Bar", "CraneWeight", "Description", "LiftAtFourMeters190Bar", "LiftAtFourMeters215Bar", "LiftAtFourMeters240Bar", "LiftAtFullReach190Bar", "LiftAtFullReach215Bar", "LiftAtFullReach240Bar", "MaxReach", "Name", "PillarSlewingAngle", "Price", "RecommendedOilFLow", "RotatorMaximumLoad", "Series", "SlewingCylinder", "SlewingTorque", "WorkingPressure" },
                 values: new object[,]
@@ -145,6 +271,22 @@ namespace CalcAppAPI.Migrations
                     { 3, "36", "-", "-", "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", "355", "-", "-", "-", "-", "-", "6.3", "PALMS 3.63", "370", "6985", "20-35", "45", "3", "4", "9", "190" },
                     { 4, "41", "46", "-", "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", "820", "910", "-", "430", "480", "-", "6.7", "PALMS 3.67", "370", "8260", "30-45", "45", "3", "4", "12", "190/215" },
                     { 5, "48", "54", "-", "710", "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.", "960", "1040", "-", "480", "535", "-", "7.1", "PALMS 4.71", "370", "9450", "45-70", "45", "4", "4", "15", "190/215" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Drawbar",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "C1", "Skandináv típusú forgó vonórúd", "0" },
+                    { 2, "C2", "Német típusú magas vonórúd vonószem nélkül", "0" },
+                    { 3, "C3", "Osztrák típusú alacsony vonórúd vonószem nélkül", "0" },
+                    { 4, "C4", "Német típusú magas vonórúd vonószemmel", "275" },
+                    { 5, "C5", "Osztrák típusú magas vonórúd vonószemmel", "275" },
+                    { 6, "C6", "Német típusú magas vonórúd vonószemmel", "430" },
+                    { 7, "C7", "Magas ráfutófékes vonórúd vonószemmel, kábelekkel és 2 kerék fékkel", "1675" },
+                    { 8, "C6", "K-80 típusú alacsony vonórúd vonószemmel", "470" },
+                    { 9, "C9", "Osztrák típusú alacsony vonórúd elforduló vonószemmel", "525" }
                 });
 
             migrationBuilder.InsertData(
@@ -167,6 +309,15 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "BrakeTrailer",
+                columns: new[] { "BrakeId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 2, 1 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "CraneTrailer",
                 columns: new[] { "CraneId", "TrailerId" },
                 values: new object[,]
@@ -175,6 +326,16 @@ namespace CalcAppAPI.Migrations
                     { 1, 2 },
                     { 2, 1 },
                     { 2, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "DrawbarTrailer",
+                columns: new[] { "DrawbarId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 4, 1 },
+                    { 5, 1 },
+                    { 9, 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -187,8 +348,23 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_BrakeTrailer_TrailerId",
+                table: "BrakeTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CraneTrailer_TrailerId",
                 table: "CraneTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DrawbarTrailer_TrailerId",
+                table: "DrawbarTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PropulsionTrailer_TrailerId",
+                table: "PropulsionTrailer",
                 column: "TrailerId");
 
             migrationBuilder.CreateIndex(
@@ -201,13 +377,31 @@ namespace CalcAppAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "BrakeTrailer");
+
+            migrationBuilder.DropTable(
                 name: "CraneTrailer");
+
+            migrationBuilder.DropTable(
+                name: "DrawbarTrailer");
+
+            migrationBuilder.DropTable(
+                name: "PropulsionTrailer");
 
             migrationBuilder.DropTable(
                 name: "StanchionTrailer");
 
             migrationBuilder.DropTable(
+                name: "Brake");
+
+            migrationBuilder.DropTable(
                 name: "Crane");
+
+            migrationBuilder.DropTable(
+                name: "Drawbar");
+
+            migrationBuilder.DropTable(
+                name: "Propulsion");
 
             migrationBuilder.DropTable(
                 name: "Stanchion");

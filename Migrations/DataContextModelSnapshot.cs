@@ -21,6 +21,33 @@ namespace CalcAppAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BrakeTrailer", b =>
+                {
+                    b.Property<int>("BrakeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BrakeId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("BrakeTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            BrakeId = 1,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            BrakeId = 2,
+                            TrailerId = 1
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
                 {
                     b.Property<int>("Id")
@@ -245,6 +272,162 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brake");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "B0",
+                            Name = "Fék mélkül",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "B1",
+                            Name = "2 keréken hidraulikus fék",
+                            Price = "960"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Drawbar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Drawbar");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "C1",
+                            Name = "Skandináv típusú forgó vonórúd",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "C2",
+                            Name = "Német típusú magas vonórúd vonószem nélkül",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "C3",
+                            Name = "Osztrák típusú alacsony vonórúd vonószem nélkül",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "C4",
+                            Name = "Német típusú magas vonórúd vonószemmel",
+                            Price = "275"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "C5",
+                            Name = "Osztrák típusú magas vonórúd vonószemmel",
+                            Price = "275"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "C6",
+                            Name = "Német típusú magas vonórúd vonószemmel",
+                            Price = "430"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "C7",
+                            Name = "Magas ráfutófékes vonórúd vonószemmel, kábelekkel és 2 kerék fékkel",
+                            Price = "1675"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "C6",
+                            Name = "K-80 típusú alacsony vonórúd vonószemmel",
+                            Price = "470"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "C9",
+                            Name = "Osztrák típusú alacsony vonórúd elforduló vonószemmel",
+                            Price = "525"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Propulsion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Propulsion");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", b =>
                 {
                     b.Property<int>("Id")
@@ -455,6 +638,53 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("DrawbarTrailer", b =>
+                {
+                    b.Property<int>("DrawbarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("DrawbarId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("DrawbarTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            DrawbarId = 4,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            DrawbarId = 5,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            DrawbarId = 9,
+                            TrailerId = 1
+                        });
+                });
+
+            modelBuilder.Entity("PropulsionTrailer", b =>
+                {
+                    b.Property<int>("PropulsionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PropulsionId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("PropulsionTrailer", (string)null);
+                });
+
             modelBuilder.Entity("StanchionTrailer", b =>
                 {
                     b.Property<int>("StanchionId")
@@ -482,11 +712,56 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("BrakeTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", null)
+                        .WithMany()
+                        .HasForeignKey("BrakeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("CraneTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("DrawbarTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Drawbar", null)
+                        .WithMany()
+                        .HasForeignKey("DrawbarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PropulsionTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Propulsion", null)
+                        .WithMany()
+                        .HasForeignKey("PropulsionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

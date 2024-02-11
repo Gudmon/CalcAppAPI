@@ -10,9 +10,7 @@ namespace CalcAppAPI.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Price { get; set; }
-        public string BeamType { get; set; }
-        public IEnumerable<Crane> Crane { get; set; }
-        public IEnumerable<Stanchion> Stanchion { get; set; }
+        public string BeamType { get; set; }      
         public string LoadingAreaCross { get; set; }
         public string LoadingAreaLength { get; set; }
         public string Frame { get; set; }
@@ -24,6 +22,11 @@ namespace CalcAppAPI.Models
         public string StandardWheelSize { get; set; }
         public string MaxCraneSize { get; set; }
         public string DrawbarControlCylinders { get; set; }
-        
+        public IEnumerable<Crane> Crane { get; set; }
+        public IEnumerable<Stanchion> Stanchion { get; set; }
+        public IEnumerable<Brake> Brake { get; set; }
+        public IEnumerable<Propulsion> Propulsion { get; set; }
+        public IEnumerable<Drawbar> Drawbar { get; set; }
+
     }
 }
