@@ -2,6 +2,7 @@
 using CalcAppAPI.Models;
 using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace CalcAppAPI.Data
 {
@@ -16,11 +17,20 @@ namespace CalcAppAPI.Data
         public DbSet<Platform> Platform { get; set; }
         public DbSet<OilPump> OilPump { get; set; }
         public DbSet<OilTank> OilTank { get; set; }
+        public DbSet<OilTankCooler> OilTankCooler { get; set; }
+        public DbSet<BolsterLock> BolsterLock { get; set; }
+        public DbSet<BBox> BBox { get; set; }
+        public DbSet<WoodSorter> WoodSorter { get; set; }
+        public DbSet<HandBrake> HandBrake { get; set; }
+        public DbSet<ChainsawHolder> ChainsawHolder { get; set; }
+        public DbSet<UnderrunProtection> UnderrunProtection { get; set; }
         public DbSet<Crane> Crane { get; set; }
         
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
+
             modelBuilder.ConfigureMultiplePalmsTrailers();
             modelBuilder.ConfigureMultiplePalmsCranes();
 
@@ -31,6 +41,14 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsPlatforms();
             modelBuilder.ConfigureMultiplePalmsOilPumps();
             modelBuilder.ConfigureMultiplePalmsOilTanks();
+            modelBuilder.ConfigureMultiplePalmsOilTankCoolers();
+
+            modelBuilder.ConfigureMultiplePalmsBolsterLocks();
+            modelBuilder.ConfigureMultiplePalmsBBoxes();
+            modelBuilder.ConfigureMultiplePalmsWoodSorters();
+            modelBuilder.ConfigureMultiplePalmsHandBrakes();
+            modelBuilder.ConfigureMultiplePalmsChainsawHolders();
+            modelBuilder.ConfigureMultiplePalmsUnderrunProtections();
 
 
             // CRANES
@@ -191,6 +209,56 @@ namespace CalcAppAPI.Data
                     )
 
                 );
+
+            // OIL TANK COOLER
+            modelBuilder.Entity<OilTankCooler>()
+                .HasMany(o => o.OilTank)
+                .WithOne(o => o.OilTankCooler)
+                .HasForeignKey(o => o.OilTankCoolerId)
+                .IsRequired(false);
+
+            // BOLSTER LOCK
+            modelBuilder.Entity<BolsterLock>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.BolsterLock)
+                .HasForeignKey(o => o.BolsterLockId)
+                .IsRequired(false);
+
+            // BBOX
+            modelBuilder.Entity<BBox>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.BBox)
+                .HasForeignKey(o => o.BBoxId)
+                .IsRequired(false);
+
+            // WOOD SORTER
+            modelBuilder.Entity<WoodSorter>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.WoodSorter)
+                .HasForeignKey(o => o.WoodSorterId)
+                .IsRequired(false);
+
+            // HANDBRAKES
+            modelBuilder.Entity<HandBrake>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.HandBrake)
+                .HasForeignKey(o => o.HandBrakeId)
+                .IsRequired(false);
+
+            // HANDBRAKES
+            modelBuilder.Entity<ChainsawHolder>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.ChainsawHolder)
+                .HasForeignKey(o => o.ChainsawHolderId)
+                .IsRequired(false);
+
+            // UNDERRUN PROTECTION
+            modelBuilder.Entity<UnderrunProtection>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.UnderrunProtection)
+                .HasForeignKey(o => o.UnderrunProtectionId)
+                .IsRequired(false);
+
 
             base.OnModelCreating(modelBuilder);
         }

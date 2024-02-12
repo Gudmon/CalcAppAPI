@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions
                    Name = "95 l-es olajtartály",
                    Code = "T2",
                    Price = "1000",
+                   OilTankCoolerId = 1
                },
                new OilTank
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions
                    Name = "95 l-es olajtartály HVLP olajjal",
                    Code = "T2+",
                    Price = "1290",
+                   OilTankCoolerId = 1
                },
                new OilTank
                {
@@ -28,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions
                    Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal",
                    Code = "T2SOV",
                    Price = "1200",
+                   OilTankCoolerId = null
                },
                new OilTank
                {
@@ -35,6 +38,7 @@ namespace CalcAppAPI.Data.Extensions
                    Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel",
                    Code = "T2SOV+",
                    Price = "1490",
+                   OilTankCoolerId = null
                }
                );
         }

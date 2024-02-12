@@ -84,9 +84,73 @@ namespace CalcAppAPI.Controllers
         {
             var oilTanks = await _dbContext.OilTank
                 .Where(s => s.Trailer.Any(t => t.Id == id))
+                .Include(s => s.OilTankCooler)
+                .Select(s => new OilTank
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Code = s.Code,
+                    Price = s.Price,
+                    OilTankCooler = s.OilTankCooler
+                })
                 .ToListAsync();
 
             return Ok(oilTanks);
+        }
+
+        [HttpGet("trailers/{id}/bolsterlock")]
+        public async Task<ActionResult<BolsterLock>> GetBolsterLock(int id)
+        {
+            var bolsterLock = await _dbContext.BolsterLock
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(bolsterLock);
+
+        }
+
+        [HttpGet("trailers/{id}/bbox")]
+        public async Task<ActionResult<BBox>> GetBBox(int id)
+        {
+            var bBOx = await _dbContext.BBox
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(bBOx);
+        }
+
+        [HttpGet("trailers/{id}/woodsorter")]
+        public async Task<ActionResult<WoodSorter>> GetWoodSorter(int id)
+        {
+            var woodSorter = await _dbContext.WoodSorter
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(woodSorter);
+        }
+
+        [HttpGet("trailers/{id}/handbrake")]
+        public async Task<ActionResult<HandBrake>> GetHandBrake(int id)
+        {
+            var handBrake = await _dbContext.HandBrake
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(handBrake);
+        }
+
+        [HttpGet("trailers/{id}/chainsawholder")]
+        public async Task<ActionResult<ChainsawHolder>> GetChainsawHolder(int id)
+        {
+            var chainsawHolder = await _dbContext.ChainsawHolder
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(chainsawHolder);
+        }
+
+        [HttpGet("trailers/{id}/underrunprotection")]
+        public async Task<ActionResult<UnderrunProtection>> GetUnderrunProtection(int id)
+        {
+            var underrunProtection = await _dbContext.UnderrunProtection
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(underrunProtection);
         }
     }
 }

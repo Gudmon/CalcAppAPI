@@ -13,6 +13,36 @@ namespace CalcAppAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "BBox",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BBox", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BolsterLock",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BolsterLock", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Brake",
                 columns: table => new
                 {
@@ -25,6 +55,21 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Brake", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ChainsawHolder",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ChainsawHolder", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -76,6 +121,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HandBrake",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HandBrake", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "OilPump",
                 columns: table => new
                 {
@@ -91,7 +151,7 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OilTank",
+                name: "OilTankCooler",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -102,7 +162,7 @@ namespace CalcAppAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OilTank", x => x.Id);
+                    table.PrimaryKey("PK_OilTankCooler", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -151,6 +211,57 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "UnderrunProtection",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UnderrunProtection", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "WoodSorter",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_WoodSorter", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "OilTank",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OilTankCoolerId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OilTank", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OilTank_OilTankCooler_OilTankCoolerId",
+                        column: x => x.OilTankCoolerId,
+                        principalTable: "OilTankCooler",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Trailer",
                 columns: table => new
                 {
@@ -170,11 +281,47 @@ namespace CalcAppAPI.Migrations
                     WidthWithStandardWheels = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StandardWheelSize = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaxCraneSize = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DrawbarControlCylinders = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    DrawbarControlCylinders = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BolsterLockId = table.Column<int>(type: "int", nullable: true),
+                    BBoxId = table.Column<int>(type: "int", nullable: true),
+                    WoodSorterId = table.Column<int>(type: "int", nullable: true),
+                    HandBrakeId = table.Column<int>(type: "int", nullable: true),
+                    ChainsawHolderId = table.Column<int>(type: "int", nullable: true),
+                    UnderrunProtectionId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Trailer", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Trailer_BBox_BBoxId",
+                        column: x => x.BBoxId,
+                        principalTable: "BBox",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_BolsterLock_BolsterLockId",
+                        column: x => x.BolsterLockId,
+                        principalTable: "BolsterLock",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_ChainsawHolder_ChainsawHolderId",
+                        column: x => x.ChainsawHolderId,
+                        principalTable: "ChainsawHolder",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_HandBrake_HandBrakeId",
+                        column: x => x.HandBrakeId,
+                        principalTable: "HandBrake",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_UnderrunProtection_UnderrunProtectionId",
+                        column: x => x.UnderrunProtectionId,
+                        principalTable: "UnderrunProtection",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_WoodSorter_WoodSorterId",
+                        column: x => x.WoodSorterId,
+                        principalTable: "WoodSorter",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -370,6 +517,16 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "BBox",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "2825" });
+
+            migrationBuilder.InsertData(
+                table: "BolsterLock",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "BL", "Rakconca rögzítő az első pár rakoncához", "0" });
+
+            migrationBuilder.InsertData(
                 table: "Brake",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
@@ -382,6 +539,11 @@ namespace CalcAppAPI.Migrations
                     { 6, "BA-EU", "Légfék", "2095" },
                     { 7, "BH-EU", "Hidraulikus fék", "3450" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "ChainsawHolder",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "MSH", "Láncfűrész tartó", "65" });
 
             migrationBuilder.InsertData(
                 table: "Crane",
@@ -412,6 +574,11 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "HandBrake",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "PB1", "Kézifék, kerékről működtethető", "105" });
+
+            migrationBuilder.InsertData(
                 table: "OilPump",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
@@ -427,14 +594,17 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "OilTank",
-                columns: new[] { "Id", "Code", "Name", "Price" },
+                columns: new[] { "Id", "Code", "Name", "OilTankCoolerId", "Price" },
                 values: new object[,]
                 {
-                    { 1, "T2", "95 l-es olajtartály", "1000" },
-                    { 2, "T2+", "95 l-es olajtartály HVLP olajjal", "1290" },
-                    { 3, "T2SOV", "95 l-es olajtartály HVLP olajjal, elzáró csappal", "1200" },
-                    { 4, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", "1490" }
+                    { 3, "T2SOV", "95 l-es olajtartály HVLP olajjal, elzáró csappal", null, "1200" },
+                    { 4, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", null, "1490" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "OilTankCooler",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "CP2", "Olajhűtő csomag a tartályhoz rögzítve", "1035" });
 
             migrationBuilder.InsertData(
                 table: "Platform",
@@ -472,13 +642,36 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Trailer",
-                columns: new[] { "Id", "BeamType", "CurbWeight", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionLength", "GrossWeight", "LoadingAreaCross", "LoadingAreaLength", "MaxCraneSize", "Name", "Price", "StandardWheelSize", "TotalLength", "WidthWithStandardWheels" },
+                table: "UnderrunProtection",
+                columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "Single", "890", "A PALMS 6S egyetlen gerendás erdészeti pótkocsi, melynek nominális teherbírása 6 tonna. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális magán-erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és nagyobb újraértékesítési értéket biztosít.", "1", "140x140x6", "-", "8500", "1.5", "3000", "35", "PALMS 6S", "", "400/60-15,5", "4900", "1950" },
-                    { 2, "Single", "1180", "PALMS 8SX is a single-beam forest trailer with a nominal load capacity of 8 tons. It stands as a popular choice among many small forest landowners and farmers. The trailer's simple yet robust construction and durability make it a reliable companion for various forestry and agricultural tasks.", "2", "160x160x8", "0.61", "10000", "2", "3550", "47", "PALMS 8SX", "", "400/60-15,5", "5690", "2070" },
-                    { 3, "Single", "1425", "PALMS 9SC is our largest single-beam trailer in the product lineup with a nominal load capacity of 9 tons. It is ideal for customers who prefer the simplicity of a single-beam trailer while requiring a longer reach from a forestry crane. This feature makes it a popular choice, for example, among arborists. Additionally, PALMS 9SC stands out in user convenience among other single-beam trailers with its drawbar quick-lock system and patented bolster locks.", "2", "200x200x8", "0.70", "12000", "2.15", "3870", "65", "PALMS 9SC", "", "400/60-15,5", "6095", "2135" }
+                    { 1, "RUP1", "Aláfutásgátló D-típushoz, hátsó lámpa és rendszámtartó", "1040" },
+                    { 2, "RUP2", "Aláfutásgátló S és U-típushoz, hátsó lámpa és rendszámtartó", "1040" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "WoodSorter",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "WS", "Faosztályozó rövidebb fához (1db/rakonca, az ár 1 db-ra vonatkozik)", "65" });
+
+            migrationBuilder.InsertData(
+                table: "OilTank",
+                columns: new[] { "Id", "Code", "Name", "OilTankCoolerId", "Price" },
+                values: new object[,]
+                {
+                    { 1, "T2", "95 l-es olajtartály", 1, "1000" },
+                    { 2, "T2+", "95 l-es olajtartály HVLP olajjal", 1, "1290" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Trailer",
+                columns: new[] { "Id", "BBoxId", "BeamType", "BolsterLockId", "ChainsawHolderId", "CurbWeight", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionLength", "GrossWeight", "HandBrakeId", "LoadingAreaCross", "LoadingAreaLength", "MaxCraneSize", "Name", "Price", "StandardWheelSize", "TotalLength", "UnderrunProtectionId", "WidthWithStandardWheels", "WoodSorterId" },
+                values: new object[,]
+                {
+                    { 1, null, "Single", null, 1, "890", "A PALMS 6S egyetlen gerendás erdészeti pótkocsi, melynek nominális teherbírása 6 tonna. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális magán-erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és nagyobb újraértékesítési értéket biztosít.", "1", "140x140x6", "-", "8500", null, "1,5", "3000", "35", "PALMS 6S", "", "400/60-15,5", "4900", null, "1950", null },
+                    { 2, 1, "Single", 1, 1, "1180", "A PALMS 8SX egyetlen gerendával rendelkező erdészeti utánfutó, amelynek nominális teherbírása 8 tonna. Ez a modell népszerű választás számos kis erdőbirtokos és gazdálkodó körében. Az utánfutó egyszerű, mégis robosztus kialakítása és tartóssága megbízható társává teszi különböző erdészeti és mezőgazdasági feladatokban.", "2", "160x160x8", "0,61", "10000", 1, "2", "3550", "47", "PALMS 8SX", "", "400/60-15,5", "5690", 2, "2070", 1 },
+                    { 3, 1, "Double", 1, 1, "1510", "A PALMS 8D, amelynek nominális teherbírása 8 tonna, a legkompaktabb két gerendás utánfutó a termékpalettánkban. Azoknak a felhasználóknak terveztük, akik könnyebb utánfutót keresnek, de mégis szeretnének egy két gerendás utánfutó nagyobb szilárdságát és merevségét.", "2", "2x200x100x8", "0,85", "10000", 1, "1,95", "3975", "85", "PALMS 8D", "", "400/60-15,5", "6200", 1, "2095", 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -615,6 +808,11 @@ namespace CalcAppAPI.Migrations
                 column: "TrailerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_OilTank_OilTankCoolerId",
+                table: "OilTank",
+                column: "OilTankCoolerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_OilTankTrailer_TrailerId",
                 table: "OilTankTrailer",
                 column: "TrailerId");
@@ -633,6 +831,36 @@ namespace CalcAppAPI.Migrations
                 name: "IX_StanchionTrailer_TrailerId",
                 table: "StanchionTrailer",
                 column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_BBoxId",
+                table: "Trailer",
+                column: "BBoxId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_BolsterLockId",
+                table: "Trailer",
+                column: "BolsterLockId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_ChainsawHolderId",
+                table: "Trailer",
+                column: "ChainsawHolderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_HandBrakeId",
+                table: "Trailer",
+                column: "HandBrakeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_UnderrunProtectionId",
+                table: "Trailer",
+                column: "UnderrunProtectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_WoodSorterId",
+                table: "Trailer",
+                column: "WoodSorterId");
         }
 
         /// <inheritdoc />
@@ -688,6 +916,27 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Trailer");
+
+            migrationBuilder.DropTable(
+                name: "OilTankCooler");
+
+            migrationBuilder.DropTable(
+                name: "BBox");
+
+            migrationBuilder.DropTable(
+                name: "BolsterLock");
+
+            migrationBuilder.DropTable(
+                name: "ChainsawHolder");
+
+            migrationBuilder.DropTable(
+                name: "HandBrake");
+
+            migrationBuilder.DropTable(
+                name: "UnderrunProtection");
+
+            migrationBuilder.DropTable(
+                name: "WoodSorter");
         }
     }
 }
