@@ -107,7 +107,28 @@ namespace CalcAppAPI.Data
                     .HasData
                     (
                         new { TrailerId = 1, BrakeId = 1 },
-                        new { TrailerId = 1, BrakeId = 2 }
+                        new { TrailerId = 1, BrakeId = 2 },
+                        new { TrailerId = 1, BrakeId = 3 },
+                        new { TrailerId = 1, BrakeId = 4 },
+                        new { TrailerId = 1, BrakeId = 5 },
+                        new { TrailerId = 1, BrakeId = 6 },
+                        new { TrailerId = 1, BrakeId = 7 },
+
+                        new { TrailerId = 2, BrakeId = 1 },
+                        new { TrailerId = 2, BrakeId = 2 },
+                        new { TrailerId = 2, BrakeId = 3 },
+                        new { TrailerId = 2, BrakeId = 4 },
+                        new { TrailerId = 2, BrakeId = 5 },
+                        new { TrailerId = 2, BrakeId = 6 },
+                        new { TrailerId = 2, BrakeId = 7 },
+
+                        new { TrailerId = 3, BrakeId = 1 },
+                        new { TrailerId = 3, BrakeId = 2 },
+                        new { TrailerId = 3, BrakeId = 3 },
+                        new { TrailerId = 3, BrakeId = 4 },
+                        new { TrailerId = 3, BrakeId = 5 },
+                        new { TrailerId = 3, BrakeId = 6 },
+                        new { TrailerId = 3, BrakeId = 7 }
                     )
 
                 );
