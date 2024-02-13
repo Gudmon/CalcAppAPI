@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240213110538_lights")]
+    partial class lights
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1022,130 +1025,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tyre");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "WH2.6e",
-                            Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
-                            Price = "1250"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "WH2.6",
-                            Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
-                            Price = "1450"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "WH4.6",
-                            Name = "480/45-17 RF-felni, 6 lyukas, Starco",
-                            Price = "2310"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "WH4.8",
-                            Name = "480/45-17 RF-felni, 8 lyukas, Starco (kérésre)",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "WH3.6",
-                            Name = "500/50-17 RF-felni, 6 lyukas, BKT (kérésre)",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "WH3.6",
-                            Name = "500/50-17 RF-felni, 6 lyukas, BKT",
-                            Price = "2500"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "WH3.8",
-                            Name = "500/50-17 RF-felni, 8 lyukas, BKT",
-                            Price = "2500"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Code = "WH5.6",
-                            Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance (kérésre)",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Code = "WH5.6",
-                            Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance",
-                            Price = "3215"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Code = "WH8.8",
-                            Name = "500/55-22,5 RF-felni, 8 lyukas, BKT",
-                            Price = "3770"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Code = "WH6.8",
-                            Name = "550/45-22,5 RF-felni, 8 lyukas, BKT",
-                            Price = "4010"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Code = "WH6.8V",
-                            Name = "550/45-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
-                            Price = "4410"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Code = "WH9.8V",
-                            Name = "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
-                            Price = "6425"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Code = "WH7.8",
-                            Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
-                            Price = "5410"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.UnderrunProtection", b =>
                 {
                     b.Property<int>("Id")
@@ -1889,73 +1768,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TrailerTyre", b =>
-                {
-                    b.Property<int>("TrailerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TyreId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TrailerId", "TyreId");
-
-                    b.HasIndex("TyreId");
-
-                    b.ToTable("TyreTrailer", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            TrailerId = 1,
-                            TyreId = 1
-                        },
-                        new
-                        {
-                            TrailerId = 1,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 2,
-                            TyreId = 1
-                        },
-                        new
-                        {
-                            TrailerId = 2,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 2,
-                            TyreId = 3
-                        },
-                        new
-                        {
-                            TrailerId = 3,
-                            TyreId = 1
-                        },
-                        new
-                        {
-                            TrailerId = 3,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 3,
-                            TyreId = 3
-                        },
-                        new
-                        {
-                            TrailerId = 3,
-                            TyreId = 5
-                        },
-                        new
-                        {
-                            TrailerId = 3,
-                            TyreId = 8
-                        });
-                });
-
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", null)
@@ -2150,21 +1962,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("TrailerTyre", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
-                        .WithMany()
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", null)
-                        .WithMany()
-                        .HasForeignKey("TyreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

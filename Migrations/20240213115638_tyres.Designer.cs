@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240213115638_tyres")]
+    partial class tyres
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1039,6 +1042,7 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Price")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -1071,15 +1075,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "WH4.8",
-                            Name = "480/45-17 RF-felni, 8 lyukas, Starco (kérésre)",
-                            Price = "0"
+                            Name = "480/45-17 RF-felni, 8 lyukas, Starco",
+                            Price = "kérésre"
                         },
                         new
                         {
                             Id = 5,
                             Code = "WH3.6",
-                            Name = "500/50-17 RF-felni, 6 lyukas, BKT (kérésre)",
-                            Price = "0"
+                            Name = "500/50-17 RF-felni, 6 lyukas, BKT",
+                            Price = "kérésre"
                         },
                         new
                         {
@@ -1099,8 +1103,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 8,
                             Code = "WH5.6",
-                            Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance (kérésre)",
-                            Price = "0"
+                            Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance",
+                            Price = "kérésre"
                         },
                         new
                         {

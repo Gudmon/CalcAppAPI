@@ -152,5 +152,35 @@ namespace CalcAppAPI.Controllers
 
             return Ok(underrunProtection);
         }
+
+        [HttpGet("trailers/{id}/supportlegs")]
+        public async Task<ActionResult<IEnumerable<SupportLeg>>> GetSupportLegs(int id)
+        {
+            var supportLegs = await _dbContext.SupportLeg
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(supportLegs);
+        }
+
+        [HttpGet("trailers/{id}/lights")]
+        public async Task<ActionResult<IEnumerable<Light>>> GetLights(int id)
+        {
+            var lights = await _dbContext.Light
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(lights);
+        }
+
+        [HttpGet("trailers/{id}/tyres")]
+        public async Task<ActionResult<IEnumerable<Tyre>>> GetTyres(int id)
+        {
+            var tyres = await _dbContext.Tyre
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(tyres);
+        }
     }
 }

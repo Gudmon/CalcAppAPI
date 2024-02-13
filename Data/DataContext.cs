@@ -24,6 +24,9 @@ namespace CalcAppAPI.Data
         public DbSet<HandBrake> HandBrake { get; set; }
         public DbSet<ChainsawHolder> ChainsawHolder { get; set; }
         public DbSet<UnderrunProtection> UnderrunProtection { get; set; }
+        public DbSet<SupportLeg> SupportLeg { get; set; }
+        public DbSet<Light> Light { get; set; }
+        public DbSet<Tyre> Tyre { get; set; }
         public DbSet<Crane> Crane { get; set; }
         
 
@@ -49,6 +52,9 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsHandBrakes();
             modelBuilder.ConfigureMultiplePalmsChainsawHolders();
             modelBuilder.ConfigureMultiplePalmsUnderrunProtections();
+            modelBuilder.ConfigureMultiplePalmsSupportLegs();
+            modelBuilder.ConfigureMultiplePalmsLights();
+            modelBuilder.ConfigureMultiplePalmsTyres();
 
 
             // CRANES
@@ -259,6 +265,65 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.UnderrunProtectionId)
                 .IsRequired(false);
 
+            // SUPPORT LEG
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.SupportLeg)
+                .WithMany(c => c.Trailer)
+                .UsingEntity(j => j.ToTable("SupportLegTrailer")
+                    .HasData
+                    (
+                        new { TrailerId = 1, SupportLegId = 1 },
+
+                        new { TrailerId = 2, SupportLegId = 2 },
+                        new { TrailerId = 2, SupportLegId = 3 },
+
+                        new { TrailerId = 3, SupportLegId = 2 },
+                        new { TrailerId = 3, SupportLegId = 3 }
+                    )
+                );
+
+            // LIGHT
+            modelBuilder.Entity<Trailer>()
+               .HasMany(t => t.Light)
+               .WithMany(c => c.Trailer)
+               .UsingEntity(j => j.ToTable("LightTrailer")
+                   .HasData
+                   (
+                       new { TrailerId = 1, LightId = 1 },
+                       new { TrailerId = 1, LightId = 2 },
+                       new { TrailerId = 1, LightId = 3 },
+
+                       new { TrailerId = 2, LightId = 2 },
+                       new { TrailerId = 2, LightId = 3 },
+
+                       new { TrailerId = 3, LightId = 1 },
+                       new { TrailerId = 3, LightId = 2 },
+                       new { TrailerId = 3, LightId = 3 }
+                   )
+               );
+
+            // TYRE
+            modelBuilder.Entity<Trailer>()
+               .HasMany(t => t.Tyre)
+               .WithMany(c => c.Trailer)
+               .UsingEntity(j => j.ToTable("TyreTrailer")
+                   .HasData
+                   (
+                       new { TrailerId = 1, TyreId = 1 },
+                       new { TrailerId = 1, TyreId = 2 },
+
+                       new { TrailerId = 2, TyreId = 1 },
+                       new { TrailerId = 2, TyreId = 2 },
+                       new { TrailerId = 2, TyreId = 3 },
+
+                       new { TrailerId = 3, TyreId = 1 },
+                       new { TrailerId = 3, TyreId = 2 },
+                       new { TrailerId = 3, TyreId = 3 },
+                       new { TrailerId = 3, TyreId = 5 },
+                       new { TrailerId = 3, TyreId = 8 }
+                   )
+
+               );
 
             base.OnModelCreating(modelBuilder);
         }

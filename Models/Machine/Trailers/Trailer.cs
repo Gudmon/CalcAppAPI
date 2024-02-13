@@ -31,6 +31,9 @@ namespace CalcAppAPI.Models
         public IEnumerable<Platform> Platform { get; set; }
         public IEnumerable<OilPump> OilPump { get; set; }
         public IEnumerable<OilTank> OilTank { get; set; }
+        public IEnumerable<SupportLeg> SupportLeg { get; set; }
+        public IEnumerable<Light> Light { get; set; }
+        public IEnumerable<Tyre> Tyre { get; set; }
         public BolsterLock? BolsterLock { get; set; }
         public int? BolsterLockId { get; set; }
         public BBox? BBox { get; set; }
