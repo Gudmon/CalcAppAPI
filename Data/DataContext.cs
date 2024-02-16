@@ -90,12 +90,60 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 2, StanchionId = 5 },
                         new { TrailerId = 2, StanchionId = 6 },
 
-                        //PALMS 9SC
+                        //PALMS 8D
                         new { TrailerId = 3, StanchionId = 7 },
                         new { TrailerId = 3, StanchionId = 8 },
                         new { TrailerId = 3, StanchionId = 9 },
-                        new { TrailerId = 3, StanchionId = 10 }
-                    )
+                        new { TrailerId = 3, StanchionId = 10 },
+
+                        //PALMS 8DWD
+                        new { TrailerId = 4, StanchionId = 11 },
+                        new { TrailerId = 4, StanchionId = 12 },
+                        new { TrailerId = 4, StanchionId = 13 },
+                        new { TrailerId = 4, StanchionId = 14 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 5, StanchionId = 15 },
+                        new { TrailerId = 5, StanchionId = 16 },
+                        new { TrailerId = 5, StanchionId = 17 },
+                        new { TrailerId = 5, StanchionId = 18 },
+
+                        //PALMS 10D
+                        new { TrailerId = 6, StanchionId = 19 },
+                        new { TrailerId = 6, StanchionId = 20 },
+                        new { TrailerId = 6, StanchionId = 21 },
+                        new { TrailerId = 6, StanchionId = 22 },
+
+                        //PALMS 10DWD
+                        new { TrailerId = 7, StanchionId = 23 },
+                        new { TrailerId = 7, StanchionId = 24 },
+                        new { TrailerId = 7, StanchionId = 25 },
+                        new { TrailerId = 7, StanchionId = 26 },
+
+                        //PALMS 12D
+                        new { TrailerId = 8, StanchionId = 27 },
+                        new { TrailerId = 8, StanchionId = 28 },
+                        new { TrailerId = 8, StanchionId = 29 },
+                        new { TrailerId = 8, StanchionId = 30 },
+
+                        //PALMS 12DWD
+                        new { TrailerId = 9, StanchionId = 31 },
+                        new { TrailerId = 9, StanchionId = 32 },
+                        new { TrailerId = 9, StanchionId = 33 },
+                        new { TrailerId = 9, StanchionId = 34 },
+
+                        //PALMS 14D
+                        new { TrailerId = 10, StanchionId = 35 },
+                        new { TrailerId = 10, StanchionId = 36 },
+                        new { TrailerId = 10, StanchionId = 37 },
+                        new { TrailerId = 10, StanchionId = 38 },
+
+                        //PALMS 14DWD
+                        new { TrailerId = 11, StanchionId = 39 },
+                        new { TrailerId = 11, StanchionId = 40 },
+                        new { TrailerId = 11, StanchionId = 41 },
+                        new { TrailerId = 11, StanchionId = 42 }
+                    )                     
 
                 );
 
@@ -105,7 +153,8 @@ namespace CalcAppAPI.Data
                 .WithMany(c => c.Trailer)
                 .UsingEntity(j => j.ToTable("BrakeTrailer")
                     .HasData
-                    (
+                    ( 
+                        //PALMS 6S
                         new { TrailerId = 1, BrakeId = 1 },
                         new { TrailerId = 1, BrakeId = 2 },
                         new { TrailerId = 1, BrakeId = 3 },
@@ -114,6 +163,7 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 1, BrakeId = 6 },
                         new { TrailerId = 1, BrakeId = 7 },
 
+                        //PALMS 8SX
                         new { TrailerId = 2, BrakeId = 1 },
                         new { TrailerId = 2, BrakeId = 2 },
                         new { TrailerId = 2, BrakeId = 3 },
@@ -122,15 +172,87 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 2, BrakeId = 6 },
                         new { TrailerId = 2, BrakeId = 7 },
 
+                        //PALMS 8D
                         new { TrailerId = 3, BrakeId = 1 },
                         new { TrailerId = 3, BrakeId = 2 },
                         new { TrailerId = 3, BrakeId = 3 },
                         new { TrailerId = 3, BrakeId = 4 },
                         new { TrailerId = 3, BrakeId = 5 },
-                        new { TrailerId = 3, BrakeId = 6 },
-                        new { TrailerId = 3, BrakeId = 7 }
-                    )
+                        new { TrailerId = 3, BrakeId = 8 },
+                        new { TrailerId = 3, BrakeId = 9 },
 
+                        //PALMS 8DWD
+                        new { TrailerId = 4, BrakeId = 1 },
+                        new { TrailerId = 4, BrakeId = 10 },
+                        new { TrailerId = 4, BrakeId = 11 },
+                        new { TrailerId = 4, BrakeId = 12 },
+                        new { TrailerId = 4, BrakeId = 13 },
+                        new { TrailerId = 4, BrakeId = 14 },
+                        new { TrailerId = 4, BrakeId = 15 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 5, BrakeId = 1 },
+                        new { TrailerId = 5, BrakeId = 2 },
+                        new { TrailerId = 5, BrakeId = 3 },
+                        new { TrailerId = 5, BrakeId = 4 },
+                        new { TrailerId = 5, BrakeId = 5 },
+                        new { TrailerId = 5, BrakeId = 6 },
+                        new { TrailerId = 5, BrakeId = 7 },
+
+                        //PALMS 10D
+                        new { TrailerId = 6, BrakeId = 1 },
+                        new { TrailerId = 6, BrakeId = 2 },
+                        new { TrailerId = 6, BrakeId = 3 },
+                        new { TrailerId = 6, BrakeId = 4 },
+                        new { TrailerId = 6, BrakeId = 5 },
+                        new { TrailerId = 6, BrakeId = 8 },
+                        new { TrailerId = 6, BrakeId = 9 },
+
+                        //PALMS 10DWD
+                        new { TrailerId = 7, BrakeId = 1 },
+                        new { TrailerId = 7, BrakeId = 10 },
+                        new { TrailerId = 7, BrakeId = 11 },
+                        new { TrailerId = 7, BrakeId = 12 },
+                        new { TrailerId = 7, BrakeId = 13 },
+                        new { TrailerId = 7, BrakeId = 14 },
+                        new { TrailerId = 7, BrakeId = 15 },
+
+                        //PALMS 12D
+                        new { TrailerId = 8, BrakeId = 1 },
+                        new { TrailerId = 8, BrakeId = 10 },
+                        new { TrailerId = 8, BrakeId = 16 },
+                        new { TrailerId = 8, BrakeId = 12 },
+                        new { TrailerId = 8, BrakeId = 17 },
+                        new { TrailerId = 8, BrakeId = 18 },
+                        new { TrailerId = 8, BrakeId = 19 },
+
+                        //PALMS 12DWD
+                        new { TrailerId = 9, BrakeId = 1 },
+                        new { TrailerId = 9, BrakeId = 10 },
+                        new { TrailerId = 9, BrakeId = 11 },
+                        new { TrailerId = 9, BrakeId = 12 },
+                        new { TrailerId = 9, BrakeId = 13 },
+                        new { TrailerId = 9, BrakeId = 14 },
+                        new { TrailerId = 9, BrakeId = 15 },
+
+                        //PALMS 14D
+                        new { TrailerId = 10, BrakeId = 1 },
+                        new { TrailerId = 10, BrakeId = 10 },
+                        new { TrailerId = 10, BrakeId = 16 },
+                        new { TrailerId = 10, BrakeId = 12 },
+                        new { TrailerId = 10, BrakeId = 17 },
+                        new { TrailerId = 10, BrakeId = 18 },
+                        new { TrailerId = 10, BrakeId = 19 },
+
+                        //PALMS 14DWD
+                        new { TrailerId = 11, BrakeId = 1 },
+                        new { TrailerId = 11, BrakeId = 10 },
+                        new { TrailerId = 11, BrakeId = 11 },
+                        new { TrailerId = 11, BrakeId = 12 },
+                        new { TrailerId = 11, BrakeId = 13 },
+                        new { TrailerId = 11, BrakeId = 14 },
+                        new { TrailerId = 11, BrakeId = 15 }
+                    )
                 );
 
             // PROPULSIONS
@@ -140,8 +262,42 @@ namespace CalcAppAPI.Data
                 .UsingEntity(j => j.ToTable("PropulsionTrailer")
                     .HasData
                     (
+                        //PALMS 8D
                         new { TrailerId = 3, PropulsionId = 1 },
-                        new { TrailerId = 3, PropulsionId = 2 }
+                        new { TrailerId = 3, PropulsionId = 2 },
+
+                        //PALMS 8DWD
+                        new { TrailerId = 4, PropulsionId = 3 },
+                        new { TrailerId = 4, PropulsionId = 4 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 5, PropulsionId = 1 },
+                        new { TrailerId = 5, PropulsionId = 2 },
+
+                        //PALMS 10D
+                        new { TrailerId = 6, PropulsionId = 5 },
+                        new { TrailerId = 6, PropulsionId = 6 },
+
+                        //PALMS 10DWD
+                        new { TrailerId = 7, PropulsionId = 3 },
+                        new { TrailerId = 7, PropulsionId = 4 },
+
+                        //PALMS 12D
+                        new { TrailerId = 8, PropulsionId = 5 },
+                        new { TrailerId = 8, PropulsionId = 6 },
+
+                        //PALMS 12DWD
+                        new { TrailerId = 9, PropulsionId = 3 },
+                        new { TrailerId = 9, PropulsionId = 4 },
+
+                        //PALMS 14D
+                        new { TrailerId = 10, PropulsionId = 5 },
+                        new { TrailerId = 10, PropulsionId = 6 },
+
+                        //PALMS 14DWD
+                        new { TrailerId = 11, PropulsionId = 3 },
+                        new { TrailerId = 11, PropulsionId = 4 }
+
                     )
 
                 );
@@ -153,21 +309,109 @@ namespace CalcAppAPI.Data
                 .UsingEntity(j => j.ToTable("DrawbarTrailer")
                     .HasData
                     (
+                        //PALMS 6S
+                        new { TrailerId = 1, DrawbarId = 1 },
+                        new { TrailerId = 1, DrawbarId = 2 },
+                        new { TrailerId = 1, DrawbarId = 3 },
                         new { TrailerId = 1, DrawbarId = 4 },
                         new { TrailerId = 1, DrawbarId = 5 },
                         new { TrailerId = 1, DrawbarId = 9 },
 
+                        //PALMS 8SX
+                        new { TrailerId = 2, DrawbarId = 1 },
+                        new { TrailerId = 2, DrawbarId = 2 },
+                        new { TrailerId = 2, DrawbarId = 3 },
                         new { TrailerId = 2, DrawbarId = 4 },
                         new { TrailerId = 2, DrawbarId = 5 },
                         new { TrailerId = 2, DrawbarId = 6 },
                         new { TrailerId = 2, DrawbarId = 7 },
                         new { TrailerId = 2, DrawbarId = 9 },
 
+                        //PALMS 8D
+                        new { TrailerId = 3, DrawbarId = 1 },
+                        new { TrailerId = 3, DrawbarId = 2 },
+                        new { TrailerId = 3, DrawbarId = 3 },
                         new { TrailerId = 3, DrawbarId = 4 },
                         new { TrailerId = 3, DrawbarId = 5 },
                         new { TrailerId = 3, DrawbarId = 6 },
-                        new { TrailerId = 3, DrawbarId = 9 }
-                    )
+                        new { TrailerId = 3, DrawbarId = 9 },
+
+                        //PALMS 8DWD
+                        new { TrailerId = 4, DrawbarId = 1 },
+                        new { TrailerId = 4, DrawbarId = 2 },
+                        new { TrailerId = 4, DrawbarId = 3 },
+                        new { TrailerId = 4, DrawbarId = 4 },
+                        new { TrailerId = 4, DrawbarId = 5 },
+                        new { TrailerId = 4, DrawbarId = 6 },
+                        new { TrailerId = 4, DrawbarId = 9 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 5, DrawbarId = 1 },
+                        new { TrailerId = 5, DrawbarId = 2 },
+                        new { TrailerId = 5, DrawbarId = 3 },
+                        new { TrailerId = 5, DrawbarId = 4 },
+                        new { TrailerId = 5, DrawbarId = 5 },
+                        new { TrailerId = 5, DrawbarId = 6 },
+                        new { TrailerId = 5, DrawbarId = 9 },
+
+                        //PALMS 10D
+                        new { TrailerId = 6, DrawbarId = 1 },
+                        new { TrailerId = 6, DrawbarId = 2 },
+                        new { TrailerId = 6, DrawbarId = 3 },
+                        new { TrailerId = 6, DrawbarId = 4 },
+                        new { TrailerId = 6, DrawbarId = 5 },
+                        new { TrailerId = 6, DrawbarId = 6 },
+                        new { TrailerId = 6, DrawbarId = 9 },
+
+                        //PALMS 10DWD
+                        new { TrailerId = 7, DrawbarId = 1 },
+                        new { TrailerId = 7, DrawbarId = 2 },
+                        new { TrailerId = 7, DrawbarId = 3 },
+                        new { TrailerId = 7, DrawbarId = 4 },
+                        new { TrailerId = 7, DrawbarId = 5 },
+                        new { TrailerId = 7, DrawbarId = 6 },
+                        new { TrailerId = 7, DrawbarId = 9 },
+
+                        //PALMS 12D
+                        new { TrailerId = 8, DrawbarId = 1 },
+                        new { TrailerId = 8, DrawbarId = 2 },
+                        new { TrailerId = 8, DrawbarId = 3 },
+                        new { TrailerId = 8, DrawbarId = 4 },
+                        new { TrailerId = 8, DrawbarId = 5 },
+                        new { TrailerId = 8, DrawbarId = 6 },
+                        new { TrailerId = 8, DrawbarId = 8 },
+                        new { TrailerId = 8, DrawbarId = 9 },
+
+                        //PALMS 12DWD
+                        new { TrailerId = 9, DrawbarId = 1 },
+                        new { TrailerId = 9, DrawbarId = 2 },
+                        new { TrailerId = 9, DrawbarId = 3 },
+                        new { TrailerId = 9, DrawbarId = 4 },
+                        new { TrailerId = 9, DrawbarId = 5 },
+                        new { TrailerId = 9, DrawbarId = 6 },
+                        new { TrailerId = 9, DrawbarId = 8 },
+                        new { TrailerId = 9, DrawbarId = 9 },
+
+                        //PALMS 14D
+                        new { TrailerId = 10, DrawbarId = 1 },
+                        new { TrailerId = 10, DrawbarId = 2 },
+                        new { TrailerId = 10, DrawbarId = 3 },
+                        new { TrailerId = 10, DrawbarId = 4 },
+                        new { TrailerId = 10, DrawbarId = 5 },
+                        new { TrailerId = 10, DrawbarId = 6 },
+                        new { TrailerId = 10, DrawbarId = 8 },
+                        new { TrailerId = 10, DrawbarId = 9 },
+
+                        //PALMS 14DWD
+                        new { TrailerId = 11, DrawbarId = 1 },
+                        new { TrailerId = 11, DrawbarId = 2 },
+                        new { TrailerId = 11, DrawbarId = 3 },
+                        new { TrailerId = 11, DrawbarId = 4 },
+                        new { TrailerId = 11, DrawbarId = 5 },
+                        new { TrailerId = 11, DrawbarId = 6 },
+                        new { TrailerId = 11, DrawbarId = 8 },
+                        new { TrailerId = 11, DrawbarId = 9 }
+                    )                     
 
                 );
 
@@ -178,13 +422,41 @@ namespace CalcAppAPI.Data
                 .UsingEntity(j => j.ToTable("PlatformTrailer")
                     .HasData
                     (
+                        //PALMS 6S
                         new { TrailerId = 1, PlatformId = 1 },
 
+                        //PALMS 8SX
                         new { TrailerId = 2, PlatformId = 1 },
                         new { TrailerId = 2, PlatformId = 2 },
 
+                        //PALMS 8D
                         new { TrailerId = 3, PlatformId = 1 },
-                        new { TrailerId = 3, PlatformId = 2 }
+                        new { TrailerId = 3, PlatformId = 2 },
+
+                        //PALMS 8DWD
+                        new { TrailerId = 4, PlatformId = 1 },
+                        new { TrailerId = 4, PlatformId = 2 },
+
+                        //PALMS 9SC
+                        new { TrailerId = 5, PlatformId = 1 },
+
+                        //PALMS 10D
+                        new { TrailerId = 6, PlatformId = 1 },
+
+                        //PALMS 10DWD
+                        new { TrailerId = 7, PlatformId = 1 },
+
+                        //PALMS 12D
+                        new { TrailerId = 8, PlatformId = 1 },
+                                
+                        //PALMS 12DWD
+                        new { TrailerId = 9, PlatformId = 1 },
+
+                        //PALMS 14D
+                        new { TrailerId = 10, PlatformId = 1 },
+
+                        //PALMS 14DWD
+                        new { TrailerId = 11, PlatformId = 1 }
                     )
 
                 );
@@ -211,7 +483,71 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 3, OilPumpId = 4 },
                         new { TrailerId = 3, OilPumpId = 5 },
                         new { TrailerId = 3, OilPumpId = 6 },
-                        new { TrailerId = 3, OilPumpId = 7 }
+                        new { TrailerId = 3, OilPumpId = 7 },
+
+                        new { TrailerId = 4, OilPumpId = 1 },
+                        new { TrailerId = 4, OilPumpId = 2 },
+                        new { TrailerId = 4, OilPumpId = 3 },
+                        new { TrailerId = 4, OilPumpId = 4 },
+                        new { TrailerId = 4, OilPumpId = 5 },
+                        new { TrailerId = 4, OilPumpId = 6 },
+                        new { TrailerId = 4, OilPumpId = 7 },
+
+                        new { TrailerId = 5, OilPumpId = 1 },
+                        new { TrailerId = 5, OilPumpId = 2 },
+                        new { TrailerId = 5, OilPumpId = 3 },
+                        new { TrailerId = 5, OilPumpId = 4 },
+                        new { TrailerId = 5, OilPumpId = 5 },
+                        new { TrailerId = 5, OilPumpId = 6 },
+                        new { TrailerId = 5, OilPumpId = 7 },
+
+                        new { TrailerId = 6, OilPumpId = 1 },
+                        new { TrailerId = 6, OilPumpId = 2 },
+                        new { TrailerId = 6, OilPumpId = 3 },
+                        new { TrailerId = 6, OilPumpId = 4 },
+                        new { TrailerId = 6, OilPumpId = 5 },
+                        new { TrailerId = 6, OilPumpId = 6 },
+                        new { TrailerId = 6, OilPumpId = 7 },
+
+                        new { TrailerId = 7, OilPumpId = 1 },
+                        new { TrailerId = 7, OilPumpId = 2 },
+                        new { TrailerId = 7, OilPumpId = 3 },
+                        new { TrailerId = 7, OilPumpId = 4 },
+                        new { TrailerId = 7, OilPumpId = 5 },
+                        new { TrailerId = 7, OilPumpId = 6 },
+                        new { TrailerId = 7, OilPumpId = 7 },
+
+                        new { TrailerId = 8, OilPumpId = 1 },
+                        new { TrailerId = 8, OilPumpId = 2 },
+                        new { TrailerId = 8, OilPumpId = 3 },
+                        new { TrailerId = 8, OilPumpId = 4 },
+                        new { TrailerId = 8, OilPumpId = 5 },
+                        new { TrailerId = 8, OilPumpId = 6 },
+                        new { TrailerId = 8, OilPumpId = 7 },
+
+                        new { TrailerId = 9, OilPumpId = 1 },
+                        new { TrailerId = 9, OilPumpId = 2 },
+                        new { TrailerId = 9, OilPumpId = 3 },
+                        new { TrailerId = 9, OilPumpId = 4 },
+                        new { TrailerId = 9, OilPumpId = 5 },
+                        new { TrailerId = 9, OilPumpId = 6 },
+                        new { TrailerId = 9, OilPumpId = 7 },
+
+                        new { TrailerId = 10, OilPumpId = 1 },
+                        new { TrailerId = 10, OilPumpId = 2 },
+                        new { TrailerId = 10, OilPumpId = 3 },
+                        new { TrailerId = 10, OilPumpId = 4 },
+                        new { TrailerId = 10, OilPumpId = 5 },
+                        new { TrailerId = 10, OilPumpId = 6 },
+                        new { TrailerId = 10, OilPumpId = 7 },
+
+                        new { TrailerId = 11, OilPumpId = 1 },
+                        new { TrailerId = 11, OilPumpId = 2 },
+                        new { TrailerId = 11, OilPumpId = 3 },
+                        new { TrailerId = 11, OilPumpId = 4 },
+                        new { TrailerId = 11, OilPumpId = 5 },
+                        new { TrailerId = 11, OilPumpId = 6 },
+                        new { TrailerId = 11, OilPumpId = 7 }
                     )
 
                 );
@@ -232,7 +568,51 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 3, OilTankId = 1 },
                         new { TrailerId = 3, OilTankId = 2 },
                         new { TrailerId = 3, OilTankId = 3 },
-                        new { TrailerId = 3, OilTankId = 4 }
+                        new { TrailerId = 3, OilTankId = 4 },
+
+                        new { TrailerId = 4, OilTankId = 1 },
+                        new { TrailerId = 4, OilTankId = 2 },
+                        new { TrailerId = 4, OilTankId = 3 },
+                        new { TrailerId = 4, OilTankId = 4 },
+
+
+                        new { TrailerId = 5, OilTankId = 1 },
+                        new { TrailerId = 5, OilTankId = 2 },
+                        new { TrailerId = 5, OilTankId = 3 },
+                        new { TrailerId = 5, OilTankId = 4 },
+
+                        new { TrailerId = 6, OilTankId = 1 },
+                        new { TrailerId = 6, OilTankId = 2 },
+                        new { TrailerId = 6, OilTankId = 3 },
+                        new { TrailerId = 6, OilTankId = 4 },
+
+
+                        new { TrailerId = 7, OilTankId = 1 },
+                        new { TrailerId = 7, OilTankId = 2 },
+                        new { TrailerId = 7, OilTankId = 3 },
+                        new { TrailerId = 7, OilTankId = 4 },
+
+                        new { TrailerId = 8, OilTankId = 1 },
+                        new { TrailerId = 8, OilTankId = 2 },
+                        new { TrailerId = 8, OilTankId = 3 },
+                        new { TrailerId = 8, OilTankId = 4 },
+
+
+                        new { TrailerId = 9, OilTankId = 1 },
+                        new { TrailerId = 9, OilTankId = 2 },
+                        new { TrailerId = 9, OilTankId = 3 },
+                        new { TrailerId = 9, OilTankId = 4 },
+
+                        new { TrailerId = 10, OilTankId = 1 },
+                        new { TrailerId = 10, OilTankId = 2 },
+                        new { TrailerId = 10, OilTankId = 3 },
+                        new { TrailerId = 10, OilTankId = 4 },
+
+
+                        new { TrailerId = 11, OilTankId = 1 },
+                        new { TrailerId = 11, OilTankId = 2 },
+                        new { TrailerId = 11, OilTankId = 3 },
+                        new { TrailerId = 11, OilTankId = 4 }
                     )
 
                 );
@@ -299,7 +679,31 @@ namespace CalcAppAPI.Data
                         new { TrailerId = 2, SupportLegId = 3 },
 
                         new { TrailerId = 3, SupportLegId = 2 },
-                        new { TrailerId = 3, SupportLegId = 3 }
+                        new { TrailerId = 3, SupportLegId = 3 },
+
+                        new { TrailerId = 4, SupportLegId = 2 },
+                        new { TrailerId = 4, SupportLegId = 3 },
+
+                        new { TrailerId = 5, SupportLegId = 2 },
+                        new { TrailerId = 5, SupportLegId = 3 },
+
+                        new { TrailerId = 6, SupportLegId = 2 },
+                        new { TrailerId = 6, SupportLegId = 3 },
+
+                        new { TrailerId = 7, SupportLegId = 2 },
+                        new { TrailerId = 7, SupportLegId = 3 },
+
+                        new { TrailerId = 8, SupportLegId = 2 },
+                        new { TrailerId = 8, SupportLegId = 3 },
+
+                        new { TrailerId = 9, SupportLegId = 2 },
+                        new { TrailerId = 9, SupportLegId = 3 },
+
+                        new { TrailerId = 10, SupportLegId = 2 },
+                        new { TrailerId = 10, SupportLegId = 3 },
+
+                        new { TrailerId = 11, SupportLegId = 2 },
+                        new { TrailerId = 11, SupportLegId = 3 }
                     )
                 );
 
@@ -319,7 +723,39 @@ namespace CalcAppAPI.Data
 
                        new { TrailerId = 3, LightId = 1 },
                        new { TrailerId = 3, LightId = 2 },
-                       new { TrailerId = 3, LightId = 3 }
+                       new { TrailerId = 3, LightId = 3 },
+
+                       new { TrailerId = 4, LightId = 1 },
+                       new { TrailerId = 4, LightId = 2 },
+                       new { TrailerId = 4, LightId = 3 },
+
+                       new { TrailerId = 5, LightId = 1 },
+                       new { TrailerId = 5, LightId = 2 },
+                       new { TrailerId = 5, LightId = 3 },
+
+                       new { TrailerId = 6, LightId = 1 },
+                       new { TrailerId = 6, LightId = 2 },
+                       new { TrailerId = 6, LightId = 3 },
+
+                       new { TrailerId = 7, LightId = 1 },
+                       new { TrailerId = 7, LightId = 2 },
+                       new { TrailerId = 7, LightId = 3 },
+
+                       new { TrailerId = 8, LightId = 1 },
+                       new { TrailerId = 8, LightId = 2 },
+                       new { TrailerId = 8, LightId = 3 },
+
+                       new { TrailerId = 9, LightId = 1 },
+                       new { TrailerId = 9, LightId = 2 },
+                       new { TrailerId = 9, LightId = 3 },
+
+                       new { TrailerId = 10, LightId = 1 },
+                       new { TrailerId = 10, LightId = 2 },
+                       new { TrailerId = 10, LightId = 3 },
+
+                       new { TrailerId = 11, LightId = 1 },
+                       new { TrailerId = 11, LightId = 2 },
+                       new { TrailerId = 11, LightId = 3 }
                    )
                );
 
