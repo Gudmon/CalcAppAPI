@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240216120019_remove")]
+    partial class remove
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -656,6 +659,9 @@ namespace CalcAppAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool?>("Available")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -667,6 +673,9 @@ namespace CalcAppAPI.Migrations
                     b.Property<string>("Price")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Recommended")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -1814,108 +1823,6 @@ namespace CalcAppAPI.Migrations
                             Name = "Tekerővel állítható kitámasztó láb a vonórúdon",
                             Price = "420"
                         });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerCraneConfiguration", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SelectedFrameTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TrailerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CraneId");
-
-                    b.HasIndex("SelectedFrameTypeId");
-
-                    b.HasIndex("TrailerId");
-
-                    b.ToTable("TrailerCraneConfigurations");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CraneId = 4,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CraneId = 4,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CraneId = 4,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CraneId = 4,
-                            SelectedFrameTypeId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CraneId = 4,
-                            SelectedFrameTypeId = 4,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CraneId = 5,
-                            SelectedFrameTypeId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CraneId = 5,
-                            SelectedFrameTypeId = 4,
-                            TrailerId = 2
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerFrameTypeConfiguration", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("FrameTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TrailerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FrameTypeId");
-
-                    b.HasIndex("TrailerId");
-
-                    b.ToTable("TrailerFrameTypeConfiguration");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", b =>
@@ -4346,52 +4253,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("OilTankCooler");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerCraneConfiguration", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", "Crane")
-                        .WithMany("TrailerConfigurations")
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", "SelectedFrameType")
-                        .WithMany()
-                        .HasForeignKey("SelectedFrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", "Trailer")
-                        .WithMany("CraneConfigurations")
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Crane");
-
-                    b.Navigation("SelectedFrameType");
-
-                    b.Navigation("Trailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerFrameTypeConfiguration", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", "FrameType")
-                        .WithMany("TrailerConfigurations")
-                        .HasForeignKey("FrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", "Trailer")
-                        .WithMany()
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FrameType");
-
-                    b.Navigation("Trailer");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Trailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", "BBox")
@@ -4581,16 +4442,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
-                {
-                    b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
-                {
-                    b.Navigation("TrailerConfigurations");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", b =>
                 {
                     b.Navigation("Trailer");
@@ -4624,11 +4475,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.WoodSorter", b =>
                 {
                     b.Navigation("Trailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Trailer", b =>
-                {
-                    b.Navigation("CraneConfigurations");
                 });
 #pragma warning restore 612, 618
         }

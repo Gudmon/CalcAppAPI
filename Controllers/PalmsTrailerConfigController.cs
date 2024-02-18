@@ -1,4 +1,6 @@
 ﻿using CalcAppAPI.Data;
+using CalcAppAPI.Models;
+using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using CalcAppAPI.Responses;
 using Microsoft.AspNetCore.Mvc;
@@ -181,6 +183,30 @@ namespace CalcAppAPI.Controllers
                 .ToListAsync();
 
             return Ok(tyres);
+        }
+
+        [HttpGet("{trailerId}/cranes/{craneId}/availableFrameTypes")]
+        public ActionResult<IEnumerable<FrameType>> GetAvailableFrameTypes(int trailerId, int craneId)
+        {
+            var trailer = _dbContext.Trailer
+                .Include(t => t.CraneConfigurations)
+                    .ThenInclude(tc => tc.Crane)
+                .FirstOrDefault(t => t.Id == trailerId);
+
+            if (trailer == null)
+            {
+                return NotFound();
+            }
+
+            var craneConfigurations = trailer.CraneConfigurations.Where(tc => tc.CraneId == craneId).Select(tc => tc.Crane).ToList();
+
+            var frameTypes = craneConfigurations.SelectMany(crane =>
+                _dbContext.TrailerCraneConfigurations
+                    .Where(tc => tc.CraneId == crane.Id && tc.TrailerId == trailerId)
+                    .Select(tc => tc.SelectedFrameType)
+            ).Distinct().ToList();
+
+            return Ok(frameTypes);
         }
     }
 }

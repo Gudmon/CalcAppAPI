@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240216144642_trailer crane config3")]
+    partial class trailercraneconfig3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1876,20 +1879,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             CraneId = 4,
-                            SelectedFrameTypeId = 4,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CraneId = 5,
-                            SelectedFrameTypeId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CraneId = 5,
                             SelectedFrameTypeId = 4,
                             TrailerId = 2
                         });

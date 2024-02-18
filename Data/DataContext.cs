@@ -1,8 +1,9 @@
-﻿using CalcAppAPI.Data.Extensions;
+﻿using CalcAppAPI.Data.Extensions.Palms.Cranes;
+using CalcAppAPI.Data.Extensions.Palms.Trailers;
 using CalcAppAPI.Models;
+using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Metadata;
 
 namespace CalcAppAPI.Data
 {
@@ -28,12 +29,12 @@ namespace CalcAppAPI.Data
         public DbSet<Light> Light { get; set; }
         public DbSet<Tyre> Tyre { get; set; }
         public DbSet<Crane> Crane { get; set; }
-        
+        public DbSet<FrameType> FrameType { get; set; }
+        public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            
-
+        {         
             modelBuilder.ConfigureMultiplePalmsTrailers();
             modelBuilder.ConfigureMultiplePalmsCranes();
 
@@ -56,6 +57,72 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsLights();
             modelBuilder.ConfigureMultiplePalmsTyres();
 
+            modelBuilder.ConfigureMultiplePalmsFrameTypes();
+
+            modelBuilder.Entity<Trailer>()
+                .HasMany(t => t.CraneConfigurations)
+                .WithOne(tc => tc.Trailer)
+                .HasForeignKey(tc => tc.TrailerId);
+
+            modelBuilder.Entity<Crane>()
+                .HasMany(c => c.TrailerConfigurations)
+                .WithOne(tc => tc.Crane)
+                .HasForeignKey(tc => tc.CraneId);
+
+            modelBuilder.Entity<TrailerCraneConfiguration>().HasData(
+                new TrailerCraneConfiguration
+                {
+                    Id = 1,
+                    TrailerId = 1,
+                    CraneId = 4, 
+                    SelectedFrameTypeId = 1 
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 2,
+                    TrailerId = 1,
+                    CraneId = 4,
+                    SelectedFrameTypeId = 2 
+                },
+
+                new TrailerCraneConfiguration
+                {
+                    Id = 3,
+                    TrailerId = 2,
+                    CraneId = 4, 
+                    SelectedFrameTypeId = 1 
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 4,
+                    TrailerId = 2,
+                    CraneId = 4,
+                    SelectedFrameTypeId = 3
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 5,
+                    TrailerId = 2,
+                    CraneId = 4,
+                    SelectedFrameTypeId = 4
+                },
+
+                new TrailerCraneConfiguration
+                {
+                    Id = 6,
+                    TrailerId = 2,
+                    CraneId = 5,
+                    SelectedFrameTypeId = 3
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 7,
+                    TrailerId = 2,
+                    CraneId = 5,
+                    SelectedFrameTypeId = 4
+                }
+
+            );
 
             // CRANES
             modelBuilder.Entity<Trailer>()

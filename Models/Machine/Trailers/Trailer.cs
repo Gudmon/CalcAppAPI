@@ -47,5 +47,6 @@ namespace CalcAppAPI.Models
         public UnderrunProtection? UnderrunProtection { get; set; }
         public int? UnderrunProtectionId { get; set; }
 
+        public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }

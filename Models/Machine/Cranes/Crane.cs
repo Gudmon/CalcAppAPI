@@ -1,4 +1,5 @@
 ﻿
+using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using System.ComponentModel.DataAnnotations;
 
 namespace CalcAppAPI.Models
@@ -17,7 +18,6 @@ namespace CalcAppAPI.Models
         public string LiftAtFourMeters240Bar { get; set; }
         public string LiftAtFourMeters215Bar { get; set; }
         public string LiftAtFourMeters190Bar { get; set; }
-
         public string BrutLiftingTorque240Bar { get; set; }
         public string BrutLiftingTorque215Bar { get; set; }
         public string BrutLiftingTorque190Bar { get; set; }
@@ -29,5 +29,6 @@ namespace CalcAppAPI.Models
         public string PillarSlewingAngle { get; set; }
         public string RecommendedOilFLow { get; set; }
         public IEnumerable<Trailer> Trailer { get; set; }
+        public IEnumerable<TrailerCraneConfiguration> TrailerConfigurations { get; set; }
     }
 }
