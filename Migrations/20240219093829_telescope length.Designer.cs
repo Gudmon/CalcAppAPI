@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240219093829_telescope length")]
+    partial class telescopelength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -492,7 +495,7 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RecommendedOilFlow")
+                    b.Property<string>("RecommendedOilFLow")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -543,7 +546,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
                             Price = "5165",
-                            RecommendedOilFlow = "20-35",
+                            RecommendedOilFLow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
                             SlewingCylinder = "4",
@@ -569,7 +572,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 2.54",
                             PillarSlewingAngle = "370",
                             Price = "6285",
-                            RecommendedOilFlow = "20-35",
+                            RecommendedOilFLow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
                             SlewingCylinder = "4",
@@ -595,7 +598,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
                             Price = "6985",
-                            RecommendedOilFlow = "20-35",
+                            RecommendedOilFLow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "3",
                             SlewingCylinder = "4",
@@ -621,7 +624,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
                             Price = "8260",
-                            RecommendedOilFlow = "30-45",
+                            RecommendedOilFLow = "30-45",
                             RotatorMaximumLoad = "45",
                             Series = "3",
                             SlewingCylinder = "4",
@@ -647,7 +650,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 4.71",
                             PillarSlewingAngle = "370",
                             Price = "9450",
-                            RecommendedOilFlow = "45-70",
+                            RecommendedOilFLow = "45-70",
                             RotatorMaximumLoad = "45",
                             Series = "4",
                             SlewingCylinder = "4",
@@ -669,14 +672,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Mass")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -694,8 +689,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "B0",
-                            Description = "",
-                            Mass = "",
                             Name = "Talpaló nélkül",
                             Price = "0"
                         },
@@ -703,8 +696,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "B2.1",
-                            Description = "Kisebb PALMS erdészeti darukhoz megfelelő típusú támasztólábak",
-                            Mass = "174",
                             Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                             Price = "1680"
                         },
@@ -712,8 +703,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "B3",
-                            Description = "A típusú támasztólábak közepes méretű PALMS darukhoz",
-                            Mass = "313",
                             Name = "A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                             Price = "2100"
                         },
@@ -721,8 +710,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "B4e",
-                            Description = "FD típusú támasztólábak",
-                            Mass = "237",
                             Name = "FD típusú economy letalpaló",
                             Price = "2100"
                         },
@@ -730,8 +717,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "B6.1",
-                            Description = "FD típusú támasztólábak",
-                            Mass = "449",
                             Name = "FD típusú letalpaló, 3 pontos csatlakozással",
                             Price = "3090"
                         },
@@ -739,8 +724,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 6,
                             Code = "B09",
-                            Description = "Nagy teherbírású talp támasztólábak nélkül",
-                            Mass = "231",
                             Name = "Különösen erős alap, talpaló lábak nélkül",
                             Price = "1155"
                         },
@@ -748,8 +731,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 7,
                             Code = "B9",
-                            Description = "FD nagy teherbírású (HD) típusú támaszlábak",
-                            Mass = "474",
                             Name = "FD típusú, különösen erős letalpaló (HD)",
                             Price = "3530"
                         },
@@ -757,8 +738,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 8,
                             Code = "B10",
-                            Description = "FD típusú támasztólábak PALMS 5.87Z daruhoz",
-                            Mass = "520",
                             Name = "Talpaló Z daruhoz",
                             Price = "3685"
                         });
@@ -2525,88 +2504,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CraneFrameType", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FrameTypeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "FrameTypeId");
-
-                    b.HasIndex("FrameTypeId");
-
-                    b.ToTable("FrameTypeCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            FrameTypeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            FrameTypeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            FrameTypeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            FrameTypeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            FrameTypeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            FrameTypeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            FrameTypeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            FrameTypeId = 5
-                        });
-                });
-
             modelBuilder.Entity("CraneTrailer", b =>
                 {
                     b.Property<int>("CraneId")
@@ -2640,16 +2537,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            CraneId = 4,
                             TrailerId = 2
                         });
                 });
@@ -4554,21 +4441,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("UnderrunProtection");
 
                     b.Navigation("WoodSorter");
-                });
-
-            modelBuilder.Entity("CraneFrameType", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
-                        .WithMany()
-                        .HasForeignKey("FrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("CraneTrailer", b =>

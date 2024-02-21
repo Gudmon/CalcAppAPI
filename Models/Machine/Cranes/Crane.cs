@@ -1,4 +1,5 @@
 ﻿
+using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using System.ComponentModel.DataAnnotations;
 
@@ -21,14 +22,16 @@ namespace CalcAppAPI.Models
         public string BrutLiftingTorque240Bar { get; set; }
         public string BrutLiftingTorque215Bar { get; set; }
         public string BrutLiftingTorque190Bar { get; set; }
+        public string TelescopeLength { get; set; }
         public string SlewingCylinder { get; set; }
         public string SlewingTorque { get; set; }
         public string WorkingPressure { get; set; }
         public string RotatorMaximumLoad { get; set; }
         public string CraneWeight { get; set; }
         public string PillarSlewingAngle { get; set; }
-        public string RecommendedOilFLow { get; set; }
+        public string RecommendedOilFlow { get; set; }
         public IEnumerable<Trailer> Trailer { get; set; }
         public IEnumerable<TrailerCraneConfiguration> TrailerConfigurations { get; set; }
+        public IEnumerable<FrameType> FrameType { get; set; }
     }
 }

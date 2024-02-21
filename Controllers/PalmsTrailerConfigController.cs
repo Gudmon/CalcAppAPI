@@ -12,10 +12,10 @@ namespace CalcAppAPI.Controllers
     [Route("[controller]")]
     public class PalmsTrailerConfigController : ControllerBase
     {
-        private readonly ILogger<PalmsController> _logger;
+        private readonly ILogger<PalmsTrailerConfigController> _logger;
         private readonly DataContext _dbContext;
 
-        public PalmsTrailerConfigController(ILogger<PalmsController> logger, DataContext dbContext)
+        public PalmsTrailerConfigController(ILogger<PalmsTrailerConfigController> logger, DataContext dbContext)
         {
             _logger = logger;
             _dbContext = dbContext;
@@ -183,30 +183,6 @@ namespace CalcAppAPI.Controllers
                 .ToListAsync();
 
             return Ok(tyres);
-        }
-
-        [HttpGet("{trailerId}/cranes/{craneId}/availableFrameTypes")]
-        public ActionResult<IEnumerable<FrameType>> GetAvailableFrameTypes(int trailerId, int craneId)
-        {
-            var trailer = _dbContext.Trailer
-                .Include(t => t.CraneConfigurations)
-                    .ThenInclude(tc => tc.Crane)
-                .FirstOrDefault(t => t.Id == trailerId);
-
-            if (trailer == null)
-            {
-                return NotFound();
-            }
-
-            var craneConfigurations = trailer.CraneConfigurations.Where(tc => tc.CraneId == craneId).Select(tc => tc.Crane).ToList();
-
-            var frameTypes = craneConfigurations.SelectMany(crane =>
-                _dbContext.TrailerCraneConfigurations
-                    .Where(tc => tc.CraneId == crane.Id && tc.TrailerId == trailerId)
-                    .Select(tc => tc.SelectedFrameType)
-            ).Distinct().ToList();
-
-            return Ok(frameTypes);
         }
     }
 }

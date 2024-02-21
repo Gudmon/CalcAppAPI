@@ -25,13 +25,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BrutLiftingTorque240Bar = "-",
                    BrutLiftingTorque215Bar = "-",
                    BrutLiftingTorque190Bar = "26",
+                   TelescopeLength = "-",
                    SlewingCylinder = "4",
                    SlewingTorque = "7.8",
                    WorkingPressure = "190",
                    RotatorMaximumLoad = "45",
                    CraneWeight = "360",
                    PillarSlewingAngle = "370",
-                   RecommendedOilFLow = "20-35",
+                   RecommendedOilFlow = "20-35",
                },
 
                new Crane
@@ -51,13 +52,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BrutLiftingTorque240Bar = "-",
                    BrutLiftingTorque215Bar = "29",
                    BrutLiftingTorque190Bar = "26",
+                   TelescopeLength = "1,33",
                    SlewingCylinder = "4",
                    SlewingTorque = "7.8",
                    WorkingPressure = "190/215",
                    RotatorMaximumLoad = "45",
                    CraneWeight = "400",
                    PillarSlewingAngle = "370",
-                   RecommendedOilFLow = "20-35",
+                   RecommendedOilFlow = "20-35",
                },
 
 
@@ -78,13 +80,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BrutLiftingTorque240Bar = "-",
                    BrutLiftingTorque215Bar = "-",
                    BrutLiftingTorque190Bar = "36",
+                   TelescopeLength = "1,85",
                    SlewingCylinder = "4",
                    SlewingTorque = "9",
                    WorkingPressure = "190",
                    RotatorMaximumLoad = "45",
                    CraneWeight = "415",
                    PillarSlewingAngle = "370",
-                   RecommendedOilFLow = "20-35",
+                   RecommendedOilFlow = "20-35",
                },
 
                new Crane
@@ -104,13 +107,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BrutLiftingTorque240Bar = "-",
                    BrutLiftingTorque215Bar = "46",
                    BrutLiftingTorque190Bar = "41",
+                   TelescopeLength = "1,85",
                    SlewingCylinder = "4",
                    SlewingTorque = "12",
                    WorkingPressure = "190/215",
                    RotatorMaximumLoad = "45",
                    CraneWeight = "620",
                    PillarSlewingAngle = "370",
-                   RecommendedOilFLow = "30-45",
+                   RecommendedOilFlow = "30-45",
                },
 
                new Crane
@@ -130,13 +134,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BrutLiftingTorque240Bar = "-",
                    BrutLiftingTorque215Bar = "54",
                    BrutLiftingTorque190Bar = "48",
+                   TelescopeLength = "1,95",
                    SlewingCylinder = "4",
                    SlewingTorque = "15",
                    WorkingPressure = "190/215",
                    RotatorMaximumLoad = "45",
                    CraneWeight = "710",
                    PillarSlewingAngle = "370",
-                   RecommendedOilFLow = "45-70",
+                   RecommendedOilFlow = "45-70",
                }
            );
         }
