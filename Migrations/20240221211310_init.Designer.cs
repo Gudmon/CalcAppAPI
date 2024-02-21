@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240216143904_trailer crane config2")]
-    partial class trailercraneconfig2
+    [Migration("20240221211310_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -495,7 +495,7 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RecommendedOilFLow")
+                    b.Property<string>("RecommendedOilFlow")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -512,6 +512,10 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SlewingTorque")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TelescopeLength")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -542,11 +546,12 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
                             Price = "5165",
-                            RecommendedOilFLow = "20-35",
+                            RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
+                            TelescopeLength = "-",
                             WorkingPressure = "190"
                         },
                         new
@@ -567,11 +572,12 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 2.54",
                             PillarSlewingAngle = "370",
                             Price = "6285",
-                            RecommendedOilFLow = "20-35",
+                            RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
+                            TelescopeLength = "1,33",
                             WorkingPressure = "190/215"
                         },
                         new
@@ -592,11 +598,12 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
                             Price = "6985",
-                            RecommendedOilFLow = "20-35",
+                            RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "3",
                             SlewingCylinder = "4",
                             SlewingTorque = "9",
+                            TelescopeLength = "1,85",
                             WorkingPressure = "190"
                         },
                         new
@@ -617,11 +624,12 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
                             Price = "8260",
-                            RecommendedOilFLow = "30-45",
+                            RecommendedOilFlow = "30-45",
                             RotatorMaximumLoad = "45",
                             Series = "3",
                             SlewingCylinder = "4",
                             SlewingTorque = "12",
+                            TelescopeLength = "1,85",
                             WorkingPressure = "190/215"
                         },
                         new
@@ -642,16 +650,199 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 4.71",
                             PillarSlewingAngle = "370",
                             Price = "9450",
-                            RecommendedOilFLow = "45-70",
+                            RecommendedOilFlow = "45-70",
                             RotatorMaximumLoad = "45",
                             Series = "4",
                             SlewingCylinder = "4",
                             SlewingTorque = "15",
+                            TelescopeLength = "1,95",
                             WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BrutLiftingTorque190Bar = "56",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "820",
+                            Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
+                            LiftAtFourMeters190Bar = "1100",
+                            LiftAtFourMeters215Bar = "1240",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "620",
+                            LiftAtFullReach215Bar = "710",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "7,2",
+                            Name = "PALMS 5.72",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            TelescopeLength = "1,95",
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BrutLiftingTorque190Bar = "56",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "900",
+                            Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
+                            LiftAtFourMeters190Bar = "1050",
+                            LiftAtFourMeters215Bar = "1220",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "450",
+                            LiftAtFullReach215Bar = "520",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "8,5",
+                            Name = "PALMS 5.85",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            TelescopeLength = "3,3",
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "995",
+                            Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "1235",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "490 (8,4 m)",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "8,7",
+                            Name = "PALMS 5.87Z",
+                            PillarSlewingAngle = "340",
+                            Price = "-",
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            TelescopeLength = "3,3",
+                            WorkingPressure = "215"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BrutLiftingTorque190Bar = "74",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "1170",
+                            Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "1325",
+                            LiftAtFourMeters215Bar = "1585",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "610",
+                            LiftAtFullReach215Bar = "755",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "7,5",
+                            Name = "PALMS 7.75",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            TelescopeLength = "2",
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BrutLiftingTorque190Bar = "74",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "1280",
+                            Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "1250",
+                            LiftAtFourMeters215Bar = "1480",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "530",
+                            LiftAtFullReach215Bar = "630",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "8,6",
+                            Name = "PALMS 7.86",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            TelescopeLength = "3,4",
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "1310",
+                            Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "1410",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "540",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "9,4",
+                            Name = "PALMS 7.94",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            TelescopeLength = "3,8",
+                            WorkingPressure = "215"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "106",
+                            CraneWeight = "1760",
+                            Description = "A PALMS X100 kínálatunkban a leghosszabb hatótávval és legnagyobb emelőkapacitással rendelkezik. Dupla teleszkópos kinyújtója rejtett hidraulikus alkatrészeket rejteget, biztosítva ezzel a folyamatos üzemelést.",
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "2000",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "680",
+                            MaxReach = "10,1",
+                            Name = "PALMS X100",
+                            PillarSlewingAngle = "380",
+                            Price = "-",
+                            RecommendedOilFlow = "120",
+                            RotatorMaximumLoad = "100",
+                            Series = "X",
+                            SlewingCylinder = "4",
+                            SlewingTorque = "30",
+                            TelescopeLength = "4,2",
+                            WorkingPressure = "240"
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -673,6 +864,1460 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("ControlBlocks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "A2",
+                            Name = "5/7 XY vezértömb, 195 bar",
+                            Price = "795"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "A3.1",
+                            Name = "6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
+                            Price = "805"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "A4",
+                            Name = "4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
+                            Price = "1390"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "A4.2",
+                            Name = "4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
+                            Price = "1500"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "A7",
+                            Name = "4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
+                            Price = "1360"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "A12",
+                            Name = "2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
+                            Price = "4720"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "A14",
+                            Name = "2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
+                            Price = "6635"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "A23",
+                            Name = "El.propo 8 szekciós, IQAN LC6, mini joystick-ok, (LS komp.) + Parker L90pro, 215/240 bar + HPF",
+                            Price = "8470"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "A235",
+                            Name = "El.propo 8 szekciós, IQAN LC5 joystick-ok, (LS komp) Parker L90pro, 215/240 bar + HPF",
+                            Price = "8470"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "A25.1",
+                            Name = "El.propo 8 szekciós (A23) + MD3 kijelző + HPF",
+                            Price = "9415"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "A26",
+                            Name = "IMET rádió távirányítás, (LS komp.) Parker L90pro (max. 150 l/min.), 215/240 bar + HPF",
+                            Price = "9110"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Code = "A36",
+                            Name = "Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + HPF",
+                            Price = "11840"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Code = "A36.1",
+                            Name = "Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + MD3 kijelző + HPF",
+                            Price = "12785"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "A42",
+                            Name = "Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF",
+                            Price = "14660"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ControlBlockId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FrameTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ControlBlockId");
+
+                    b.HasIndex("CraneId");
+
+                    b.ToTable("CraneControlBlocks");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ControlBlockId = 1,
+                            CraneId = 1,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ControlBlockId = 2,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ControlBlockId = 3,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ControlBlockId = 4,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ControlBlockId = 5,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ControlBlockId = 6,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ControlBlockId = 8,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ControlBlockId = 9,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ControlBlockId = 11,
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ControlBlockId = 2,
+                            CraneId = 3,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 11,
+                            ControlBlockId = 3,
+                            CraneId = 3,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            ControlBlockId = 5,
+                            CraneId = 3,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            Id = 13,
+                            ControlBlockId = 2,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 14,
+                            ControlBlockId = 3,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 15,
+                            ControlBlockId = 4,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 16,
+                            ControlBlockId = 5,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 17,
+                            ControlBlockId = 6,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 18,
+                            ControlBlockId = 8,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 19,
+                            ControlBlockId = 9,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 20,
+                            ControlBlockId = 11,
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 21,
+                            ControlBlockId = 2,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 22,
+                            ControlBlockId = 3,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 23,
+                            ControlBlockId = 4,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 24,
+                            ControlBlockId = 5,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 25,
+                            ControlBlockId = 6,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 26,
+                            ControlBlockId = 8,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 27,
+                            ControlBlockId = 9,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 28,
+                            ControlBlockId = 11,
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            Id = 29,
+                            ControlBlockId = 2,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 30,
+                            ControlBlockId = 3,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 31,
+                            ControlBlockId = 4,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 32,
+                            ControlBlockId = 5,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 33,
+                            ControlBlockId = 6,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 34,
+                            ControlBlockId = 8,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 35,
+                            ControlBlockId = 9,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 36,
+                            ControlBlockId = 11,
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 37,
+                            ControlBlockId = 2,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 38,
+                            ControlBlockId = 3,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 39,
+                            ControlBlockId = 4,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 40,
+                            ControlBlockId = 5,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 41,
+                            ControlBlockId = 6,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 42,
+                            ControlBlockId = 8,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 43,
+                            ControlBlockId = 9,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 44,
+                            ControlBlockId = 11,
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 45,
+                            ControlBlockId = 2,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 46,
+                            ControlBlockId = 3,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 47,
+                            ControlBlockId = 4,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 48,
+                            ControlBlockId = 5,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 49,
+                            ControlBlockId = 6,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 50,
+                            ControlBlockId = 8,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 51,
+                            ControlBlockId = 9,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 52,
+                            ControlBlockId = 11,
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 53,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 54,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 55,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 56,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 57,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 58,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 59,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 60,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 61,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 62,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 63,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 64,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 65,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 66,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 67,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 68,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 69,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 70,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 71,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 72,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 73,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 74,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 75,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 76,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 77,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 78,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 79,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 80,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 81,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 82,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 83,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 84,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 85,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 86,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 87,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 88,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 89,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 90,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 91,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 92,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 93,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 94,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 95,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 96,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 97,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 98,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 99,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 100,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 101,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 102,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 103,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 104,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 105,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 106,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 107,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 108,
+                            ControlBlockId = 3,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 109,
+                            ControlBlockId = 4,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 110,
+                            ControlBlockId = 5,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 111,
+                            ControlBlockId = 6,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 112,
+                            ControlBlockId = 7,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 113,
+                            ControlBlockId = 8,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 114,
+                            ControlBlockId = 9,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 115,
+                            ControlBlockId = 10,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 116,
+                            ControlBlockId = 11,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 117,
+                            ControlBlockId = 12,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 118,
+                            ControlBlockId = 13,
+                            CraneId = 6,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 119,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 120,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 121,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 122,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 123,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 124,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 125,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 126,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 127,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 128,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 129,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            Id = 130,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 131,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 132,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 133,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 134,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 135,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 136,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 137,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 138,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 139,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 140,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            Id = 141,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 142,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 143,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 144,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 145,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 146,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 147,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 148,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 149,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 150,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 151,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            Id = 152,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 153,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 154,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 155,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 156,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 157,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 158,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 159,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 160,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 161,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 162,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            Id = 163,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 164,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 165,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 166,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 167,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 168,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 169,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 170,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 171,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 172,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 173,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 9
+                        },
+                        new
+                        {
+                            Id = 174,
+                            ControlBlockId = 3,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 175,
+                            ControlBlockId = 4,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 176,
+                            ControlBlockId = 5,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 177,
+                            ControlBlockId = 6,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 178,
+                            ControlBlockId = 7,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 179,
+                            ControlBlockId = 8,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 180,
+                            ControlBlockId = 9,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 181,
+                            ControlBlockId = 10,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 182,
+                            ControlBlockId = 11,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 183,
+                            ControlBlockId = 12,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        },
+                        new
+                        {
+                            Id = 184,
+                            ControlBlockId = 13,
+                            CraneId = 7,
+                            FrameTypeId = 10
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ControlBlockId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mass")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ControlBlockId");
+
                     b.ToTable("FrameType");
 
                     b.HasData(
@@ -680,6 +2325,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "B0",
+                            Description = "",
+                            Mass = "",
                             Name = "Talpaló nélkül",
                             Price = "0"
                         },
@@ -687,6 +2334,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "B2.1",
+                            Description = "Kisebb PALMS erdészeti darukhoz megfelelő típusú támasztólábak",
+                            Mass = "174",
                             Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                             Price = "1680"
                         },
@@ -694,6 +2343,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "B3",
+                            Description = "A típusú támasztólábak közepes méretű PALMS darukhoz",
+                            Mass = "313",
                             Name = "A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                             Price = "2100"
                         },
@@ -701,6 +2352,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "B4e",
+                            Description = "FD típusú támasztólábak",
+                            Mass = "237",
                             Name = "FD típusú economy letalpaló",
                             Price = "2100"
                         },
@@ -708,6 +2361,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "B6.1",
+                            Description = "FD típusú támasztólábak",
+                            Mass = "449",
                             Name = "FD típusú letalpaló, 3 pontos csatlakozással",
                             Price = "3090"
                         },
@@ -715,6 +2370,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 6,
                             Code = "B09",
+                            Description = "Nagy teherbírású talp támasztólábak nélkül",
+                            Mass = "231",
                             Name = "Különösen erős alap, talpaló lábak nélkül",
                             Price = "1155"
                         },
@@ -722,6 +2379,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 7,
                             Code = "B9",
+                            Description = "FD nagy teherbírású (HD) típusú támaszlábak",
+                            Mass = "474",
                             Name = "FD típusú, különösen erős letalpaló (HD)",
                             Price = "3530"
                         },
@@ -729,8 +2388,28 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 8,
                             Code = "B10",
+                            Description = "FD típusú támasztólábak PALMS 5.87Z daruhoz",
+                            Mass = "520",
                             Name = "Talpaló Z daruhoz",
                             Price = "3685"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "B011",
+                            Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
+                            Mass = "440",
+                            Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül",
+                            Price = "4830"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "B011",
+                            Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
+                            Mass = "772",
+                            Name = "Különösen erős talp daru billentéssel, talpaló lábakkal, vezérlésse",
+                            Price = "4830"
                         });
                 });
 
@@ -1860,6 +3539,41 @@ namespace CalcAppAPI.Migrations
                             CraneId = 4,
                             SelectedFrameTypeId = 2,
                             TrailerId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CraneId = 4,
+                            SelectedFrameTypeId = 1,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CraneId = 4,
+                            SelectedFrameTypeId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CraneId = 4,
+                            SelectedFrameTypeId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CraneId = 5,
+                            SelectedFrameTypeId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CraneId = 5,
+                            SelectedFrameTypeId = 4,
+                            TrailerId = 2
                         });
                 });
 
@@ -2460,6 +4174,88 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CraneFrameType", b =>
+                {
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FrameTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CraneId", "FrameTypeId");
+
+                    b.HasIndex("FrameTypeId");
+
+                    b.ToTable("FrameTypeCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CraneId = 1,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 1,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            FrameTypeId = 2
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            FrameTypeId = 5
+                        });
+                });
+
             modelBuilder.Entity("CraneTrailer", b =>
                 {
                     b.Property<int>("CraneId")
@@ -2493,6 +4289,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            CraneId = 4,
                             TrailerId = 2
                         });
                 });
@@ -4305,6 +6111,32 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", "ControlBlock")
+                        .WithMany("CraneControlBlocks")
+                        .HasForeignKey("ControlBlockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Crane", "Crane")
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ControlBlock");
+
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", null)
+                        .WithMany("AvailableForFrameTypes")
+                        .HasForeignKey("ControlBlockId");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTank", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTankCooler", "OilTankCooler")
@@ -4397,6 +6229,21 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("UnderrunProtection");
 
                     b.Navigation("WoodSorter");
+                });
+
+            modelBuilder.Entity("CraneFrameType", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
+                        .WithMany()
+                        .HasForeignKey("FrameTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CraneTrailer", b =>
@@ -4552,6 +6399,13 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
                 {
                     b.Navigation("TrailerConfigurations");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
+                {
+                    b.Navigation("AvailableForFrameTypes");
+
+                    b.Navigation("CraneControlBlocks");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>

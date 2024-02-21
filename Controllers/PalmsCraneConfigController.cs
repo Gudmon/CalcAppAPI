@@ -51,5 +51,16 @@ namespace CalcAppAPI.Controllers
 
             return Ok(frameTypes);
         }
+
+        [HttpGet("cranes/controlblocks/{craneId}/{frameTypeId}")]
+        public IActionResult GetAvailableControlBlocks(int craneId, int frameTypeId)
+        {
+            var availableControlBlocks = _dbContext.CraneControlBlocks
+                .Where(ccb => ccb.CraneId == craneId && ccb.FrameTypeId == frameTypeId)
+                .Select(ccb => ccb.ControlBlock)
+                .ToList();
+
+            return Ok(availableControlBlocks);
+        }
     }
 }

@@ -80,7 +80,27 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Price = "3685",
                    Description = "FD típusú támasztólábak PALMS 5.87Z daruhoz",
                    Mass = "520"
-               });
+               },
+               new FrameType
+               {
+                   Id = 9,
+                   Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül",
+                   Code = "B011",
+                   Price = "4830",
+                   Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
+                   Mass = "440"
+               },
+                new FrameType
+                {
+                    Id = 10,
+                    Name = "Különösen erős talp daru billentéssel, talpaló lábakkal, vezérlésse",
+                    Code = "B011",
+                    Price = "4830",
+                    Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
+                    Mass = "772"
+                }
+               );
+
         }
     }
 }

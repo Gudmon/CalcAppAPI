@@ -32,6 +32,8 @@ namespace CalcAppAPI.Data
         public DbSet<Tyre> Tyre { get; set; }
         public DbSet<Crane> Crane { get; set; }
         public DbSet<FrameType> FrameType { get; set; }
+        public DbSet<ControlBlock> ControlBlocks { get; set; }
+        public DbSet<CraneControlBlock> CraneControlBlocks { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -59,6 +61,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsTyres();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
+            modelBuilder.ConfigureMultiplePalmsControlBlocks();
 
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.CraneConfigurations)
@@ -188,8 +191,9 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectTrailersWithTyres();
 
 
-
+           
             modelBuilder.ConnectCranesWithFrameTypes();
+            modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
 
             base.OnModelCreating(modelBuilder);
         }
