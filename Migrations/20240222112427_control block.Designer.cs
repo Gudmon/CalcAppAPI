@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240222112427_control block")]
+    partial class controlblock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -580,19 +583,19 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 3,
-                            BrutLiftingTorque190Bar = "33",
+                            BrutLiftingTorque190Bar = "36",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CraneWeight = "410",
+                            CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            LiftAtFourMeters190Bar = "580",
+                            LiftAtFourMeters190Bar = "355",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "350",
+                            LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
-                            MaxReach = "6.1",
-                            Name = "PALMS 3.61",
+                            MaxReach = "6.3",
+                            Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
                             Price = "6985",
                             RecommendedOilFlow = "20-35",
@@ -3229,594 +3232,6 @@ namespace CalcAppAPI.Migrations
                             ControlBlockId = 14,
                             CraneId = 12,
                             FrameTypeId = 10
-                        },
-                        new
-                        {
-                            Id = 321,
-                            ControlBlockId = 1,
-                            CraneId = 1,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 322,
-                            ControlBlockId = 2,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 323,
-                            ControlBlockId = 3,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 324,
-                            ControlBlockId = 4,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 325,
-                            ControlBlockId = 5,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 326,
-                            ControlBlockId = 6,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 327,
-                            ControlBlockId = 8,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 328,
-                            ControlBlockId = 9,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 329,
-                            ControlBlockId = 11,
-                            CraneId = 2,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 330,
-                            ControlBlockId = 2,
-                            CraneId = 3,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 331,
-                            ControlBlockId = 3,
-                            CraneId = 3,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 332,
-                            ControlBlockId = 5,
-                            CraneId = 3,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 333,
-                            ControlBlockId = 2,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 334,
-                            ControlBlockId = 3,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 335,
-                            ControlBlockId = 4,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 336,
-                            ControlBlockId = 5,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 337,
-                            ControlBlockId = 6,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 338,
-                            ControlBlockId = 8,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 339,
-                            ControlBlockId = 9,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 340,
-                            ControlBlockId = 11,
-                            CraneId = 4,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 341,
-                            ControlBlockId = 2,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 342,
-                            ControlBlockId = 3,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 343,
-                            ControlBlockId = 4,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 344,
-                            ControlBlockId = 5,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 345,
-                            ControlBlockId = 6,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 346,
-                            ControlBlockId = 8,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 347,
-                            ControlBlockId = 9,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 348,
-                            ControlBlockId = 11,
-                            CraneId = 5,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 349,
-                            ControlBlockId = 3,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 350,
-                            ControlBlockId = 4,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 351,
-                            ControlBlockId = 5,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 352,
-                            ControlBlockId = 6,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 353,
-                            ControlBlockId = 7,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 354,
-                            ControlBlockId = 8,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 355,
-                            ControlBlockId = 9,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 356,
-                            ControlBlockId = 10,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 357,
-                            ControlBlockId = 11,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 358,
-                            ControlBlockId = 12,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 359,
-                            ControlBlockId = 13,
-                            CraneId = 6,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 360,
-                            ControlBlockId = 3,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 361,
-                            ControlBlockId = 4,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 362,
-                            ControlBlockId = 5,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 363,
-                            ControlBlockId = 6,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 364,
-                            ControlBlockId = 7,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 365,
-                            ControlBlockId = 8,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 366,
-                            ControlBlockId = 9,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 367,
-                            ControlBlockId = 10,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 368,
-                            ControlBlockId = 11,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 369,
-                            ControlBlockId = 12,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 370,
-                            ControlBlockId = 13,
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 371,
-                            ControlBlockId = 6,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 372,
-                            ControlBlockId = 7,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 373,
-                            ControlBlockId = 8,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 374,
-                            ControlBlockId = 9,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 375,
-                            ControlBlockId = 10,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 376,
-                            ControlBlockId = 11,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 377,
-                            ControlBlockId = 12,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 378,
-                            ControlBlockId = 13,
-                            CraneId = 9,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 379,
-                            ControlBlockId = 6,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 380,
-                            ControlBlockId = 7,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 381,
-                            ControlBlockId = 8,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 382,
-                            ControlBlockId = 9,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 383,
-                            ControlBlockId = 10,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 384,
-                            ControlBlockId = 11,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 385,
-                            ControlBlockId = 12,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 386,
-                            ControlBlockId = 13,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 387,
-                            ControlBlockId = 14,
-                            CraneId = 10,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 388,
-                            ControlBlockId = 6,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 389,
-                            ControlBlockId = 7,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 390,
-                            ControlBlockId = 8,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 391,
-                            ControlBlockId = 9,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 392,
-                            ControlBlockId = 10,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 393,
-                            ControlBlockId = 11,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 394,
-                            ControlBlockId = 12,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 395,
-                            ControlBlockId = 13,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 396,
-                            ControlBlockId = 14,
-                            CraneId = 11,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 397,
-                            ControlBlockId = 7,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 398,
-                            ControlBlockId = 8,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 399,
-                            ControlBlockId = 9,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 400,
-                            ControlBlockId = 10,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 401,
-                            ControlBlockId = 11,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 402,
-                            ControlBlockId = 12,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 403,
-                            ControlBlockId = 13,
-                            CraneId = 12,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            Id = 404,
-                            ControlBlockId = 14,
-                            CraneId = 12,
-                            FrameTypeId = 1
                         });
                 });
 
@@ -3942,158 +3357,6 @@ namespace CalcAppAPI.Migrations
                             Mass = "772",
                             Name = "Különösen erős talp daru billentéssel, talpaló lábakkal, vezérlésse",
                             Price = "4830"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Grapple");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "C0",
-                            Name = "Rönkfogó kanál nélkül",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "C01",
-                            Name = "Kanál 0,16 Palms (csapos rotátorhoz)",
-                            Price = "1105"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "C02",
-                            Name = "Kanál 0,16 Palms (FL)",
-                            Price = "1085"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "C1",
-                            Name = "Kanál 0,18 Palms (FL)",
-                            Price = "1395"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "C3",
-                            Name = "Kanál 0,23 Palms (FL)",
-                            Price = "1745"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "C5.1",
-                            Name = "Kanál 0,25 Grippen (FL)",
-                            Price = "3015"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "C5.2",
-                            Name = "Kanál 0,26 Palms (FL)",
-                            Price = "3090"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rotator");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "R0",
-                            Name = "Rotátor nélkül",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "R30",
-                            Name = "30 kN-os rotátor (csapos)",
-                            Price = "300"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "R31",
-                            Name = "30 kN-os rotátor FL (talpas)",
-                            Price = "430"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "R45",
-                            Name = "45 kN-os rotátor FL",
-                            Price = "620"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "R55",
-                            Name = "55 kN-os rotátor FL",
-                            Price = "915"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "R60",
-                            Name = "60 kN-os rotátor FL Indexator GV6",
-                            Price = "1600"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "R90",
-                            Name = "100 kN-os rotátor FL Indexator T10",
-                            Price = "1880"
                         });
                 });
 
@@ -5213,105 +4476,49 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CraneId = 1,
+                            CraneId = 4,
                             SelectedFrameTypeId = 1,
                             TrailerId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CraneId = 1,
+                            CraneId = 4,
                             SelectedFrameTypeId = 2,
                             TrailerId = 1
                         },
                         new
                         {
                             Id = 3,
-                            CraneId = 2,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CraneId = 2,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CraneId = 3,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CraneId = 3,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CraneId = 1,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CraneId = 1,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CraneId = 2,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CraneId = 2,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CraneId = 3,
-                            SelectedFrameTypeId = 1,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CraneId = 3,
-                            SelectedFrameTypeId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            Id = 13,
                             CraneId = 4,
                             SelectedFrameTypeId = 1,
                             TrailerId = 2
                         },
                         new
                         {
-                            Id = 14,
+                            Id = 4,
                             CraneId = 4,
                             SelectedFrameTypeId = 3,
                             TrailerId = 2
                         },
                         new
                         {
-                            Id = 15,
+                            Id = 5,
                             CraneId = 4,
+                            SelectedFrameTypeId = 4,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CraneId = 5,
+                            SelectedFrameTypeId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CraneId = 5,
                             SelectedFrameTypeId = 4,
                             TrailerId = 2
                         });
@@ -6008,200 +5215,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 5,
                             FrameTypeId = 5
-                        });
-                });
-
-            modelBuilder.Entity("CraneGrapple", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GrappleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "GrappleId");
-
-                    b.HasIndex("GrappleId");
-
-                    b.ToTable("GrappleCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 4
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 4
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 4
-                        });
-                });
-
-            modelBuilder.Entity("CraneRotator", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RotatorId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "RotatorId");
-
-                    b.HasIndex("RotatorId");
-
-                    b.ToTable("RotatorCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 4
                         });
                 });
 
@@ -8199,36 +7212,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
                         .WithMany()
                         .HasForeignKey("FrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CraneGrapple", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", null)
-                        .WithMany()
-                        .HasForeignKey("GrappleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CraneRotator", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", null)
-                        .WithMany()
-                        .HasForeignKey("RotatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

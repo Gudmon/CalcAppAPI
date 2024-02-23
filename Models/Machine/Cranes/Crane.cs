@@ -33,5 +33,7 @@ namespace CalcAppAPI.Models
         public IEnumerable<Trailer> Trailer { get; set; }
         public IEnumerable<TrailerCraneConfiguration> TrailerConfigurations { get; set; }
         public IEnumerable<FrameType> FrameType { get; set; }
+        public IEnumerable<Rotator> Rotator { get; set; }
+        public IEnumerable<Grapple> Grapple { get; set; }
     }
 }

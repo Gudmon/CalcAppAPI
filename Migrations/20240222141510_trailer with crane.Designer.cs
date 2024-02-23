@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240222141510_trailer with crane")]
+    partial class trailerwithcrane
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -580,19 +583,19 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 3,
-                            BrutLiftingTorque190Bar = "33",
+                            BrutLiftingTorque190Bar = "36",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CraneWeight = "410",
+                            CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            LiftAtFourMeters190Bar = "580",
+                            LiftAtFourMeters190Bar = "355",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "350",
+                            LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
-                            MaxReach = "6.1",
-                            Name = "PALMS 3.61",
+                            MaxReach = "6.3",
+                            Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
                             Price = "6985",
                             RecommendedOilFlow = "20-35",
@@ -3945,158 +3948,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Grapple");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "C0",
-                            Name = "Rönkfogó kanál nélkül",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "C01",
-                            Name = "Kanál 0,16 Palms (csapos rotátorhoz)",
-                            Price = "1105"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "C02",
-                            Name = "Kanál 0,16 Palms (FL)",
-                            Price = "1085"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "C1",
-                            Name = "Kanál 0,18 Palms (FL)",
-                            Price = "1395"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "C3",
-                            Name = "Kanál 0,23 Palms (FL)",
-                            Price = "1745"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "C5.1",
-                            Name = "Kanál 0,25 Grippen (FL)",
-                            Price = "3015"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "C5.2",
-                            Name = "Kanál 0,26 Palms (FL)",
-                            Price = "3090"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Rotator");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "R0",
-                            Name = "Rotátor nélkül",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "R30",
-                            Name = "30 kN-os rotátor (csapos)",
-                            Price = "300"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "R31",
-                            Name = "30 kN-os rotátor FL (talpas)",
-                            Price = "430"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "R45",
-                            Name = "45 kN-os rotátor FL",
-                            Price = "620"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "R55",
-                            Name = "55 kN-os rotátor FL",
-                            Price = "915"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Code = "R60",
-                            Name = "60 kN-os rotátor FL Indexator GV6",
-                            Price = "1600"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Code = "R90",
-                            Name = "100 kN-os rotátor FL Indexator T10",
-                            Price = "1880"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", b =>
                 {
                     b.Property<int>("Id")
@@ -6008,200 +5859,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 5,
                             FrameTypeId = 5
-                        });
-                });
-
-            modelBuilder.Entity("CraneGrapple", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("GrappleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "GrappleId");
-
-                    b.HasIndex("GrappleId");
-
-                    b.ToTable("GrappleCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            GrappleId = 4
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            GrappleId = 4
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 1
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 3
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            GrappleId = 4
-                        });
-                });
-
-            modelBuilder.Entity("CraneRotator", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RotatorId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "RotatorId");
-
-                    b.HasIndex("RotatorId");
-
-                    b.ToTable("RotatorCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorId = 4
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 2
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 3
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorId = 4
                         });
                 });
 
@@ -8199,36 +7856,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
                         .WithMany()
                         .HasForeignKey("FrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CraneGrapple", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", null)
-                        .WithMany()
-                        .HasForeignKey("GrappleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CraneRotator", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", null)
-                        .WithMany()
-                        .HasForeignKey("RotatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

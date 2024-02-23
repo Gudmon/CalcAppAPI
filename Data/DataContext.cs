@@ -34,6 +34,8 @@ namespace CalcAppAPI.Data
         public DbSet<FrameType> FrameType { get; set; }
         public DbSet<ControlBlock> ControlBlocks { get; set; }
         public DbSet<CraneControlBlock> CraneControlBlocks { get; set; }
+        public DbSet<Rotator> Rotator { get; set; }
+        public DbSet<Grapple> Grapple { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -62,6 +64,8 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
+            modelBuilder.ConfigureMultiplePalmsRotators();
+            modelBuilder.ConfigureMultiplePalmsGrapples();
 
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.CraneConfigurations)
@@ -78,51 +82,114 @@ namespace CalcAppAPI.Data
                 {
                     Id = 1,
                     TrailerId = 1,
-                    CraneId = 4, 
+                    CraneId = 1, 
                     SelectedFrameTypeId = 1 
                 },
                 new TrailerCraneConfiguration
                 {
                     Id = 2,
                     TrailerId = 1,
-                    CraneId = 4,
+                    CraneId = 1,
                     SelectedFrameTypeId = 2 
                 },
 
                 new TrailerCraneConfiguration
                 {
                     Id = 3,
-                    TrailerId = 2,
-                    CraneId = 4, 
+                    TrailerId = 1,
+                    CraneId = 2, 
                     SelectedFrameTypeId = 1 
                 },
                 new TrailerCraneConfiguration
                 {
                     Id = 4,
-                    TrailerId = 2,
-                    CraneId = 4,
-                    SelectedFrameTypeId = 3
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 5,
-                    TrailerId = 2,
-                    CraneId = 4,
-                    SelectedFrameTypeId = 4
+                    TrailerId = 1,
+                    CraneId = 2,
+                    SelectedFrameTypeId = 2
                 },
 
                 new TrailerCraneConfiguration
                 {
-                    Id = 6,
-                    TrailerId = 2,
-                    CraneId = 5,
-                    SelectedFrameTypeId = 3
+                    Id = 5,
+                    TrailerId = 1,
+                    CraneId = 3,
+                    SelectedFrameTypeId = 1
                 },
+                new TrailerCraneConfiguration
+                {
+                    Id = 6,
+                    TrailerId = 1,
+                    CraneId = 3,
+                    SelectedFrameTypeId = 2
+                },
+
+
+
+
                 new TrailerCraneConfiguration
                 {
                     Id = 7,
                     TrailerId = 2,
-                    CraneId = 5,
+                    CraneId = 1,
+                    SelectedFrameTypeId = 1
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 8,
+                    TrailerId = 2,
+                    CraneId = 1,
+                    SelectedFrameTypeId = 2
+                },
+
+                new TrailerCraneConfiguration
+                {
+                    Id = 9,
+                    TrailerId = 2,
+                    CraneId = 2,
+                    SelectedFrameTypeId = 1
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 10,
+                    TrailerId = 2,
+                    CraneId = 2,
+                    SelectedFrameTypeId = 2
+                },
+
+                new TrailerCraneConfiguration
+                {
+                    Id = 11,
+                    TrailerId = 2,
+                    CraneId = 3,
+                    SelectedFrameTypeId = 1
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 12,
+                    TrailerId = 2,
+                    CraneId = 3,
+                    SelectedFrameTypeId = 2
+                },
+
+                new TrailerCraneConfiguration
+                {
+                    Id = 13,
+                    TrailerId = 2,
+                    CraneId = 4,
+                    SelectedFrameTypeId = 1
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 14,
+                    TrailerId = 2,
+                    CraneId = 4,
+                    SelectedFrameTypeId = 3
+                },
+                new TrailerCraneConfiguration
+                {
+                    Id = 15,
+                    TrailerId = 2,
+                    CraneId = 4,
                     SelectedFrameTypeId = 4
                 }
 
@@ -191,9 +258,14 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectTrailersWithTyres();
 
 
-           
+            modelBuilder.Entity<ControlBlock>()
+                .HasMany(cb => cb.AvailableForFrameTypes)
+                .WithMany();
+
             modelBuilder.ConnectCranesWithFrameTypes();
             modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
+            modelBuilder.ConnectCranesWithRotators();
+            modelBuilder.ConnectCranesWithGrapples();
 
             base.OnModelCreating(modelBuilder);
         }

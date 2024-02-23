@@ -22,7 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Cranes
                 new CraneControlBlock { Id = 8, CraneId = 2, FrameTypeId = 2, ControlBlockId = 9 },
                 new CraneControlBlock { Id = 9, CraneId = 2, FrameTypeId = 2, ControlBlockId = 11 },
 
-                //PALMS 3.63
+                //PALMS 3.61
                 new CraneControlBlock { Id = 10, CraneId = 3, FrameTypeId = 2, ControlBlockId = 2 },
                 new CraneControlBlock { Id = 11, CraneId = 3, FrameTypeId = 2, ControlBlockId = 3 },
                 new CraneControlBlock { Id = 12, CraneId = 3, FrameTypeId = 2, ControlBlockId = 5 },
@@ -379,7 +379,113 @@ namespace CalcAppAPI.Data.Extensions.Connect.Cranes
                 new CraneControlBlock { Id = 317, CraneId = 12, FrameTypeId = 10, ControlBlockId = 11 },
                 new CraneControlBlock { Id = 318, CraneId = 12, FrameTypeId = 10, ControlBlockId = 12 },
                 new CraneControlBlock { Id = 319, CraneId = 12, FrameTypeId = 10, ControlBlockId = 13 },
-                new CraneControlBlock { Id = 320, CraneId = 12, FrameTypeId = 10, ControlBlockId = 14 }
+                new CraneControlBlock { Id = 320, CraneId = 12, FrameTypeId = 10, ControlBlockId = 14 },
+
+                //PALMS 2.42
+                new CraneControlBlock { Id = 321, CraneId = 1, FrameTypeId = 1, ControlBlockId = 1 },
+
+                //PALMS 2.54
+                new CraneControlBlock { Id = 322, CraneId = 2, FrameTypeId = 1, ControlBlockId = 2 },
+                new CraneControlBlock { Id = 323, CraneId = 2, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 324, CraneId = 2, FrameTypeId = 1, ControlBlockId = 4 },
+                new CraneControlBlock { Id = 325, CraneId = 2, FrameTypeId = 1, ControlBlockId = 5 },
+                new CraneControlBlock { Id = 326, CraneId = 2, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 327, CraneId = 2, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 328, CraneId = 2, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 329, CraneId = 2, FrameTypeId = 1, ControlBlockId = 11 },
+
+                //PALMS 3.61
+                new CraneControlBlock { Id = 330, CraneId = 3, FrameTypeId = 1, ControlBlockId = 2 },
+                new CraneControlBlock { Id = 331, CraneId = 3, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 332, CraneId = 3, FrameTypeId = 1, ControlBlockId = 5 },
+
+                //PALMS 3.67
+                new CraneControlBlock { Id = 333, CraneId = 4, FrameTypeId = 1, ControlBlockId = 2 },
+                new CraneControlBlock { Id = 334, CraneId = 4, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 335, CraneId = 4, FrameTypeId = 1, ControlBlockId = 4 },
+                new CraneControlBlock { Id = 336, CraneId = 4, FrameTypeId = 1, ControlBlockId = 5 },
+                new CraneControlBlock { Id = 337, CraneId = 4, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 338, CraneId = 4, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 339, CraneId = 4, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 340, CraneId = 4, FrameTypeId = 1, ControlBlockId = 11 },
+
+                //PALMS 4.71
+                new CraneControlBlock { Id = 341, CraneId = 5, FrameTypeId = 1, ControlBlockId = 2 },
+                new CraneControlBlock { Id = 342, CraneId = 5, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 343, CraneId = 5, FrameTypeId = 1, ControlBlockId = 4 },
+                new CraneControlBlock { Id = 344, CraneId = 5, FrameTypeId = 1, ControlBlockId = 5 },
+                new CraneControlBlock { Id = 345, CraneId = 5, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 346, CraneId = 5, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 347, CraneId = 5, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 348, CraneId = 5, FrameTypeId = 1, ControlBlockId = 11 },
+
+                //PALMS 5.72
+                new CraneControlBlock { Id = 349, CraneId = 6, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 350, CraneId = 6, FrameTypeId = 1, ControlBlockId = 4 },
+                new CraneControlBlock { Id = 351, CraneId = 6, FrameTypeId = 1, ControlBlockId = 5 },
+                new CraneControlBlock { Id = 352, CraneId = 6, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 353, CraneId = 6, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 354, CraneId = 6, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 355, CraneId = 6, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 356, CraneId = 6, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 357, CraneId = 6, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 358, CraneId = 6, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 359, CraneId = 6, FrameTypeId = 1, ControlBlockId = 13 },
+
+                //PALMS 5.85
+                new CraneControlBlock { Id = 360, CraneId = 7, FrameTypeId = 1, ControlBlockId = 3 },
+                new CraneControlBlock { Id = 361, CraneId = 7, FrameTypeId = 1, ControlBlockId = 4 },
+                new CraneControlBlock { Id = 362, CraneId = 7, FrameTypeId = 1, ControlBlockId = 5 },
+                new CraneControlBlock { Id = 363, CraneId = 7, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 364, CraneId = 7, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 365, CraneId = 7, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 366, CraneId = 7, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 367, CraneId = 7, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 368, CraneId = 7, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 369, CraneId = 7, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 370, CraneId = 7, FrameTypeId = 1, ControlBlockId = 13 },
+
+                //PALMS 7.75
+                new CraneControlBlock { Id = 371, CraneId = 9, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 372, CraneId = 9, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 373, CraneId = 9, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 374, CraneId = 9, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 375, CraneId = 9, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 376, CraneId = 9, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 377, CraneId = 9, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 378, CraneId = 9, FrameTypeId = 1, ControlBlockId = 13 },
+
+                //PALMS 7.86
+                new CraneControlBlock { Id = 379, CraneId = 10, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 380, CraneId = 10, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 381, CraneId = 10, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 382, CraneId = 10, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 383, CraneId = 10, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 384, CraneId = 10, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 385, CraneId = 10, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 386, CraneId = 10, FrameTypeId = 1, ControlBlockId = 13 },
+                new CraneControlBlock { Id = 387, CraneId = 10, FrameTypeId = 1, ControlBlockId = 14 },
+
+                //PALMS 7.94
+                new CraneControlBlock { Id = 388, CraneId = 11, FrameTypeId = 1, ControlBlockId = 6 },
+                new CraneControlBlock { Id = 389, CraneId = 11, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 390, CraneId = 11, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 391, CraneId = 11, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 392, CraneId = 11, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 393, CraneId = 11, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 394, CraneId = 11, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 395, CraneId = 11, FrameTypeId = 1, ControlBlockId = 13 },
+                new CraneControlBlock { Id = 396, CraneId = 11, FrameTypeId = 1, ControlBlockId = 14 },
+
+                //PALMS X100
+                new CraneControlBlock { Id = 397, CraneId = 12, FrameTypeId = 1, ControlBlockId = 7 },
+                new CraneControlBlock { Id = 398, CraneId = 12, FrameTypeId = 1, ControlBlockId = 8 },
+                new CraneControlBlock { Id = 399, CraneId = 12, FrameTypeId = 1, ControlBlockId = 9 },
+                new CraneControlBlock { Id = 400, CraneId = 12, FrameTypeId = 1, ControlBlockId = 10 },
+                new CraneControlBlock { Id = 401, CraneId = 12, FrameTypeId = 1, ControlBlockId = 11 },
+                new CraneControlBlock { Id = 402, CraneId = 12, FrameTypeId = 1, ControlBlockId = 12 },
+                new CraneControlBlock { Id = 403, CraneId = 12, FrameTypeId = 1, ControlBlockId = 13 },
+                new CraneControlBlock { Id = 404, CraneId = 12, FrameTypeId = 1, ControlBlockId = 14 }
             );
         }
     }
