@@ -33,19 +33,28 @@ namespace CalcAppAPI.Controllers
                     MaxCraneSize = t.MaxCraneSize,
                     DrawbarControlCylinders = t.DrawbarControlCylinders,
                     BeamType = t.BeamType
-                })
-                .ToListAsync();
+                }).ToListAsync();
 
             return Ok(trailers);
         }
 
         [HttpGet("cranes")]
-        public async Task<ActionResult<IEnumerable<Crane>>> GetAllCranes()
+        public async Task<ActionResult<IEnumerable<PalmsCraneOverview>>> GetAllCranes()
         {
-            _logger.LogDebug("Querying every crane");
-            return Ok(await _dbContext.Crane
-                .Include(crane => crane.Trailer)
-                .ToListAsync());
+            var cranes = await _dbContext.Crane
+                .Select(t => new PalmsCraneOverview
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    MaxReach = t.MaxReach,
+                    BrutLiftingTorque190Bar = t.BrutLiftingTorque190Bar,
+                    BrutLiftingTorque215Bar = t.BrutLiftingTorque215Bar,
+                    TelescopeLength = t.TelescopeLength,
+                    SlewingCylinder = t.SlewingCylinder,
+                    SlewingTorque = t.SlewingTorque
+                }).ToListAsync();
+
+            return Ok(cranes);
         }
 
         [HttpGet("trailers/{id}")]

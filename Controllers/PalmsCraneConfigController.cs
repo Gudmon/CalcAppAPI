@@ -19,6 +19,16 @@ namespace CalcAppAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [HttpGet("cranes/{id}/controlblocks")]
+        public async Task<ActionResult<IEnumerable<ControlBlock>>> GetControlBlocks(int id)
+        {
+            var controlBlocks = await _dbContext.ControlBlocks
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(controlBlocks);
+        }
+
         [HttpGet("cranes/{id}/frametypes")]
         public async Task<ActionResult<IEnumerable<FrameType>>> GetFrameTypes(int id)
         {
@@ -29,40 +39,40 @@ namespace CalcAppAPI.Controllers
             return Ok(frameTypes);
         }
 
-        [HttpGet("cranes/{trailerId}/{craneId}/availableFrameTypes")]
-        public ActionResult<IEnumerable<FrameType>> GetAvailableFrameTypes(int trailerId, int craneId)
-        {
-            var trailer = _dbContext.Trailer
-                .Include(t => t.CraneConfigurations)
-                    .ThenInclude(tc => tc.Crane)
-                .FirstOrDefault(t => t.Id == trailerId);
+        //[HttpGet("cranes/{trailerId}/{craneId}/availableFrameTypes")]
+        //public ActionResult<IEnumerable<FrameType>> GetAvailableFrameTypes(int trailerId, int craneId)
+        //{
+        //    var trailer = _dbContext.Trailer
+        //        .Include(t => t.CraneConfigurations)
+        //            .ThenInclude(tc => tc.Crane)
+        //        .FirstOrDefault(t => t.Id == trailerId);
 
-            if (trailer == null)
-            {
-                return NotFound();
-            }
+        //    if (trailer == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var craneConfigurations = trailer.CraneConfigurations.Where(tc => tc.CraneId == craneId).Select(tc => tc.Crane).ToList();
+        //    var craneConfigurations = trailer.CraneConfigurations.Where(tc => tc.CraneId == craneId).Select(tc => tc.Crane).ToList();
 
-            var frameTypes = craneConfigurations.SelectMany(crane =>
-                _dbContext.TrailerCraneConfigurations
-                    .Where(tc => tc.CraneId == crane.Id && tc.TrailerId == trailerId)
-                    .Select(tc => tc.SelectedFrameType)
-            ).Distinct().ToList();
+        //    var frameTypes = craneConfigurations.SelectMany(crane =>
+        //        _dbContext.TrailerCraneConfigurations
+        //            .Where(tc => tc.CraneId == crane.Id && tc.TrailerId == trailerId)
+        //            .Select(tc => tc.SelectedFrameType)
+        //    ).Distinct().ToList();
 
-            return Ok(frameTypes);
-        }
+        //    return Ok(frameTypes);
+        //}
 
-        [HttpGet("cranes/{craneId}/{frameTypeId}/controlblocks")]
-        public IActionResult GetAvailableControlBlocks(int craneId, int frameTypeId)
-        {
-            var availableControlBlocks = _dbContext.CraneControlBlocks
-                .Where(ccb => ccb.CraneId == craneId && ccb.FrameTypeId == frameTypeId)
-                .Select(ccb => ccb.ControlBlock)
-                .ToList();
+        //[HttpGet("cranes/{craneId}/{frameTypeId}/controlblocks")]
+        //public IActionResult GetAvailableControlBlocks(int craneId, int frameTypeId)
+        //{
+        //    var availableControlBlocks = _dbContext.CraneControlBlocks
+        //        .Where(ccb => ccb.CraneId == craneId && ccb.FrameTypeId == frameTypeId)
+        //        .Select(ccb => ccb.ControlBlock)
+        //        .ToList();
 
-            return Ok(availableControlBlocks);
-        }
+        //    return Ok(availableControlBlocks);
+        //}
 
         //[HttpGet("cranes/{craneId}/{controlBlockId}/frametypes")]
         //public ActionResult<IEnumerable<FrameType>> GetFrameTypes(int craneId, int controlBlockId)

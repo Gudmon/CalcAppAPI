@@ -106,8 +106,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Code = "A42",
                   Price = "14660",
               }
-
-
               );
 
         }

@@ -15,7 +15,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "Talpaló nélkül",
                    Code = "B0",
                    Price = "0",
-                   Description = "",
                    Mass = ""
                },
                new FrameType
@@ -24,7 +23,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                    Code = "B2.1",
                    Price = "1680",
-                   Description = "Kisebb PALMS erdészeti darukhoz megfelelő típusú támasztólábak",
                    Mass = "174"
                },
                new FrameType
@@ -33,7 +31,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                    Code = "B3",
                    Price = "2100",
-                   Description = "A típusú támasztólábak közepes méretű PALMS darukhoz",
                    Mass = "313"
                },
                new FrameType
@@ -42,7 +39,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "FD típusú economy letalpaló",
                    Code = "B4e",
                    Price = "2100",
-                   Description = "FD típusú támasztólábak",
                    Mass = "237"
                },
                new FrameType
@@ -51,7 +47,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "FD típusú letalpaló, 3 pontos csatlakozással",
                    Code = "B6.1",
                    Price = "3090",
-                   Description = "FD típusú támasztólábak",
                    Mass = "449"
                },
                new FrameType
@@ -60,7 +55,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "Különösen erős alap, talpaló lábak nélkül",
                    Code = "B09",
                    Price = "1155",
-                   Description = "Nagy teherbírású talp támasztólábak nélkül",
                    Mass = "231"
                },
                new FrameType
@@ -69,7 +63,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "FD típusú, különösen erős letalpaló (HD)",
                    Code = "B9",
                    Price = "3530",
-                   Description = "FD nagy teherbírású (HD) típusú támaszlábak",
                    Mass = "474"
                },
                new FrameType
@@ -78,25 +71,22 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "Talpaló Z daruhoz",
                    Code = "B10",
                    Price = "3685",
-                   Description = "FD típusú támasztólábak PALMS 5.87Z daruhoz",
                    Mass = "520"
                },
                new FrameType
                {
                    Id = 9,
-                   Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül",
+                   Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül (csak A21-A42 vezértömbhöz)",
                    Code = "B011",
                    Price = "4830",
-                   Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
                    Mass = "440"
                },
                 new FrameType
                 {
                     Id = 10,
-                    Name = "Különösen erős talp daru billentéssel, talpaló lábakkal, vezérlésse",
-                    Code = "B011",
-                    Price = "4830",
-                    Description = "HD alap daru dönthető vezérléssel, támasztólábak nélkül",
+                    Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
+                    Code = "B11",
+                    Price = "7300",
                     Mass = "772"
                 }
                );

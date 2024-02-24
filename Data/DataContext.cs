@@ -264,6 +264,7 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConnectCranesWithFrameTypes();
             modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
+            modelBuilder.ConnectCranesWithControlBlocks();
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithGrapples();
 

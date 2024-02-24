@@ -12,5 +12,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Cranes
         public string Price { get; set; }
         public IEnumerable<CraneControlBlock> CraneControlBlocks { get; set; }
         public IEnumerable<FrameType> AvailableForFrameTypes { get; set; }
+        public IEnumerable<Crane> Crane { get; set; }
     }
 }

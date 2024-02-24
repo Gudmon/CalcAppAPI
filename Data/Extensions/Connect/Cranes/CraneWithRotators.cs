@@ -42,7 +42,48 @@ namespace CalcAppAPI.Data.Extensions.Connect.Cranes
                         new { CraneId = 5, RotatorId = 1 },
                         new { CraneId = 5, RotatorId = 2 },
                         new { CraneId = 5, RotatorId = 3 },
-                        new { CraneId = 5, RotatorId = 4 }
+                        new { CraneId = 5, RotatorId = 4 },
+
+                        //PALMS 5.72
+                        new { CraneId = 6, RotatorId = 1 },
+                        new { CraneId = 6, RotatorId = 4 },
+                        new { CraneId = 6, RotatorId = 5 },
+                        new { CraneId = 6, RotatorId = 6 },
+
+                        //PALMS 5.85
+                        new { CraneId = 7, RotatorId = 1 },
+                        new { CraneId = 7, RotatorId = 4 },
+                        new { CraneId = 7, RotatorId = 5 },
+                        new { CraneId = 7, RotatorId = 6 },
+
+                        //PALMS 5.87Z
+                        new { CraneId = 8, RotatorId = 1 },
+                        new { CraneId = 8, RotatorId = 4 },
+                        new { CraneId = 8, RotatorId = 5 },
+                        new { CraneId = 8, RotatorId = 6 },
+
+                        //PALMS 7.75
+                        new { CraneId = 9, RotatorId = 1 },
+                        new { CraneId = 9, RotatorId = 5 },
+                        new { CraneId = 9, RotatorId = 6 },
+                        new { CraneId = 9, RotatorId = 7 },
+
+                        //PALMS 7.86
+                        new { CraneId = 10, RotatorId = 1 },
+                        new { CraneId = 10, RotatorId = 5 },
+                        new { CraneId = 10, RotatorId = 6 },
+                        new { CraneId = 10, RotatorId = 7 },
+
+                         //PALMS 7.94
+                        new { CraneId = 11, RotatorId = 1 },
+                        new { CraneId = 11, RotatorId = 5 },
+                        new { CraneId = 11, RotatorId = 6 },
+                        new { CraneId = 11, RotatorId = 7 },
+
+                        //PALMS X100
+                        new { CraneId = 12, RotatorId = 1 },
+                        new { CraneId = 12, RotatorId = 6 },
+                        new { CraneId = 12, RotatorId = 7 }
                     )
                 );
         }
