@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "5/7 XY vezértömb, 195 bar",
                   Code = "A2",
                   Price = "795",
+                  Description = "Egyszerű és kompakt szelepblokk darukhoz teleszkópos hosszabbító gémek nélkül"
               },
               new ControlBlock
               {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
                   Code = "A3.1",
                   Price = "805",
+                  Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
               },
               new ControlBlock
               {
@@ -28,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
                   Code = "A4",
                   Price = "1390",
+                  Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
               {
@@ -35,6 +38,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
                   Code = "A4.2",
                   Price = "1500",
+                  Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
               {
@@ -42,6 +46,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
                   Code = "A7",
                   Price = "1360",
+                  Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
               {
@@ -49,6 +54,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
                   Code = "A12",
                   Price = "4720",
+                  Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
               },
               new ControlBlock
               {
@@ -56,6 +62,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Name = "2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
                    Code = "A14",
                    Price = "6635",
+                   Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
               },
               new ControlBlock
               {
@@ -63,6 +70,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "El.propo 8 szekciós, IQAN LC6, mini joystick-ok, (LS komp.) + Parker L90pro, 215/240 bar + HPF",
                   Code = "A23",
                   Price = "8470",
+                  Description = "Parker LC6 mini joystickek. Leginkább PALMS 5., 7. és X-sorozatú darukhoz használják"
               },
               new ControlBlock
               {
@@ -70,6 +78,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "El.propo 8 szekciós, IQAN LC5 joystick-ok, (LS komp) Parker L90pro, 215/240 bar + HPF",
                   Code = "A235",
                   Price = "8470",
+                  Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
               },
               new ControlBlock
               {
@@ -77,6 +86,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "El.propo 8 szekciós (A23) + MD3 kijelző + HPF",
                   Code = "A25.1",
                   Price = "9415",
+                  Description = "Parker LC6 mini joystick kijelzővel"
               },
               new ControlBlock
               {
@@ -84,6 +94,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "IMET rádió távirányítás, (LS komp.) Parker L90pro (max. 150 l/min.), 215/240 bar + HPF",
                   Code = "A26",
                   Price = "9110",
+                  Description = "IMET rádió vezérlés PALMS erdészeti daruhoz"
               },
               new ControlBlock
               {
@@ -91,6 +102,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + HPF",
                   Code = "A36",
                   Price = "11840",
+                  Description = "IMET rádióvezérlés Parker LC6 mini joystickekkel"
               },
               new ControlBlock
               {
@@ -98,6 +110,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + MD3 kijelző + HPF",
                   Code = "A36.1",
                   Price = "12785",
+                  Description = "IMET rádióvezérlés és Parker LC6 mini joystick kijelzővel"
               },
               new ControlBlock
               {
@@ -105,6 +118,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF",
                   Code = "A42",
                   Price = "14660",
+                  Description = "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban."
               }
               );
 
