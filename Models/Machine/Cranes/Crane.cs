@@ -45,5 +45,24 @@ namespace CalcAppAPI.Models
         public IEnumerable<Damping> Damping { get; set; }
         public CraneLight? Light { get; set; }
         public int? LightId { get; set; }
+        public OperatorSeat? OperatorSeat { get; set; }
+        public int? OperatorSeatId { get; set; }
+        public CraneOilCooler? CraneOilCooler { get; set; }
+        public int? CraneOilCoolerId { get; set; }
+        public IEnumerable<RotatorBrake> RotatorBrake { get; set; }
+        public JoystickHolder? JoystickHolder { get; set; }
+        public int? JoystickHolderId { get; set; }
+        public IEnumerable<HoseGuard> HoseGuard { get; set; }
+        public TurningDeviceCounterPlate? TurningDeviceCounterPlate { get; set; }
+        public int? TurningDeviceCounterPlateId { get; set; }
+        public SupportLegCounterPlate? SupportLegCounterPlate { get; set; }
+        public int? SupportLegCounterPlateId { get; set; }
+        public IEnumerable<BoomGuard> BoomGuard { get; set; }
+        public Cover? Cover { get; set; }
+        public int? CoverId { get; set; }
+        public WoodControl? WoodControl { get; set; }
+        public int? WoodControlId { get; set; }
+        public Linkage? Linkage { get; set; }
+        public int? LinkageId { get; set; }
     }
 }

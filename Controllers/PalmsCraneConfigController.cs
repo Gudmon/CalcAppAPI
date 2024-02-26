@@ -170,12 +170,114 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("cranes/{id}/lights")]
-        public async Task<ActionResult<CraneLight>> GetLights(int id)
+        public async Task<ActionResult<CraneLight>> GetLight(int id)
         {
             var lights = await _dbContext.CraneLight
                 .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
             return Ok(lights);
+        }
+
+        [HttpGet("cranes/{id}/operatorseats")]
+        public async Task<ActionResult<OperatorSeat>> GetOperatorSeat(int id)
+        {
+            var operatorSeats = await _dbContext.OperatorSeat
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(operatorSeats);
+        }
+
+        [HttpGet("cranes/{id}/oilcooler")]
+        public async Task<ActionResult<CraneOilCooler>> GetOilCooler(int id)
+        {
+            var oilCooler = await _dbContext.CraneOilCooler
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(oilCooler);
+        }
+
+        [HttpGet("cranes/{id}/rotatorbrakes")]
+        public async Task<ActionResult<IEnumerable<RotatorBrake>>> GetRotatorBrakes(int id)
+        {
+            var rotatorBrakes = await _dbContext.RotatorBrake
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(rotatorBrakes);
+        }
+
+        [HttpGet("cranes/{id}/joystickholder")]
+        public async Task<ActionResult<JoystickHolder>> GetJoystickHolder(int id)
+        {
+            var joystickHolder = await _dbContext.JoystickHolder
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(joystickHolder);
+        }
+
+        [HttpGet("cranes/{id}/hoseguards")]
+        public async Task<ActionResult<IEnumerable<HoseGuard>>> GetHoseGuards(int id)
+        {
+            var hoseGuards = await _dbContext.HoseGuard
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(hoseGuards);
+        }
+
+        [HttpGet("cranes/{id}/turningdevicecounterplate")]
+        public async Task<ActionResult<TurningDeviceCounterPlate>> GetTurningDeviceCounterPlate(int id)
+        {
+            var turningDeviceCounterPlate = await _dbContext.TurningDeviceCounterPlate
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(turningDeviceCounterPlate);
+        }
+
+        [HttpGet("cranes/{id}/supportlegcounterplate")]
+        public async Task<ActionResult<SupportLegCounterPlate>> GetSupportLegCounterPlate(int id)
+        {
+            var supportLegCounterPlate = await _dbContext.SupportLegCounterPlate
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(supportLegCounterPlate);
+        }
+
+        [HttpGet("cranes/{id}/boomguards")]
+        public async Task<ActionResult<IEnumerable<BoomGuard>>> GetBoomGuards(int id)
+        {
+            var boomGuards = await _dbContext.BoomGuard
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(boomGuards);
+        }
+
+        [HttpGet("cranes/{id}/cover")]
+        public async Task<ActionResult<Cover>> GetCover(int id)
+        {
+            var cover = await _dbContext.Cover
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(cover);
+        }
+
+        [HttpGet("cranes/{id}/woodcontrol")]
+        public async Task<ActionResult<WoodControl>> GetWoodControl(int id)
+        {
+            var woodControl = await _dbContext.WoodControl
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(woodControl);
+        }
+
+        [HttpGet("cranes/{id}/linkage")]
+        public async Task<ActionResult<Linkage>> GetLinkage(int id)
+        {
+            var linkage = await _dbContext.Linkage
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(linkage);
         }
     }
 }

@@ -5,10 +5,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
 {
     public static class PalmsTrailerOilTankCoolerConfig
     {
-        public static void ConfigureMultiplePalmsOilTankCoolers(this ModelBuilder modelBuilder)
+        public static void ConfigureMultiplePalmsTrailerOilCoolers(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<OilTankCooler>().HasData(
-               new OilTankCooler
+            modelBuilder.Entity<TrailerOilCooler>().HasData(
+               new TrailerOilCooler
                {
                    Id = 1,
                    Name = "Olajhűtő csomag a tartályhoz rögzítve",

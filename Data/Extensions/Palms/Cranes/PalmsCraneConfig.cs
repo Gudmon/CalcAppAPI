@@ -36,6 +36,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = null,
                    LightId = null,
+                   OperatorSeatId = null,
+                   CraneOilCoolerId = null,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = null
                },
 
                new Crane
@@ -66,6 +74,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = null,
                    LightId = null,
+                   OperatorSeatId = null,
+                   CraneOilCoolerId = null,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = null
                },
 
 
@@ -97,6 +113,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = null,
                    LightId = null,
+                   OperatorSeatId = null,
+                   CraneOilCoolerId = null,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = null
                },
 
                new Crane
@@ -127,6 +151,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = null,
                    LightId = 1,
+                   OperatorSeatId = null,
+                   CraneOilCoolerId = null,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = null
                },
 
                new Crane
@@ -157,6 +189,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,    
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = null
                },
                new Crane
                {
@@ -186,6 +226,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -215,6 +263,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -244,6 +300,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = null,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -273,6 +337,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -302,6 +374,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -331,6 +411,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = 1,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                },
                new Crane
                {
@@ -360,6 +448,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    ElectricalFloatingId = null,
                    ValveBlockId = 1,
                    LightId = 1,
+                   OperatorSeatId = 1,
+                   CraneOilCoolerId = 1,
+                   JoystickHolderId = 1,
+                   TurningDeviceCounterPlateId = 1,
+                   SupportLegCounterPlateId = 1,
+                   CoverId = 1,
+                   WoodControlId = 1,
+                   LinkageId = 1
                }
            );
         }

@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240226212117_wood control")]
+    partial class woodcontrol
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -538,9 +541,6 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("LightId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("LinkageId")
-                        .HasColumnType("int");
-
                     b.Property<string>("MaxReach")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -611,8 +611,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("JoystickHolderId");
 
                     b.HasIndex("LightId");
-
-                    b.HasIndex("LinkageId");
 
                     b.HasIndex("OperatorSeatId");
 
@@ -807,7 +805,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "710",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "7,2",
                             Name = "PALMS 5.72",
                             OperatorSeatId = 1,
@@ -844,7 +841,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,5",
                             Name = "PALMS 5.85",
                             OperatorSeatId = 1,
@@ -880,7 +876,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "490 (8,4 m)",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,7",
                             Name = "PALMS 5.87Z",
                             OperatorSeatId = 1,
@@ -895,6 +890,7 @@ namespace CalcAppAPI.Migrations
                             TelescopeLength = "3,3",
                             TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
+                            WoodControlId = 1,
                             WorkingPressure = "215"
                         },
                         new
@@ -916,7 +912,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "755",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "7,5",
                             Name = "PALMS 7.75",
                             OperatorSeatId = 1,
@@ -953,7 +948,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "630",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,6",
                             Name = "PALMS 7.86",
                             OperatorSeatId = 1,
@@ -990,7 +984,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "540",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "9,4",
                             Name = "PALMS 7.94",
                             OperatorSeatId = 1,
@@ -1026,7 +1019,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "680",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "10,1",
                             Name = "PALMS X100",
                             OperatorSeatId = 1,
@@ -4612,40 +4604,6 @@ namespace CalcAppAPI.Migrations
                             Code = "JL",
                             Name = "Joystick tartó A11-A42 vezértömbhöz",
                             Price = "370"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Linkage");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "3PL",
-                            Name = "3 pontos csatlakozó adapter (csak a B9 és B10 talpalóval kompatibilis)",
-                            Price = "960"
                         });
                 });
 
@@ -10962,10 +10920,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("LightId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", "Linkage")
-                        .WithMany("Crane")
-                        .HasForeignKey("LinkageId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", "OperatorSeat")
                         .WithMany("Crane")
                         .HasForeignKey("OperatorSeatId");
@@ -10995,8 +10949,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("JoystickHolder");
 
                     b.Navigation("Light");
-
-                    b.Navigation("Linkage");
 
                     b.Navigation("OperatorSeat");
 
@@ -11458,11 +11410,6 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
                 {
                     b.Navigation("Crane");
                 });

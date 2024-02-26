@@ -1,0 +1,21 @@
+﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
+using Microsoft.EntityFrameworkCore;
+
+namespace CalcAppAPI.Data.Extensions.Palms.Cranes
+{
+    public static class PalmsCraneJoystickHolderConfig
+    {
+        public static void ConfigureMultiplePalmsCraneJoyStickHolders(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<JoystickHolder>().HasData(
+              new JoystickHolder
+              {
+                  Id = 1,
+                  Name = "Joystick tartó A11-A42 vezértömbhöz",
+                  Code = "JL",
+                  Price = "370"
+              }
+              );
+        }
+    }
+}

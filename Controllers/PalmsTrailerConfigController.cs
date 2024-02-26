@@ -86,14 +86,14 @@ namespace CalcAppAPI.Controllers
         {
             var oilTanks = await _dbContext.OilTank
                 .Where(s => s.Trailer.Any(t => t.Id == id))
-                .Include(s => s.OilTankCooler)
+                .Include(s => s.TrailerOilCooler)
                 .Select(s => new OilTank
                 {
                     Id = s.Id,
                     Name = s.Name,
                     Code = s.Code,
                     Price = s.Price,
-                    OilTankCooler = s.OilTankCooler
+                    TrailerOilCooler = s.TrailerOilCooler
                 })
                 .ToListAsync();
 

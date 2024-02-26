@@ -20,7 +20,7 @@ namespace CalcAppAPI.Data
         public DbSet<Platform> Platform { get; set; }
         public DbSet<OilPump> OilPump { get; set; }
         public DbSet<OilTank> OilTank { get; set; }
-        public DbSet<OilTankCooler> OilTankCooler { get; set; }
+        public DbSet<TrailerOilCooler> TrailerOilCooler { get; set; }
         public DbSet<BolsterLock> BolsterLock { get; set; }
         public DbSet<BBox> BBox { get; set; }
         public DbSet<WoodSorter> WoodSorter { get; set; }
@@ -42,6 +42,17 @@ namespace CalcAppAPI.Data
         public DbSet<ValveBlock> ValveBlock { get; set; }
         public DbSet<Damping> Damping { get; set; }
         public DbSet<CraneLight> CraneLight { get; set; }
+        public DbSet<OperatorSeat> OperatorSeat { get; set; }
+        public DbSet<CraneOilCooler> CraneOilCooler { get; set; }
+        public DbSet<RotatorBrake> RotatorBrake { get; set; }
+        public DbSet<JoystickHolder> JoystickHolder { get; set; }
+        public DbSet<HoseGuard> HoseGuard { get; set; }
+        public DbSet<TurningDeviceCounterPlate> TurningDeviceCounterPlate { get; set; }
+        public DbSet<SupportLegCounterPlate> SupportLegCounterPlate { get; set; }
+        public DbSet<BoomGuard> BoomGuard { get; set; }
+        public DbSet<Cover> Cover { get; set; }
+        public DbSet<WoodControl> WoodControl { get; set; }
+        public DbSet<Linkage> Linkage { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -57,7 +68,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsPlatforms();
             modelBuilder.ConfigureMultiplePalmsOilPumps();
             modelBuilder.ConfigureMultiplePalmsOilTanks();
-            modelBuilder.ConfigureMultiplePalmsOilTankCoolers();
+            modelBuilder.ConfigureMultiplePalmsTrailerOilCoolers();
             modelBuilder.ConfigureMultiplePalmsBolsterLocks();
             modelBuilder.ConfigureMultiplePalmsBBoxes();
             modelBuilder.ConfigureMultiplePalmsWoodSorters();
@@ -78,6 +89,17 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsValveBlocks();
             modelBuilder.ConfigureMultiplePalmsDampings();
             modelBuilder.ConfigureMultiplePalmsCraneLights();
+            modelBuilder.ConfigureMultiplePalmsCraneOperatorSeats();
+            modelBuilder.ConfigureMultiplePalmsCraneOilCoolers();
+            modelBuilder.ConfigureMultiplePalmsCraneRotatorBrakes();
+            modelBuilder.ConfigureMultiplePalmsCraneJoyStickHolders();
+            modelBuilder.ConfigureMultiplePalmsCraneHoseGuards();
+            modelBuilder.ConfigureMultiplePalmsCraneTurningDeviceCounterPlates();
+            modelBuilder.ConfigureMultiplePalmsCraneSupportLegCounterPlates();
+            modelBuilder.ConfigureMultiplePalmsCraneBoomGuards();
+            modelBuilder.ConfigureMultiplePalmsCraneCovers();
+            modelBuilder.ConfigureMultiplePalmsCraneWoodControls();
+            modelBuilder.ConfigureMultiplePalmsCraneLinkages();
 
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.CraneConfigurations)
@@ -217,10 +239,10 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectTrailersWithOilTanks();
 
             //OIL TANK COOLER
-            modelBuilder.Entity<OilTankCooler>()
+            modelBuilder.Entity<TrailerOilCooler>()
                 .HasMany(o => o.OilTank)
-                .WithOne(o => o.OilTankCooler)
-                .HasForeignKey(o => o.OilTankCoolerId)
+                .WithOne(o => o.TrailerOilCooler)
+                .HasForeignKey(o => o.TrailerOilCoolerId)
                 .IsRequired(false);
 
             //BOLSTER LOCK
@@ -289,20 +311,93 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.ElectricalFloatingId)
                 .IsRequired(false);
 
-            //VALVE BLOCKS
+            //VALVE BLOCK
             modelBuilder.Entity<ValveBlock>()
                 .HasMany(o => o.Crane)
                 .WithOne(o => o.ValveBlock)
                 .HasForeignKey(o => o.ValveBlockId)
                 .IsRequired(false);
 
+            //DAMPINGS
             modelBuilder.ConnectCranesWithDampings();
 
-            //LIGHTS
+            //LIGHT
             modelBuilder.Entity<CraneLight>()
                 .HasMany(o => o.Crane)
                 .WithOne(o => o.Light)
                 .HasForeignKey(o => o.LightId)
+                .IsRequired(false);
+
+            //OPERATOR SEAT
+            modelBuilder.Entity<OperatorSeat>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.OperatorSeat)
+                .HasForeignKey(o => o.OperatorSeatId)
+                .IsRequired(false);
+
+            //CRANE OILCOOLER
+            modelBuilder.Entity<CraneOilCooler>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.CraneOilCooler)
+                .HasForeignKey(o => o.CraneOilCoolerId)
+                .IsRequired(false);
+
+            //ROTATOR BRAKES
+            modelBuilder.ConnectCranesWithRotatorBrakes();
+
+            //CRANE OILCOOLER
+            modelBuilder.Entity<CraneOilCooler>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.CraneOilCooler)
+                .HasForeignKey(o => o.CraneOilCoolerId)
+                .IsRequired(false);
+
+            //JOYSTICK HOLDER
+            modelBuilder.Entity<JoystickHolder>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.JoystickHolder)
+                .HasForeignKey(o => o.JoystickHolderId)
+                .IsRequired(false);
+
+            //HOSE GUARDS
+            modelBuilder.ConnectCranesWithHoseGuards();
+
+            //TURNING DEVICE COUNTER PLATE
+            modelBuilder.Entity<TurningDeviceCounterPlate>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.TurningDeviceCounterPlate)
+                .HasForeignKey(o => o.TurningDeviceCounterPlateId)
+                .IsRequired(false);
+
+            //SUPPORT LEG COUNTER PLATE
+            modelBuilder.Entity<SupportLegCounterPlate>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.SupportLegCounterPlate)
+                .HasForeignKey(o => o.SupportLegCounterPlateId)
+                .IsRequired(false);
+
+            //BOOM GUARDS
+            modelBuilder.ConnectCranesWithBoomGuards();
+
+            //COVER
+            modelBuilder.Entity<Cover>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.Cover)
+                .HasForeignKey(o => o.CoverId)
+                .IsRequired(false);
+
+            //WOOD CONTROL
+            modelBuilder.Entity<WoodControl>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.WoodControl)
+                .HasForeignKey(o => o.WoodControlId)
+                .IsRequired(false);
+
+            //LINKAGE
+            modelBuilder.Entity<Linkage>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.Linkage)
+                .HasForeignKey(o => o.LinkageId)
                 .IsRequired(false);
 
             base.OnModelCreating(modelBuilder);

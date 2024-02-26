@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240226195715_crane oil cooler")]
+    partial class craneoilcooler
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,53 +24,6 @@ namespace CalcAppAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("BoomGuardCrane", b =>
-                {
-                    b.Property<int>("BoomGuardId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.HasKey("BoomGuardId", "CraneId");
-
-                    b.HasIndex("CraneId");
-
-                    b.ToTable("BoomGuardCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            BoomGuardId = 1,
-                            CraneId = 6
-                        },
-                        new
-                        {
-                            BoomGuardId = 1,
-                            CraneId = 7
-                        },
-                        new
-                        {
-                            BoomGuardId = 2,
-                            CraneId = 9
-                        },
-                        new
-                        {
-                            BoomGuardId = 2,
-                            CraneId = 10
-                        },
-                        new
-                        {
-                            BoomGuardId = 2,
-                            CraneId = 11
-                        },
-                        new
-                        {
-                            BoomGuardId = 3,
-                            CraneId = 12
-                        });
-                });
 
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
@@ -491,9 +447,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CoverId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("CraneOilCoolerId")
                         .HasColumnType("int");
 
@@ -506,9 +459,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ElectricalFloatingId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("JoystickHolderId")
                         .HasColumnType("int");
 
                     b.Property<string>("LiftAtFourMeters190Bar")
@@ -536,9 +486,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("LightId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LinkageId")
                         .HasColumnType("int");
 
                     b.Property<string>("MaxReach")
@@ -580,20 +527,11 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SupportLegCounterPlateId")
-                        .HasColumnType("int");
-
                     b.Property<string>("TelescopeLength")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TurningDeviceCounterPlateId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("ValveBlockId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("WoodControlId")
                         .HasColumnType("int");
 
                     b.Property<string>("WorkingPressure")
@@ -602,27 +540,15 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CoverId");
-
                     b.HasIndex("CraneOilCoolerId");
 
                     b.HasIndex("ElectricalFloatingId");
 
-                    b.HasIndex("JoystickHolderId");
-
                     b.HasIndex("LightId");
-
-                    b.HasIndex("LinkageId");
 
                     b.HasIndex("OperatorSeatId");
 
-                    b.HasIndex("SupportLegCounterPlateId");
-
-                    b.HasIndex("TurningDeviceCounterPlateId");
-
                     b.HasIndex("ValveBlockId");
-
-                    b.HasIndex("WoodControlId");
 
                     b.ToTable("Crane");
 
@@ -633,10 +559,8 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "26",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "360",
                             Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "570",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
@@ -652,10 +576,7 @@ namespace CalcAppAPI.Migrations
                             Series = "2",
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "-",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190"
                         },
                         new
@@ -664,10 +585,8 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "26",
                             BrutLiftingTorque215Bar = "29",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "400",
                             Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "530",
                             LiftAtFourMeters215Bar = "600",
                             LiftAtFourMeters240Bar = "-",
@@ -683,10 +602,7 @@ namespace CalcAppAPI.Migrations
                             Series = "2",
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,33",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -695,10 +611,8 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "36",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "655",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
@@ -714,10 +628,7 @@ namespace CalcAppAPI.Migrations
                             Series = "3",
                             SlewingCylinder = "4",
                             SlewingTorque = "9",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,85",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190"
                         },
                         new
@@ -726,10 +637,8 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "41",
                             BrutLiftingTorque215Bar = "46",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "620",
                             Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "820",
                             LiftAtFourMeters215Bar = "910",
                             LiftAtFourMeters240Bar = "-",
@@ -746,10 +655,7 @@ namespace CalcAppAPI.Migrations
                             Series = "3",
                             SlewingCylinder = "4",
                             SlewingTorque = "12",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,85",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -758,12 +664,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "48",
                             BrutLiftingTorque215Bar = "54",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "710",
                             Description = "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "960",
                             LiftAtFourMeters215Bar = "1040",
                             LiftAtFourMeters240Bar = "-",
@@ -781,11 +685,8 @@ namespace CalcAppAPI.Migrations
                             Series = "4",
                             SlewingCylinder = "4",
                             SlewingTorque = "15",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,95",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -794,12 +695,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "56",
                             BrutLiftingTorque215Bar = "63",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "820",
                             Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1100",
                             LiftAtFourMeters215Bar = "1240",
                             LiftAtFourMeters240Bar = "-",
@@ -807,7 +706,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "710",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "7,2",
                             Name = "PALMS 5.72",
                             OperatorSeatId = 1,
@@ -818,11 +716,8 @@ namespace CalcAppAPI.Migrations
                             Series = "5",
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,95",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -831,12 +726,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "56",
                             BrutLiftingTorque215Bar = "63",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "900",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1050",
                             LiftAtFourMeters215Bar = "1220",
                             LiftAtFourMeters240Bar = "-",
@@ -844,7 +737,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,5",
                             Name = "PALMS 5.85",
                             OperatorSeatId = 1,
@@ -855,11 +747,8 @@ namespace CalcAppAPI.Migrations
                             Series = "5",
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "3,3",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -868,11 +757,9 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "63",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "995",
                             Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1235",
                             LiftAtFourMeters240Bar = "-",
@@ -880,7 +767,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "490 (8,4 m)",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,7",
                             Name = "PALMS 5.87Z",
                             OperatorSeatId = 1,
@@ -891,9 +777,7 @@ namespace CalcAppAPI.Migrations
                             Series = "5",
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "3,3",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
                             WorkingPressure = "215"
                         },
@@ -903,12 +787,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "74",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1170",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1325",
                             LiftAtFourMeters215Bar = "1585",
                             LiftAtFourMeters240Bar = "-",
@@ -916,7 +798,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "755",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "7,5",
                             Name = "PALMS 7.75",
                             OperatorSeatId = 1,
@@ -927,11 +808,8 @@ namespace CalcAppAPI.Migrations
                             Series = "7",
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "2",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -940,12 +818,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "74",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1250",
                             LiftAtFourMeters215Bar = "1480",
                             LiftAtFourMeters240Bar = "-",
@@ -953,7 +829,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "630",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "8,6",
                             Name = "PALMS 7.86",
                             OperatorSeatId = 1,
@@ -964,11 +839,8 @@ namespace CalcAppAPI.Migrations
                             Series = "7",
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "3,4",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -977,12 +849,10 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1410",
                             LiftAtFourMeters240Bar = "-",
@@ -990,7 +860,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "540",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "9,4",
                             Name = "PALMS 7.94",
                             OperatorSeatId = 1,
@@ -1001,11 +870,8 @@ namespace CalcAppAPI.Migrations
                             Series = "7",
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "3,8",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "215"
                         },
                         new
@@ -1014,11 +880,9 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "106",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
                             Description = "A PALMS X100 kínálatunkban a leghosszabb hatótávval és legnagyobb emelőkapacitással rendelkezik. Dupla teleszkópos kinyújtója rejtett hidraulikus alkatrészeket rejteget, biztosítva ezzel a folyamatos üzemelést.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "2000",
@@ -1026,7 +890,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "680",
                             LightId = 1,
-                            LinkageId = 1,
                             MaxReach = "10,1",
                             Name = "PALMS X100",
                             OperatorSeatId = 1,
@@ -1037,60 +900,9 @@ namespace CalcAppAPI.Migrations
                             Series = "X",
                             SlewingCylinder = "4",
                             SlewingTorque = "30",
-                            SupportLegCounterPlateId = 1,
                             TelescopeLength = "4,2",
-                            TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            WoodControlId = 1,
                             WorkingPressure = "240"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BoomGuard");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "BG5",
-                            Name = "Főgém védő az 5-ös szériához",
-                            Price = "630"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "BG7",
-                            Name = "Főgém védő a 7-es szériához",
-                            Price = "650"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "BG10",
-                            Name = "Főgém védő X100-hoz",
-                            Price = "675"
                         });
                 });
 
@@ -1234,40 +1046,6 @@ namespace CalcAppAPI.Migrations
                             Description = "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban.",
                             Name = "Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF",
                             Price = "14660"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cover");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "JKK",
-                            Name = "Védőhuzat bőrből A2-A7-hez, A11-hez, A12-höz és A14-hez",
-                            Price = "50"
                         });
                 });
 
@@ -4540,115 +4318,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.HoseGuard", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HoseGuard");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "HG1",
-                            Name = "Tömlő védő B3 és B6.1 talpaló esetén",
-                            Price = "105"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "HG2",
-                            Name = "Tömlő védő  B09 és B9 talpaló esetén",
-                            Price = "105"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("JoystickHolder");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "JL",
-                            Name = "Joystick tartó A11-A42 vezértömbhöz",
-                            Price = "370"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Linkage");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "3PL",
-                            Name = "3 pontos csatlakozó adapter (csak a B9 és B10 talpalóval kompatibilis)",
-                            Price = "960"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", b =>
                 {
                     b.Property<int>("Id")
@@ -4814,136 +4483,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.RotatorBrake", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RotatorBrake");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "Br0",
-                            Name = "Rotátorfék  nélkül",
-                            Price = "0"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "Br1",
-                            Name = "Rotátor fék",
-                            Price = "75"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "Br1",
-                            Name = "Rotátor fék",
-                            Price = "55"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "Br2",
-                            Name = "Dupla rotátor fék",
-                            Price = "115"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Code = "Br2",
-                            Name = "Dupla rotátor fék",
-                            Price = "220"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SupportLegCounterPlate");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "PL2",
-                            Name = "Fedőlap a Palms talpaló lábhoz",
-                            Price = "475"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TurningDeviceCounterPlate");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "PL",
-                            Name = "Fedőlap a fordító szerkezethez",
-                            Price = "340"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
                 {
                     b.Property<int>("Id")
@@ -5023,40 +4562,6 @@ namespace CalcAppAPI.Migrations
                             Code = "W2",
                             Name = "Rádió távvezérléső 2200-as csörlő (A11-A41 vezértömbhöz)",
                             Price = "2845"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("WoodControl");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "LWS",
-                            Name = "Hosszú fás kiegészítő a főgémhez",
-                            Price = "150"
                         });
                 });
 
@@ -8285,88 +7790,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CraneHoseGuard", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("HoseGuardId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "HoseGuardId");
-
-                    b.HasIndex("HoseGuardId");
-
-                    b.ToTable("HoseGuardCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 4,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            HoseGuardId = 1
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            HoseGuardId = 2
-                        });
-                });
-
             modelBuilder.Entity("CraneProtectionSleeves", b =>
                 {
                     b.Property<int>("CraneId")
@@ -8693,203 +8116,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             RotatorId = 7
-                        });
-                });
-
-            modelBuilder.Entity("CraneRotatorBrake", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RotatorBrakeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "RotatorBrakeId");
-
-                    b.HasIndex("RotatorBrakeId");
-
-                    b.ToTable("RotatorBrakeCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorBrakeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 1,
-                            RotatorBrakeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorBrakeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 2,
-                            RotatorBrakeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorBrakeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 3,
-                            RotatorBrakeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorBrakeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            RotatorBrakeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorBrakeId = 2
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            RotatorBrakeId = 4
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            RotatorBrakeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            RotatorBrakeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            RotatorBrakeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            RotatorBrakeId = 5
                         });
                 });
 
@@ -10910,21 +10136,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("BoomGuardCrane", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", null)
-                        .WithMany()
-                        .HasForeignKey("BoomGuardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", null)
@@ -10942,10 +10153,6 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", "Cover")
-                        .WithMany("Crane")
-                        .HasForeignKey("CoverId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneOilCooler", "CraneOilCooler")
                         .WithMany("Crane")
                         .HasForeignKey("CraneOilCoolerId");
@@ -10954,59 +10161,27 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", "JoystickHolder")
-                        .WithMany("Crane")
-                        .HasForeignKey("JoystickHolderId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", "Light")
                         .WithMany("Crane")
                         .HasForeignKey("LightId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", "Linkage")
-                        .WithMany("Crane")
-                        .HasForeignKey("LinkageId");
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", "OperatorSeat")
                         .WithMany("Crane")
                         .HasForeignKey("OperatorSeatId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", "SupportLegCounterPlate")
-                        .WithMany("Crane")
-                        .HasForeignKey("SupportLegCounterPlateId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", "TurningDeviceCounterPlate")
-                        .WithMany("Crane")
-                        .HasForeignKey("TurningDeviceCounterPlateId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", "ValveBlock")
                         .WithMany("Crane")
                         .HasForeignKey("ValveBlockId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", "WoodControl")
-                        .WithMany("Crane")
-                        .HasForeignKey("WoodControlId");
-
-                    b.Navigation("Cover");
 
                     b.Navigation("CraneOilCooler");
 
                     b.Navigation("ElectricalFloating");
 
-                    b.Navigation("JoystickHolder");
-
                     b.Navigation("Light");
-
-                    b.Navigation("Linkage");
 
                     b.Navigation("OperatorSeat");
 
-                    b.Navigation("SupportLegCounterPlate");
-
-                    b.Navigation("TurningDeviceCounterPlate");
-
                     b.Navigation("ValveBlock");
-
-                    b.Navigation("WoodControl");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
@@ -11197,21 +10372,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CraneHoseGuard", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.HoseGuard", null)
-                        .WithMany()
-                        .HasForeignKey("HoseGuardId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("CraneProtectionSleeves", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Crane", null)
@@ -11238,21 +10398,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", null)
                         .WithMany()
                         .HasForeignKey("RotatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("CraneRotatorBrake", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.RotatorBrake", null)
-                        .WithMany()
-                        .HasForeignKey("RotatorBrakeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -11432,11 +10577,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("CraneControlBlocks");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
                 {
                     b.Navigation("Crane");
@@ -11457,37 +10597,12 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("TrailerConfigurations");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", b =>
                 {
                     b.Navigation("Crane");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", b =>
                 {
                     b.Navigation("Crane");
                 });
