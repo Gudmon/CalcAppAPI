@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Connect.Trailers
 {
-    public static class TrailerWithLights
+    public static class TrailerWithTrailerLights
     {
         public static void ConnectTrailersWithLights(this ModelBuilder modelBuilder)
         {

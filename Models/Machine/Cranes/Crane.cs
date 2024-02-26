@@ -36,5 +36,14 @@ namespace CalcAppAPI.Models
         public IEnumerable<ControlBlock> ControlBlock { get; set; }
         public IEnumerable<Rotator> Rotator { get; set; }
         public IEnumerable<Grapple> Grapple { get; set; }
+        public IEnumerable<Winch> Winch { get; set; }
+        public IEnumerable<ProtectionSleeves> ProtectionSleeves { get; set; }
+        public ElectricalFloating? ElectricalFloating { get; set; }
+        public int? ElectricalFloatingId { get; set; }
+        public ValveBlock? ValveBlock { get; set; }
+        public int? ValveBlockId { get; set; }
+        public IEnumerable<Damping> Damping { get; set; }
+        public CraneLight? Light { get; set; }
+        public int? LightId { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace CalcAppAPI.Data
         public DbSet<ChainsawHolder> ChainsawHolder { get; set; }
         public DbSet<UnderrunProtection> UnderrunProtection { get; set; }
         public DbSet<SupportLeg> SupportLeg { get; set; }
-        public DbSet<Light> Light { get; set; }
+        public DbSet<TrailerLights> TrailerLight { get; set; }
         public DbSet<Tyre> Tyre { get; set; }
         public DbSet<Crane> Crane { get; set; }
         public DbSet<FrameType> FrameType { get; set; }
@@ -36,6 +36,12 @@ namespace CalcAppAPI.Data
         public DbSet<CraneControlBlock> CraneControlBlocks { get; set; }
         public DbSet<Rotator> Rotator { get; set; }
         public DbSet<Grapple> Grapple { get; set; }
+        public DbSet<Winch> Winch { get; set; }
+        public DbSet<ProtectionSleeves> ProtectionSleeves { get; set; }
+        public DbSet<ElectricalFloating> ElectricalFloating { get; set; }
+        public DbSet<ValveBlock> ValveBlock { get; set; }
+        public DbSet<Damping> Damping { get; set; }
+        public DbSet<CraneLight> CraneLight { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -59,13 +65,19 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsChainsawHolders();
             modelBuilder.ConfigureMultiplePalmsUnderrunProtections();
             modelBuilder.ConfigureMultiplePalmsSupportLegs();
-            modelBuilder.ConfigureMultiplePalmsLights();
+            modelBuilder.ConfigureMultiplePalmsTrailerLights();
             modelBuilder.ConfigureMultiplePalmsTyres();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
             modelBuilder.ConfigureMultiplePalmsRotators();
             modelBuilder.ConfigureMultiplePalmsGrapples();
+            modelBuilder.ConfigureMultiplePalmsWinches();
+            modelBuilder.ConfigureMultiplePalmsProtectionSleeves();
+            modelBuilder.ConfigureMultiplePalmsElectricalFloatings();
+            modelBuilder.ConfigureMultiplePalmsValveBlocks();
+            modelBuilder.ConfigureMultiplePalmsDampings();
+            modelBuilder.ConfigureMultiplePalmsCraneLights();
 
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.CraneConfigurations)
@@ -204,49 +216,49 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectTrailersWithOilPumps();
             modelBuilder.ConnectTrailersWithOilTanks();
 
-            // OIL TANK COOLER
+            //OIL TANK COOLER
             modelBuilder.Entity<OilTankCooler>()
                 .HasMany(o => o.OilTank)
                 .WithOne(o => o.OilTankCooler)
                 .HasForeignKey(o => o.OilTankCoolerId)
                 .IsRequired(false);
 
-            // BOLSTER LOCK
+            //BOLSTER LOCK
             modelBuilder.Entity<BolsterLock>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.BolsterLock)
                 .HasForeignKey(o => o.BolsterLockId)
                 .IsRequired(false);
 
-            // BBOX
+            //BBOX
             modelBuilder.Entity<BBox>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.BBox)
                 .HasForeignKey(o => o.BBoxId)
                 .IsRequired(false);
 
-            // WOOD SORTER
+            //WOOD SORTER
             modelBuilder.Entity<WoodSorter>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.WoodSorter)
                 .HasForeignKey(o => o.WoodSorterId)
                 .IsRequired(false);
 
-            // HANDBRAKES
+            //HANDBRAKES
             modelBuilder.Entity<HandBrake>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.HandBrake)
                 .HasForeignKey(o => o.HandBrakeId)
                 .IsRequired(false);
 
-            // HANDBRAKES
+            //CHAINSAW HOLDERS
             modelBuilder.Entity<ChainsawHolder>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.ChainsawHolder)
                 .HasForeignKey(o => o.ChainsawHolderId)
                 .IsRequired(false);
 
-            // UNDERRUN PROTECTION
+            //UNDERRUN PROTECTION
             modelBuilder.Entity<UnderrunProtection>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.UnderrunProtection)
@@ -267,6 +279,31 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectCranesWithControlBlocks();
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithGrapples();
+            modelBuilder.ConnectCranesWithWinches();
+            modelBuilder.ConnectCranesWithProtectionSleeves();
+
+            //ELECTRICAL FLOATINGS
+            modelBuilder.Entity<ElectricalFloating>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.ElectricalFloating)
+                .HasForeignKey(o => o.ElectricalFloatingId)
+                .IsRequired(false);
+
+            //VALVE BLOCKS
+            modelBuilder.Entity<ValveBlock>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.ValveBlock)
+                .HasForeignKey(o => o.ValveBlockId)
+                .IsRequired(false);
+
+            modelBuilder.ConnectCranesWithDampings();
+
+            //LIGHTS
+            modelBuilder.Entity<CraneLight>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.Light)
+                .HasForeignKey(o => o.LightId)
+                .IsRequired(false);
 
             base.OnModelCreating(modelBuilder);
         }

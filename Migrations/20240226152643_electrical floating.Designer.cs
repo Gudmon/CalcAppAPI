@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240226152643_electrical floating")]
+    partial class electricalfloating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -479,9 +482,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LightId")
-                        .HasColumnType("int");
-
                     b.Property<string>("MaxReach")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -522,9 +522,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ValveBlockId")
-                        .HasColumnType("int");
-
                     b.Property<string>("WorkingPressure")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -532,10 +529,6 @@ namespace CalcAppAPI.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ElectricalFloatingId");
-
-                    b.HasIndex("LightId");
-
-                    b.HasIndex("ValveBlockId");
 
                     b.ToTable("Crane");
 
@@ -632,7 +625,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "430",
                             LiftAtFullReach215Bar = "480",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
@@ -653,14 +645,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "710",
                             Description = "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "960",
                             LiftAtFourMeters215Bar = "1040",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "480",
                             LiftAtFullReach215Bar = "535",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7.1",
                             Name = "PALMS 4.71",
                             PillarSlewingAngle = "370",
@@ -671,7 +661,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "15",
                             TelescopeLength = "1,95",
-                            ValveBlockId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -682,14 +671,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "820",
                             Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "1100",
                             LiftAtFourMeters215Bar = "1240",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "620",
                             LiftAtFullReach215Bar = "710",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,2",
                             Name = "PALMS 5.72",
                             PillarSlewingAngle = "380",
@@ -700,7 +687,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             TelescopeLength = "1,95",
-                            ValveBlockId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -711,14 +697,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "900",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "1050",
                             LiftAtFourMeters215Bar = "1220",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "450",
                             LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,5",
                             Name = "PALMS 5.85",
                             PillarSlewingAngle = "380",
@@ -729,7 +713,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             TelescopeLength = "3,3",
-                            ValveBlockId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -746,7 +729,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "490 (8,4 m)",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,7",
                             Name = "PALMS 5.87Z",
                             PillarSlewingAngle = "340",
@@ -757,7 +739,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             TelescopeLength = "3,3",
-                            ValveBlockId = 1,
                             WorkingPressure = "215"
                         },
                         new
@@ -768,14 +749,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "1170",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "1325",
                             LiftAtFourMeters215Bar = "1585",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "610",
                             LiftAtFullReach215Bar = "755",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,5",
                             Name = "PALMS 7.75",
                             PillarSlewingAngle = "380",
@@ -786,7 +765,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             TelescopeLength = "2",
-                            ValveBlockId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -797,14 +775,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "1250",
                             LiftAtFourMeters215Bar = "1480",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "530",
                             LiftAtFullReach215Bar = "630",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,6",
                             Name = "PALMS 7.86",
                             PillarSlewingAngle = "380",
@@ -815,7 +791,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             TelescopeLength = "3,4",
-                            ValveBlockId = 1,
                             WorkingPressure = "190/215"
                         },
                         new
@@ -826,14 +801,12 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque240Bar = "-",
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                            ElectricalFloatingId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1410",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "540",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "9,4",
                             Name = "PALMS 7.94",
                             PillarSlewingAngle = "380",
@@ -844,7 +817,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             TelescopeLength = "3,8",
-                            ValveBlockId = 1,
                             WorkingPressure = "215"
                         },
                         new
@@ -861,7 +833,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "680",
-                            LightId = 1,
                             MaxReach = "10,1",
                             Name = "PALMS X100",
                             PillarSlewingAngle = "380",
@@ -872,7 +843,6 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "30",
                             TelescopeLength = "4,2",
-                            ValveBlockId = 1,
                             WorkingPressure = "240"
                         });
                 });
@@ -3876,88 +3846,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CraneLight");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "L1",
-                            Name = "LED munkalámpák a darugémre, 2 db",
-                            Price = "510"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Damping");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "D1",
-                            Name = "Csillapító a munkahenger elforgatáshoz",
-                            Price = "805"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "D2",
-                            Name = "Csillapító a munkahenger elforgatáshoz és emeléshez",
-                            Price = "1375"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "D3",
-                            Name = "Csillapító emeléshez",
-                            Price = "805"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>
                 {
                     b.Property<int>("Id")
@@ -4383,40 +4271,6 @@ namespace CalcAppAPI.Migrations
                             Code = "R90",
                             Name = "100 kN-os rotátor FL Indexator T10 (talpas)",
                             Price = "1880"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ValveBlock");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "AH",
-                            Name = "A21-A42 vezértömb a főgémhez erősítve",
-                            Price = "0"
                         });
                 });
 
@@ -4851,6 +4705,54 @@ namespace CalcAppAPI.Migrations
                             Code = "PB1",
                             Name = "Kézifék, kerékről működtethető",
                             Price = "105"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Light", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Light");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "L1",
+                            Name = "Összecsukható hátsó lámpák",
+                            Price = "420"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "L2",
+                            Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
+                            Price = "465"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "L4",
+                            Name = "Fix hátsó LED lámpák",
+                            Price = "420"
                         });
                 });
 
@@ -5661,54 +5563,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("TrailerId");
 
                     b.ToTable("TrailerFrameTypeConfiguration");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TrailerLight");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "L1",
-                            Name = "Összecsukható hátsó lámpák",
-                            Price = "420"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "L2",
-                            Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
-                            Price = "465"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "L4",
-                            Name = "Fix hátsó LED lámpák",
-                            Price = "420"
-                        });
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", b =>
@@ -6775,143 +6629,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("ControlBlockId");
 
                     b.ToTable("ControlBlockFrameType");
-                });
-
-            modelBuilder.Entity("CraneDamping", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DampingId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "DampingId");
-
-                    b.HasIndex("DampingId");
-
-                    b.ToTable("DampingCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 3
-                        });
                 });
 
             modelBuilder.Entity("CraneFrameType", b =>
@@ -8668,6 +8385,183 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("LightTrailer", b =>
+                {
+                    b.Property<int>("LightId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LightId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("LightTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 11
+                        });
+                });
+
             modelBuilder.Entity("OilPumpTrailer", b =>
                 {
                     b.Property<int>("OilPumpId")
@@ -9795,183 +9689,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TrailerTrailerLights", b =>
-                {
-                    b.Property<int>("LightId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TrailerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LightId", "TrailerId");
-
-                    b.HasIndex("TrailerId");
-
-                    b.ToTable("LightTrailer", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 11
-                        });
-                });
-
             modelBuilder.Entity("TrailerTyre", b =>
                 {
                     b.Property<int>("TrailerId")
@@ -10060,19 +9777,7 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", "Light")
-                        .WithMany("Crane")
-                        .HasForeignKey("LightId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", "ValveBlock")
-                        .WithMany("Crane")
-                        .HasForeignKey("ValveBlockId");
-
                     b.Navigation("ElectricalFloating");
-
-                    b.Navigation("Light");
-
-                    b.Navigation("ValveBlock");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
@@ -10218,21 +9923,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CraneDamping", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", null)
-                        .WithMany()
-                        .HasForeignKey("DampingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("CraneFrameType", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Crane", null)
@@ -10338,6 +10028,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LightTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Light", null)
+                        .WithMany()
+                        .HasForeignKey("LightId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("OilPumpTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", null)
@@ -10428,21 +10133,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TrailerTrailerLights", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", null)
-                        .WithMany()
-                        .HasForeignKey("LightId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
-                        .WithMany()
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("TrailerTyre", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Trailer", null)
@@ -10468,11 +10158,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("CraneControlBlocks");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>
                 {
                     b.Navigation("Crane");
@@ -10481,11 +10166,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
                 {
                     b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", b =>

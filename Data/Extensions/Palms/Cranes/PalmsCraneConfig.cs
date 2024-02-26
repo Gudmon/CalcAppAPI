@@ -33,6 +33,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    CraneWeight = "360",
                    PillarSlewingAngle = "370",
                    RecommendedOilFlow = "20-35",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = null,
+                   LightId = null,
                },
 
                new Crane
@@ -60,6 +63,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    CraneWeight = "400",
                    PillarSlewingAngle = "370",
                    RecommendedOilFlow = "20-35",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = null,
+                   LightId = null,
                },
 
 
@@ -88,6 +94,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    CraneWeight = "415",
                    PillarSlewingAngle = "370",
                    RecommendedOilFlow = "20-35",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = null,
+                   LightId = null,
                },
 
                new Crane
@@ -115,6 +124,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    CraneWeight = "620",
                    PillarSlewingAngle = "370",
                    RecommendedOilFlow = "30-45",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = null,
+                   LightId = 1,
                },
 
                new Crane
@@ -142,13 +154,16 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    CraneWeight = "710",
                    PillarSlewingAngle = "370",
                    RecommendedOilFlow = "45-70",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 6,
                    Name = "PALMS 5.72",
                    Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
-                   Price = "-",
+                   Price = "11435",
                    Series = "5",
                    MaxReach = "7,2",
                    LiftAtFullReach240Bar = "-", 
@@ -167,14 +182,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "820",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "50-90"
+                   RecommendedOilFlow = "50-90",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 7,
                    Name = "PALMS 5.85",
                    Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
-                   Price = "-",
+                   Price = "14265",
                    Series = "5",
                    MaxReach = "8,5",
                    LiftAtFullReach240Bar = "-",
@@ -193,14 +211,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "900",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "50-90"
+                   RecommendedOilFlow = "50-90",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 8,
                    Name = "PALMS 5.87Z",
                    Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                   Price = "-",
+                   Price = "15385",
                    Series = "5",
                    MaxReach = "8,7",
                    LiftAtFullReach240Bar = "-",
@@ -219,14 +240,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "995",
                    PillarSlewingAngle = "340",
-                   RecommendedOilFlow = "50-90"
+                   RecommendedOilFlow = "50-90",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 9,
                    Name = "PALMS 7.75",
                    Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                   Price = "-",
+                   Price = "14780",
                    Series = "7",
                    MaxReach = "7,5",
                    LiftAtFullReach240Bar = "-",
@@ -245,14 +269,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "1170",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "60-120"
+                   RecommendedOilFlow = "60-120",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 10,
                    Name = "PALMS 7.86",
                    Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                   Price = "-",
+                   Price = "19940",
                    Series = "7",
                    MaxReach = "8,6",
                    LiftAtFullReach240Bar = "-",
@@ -271,14 +298,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "1280",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "60-120"
+                   RecommendedOilFlow = "60-120",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 11,
                    Name = "PALMS 7.94",
                    Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
-                   Price = "-",
+                   Price = "21105",
                    Series = "7",
                    MaxReach = "9,4",
                    LiftAtFullReach240Bar = "-",
@@ -297,14 +327,17 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "60",
                    CraneWeight = "1310",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "60-120"
+                   RecommendedOilFlow = "60-120",
+                   ElectricalFloatingId = 1,
+                   ValveBlockId = 1,
+                   LightId = 1,
                },
                new Crane
                {
                    Id = 12,
                    Name = "PALMS X100",
                    Description = "A PALMS X100 kínálatunkban a leghosszabb hatótávval és legnagyobb emelőkapacitással rendelkezik. Dupla teleszkópos kinyújtója rejtett hidraulikus alkatrészeket rejteget, biztosítva ezzel a folyamatos üzemelést.",
-                   Price = "-",
+                   Price = "31460",
                    Series = "X",
                    MaxReach = "10,1",
                    LiftAtFullReach240Bar = "680",
@@ -323,7 +356,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    RotatorMaximumLoad = "100",
                    CraneWeight = "1760",
                    PillarSlewingAngle = "380",
-                   RecommendedOilFlow = "120"
+                   RecommendedOilFlow = "120",
+                   ElectricalFloatingId = null,
+                   ValveBlockId = 1,
+                   LightId = 1,
                }
            );
         }

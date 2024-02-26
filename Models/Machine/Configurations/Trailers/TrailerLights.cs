@@ -1,6 +1,6 @@
 ﻿namespace CalcAppAPI.Models.Machine.Configurations.Trailers
 {
-    public class Light
+    public class TrailerLights
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240226171534_valve block")]
+    partial class valveblock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -479,9 +482,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("LightId")
-                        .HasColumnType("int");
-
                     b.Property<string>("MaxReach")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -532,8 +532,6 @@ namespace CalcAppAPI.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ElectricalFloatingId");
-
-                    b.HasIndex("LightId");
 
                     b.HasIndex("ValveBlockId");
 
@@ -632,7 +630,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "430",
                             LiftAtFullReach215Bar = "480",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
@@ -660,7 +657,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "480",
                             LiftAtFullReach215Bar = "535",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7.1",
                             Name = "PALMS 4.71",
                             PillarSlewingAngle = "370",
@@ -689,7 +685,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "620",
                             LiftAtFullReach215Bar = "710",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,2",
                             Name = "PALMS 5.72",
                             PillarSlewingAngle = "380",
@@ -718,7 +713,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "450",
                             LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,5",
                             Name = "PALMS 5.85",
                             PillarSlewingAngle = "380",
@@ -746,7 +740,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "490 (8,4 m)",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,7",
                             Name = "PALMS 5.87Z",
                             PillarSlewingAngle = "340",
@@ -775,7 +768,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "610",
                             LiftAtFullReach215Bar = "755",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,5",
                             Name = "PALMS 7.75",
                             PillarSlewingAngle = "380",
@@ -804,7 +796,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "530",
                             LiftAtFullReach215Bar = "630",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,6",
                             Name = "PALMS 7.86",
                             PillarSlewingAngle = "380",
@@ -833,7 +824,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "540",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "9,4",
                             Name = "PALMS 7.94",
                             PillarSlewingAngle = "380",
@@ -861,7 +851,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "680",
-                            LightId = 1,
                             MaxReach = "10,1",
                             Name = "PALMS X100",
                             PillarSlewingAngle = "380",
@@ -3876,88 +3865,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CraneLight");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "L1",
-                            Name = "LED munkalámpák a darugémre, 2 db",
-                            Price = "510"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Damping");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "D1",
-                            Name = "Csillapító a munkahenger elforgatáshoz",
-                            Price = "805"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "D2",
-                            Name = "Csillapító a munkahenger elforgatáshoz és emeléshez",
-                            Price = "1375"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "D3",
-                            Name = "Csillapító emeléshez",
-                            Price = "805"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>
                 {
                     b.Property<int>("Id")
@@ -4854,6 +4761,54 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Light", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Light");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "L1",
+                            Name = "Összecsukható hátsó lámpák",
+                            Price = "420"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "L2",
+                            Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
+                            Price = "465"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "L4",
+                            Name = "Fix hátsó LED lámpák",
+                            Price = "420"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", b =>
                 {
                     b.Property<int>("Id")
@@ -5661,54 +5616,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("TrailerId");
 
                     b.ToTable("TrailerFrameTypeConfiguration");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TrailerLight");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "L1",
-                            Name = "Összecsukható hátsó lámpák",
-                            Price = "420"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "L2",
-                            Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
-                            Price = "465"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "L4",
-                            Name = "Fix hátsó LED lámpák",
-                            Price = "420"
-                        });
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", b =>
@@ -6775,143 +6682,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("ControlBlockId");
 
                     b.ToTable("ControlBlockFrameType");
-                });
-
-            modelBuilder.Entity("CraneDamping", b =>
-                {
-                    b.Property<int>("CraneId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DampingId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CraneId", "DampingId");
-
-                    b.HasIndex("DampingId");
-
-                    b.ToTable("DampingCrane", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            DampingId = 3
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 1
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 2
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            DampingId = 3
-                        });
                 });
 
             modelBuilder.Entity("CraneFrameType", b =>
@@ -8668,6 +8438,183 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("LightTrailer", b =>
+                {
+                    b.Property<int>("LightId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LightId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("LightTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 1
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 2
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 3
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            LightId = 2,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 11
+                        });
+                });
+
             modelBuilder.Entity("OilPumpTrailer", b =>
                 {
                     b.Property<int>("OilPumpId")
@@ -9795,183 +9742,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("TrailerTrailerLights", b =>
-                {
-                    b.Property<int>("LightId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TrailerId")
-                        .HasColumnType("int");
-
-                    b.HasKey("LightId", "TrailerId");
-
-                    b.HasIndex("TrailerId");
-
-                    b.ToTable("LightTrailer", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 1
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 2
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 3
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 5
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 11
-                        });
-                });
-
             modelBuilder.Entity("TrailerTyre", b =>
                 {
                     b.Property<int>("TrailerId")
@@ -10060,17 +9830,11 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", "Light")
-                        .WithMany("Crane")
-                        .HasForeignKey("LightId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", "ValveBlock")
                         .WithMany("Crane")
                         .HasForeignKey("ValveBlockId");
 
                     b.Navigation("ElectricalFloating");
-
-                    b.Navigation("Light");
 
                     b.Navigation("ValveBlock");
                 });
@@ -10218,21 +9982,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CraneDamping", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", null)
-                        .WithMany()
-                        .HasForeignKey("DampingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("CraneFrameType", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Crane", null)
@@ -10338,6 +10087,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LightTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Light", null)
+                        .WithMany()
+                        .HasForeignKey("LightId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("OilPumpTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", null)
@@ -10428,21 +10192,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TrailerTrailerLights", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", null)
-                        .WithMany()
-                        .HasForeignKey("LightId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
-                        .WithMany()
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("TrailerTyre", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Trailer", null)
@@ -10466,11 +10215,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
                 {
                     b.Navigation("CraneControlBlocks");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>

@@ -166,9 +166,9 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("trailers/{id}/lights")]
-        public async Task<ActionResult<IEnumerable<Light>>> GetLights(int id)
+        public async Task<ActionResult<IEnumerable<TrailerLights>>> GetLights(int id)
         {
-            var lights = await _dbContext.Light
+            var lights = await _dbContext.TrailerLight
                 .Where(s => s.Trailer.Any(t => t.Id == id))
                 .ToListAsync();
 

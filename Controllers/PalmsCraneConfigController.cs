@@ -120,5 +120,62 @@ namespace CalcAppAPI.Controllers
 
             return Ok(grapples);
         }
+
+        [HttpGet("cranes/{id}/winches")]
+        public async Task<ActionResult<IEnumerable<Winch>>> GetWinches(int id)
+        {
+            var winches = await _dbContext.Winch
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(winches);
+        }
+
+        [HttpGet("cranes/{id}/protectionsleeves")]
+        public async Task<ActionResult<IEnumerable<ProtectionSleeves>>> GetProtectionSleeves(int id)
+        {
+            var protectionSleeves = await _dbContext.ProtectionSleeves
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(protectionSleeves);
+        }
+
+        [HttpGet("cranes/{id}/electricalfloating")]
+        public async Task<ActionResult<ElectricalFloating>> GetElectricalFloating(int id)
+        {
+            var electricalFloating = await _dbContext.ElectricalFloating
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(electricalFloating);
+        }
+
+        [HttpGet("cranes/{id}/valveblock")]
+        public async Task<ActionResult<ValveBlock>> GetValveBlock(int id)
+        {
+            var valveBlock = await _dbContext.ValveBlock
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(valveBlock);
+        }
+
+        [HttpGet("cranes/{id}/dampings")]
+        public async Task<ActionResult<IEnumerable<Damping>>> GetDampings(int id)
+        {
+            var dampings = await _dbContext.Damping
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(dampings);
+        }
+
+        [HttpGet("cranes/{id}/lights")]
+        public async Task<ActionResult<CraneLight>> GetLights(int id)
+        {
+            var lights = await _dbContext.CraneLight
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(lights);
+        }
     }
 }

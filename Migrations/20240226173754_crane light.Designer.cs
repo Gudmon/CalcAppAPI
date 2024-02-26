@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240226173754_crane light")]
+    partial class cranelight
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -632,7 +635,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "430",
                             LiftAtFullReach215Bar = "480",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
@@ -660,7 +662,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "480",
                             LiftAtFullReach215Bar = "535",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7.1",
                             Name = "PALMS 4.71",
                             PillarSlewingAngle = "370",
@@ -689,7 +690,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "620",
                             LiftAtFullReach215Bar = "710",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,2",
                             Name = "PALMS 5.72",
                             PillarSlewingAngle = "380",
@@ -718,7 +718,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "450",
                             LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,5",
                             Name = "PALMS 5.85",
                             PillarSlewingAngle = "380",
@@ -746,7 +745,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "490 (8,4 m)",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,7",
                             Name = "PALMS 5.87Z",
                             PillarSlewingAngle = "340",
@@ -775,7 +773,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "610",
                             LiftAtFullReach215Bar = "755",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "7,5",
                             Name = "PALMS 7.75",
                             PillarSlewingAngle = "380",
@@ -804,7 +801,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "530",
                             LiftAtFullReach215Bar = "630",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "8,6",
                             Name = "PALMS 7.86",
                             PillarSlewingAngle = "380",
@@ -833,7 +829,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "540",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 1,
                             MaxReach = "9,4",
                             Name = "PALMS 7.94",
                             PillarSlewingAngle = "380",
@@ -861,7 +856,6 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "680",
-                            LightId = 1,
                             MaxReach = "10,1",
                             Name = "PALMS X100",
                             PillarSlewingAngle = "380",
