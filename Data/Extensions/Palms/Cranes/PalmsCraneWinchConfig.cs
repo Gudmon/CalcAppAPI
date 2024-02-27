@@ -18,14 +18,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new Winch
               {
                   Id = 2,
-                  Name = "Rádió távvezérléső 1400-as csörlő (A11-A41 vezértömbhöz)",
+                  Name = "Rádió távvezérlésű 1400-as csörlő (A11-A41 vezértömbhöz)",
                   Code = "W1",
                   Price = "2365"
               },
               new Winch
               {
                   Id = 3,
-                  Name = "Rádió távvezérléső 2200-as csörlő (A11-A41 vezértömbhöz)",
+                  Name = "Rádió távvezérlésű 2200-as csörlő (A11-A41 vezértömbhöz)",
                   Code = "W2",
                   Price = "2845"
               }

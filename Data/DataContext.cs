@@ -302,7 +302,13 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithGrapples();
             modelBuilder.ConnectCranesWithWinches();
-            modelBuilder.ConnectCranesWithProtectionSleeves();
+
+            //PROTECTION SLEEVES
+            modelBuilder.Entity<ProtectionSleeves>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.ProtectionSleeves)
+                .HasForeignKey(o => o.ProtectionSleevesId)
+                .IsRequired(false);
 
             //ELECTRICAL FLOATINGS
             modelBuilder.Entity<ElectricalFloating>()

@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new ElectricalFloating
               {
                   Id = 1,
-                  Name = "Elektromos úszó pozíció emelő és fordító funkcióhoz (for A11-A41 vezértömbhöz)",
+                  Name = "Elektromos úszó pozíció emelő és fordító funkcióhoz (A11-A41 vezértömbhöz)",
                   Code = "FP",
                   Price = "1035"
               }

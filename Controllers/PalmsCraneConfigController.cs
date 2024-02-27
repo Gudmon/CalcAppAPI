@@ -132,11 +132,10 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("cranes/{id}/protectionsleeves")]
-        public async Task<ActionResult<IEnumerable<ProtectionSleeves>>> GetProtectionSleeves(int id)
+        public async Task<ActionResult<ProtectionSleeves>> GetProtectionSleeves(int id)
         {
             var protectionSleeves = await _dbContext.ProtectionSleeves
-                .Where(s => s.Crane.Any(t => t.Id == id))
-                .ToListAsync();
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
             return Ok(protectionSleeves);
         }
