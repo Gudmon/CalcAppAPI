@@ -168,7 +168,7 @@ namespace CalcAppAPI.Controllers
             return Ok(dampings);
         }
 
-        [HttpGet("cranes/{id}/lights")]
+        [HttpGet("cranes/{id}/light")]
         public async Task<ActionResult<CraneLight>> GetLight(int id)
         {
             var lights = await _dbContext.CraneLight
@@ -177,7 +177,7 @@ namespace CalcAppAPI.Controllers
             return Ok(lights);
         }
 
-        [HttpGet("cranes/{id}/operatorseats")]
+        [HttpGet("cranes/{id}/operatorseat")]
         public async Task<ActionResult<OperatorSeat>> GetOperatorSeat(int id)
         {
             var operatorSeats = await _dbContext.OperatorSeat

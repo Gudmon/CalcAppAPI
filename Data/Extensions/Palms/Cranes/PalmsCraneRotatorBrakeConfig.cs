@@ -14,34 +14,39 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "Rotátorfék  nélkül",
                   Code = "Br0",
                   Price = "0",
+                  Description = null
               },
               new RotatorBrake
               {
                   Id = 2,
                   Name = "Rotátor fék",
                   Code = "Br1",
-                  Price = "75"
+                  Price = "75",
+                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               },
               new RotatorBrake
               {
                   Id = 3,
                   Name = "Rotátor fék",
                   Code = "Br1",
-                  Price = "55"
+                  Price = "55",
+                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               },
               new RotatorBrake
               {
                   Id = 4,
                   Name = "Dupla rotátor fék",
                   Code = "Br2",
-                  Price = "115"
+                  Price = "115",
+                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               },
               new RotatorBrake
               {
                   Id = 5,
                   Name = "Dupla rotátor fék",
                   Code = "Br2",
-                  Price = "220"
+                  Price = "220",
+                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               }
               );
         }
