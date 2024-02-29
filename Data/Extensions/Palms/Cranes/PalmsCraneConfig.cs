@@ -42,6 +42,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = null
@@ -81,6 +82,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = null
@@ -121,6 +123,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = null
@@ -160,6 +163,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = null
@@ -199,6 +203,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = null
@@ -210,7 +215,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
                    Price = "11435",
                    Series = "5",
-                   MaxReach = "7,2",
+                   MaxReach = "7.2",
                    LiftAtFullReach240Bar = "-", 
                    LiftAtFullReach215Bar = "710",
                    LiftAtFullReach190Bar = "620",
@@ -237,6 +242,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 1,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1
@@ -248,7 +254,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
                    Price = "14265",
                    Series = "5",
-                   MaxReach = "8,5",
+                   MaxReach = "8.5",
                    LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "520",
                    LiftAtFullReach190Bar = "450",
@@ -275,6 +281,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 1,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1
@@ -286,7 +293,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
                    Price = "15385",
                    Series = "5",
-                   MaxReach = "8,7",
+                   MaxReach = "8.7",
                    LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "490 (8,4 m)",
                    LiftAtFullReach190Bar = "-",
@@ -313,6 +320,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = null,
                    LinkageId = 1
@@ -324,7 +332,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                    Price = "14780",
                    Series = "7",
-                   MaxReach = "7,5",
+                   MaxReach = "7.5",
                    LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "755",
                    LiftAtFullReach190Bar = "610",
@@ -351,6 +359,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1
@@ -362,7 +371,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                    Price = "19940",
                    Series = "7",
-                   MaxReach = "8,6",
+                   MaxReach = "8.6",
                    LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "630",
                    LiftAtFullReach190Bar = "530",
@@ -389,6 +398,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1
@@ -400,7 +410,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "Nagy teherbírású erdészeti daru két darab teleszkópos kinyújtóval, amelyet a mindennapos profi erdészeti műveletekhez terveztek. Magasabb emelőkapacitása és forgási nyomatéka miatt alkalmas forgácsgépek és szüretelőfejekkel való munkavégzéshez is. Kompatibilis a PALMS dupla tartógerendás és egyrészes pótkocsikkal.",
                    Price = "21105",
                    Series = "7",
-                   MaxReach = "9,4",
+                   MaxReach = "9.4",
                    LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "540",
                    LiftAtFullReach190Bar = "-",
@@ -427,6 +437,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1
@@ -438,7 +449,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Description = "A PALMS X100 kínálatunkban a leghosszabb hatótávval és legnagyobb emelőkapacitással rendelkezik. Dupla teleszkópos kinyújtója rejtett hidraulikus alkatrészeket rejteget, biztosítva ezzel a folyamatos üzemelést.",
                    Price = "31460",
                    Series = "X",
-                   MaxReach = "10,1",
+                   MaxReach = "10.1",
                    LiftAtFullReach240Bar = "680",
                    LiftAtFullReach215Bar = "-",
                    LiftAtFullReach190Bar = "-",
@@ -465,6 +476,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
+                   BoomGuardId = 3,
                    CoverId = 1,
                    WoodControlId = 1,
                    LinkageId = 1

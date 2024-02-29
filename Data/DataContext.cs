@@ -382,8 +382,12 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.SupportLegCounterPlateId)
                 .IsRequired(false);
 
-            //BOOM GUARDS
-            modelBuilder.ConnectCranesWithBoomGuards();
+            //BOOM GUARD
+            modelBuilder.Entity<BoomGuard>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.BoomGuard)
+                .HasForeignKey(o => o.BoomGuardId)
+                .IsRequired(false);
 
             //COVER
             modelBuilder.Entity<Cover>()

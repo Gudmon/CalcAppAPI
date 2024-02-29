@@ -28,7 +28,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                new FrameType
                {
                    Id = 3,
-                   Name = "A típusú normál méretű letalpaló, 3 pontos csatlakozással",
+                   Name = "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                    Code = "B3",
                    Price = "2100",
                    Mass = "313"
@@ -44,7 +44,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                new FrameType
                {
                    Id = 5,
-                   Name = "FD típusú letalpaló, 3 pontos csatlakozással",
+                   Name = "B6.1 FD típusú letalpaló, 3 pontos csatlakozással",
                    Code = "B6.1",
                    Price = "3090",
                    Mass = "449"
@@ -52,7 +52,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                new FrameType
                {
                    Id = 6,
-                   Name = "Különösen erős alap, talpaló lábak nélkül",
+                   Name = "B09 Különösen erős alap, talpaló lábak nélkül",
                    Code = "B09",
                    Price = "1155",
                    Mass = "231"
@@ -60,7 +60,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                new FrameType
                {
                    Id = 7,
-                   Name = "FD típusú, különösen erős letalpaló (HD)",
+                   Name = "B9 FD típusú, különösen erős letalpaló (HD)",
                    Code = "B9",
                    Price = "3530",
                    Mass = "474"

@@ -58,7 +58,8 @@ namespace CalcAppAPI.Models
         public int? TurningDeviceCounterPlateId { get; set; }
         public SupportLegCounterPlate? SupportLegCounterPlate { get; set; }
         public int? SupportLegCounterPlateId { get; set; }
-        public IEnumerable<BoomGuard> BoomGuard { get; set; }
+        public BoomGuard? BoomGuard { get; set; }
+        public int? BoomGuardId { get; set; }
         public Cover? Cover { get; set; }
         public int? CoverId { get; set; }
         public WoodControl? WoodControl { get; set; }

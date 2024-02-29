@@ -242,15 +242,15 @@ namespace CalcAppAPI.Controllers
             return Ok(supportLegCounterPlate);
         }
 
-        [HttpGet("cranes/{id}/boomguards")]
-        public async Task<ActionResult<IEnumerable<BoomGuard>>> GetBoomGuards(int id)
+        [HttpGet("cranes/{id}/boomguard")]
+        public async Task<ActionResult<BoomGuard>> GetBoomGuard(int id)
         {
-            var boomGuards = await _dbContext.BoomGuard
-                .Where(s => s.Crane.Any(t => t.Id == id))
-                .ToListAsync();
+            var boomGuard = await _dbContext.BoomGuard
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
-            return Ok(boomGuards);
+            return Ok(boomGuard);
         }
+
 
         [HttpGet("cranes/{id}/cover")]
         public async Task<ActionResult<Cover>> GetCover(int id)

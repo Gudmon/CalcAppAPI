@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240229100632_fix crane reach")]
+    partial class fixcranereach
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,53 @@ namespace CalcAppAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BoomGuardCrane", b =>
+                {
+                    b.Property<int>("BoomGuardId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BoomGuardId", "CraneId");
+
+                    b.HasIndex("CraneId");
+
+                    b.ToTable("BoomGuardCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            BoomGuardId = 1,
+                            CraneId = 6
+                        },
+                        new
+                        {
+                            BoomGuardId = 1,
+                            CraneId = 7
+                        },
+                        new
+                        {
+                            BoomGuardId = 2,
+                            CraneId = 9
+                        },
+                        new
+                        {
+                            BoomGuardId = 2,
+                            CraneId = 10
+                        },
+                        new
+                        {
+                            BoomGuardId = 2,
+                            CraneId = 11
+                        },
+                        new
+                        {
+                            BoomGuardId = 3,
+                            CraneId = 12
+                        });
+                });
 
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
@@ -432,9 +482,6 @@ namespace CalcAppAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BoomGuardId")
-                        .HasColumnType("int");
-
                     b.Property<string>("BrutLiftingTorque190Bar")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -560,8 +607,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BoomGuardId");
 
                     b.HasIndex("CoverId");
 
@@ -759,7 +804,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 6,
-                            BoomGuardId = 1,
                             BrutLiftingTorque190Bar = "56",
                             BrutLiftingTorque215Bar = "63",
                             BrutLiftingTorque240Bar = "-",
@@ -798,7 +842,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 7,
-                            BoomGuardId = 1,
                             BrutLiftingTorque190Bar = "56",
                             BrutLiftingTorque215Bar = "63",
                             BrutLiftingTorque240Bar = "-",
@@ -873,7 +916,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 9,
-                            BoomGuardId = 2,
                             BrutLiftingTorque190Bar = "74",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
@@ -912,7 +954,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 10,
-                            BoomGuardId = 2,
                             BrutLiftingTorque190Bar = "74",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
@@ -951,7 +992,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 11,
-                            BoomGuardId = 2,
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "83",
                             BrutLiftingTorque240Bar = "-",
@@ -990,7 +1030,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 12,
-                            BoomGuardId = 3,
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "106",
@@ -1149,7 +1188,7 @@ namespace CalcAppAPI.Migrations
                             Id = 6,
                             Code = "A12",
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
-                            Name = "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
+                            Name = "A 12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
                             Price = "4720"
                         },
                         new
@@ -1157,7 +1196,7 @@ namespace CalcAppAPI.Migrations
                             Id = 7,
                             Code = "A14",
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
-                            Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
+                            Name = "A 14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
                             Price = "6635"
                         },
                         new
@@ -4308,7 +4347,7 @@ namespace CalcAppAPI.Migrations
                             Id = 3,
                             Code = "B3",
                             Mass = "313",
-                            Name = "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással",
+                            Name = "A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                             Price = "2100"
                         },
                         new
@@ -4324,7 +4363,7 @@ namespace CalcAppAPI.Migrations
                             Id = 5,
                             Code = "B6.1",
                             Mass = "449",
-                            Name = "B6.1 FD típusú letalpaló, 3 pontos csatlakozással",
+                            Name = "FD típusú letalpaló, 3 pontos csatlakozással",
                             Price = "3090"
                         },
                         new
@@ -4332,7 +4371,7 @@ namespace CalcAppAPI.Migrations
                             Id = 6,
                             Code = "B09",
                             Mass = "231",
-                            Name = "B09 Különösen erős alap, talpaló lábak nélkül",
+                            Name = "Különösen erős alap, talpaló lábak nélkül",
                             Price = "1155"
                         },
                         new
@@ -4340,7 +4379,7 @@ namespace CalcAppAPI.Migrations
                             Id = 7,
                             Code = "B9",
                             Mass = "474",
-                            Name = "B9 FD típusú, különösen erős letalpaló (HD)",
+                            Name = "FD típusú, különösen erős letalpaló (HD)",
                             Price = "3530"
                         },
                         new
@@ -10821,6 +10860,21 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("BoomGuardCrane", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", null)
+                        .WithMany()
+                        .HasForeignKey("BoomGuardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", null)
@@ -10838,10 +10892,6 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", "BoomGuard")
-                        .WithMany("Crane")
-                        .HasForeignKey("BoomGuardId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", "Cover")
                         .WithMany("Crane")
                         .HasForeignKey("CoverId");
@@ -10889,8 +10939,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", "WoodControl")
                         .WithMany("Crane")
                         .HasForeignKey("WoodControlId");
-
-                    b.Navigation("BoomGuard");
 
                     b.Navigation("Cover");
 
@@ -11318,11 +11366,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
                 {
                     b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
