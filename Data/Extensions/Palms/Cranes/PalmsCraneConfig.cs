@@ -169,7 +169,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                {
                    Id = 5,
                    Name = "PALMS 4.71",
-                   Description = "Versatile medium-sized crane, used across diverse sectors like arboriculture, farming, and land development. Compatible with the majority of PALMS trailers.",
+                   Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
                    Price = "9450",
                    Series = "4",
                    MaxReach = "7.1",
