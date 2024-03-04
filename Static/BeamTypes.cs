@@ -2,8 +2,8 @@
 {
     public class BeamTypes
     {
-        public static readonly string Single = "Egy";
-        public static readonly string Double = "Dupla";
+        public static readonly string Single = "Egyalvázas";
+        public static readonly string Double = "Dupla alvázas";
         public static readonly string Unibody = "Unibody";
     }
 }
