@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240306075929_trailer oil cooler fix")]
+    partial class traileroilcoolerfix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -5618,10 +5621,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -5639,7 +5638,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "RWD",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                             Price = "5280"
                         },
@@ -5647,7 +5645,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "RWD+",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
                             Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                             Price = "7600"
                         },
@@ -5655,7 +5652,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "25WDF",
-                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD agyhajtás (BB 250 az első tengelyen elektronikus vezérléssel)",
                             Price = "0"
                         },
@@ -5663,7 +5659,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "25WDR",
-                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD agyhajtás (BB 250 a hátsó tengelyen elektronikus vezérléssel)",
                             Price = "0"
                         },
@@ -5671,7 +5666,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "RWD",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                             Price = "4845"
                         },
@@ -5679,7 +5673,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 6,
                             Code = "RWD+",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
                             Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                             Price = "7170"
                         });
@@ -6343,61 +6336,75 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "WH4.8",
-                            Name = "480/45-17 RF-felni, 8 lyukas, Starco",
-                            Price = "2310"
+                            Name = "480/45-17 RF-felni, 8 lyukas, Starco (kérésre)",
+                            Price = "0"
                         },
                         new
                         {
                             Id = 5,
+                            Code = "WH3.6",
+                            Name = "500/50-17 RF-felni, 6 lyukas, BKT (kérésre)",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 6,
                             Code = "WH3.6",
                             Name = "500/50-17 RF-felni, 6 lyukas, BKT",
                             Price = "2500"
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 7,
                             Code = "WH3.8",
                             Name = "500/50-17 RF-felni, 8 lyukas, BKT",
                             Price = "2500"
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 8,
+                            Code = "WH5.6",
+                            Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance (kérésre)",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 9,
                             Code = "WH5.6",
                             Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance",
                             Price = "3215"
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 10,
                             Code = "WH8.8",
                             Name = "500/55-22,5 RF-felni, 8 lyukas, BKT",
                             Price = "3770"
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 11,
                             Code = "WH6.8",
                             Name = "550/45-22,5 RF-felni, 8 lyukas, BKT",
                             Price = "4010"
                         },
                         new
                         {
-                            Id = 10,
+                            Id = 12,
                             Code = "WH6.8V",
                             Name = "550/45-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
                             Price = "4410"
                         },
                         new
                         {
-                            Id = 11,
+                            Id = 13,
                             Code = "WH9.8V",
                             Name = "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
                             Price = "6425"
                         },
                         new
                         {
-                            Id = 12,
+                            Id = 14,
                             Code = "WH7.8",
                             Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
                             Price = "5410"
@@ -11122,177 +11129,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 3,
-                            TyreId = 7
-                        },
-                        new
-                        {
-                            TrailerId = 4,
-                            TyreId = 4
-                        },
-                        new
-                        {
-                            TrailerId = 4,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 4,
                             TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 5,
-                            TyreId = 1
-                        },
-                        new
-                        {
-                            TrailerId = 5,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 5,
-                            TyreId = 3
-                        },
-                        new
-                        {
-                            TrailerId = 5,
-                            TyreId = 5
-                        },
-                        new
-                        {
-                            TrailerId = 5,
-                            TyreId = 7
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 1
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 3
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 5
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 7
-                        },
-                        new
-                        {
-                            TrailerId = 7,
-                            TyreId = 4
-                        },
-                        new
-                        {
-                            TrailerId = 7,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 7,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 8,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 8,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 8,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 8,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 9,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 9,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 9,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 9,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 10,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 10,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 10,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 10,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 12
                         });
                 });
 

@@ -240,7 +240,7 @@ namespace CalcAppAPI.Data
 
             //OIL TANK COOLER
             modelBuilder.Entity<TrailerOilCooler>()
-                .HasMany(o => o.OilTank)
+                .HasMany(o => o.Trailer)
                 .WithOne(o => o.TrailerOilCooler)
                 .HasForeignKey(o => o.TrailerOilCoolerId)
                 .IsRequired(false);

@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240306144055_trailer tyres every")]
+    partial class trailertyresevery
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -5618,10 +5621,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -5639,7 +5638,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "RWD",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                             Price = "5280"
                         },
@@ -5647,7 +5645,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "RWD+",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
                             Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                             Price = "7600"
                         },
@@ -5655,7 +5652,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "25WDF",
-                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD agyhajtás (BB 250 az első tengelyen elektronikus vezérléssel)",
                             Price = "0"
                         },
@@ -5663,7 +5659,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 4,
                             Code = "25WDR",
-                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD agyhajtás (BB 250 a hátsó tengelyen elektronikus vezérléssel)",
                             Price = "0"
                         },
@@ -5671,7 +5666,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "RWD",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                             Price = "4845"
                         },
@@ -5679,7 +5673,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 6,
                             Code = "RWD+",
-                            Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
                             Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                             Price = "7170"
                         });

@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public string Code { get; set; }
         public string Price { get; set; }
-        public IEnumerable<OilTank> OilTank { get; set; }
+        public IEnumerable<Trailer> Trailer { get; set; }
     }
 }

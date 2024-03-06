@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Palms.Trailers
 {
-    public static class PalmsTrailerOilTankCoolerConfig
+    public static class PalmsTrailerOilCoolerConfig
     {
         public static void ConfigureMultiplePalmsTrailerOilCoolers(this ModelBuilder modelBuilder)
         {

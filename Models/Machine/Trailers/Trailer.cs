@@ -31,6 +31,8 @@ namespace CalcAppAPI.Models
         public IEnumerable<Platform> Platform { get; set; }
         public IEnumerable<OilPump> OilPump { get; set; }
         public IEnumerable<OilTank> OilTank { get; set; }
+        public TrailerOilCooler? TrailerOilCooler { get; set; }
+        public int? TrailerOilCoolerId { get; set; }
         public IEnumerable<SupportLeg> SupportLeg { get; set; }
         public IEnumerable<TrailerLights> Light { get; set; }
         public IEnumerable<Tyre> Tyre { get; set; }
