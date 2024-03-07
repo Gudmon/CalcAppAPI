@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new BunkExtension
                {
                    Id = 1,
-                   Name = "forwarder típusú bunk kiterjesztés (az ár 1 db-ra vonatkozik)",
+                   Name = "Forwarder típusú bunk kiterjesztés (az ár 1 db-ra vonatkozik)",
                    Code = "PA-H",
                    Price = "625",
                });
