@@ -185,5 +185,32 @@ namespace CalcAppAPI.Controllers
 
             return Ok(tyres);
         }
+
+        [HttpGet("trailers/{id}/bunkadapter")]
+        public async Task<ActionResult<BunkAdapter>> GetBunkAdapter(int id)
+        {
+            var bunkAdapter = await _dbContext.BunkAdapter
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(bunkAdapter);
+        }
+
+        [HttpGet("trailers/{id}/bunkextension")]
+        public async Task<ActionResult<BunkExtension>> GetBunkExtension(int id)
+        {
+            var bunkExtension = await _dbContext.BunkExtension
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(bunkExtension);
+        }
+
+        [HttpGet("trailers/{id}/frameextension")]
+        public async Task<ActionResult<FrameExtension>> GetFrameExtension(int id)
+        {
+            var frameExtension = await _dbContext.FrameExtension
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(frameExtension);
+        }
     }
 }

@@ -48,6 +48,12 @@ namespace CalcAppAPI.Models
         public int? ChainsawHolderId { get; set; }
         public UnderrunProtection? UnderrunProtection { get; set; }
         public int? UnderrunProtectionId { get; set; }
+        public BunkAdapter? BunkAdapter { get; set; }
+        public int? BunkAdapterId { get; set; }
+        public BunkExtension? BunkExtension { get; set; }
+        public int? BunkExtensionId { get; set; }
+        public FrameExtension? FrameExtension { get; set; }
+        public int? FrameExtensionId { get; set; }
 
         public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }

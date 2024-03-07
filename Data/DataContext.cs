@@ -53,6 +53,9 @@ namespace CalcAppAPI.Data
         public DbSet<Cover> Cover { get; set; }
         public DbSet<WoodControl> WoodControl { get; set; }
         public DbSet<Linkage> Linkage { get; set; }
+        public DbSet<BunkAdapter> BunkAdapter { get; set; }
+        public DbSet<BunkExtension> BunkExtension { get; set; }
+        public DbSet<FrameExtension> FrameExtension { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -78,6 +81,9 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsSupportLegs();
             modelBuilder.ConfigureMultiplePalmsTrailerLights();
             modelBuilder.ConfigureMultiplePalmsTyres();
+            modelBuilder.ConfigureMultiplePalmsBunkAdapters();
+            modelBuilder.ConfigureMultiplePalmsBunkExtensions();
+            modelBuilder.ConfigureMultiplePalmsFrameExtensions();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
@@ -291,10 +297,33 @@ namespace CalcAppAPI.Data
             modelBuilder.ConnectTrailersWithLights();
             modelBuilder.ConnectTrailersWithTyres();
 
+            //BUNK ADAPTER
+            modelBuilder.Entity<BunkAdapter>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.BunkAdapter)
+                .HasForeignKey(o => o.BunkAdapterId)
+                .IsRequired(false);
+
+            //BUNK EXTENSION
+            modelBuilder.Entity<BunkExtension>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.BunkExtension)
+                .HasForeignKey(o => o.BunkExtensionId)
+                .IsRequired(false);
+
+            //FRAME EXTENSION
+            modelBuilder.Entity<FrameExtension>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.FrameExtension)
+                .HasForeignKey(o => o.FrameExtensionId)
+                .IsRequired(false);
+
 
             modelBuilder.Entity<ControlBlock>()
                 .HasMany(cb => cb.AvailableForFrameTypes)
                 .WithMany();
+
+            
 
             modelBuilder.ConnectCranesWithFrameTypes();
             modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();

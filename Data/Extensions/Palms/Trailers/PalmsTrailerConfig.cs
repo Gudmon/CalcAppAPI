@@ -32,7 +32,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = null,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = null
+                    UnderrunProtectionId = null,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -59,7 +62,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -86,7 +92,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -113,7 +122,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -140,7 +152,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -167,7 +182,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -194,7 +212,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -221,7 +242,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -248,7 +272,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -275,7 +302,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -302,7 +332,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = 1,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 1
+                    UnderrunProtectionId = 1,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
                 },
 
                 new Trailer
@@ -329,7 +362,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = null,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -356,7 +392,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = null,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -383,7 +422,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = null,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -410,7 +452,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = null,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -437,7 +482,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = null,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -464,7 +512,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = 1,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -491,7 +542,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = 1,
+                    FrameExtensionId = 1,
                 },
 
                 new Trailer
@@ -518,7 +572,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     WoodSorterId = null,
                     HandBrakeId = 1,
                     ChainsawHolderId = 1,
-                    UnderrunProtectionId = 2
+                    UnderrunProtectionId = 2,
+                    BunkAdapterId = 1,
+                    BunkExtensionId = 1,
+                    FrameExtensionId = 1,
                 }
             );
         }
