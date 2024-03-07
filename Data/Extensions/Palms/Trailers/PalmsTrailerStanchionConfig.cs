@@ -313,6 +313,454 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                   Name = "Pótkocsi raktérhosszabbítással és 5 pár rakoncával",
                   Code = "A5Ex",
                   Price = "26380",
+              },
+              new Stanchion
+              {
+                  Id = 43,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "10495",
+              },
+              new Stanchion
+              {
+                  Id = 44,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "10495",
+              },
+              new Stanchion
+              {
+                  Id = 45,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "11125",
+              },
+              new Stanchion
+              {
+                  Id = 46,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "11125",
+              },
+              new Stanchion
+              {
+                  Id = 47,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "11850",
+              },
+              new Stanchion
+              {
+                  Id = 48,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "11850",
+              },
+              new Stanchion
+              {
+                  Id = 49,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "12480",
+              },
+              new Stanchion
+              {
+                  Id = 50,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "12480",
+              },
+              new Stanchion
+              {
+                  Id = 51,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "23260",
+              },
+              new Stanchion
+              {
+                  Id = 52,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "23260",
+              },
+              new Stanchion
+              {
+                  Id = 53,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "23890",
+              },
+              new Stanchion
+              {
+                  Id = 54,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "23890",
+              },
+              new Stanchion
+              {
+                  Id = 55,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "24615",
+              },
+              new Stanchion
+              {
+                  Id = 56,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "24615",
+              },
+              new Stanchion
+              {
+                  Id = 57,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "25245",
+              },
+              new Stanchion
+              {
+                  Id = 58,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "25245",
+              },
+              new Stanchion
+              {
+                  Id = 59,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "12580",
+              },
+              new Stanchion
+              {
+                  Id = 60,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "12580",
+              },
+              new Stanchion
+              {
+                  Id = 61,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "13295",
+              },
+              new Stanchion
+              {
+                  Id = 62,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "13295",
+              },
+              new Stanchion
+              {
+                  Id = 63,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "14020",
+              },
+              new Stanchion
+              {
+                  Id = 64,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "14020",
+              },
+              new Stanchion
+              {
+                  Id = 65,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "14735",
+              },
+              new Stanchion
+              {
+                  Id = 66,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "14735",
+              },
+              new Stanchion
+              {
+                  Id = 67,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "24665",
+              },
+              new Stanchion
+              {
+                  Id = 68,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "24665",
+              },
+              new Stanchion
+              {
+                  Id = 69,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "25380",
+              },
+              new Stanchion
+              {
+                  Id = 70,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "25380",
+              },
+              new Stanchion
+              {
+                  Id = 71,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "26105",
+              },
+              new Stanchion
+              {
+                  Id = 72,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "26105",
+              },
+              new Stanchion
+              {
+                  Id = 73,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "26820",
+              },
+              new Stanchion
+              {
+                  Id = 74,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "26820",
+              },
+              new Stanchion
+              {
+                  Id = 75,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "37980",
+              },
+              new Stanchion
+              {
+                  Id = 76,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "37980",
+              },
+              new Stanchion
+              {
+                  Id = 77,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "38695",
+              },
+              new Stanchion
+              {
+                  Id = 78,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "38695",
+              },
+              new Stanchion
+              {
+                  Id = 79,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "39420",
+              },
+              new Stanchion
+              {
+                  Id = 80,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "39420",
+              },
+              new Stanchion
+              {
+                  Id = 81,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "40135",
+              },
+              new Stanchion
+              {
+                  Id = 82,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "40135",
+              },
+              new Stanchion
+              {
+                  Id = 83,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "14595",
+              },
+              new Stanchion
+              {
+                  Id = 84,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "14595",
+              },
+              new Stanchion
+              {
+                  Id = 85,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "15515",
+              },
+              new Stanchion
+              {
+                  Id = 86,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "15515",
+              },
+              new Stanchion
+              {
+                  Id = 87,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "16240",
+              },
+              new Stanchion
+              {
+                  Id = 88,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "16240",
+              },
+              new Stanchion
+              {
+                  Id = 89,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "17160",
+              },
+              new Stanchion
+              {
+                  Id = 90,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "17160",
+              },
+              new Stanchion
+              {
+                  Id = 91,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "26680",
+              },
+              new Stanchion
+              {
+                  Id = 92,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "26680",
+              },
+              new Stanchion
+              {
+                  Id = 93,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "27600",
+              },
+              new Stanchion
+              {
+                  Id = 94,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "27600",
+              },
+              new Stanchion
+              {
+                  Id = 95,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "28325",
+              },
+              new Stanchion
+              {
+                  Id = 96,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "28325",
+              },
+              new Stanchion
+              {
+                  Id = 97,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "29245",
+              },
+              new Stanchion
+              {
+                  Id = 98,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "29245",
+              },
+              new Stanchion
+              {
+                  Id = 99,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "39995",
+              },
+              new Stanchion
+              {
+                  Id = 100,
+                  Name = "Pótkocsi 3 pár forwader típusú rakoncával",
+                  Code = "A3F",
+                  Price = "39995",
+              },
+              new Stanchion
+              {
+                  Id = 101,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "40915",
+              },
+              new Stanchion
+              {
+                  Id = 102,
+                  Name = "Pótkocsi 4 pár forwader típusú rakoncával",
+                  Code = "A4F",
+                  Price = "40915",
+              },
+              new Stanchion
+              {
+                  Id = 103,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár rakoncával",
+                  Code = "A4Ex",
+                  Price = "41640",
+              },
+              new Stanchion
+              {
+                  Id = 104,
+                  Name = "Pótkocsi raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FEx",
+                  Price = "41640",
+              },
+              new Stanchion
+              {
+                  Id = 105,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár rakoncával",
+                  Code = "A5Ex",
+                  Price = "42560",
+              },
+              new Stanchion
+              {
+                  Id = 106,
+                  Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FEx",
+                  Price = "42560",
               }
               );
         }

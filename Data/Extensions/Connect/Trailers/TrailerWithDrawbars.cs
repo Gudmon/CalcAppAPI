@@ -115,9 +115,88 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 11, DrawbarId = 5 },
                         new { TrailerId = 11, DrawbarId = 6 },
                         new { TrailerId = 11, DrawbarId = 8 },
-                        new { TrailerId = 11, DrawbarId = 9 }
-                    )
+                        new { TrailerId = 11, DrawbarId = 9 },
 
+                        //PALMS 10U
+                        new { TrailerId = 12, DrawbarId = 1 },
+                        new { TrailerId = 12, DrawbarId = 2 },
+                        new { TrailerId = 12, DrawbarId = 3 },
+                        new { TrailerId = 12, DrawbarId = 4 },
+                        new { TrailerId = 12, DrawbarId = 5 },
+                        new { TrailerId = 12, DrawbarId = 6 },
+                        new { TrailerId = 12, DrawbarId = 8 },
+                        new { TrailerId = 12, DrawbarId = 9 },
+
+                        //PALMS 10UWD
+                        new { TrailerId = 13, DrawbarId = 1 },
+                        new { TrailerId = 13, DrawbarId = 2 },
+                        new { TrailerId = 13, DrawbarId = 3 },
+                        new { TrailerId = 13, DrawbarId = 4 },
+                        new { TrailerId = 13, DrawbarId = 5 },
+                        new { TrailerId = 13, DrawbarId = 6 },
+                        new { TrailerId = 13, DrawbarId = 8 },
+                        new { TrailerId = 13, DrawbarId = 9 },
+
+                        //PALMS 12U
+                        new { TrailerId = 14, DrawbarId = 1 },
+                        new { TrailerId = 14, DrawbarId = 2 },
+                        new { TrailerId = 14, DrawbarId = 3 },
+                        new { TrailerId = 14, DrawbarId = 4 },
+                        new { TrailerId = 14, DrawbarId = 5 },
+                        new { TrailerId = 14, DrawbarId = 6 },
+                        new { TrailerId = 14, DrawbarId = 8 },
+                        new { TrailerId = 14, DrawbarId = 9 },
+
+                        //PALMS 12UWD
+                        new { TrailerId = 15, DrawbarId = 1 },
+                        new { TrailerId = 15, DrawbarId = 2 },
+                        new { TrailerId = 15, DrawbarId = 3 },
+                        new { TrailerId = 15, DrawbarId = 4 },
+                        new { TrailerId = 15, DrawbarId = 5 },
+                        new { TrailerId = 15, DrawbarId = 6 },
+                        new { TrailerId = 15, DrawbarId = 8 },
+                        new { TrailerId = 15, DrawbarId = 9 },
+
+                        //PALMS 12UAWD
+                        new { TrailerId = 16, DrawbarId = 1 },
+                        new { TrailerId = 16, DrawbarId = 2 },
+                        new { TrailerId = 16, DrawbarId = 3 },
+                        new { TrailerId = 16, DrawbarId = 4 },
+                        new { TrailerId = 16, DrawbarId = 5 },
+                        new { TrailerId = 16, DrawbarId = 6 },
+                        new { TrailerId = 16, DrawbarId = 8 },
+                        new { TrailerId = 16, DrawbarId = 9 },
+
+                        //PALMS 15U
+                        new { TrailerId = 17, DrawbarId = 1 },
+                        new { TrailerId = 17, DrawbarId = 2 },
+                        new { TrailerId = 17, DrawbarId = 3 },
+                        new { TrailerId = 17, DrawbarId = 4 },
+                        new { TrailerId = 17, DrawbarId = 5 },
+                        new { TrailerId = 17, DrawbarId = 6 },
+                        new { TrailerId = 17, DrawbarId = 8 },
+                        new { TrailerId = 17, DrawbarId = 9 },
+
+                        //PALMS 15UWD
+                        new { TrailerId = 18, DrawbarId = 1 },
+                        new { TrailerId = 18, DrawbarId = 2 },
+                        new { TrailerId = 18, DrawbarId = 3 },
+                        new { TrailerId = 18, DrawbarId = 4 },
+                        new { TrailerId = 18, DrawbarId = 5 },
+                        new { TrailerId = 18, DrawbarId = 6 },
+                        new { TrailerId = 18, DrawbarId = 8 },
+                        new { TrailerId = 18, DrawbarId = 9 },
+
+                        //PALMS 15UAWD
+                        new { TrailerId = 19, DrawbarId = 1 },
+                        new { TrailerId = 19, DrawbarId = 2 },
+                        new { TrailerId = 19, DrawbarId = 3 },
+                        new { TrailerId = 19, DrawbarId = 4 },
+                        new { TrailerId = 19, DrawbarId = 5 },
+                        new { TrailerId = 19, DrawbarId = 6 },
+                        new { TrailerId = 19, DrawbarId = 8 },
+                        new { TrailerId = 19, DrawbarId = 9 }
+                    )
                 );
         }
     }

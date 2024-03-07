@@ -93,9 +93,65 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 11, OilPumpId = 4 },
                         new { TrailerId = 11, OilPumpId = 5 },
                         new { TrailerId = 11, OilPumpId = 6 },
-                        new { TrailerId = 11, OilPumpId = 7 }
-                    )
+                        new { TrailerId = 11, OilPumpId = 7 },
 
+                        new { TrailerId = 12, OilPumpId = 1 },
+                        new { TrailerId = 12, OilPumpId = 2 },
+                        new { TrailerId = 12, OilPumpId = 3 },
+                        new { TrailerId = 12, OilPumpId = 4 },
+                        new { TrailerId = 12, OilPumpId = 5 },
+                        new { TrailerId = 12, OilPumpId = 6 },
+                        new { TrailerId = 12, OilPumpId = 7 },
+
+                        new { TrailerId = 13, OilPumpId = 1 },
+                        new { TrailerId = 13, OilPumpId = 3 },
+                        new { TrailerId = 13, OilPumpId = 4 },
+                        new { TrailerId = 13, OilPumpId = 5 },
+                        new { TrailerId = 13, OilPumpId = 6 },
+                        new { TrailerId = 13, OilPumpId = 7 },
+
+                        new { TrailerId = 14, OilPumpId = 1 },
+                        new { TrailerId = 14, OilPumpId = 2 },
+                        new { TrailerId = 14, OilPumpId = 3 },
+                        new { TrailerId = 14, OilPumpId = 4 },
+                        new { TrailerId = 14, OilPumpId = 5 },
+                        new { TrailerId = 14, OilPumpId = 6 },
+                        new { TrailerId = 14, OilPumpId = 7 },
+
+                        new { TrailerId = 15, OilPumpId = 1 },
+                        new { TrailerId = 15, OilPumpId = 3 },
+                        new { TrailerId = 15, OilPumpId = 4 },
+                        new { TrailerId = 15, OilPumpId = 5 },
+                        new { TrailerId = 15, OilPumpId = 6 },
+                        new { TrailerId = 15, OilPumpId = 7 },
+
+                        new { TrailerId = 16, OilPumpId = 1 },
+                        new { TrailerId = 16, OilPumpId = 4 },
+                        new { TrailerId = 16, OilPumpId = 5 },
+                        new { TrailerId = 16, OilPumpId = 6 },
+                        new { TrailerId = 16, OilPumpId = 7 },
+
+                        new { TrailerId = 17, OilPumpId = 1 },
+                        new { TrailerId = 17, OilPumpId = 2 },
+                        new { TrailerId = 17, OilPumpId = 3 },
+                        new { TrailerId = 17, OilPumpId = 4 },
+                        new { TrailerId = 17, OilPumpId = 5 },
+                        new { TrailerId = 17, OilPumpId = 6 },
+                        new { TrailerId = 17, OilPumpId = 7 },
+
+                        new { TrailerId = 18, OilPumpId = 1 },
+                        new { TrailerId = 18, OilPumpId = 3 },
+                        new { TrailerId = 18, OilPumpId = 4 },
+                        new { TrailerId = 18, OilPumpId = 5 },
+                        new { TrailerId = 18, OilPumpId = 6 },
+                        new { TrailerId = 18, OilPumpId = 7 },
+
+                        new { TrailerId = 19, OilPumpId = 1 },
+                        new { TrailerId = 19, OilPumpId = 4 },
+                        new { TrailerId = 19, OilPumpId = 5 },
+                        new { TrailerId = 19, OilPumpId = 6 },
+                        new { TrailerId = 19, OilPumpId = 7 }
+                    )
                 );
         }
     }

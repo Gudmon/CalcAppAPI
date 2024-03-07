@@ -57,6 +57,22 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Code = "RWD+",
                    Price = "7170",
                    Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága."
+               },
+               new Propulsion
+               {
+                   Id = 7,
+                   Name = "4WD BlackBruin elektronikus teljesítmény szabályozással",
+                   Code = "45WDB",
+                   Price = "0",
+                   Description = ""
+               },
+               new Propulsion
+               {
+                   Id = 8,
+                   Name = "4WD BlackBruin elektronikus teljesítmény szabályozással, ISOBUS-hoz előkészítve",
+                   Code = "45WDB.1",
+                   Price = "1135",
+                   Description = ""
                }
                );
         }

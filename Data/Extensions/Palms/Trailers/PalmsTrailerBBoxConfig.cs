@@ -14,6 +14,20 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                    Code = "Bbox",
                    Price = "2825",
+               },
+               new BBox
+               {
+                   Id = 2,
+                   Name = "Biomasszás boksz 4 mm-es Strenx acélból",
+                   Code = "Bbox",
+                   Price = "3150",
+               },
+               new BBox
+               {
+                   Id = 3,
+                   Name = "Biomasszás boksz 4 mm-es Strenx acélból",
+                   Code = "Bbox",
+                   Price = "3360",
                });
         }
     }

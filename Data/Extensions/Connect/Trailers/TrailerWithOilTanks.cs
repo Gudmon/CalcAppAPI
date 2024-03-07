@@ -67,9 +67,48 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 11, OilTankId = 1 },
                         new { TrailerId = 11, OilTankId = 2 },
                         new { TrailerId = 11, OilTankId = 3 },
-                        new { TrailerId = 11, OilTankId = 4 }
-                    )
+                        new { TrailerId = 11, OilTankId = 4 },
 
+                        new { TrailerId = 12, OilTankId = 1 },
+                        new { TrailerId = 12, OilTankId = 3 },
+                        new { TrailerId = 12, OilTankId = 5 },
+                        new { TrailerId = 12, OilTankId = 6 },
+
+                        new { TrailerId = 13, OilTankId = 1 },
+                        new { TrailerId = 13, OilTankId = 3 },
+                        new { TrailerId = 13, OilTankId = 5 },
+                        new { TrailerId = 13, OilTankId = 6 },
+
+                        new { TrailerId = 14, OilTankId = 1 },
+                        new { TrailerId = 14, OilTankId = 3 },
+                        new { TrailerId = 14, OilTankId = 5 },
+                        new { TrailerId = 14, OilTankId = 6 },
+
+                        new { TrailerId = 15, OilTankId = 1 },
+                        new { TrailerId = 15, OilTankId = 3 },
+                        new { TrailerId = 15, OilTankId = 5 },
+                        new { TrailerId = 15, OilTankId = 6 },
+
+                        new { TrailerId = 16, OilTankId = 1 },
+                        new { TrailerId = 16, OilTankId = 3 },
+                        new { TrailerId = 16, OilTankId = 5 },
+                        new { TrailerId = 16, OilTankId = 6 },
+
+                        new { TrailerId = 17, OilTankId = 1 },
+                        new { TrailerId = 17, OilTankId = 3 },
+                        new { TrailerId = 17, OilTankId = 5 },
+                        new { TrailerId = 17, OilTankId = 6 },
+
+                        new { TrailerId = 18, OilTankId = 1 },
+                        new { TrailerId = 18, OilTankId = 3 },
+                        new { TrailerId = 18, OilTankId = 5 },
+                        new { TrailerId = 18, OilTankId = 6 },
+
+                        new { TrailerId = 19, OilTankId = 1 },
+                        new { TrailerId = 19, OilTankId = 3 },
+                        new { TrailerId = 19, OilTankId = 5 },
+                        new { TrailerId = 19, OilTankId = 6 }
+                    )
                 );
         }
 

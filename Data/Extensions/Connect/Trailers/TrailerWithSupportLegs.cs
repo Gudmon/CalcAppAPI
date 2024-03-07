@@ -44,7 +44,31 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 10, SupportLegId = 3 },
 
                         new { TrailerId = 11, SupportLegId = 2 },
-                        new { TrailerId = 11, SupportLegId = 3 }
+                        new { TrailerId = 11, SupportLegId = 3 },
+
+                        new { TrailerId = 12, SupportLegId = 2 },
+                        new { TrailerId = 12, SupportLegId = 3 },
+
+                        new { TrailerId = 13, SupportLegId = 2 },
+                        new { TrailerId = 13, SupportLegId = 3 },
+
+                        new { TrailerId = 14, SupportLegId = 2 },
+                        new { TrailerId = 14, SupportLegId = 3 },
+
+                        new { TrailerId = 15, SupportLegId = 2 },
+                        new { TrailerId = 15, SupportLegId = 3 },
+
+                        new { TrailerId = 16, SupportLegId = 2 },
+                        new { TrailerId = 16, SupportLegId = 3 },
+
+                        new { TrailerId = 17, SupportLegId = 2 },
+                        new { TrailerId = 17, SupportLegId = 3 },
+
+                        new { TrailerId = 18, SupportLegId = 2 },
+                        new { TrailerId = 18, SupportLegId = 3 },
+
+                        new { TrailerId = 19, SupportLegId = 2 },
+                        new { TrailerId = 19, SupportLegId = 3 }
                     )
                 );
         }

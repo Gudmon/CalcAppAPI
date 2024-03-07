@@ -78,9 +78,63 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                        new { TrailerId = 11, TyreId = 9 },
                        new { TrailerId = 11, TyreId = 10 },
                        new { TrailerId = 11, TyreId = 11 },
-                       new { TrailerId = 11, TyreId = 12 }
-                   )
+                       new { TrailerId = 11, TyreId = 12 },
 
+                       //PALMS 10U
+                       new { TrailerId = 12, TyreId = 3 },
+                       new { TrailerId = 12, TyreId = 5 },
+                       new { TrailerId = 12, TyreId = 7 },
+
+                       //PALMS 10UWD
+                       new { TrailerId = 13, TyreId = 6 },
+                       new { TrailerId = 13, TyreId = 8 },
+                       new { TrailerId = 13, TyreId = 9 },
+                       new { TrailerId = 13, TyreId = 10 },
+
+                       //PALMS 12U
+                       new { TrailerId = 14, TyreId = 6 },
+                       new { TrailerId = 14, TyreId = 8 },
+                       new { TrailerId = 14, TyreId = 9 },
+                       new { TrailerId = 14, TyreId = 10 },
+                       new { TrailerId = 14, TyreId = 11 },
+                       new { TrailerId = 14, TyreId = 12 },
+
+                       //PALMS 12UWD
+                       new { TrailerId = 15, TyreId = 6 },
+                       new { TrailerId = 15, TyreId = 8 },
+                       new { TrailerId = 15, TyreId = 9 },
+                       new { TrailerId = 15, TyreId = 10 },
+                       new { TrailerId = 15, TyreId = 11 },
+                       new { TrailerId = 15, TyreId = 12 },
+
+                       //PALMS 12UAWD
+                       new { TrailerId = 16, TyreId = 8 },
+                       new { TrailerId = 16, TyreId = 9 },
+                       new { TrailerId = 16, TyreId = 10 },
+                       new { TrailerId = 16, TyreId = 11 },
+                       new { TrailerId = 16, TyreId = 12 },
+
+                       //PALMS 15U
+                       new { TrailerId = 17, TyreId = 8 },
+                       new { TrailerId = 17, TyreId = 9 },
+                       new { TrailerId = 17, TyreId = 10 },
+                       new { TrailerId = 17, TyreId = 11 },
+                       new { TrailerId = 17, TyreId = 12 },
+
+                       //PALMS 15UWD
+                       new { TrailerId = 18, TyreId = 8 },
+                       new { TrailerId = 18, TyreId = 9 },
+                       new { TrailerId = 18, TyreId = 10 },
+                       new { TrailerId = 18, TyreId = 11 },
+                       new { TrailerId = 18, TyreId = 12 },
+
+                       //PALMS 15UAWD
+                       new { TrailerId = 19, TyreId = 8 },
+                       new { TrailerId = 19, TyreId = 9 },
+                       new { TrailerId = 19, TyreId = 10 },
+                       new { TrailerId = 19, TyreId = 11 },
+                       new { TrailerId = 19, TyreId = 12 }
+                   )
                );
         }
     }
