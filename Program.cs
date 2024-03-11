@@ -1,6 +1,7 @@
 using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
+QuestPDF.Settings.License = LicenseType.Community;
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddDbContext<DataContext>(options =>
 {
@@ -47,3 +49,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
