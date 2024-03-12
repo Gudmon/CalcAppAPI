@@ -19,13 +19,10 @@ builder.Services.AddScoped<IPdfGenerator, PdfGenerator>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-if(builder.Environment.IsDevelopment())
+builder.Services.AddDbContext<DataContext>(options =>
 {
-    builder.Services.AddDbContext<DataContext>(options =>
-    {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
-    });
-}
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
