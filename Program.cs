@@ -2,6 +2,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using QuestPDF.Infrastructure;
+using CalcAppAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +14,19 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 QuestPDF.Settings.License = LicenseType.Community;
+
+builder.Services.AddScoped<IPdfGenerator, PdfGenerator>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddDbContext<DataContext>(options =>
+
+if(builder.Environment.IsDevelopment())
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
-});
+    builder.Services.AddDbContext<DataContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
+    });
+}
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
