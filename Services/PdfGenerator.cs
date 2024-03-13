@@ -44,6 +44,7 @@ namespace CalcAppAPI.Services
         { "ProtectionSleeves", "Védőhüvely" },
         { "ElectricalFloating", "Úszó pozíció" },
         { "ValveBlock", "Vezértömb főgémhez" },
+        { "Damping", "Csillapító" },
         { "CraneLight", "Pótkocsi világítás" },
         { "OperatorSeat", "Kezelő ülés" },
         { "CraneOilCooler", "Pótkocsi olajhűtő" },
