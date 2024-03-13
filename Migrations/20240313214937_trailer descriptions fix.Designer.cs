@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240313214937_trailer descriptions fix")]
+    partial class trailerdescriptionsfix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -10021,11 +10024,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 3,
-                            TrailerId = 1
-                        },
-                        new
-                        {
                             CraneId = 1,
                             TrailerId = 2
                         },
@@ -10046,11 +10044,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 5,
-                            TrailerId = 2
-                        },
-                        new
-                        {
                             CraneId = 4,
                             TrailerId = 3
                         },
@@ -10081,11 +10074,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 10,
-                            TrailerId = 3
-                        },
-                        new
-                        {
                             CraneId = 4,
                             TrailerId = 4
                         },
@@ -10112,11 +10100,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 9,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            CraneId = 10,
                             TrailerId = 4
                         },
                         new
@@ -10211,11 +10194,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 4,
-                            TrailerId = 8
-                        },
-                        new
-                        {
                             CraneId = 5,
                             TrailerId = 8
                         },
@@ -10248,11 +10226,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 11,
                             TrailerId = 8
-                        },
-                        new
-                        {
-                            CraneId = 4,
-                            TrailerId = 9
                         },
                         new
                         {
@@ -10368,311 +10341,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             TrailerId = 11
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 19
                         });
                 });
 
