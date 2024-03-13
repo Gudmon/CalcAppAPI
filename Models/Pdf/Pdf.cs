@@ -5,6 +5,7 @@ namespace CalcAppAPI.Models.Pdf
     public class Pdf
     {
         //TRAILER
+        public string? TrailerName { get; set; }
         public PdfItem? Stanchion { get; set; }
         public PdfItem? Brake { get; set; }
         public PdfItem? Propulsion { get; set; }
@@ -26,6 +27,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? Tyre { get; set; }
 
         //CRANE
+        public string? CraneName { get; set; }
         public PdfItem? ControlBlock { get; set; }
         public PdfItem? FrameType { get; set; }
         public PdfItem? Rotator { get; set; }

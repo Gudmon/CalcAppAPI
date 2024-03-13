@@ -112,8 +112,11 @@ namespace CalcAppAPI.Services
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(4).PaddingBottom(10).Text(_blobName.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(_blobName.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
+                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+
                 });
                 
 
