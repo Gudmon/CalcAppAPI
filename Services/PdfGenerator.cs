@@ -1,6 +1,8 @@
 ﻿using Azure.Storage.Blobs;
 using CalcAppAPI.Models.Pdf;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using QuestPDF.Fluent;
+using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
 namespace CalcAppAPI.Services
@@ -9,7 +11,52 @@ namespace CalcAppAPI.Services
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
+        private int _blobName = ExtensionMethods.RandomId();
 
+        private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
+    {
+        { "Stanchion", "Rakonca" },
+        { "Brake", "Fék" },
+        { "Propulsion", "Hajtás" },
+        { "Drawbar", "Vonórúd" },
+        { "Platform", "Kezelő platform" },
+        { "OilPump", "Olajpumpa" },
+        { "OilTank", "Olajtank" },
+        { "TrailerOilCooler", "Pótkocsi olajhűtő" },
+        { "BolsterLock", "Rakonca rögzítő" },
+        { "BBox", "Biomasszás box" },
+        { "WoodSorter", "Faosztályozó" },
+        { "HandBrake", "Kézifék" },
+        { "ChainsawHolder", "Láncfűrész tartó" },
+        { "UnderrunProtection", "Aláfutásgátló" },
+        { "BunkAdapter", "Bunk adapter" },
+        { "BunkExtension", "Bunk kiterjesztés" },
+        { "FrameExtension", "Raktér hosszabbítás" },
+        { "TrailerLight", "Pótkocsi világítás" },
+        { "Tyre", "Kerék" },
+
+        { "ControlBlock", "Vezértömb" },
+        { "FrameType", "Talpaló" },
+        { "Rotator", "Rotátor" },
+        { "Grapple", "Kanál" },
+        { "Grapples", "Kanál" },
+        { "Winch", "Csörlő" },
+        { "ProtectionSleeves", "Védőhüvely" },
+        { "ElectricalFloating", "Úszó pozíció" },
+        { "ValveBlock", "Vezértömb főgémhez" },
+        { "CraneLight", "Pótkocsi világítás" },
+        { "OperatorSeat", "Kezelő ülés" },
+        { "CraneOilCooler", "Pótkocsi olajhűtő" },
+        { "RotatorBrake", "Rotátor fék" },
+        { "JoystickHolder", "Joystick tartó" },
+        { "HoseGuard", "Tömlő védő" },
+        { "TurningDeviceCounterPlate", "Fedőlap fordító szerkezethez" },
+        { "SupportLegCounterPlate", "Fedőlap talpaló lábhoz" },
+        { "BoomGuard", "Főgém védő" },
+        { "Cover", "Védőhuzat" },
+        { "WoodControl", "Fás kiegészítő" },
+        { "Linkage", "Csatlakozó adapter" },
+    };
 
         public async Task<string> GenerateAndSavePdfAsync(Pdf pdfModel)
         {
@@ -23,19 +70,20 @@ namespace CalcAppAPI.Services
                 });
             });
 
+
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blobName = $"{ExtensionMethods.RandomId()}";
-            var blob = container.GetBlobClient($"{blobName}.pdf");
+            var blob = container.GetBlobClient($"{_blobName}.pdf");
 
             using (var stream = new MemoryStream())
             {
+                
                 pdf.GeneratePdf(stream);
                 stream.Position = 0;
 
                 await blob.UploadAsync(stream, true);
             }
 
-            return blobName;
+            return _blobName.ToString();
         }
 
         public async Task<byte[]> GetPdfAsync(string id)
@@ -53,51 +101,68 @@ namespace CalcAppAPI.Services
         {
             container.Column(col =>
             {
-                col.Item().Text("asd");
+                col.Item().Text("");
             });
         }
         void ComposeContent(IContainer container, Pdf pdfModel)
         {
             container.Column(col =>
             {
-                col.Item().Text("Some text");
-                col.Item().Text("Some text");
-                col.Item().Text(string.Empty);
+                col.Item().Row(row =>
+                {
+                    row.Spacing(20);
+                    row.RelativeItem(4).PaddingBottom(10).Text(_blobName.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
+                });
+                
+
                 col.Item().Table(table =>
                 {
                     table.ColumnsDefinition(columns =>
                     {
-                        columns.RelativeColumn(1);
-                        columns.RelativeColumn(1);
+                        columns.RelativeColumn(2);
+                        columns.RelativeColumn(4);
                         columns.RelativeColumn(1);
                         columns.RelativeColumn(1);
                     });
                     table.Header(header =>
                     {
-                        header.Cell().BorderBottom(1).Text("Konfiguráció").Bold();
-                        header.Cell().BorderBottom(1).Text("Megnevezés").Bold();
-                        header.Cell().BorderBottom(1).Text("Kód").Bold();
-                        header.Cell().BorderBottom(1).Text("Ár").Bold();
+                        header.Cell().BorderBottom(1).Text("Konfiguráció").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Megnevezés").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Kód").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
-                    table.Cell().Text("Rakonca");
-                    table.Cell().Text($"{pdfModel.Stanchion?.Name}");
-                    table.Cell().Text($"{pdfModel.Stanchion?.Code}");
-                    table.Cell().Text(pdfModel.Stanchion?.Price != null ? $"{pdfModel.Stanchion.Price} €" : "");
+
+
+                    foreach (var property in typeof(Pdf).GetProperties())
+                    {
+                        var propertyValue = property.GetValue(pdfModel);
+
+                        if (propertyValue is PdfItem pdfItem)
+                        {
+                            MapAndAddRow(table, property.Name, pdfItem);
+                        }
+                        else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
+                        {
+                            foreach (var item in pdfItemList)
+                            {
+                                MapAndAddRow(table, property.Name, item);
+                            }
+                        }
+                    }
 
                 });
-                col.Item().Text(string.Empty);
-                col.Item().Text("And more text");
             });
         }
         void ComposeFooter(IContainer container)
         {
-            container.Background("#4a8afd").Padding(20).Row(row =>
+            container.Background("#8ac73c").Padding(20).Row(row =>
             {
                 row.RelativeItem().Padding(0).Column(col =>
                 {
                     col.Item()
-                        .Hyperlink("https://bjdejongblog.nl")
-                        .Text("bjdejongblog.nl").ApplyCommonTextStyle();
+                        .Hyperlink("https://polite-ocean-00cf7d503.4.azurestaticapps.net")
+                        .Text("clear-globe").ApplyCommonTextStyle();
                 });
                 row.RelativeItem().AlignRight().Text(text =>
                 {
@@ -106,6 +171,15 @@ namespace CalcAppAPI.Services
                     text.TotalPages().ApplyCommonTextStyle();
                 });
             });
+        }
+        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem)
+        {
+            var displayName = PropertyDisplayNameMapping.ContainsKey(propertyName) ? PropertyDisplayNameMapping[propertyName] : propertyName;
+
+            table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text(pdfItem.Code).FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text($"{pdfItem.Price.ToString()} €").FontFamily("Cambria");
         }
     }
 
