@@ -36,7 +36,7 @@ namespace CalcAppAPI.Services
 
             if (!string.IsNullOrEmpty(email.BlobName))
             {
-                var pdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync($"{email.BlobName}-clear-globe.pdf");
+                var pdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync(email.BlobName);
                 if (pdfBytes != null)
                 {
                     var pdfAttachment = new MimePart("application", "pdf")
