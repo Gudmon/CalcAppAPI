@@ -15,7 +15,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 QuestPDF.Settings.License = LicenseType.Community;
 
-builder.Services.AddScoped<IPdfGenerator, PdfGenerator>();
+builder.Services.AddScoped<IPdfGenerator, DealerPdfGenerator>();
+builder.Services.AddScoped<IPdfGenerator, UserPdfGenerator>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 

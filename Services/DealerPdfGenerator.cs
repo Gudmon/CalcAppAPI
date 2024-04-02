@@ -7,7 +7,7 @@ using QuestPDF.Infrastructure;
 
 namespace CalcAppAPI.Services
 {
-    public class PdfGenerator : IPdfGenerator
+    public class DealerPdfGenerator : IPdfGenerator
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
@@ -73,7 +73,7 @@ namespace CalcAppAPI.Services
 
 
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{_blobName}.pdf");
+            var blob = container.GetBlobClient($"{_blobName}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -89,7 +89,7 @@ namespace CalcAppAPI.Services
 
         public async Task<byte[]> GetPdfAsync(string id)
         {
-            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}.pdf");
+            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}-clear-globe.pdf.pdf");
 
             using (var stream = new MemoryStream())
             {
