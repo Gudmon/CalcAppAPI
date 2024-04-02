@@ -53,7 +53,7 @@ namespace CalcAppAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> AddPdf([FromBody] Pdf pdfModel)
         {
-            int pdfId = Util.RandomId();
+            string pdfId = Util.RandomId();
             try
             {
                 await _dealerPdfGenerator.GenerateAndSaveDealerPdfAsync(pdfModel, pdfId);

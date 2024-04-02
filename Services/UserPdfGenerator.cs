@@ -58,21 +58,21 @@ namespace CalcAppAPI.Services
         { "Linkage", "Csatlakozó adapter" },
     };
 
-        public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, int pdfId)
+        public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, string blobName)
         {
             var pdf = Document.Create(container =>
             {
                 container.Page(page =>
                 {
                     page.Header().Element(ComposeHeader);
-                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, pdfId));
+                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, blobName));
                     page.Footer().Element(ComposeFooter);
                 });
             });
 
 
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{pdfId}.pdf");
+            var blob = container.GetBlobClient($"{blobName}.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -83,7 +83,7 @@ namespace CalcAppAPI.Services
                 await blob.UploadAsync(stream, true);
             }
 
-            return pdfId.ToString();
+            return blobName;
         }
 
         public async Task<byte[]> GetUserPdfAsync(string id)
@@ -104,14 +104,14 @@ namespace CalcAppAPI.Services
                 col.Item().Text("");
             });
         }
-        void ComposeContent(IContainer container, Pdf pdfModel, int pdfId)
+        void ComposeContent(IContainer container, Pdf pdfModel, string blobName)
         {
             container.Column(col =>
             {
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(pdfId.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));

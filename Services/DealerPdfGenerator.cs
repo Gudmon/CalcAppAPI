@@ -58,21 +58,21 @@ namespace CalcAppAPI.Services
         { "Linkage", "Csatlakozó adapter" },
     };
 
-        public async Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, int pdfId)
+        public async Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, string blobName)
         {
             var pdf = Document.Create(container =>
             {
                 container.Page(page =>
                 {
                     page.Header().Element(ComposeHeader);
-                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, pdfId));
+                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, blobName));
                     page.Footer().Element(ComposeFooter);
                 });
             });
 
 
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{pdfId}-clear-globe.pdf");
+            var blob = container.GetBlobClient($"{blobName}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -83,12 +83,12 @@ namespace CalcAppAPI.Services
                 await blob.UploadAsync(stream, true);
             }
 
-            return pdfId.ToString();
+            return blobName;
         }
 
-        public async Task<byte[]> GetDealerPdfAsync(string id)
+        public async Task<byte[]> GetDealerPdfAsync(string blobName)
         {
-            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}-clear-globe.pdf.pdf");
+            var blobClient = new BlobClient(_connectionString, _containerName, $"{blobName}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -104,14 +104,14 @@ namespace CalcAppAPI.Services
                 col.Item().Text("");
             });
         }
-        void ComposeContent(IContainer container, Pdf pdfModel, int pdfId)
+        void ComposeContent(IContainer container, Pdf pdfModel, string blobName)
         {
             container.Column(col =>
             {
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(pdfId.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));

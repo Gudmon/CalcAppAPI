@@ -4,7 +4,7 @@ namespace CalcAppAPI.Services
 {
     public interface IDealerPdfGenerator
     {
-        Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, int pdfId);
+        Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, string blobName);
         Task<byte[]> GetDealerPdfAsync(string id);
     }
 }

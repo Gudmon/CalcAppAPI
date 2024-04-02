@@ -8,10 +8,10 @@ namespace CalcAppAPI.Services
         {
             return desc.FontColor("#ffffff").Bold().FontSize(20);
         }
-        public static int RandomId()
+        public static string RandomId()
         {
             Random rand = new Random();
-            return rand.Next(100000, 999999);
+            return rand.Next(100000, 999999).ToString();
         }
     }
 }
