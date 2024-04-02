@@ -31,17 +31,24 @@ namespace CalcAppAPI.Services
                 Text = email.Body
             };
 
-            var pdfAttachment = new MimePart("application", "pdf")
-            {
-                Content = new MimeContent(new MemoryStream(await _dealerPdfGenerator.GetDealerPdfAsync($"{email.BlobName}-clear-globe.pdf"))),
-                ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
-                ContentTransferEncoding = ContentEncoding.Base64,
-                FileName = $"{email.BlobName}-clear-globe.pdf"
-            };
-
             var multipart = new Multipart("mixed");
             multipart.Add(emailToSend.Body);
-            multipart.Add(pdfAttachment);
+
+            if (!string.IsNullOrEmpty(email.BlobName))
+            {
+                var pdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync($"{email.BlobName}-clear-globe.pdf");
+                if (pdfBytes != null)
+                {
+                    var pdfAttachment = new MimePart("application", "pdf")
+                    {
+                        Content = new MimeContent(new MemoryStream(pdfBytes)),
+                        ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                        ContentTransferEncoding = ContentEncoding.Base64,
+                        FileName = $"{email.BlobName}-clear-globe.pdf"
+                    };
+                    multipart.Add(pdfAttachment);
+                }
+            }
 
             emailToSend.Body = multipart;
 
@@ -54,5 +61,6 @@ namespace CalcAppAPI.Services
                 await smtp.DisconnectAsync(true);
             }
         }
+
     }
 }
