@@ -50,33 +50,19 @@ namespace CalcAppAPI.Controllers
         }
 
 
-        [HttpPost("user")]
-        public async Task<ActionResult> AddUserPdf([FromBody] Pdf pdfModel)
+        [HttpPost]
+        public async Task<ActionResult> AddPdf([FromBody] Pdf pdfModel)
         {
             try
             {
+                await _dealerPdfGenerator.GenerateAndSavePdfAsync(pdfModel);
                 var pdfId = await _userPdfGenerator.GenerateAndSavePdfAsync(pdfModel);
                 return Ok(new { id = pdfId });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error generating and saving PDF");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while generating and saving the PDF.");
-            }
-        }
-
-        [HttpPost("dealer")]
-        public async Task<ActionResult> AddDealerPdf([FromBody] Pdf pdfModel)
-        {
-            try
-            {
-                var pdfId = await _dealerPdfGenerator.GenerateAndSavePdfAsync(pdfModel);
-                return Ok(new { id = pdfId });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error generating and saving PDF");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while generating and saving the PDF.");
+                _logger.LogError(ex, "Error generating and saving user PDF");
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while generating and saving the user PDF.");
             }
         }
     }
