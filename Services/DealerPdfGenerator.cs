@@ -7,11 +7,10 @@ using QuestPDF.Infrastructure;
 
 namespace CalcAppAPI.Services
 {
-    public class DealerPdfGenerator : IPdfGenerator
+    public class DealerPdfGenerator : IDealerPdfGenerator
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
-        private int _blobName = ExtensionMethods.RandomId();
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
     {
@@ -59,21 +58,21 @@ namespace CalcAppAPI.Services
         { "Linkage", "Csatlakozó adapter" },
     };
 
-        public async Task<string> GenerateAndSavePdfAsync(Pdf pdfModel)
+        public async Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, int pdfId)
         {
             var pdf = Document.Create(container =>
             {
                 container.Page(page =>
                 {
                     page.Header().Element(ComposeHeader);
-                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel));
+                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, pdfId));
                     page.Footer().Element(ComposeFooter);
                 });
             });
 
 
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{_blobName}-clear-globe.pdf");
+            var blob = container.GetBlobClient($"{pdfId}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -84,10 +83,10 @@ namespace CalcAppAPI.Services
                 await blob.UploadAsync(stream, true);
             }
 
-            return _blobName.ToString();
+            return pdfId.ToString();
         }
 
-        public async Task<byte[]> GetPdfAsync(string id)
+        public async Task<byte[]> GetDealerPdfAsync(string id)
         {
             var blobClient = new BlobClient(_connectionString, _containerName, $"{id}-clear-globe.pdf.pdf");
 
@@ -105,14 +104,14 @@ namespace CalcAppAPI.Services
                 col.Item().Text("");
             });
         }
-        void ComposeContent(IContainer container, Pdf pdfModel)
+        void ComposeContent(IContainer container, Pdf pdfModel, int pdfId)
         {
             container.Column(col =>
             {
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(_blobName.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfId.ToString()).FontFamily("Cambria").FontSize(20);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
@@ -188,16 +187,3 @@ namespace CalcAppAPI.Services
     }
 
  }
-
-public static class ExtensionMethods
-{
-    public static TextSpanDescriptor ApplyCommonTextStyle(this TextSpanDescriptor desc)
-    {
-        return desc.FontColor("#ffffff").Bold().FontSize(20);
-    }
-    public static int RandomId()
-    {
-        Random rand = new Random();
-        return rand.Next(100000, 999999);
-    }
-}

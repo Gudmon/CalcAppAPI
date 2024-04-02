@@ -7,11 +7,10 @@ using QuestPDF.Infrastructure;
 
 namespace CalcAppAPI.Services
 {
-    public class UserPdfGenerator : IPdfGenerator
+    public class UserPdfGenerator : IUserPdfGenerator
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
-        private int _blobName = ExtensionMethods.RandomId();
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
     {
@@ -59,21 +58,21 @@ namespace CalcAppAPI.Services
         { "Linkage", "Csatlakozó adapter" },
     };
 
-        public async Task<string> GenerateAndSavePdfAsync(Pdf pdfModel)
+        public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, int pdfId)
         {
             var pdf = Document.Create(container =>
             {
                 container.Page(page =>
                 {
                     page.Header().Element(ComposeHeader);
-                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel));
+                    page.Content().Padding(20).Element(c => ComposeContent(c, pdfModel, pdfId));
                     page.Footer().Element(ComposeFooter);
                 });
             });
 
 
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{_blobName}.pdf");
+            var blob = container.GetBlobClient($"{pdfId}.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -84,12 +83,12 @@ namespace CalcAppAPI.Services
                 await blob.UploadAsync(stream, true);
             }
 
-            return _blobName.ToString();
+            return pdfId.ToString();
         }
 
-        public async Task<byte[]> GetPdfAsync(string id)
+        public async Task<byte[]> GetUserPdfAsync(string id)
         {
-            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}-clear-globe.pdf");
+            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -105,14 +104,14 @@ namespace CalcAppAPI.Services
                 col.Item().Text("");
             });
         }
-        void ComposeContent(IContainer container, Pdf pdfModel)
+        void ComposeContent(IContainer container, Pdf pdfModel, int pdfId)
         {
             container.Column(col =>
             {
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(_blobName.ToString()).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfId.ToString()).FontFamily("Cambria").FontSize(20);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
@@ -125,16 +124,12 @@ namespace CalcAppAPI.Services
                     table.ColumnsDefinition(columns =>
                     {
                         columns.RelativeColumn(2);
-                        columns.RelativeColumn(4);
-                        columns.RelativeColumn(1);
-                        columns.RelativeColumn(1);
+                        columns.RelativeColumn(6);
                     });
                     table.Header(header =>
                     {
                         header.Cell().BorderBottom(1).Text("Konfiguráció").Bold().FontFamily("Cambria");
                         header.Cell().BorderBottom(1).Text("Megnevezés").Bold().FontFamily("Cambria");
-                        header.Cell().BorderBottom(1).Text("Kód").Bold().FontFamily("Cambria");
-                        header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
 
@@ -182,8 +177,6 @@ namespace CalcAppAPI.Services
 
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
             table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text(pdfItem.Code).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text($"{pdfItem.Price.ToString()} €").FontFamily("Cambria");
         }
     }
 

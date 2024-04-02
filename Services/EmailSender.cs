@@ -2,16 +2,17 @@
 using MimeKit;
 using MailKit.Net.Smtp;
 using CalcAppAPI.Models.Email;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CalcAppAPI.Services
 {
     public class EmailSender : IEmailSender
     {
-        private readonly IPdfGenerator pdfGenerator;
+        private readonly IDealerPdfGenerator _dealerPdfGenerator;
 
-        public EmailSender(IPdfGenerator pdfGenerator)
+        public EmailSender([FromServices] IDealerPdfGenerator dealerPdfGenerator)
         {
-            this.pdfGenerator = pdfGenerator;
+            _dealerPdfGenerator = dealerPdfGenerator;
         }
         public async Task SendEmailAsync(Email email)
         {
@@ -32,10 +33,10 @@ namespace CalcAppAPI.Services
 
             var pdfAttachment = new MimePart("application", "pdf")
             {
-                Content = new MimeContent(new MemoryStream(await pdfGenerator.GetPdfAsync(email.BlobName))),
+                Content = new MimeContent(new MemoryStream(await _dealerPdfGenerator.GetDealerPdfAsync($"{email.BlobName}-clear-globe.pdf"))),
                 ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                 ContentTransferEncoding = ContentEncoding.Base64,
-                FileName = $"{email.BlobName}.pdf"
+                FileName = $"{email.BlobName}-clear-globe.pdf"
             };
 
             var multipart = new Multipart("mixed");
