@@ -66,5 +66,7 @@ namespace CalcAppAPI.Models
         public int? WoodControlId { get; set; }
         public Linkage? Linkage { get; set; }
         public int? LinkageId { get; set; }
+        public Shipping? Shipping { get; set; }
+        public int? ShippingId { get; set; }
     }
 }

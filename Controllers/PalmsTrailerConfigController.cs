@@ -212,5 +212,14 @@ namespace CalcAppAPI.Controllers
 
             return Ok(frameExtension);
         }
+
+        [HttpGet("trailers/{id}/shipping")]
+        public async Task<ActionResult<Shipping>> GetShipping(int id)
+        {
+            var shipping = await _dbContext.Shipping
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(shipping);
+        }
     }
 }

@@ -45,7 +45,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = null
+                   LinkageId = null,
+                   ShippingId = 2,
                },
 
                new Crane
@@ -85,7 +86,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = null
+                   LinkageId = null,
+                   ShippingId = 2,
                },
 
 
@@ -126,7 +128,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = null
+                   LinkageId = null,
+                   ShippingId = 2,
                },
 
                new Crane
@@ -166,7 +169,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = null
+                   LinkageId = null,
+                   ShippingId = 2,
                },
 
                new Crane
@@ -206,7 +210,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = null
+                   LinkageId = null,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -245,7 +250,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 1,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -284,7 +290,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 1,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -323,7 +330,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = null,
                    CoverId = 1,
                    WoodControlId = null,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -362,7 +370,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -401,7 +410,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -440,7 +450,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 2,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                },
                new Crane
                {
@@ -479,7 +490,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    BoomGuardId = 3,
                    CoverId = 1,
                    WoodControlId = 1,
-                   LinkageId = 1
+                   LinkageId = 1,
+                   ShippingId = 2,
                }
            );
         }

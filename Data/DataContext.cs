@@ -1,5 +1,6 @@
 ﻿using CalcAppAPI.Data.Extensions.Connect.Cranes;
 using CalcAppAPI.Data.Extensions.Connect.Trailers;
+using CalcAppAPI.Data.Extensions.Palms.Common;
 using CalcAppAPI.Data.Extensions.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Palms.Trailers;
 using CalcAppAPI.Models;
@@ -56,6 +57,7 @@ namespace CalcAppAPI.Data
         public DbSet<BunkAdapter> BunkAdapter { get; set; }
         public DbSet<BunkExtension> BunkExtension { get; set; }
         public DbSet<FrameExtension> FrameExtension { get; set; }
+        public DbSet<Shipping> Shipping { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -106,6 +108,8 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsCraneCovers();
             modelBuilder.ConfigureMultiplePalmsCraneWoodControls();
             modelBuilder.ConfigureMultiplePalmsCraneLinkages();
+
+            modelBuilder.ConfigureMultiplePalmsShippings();
 
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.CraneConfigurations)

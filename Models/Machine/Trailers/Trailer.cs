@@ -1,4 +1,5 @@
-﻿using CalcAppAPI.Models.Machine.Configurations.Trailers;
+﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Trailers;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
@@ -54,7 +55,8 @@ namespace CalcAppAPI.Models
         public int? BunkExtensionId { get; set; }
         public FrameExtension? FrameExtension { get; set; }
         public int? FrameExtensionId { get; set; }
-
+        public Shipping? Shipping { get; set; }
+        public int? ShippingId { get; set; }
         public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }
