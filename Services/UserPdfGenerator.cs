@@ -34,6 +34,7 @@ namespace CalcAppAPI.Services
             { "FrameExtension", "Raktér hosszabbítás" },
             { "TrailerLight", "Pótkocsi világítás" },
             { "Tyre", "Kerék" },
+            { "TrailerShipping", "Szállítás" },
 
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },
@@ -58,6 +59,7 @@ namespace CalcAppAPI.Services
             { "Cover", "Védőhuzat" },
             { "WoodControl", "Fás kiegészítő" },
             { "Linkage", "3 pontos csatlakozó adapter" },
+            { "CraneShipping", "Szállítás" },
         };
 
         public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, string blobName)
@@ -72,13 +74,11 @@ namespace CalcAppAPI.Services
                 });
             });
 
-
             var container = new BlobContainerClient(_connectionString, _containerName);
             var blob = container.GetBlobClient($"{blobName}.pdf");
 
             using (var stream = new MemoryStream())
             {
-
                 pdf.GeneratePdf(stream);
                 stream.Position = 0;
 
@@ -106,6 +106,7 @@ namespace CalcAppAPI.Services
                 col.Item().Text("");
             });
         }
+
         void ComposeContent(IContainer container, Pdf pdfModel, string blobName)
         {
             container.Column(col =>
@@ -113,11 +114,11 @@ namespace CalcAppAPI.Services
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(4).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
-                    row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
-
+                    row.RelativeItem(3).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.TrailerName);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.Crane?.Name);
+                    row.RelativeItem(2).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
                 });
-
 
                 col.Item().Table(table =>
                 {
@@ -141,13 +142,13 @@ namespace CalcAppAPI.Services
 
                         if (propertyValue is PdfItem pdfItem)
                         {
-                            MapAndAddRow(table, property.Name, pdfItem);
+                            MapAndAddRow(table, property.Name, pdfItem, pdfModel);
                         }
                         else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
                         {
                             foreach (var item in pdfItemList)
                             {
-                                MapAndAddRow(table, property.Name, item);
+                                MapAndAddRow(table, property.Name, item, pdfModel);
                             }
                         }
                     }
@@ -155,6 +156,7 @@ namespace CalcAppAPI.Services
                 });
             });
         }
+
         void ComposeFooter(IContainer container)
         {
             container.Background("#8ac73c").Padding(20).Row(row =>
@@ -173,19 +175,26 @@ namespace CalcAppAPI.Services
                 });
             });
         }
-        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem)
+
+        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem, Pdf pdf)
         {
             var displayName = PropertyDisplayNameMapping.ContainsKey(propertyName) ? PropertyDisplayNameMapping[propertyName] : propertyName;
 
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
+
             if (displayName == "Daru")
             {
-                table.Cell().PaddingBottom(15).Text($"{pdfItem.Price} €").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Name}").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Price} €").FontFamily("Cambria");
+            }
+            else if (displayName == "Rakonca")
+            {
+                table.Cell().PaddingBottom(15).Text($"{pdf.TrailerName} {pdfItem?.Name}").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Price} €").FontFamily("Cambria");
             }
             else
             {
-                // If the display name is not "Daru", add an empty string for the price
+                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Name}").FontFamily("Cambria");
                 table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
             }
         }

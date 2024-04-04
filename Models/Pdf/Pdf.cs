@@ -25,6 +25,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? FrameExtension { get; set; }
         public PdfItem? TrailerLight { get; set; }
         public PdfItem? Tyre { get; set; }
+        public PdfItem? TrailerShipping { get; set; }
 
         //CRANE
         public PdfItem? Crane { get; set; }
@@ -50,5 +51,6 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? Cover { get; set; }
         public PdfItem? WoodControl { get; set; }
         public PdfItem? Linkage { get; set; }
+        public PdfItem? CraneShipping { get; set; }
     }
 }
