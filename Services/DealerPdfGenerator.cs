@@ -112,8 +112,6 @@ namespace CalcAppAPI.Services
                 {
                     row.Spacing(20);
                     row.RelativeItem(2).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
-                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
-                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
 
                 });
@@ -182,7 +180,7 @@ namespace CalcAppAPI.Services
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
             table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
             table.Cell().PaddingBottom(15).Text(pdfItem.Code).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text($"{pdfItem.Price.ToString()} €").FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text($"{pdfItem.Price} €").FontFamily("Cambria");
         }
     }
 

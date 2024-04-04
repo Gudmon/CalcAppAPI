@@ -1,4 +1,5 @@
 ﻿using Azure.Storage.Blobs;
+using CalcAppAPI.Models;
 using CalcAppAPI.Models.Pdf;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using QuestPDF.Fluent;
@@ -13,50 +14,51 @@ namespace CalcAppAPI.Services
         private const string _containerName = "pdf";
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
-    {
-        { "Stanchion", "Rakonca" },
-        { "Brake", "Fék" },
-        { "Propulsion", "Hajtás" },
-        { "Drawbar", "Vonórúd" },
-        { "Platform", "Kezelő platform" },
-        { "OilPump", "Olajpumpa" },
-        { "OilTank", "Olajtank" },
-        { "TrailerOilCooler", "Pótkocsi olajhűtő" },
-        { "BolsterLock", "Rakonca rögzítő" },
-        { "BBox", "Biomasszás box" },
-        { "WoodSorter", "Faosztályozó" },
-        { "HandBrake", "Kézifék" },
-        { "ChainsawHolder", "Láncfűrész tartó" },
-        { "UnderrunProtection", "Aláfutásgátló" },
-        { "BunkAdapter", "Bunk adapter" },
-        { "BunkExtension", "Bunk kiterjesztés" },
-        { "FrameExtension", "Raktér hosszabbítás" },
-        { "TrailerLight", "Pótkocsi világítás" },
-        { "Tyre", "Kerék" },
+        {       
+            { "Stanchion", "Rakonca" },
+            { "Brake", "Fék" },
+            { "Propulsion", "Hajtás" },
+            { "Drawbar", "Vonórúd" },
+            { "Platform", "Kezelő platform" },
+            { "OilPump", "Olajpumpa" },
+            { "OilTank", "Olajtank" },
+            { "TrailerOilCooler", "Pótkocsi olajhűtő" },
+            { "BolsterLock", "Rakonca rögzítő" },
+            { "BBox", "Biomasszás box" },
+            { "WoodSorter", "Faosztályozó" },
+            { "HandBrake", "Kézifék" },
+            { "ChainsawHolder", "Láncfűrész tartó" },
+            { "UnderrunProtection", "Aláfutásgátló" },
+            { "BunkAdapter", "Bunk adapter" },
+            { "BunkExtension", "Bunk kiterjesztés" },
+            { "FrameExtension", "Raktér hosszabbítás" },
+            { "TrailerLight", "Pótkocsi világítás" },
+            { "Tyre", "Kerék" },
 
-        { "ControlBlock", "Vezértömb" },
-        { "FrameType", "Talpaló" },
-        { "Rotator", "Rotátor" },
-        { "Grapple", "Kanál" },
-        { "Grapples", "Kanál" },
-        { "Winch", "Csörlő" },
-        { "ProtectionSleeves", "Védőhüvely" },
-        { "ElectricalFloating", "Úszó pozíció" },
-        { "ValveBlock", "Vezértömb főgémhez" },
-        { "Damping", "Csillapító" },
-        { "CraneLight", "Pótkocsi világítás" },
-        { "OperatorSeat", "Kezelő ülés" },
-        { "CraneOilCooler", "Pótkocsi olajhűtő" },
-        { "RotatorBrake", "Rotátor fék" },
-        { "JoystickHolder", "Joystick tartó" },
-        { "HoseGuard", "Tömlő védő" },
-        { "TurningDeviceCounterPlate", "Fedőlap fordító szerkezethez" },
-        { "SupportLegCounterPlate", "Fedőlap talpaló lábhoz" },
-        { "BoomGuard", "Főgém védő" },
-        { "Cover", "Védőhuzat" },
-        { "WoodControl", "Fás kiegészítő" },
-        { "Linkage", "Csatlakozó adapter" },
-    };
+            { "Crane", "Daru" },
+            { "ControlBlock", "Vezértömb" },
+            { "FrameType", "Talpaló" },
+            { "Rotator", "Rotátor" },
+            { "Grapple", "Kanál" },
+            { "Grapples", "Kanál" },
+            { "Winch", "Csörlő" },
+            { "ProtectionSleeves", "Védőhüvely" },
+            { "ElectricalFloating", "Úszó pozíció" },
+            { "ValveBlock", "Vezértömb főgémhez" },
+            { "Damping", "Csillapító" },
+            { "CraneLight", "LED munkalámpák" },
+            { "OperatorSeat", "Kezelő ülés" },
+            { "CraneOilCooler", "Olajhűtő eleketromos csatlakozással" },
+            { "RotatorBrake", "Rotátor fék" },
+            { "JoystickHolder", "Joystick tartó" },
+            { "HoseGuard", "Tömlő védő" },
+            { "TurningDeviceCounterPlate", "Fedőlap fordító szerkezethez" },
+            { "SupportLegCounterPlate", "Fedőlap talpaló lábhoz" },
+            { "BoomGuard", "Főgém védő" },
+            { "Cover", "Védőhuzat" },
+            { "WoodControl", "Fás kiegészítő" },
+            { "Linkage", "3 pontos csatlakozó adapter" },
+        };
 
         public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, string blobName)
         {
@@ -111,9 +113,7 @@ namespace CalcAppAPI.Services
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
-                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.TrailerName);
-                    row.RelativeItem(1).PaddingBottom(10).Text(pdfModel?.CraneName);
+                    row.RelativeItem(4).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
                     row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
 
                 });
@@ -124,12 +124,14 @@ namespace CalcAppAPI.Services
                     table.ColumnsDefinition(columns =>
                     {
                         columns.RelativeColumn(2);
-                        columns.RelativeColumn(6);
+                        columns.RelativeColumn(5);
+                        columns.RelativeColumn(1);
                     });
                     table.Header(header =>
                     {
                         header.Cell().BorderBottom(1).Text("Konfiguráció").Bold().FontFamily("Cambria");
                         header.Cell().BorderBottom(1).Text("Megnevezés").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
 
@@ -177,6 +179,15 @@ namespace CalcAppAPI.Services
 
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
             table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
+            if (displayName == "Daru")
+            {
+                table.Cell().PaddingBottom(15).Text($"{pdfItem.Price} €").FontFamily("Cambria");
+            }
+            else
+            {
+                // If the display name is not "Daru", add an empty string for the price
+                table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
+            }
         }
     }
 

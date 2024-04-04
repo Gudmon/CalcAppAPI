@@ -27,7 +27,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? Tyre { get; set; }
 
         //CRANE
-        public string? CraneName { get; set; }
+        public PdfItem? Crane { get; set; }
         public PdfItem? ControlBlock { get; set; }
         public PdfItem? FrameType { get; set; }
         public PdfItem? Rotator { get; set; }
