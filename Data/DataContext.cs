@@ -322,6 +322,19 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.FrameExtensionId)
                 .IsRequired(false);
 
+            //TRAILER SHIPPING
+            modelBuilder.Entity<Shipping>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.Shipping)
+                .HasForeignKey(o => o.ShippingId)
+                .IsRequired(false);
+
+            //CRANE SHIPPING
+            modelBuilder.Entity<Shipping>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.Shipping)
+                .HasForeignKey(o => o.ShippingId)
+                .IsRequired(false);
 
             modelBuilder.Entity<ControlBlock>()
                 .HasMany(cb => cb.AvailableForFrameTypes)
