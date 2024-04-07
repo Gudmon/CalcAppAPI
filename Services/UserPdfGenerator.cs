@@ -2,6 +2,7 @@
 using CalcAppAPI.Models;
 using CalcAppAPI.Models.Pdf;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MimeKit;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
@@ -12,6 +13,7 @@ namespace CalcAppAPI.Services
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
+        private decimal totalPrice = 0;
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
         {       
@@ -114,7 +116,7 @@ namespace CalcAppAPI.Services
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(3).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
+                    row.RelativeItem(3).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20).Bold();
                     row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.Crane?.Name);
                     row.RelativeItem(2).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
@@ -135,7 +137,6 @@ namespace CalcAppAPI.Services
                         header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
-
                     foreach (var property in typeof(Pdf).GetProperties())
                     {
                         var propertyValue = property.GetValue(pdfModel);
@@ -143,16 +144,28 @@ namespace CalcAppAPI.Services
                         if (propertyValue is PdfItem pdfItem)
                         {
                             MapAndAddRow(table, property.Name, pdfItem, pdfModel);
+                            totalPrice += decimal.Parse(pdfItem.Price);
                         }
                         else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
                         {
                             foreach (var item in pdfItemList)
                             {
                                 MapAndAddRow(table, property.Name, item, pdfModel);
+                                totalPrice += decimal.Parse(item.Price);
                             }
                         }
                     }
+                });
 
+                col.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Black);
+
+                col.Item().Row(row =>
+                {
+                    row.Spacing(20);
+                    row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
+                    row.RelativeItem(4).PaddingBottom(10).Text("");
+                    row.RelativeItem(4).PaddingBottom(10).Text("");
+                    row.RelativeItem(2).PaddingBottom(10).Text(totalPrice.ToString() + " €").FontFamily("Cambria").Bold().FontSize(14);
                 });
             });
         }

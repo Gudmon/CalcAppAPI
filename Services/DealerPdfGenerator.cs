@@ -11,52 +11,56 @@ namespace CalcAppAPI.Services
     {
         private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
+        private decimal totalPrice = 0;
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
-    {
-        { "Stanchion", "Rakonca" },
-        { "Brake", "Fék" },
-        { "Propulsion", "Hajtás" },
-        { "Drawbar", "Vonórúd" },
-        { "Platform", "Kezelő platform" },
-        { "OilPump", "Olajpumpa" },
-        { "OilTank", "Olajtank" },
-        { "TrailerOilCooler", "Pótkocsi olajhűtő" },
-        { "BolsterLock", "Rakonca rögzítő" },
-        { "BBox", "Biomasszás box" },
-        { "WoodSorter", "Faosztályozó" },
-        { "HandBrake", "Kézifék" },
-        { "ChainsawHolder", "Láncfűrész tartó" },
-        { "UnderrunProtection", "Aláfutásgátló" },
-        { "BunkAdapter", "Bunk adapter" },
-        { "BunkExtension", "Bunk kiterjesztés" },
-        { "FrameExtension", "Raktér hosszabbítás" },
-        { "TrailerLight", "Pótkocsi világítás" },
-        { "Tyre", "Kerék" },
+        {
+            { "Stanchion", "Rakonca" },
+            { "Brake", "Fék" },
+            { "Propulsion", "Hajtás" },
+            { "Drawbar", "Vonórúd" },
+            { "Platform", "Kezelő platform" },
+            { "OilPump", "Olajpumpa" },
+            { "OilTank", "Olajtank" },
+            { "TrailerOilCooler", "Pótkocsi olajhűtő" },
+            { "BolsterLock", "Rakonca rögzítő" },
+            { "BBox", "Biomasszás box" },
+            { "WoodSorter", "Faosztályozó" },
+            { "HandBrake", "Kézifék" },
+            { "ChainsawHolder", "Láncfűrész tartó" },
+            { "UnderrunProtection", "Aláfutásgátló" },
+            { "BunkAdapter", "Bunk adapter" },
+            { "BunkExtension", "Bunk kiterjesztés" },
+            { "FrameExtension", "Raktér hosszabbítás" },
+            { "TrailerLight", "Pótkocsi világítás" },
+            { "Tyre", "Kerék" },
+            { "TrailerShipping", "Szállítás" },
 
-        { "ControlBlock", "Vezértömb" },
-        { "FrameType", "Talpaló" },
-        { "Rotator", "Rotátor" },
-        { "Grapple", "Kanál" },
-        { "Grapples", "Kanál" },
-        { "Winch", "Csörlő" },
-        { "ProtectionSleeves", "Védőhüvely" },
-        { "ElectricalFloating", "Úszó pozíció" },
-        { "ValveBlock", "Vezértömb főgémhez" },
-        { "Damping", "Csillapító" },
-        { "CraneLight", "Pótkocsi világítás" },
-        { "OperatorSeat", "Kezelő ülés" },
-        { "CraneOilCooler", "Pótkocsi olajhűtő" },
-        { "RotatorBrake", "Rotátor fék" },
-        { "JoystickHolder", "Joystick tartó" },
-        { "HoseGuard", "Tömlő védő" },
-        { "TurningDeviceCounterPlate", "Fedőlap fordító szerkezethez" },
-        { "SupportLegCounterPlate", "Fedőlap talpaló lábhoz" },
-        { "BoomGuard", "Főgém védő" },
-        { "Cover", "Védőhuzat" },
-        { "WoodControl", "Fás kiegészítő" },
-        { "Linkage", "Csatlakozó adapter" },
-    };
+            { "Crane", "Daru" },
+            { "ControlBlock", "Vezértömb" },
+            { "FrameType", "Talpaló" },
+            { "Rotator", "Rotátor" },
+            { "Grapple", "Kanál" },
+            { "Grapples", "Kanál" },
+            { "Winch", "Csörlő" },
+            { "ProtectionSleeves", "Védőhüvely" },
+            { "ElectricalFloating", "Úszó pozíció" },
+            { "ValveBlock", "Vezértömb főgémhez" },
+            { "Damping", "Csillapító" },
+            { "CraneLight", "Pótkocsi világítás" },
+            { "OperatorSeat", "Kezelő ülés" },
+            { "CraneOilCooler", "Pótkocsi olajhűtő" },
+            { "RotatorBrake", "Rotátor fék" },
+            { "JoystickHolder", "Joystick tartó" },
+            { "HoseGuard", "Tömlő védő" },
+            { "TurningDeviceCounterPlate", "Fedőlap fordító szerkezethez" },
+            { "SupportLegCounterPlate", "Fedőlap talpaló lábhoz" },
+            { "BoomGuard", "Főgém védő" },
+            { "Cover", "Védőhuzat" },
+            { "WoodControl", "Fás kiegészítő" },
+            { "Linkage", "Csatlakozó adapter" },
+            { "CraneShipping", "Szállítás" },
+        };
 
         public async Task<string> GenerateAndSaveDealerPdfAsync(Pdf pdfModel, string blobName)
         {
@@ -111,9 +115,10 @@ namespace CalcAppAPI.Services
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(2).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20);
-                    row.RelativeItem(1).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
-
+                    row.RelativeItem(3).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20).Bold();
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.TrailerName);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.Crane?.Name);
+                    row.RelativeItem(2).PaddingBottom(10).Text(DateTime.Now.ToString("yyyy-MM-dd HH:mm"));
                 });
                 
 
@@ -134,7 +139,7 @@ namespace CalcAppAPI.Services
                         header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
-
+                    
                     foreach (var property in typeof(Pdf).GetProperties())
                     {
                         var propertyValue = property.GetValue(pdfModel);
@@ -142,16 +147,28 @@ namespace CalcAppAPI.Services
                         if (propertyValue is PdfItem pdfItem)
                         {
                             MapAndAddRow(table, property.Name, pdfItem);
+                            totalPrice += decimal.Parse(pdfItem.Price);
                         }
                         else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
                         {
                             foreach (var item in pdfItemList)
                             {
                                 MapAndAddRow(table, property.Name, item);
+                                totalPrice += decimal.Parse(item.Price);
                             }
                         }
                     }
+                });
 
+                col.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Black);
+
+                col.Item().Row(row =>
+                {
+                    row.Spacing(20);
+                    row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
+                    row.RelativeItem(4).PaddingBottom(10).Text("");
+                    row.RelativeItem(4).PaddingBottom(10).Text("");
+                    row.RelativeItem(2).PaddingBottom(10).Text(totalPrice.ToString() + " €").FontFamily("Cambria").Bold().FontSize(14);
                 });
             });
         }
