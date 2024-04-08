@@ -58,6 +58,7 @@ namespace CalcAppAPI.Data
         public DbSet<BunkExtension> BunkExtension { get; set; }
         public DbSet<FrameExtension> FrameExtension { get; set; }
         public DbSet<Shipping> Shipping { get; set; }
+        public DbSet<MOT> MOT { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -86,6 +87,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsBunkAdapters();
             modelBuilder.ConfigureMultiplePalmsBunkExtensions();
             modelBuilder.ConfigureMultiplePalmsFrameExtensions();
+            modelBuilder.ConfigureMultiplePalmsMOTs();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
@@ -329,18 +331,16 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);
 
-            //CRANE SHIPPING
-            modelBuilder.Entity<Shipping>()
-                .HasMany(o => o.Crane)
-                .WithOne(o => o.Shipping)
-                .HasForeignKey(o => o.ShippingId)
+            //MOT
+            modelBuilder.Entity<MOT>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.MOT)
+                .HasForeignKey(o => o.MOTId)
                 .IsRequired(false);
 
             modelBuilder.Entity<ControlBlock>()
                 .HasMany(cb => cb.AvailableForFrameTypes)
                 .WithMany();
-
-            
 
             modelBuilder.ConnectCranesWithFrameTypes();
             modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
@@ -454,6 +454,13 @@ namespace CalcAppAPI.Data
                 .HasMany(o => o.Crane)
                 .WithOne(o => o.Linkage)
                 .HasForeignKey(o => o.LinkageId)
+                .IsRequired(false);
+
+            //CRANE SHIPPING
+            modelBuilder.Entity<Shipping>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.Shipping)
+                .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);
 
             base.OnModelCreating(modelBuilder);

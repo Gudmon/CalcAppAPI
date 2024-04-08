@@ -37,6 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -68,6 +69,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -99,6 +101,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -130,6 +133,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -161,6 +165,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -192,6 +197,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -223,6 +229,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -254,6 +261,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -285,6 +293,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -316,6 +325,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -347,6 +357,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -378,6 +389,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -409,6 +421,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -440,6 +453,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -471,6 +485,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -502,6 +517,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -533,6 +549,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = 1,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -564,6 +581,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = 1,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 },
 
                 new Trailer
@@ -595,6 +613,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = 1,
                     FrameExtensionId = 1,
                     ShippingId = 1,
+                    MOTId = 1,
                 }
             );
         }

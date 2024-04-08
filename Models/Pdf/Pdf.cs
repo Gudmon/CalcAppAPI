@@ -26,6 +26,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? TrailerLight { get; set; }
         public PdfItem? Tyre { get; set; }
         public PdfItem? TrailerShipping { get; set; }
+        public PdfItem? MOT { get; set; }
 
         //CRANE
         public PdfItem? Crane { get; set; }

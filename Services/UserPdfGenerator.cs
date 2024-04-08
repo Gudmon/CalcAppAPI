@@ -37,6 +37,7 @@ namespace CalcAppAPI.Services
             { "TrailerLight", "Pótkocsi világítás" },
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
+            { "MOT", "Műszaki vizsga" },
 
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },

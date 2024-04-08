@@ -221,5 +221,15 @@ namespace CalcAppAPI.Controllers
 
             return Ok(shipping);
         }
+
+
+        [HttpGet("trailers/{id}/mot")]
+        public async Task<ActionResult<Shipping>> GetMOT(int id)
+        {
+            var MOT = await _dbContext.MOT
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(MOT);
+        }
     }
 }
