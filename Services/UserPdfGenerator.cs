@@ -35,6 +35,7 @@ namespace CalcAppAPI.Services
             { "BunkExtension", "Bunk kiterjesztés" },
             { "FrameExtension", "Raktér hosszabbítás" },
             { "TrailerLight", "Pótkocsi világítás" },
+            { "SupportLeg", "Kitámasztó láb" },
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },

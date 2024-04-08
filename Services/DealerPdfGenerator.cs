@@ -33,6 +33,7 @@ namespace CalcAppAPI.Services
             { "BunkExtension", "Bunk kiterjesztés" },
             { "FrameExtension", "Raktér hosszabbítás" },
             { "TrailerLight", "Pótkocsi világítás" },
+            { "SupportLeg", "Kitámasztó láb" },
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },
@@ -147,14 +148,14 @@ namespace CalcAppAPI.Services
 
                         if (propertyValue is PdfItem pdfItem)
                         {
-                            MapAndAddRow(table, property.Name, pdfItem);
+                            MapAndAddRow(table, property.Name, pdfItem, pdfModel);
                             totalPrice += decimal.Parse(pdfItem.Price);
                         }
                         else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
                         {
                             foreach (var item in pdfItemList)
                             {
-                                MapAndAddRow(table, property.Name, item);
+                                MapAndAddRow(table, property.Name, item, pdfModel);
                                 totalPrice += decimal.Parse(item.Price);
                             }
                         }
@@ -191,13 +192,22 @@ namespace CalcAppAPI.Services
                 });
             });
         }
-        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem)
+        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem, Pdf pdf)
         {
             var displayName = PropertyDisplayNameMapping.ContainsKey(propertyName) ? PropertyDisplayNameMapping[propertyName] : propertyName;
 
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text(pdfItem.Name).FontFamily("Cambria");
-            table.Cell().PaddingBottom(15).Text(pdfItem.Code).FontFamily("Cambria");
+
+            if (displayName == "Rakonca")
+            {
+                table.Cell().PaddingBottom(15).Text($"{pdf.TrailerName} {pdfItem?.Name}").FontFamily("Cambria");
+            }
+            else
+            {
+                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Name}").FontFamily("Cambria");
+            }
+
+            table.Cell().PaddingBottom(15).Text(pdfItem?.Code).FontFamily("Cambria");
             table.Cell().PaddingBottom(15).Text($"{pdfItem.Price} €").FontFamily("Cambria");
         }
     }

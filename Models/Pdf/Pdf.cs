@@ -23,6 +23,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? BunkAdapter { get; set; }
         public PdfItem? BunkExtension { get; set; }
         public PdfItem? FrameExtension { get; set; }
+        public PdfItem? SupportLeg { get; set; }
         public PdfItem? TrailerLight { get; set; }
         public PdfItem? Tyre { get; set; }
         public PdfItem? TrailerShipping { get; set; }

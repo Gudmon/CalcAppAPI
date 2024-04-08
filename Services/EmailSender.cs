@@ -17,18 +17,23 @@ namespace CalcAppAPI.Services
         public async Task SendEmailAsync(Email email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
+            //string toMail = "info@clear-globe.com";
             string toMail = "gudmonmarcellwork@gmail.com";
+            string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
 
             var emailToSend = new MimeMessage();
 
             emailToSend.From.Add(new MailboxAddress("", fromMail));
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
+            emailToSend.Cc.Add(new MimeKit.MailboxAddress("", ccMail));
 
-            emailToSend.Subject = email.Subject;
+            emailToSend.Subject = email.Subject + " - " + email.FromEmail;
+
+            string formattedBody = $"{email.Body}<br/><br/>Név: {email.Name}";
             emailToSend.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
-                Text = email.Body
+                Text = formattedBody
             };
 
             var multipart = new Multipart("mixed");
