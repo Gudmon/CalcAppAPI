@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 using MimeKit;
 using MailKit.Net.Smtp;
 using CalcAppAPI.Models.Email;
@@ -9,15 +10,17 @@ namespace CalcAppAPI.Services
     public class EmailSender : IEmailSender
     {
         private readonly IDealerPdfGenerator _dealerPdfGenerator;
+        private readonly IUserPdfGenerator _userPdfGenerator;
 
-        public EmailSender([FromServices] IDealerPdfGenerator dealerPdfGenerator)
+        public EmailSender([FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
         {
             _dealerPdfGenerator = dealerPdfGenerator;
+            _userPdfGenerator = userPdfGenerator;
         }
+
         public async Task SendEmailAsync(Email email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "info@clear-globe.com";
             string toMail = "gudmonmarcellwork@gmail.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
@@ -26,32 +29,44 @@ namespace CalcAppAPI.Services
 
             emailToSend.From.Add(new MailboxAddress("", fromMail));
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
-            emailToSend.Cc.Add(new MimeKit.MailboxAddress("", ccMail));
+            emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
             emailToSend.Subject = email.Subject + " - " + email.FromEmail;
 
             string formattedBody = $"{email.Body}<br/><br/>Név: {email.Name}";
-            emailToSend.Body = new TextPart(MimeKit.Text.TextFormat.Html)
-            {
-                Text = formattedBody
-            };
 
             var multipart = new Multipart("mixed");
-            multipart.Add(emailToSend.Body);
+            multipart.Add(new TextPart(MimeKit.Text.TextFormat.Html)
+            {
+                Text = formattedBody
+            });
 
             if (!string.IsNullOrEmpty(email.BlobName))
             {
-                var pdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync(email.BlobName);
-                if (pdfBytes != null)
+                var dealerPdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync(email.BlobName);
+                if (dealerPdfBytes != null)
                 {
-                    var pdfAttachment = new MimePart("application", "pdf")
+                    var dealerPdfAttachment = new MimePart("application", "pdf")
                     {
-                        Content = new MimeContent(new MemoryStream(pdfBytes)),
+                        Content = new MimeContent(new MemoryStream(dealerPdfBytes)),
                         ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                         ContentTransferEncoding = ContentEncoding.Base64,
                         FileName = $"{email.BlobName}-clear-globe.pdf"
                     };
-                    multipart.Add(pdfAttachment);
+                    multipart.Add(dealerPdfAttachment);
+                }
+
+                var userPdfBytes = await _userPdfGenerator.GetUserPdfAsync(email.BlobName);
+                if (userPdfBytes != null)
+                {
+                    var userPdfAttachment = new MimePart("application", "pdf")
+                    {
+                        Content = new MimeContent(new MemoryStream(userPdfBytes)),
+                        ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                        ContentTransferEncoding = ContentEncoding.Base64,
+                        FileName = $"{email.BlobName}.pdf"
+                    };
+                    multipart.Add(userPdfAttachment);
                 }
             }
 
@@ -66,6 +81,5 @@ namespace CalcAppAPI.Services
                 await smtp.DisconnectAsync(true);
             }
         }
-
     }
 }
