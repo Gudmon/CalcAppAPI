@@ -46,7 +46,8 @@ jobs:
 
       - name: Set up environment variables
         env:
-          DATABASE_CONNECTION_STRING: ${{ secrets.DATABASE_CONNECTION_STRING }}
+          DBConnection: ${{ secrets.DATABASE_CONNECTION_STRING }}
+          BlobConnection: ${{ secrets.BLOB_CONNECTION_STRING }}
         run: echo "DATABASE_CONNECTION_STRING=$DATABASE_CONNECTION_STRING" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
