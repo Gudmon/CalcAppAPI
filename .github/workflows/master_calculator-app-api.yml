@@ -19,6 +19,12 @@ jobs:
           dotnet-version: '8.x'
           include-prerelease: true
 
+      - name: Set up environment variables
+        env:
+          DBConnection: ${{ secrets.DATABASE_CONNECTION_STRING }}
+          BlobConnection: ${{ secrets.BLOB_CONNECTION_STRING }}
+        run: echo "DATABASE_CONNECTION_STRING=$DATABASE_CONNECTION_STRING" >> $GITHUB_ENV
+
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
@@ -43,12 +49,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
-
-      - name: Set up environment variables
-        env:
-          DBConnection: ${{ secrets.DATABASE_CONNECTION_STRING }}
-          BlobConnection: ${{ secrets.BLOB_CONNECTION_STRING }}
-        run: echo "DATABASE_CONNECTION_STRING=$DATABASE_CONNECTION_STRING" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
