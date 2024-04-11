@@ -47,11 +47,6 @@ jobs:
         with:
           name: .net-app
 
-      - name: Set up environment variables
-        env:
-            DATABASE_CONNECTION_STRING: ${{ secrets.DATABASE_CONNECTION_STRING }}
-          run: echo "DATABASE_CONNECTION_STRING=$DATABASE_CONNECTION_STRING" >> $GITHUB_ENV
-
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
