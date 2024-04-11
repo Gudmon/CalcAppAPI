@@ -64,34 +64,48 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Code = "WH8.8",
                    Price = "3770",
                },
-                new Tyre
-                {
-                    Id = 9,
-                    Name = "550/45-22,5 RF-felni, 8 lyukas, BKT",
-                    Code = "WH6.8",
-                    Price = "4010",
-                },
-                new Tyre
-                {
-                    Id = 10,
-                    Name = "550/45-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
-                    Code = "WH6.8V",
-                    Price = "4410",
-                },
-                new Tyre
-                {
-                    Id = 11,
-                    Name = "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
-                    Code = "WH9.8V",
-                    Price = "6425",
-                },
-                new Tyre
-                {
-                    Id = 12,
-                    Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
-                    Code = "WH7.8",
-                    Price = "5410",
-                }
+               new Tyre
+               {
+                   Id = 9,
+                   Name = "550/45-22,5 RF-felni, 8 lyukas, BKT",
+                   Code = "WH6.8",
+                   Price = "4010",
+               },
+               new Tyre
+               {
+                   Id = 10,
+                   Name = "550/45-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
+                   Code = "WH6.8V",
+                   Price = "4410",
+               },
+               new Tyre
+               {
+                   Id = 11,
+                   Name = "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
+                   Code = "WH9.8V",
+                   Price = "6425",
+               },
+               new Tyre
+               {
+                   Id = 12,
+                   Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
+                   Code = "WH7.8",
+                   Price = "5410",
+               },
+               new Tyre
+               {
+                   Id = 13,
+                   Name = "600/50-22,5 RF-felni, 10 lyukas, Nokian",
+                   Code = "WH7.10",
+                   Price = "11020",
+               },
+               new Tyre
+               {
+                   Id = 14,
+                   Name = "710/40-22,5 RF-felni, 10 lyukas, Nokian",
+                   Code = "WH9.10",
+                   Price = "11150",
+               }
                );
         }
     }

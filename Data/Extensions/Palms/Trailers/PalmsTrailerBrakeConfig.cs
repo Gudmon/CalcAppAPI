@@ -219,6 +219,21 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "Hidraulikus fék",
                    Code = "BH-EU",
                    Price = "4795",
+               },
+
+               new Brake
+               {
+                   Id = 31,
+                   Name = "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)",
+                   Code = "B2",
+                   Price = "250",
+               },
+               new Brake
+               {
+                   Id = 32,
+                   Name = "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)",
+                   Code = "B4",
+                   Price = "3035",
                }
                );
         }

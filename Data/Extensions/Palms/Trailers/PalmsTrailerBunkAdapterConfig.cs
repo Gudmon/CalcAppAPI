@@ -14,7 +14,16 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
                    Code = "PA",
                    Price = "150",
-               });
+               },
+               new BunkAdapter
+               {
+                   Id = 2,
+                   Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
+                   Code = "PA",
+                   Price = "140",
+               }
+               );
+
         }
     }
 }

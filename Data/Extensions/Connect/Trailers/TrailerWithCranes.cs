@@ -184,7 +184,19 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 19, CraneId = 9 },
                         new { TrailerId = 19, CraneId = 10 },
                         new { TrailerId = 19, CraneId = 11 },
-                        new { TrailerId = 19, CraneId = 12 }
+                        new { TrailerId = 19, CraneId = 12 },
+
+                        //PALMS MWD3.2
+                        new { TrailerId = 20, CraneId = 9 },
+                        new { TrailerId = 20, CraneId = 10 },
+                        new { TrailerId = 20, CraneId = 11 },
+                        new { TrailerId = 20, CraneId = 12 },
+
+                        //PALMS MWD3.2L
+                        new { TrailerId = 21, CraneId = 9 },
+                        new { TrailerId = 21, CraneId = 10 },
+                        new { TrailerId = 21, CraneId = 11 },
+                        new { TrailerId = 21, CraneId = 12 }
                     )
 
                 );

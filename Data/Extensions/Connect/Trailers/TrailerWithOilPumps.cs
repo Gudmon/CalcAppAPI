@@ -150,7 +150,11 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 19, OilPumpId = 4 },
                         new { TrailerId = 19, OilPumpId = 5 },
                         new { TrailerId = 19, OilPumpId = 6 },
-                        new { TrailerId = 19, OilPumpId = 7 }
+                        new { TrailerId = 19, OilPumpId = 7 },
+
+                        new { TrailerId = 22, OilPumpId = 8 },
+
+                        new { TrailerId = 23, OilPumpId = 8 }
                     )
                 );
         }

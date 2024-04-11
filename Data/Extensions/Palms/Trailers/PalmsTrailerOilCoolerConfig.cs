@@ -14,7 +14,15 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "Olajhűtő csomag a tartályhoz rögzítve",
                    Code = "CP2",
                    Price = "1035",
-               });
+               },
+               new TrailerOilCooler
+               {
+                   Id = 2,
+                   Name = "Olajhűtő csomag a tartályhoz rögzítve",
+                   Code = "CP4",
+                   Price = "1190",
+               }
+               );
         }
     }
 }

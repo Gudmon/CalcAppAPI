@@ -18,14 +18,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new OilPump
                {
                    Id = 2,
-                   Name = "101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min",
+                   Name = "P1 101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min",
                    Code = "P1",
                    Price = "1155",
                },
                new OilPump
                {
                    Id = 3,
-                   Name = "130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min",
+                   Name = "P2 130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min",
                    Code = "P2",
                    Price = "1575",
                },
@@ -56,6 +56,13 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "P6 olajpumpa PTO-val 650 p/min - 120 l/min (rögzítő konzol nélkül)",
                    Code = "P6PTO",
                    Price = "4305",
+               },
+               new OilPump
+               {
+                   Id = 8,
+                   Name = "LS fajtájú olajmpumpa multiplikátorral, 500 p/min - 118 l/min",
+                   Code = "P6",
+                   Price = "5190",
                }
                );
         }

@@ -761,6 +761,122 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                   Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
                   Code = "A5FEx",
                   Price = "42560",
+              },
+
+              new Stanchion
+              {
+                  Id = 107,
+                  Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                  Code = "A4F",
+                  Price = "52325",
+              },
+              new Stanchion
+              {
+                  Id = 108,
+                  Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                  Code = "A5F",
+                  Price = "53455",
+              },
+              new Stanchion
+              {
+                  Id = 109,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FHEx",
+                  Price = "55025",
+              },
+              new Stanchion
+              {
+                  Id = 110,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FHEx",
+                  Price = "56155",
+              },
+
+              new Stanchion
+              {
+                  Id = 111,
+                  Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                  Code = "A4F",
+                  Price = "52985",
+              },
+              new Stanchion
+              {
+                  Id = 112,
+                  Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                  Code = "A5F",
+                  Price = "54115",
+              },
+              new Stanchion
+              {
+                  Id = 113,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FHEx",
+                  Price = "55685",
+              },
+              new Stanchion
+              {
+                  Id = 114,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FHEx",
+                  Price = "56815",
+              },
+
+              new Stanchion
+              {
+                  Id = 115,
+                  Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                  Code = "A4F",
+                  Price = "56815",
+              },
+              new Stanchion
+              {
+                  Id = 116,
+                  Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                  Code = "A5F",
+                  Price = "57945",
+              },
+              new Stanchion
+              {
+                  Id = 117,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FHEx",
+                  Price = "59515",
+              },
+              new Stanchion
+              {
+                  Id = 118,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FHEx",
+                  Price = "60645",
+              },
+
+              new Stanchion
+              {
+                  Id = 119,
+                  Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                  Code = "A4F",
+                  Price = "57475",
+              },
+              new Stanchion
+              {
+                  Id = 120,
+                  Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                  Code = "A5F",
+                  Price = "58605",
+              },
+              new Stanchion
+              {
+                  Id = 121,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                  Code = "A4FHEx",
+                  Price = "60175",
+              },
+              new Stanchion
+              {
+                  Id = 122,
+                  Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                  Code = "A5FHEx",
+                  Price = "61305",
               }
               );
         }

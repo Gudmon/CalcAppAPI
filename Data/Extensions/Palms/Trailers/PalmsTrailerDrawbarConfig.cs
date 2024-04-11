@@ -39,14 +39,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Drawbar
                {
                    Id = 5,
-                   Name = "Osztrák típusú magas vonórúd vonószemmel",
+                   Name = "Osztrák típusú alacsony vonórúd vonószemmel",
                    Code = "C5",
                    Price = "275",
                },
                new Drawbar
                {
                    Id = 6,
-                   Name = "Német típusú magas vonórúd vonószemmel",
+                   Name = "Német típusú magas vonórúd vonószemmel (P1-P3 szivattyúhoz)",
                    Code = "C6",
                    Price = "430",
                },
@@ -61,7 +61,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                {
                    Id = 8,
                    Name = "K-80 típusú alacsony vonórúd vonószemmel",
-                   Code = "C6",
+                   Code = "C8",
                    Price = "470",
                },
                new Drawbar
@@ -70,6 +70,35 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "Osztrák típusú alacsony vonórúd elforduló vonószemmel",
                    Code = "C9",
                    Price = "525",
+               },
+
+               new Drawbar
+               {
+                   Id = 10,
+                   Name = "Osztrák típusú alacsony vonórúd vonószemmel",
+                   Code = "C5",
+                   Price = "315",
+               },
+               new Drawbar
+               {
+                   Id = 11,
+                   Name = "K-80 típusú alacsony vonórúd vonószemmel",
+                   Code = "C8",
+                   Price = "535",
+               },
+               new Drawbar
+               {
+                   Id = 12,
+                   Name = "Osztrák típusú alacsony vonórúd elforduló vonószemmel",
+                   Code = "C9",
+                   Price = "500",
+               },
+               new Drawbar
+               {
+                   Id = 13,
+                   Name = "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel",
+                   Code = "CY",
+                   Price = "8380",
                }
                );
         }

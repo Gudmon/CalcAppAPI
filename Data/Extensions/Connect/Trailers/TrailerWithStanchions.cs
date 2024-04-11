@@ -156,7 +156,19 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 19, StanchionId = 103 },
                         new { TrailerId = 19, StanchionId = 104 },
                         new { TrailerId = 19, StanchionId = 105 },
-                        new { TrailerId = 19, StanchionId = 106 }
+                        new { TrailerId = 19, StanchionId = 106 },
+
+                        //PALMS MWD3.2
+                        new { TrailerId = 20, StanchionId = 107 },
+                        new { TrailerId = 20, StanchionId = 108 },
+                        new { TrailerId = 20, StanchionId = 109 },
+                        new { TrailerId = 20, StanchionId = 110 },
+
+                        //PALMS MWD3.2L
+                        new { TrailerId = 21, StanchionId = 111 },
+                        new { TrailerId = 21, StanchionId = 112 },
+                        new { TrailerId = 21, StanchionId = 113 },
+                        new { TrailerId = 21, StanchionId = 114 }
                     )
                 );
         }
