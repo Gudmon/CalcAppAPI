@@ -19,9 +19,11 @@ builder.Services.AddScoped<IDealerPdfGenerator, DealerPdfGenerator>();
 builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
+var db = builder.Configuration["DBConnection"];
+
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection"));
+    options.UseSqlServer(db.ToString());
 });
 
 builder.Services.AddEndpointsApiExplorer();
