@@ -19,12 +19,27 @@ builder.Services.AddScoped<IDealerPdfGenerator, DealerPdfGenerator>();
 builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
-var db = builder.Configuration["DBConnection"];
+var db = "";
 
-builder.Services.AddDbContext<DataContext>(options =>
+if (builder.Environment.IsDevelopment())
 {
-    options.UseSqlServer(db.ToString());
-});
+    db = builder.Configuration["DBConnection"];
+    builder.Services.AddDbContext<DataContext>(options =>
+    {
+        options.UseSqlServer(db.ToString());
+    });
+}
+
+if (builder.Environment.IsProduction())
+{
+    builder.Configuration.AddJsonFile("appsettings.Production.json", optional: true, reloadOnChange: true);
+
+    db = builder.Configuration.GetConnectionString("DataConnection");
+    builder.Services.AddDbContext<DataContext>(options =>
+    {
+        options.UseSqlServer(db.ToString());
+    });
+}
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
