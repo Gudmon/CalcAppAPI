@@ -9,24 +9,9 @@ namespace CalcAppAPI.Services
 {
     public class DealerPdfGenerator : IDealerPdfGenerator
     {
-        private string _connectionString = "";
+        private string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
         private decimal totalPrice = 0;
-
-        public DealerPdfGenerator(IConfiguration configuration)
-        {
-            _connectionString = configuration["BlobConnection"];
-
-            if (string.IsNullOrEmpty(_connectionString))
-            {
-                _connectionString = configuration.GetConnectionString("BlobConnection");
-            }
-
-            if (string.IsNullOrEmpty(_connectionString))
-            {
-                throw new ApplicationException("Blob Storage connection string is not configured.");
-            }
-        }
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
         {
