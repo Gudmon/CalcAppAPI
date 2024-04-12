@@ -164,11 +164,11 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 20, StanchionId = 109 },
                         new { TrailerId = 20, StanchionId = 110 },
 
-                        //PALMS MWD3.2L
-                        new { TrailerId = 21, StanchionId = 111 },
-                        new { TrailerId = 21, StanchionId = 112 },
-                        new { TrailerId = 21, StanchionId = 113 },
-                        new { TrailerId = 21, StanchionId = 114 }
+                        //PALMS HMWD3.2
+                        new { TrailerId = 21, StanchionId = 115 },
+                        new { TrailerId = 21, StanchionId = 116 },
+                        new { TrailerId = 21, StanchionId = 117 },
+                        new { TrailerId = 21, StanchionId = 118 }
                     )
                 );
         }

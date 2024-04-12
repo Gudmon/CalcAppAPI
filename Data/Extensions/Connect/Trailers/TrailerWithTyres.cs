@@ -139,17 +139,9 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                        new { TrailerId = 20, TyreId = 13 },
                        new { TrailerId = 20, TyreId = 14 },
 
-                       //PALMS MWD3.2L
-                       new { TrailerId = 21, TyreId = 13 },
-                       new { TrailerId = 21, TyreId = 14 },
-
                        //PALMS HMWD3.2
-                       new { TrailerId = 22, TyreId = 13 },
-                       new { TrailerId = 22, TyreId = 14 },
-
-                       //PALMS HMWD3.2L
-                       new { TrailerId = 23, TyreId = 13 },
-                       new { TrailerId = 23, TyreId = 14 }
+                       new { TrailerId = 21, TyreId = 13 },
+                       new { TrailerId = 21, TyreId = 14 }
                    )
                );
         }

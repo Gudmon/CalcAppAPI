@@ -205,29 +205,13 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                         new { TrailerId = 20, DrawbarId = 12 },
                         new { TrailerId = 20, DrawbarId = 13 },
 
-                        //PALMS MWD3.2L
+                        //PALMS HMWD3.2
                         new { TrailerId = 21, DrawbarId = 1 },
                         new { TrailerId = 21, DrawbarId = 3 },
                         new { TrailerId = 21, DrawbarId = 10 },
                         new { TrailerId = 21, DrawbarId = 11 },
                         new { TrailerId = 21, DrawbarId = 12 },
-                        new { TrailerId = 21, DrawbarId = 13 },
-
-                        //PALMS HMWD3.2
-                        new { TrailerId = 22, DrawbarId = 1 },
-                        new { TrailerId = 22, DrawbarId = 3 },
-                        new { TrailerId = 22, DrawbarId = 10 },
-                        new { TrailerId = 22, DrawbarId = 11 },
-                        new { TrailerId = 22, DrawbarId = 12 },
-                        new { TrailerId = 22, DrawbarId = 13 },
-
-                        //PALMS HMWD3.2L
-                        new { TrailerId = 23, DrawbarId = 1 },
-                        new { TrailerId = 23, DrawbarId = 3 },
-                        new { TrailerId = 23, DrawbarId = 10 },
-                        new { TrailerId = 23, DrawbarId = 11 },
-                        new { TrailerId = 23, DrawbarId = 12 },
-                        new { TrailerId = 23, DrawbarId = 13 }
+                        new { TrailerId = 21, DrawbarId = 13 }
                     )
                 );
         }

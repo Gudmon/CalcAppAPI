@@ -93,13 +93,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
                        new { TrailerId = 20, LightId = 5 },
 
                        new { TrailerId = 21, LightId = 4 },
-                       new { TrailerId = 21, LightId = 5 },
-
-                       new { TrailerId = 22, LightId = 4 },
-                       new { TrailerId = 22, LightId = 5 },
-
-                       new { TrailerId = 23, LightId = 4 },
-                       new { TrailerId = 23, LightId = 5 }
+                       new { TrailerId = 21, LightId = 5 }
                    )
                );
         }
