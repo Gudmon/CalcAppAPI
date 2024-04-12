@@ -16,6 +16,12 @@ namespace CalcAppAPI.Services
         public DealerPdfGenerator(IConfiguration configuration)
         {
             _connectionString = configuration["BlobConnection"];
+
+            if (string.IsNullOrEmpty(_connectionString))
+            {
+                _connectionString = configuration.GetConnectionString("BlobConnection");
+            }
+
             if (string.IsNullOrEmpty(_connectionString))
             {
                 throw new ApplicationException("Blob Storage connection string is not configured.");
