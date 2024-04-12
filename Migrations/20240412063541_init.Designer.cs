@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240404123722_change crane names")]
-    partial class changecranenames
+    [Migration("20240412063541_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -704,6 +704,26 @@ namespace CalcAppAPI.Migrations
                         {
                             BrakeId = 25,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            BrakeId = 31,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            BrakeId = 32,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            BrakeId = 31,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            BrakeId = 32,
+                            TrailerId = 21
                         });
                 });
 
@@ -814,6 +834,9 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ShippingId")
+                        .HasColumnType("int");
+
                     b.Property<string>("SlewingCylinder")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -862,6 +885,8 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ProtectionSleevesId");
 
+                    b.HasIndex("ShippingId");
+
                     b.HasIndex("SupportLegCounterPlateId");
 
                     b.HasIndex("TurningDeviceCounterPlateId");
@@ -897,6 +922,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
                             SupportLegCounterPlateId = 1,
@@ -929,6 +955,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "2",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "7.8",
                             SupportLegCounterPlateId = 1,
@@ -961,6 +988,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
                             Series = "3",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "9",
                             SupportLegCounterPlateId = 1,
@@ -994,6 +1022,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "30-45",
                             RotatorMaximumLoad = "45",
                             Series = "3",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "12",
                             SupportLegCounterPlateId = 1,
@@ -1030,6 +1059,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "45-70",
                             RotatorMaximumLoad = "45",
                             Series = "4",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "15",
                             SupportLegCounterPlateId = 1,
@@ -1069,6 +1099,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             SupportLegCounterPlateId = 1,
@@ -1108,6 +1139,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             SupportLegCounterPlateId = 1,
@@ -1145,6 +1177,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             SupportLegCounterPlateId = 1,
@@ -1183,6 +1216,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             SupportLegCounterPlateId = 1,
@@ -1222,6 +1256,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             SupportLegCounterPlateId = 1,
@@ -1261,6 +1296,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             SupportLegCounterPlateId = 1,
@@ -1299,6 +1335,7 @@ namespace CalcAppAPI.Migrations
                             RecommendedOilFlow = "120",
                             RotatorMaximumLoad = "100",
                             Series = "X",
+                            ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "30",
                             SupportLegCounterPlateId = 1,
@@ -5147,6 +5184,47 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Shipping");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Name = "Pótkocsi szállítása Észtországból Magyarországra",
+                            Price = "750"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Name = "Daru szállítása Észtországból Magyarországra",
+                            Price = "750"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
                 {
                     b.Property<int>("Id")
@@ -5376,6 +5454,13 @@ namespace CalcAppAPI.Migrations
                             Code = "Bbox",
                             Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                             Price = "3360"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "Bbox",
+                            Name = "Biomasszás boksz 4 mm-es Strenx acélból",
+                            Price = "3200"
                         });
                 });
 
@@ -5647,6 +5732,20 @@ namespace CalcAppAPI.Migrations
                             Code = "BH-EU",
                             Name = "Hidraulikus fék",
                             Price = "4795"
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Code = "B2",
+                            Name = "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)",
+                            Price = "250"
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Code = "B4",
+                            Name = "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)",
+                            Price = "3035"
                         });
                 });
 
@@ -5681,6 +5780,13 @@ namespace CalcAppAPI.Migrations
                             Code = "PA",
                             Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
                             Price = "150"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "PA",
+                            Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
+                            Price = "140"
                         });
                 });
 
@@ -5715,6 +5821,13 @@ namespace CalcAppAPI.Migrations
                             Code = "PA-H",
                             Name = "Forwarder típusú bunk kiterjesztés (az ár 1 db-ra vonatkozik)",
                             Price = "625"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "PA-H",
+                            Name = "Forwarder típusú bunk kiterjesztés (az ár 1 db-ra vonatkozik)",
+                            Price = "595"
                         });
                 });
 
@@ -5809,14 +5922,14 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "C5",
-                            Name = "Osztrák típusú magas vonórúd vonószemmel",
+                            Name = "Osztrák típusú alacsony vonórúd vonószemmel",
                             Price = "275"
                         },
                         new
                         {
                             Id = 6,
                             Code = "C6",
-                            Name = "Német típusú magas vonórúd vonószemmel",
+                            Name = "Német típusú magas vonórúd vonószemmel (P1-P3 szivattyúhoz)",
                             Price = "430"
                         },
                         new
@@ -5829,7 +5942,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 8,
-                            Code = "C6",
+                            Code = "C8",
                             Name = "K-80 típusú alacsony vonórúd vonószemmel",
                             Price = "470"
                         },
@@ -5839,6 +5952,34 @@ namespace CalcAppAPI.Migrations
                             Code = "C9",
                             Name = "Osztrák típusú alacsony vonórúd elforduló vonószemmel",
                             Price = "525"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "C5",
+                            Name = "Osztrák típusú alacsony vonórúd vonószemmel",
+                            Price = "315"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "C8",
+                            Name = "K-80 típusú alacsony vonórúd vonószemmel",
+                            Price = "535"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Code = "C9",
+                            Name = "Osztrák típusú alacsony vonórúd elforduló vonószemmel",
+                            Price = "500"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Code = "CY",
+                            Name = "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel",
+                            Price = "8380"
                         });
                 });
 
@@ -5910,6 +6051,40 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MOT");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Name = "Pótkocsi műszaki vizsga",
+                            Price = "500"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", b =>
                 {
                     b.Property<int>("Id")
@@ -5946,14 +6121,14 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "P1",
-                            Name = "101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min",
+                            Name = "P1 101 cm3 dugattyús olajmpumpa a vonórúdon, 650 p/min - 65 l/min",
                             Price = "1155"
                         },
                         new
                         {
                             Id = 3,
                             Code = "P2",
-                            Name = "130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min",
+                            Name = "P2 130 cm3 dugattyús olajmpuma a vonórúdon, 650 p/min - 82 l/min",
                             Price = "1575"
                         },
                         new
@@ -5983,6 +6158,13 @@ namespace CalcAppAPI.Migrations
                             Code = "P6PTO",
                             Name = "P6 olajpumpa PTO-val 650 p/min - 120 l/min (rögzítő konzol nélkül)",
                             Price = "4305"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "P6",
+                            Name = "LS fajtájú olajmpumpa multiplikátorral, 500 p/min - 118 l/min",
+                            Price = "5190"
                         });
                 });
 
@@ -6052,6 +6234,13 @@ namespace CalcAppAPI.Migrations
                             Code = "T2SOV+",
                             Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel",
                             Price = "1495"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "T4+",
+                            Name = "100 l-es olajtartály HVLP olajjal",
+                            Price = "1610"
                         });
                 });
 
@@ -6957,6 +7146,118 @@ namespace CalcAppAPI.Migrations
                             Code = "A5FEx",
                             Name = "Pótkocsi raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
                             Price = "42560"
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Code = "A4F",
+                            Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                            Price = "52325"
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Code = "A5F",
+                            Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                            Price = "53455"
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Code = "A4FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                            Price = "55025"
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Code = "A5FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                            Price = "56155"
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Code = "A4F",
+                            Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                            Price = "52985"
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Code = "A5F",
+                            Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                            Price = "54115"
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Code = "A4FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                            Price = "55685"
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Code = "A5FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                            Price = "56815"
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Code = "A4F",
+                            Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                            Price = "56815"
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Code = "A5F",
+                            Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                            Price = "57945"
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Code = "A4FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                            Price = "59515"
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Code = "A5FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                            Price = "60645"
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Code = "A4F",
+                            Name = "Pótkocsi 4 pár forwarder típusú rakoncával",
+                            Price = "57475"
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Code = "A5F",
+                            Name = "Pótkocsi 5 pár forwarder típusú rakoncával",
+                            Price = "58605"
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Code = "A4FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával",
+                            Price = "60175"
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Code = "A5FHEx",
+                            Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
+                            Price = "61305"
                         });
                 });
 
@@ -7211,6 +7512,20 @@ namespace CalcAppAPI.Migrations
                             Code = "L4",
                             Name = "Fix hátsó LED lámpák",
                             Price = "420"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "L1",
+                            Name = "Összecsukható hátsó lámpák",
+                            Price = "340"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "L2",
+                            Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
+                            Price = "440"
                         });
                 });
 
@@ -7245,6 +7560,13 @@ namespace CalcAppAPI.Migrations
                             Code = "CP2",
                             Name = "Olajhűtő csomag a tartályhoz rögzítve",
                             Price = "1035"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "CP4",
+                            Name = "Olajhűtő csomag a tartályhoz rögzítve",
+                            Price = "1190"
                         });
                 });
 
@@ -7355,6 +7677,20 @@ namespace CalcAppAPI.Migrations
                             Code = "WH7.8",
                             Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
                             Price = "5410"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Code = "WH7.10",
+                            Name = "600/50-22,5 RF-felni, 10 lyukas, Nokian",
+                            Price = "11020"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "WH9.10",
+                            Name = "710/40-22,5 RF-felni, 10 lyukas, Nokian",
+                            Price = "11150"
                         });
                 });
 
@@ -7498,6 +7834,9 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("MOTId")
+                        .HasColumnType("int");
+
                     b.Property<string>("MaxCraneSize")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7509,6 +7848,9 @@ namespace CalcAppAPI.Migrations
                     b.Property<string>("Price")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ShippingId")
+                        .HasColumnType("int");
 
                     b.Property<string>("StandardWheelSize")
                         .IsRequired()
@@ -7547,6 +7889,10 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("HandBrakeId");
 
+                    b.HasIndex("MOTId");
+
+                    b.HasIndex("ShippingId");
+
                     b.HasIndex("TrailerOilCoolerId");
 
                     b.HasIndex("UnderrunProtectionId");
@@ -7562,16 +7908,18 @@ namespace CalcAppAPI.Migrations
                             BeamType = "Egyalvázas",
                             ChainsawHolderId = 1,
                             CurbWeight = "890",
-                            Description = "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és nagyobb újraértékesítési értéket biztosít.",
+                            Description = "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és magasabb maradványértéket biztosít.",
                             DrawbarControlCylinders = "1",
                             Frame = "140x140x6",
                             FrameExtensionLength = "-",
                             GrossWeight = "8500",
                             LoadingAreaCross = "1,5",
                             LoadingAreaLength = "3000",
+                            MOTId = 1,
                             MaxCraneSize = "35",
                             Name = "PALMS 6S",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "4900",
                             TrailerOilCoolerId = 1,
@@ -7593,9 +7941,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2",
                             LoadingAreaLength = "3550",
+                            MOTId = 1,
                             MaxCraneSize = "47",
                             Name = "PALMS 8SX",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "5690",
                             TrailerOilCoolerId = 1,
@@ -7619,9 +7969,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "1,95",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 8D",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7645,9 +7997,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "1,95",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 8DWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7671,9 +8025,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2,15",
                             LoadingAreaLength = "3870",
+                            MOTId = 1,
                             MaxCraneSize = "65",
                             Name = "PALMS 9SC",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "6095",
                             TrailerOilCoolerId = 1,
@@ -7697,9 +8053,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2,4",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 10D",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7723,9 +8081,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2,4",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 10DWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "400/60-15,5",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7749,9 +8109,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2,7",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 12D",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7775,9 +8137,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2,7",
                             LoadingAreaLength = "3975",
+                            MOTId = 1,
                             MaxCraneSize = "85",
                             Name = "PALMS 12DWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6200",
                             TrailerOilCoolerId = 1,
@@ -7801,9 +8165,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "3,0",
                             LoadingAreaLength = "4080",
+                            MOTId = 1,
                             MaxCraneSize = "112",
                             Name = "PALMS 14D",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6300",
                             TrailerOilCoolerId = 1,
@@ -7827,9 +8193,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "3,0",
                             LoadingAreaLength = "4080",
+                            MOTId = 1,
                             MaxCraneSize = "112",
                             Name = "PALMS 14DWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6300",
                             TrailerOilCoolerId = 1,
@@ -7855,9 +8223,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2.4",
                             LoadingAreaLength = "3990",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 10U",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6215",
                             TrailerOilCoolerId = 1,
@@ -7882,9 +8252,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2.4",
                             LoadingAreaLength = "3990",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 10UWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6215",
                             TrailerOilCoolerId = 1,
@@ -7909,9 +8281,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2.75",
                             LoadingAreaLength = "3990",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 12U",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6215",
                             TrailerOilCoolerId = 1,
@@ -7936,9 +8310,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2.75",
                             LoadingAreaLength = "3990",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 12UWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6215",
                             TrailerOilCoolerId = 1,
@@ -7963,9 +8339,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "2.75",
                             LoadingAreaLength = "3990",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 12UAWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6215",
                             TrailerOilCoolerId = 1,
@@ -7991,9 +8369,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "3.2",
                             LoadingAreaLength = "4175",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 15U",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6415",
                             TrailerOilCoolerId = 1,
@@ -8019,9 +8399,11 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "3.2",
                             LoadingAreaLength = "4175",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 15UWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6415",
                             TrailerOilCoolerId = 1,
@@ -8047,14 +8429,65 @@ namespace CalcAppAPI.Migrations
                             HandBrakeId = 1,
                             LoadingAreaCross = "3.2",
                             LoadingAreaLength = "4175",
+                            MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS 15UAWD",
                             Price = "",
+                            ShippingId = 1,
                             StandardWheelSize = "500/50-22,5",
                             TotalLength = "6415",
                             TrailerOilCoolerId = 1,
                             UnderrunProtectionId = 2,
                             WidthWithStandardWheels = "2450"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            BBoxId = 4,
+                            BeamType = "Unibody (Forwarder)",
+                            BunkAdapterId = 2,
+                            BunkExtensionId = 2,
+                            CurbWeight = "4700",
+                            Description = "Ismerje meg a PALMS MWD sorozatú forwarder típusú pótkocsit, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.",
+                            DrawbarControlCylinders = "2",
+                            Frame = "unibody",
+                            FrameExtensionLength = "1.085",
+                            GrossWeight = "18000",
+                            LoadingAreaCross = "3.2",
+                            LoadingAreaLength = "4235",
+                            MOTId = 1,
+                            MaxCraneSize = "120",
+                            Name = "PALMS MWD 3.2",
+                            Price = "",
+                            ShippingId = 1,
+                            StandardWheelSize = "600/50x22.5",
+                            TotalLength = "6430",
+                            WidthWithStandardWheels = "2470"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            BBoxId = 4,
+                            BeamType = "Unibody (Forwarder)",
+                            BunkAdapterId = 2,
+                            BunkExtensionId = 2,
+                            CurbWeight = "4920",
+                            Description = "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.",
+                            DrawbarControlCylinders = "2",
+                            Frame = "unibody",
+                            FrameExtensionLength = "1.085",
+                            GrossWeight = "18000",
+                            LoadingAreaCross = "3.2",
+                            LoadingAreaLength = "4185",
+                            MOTId = 1,
+                            MaxCraneSize = "120",
+                            Name = "PALMS HMWD 3.2",
+                            Price = "",
+                            ShippingId = 1,
+                            StandardWheelSize = "600/50x22.5",
+                            TotalLength = "6430",
+                            TrailerOilCoolerId = 2,
+                            WidthWithStandardWheels = "2470"
                         });
                 });
 
@@ -10676,6 +11109,46 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            TrailerId = 21
                         });
                 });
 
@@ -11595,6 +12068,66 @@ namespace CalcAppAPI.Migrations
                         {
                             DrawbarId = 9,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            DrawbarId = 1,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 3,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 10,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 11,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 12,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 13,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            DrawbarId = 1,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            DrawbarId = 3,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            DrawbarId = 10,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            DrawbarId = 11,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            DrawbarId = 12,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            DrawbarId = 13,
+                            TrailerId = 21
                         });
                 });
 
@@ -12207,6 +12740,11 @@ namespace CalcAppAPI.Migrations
                         {
                             OilPumpId = 7,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            OilPumpId = 8,
+                            TrailerId = 21
                         });
                 });
 
@@ -12584,6 +13122,11 @@ namespace CalcAppAPI.Migrations
                         {
                             OilTankId = 6,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            OilTankId = 7,
+                            TrailerId = 21
                         });
                 });
 
@@ -13415,6 +13958,46 @@ namespace CalcAppAPI.Migrations
                         {
                             StanchionId = 106,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            StanchionId = 107,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            StanchionId = 108,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            StanchionId = 109,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            StanchionId = 110,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            StanchionId = 115,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            StanchionId = 116,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            StanchionId = 117,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            StanchionId = 118,
+                            TrailerId = 21
                         });
                 });
 
@@ -13914,6 +14497,26 @@ namespace CalcAppAPI.Migrations
                         {
                             LightId = 3,
                             TrailerId = 19
+                        },
+                        new
+                        {
+                            LightId = 4,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            LightId = 5,
+                            TrailerId = 20
+                        },
+                        new
+                        {
+                            LightId = 4,
+                            TrailerId = 21
+                        },
+                        new
+                        {
+                            LightId = 5,
+                            TrailerId = 21
                         });
                 });
 
@@ -14346,6 +14949,26 @@ namespace CalcAppAPI.Migrations
                         {
                             TrailerId = 19,
                             TyreId = 12
+                        },
+                        new
+                        {
+                            TrailerId = 20,
+                            TyreId = 13
+                        },
+                        new
+                        {
+                            TrailerId = 20,
+                            TyreId = 14
+                        },
+                        new
+                        {
+                            TrailerId = 21,
+                            TyreId = 13
+                        },
+                        new
+                        {
+                            TrailerId = 21,
+                            TyreId = 14
                         });
                 });
 
@@ -14402,6 +15025,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ProtectionSleevesId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", "Shipping")
+                        .WithMany("Crane")
+                        .HasForeignKey("ShippingId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", "SupportLegCounterPlate")
                         .WithMany("Crane")
                         .HasForeignKey("SupportLegCounterPlateId");
@@ -14435,6 +15062,8 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("OperatorSeat");
 
                     b.Navigation("ProtectionSleeves");
+
+                    b.Navigation("Shipping");
 
                     b.Navigation("SupportLegCounterPlate");
 
@@ -14540,6 +15169,14 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("HandBrakeId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", "MOT")
+                        .WithMany("Trailer")
+                        .HasForeignKey("MOTId");
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", "Shipping")
+                        .WithMany("Trailer")
+                        .HasForeignKey("ShippingId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerOilCooler", "TrailerOilCooler")
                         .WithMany("Trailer")
                         .HasForeignKey("TrailerOilCoolerId");
@@ -14565,6 +15202,10 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("FrameExtension");
 
                     b.Navigation("HandBrake");
+
+                    b.Navigation("MOT");
+
+                    b.Navigation("Shipping");
 
                     b.Navigation("TrailerOilCooler");
 
@@ -14918,6 +15559,13 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Crane");
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", b =>
+                {
+                    b.Navigation("Crane");
+
+                    b.Navigation("Trailer");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
                 {
                     b.Navigation("Crane");
@@ -14969,6 +15617,11 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.HandBrake", b =>
+                {
+                    b.Navigation("Trailer");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", b =>
                 {
                     b.Navigation("Trailer");
                 });
