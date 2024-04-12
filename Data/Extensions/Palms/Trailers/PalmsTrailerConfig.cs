@@ -678,7 +678,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1
-                },
+                }
             );
         }
     }

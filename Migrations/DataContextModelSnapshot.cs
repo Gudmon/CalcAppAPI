@@ -721,26 +721,6 @@ namespace CalcAppAPI.Migrations
                         {
                             BrakeId = 32,
                             TrailerId = 21
-                        },
-                        new
-                        {
-                            BrakeId = 31,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            BrakeId = 32,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            BrakeId = 31,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            BrakeId = 32,
-                            TrailerId = 23
                         });
                 });
 
@@ -8488,30 +8468,6 @@ namespace CalcAppAPI.Migrations
                             BeamType = "Unibody (Forwarder)",
                             BunkAdapterId = 2,
                             BunkExtensionId = 2,
-                            CurbWeight = "4700",
-                            Description = "Ismerje meg a PALMS mechanikus meghajtású, forwarder típusú pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.",
-                            DrawbarControlCylinders = "2",
-                            Frame = "unibody",
-                            FrameExtensionLength = "1.085",
-                            GrossWeight = "18000",
-                            LoadingAreaCross = "3.2",
-                            LoadingAreaLength = "4235",
-                            MOTId = 1,
-                            MaxCraneSize = "120",
-                            Name = "PALMS MWD 3.2L",
-                            Price = "",
-                            ShippingId = 1,
-                            StandardWheelSize = "600/50x22.5",
-                            TotalLength = "6430",
-                            WidthWithStandardWheels = "2470"
-                        },
-                        new
-                        {
-                            Id = 22,
-                            BBoxId = 4,
-                            BeamType = "Unibody (Forwarder)",
-                            BunkAdapterId = 2,
-                            BunkExtensionId = 2,
                             CurbWeight = "4920",
                             Description = "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.",
                             DrawbarControlCylinders = "2",
@@ -8523,31 +8479,6 @@ namespace CalcAppAPI.Migrations
                             MOTId = 1,
                             MaxCraneSize = "120",
                             Name = "PALMS HMWD 3.2",
-                            Price = "",
-                            ShippingId = 1,
-                            StandardWheelSize = "600/50x22.5",
-                            TotalLength = "6430",
-                            TrailerOilCoolerId = 2,
-                            WidthWithStandardWheels = "2470"
-                        },
-                        new
-                        {
-                            Id = 23,
-                            BBoxId = 4,
-                            BeamType = "Unibody (Forwarder)",
-                            BunkAdapterId = 2,
-                            BunkExtensionId = 2,
-                            CurbWeight = "4920",
-                            Description = "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.",
-                            DrawbarControlCylinders = "2",
-                            Frame = "unibody",
-                            FrameExtensionLength = "1.085",
-                            GrossWeight = "18000",
-                            LoadingAreaCross = "3.2",
-                            LoadingAreaLength = "4185",
-                            MOTId = 1,
-                            MaxCraneSize = "120",
-                            Name = "PALMS HMWD 3.2L",
                             Price = "",
                             ShippingId = 1,
                             StandardWheelSize = "600/50x22.5",
@@ -12194,66 +12125,6 @@ namespace CalcAppAPI.Migrations
                         {
                             DrawbarId = 13,
                             TrailerId = 21
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 10,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 11,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 12,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 13,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            DrawbarId = 10,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            DrawbarId = 11,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            DrawbarId = 12,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            DrawbarId = 13,
-                            TrailerId = 23
                         });
                 });
 
@@ -12870,12 +12741,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             OilPumpId = 8,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            OilPumpId = 8,
-                            TrailerId = 23
+                            TrailerId = 21
                         });
                 });
 
@@ -13257,12 +13123,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             OilTankId = 7,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            OilTankId = 7,
-                            TrailerId = 23
+                            TrailerId = 21
                         });
                 });
 
@@ -14117,22 +13978,22 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            StanchionId = 111,
+                            StanchionId = 115,
                             TrailerId = 21
                         },
                         new
                         {
-                            StanchionId = 112,
+                            StanchionId = 116,
                             TrailerId = 21
                         },
                         new
                         {
-                            StanchionId = 113,
+                            StanchionId = 117,
                             TrailerId = 21
                         },
                         new
                         {
-                            StanchionId = 114,
+                            StanchionId = 118,
                             TrailerId = 21
                         });
                 });
@@ -14653,26 +14514,6 @@ namespace CalcAppAPI.Migrations
                         {
                             LightId = 5,
                             TrailerId = 21
-                        },
-                        new
-                        {
-                            LightId = 4,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            LightId = 5,
-                            TrailerId = 22
-                        },
-                        new
-                        {
-                            LightId = 4,
-                            TrailerId = 23
-                        },
-                        new
-                        {
-                            LightId = 5,
-                            TrailerId = 23
                         });
                 });
 
@@ -15124,26 +14965,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 21,
-                            TyreId = 14
-                        },
-                        new
-                        {
-                            TrailerId = 22,
-                            TyreId = 13
-                        },
-                        new
-                        {
-                            TrailerId = 22,
-                            TyreId = 14
-                        },
-                        new
-                        {
-                            TrailerId = 23,
-                            TyreId = 13
-                        },
-                        new
-                        {
-                            TrailerId = 23,
                             TyreId = 14
                         });
                 });
