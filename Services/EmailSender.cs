@@ -21,8 +21,8 @@ namespace CalcAppAPI.Services
         public async Task SendEmailAsync(Email email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            string toMail = "gudmonmarcellwork@gmail.com";
-            //string toMail = "info@clear-globe.com";
+            //string toMail = "gudmonmarcellwork@gmail.com";
+            string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
 
