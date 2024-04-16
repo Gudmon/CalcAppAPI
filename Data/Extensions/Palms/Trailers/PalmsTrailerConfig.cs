@@ -38,6 +38,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -70,6 +71,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -102,6 +104,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -134,6 +137,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -166,6 +170,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -198,6 +203,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -230,6 +236,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -262,6 +269,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -294,6 +302,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -326,6 +335,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -358,6 +368,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = null,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -390,6 +401,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -422,6 +434,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -454,6 +467,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -486,6 +500,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -518,6 +533,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -550,6 +566,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -582,6 +599,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -614,6 +632,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     FrameExtensionId = 1,
                     ShippingId = 1,
                     MOTId = 1,
+                    StanchionExtensionId = null,
                 },
 
                 new Trailer
@@ -645,7 +664,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = 2,
                     FrameExtensionId = null,
                     ShippingId = 1,
-                    MOTId = 1
+                    MOTId = 1,
+                    StanchionExtensionId = 1,
                 },
 
                 new Trailer
@@ -677,7 +697,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = 2,
                     FrameExtensionId = null,
                     ShippingId = 1,
-                    MOTId = 1
+                    MOTId = 1,
+                    StanchionExtensionId = 1,
                 }
             );
         }

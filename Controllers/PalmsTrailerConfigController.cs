@@ -231,5 +231,14 @@ namespace CalcAppAPI.Controllers
 
             return Ok(MOT);
         }
+
+        [HttpGet("trailers/{id}/stanchionextension")]
+        public async Task<ActionResult<StanchionExtension>> GetStanchionExtension(int id)
+        {
+            var stanchionExtension = await _dbContext.StanchionExtension
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(stanchionExtension);
+        }
     }
 }

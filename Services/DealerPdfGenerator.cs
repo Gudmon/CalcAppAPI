@@ -37,6 +37,7 @@ namespace CalcAppAPI.Services
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },
+            { "StanchionExtension", "Rakonca hosszabbítás" },
 
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },

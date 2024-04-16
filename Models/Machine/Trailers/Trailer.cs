@@ -59,6 +59,8 @@ namespace CalcAppAPI.Models
         public int? ShippingId { get; set; }
         public MOT? MOT { get; set; }
         public int? MOTId { get; set; }
+        public StanchionExtension? StanchionExtension { get; set; }
+        public int? StanchionExtensionId { get; set; }
         public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }
