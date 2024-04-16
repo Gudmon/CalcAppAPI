@@ -32,13 +32,13 @@ namespace CalcAppAPI.Services
             { "BunkAdapter", "Bunk adapter" },
             { "BunkExtension", "Bunk kiterjesztés" },
             { "FrameExtension", "Raktér hosszabbítás" },
+            { "StanchionExtension", "Rakonca hosszabbítás" },
             { "TrailerLight", "Pótkocsi világítás" },
             { "SupportLeg", "Kitámasztó láb" },
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },
-            { "StanchionExtension", "Rakonca hosszabbítás" },
-
+            
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },
             { "FrameType", "Talpaló" },
