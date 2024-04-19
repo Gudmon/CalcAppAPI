@@ -4,6 +4,7 @@ namespace CalcAppAPI.Models.Pdf
 {
     public class Pdf
     {
+        public string TotalPrice { get; set; }
         //TRAILER
         public string? TrailerName { get; set; }
         public PdfItem? Stanchion { get; set; }

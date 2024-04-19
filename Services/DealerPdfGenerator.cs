@@ -11,7 +11,6 @@ namespace CalcAppAPI.Services
     {
         private string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
         private const string _containerName = "pdf";
-        private decimal totalPrice = 0;
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
         {
@@ -150,14 +149,12 @@ namespace CalcAppAPI.Services
                         if (propertyValue is PdfItem pdfItem)
                         {
                             MapAndAddRow(table, property.Name, pdfItem, pdfModel);
-                            totalPrice += decimal.Parse(pdfItem.Price);
                         }
                         else if (propertyValue is IEnumerable<PdfItem> pdfItemList)
                         {
                             foreach (var item in pdfItemList)
                             {
                                 MapAndAddRow(table, property.Name, item, pdfModel);
-                                totalPrice += decimal.Parse(item.Price);
                             }
                         }
                     }
@@ -171,7 +168,7 @@ namespace CalcAppAPI.Services
                     row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
                     row.RelativeItem(4).PaddingBottom(10).Text("");
                     row.RelativeItem(4).PaddingBottom(10).Text("");
-                    row.RelativeItem(2).PaddingBottom(10).Text(totalPrice.ToString() + " €").FontFamily("Cambria").Bold().FontSize(14);
+                    row.RelativeItem(2).PaddingBottom(10).Text(pdfModel.TotalPrice + " €").FontFamily("Cambria").Bold().FontSize(14);
                 });
             });
         }
