@@ -23,11 +23,14 @@ builder.Services.AddScoped<IEmailSender, EmailSender>();
 var kvUri = "https://calc-app-keyvault.vault.azure.net/";
 
 var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
-var secret = await client.GetSecretAsync("DBConnection");
+var dbSecret = await client.GetSecretAsync("DBConnection");
+var blobSecret = await client.GetSecretAsync("BlobConnection");
+
+MyOptions.BlobConnection = blobSecret.Value.Value.Trim('"');
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
-    options.UseSqlServer(secret.Value.Value.Trim('"'));
+    options.UseSqlServer(dbSecret.Value.Value.Trim('"'));
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -62,4 +65,7 @@ app.MapControllers();
 
 app.Run();
 
-
+public static class MyOptions
+{
+    public static string BlobConnection { get; set; }
+}

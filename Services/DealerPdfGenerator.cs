@@ -1,6 +1,5 @@
 ﻿using Azure.Storage.Blobs;
 using CalcAppAPI.Models.Pdf;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
@@ -9,7 +8,7 @@ namespace CalcAppAPI.Services
 {
     public class DealerPdfGenerator : IDealerPdfGenerator
     {
-        private string _connectionString = "DefaultEndpointsProtocol=https;AccountName=calcappblob;AccountKey=vjEzWkM+hwqSzYInXK3kq60SsFpdgVYV/9dwRsAybnCLDYV81grAQIYGrwBXq6PBA4ZDStAmJF46+AStINh/ag==;EndpointSuffix=core.windows.net";
+        private string _connectionString = MyOptions.BlobConnection;
         private const string _containerName = "pdf";
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
