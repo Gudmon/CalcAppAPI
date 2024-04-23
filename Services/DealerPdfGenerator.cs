@@ -119,7 +119,7 @@ namespace CalcAppAPI.Services
                     row.RelativeItem(3).PaddingBottom(10).Text(blobName).FontFamily("Cambria").FontSize(20).Bold();
                     row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.TrailerName);
                     row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.Crane?.Name);
-                    row.RelativeItem(2).PaddingBottom(10).Text(DateTime.Now.ToLocalTime().ToString("yyyy-MM-dd HH:mm"));
+                    row.RelativeItem(2).PaddingBottom(10).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
                 });
                 
 
