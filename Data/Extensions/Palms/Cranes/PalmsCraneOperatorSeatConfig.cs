@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new OperatorSeat
               {
                   Id = 1,
-                  Name = "Kezelő ülés a függőleges gém tetejére, csak A12-höz, nem kompatibilis a csörlővel",
+                  Name = "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel",
                   Code = "HSB",
                   Price = "1890"
               }
