@@ -877,6 +877,28 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                   Name = "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával",
                   Code = "A5FHEx",
                   Price = "61305",
+              },
+
+              new Stanchion
+              {
+                  Id = 123,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "2490",
+              },
+              new Stanchion
+              {
+                  Id = 124,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "2595",
+              },
+              new Stanchion
+              {
+                  Id = 125,
+                  Name = "Pótkocsi 5 pár rakoncával",
+                  Code = "A5",
+                  Price = "2700",
               }
               );
         }

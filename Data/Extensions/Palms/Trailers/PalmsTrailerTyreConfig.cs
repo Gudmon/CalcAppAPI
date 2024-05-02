@@ -105,6 +105,13 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Name = "710/40-22,5 RF-felni, 10 lyukas, Nokian",
                    Code = "WH9.10",
                    Price = "11150",
+               },
+               new Tyre
+               {
+                   Id = 15,
+                   Name = "22/11-8",
+                   Code = "WH1.4",
+                   Price = "465",
                }
                );
         }

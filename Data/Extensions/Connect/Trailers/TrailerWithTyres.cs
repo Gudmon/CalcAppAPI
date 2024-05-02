@@ -141,7 +141,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
 
                        //PALMS HMWD3.2
                        new { TrailerId = 21, TyreId = 13 },
-                       new { TrailerId = 21, TyreId = 14 }
+                       new { TrailerId = 21, TyreId = 14 },
+
+                       //PALMS 2D
+                       new { TrailerId = 22, TyreId = 15 }
                    )
                );
         }

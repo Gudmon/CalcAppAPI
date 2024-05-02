@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240430135052_palms 2d")]
+    partial class palms2d
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1341,33 +1344,6 @@ namespace CalcAppAPI.Migrations
                             ValveBlockId = 1,
                             WoodControlId = 1,
                             WorkingPressure = "240"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            BrutLiftingTorque190Bar = "11,5",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "-",
-                            CraneWeight = "185",
-                            Description = "",
-                            LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "-",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "-",
-                            LiftAtFullReach240Bar = "-",
-                            MaxReach = "4.2",
-                            Name = "PALMS 1.42",
-                            PillarSlewingAngle = "330",
-                            Price = "3025",
-                            RecommendedOilFlow = "-",
-                            RotatorMaximumLoad = "10",
-                            Series = "1",
-                            ShippingId = 2,
-                            SlewingCylinder = "2",
-                            SlewingTorque = "2.1",
-                            TelescopeLength = "1,2",
-                            WorkingPressure = "180"
                         });
                 });
 
@@ -4710,14 +4686,6 @@ namespace CalcAppAPI.Migrations
                             Mass = "772",
                             Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
                             Price = "7300"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Code = "B1",
-                            Mass = "50",
-                            Name = "FD talpaló",
-                            Price = "695"
                         });
                 });
 
@@ -4870,13 +4838,6 @@ namespace CalcAppAPI.Migrations
                             Mass = "195",
                             Name = "Aprítékos kiegészítő C3-hoz",
                             Price = "910"
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Code = "C009",
-                            Name = "Palms 0,09 kanál",
-                            Price = "620"
                         });
                 });
 
@@ -5151,13 +5112,6 @@ namespace CalcAppAPI.Migrations
                             Code = "R90",
                             Name = "100 kN-os rotátor FL Indexator T10 (talpas)",
                             Price = "1880"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Code = "R10",
-                            Name = "Rotátor 1000 kN (csapos - Finrotor)",
-                            Price = "245"
                         });
                 });
 
@@ -8667,7 +8621,7 @@ namespace CalcAppAPI.Migrations
                             CurbWeight = "260",
                             Description = "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.",
                             DrawbarControlCylinders = "1",
-                            Frame = "2x4 mm C-alváz",
+                            Frame = "2x4 mm C-beam",
                             FrameExtensionLength = "-",
                             GrossWeight = "1500",
                             HydroPackId = 1,
@@ -8680,6 +8634,7 @@ namespace CalcAppAPI.Migrations
                             ShippingId = 1,
                             StandardWheelSize = "22/11-8",
                             TotalLength = "3865",
+                            TrailerOilCoolerId = 1,
                             WidthWithStandardWheels = "1285"
                         });
                 });
@@ -9158,11 +9113,6 @@ namespace CalcAppAPI.Migrations
                         {
                             ControlBlockId = 14,
                             CraneId = 12
-                        },
-                        new
-                        {
-                            ControlBlockId = 2,
-                            CraneId = 13
                         });
                 });
 
@@ -9587,11 +9537,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             FrameTypeId = 10
-                        },
-                        new
-                        {
-                            CraneId = 13,
-                            FrameTypeId = 11
                         });
                 });
 
@@ -10099,11 +10044,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             GrappleId = 14
-                        },
-                        new
-                        {
-                            CraneId = 13,
-                            GrappleId = 15
                         });
                 });
 
@@ -10438,11 +10378,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             RotatorId = 7
-                        },
-                        new
-                        {
-                            CraneId = 13,
-                            RotatorId = 8
                         });
                 });
 
@@ -11362,11 +11297,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             TrailerId = 21
-                        },
-                        new
-                        {
-                            CraneId = 13,
-                            TrailerId = 22
                         });
                 });
 

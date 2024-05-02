@@ -74,7 +74,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Trailers
 
                         //PALMS 15UAWD
                         new { TrailerId = 19, PropulsionId = 7 },
-                        new { TrailerId = 19, PropulsionId = 8 }
+                        new { TrailerId = 19, PropulsionId = 8 },
+
+                        //PALMS 2D
+                        new { TrailerId = 22, PropulsionId = 9 }
                     )
                 );
         }

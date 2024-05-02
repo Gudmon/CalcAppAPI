@@ -61,6 +61,8 @@ namespace CalcAppAPI.Models
         public int? MOTId { get; set; }
         public StanchionExtension? StanchionExtension { get; set; }
         public int? StanchionExtensionId { get; set; }
+        public HydroPack? HydroPack { get; set; }
+        public int? HydroPackId { get; set; }
         public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }

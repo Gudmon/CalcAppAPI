@@ -60,6 +60,7 @@ namespace CalcAppAPI.Data
         public DbSet<Shipping> Shipping { get; set; }
         public DbSet<MOT> MOT { get; set; }
         public DbSet<StanchionExtension> StanchionExtension { get; set; }
+        public DbSet<HydroPack> HydroPack { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
 
@@ -89,6 +90,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsBunkExtensions();
             modelBuilder.ConfigureMultiplePalmsFrameExtensions();
             modelBuilder.ConfigureMultiplePalmsStanchionExtensions();
+            modelBuilder.ConfigureMultiplePalmsHydroPacks();
             modelBuilder.ConfigureMultiplePalmsMOTs();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
@@ -170,9 +172,6 @@ namespace CalcAppAPI.Data
                     CraneId = 3,
                     SelectedFrameTypeId = 2
                 },
-
-
-
 
                 new TrailerCraneConfiguration
                 {
@@ -340,11 +339,18 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.MOTId)
                 .IsRequired(false);
 
-            //MOT
+            //STANCHION EXTENSION
             modelBuilder.Entity<StanchionExtension>()
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.StanchionExtension)
                 .HasForeignKey(o => o.StanchionExtensionId)
+                .IsRequired(false);
+
+            //HYDROPACK
+            modelBuilder.Entity<HydroPack>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.HydroPack)
+                .HasForeignKey(o => o.HydroPackId)
                 .IsRequired(false);
 
             modelBuilder.Entity<ControlBlock>()

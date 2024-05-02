@@ -81,14 +81,22 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Price = "4830",
                    Mass = "440"
                },
-                new FrameType
-                {
-                    Id = 10,
-                    Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
-                    Code = "B11",
-                    Price = "7300",
-                    Mass = "772"
-                }
+               new FrameType
+               {
+                   Id = 10,
+                   Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
+                   Code = "B11",
+                   Price = "7300",
+                   Mass = "772"
+               },
+               new FrameType
+               {
+                   Id = 11,
+                   Name = "FD talpaló",
+                   Code = "B1",
+                   Price = "695",
+                   Mass = "50"
+               }
                );
 
         }

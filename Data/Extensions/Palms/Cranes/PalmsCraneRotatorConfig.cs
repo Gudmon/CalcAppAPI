@@ -56,7 +56,15 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "100 kN-os rotátor FL Indexator T10 (talpas)",
                   Code = "R90",
                   Price = "1880",
-              });
+              },
+              new Rotator
+              {
+                  Id = 8,
+                  Name = "Rotátor 1000 kN (csapos - Finrotor)",
+                  Code = "R10",
+                  Price = "245",
+              }
+              );
         }
     }
 }

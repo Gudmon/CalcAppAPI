@@ -240,5 +240,14 @@ namespace CalcAppAPI.Controllers
 
             return Ok(stanchionExtension);
         }
+
+        [HttpGet("trailers/{id}/hydropack")]
+        public async Task<ActionResult<Shipping>> GetHydroPack(int id)
+        {
+            var hydroPack = await _dbContext.HydroPack
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(hydroPack);
+        }
     }
 }

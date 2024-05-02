@@ -18,6 +18,7 @@ namespace CalcAppAPI.Services
             { "Propulsion", "Hajtás" },
             { "Drawbar", "Vonórúd" },
             { "Platform", "Kezelő platform" },
+            { "HydroPack", "Hydropack" },
             { "OilPump", "Olajpumpa" },
             { "OilTank", "Olajtank" },
             { "TrailerOilCooler", "Pótkocsi olajhűtő" },

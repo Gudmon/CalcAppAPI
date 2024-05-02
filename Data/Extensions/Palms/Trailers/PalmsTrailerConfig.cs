@@ -39,6 +39,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -72,6 +73,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -105,6 +107,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -138,6 +141,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -171,6 +175,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -204,6 +209,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -237,6 +243,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -270,6 +277,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -303,6 +311,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -336,6 +345,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -369,6 +379,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -402,6 +413,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -435,6 +447,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -468,6 +481,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -501,6 +515,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -534,6 +549,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -567,6 +583,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -600,6 +617,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -633,6 +651,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -666,6 +685,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
+                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -699,6 +719,41 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
+                    HydroPackId = null,
+                },
+
+                new Trailer
+                {
+                    Id = 22,
+                    Name = "PALMS 2D",
+                    Description = "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.",
+                    Price = "",
+                    LoadingAreaCross = "0,6",
+                    LoadingAreaLength = "2450",
+                    FrameExtensionLength = "-",
+                    GrossWeight = "1500",
+                    CurbWeight = "260",
+                    TotalLength = "3865",
+                    WidthWithStandardWheels = "1285",
+                    StandardWheelSize = "22/11-8",
+                    MaxCraneSize = "12",
+                    DrawbarControlCylinders = "1",
+                    BeamType = Static.BeamTypes.Double,
+                    Frame = "2x4 mm C-alváz",
+                    TrailerOilCoolerId = null,
+                    BolsterLockId = null,
+                    BBoxId = 5,
+                    WoodSorterId = null,
+                    HandBrakeId = null,
+                    ChainsawHolderId = 1,
+                    UnderrunProtectionId = null,
+                    BunkAdapterId = null,
+                    BunkExtensionId = null,
+                    FrameExtensionId = null,
+                    ShippingId = 1,
+                    MOTId = 1,
+                    StanchionExtensionId = null,
+                    HydroPackId = 1,
                 }
             );
         }

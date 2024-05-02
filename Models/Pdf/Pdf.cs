@@ -12,6 +12,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? Propulsion { get; set; }
         public PdfItem? Drawbar { get; set; }
         public PdfItem? Platform { get; set; }
+        public PdfItem? HydroPack { get; set; }
         public PdfItem? OilPump { get; set; }
         public PdfItem? OilTank { get; set; }
         public PdfItem? TrailerOilCooler { get; set; }

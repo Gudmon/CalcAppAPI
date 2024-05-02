@@ -22,7 +22,18 @@ namespace CalcAppAPI.Controllers
         [HttpGet("trailers")]
         public async Task<ActionResult<IEnumerable<PalmsTrailerOverview>>> GetAllTrailers()
         {
-            var trailers = await _dbContext.Trailer
+            var desiredOrder = new List<string> {
+                "PALMS 6S", "PALMS 8SX", "PALMS 8D", "PALMS 8DWD",
+                "PALMS 9SC", "PALMS 10D", "PALMS 10DWD", "PALMS 12D", "PALMS 12DWD",
+                "PALMS 14D", "PALMS 14DWD", "PALMS 10U", "PALMS 10UWD", "PALMS 12U",
+                "PALMS 12UWD", "PALMS 12UAWD", "PALMS 15U", "PALMS 15UWD", "PALMS 15UAWD",
+                "PALMS MWD 3.2", "PALMS HMWD 3.2"
+            };
+
+            var allTrailers = await _dbContext.Trailer.ToListAsync();
+
+            var orderedTrailers = allTrailers
+                .OrderBy(t => desiredOrder.IndexOf(t.Name))
                 .Select(t => new PalmsTrailerOverview
                 {
                     Id = t.Id,
@@ -33,15 +44,24 @@ namespace CalcAppAPI.Controllers
                     MaxCraneSize = t.MaxCraneSize,
                     DrawbarControlCylinders = t.DrawbarControlCylinders,
                     BeamType = t.BeamType
-                }).ToListAsync();
+                });
 
-            return Ok(trailers);
+            return Ok(orderedTrailers);
         }
 
         [HttpGet("cranes")]
         public async Task<ActionResult<IEnumerable<PalmsCraneOverview>>> GetAllCranes()
         {
-            var cranes = await _dbContext.Crane
+            var desiredOrder = new List<string> {
+                "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
+                "PALMS 3.67", "PALMS 4.71", "PALMS 5.72", "PALMS 5.85", "PALMS 5.87Z",
+                "PALMS 7.75", "PALMS 7.86", "PALMS 7.94", "PALMS X100"
+            };
+
+            var allCranes = await _dbContext.Crane.ToListAsync();
+
+            var orderedCranes = allCranes
+                .OrderBy(t => desiredOrder.IndexOf(t.Name))
                 .Select(t => new PalmsCraneOverview
                 {
                     Id = t.Id,
@@ -52,9 +72,9 @@ namespace CalcAppAPI.Controllers
                     TelescopeLength = t.TelescopeLength,
                     SlewingCylinder = t.SlewingCylinder,
                     SlewingTorque = t.SlewingTorque
-                }).ToListAsync();
+                });
 
-            return Ok(cranes);
+            return Ok(orderedCranes);
         }
 
         [HttpGet("trailers/{id}")]

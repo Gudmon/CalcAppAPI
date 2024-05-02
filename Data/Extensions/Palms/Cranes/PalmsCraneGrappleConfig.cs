@@ -133,6 +133,15 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Price = "910",
                   Area = null,
                   Mass = "195"
+              },
+              new Grapple
+              {
+                  Id = 15,
+                  Name = "Palms 0,09 kanál",
+                  Code = "C009",
+                  Price = "620",
+                  Area = null,
+                  Mass = null
               }
               );
         }

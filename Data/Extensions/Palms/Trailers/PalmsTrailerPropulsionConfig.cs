@@ -73,6 +73,15 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Code = "45WDB.1",
                    Price = "1135",
                    Description = ""
+               },
+
+               new Propulsion
+               {
+                   Id = 9,
+                   Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
+                   Code = "RWD",
+                   Price = "2040",
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség."
                }
                );
         }

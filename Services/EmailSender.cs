@@ -32,9 +32,11 @@ namespace CalcAppAPI.Services
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
             emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
-            emailToSend.Subject = email.Subject + " - " + email.FromEmail;
+            emailToSend.Subject = email.Subject + " - " + email.FromEmail + " - " + email.Name;
 
-            string formattedBody = $"{email.Body}<br/><br/>Név: {email.Name}";
+            string formattedBody = $"{email.Body}" +
+                $"<br/><br/>Név: {email.Name}" +
+                $"<br/><br/>Email: {email.FromEmail}";
 
             var multipart = new Multipart("mixed");
             multipart.Add(new TextPart(MimeKit.Text.TextFormat.Html)
