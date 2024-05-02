@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new Cover
               {
                   Id = 1,
-                  Name = "Védőhuzat bőrből A2-A7-hez, A11-hez, A12-höz és A14-hez",
+                  Name = "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz",
                   Code = "JKK",
                   Price = "50"
               }
