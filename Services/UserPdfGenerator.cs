@@ -60,7 +60,7 @@ namespace CalcAppAPI.Services
             { "BoomGuard", "Főgém védő" },
             { "Cover", "Védőhuzat" },
             { "WoodControl", "Fás kiegészítő" },
-            { "Linkage", "3 pontos csatlakozó adapter" },
+            { "Linkage", "Csatlakozó adapter" },
             { "CraneShipping", "Szállítás" },
         };
 
