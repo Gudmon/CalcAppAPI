@@ -68,6 +68,7 @@ namespace CalcAppAPI.Controllers
                     Id = t.Id,
                     Name = t.Name,
                     MaxReach = t.MaxReach,
+                    MaxReachWithGrabOpen = t.MaxReachWithGrabOpen,
                     NetLiftingTorque = t.NetLiftingTorque,
                     LiftCapacityAtFourMeters = t.LiftCapacityAtFourMeters,
                 });
