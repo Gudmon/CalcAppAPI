@@ -1,5 +1,7 @@
-﻿using CalcAppAPI.Data.Extensions.Connect.Palms.Cranes;
+﻿using CalcAppAPI.Data.Extensions.Connect.Krpan;
+using CalcAppAPI.Data.Extensions.Connect.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Connect.Palms.Trailers;
+using CalcAppAPI.Data.Extensions.Krpan.Cranes;
 using CalcAppAPI.Data.Extensions.Krpan.Trailers;
 using CalcAppAPI.Data.Extensions.Palms.Common;
 using CalcAppAPI.Data.Extensions.Palms.Cranes;
@@ -7,6 +9,7 @@ using CalcAppAPI.Data.Extensions.Palms.Trailers;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
+using CalcAppAPI.Models.Machine.Krpan.Cranes;
 using CalcAppAPI.Models.Machine.Krpan.Trailers;
 using CalcAppAPI.Models.Machine.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Palms.Trailers;
@@ -71,6 +74,7 @@ namespace CalcAppAPI.Data
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
+        public DbSet<KrpanCrane> KrpanCrane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {         
@@ -489,6 +493,8 @@ namespace CalcAppAPI.Data
 
             // KRPAN
             modelBuilder.ConfigureMultipleKrpanTrailers();
+            modelBuilder.ConfigureMultipleKrpanCranes();
+            modelBuilder.ConnectKrpanTrailersWithCranes();
 
             base.OnModelCreating(modelBuilder);
         }

@@ -21,7 +21,7 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("trailers")]
-        public async Task<ActionResult<IEnumerable<TrailerOverview>>> GetAllTrailers()
+        public async Task<ActionResult<IEnumerable<PalmsTrailerOverview>>> GetAllTrailers()
         {
             var desiredOrder = new List<string> {
                 "PALMS 6S", "PALMS 8SX", "PALMS 8D", "PALMS 8DWD",
@@ -35,7 +35,7 @@ namespace CalcAppAPI.Controllers
 
             var orderedTrailers = allTrailers
                 .OrderBy(t => desiredOrder.IndexOf(t.Name))
-                .Select(t => new TrailerOverview
+                .Select(t => new PalmsTrailerOverview
                 {
                     Id = t.Id,
                     Name = t.Name,
@@ -51,7 +51,7 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("cranes")]
-        public async Task<ActionResult<IEnumerable<CraneOverview>>> GetAllCranes()
+        public async Task<ActionResult<IEnumerable<PalmsCraneOverview>>> GetAllCranes()
         {
             var desiredOrder = new List<string> {
                 "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
@@ -63,7 +63,7 @@ namespace CalcAppAPI.Controllers
 
             var orderedCranes = allCranes
                 .OrderBy(t => desiredOrder.IndexOf(t.Name))
-                .Select(t => new CraneOverview
+                .Select(t => new PalmsCraneOverview
                 {
                     Id = t.Id,
                     Name = t.Name,

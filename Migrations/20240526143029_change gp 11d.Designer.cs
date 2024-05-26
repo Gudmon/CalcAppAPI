@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240526143029_change gp 11d")]
+    partial class changegp11d
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -7307,10 +7310,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaxReachWithGrabOpen")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7363,118 +7362,17 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "600",
-                            MaxReach = "6.6",
-                            MaxReachWithGrabOpen = "7.2",
+                            MaxReach = "6,6 / 7,2",
                             Name = "GD 6,6 K",
                             NetLiftingTorque = "40",
                             OilQuantityInTank = "70",
-                            Price = "13715",
+                            Price = "13510",
                             SlewCylinders = "4",
                             SlewTorque = "16",
                             SlewingAngle = "375",
                             SystemPressure = "220",
                             TelescopicStages = "1",
                             Weight = "900"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BrutLiftingTorque = "80",
-                            Description = "",
-                            LiftCapacityAtFourMeters = "1860",
-                            LiftCapacityAtMaxReach = "850",
-                            MaxReach = "7.4",
-                            MaxReachWithGrabOpen = "8.0",
-                            Name = "GD 7,4 K",
-                            NetLiftingTorque = "63",
-                            OilQuantityInTank = "100",
-                            Price = "24475",
-                            SlewCylinders = "4",
-                            SlewTorque = "22",
-                            SlewingAngle = "380",
-                            SystemPressure = "230",
-                            TelescopicStages = "1",
-                            Weight = "1516"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BrutLiftingTorque = "49",
-                            Description = "",
-                            LiftCapacityAtFourMeters = "1020",
-                            LiftCapacityAtMaxReach = "500",
-                            MaxReach = "7.6",
-                            MaxReachWithGrabOpen = "8.2",
-                            Name = "GD 7,6 K",
-                            NetLiftingTorque = "39",
-                            OilQuantityInTank = "70",
-                            Price = "15335",
-                            SlewCylinders = "4",
-                            SlewTorque = "16",
-                            SlewingAngle = "375",
-                            SystemPressure = "220",
-                            TelescopicStages = "1",
-                            Weight = "930"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BrutLiftingTorque = "82",
-                            Description = "",
-                            LiftCapacityAtFourMeters = "1670",
-                            LiftCapacityAtMaxReach = "680",
-                            MaxReach = "8.6",
-                            MaxReachWithGrabOpen = "9.2",
-                            Name = "GD 8,6 K",
-                            NetLiftingTorque = "58",
-                            OilQuantityInTank = "100",
-                            Price = "27150",
-                            SlewCylinders = "4",
-                            SlewTorque = "19",
-                            SlewingAngle = "380",
-                            SystemPressure = "230",
-                            TelescopicStages = "2",
-                            Weight = "1706"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BrutLiftingTorque = "82",
-                            Description = "",
-                            LiftCapacityAtFourMeters = "1460",
-                            LiftCapacityAtMaxReach = "894",
-                            MaxReach = "7.2",
-                            MaxReachWithGrabOpen = "7.8",
-                            Name = "GD 7,2 Z",
-                            NetLiftingTorque = "62",
-                            OilQuantityInTank = "100",
-                            Price = "26000",
-                            SlewCylinders = "4",
-                            SlewTorque = "22",
-                            SlewingAngle = "370",
-                            SystemPressure = "230",
-                            TelescopicStages = "1",
-                            Weight = "1530"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BrutLiftingTorque = "84",
-                            Description = "",
-                            LiftCapacityAtFourMeters = "1427",
-                            LiftCapacityAtMaxReach = "760",
-                            MaxReach = "8.4",
-                            MaxReachWithGrabOpen = "9.0",
-                            Name = "GD 8,4 Z",
-                            NetLiftingTorque = "60",
-                            OilQuantityInTank = "100",
-                            Price = "29200",
-                            SlewCylinders = "4",
-                            SlewTorque = "22",
-                            SlewingAngle = "370",
-                            SystemPressure = "230",
-                            TelescopicStages = "2",
-                            Weight = "1855"
                         });
                 });
 
@@ -7510,10 +7408,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LoadingLengthWithExtension")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7523,10 +7417,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TotalLength")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TotalLengthWithExtension")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -7550,134 +7440,13 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            LoadCapacity = "8000",
-                            LoadingLength = "3582",
-                            LoadingLengthWithExtension = "4477",
-                            Name = "GP 8 DF",
-                            Price = "10300",
-                            TotalLength = "5919",
-                            TotalLengthWithExtension = "6814",
-                            TotalWidth = "2067",
-                            Weight = "1690"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CentralBeams = "2/180×100x6",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "9000",
-                            LoadingLength = "3582",
-                            LoadingLengthWithExtension = "4477",
-                            Name = "GP 9 DF",
-                            Price = "10865",
-                            TotalLength = "5919",
-                            TotalLengthWithExtension = "6814",
-                            TotalWidth = "2067",
-                            Weight = "1690"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CentralBeams = "2/180×100x6",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "10000",
-                            LoadingLength = "3582",
-                            LoadingLengthWithExtension = "4477",
-                            Name = "GP 10 DF",
-                            Price = "11430",
-                            TotalLength = "5919",
-                            TotalLengthWithExtension = "6814",
-                            TotalWidth = "2067",
-                            Weight = "1690"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CentralBeams = "2/180×100x6",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
                             LoadCapacity = "11000",
-                            LoadingLength = "3707",
-                            LoadingLengthWithExtension = "4487",
+                            LoadingLength = "3707 / (4487)",
                             Name = "GP 11 D",
                             Price = "13510",
-                            TotalLength = "5944",
-                            TotalLengthWithExtension = "6724",
+                            TotalLength = "5944 / (6724)",
                             TotalWidth = "2152",
                             Weight = "1734"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CentralBeams = "2/180×100x6",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "12000",
-                            LoadingLength = "3975",
-                            LoadingLengthWithExtension = "4755",
-                            Name = "GP 12 DF",
-                            Price = "13060",
-                            TotalLength = "6209",
-                            TotalLengthWithExtension = "7100",
-                            TotalWidth = "2122",
-                            Weight = "2100"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CentralBeams = "2/200×100x6",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "13000",
-                            LoadingLength = "3975",
-                            LoadingLengthWithExtension = "4755",
-                            Name = "GP 13 D",
-                            Price = "15310",
-                            TotalLength = "6334",
-                            TotalLengthWithExtension = "7144",
-                            TotalWidth = "2200",
-                            Weight = "2144"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CentralBeams = "2/200×100x8",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "14000",
-                            LoadingLength = "4325",
-                            LoadingLengthWithExtension = "5105",
-                            Name = "GP 14 DF",
-                            Price = "14915",
-                            TotalLength = "6559",
-                            TotalLengthWithExtension = "7545",
-                            TotalWidth = "2222",
-                            Weight = "2300"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CentralBeams = "2/200×100x8",
-                            Description = "",
-                            DrawbarAngle = "40",
-                            FrameSteeringCylinders = "2",
-                            LoadCapacity = "14800",
-                            LoadingLength = "4325",
-                            LoadingLengthWithExtension = "5105",
-                            Name = "GP 15 D",
-                            Price = "16960",
-                            TotalLength = "6686",
-                            TotalLengthWithExtension = "6686",
-                            TotalWidth = "2318",
-                            Weight = "2352"
                         });
                 });
 
@@ -12775,126 +12544,6 @@ namespace CalcAppAPI.Migrations
                         {
                             KrpanCraneId = 1,
                             KrpanTrailerId = 1
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 1
-                        },
-                        new
-                        {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 2
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 2
-                        },
-                        new
-                        {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 3
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 3
-                        },
-                        new
-                        {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 4
-                        },
-                        new
-                        {
-                            KrpanCraneId = 2,
-                            KrpanTrailerId = 4
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 4
-                        },
-                        new
-                        {
-                            KrpanCraneId = 2,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
-                            KrpanCraneId = 4,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
-                            KrpanCraneId = 5,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
-                            KrpanCraneId = 6,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
-                            KrpanCraneId = 2,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanCraneId = 4,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanCraneId = 5,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanCraneId = 6,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanCraneId = 2,
-                            KrpanTrailerId = 7
-                        },
-                        new
-                        {
-                            KrpanCraneId = 4,
-                            KrpanTrailerId = 7
-                        },
-                        new
-                        {
-                            KrpanCraneId = 5,
-                            KrpanTrailerId = 7
-                        },
-                        new
-                        {
-                            KrpanCraneId = 6,
-                            KrpanTrailerId = 7
-                        },
-                        new
-                        {
-                            KrpanCraneId = 2,
-                            KrpanTrailerId = 8
-                        },
-                        new
-                        {
-                            KrpanCraneId = 4,
-                            KrpanTrailerId = 8
-                        },
-                        new
-                        {
-                            KrpanCraneId = 5,
-                            KrpanTrailerId = 8
-                        },
-                        new
-                        {
-                            KrpanCraneId = 6,
-                            KrpanTrailerId = 8
                         });
                 });
 

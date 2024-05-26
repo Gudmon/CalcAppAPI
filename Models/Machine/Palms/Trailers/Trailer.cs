@@ -1,7 +1,6 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using CalcAppAPI.Models.Machine.Palms.Cranes;
-using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
 namespace CalcAppAPI.Models.Machine.Palms.Trailers

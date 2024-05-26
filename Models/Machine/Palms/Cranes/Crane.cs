@@ -2,7 +2,6 @@
 using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using CalcAppAPI.Models.Machine.Palms.Trailers;
-using System.ComponentModel.DataAnnotations;
 
 namespace CalcAppAPI.Models.Machine.Palms.Cranes
 {

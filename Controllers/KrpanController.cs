@@ -1,4 +1,6 @@
 ﻿using CalcAppAPI.Data;
+using CalcAppAPI.Models.Machine.Krpan.Cranes;
+using CalcAppAPI.Models.Machine.Krpan.Trailers;
 using CalcAppAPI.Models.Machine.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Palms.Trailers;
 using CalcAppAPI.Responses;
@@ -21,7 +23,7 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("trailers")]
-        public async Task<ActionResult<IEnumerable<TrailerOverview>>> GetAllTrailers()
+        public async Task<ActionResult<IEnumerable<KrpanTrailerOverview>>> GetAllTrailers()
         {
             var desiredOrder = new List<string> {
                 "PALMS 6S", "PALMS 8SX", "PALMS 8D", "PALMS 8DWD",
@@ -35,17 +37,21 @@ namespace CalcAppAPI.Controllers
 
             var orderedTrailers = allTrailers
                 //.OrderBy(t => desiredOrder.IndexOf(t.Name))
-                .Select(t => new TrailerOverview
+                .Select(t => new KrpanTrailerOverview
                 {
                     Id = t.Id,
                     Name = t.Name,
+                    LoadCapacity = t.LoadCapacity,
+                    LoadingLength = t.LoadingLength,
+                    LoadingLengthWithExtension = t.LoadingLengthWithExtension,
+                    Weight = t.Weight
                 });
 
             return Ok(orderedTrailers);
         }
 
         [HttpGet("cranes")]
-        public async Task<ActionResult<IEnumerable<CraneOverview>>> GetAllCranes()
+        public async Task<ActionResult<IEnumerable<KrpanCraneOverview>>> GetAllCranes()
         {
             var desiredOrder = new List<string> {
                 "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
@@ -53,31 +59,28 @@ namespace CalcAppAPI.Controllers
                 "PALMS 7.75", "PALMS 7.86", "PALMS 7.94", "PALMS X100"
             };
 
-            var allCranes = await _dbContext.Crane.ToListAsync();
+            var allCranes = await _dbContext.KrpanCrane.ToListAsync();
 
             var orderedCranes = allCranes
-                .OrderBy(t => desiredOrder.IndexOf(t.Name))
-                .Select(t => new CraneOverview
+                //.OrderBy(t => desiredOrder.IndexOf(t.Name))
+                .Select(t => new KrpanCraneOverview
                 {
                     Id = t.Id,
                     Name = t.Name,
                     MaxReach = t.MaxReach,
-                    BrutLiftingTorque190Bar = t.BrutLiftingTorque190Bar,
-                    BrutLiftingTorque215Bar = t.BrutLiftingTorque215Bar,
-                    TelescopeLength = t.TelescopeLength,
-                    SlewingCylinder = t.SlewingCylinder,
-                    SlewingTorque = t.SlewingTorque
+                    NetLiftingTorque = t.NetLiftingTorque,
+                    LiftCapacityAtFourMeters = t.LiftCapacityAtFourMeters,
                 });
 
             return Ok(orderedCranes);
         }
 
         [HttpGet("trailers/{id}")]
-        public async Task<ActionResult<Trailer>> GetTrailer(int id)
+        public async Task<ActionResult<KrpanTrailer>> GetTrailer(int id)
         {
             _logger.LogDebug("Querying trailer started for {}", id);
-            var trailer = await _dbContext.Trailer
-                .Include(trailer => trailer.Crane)
+            var trailer = await _dbContext.KrpanTrailer
+                .Include(trailer => trailer.KrpanCrane)
                 .FirstOrDefaultAsync(t => t.Id == id);
 
             if (trailer == null)
@@ -91,11 +94,11 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("cranes/{id}")]
-        public async Task<ActionResult<Crane>> GetCrane(int id)
+        public async Task<ActionResult<KrpanCrane>> GetCrane(int id)
         {
             _logger.LogDebug("Querying crane started for {}", id);
-            var crane = await _dbContext.Crane
-                .Include(crane => crane.Trailer)
+            var crane = await _dbContext.KrpanCrane
+                .Include(crane => crane.KrpanTrailer)
                 .FirstOrDefaultAsync(t => t.Id == id);
 
             if (crane == null)

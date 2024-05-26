@@ -1,6 +1,6 @@
 ﻿namespace CalcAppAPI.Responses
 {
-    public class CraneOverview
+    public class PalmsCraneOverview
     {
         public int Id { get; set; }
         public string Name { get; set; }
