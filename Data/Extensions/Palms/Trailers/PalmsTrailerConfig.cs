@@ -1,4 +1,4 @@
-﻿using CalcAppAPI.Models;
+﻿using CalcAppAPI.Models.Machine.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Palms.Trailers

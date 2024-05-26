@@ -1,4 +1,4 @@
-﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
+﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using Microsoft.EntityFrameworkCore;
 using System.Collections;
 

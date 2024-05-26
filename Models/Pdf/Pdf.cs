@@ -1,4 +1,4 @@
-﻿using CalcAppAPI.Models.Machine.Configurations.Trailers;
+﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 
 namespace CalcAppAPI.Models.Pdf
 {

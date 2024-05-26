@@ -724,7 +724,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -732,72 +732,7 @@ namespace CalcAppAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("BoomGuardId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BrutLiftingTorque190Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BrutLiftingTorque215Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BrutLiftingTorque240Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CoverId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("CraneOilCoolerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CraneWeight")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ElectricalFloatingId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("JoystickHolderId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("LiftAtFourMeters190Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LiftAtFourMeters215Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LiftAtFourMeters240Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LiftAtFullReach190Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LiftAtFullReach215Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LiftAtFullReach240Bar")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("LightId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LinkageId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("MaxReach")
+                    b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -805,573 +740,32 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OperatorSeatId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PillarSlewingAngle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ProtectionSleevesId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RecommendedOilFlow")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RotatorMaximumLoad")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Series")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ShippingId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SlewingCylinder")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SlewingTorque")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("SupportLegCounterPlateId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TelescopeLength")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TurningDeviceCounterPlateId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ValveBlockId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("WoodControlId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("WorkingPressure")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BoomGuardId");
-
-                    b.HasIndex("CoverId");
-
-                    b.HasIndex("CraneOilCoolerId");
-
-                    b.HasIndex("ElectricalFloatingId");
-
-                    b.HasIndex("JoystickHolderId");
-
-                    b.HasIndex("LightId");
-
-                    b.HasIndex("LinkageId");
-
-                    b.HasIndex("OperatorSeatId");
-
-                    b.HasIndex("ProtectionSleevesId");
-
-                    b.HasIndex("ShippingId");
-
-                    b.HasIndex("SupportLegCounterPlateId");
-
-                    b.HasIndex("TurningDeviceCounterPlateId");
-
-                    b.HasIndex("ValveBlockId");
-
-                    b.HasIndex("WoodControlId");
-
-                    b.ToTable("Crane");
+                    b.ToTable("Shipping");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            BrutLiftingTorque190Bar = "26",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneWeight = "360",
-                            Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "570",
-                            LiftAtFourMeters215Bar = "-",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "540",
-                            LiftAtFullReach215Bar = "-",
-                            LiftAtFullReach240Bar = "-",
-                            MaxReach = "4.2",
-                            Name = "PALMS 2.42",
-                            PillarSlewingAngle = "370",
-                            Price = "5165",
-                            ProtectionSleevesId = 1,
-                            RecommendedOilFlow = "20-35",
-                            RotatorMaximumLoad = "45",
-                            Series = "2",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "7.8",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "-",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190"
+                            Code = "",
+                            Name = "Pótkocsi szállítása Észtországból Magyarországra",
+                            Price = "750"
                         },
                         new
                         {
                             Id = 2,
-                            BrutLiftingTorque190Bar = "26",
-                            BrutLiftingTorque215Bar = "29",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneWeight = "400",
-                            Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "530",
-                            LiftAtFourMeters215Bar = "600",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "370",
-                            LiftAtFullReach215Bar = "410",
-                            LiftAtFullReach240Bar = "-",
-                            MaxReach = "5.4",
-                            Name = "PALMS 2.54",
-                            PillarSlewingAngle = "370",
-                            Price = "6285",
-                            ProtectionSleevesId = 1,
-                            RecommendedOilFlow = "20-35",
-                            RotatorMaximumLoad = "45",
-                            Series = "2",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "7.8",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,33",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BrutLiftingTorque190Bar = "36",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneWeight = "415",
-                            Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "655",
-                            LiftAtFourMeters215Bar = "-",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "355",
-                            LiftAtFullReach215Bar = "-",
-                            LiftAtFullReach240Bar = "-",
-                            MaxReach = "6.3",
-                            Name = "PALMS 3.63",
-                            PillarSlewingAngle = "370",
-                            Price = "6985",
-                            ProtectionSleevesId = 1,
-                            RecommendedOilFlow = "20-35",
-                            RotatorMaximumLoad = "45",
-                            Series = "3",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "9",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,85",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            BrutLiftingTorque190Bar = "41",
-                            BrutLiftingTorque215Bar = "46",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneWeight = "620",
-                            Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "820",
-                            LiftAtFourMeters215Bar = "910",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "430",
-                            LiftAtFullReach215Bar = "480",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            MaxReach = "6.7",
-                            Name = "PALMS 3.67",
-                            PillarSlewingAngle = "370",
-                            Price = "8260",
-                            ProtectionSleevesId = 1,
-                            RecommendedOilFlow = "30-45",
-                            RotatorMaximumLoad = "45",
-                            Series = "3",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "12",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,85",
-                            TurningDeviceCounterPlateId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            BrutLiftingTorque190Bar = "48",
-                            BrutLiftingTorque215Bar = "54",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "710",
-                            Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "960",
-                            LiftAtFourMeters215Bar = "1040",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "480",
-                            LiftAtFullReach215Bar = "535",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            MaxReach = "7.1",
-                            Name = "PALMS 4.71",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "370",
-                            Price = "9450",
-                            ProtectionSleevesId = 2,
-                            RecommendedOilFlow = "45-70",
-                            RotatorMaximumLoad = "45",
-                            Series = "4",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "15",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,95",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            BoomGuardId = 1,
-                            BrutLiftingTorque190Bar = "56",
-                            BrutLiftingTorque215Bar = "63",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "820",
-                            Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1100",
-                            LiftAtFourMeters215Bar = "1240",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "620",
-                            LiftAtFullReach215Bar = "710",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "7.2",
-                            Name = "PALMS 5.72",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "11435",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "50-90",
-                            RotatorMaximumLoad = "60",
-                            Series = "5",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,95",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            BoomGuardId = 1,
-                            BrutLiftingTorque190Bar = "56",
-                            BrutLiftingTorque215Bar = "63",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "900",
-                            Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1050",
-                            LiftAtFourMeters215Bar = "1220",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "450",
-                            LiftAtFullReach215Bar = "520",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "8.5",
-                            Name = "PALMS 5.85",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "14265",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "50-90",
-                            RotatorMaximumLoad = "60",
-                            Series = "5",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "3,3",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "63",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "995",
-                            Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "1235",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "490 (8,4 m)",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "8.7",
-                            Name = "PALMS 5.87Z",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "340",
-                            Price = "15385",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "50-90",
-                            RotatorMaximumLoad = "60",
-                            Series = "5",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "17",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "3,3",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WorkingPressure = "215"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "74",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "1170",
-                            Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1325",
-                            LiftAtFourMeters215Bar = "1585",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "610",
-                            LiftAtFullReach215Bar = "755",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "7.5",
-                            Name = "PALMS 7.75",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "14780",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "60-120",
-                            RotatorMaximumLoad = "60",
-                            Series = "7",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "2",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "74",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "1280",
-                            Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1250",
-                            LiftAtFourMeters215Bar = "1480",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "530",
-                            LiftAtFullReach215Bar = "630",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "8.6",
-                            Name = "PALMS 7.86",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "19940",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "60-120",
-                            RotatorMaximumLoad = "60",
-                            Series = "7",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "3,4",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "190/215"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "1310",
-                            Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
-                            ElectricalFloatingId = 1,
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "1410",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "540",
-                            LiftAtFullReach240Bar = "-",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "9.4",
-                            Name = "PALMS 7.94",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "21105",
-                            ProtectionSleevesId = 3,
-                            RecommendedOilFlow = "60-120",
-                            RotatorMaximumLoad = "60",
-                            Series = "7",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "21",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "3,8",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "215"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            BoomGuardId = 3,
-                            BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "106",
-                            CoverId = 1,
-                            CraneOilCoolerId = 1,
-                            CraneWeight = "1760",
-                            Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
-                            JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "-",
-                            LiftAtFourMeters240Bar = "2000",
-                            LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "-",
-                            LiftAtFullReach240Bar = "680",
-                            LightId = 1,
-                            LinkageId = 1,
-                            MaxReach = "10.1",
-                            Name = "PALMS X100",
-                            OperatorSeatId = 1,
-                            PillarSlewingAngle = "380",
-                            Price = "31460",
-                            ProtectionSleevesId = 4,
-                            RecommendedOilFlow = "120",
-                            RotatorMaximumLoad = "100",
-                            Series = "X",
-                            ShippingId = 2,
-                            SlewingCylinder = "4",
-                            SlewingTorque = "30",
-                            SupportLegCounterPlateId = 1,
-                            TelescopeLength = "4,2",
-                            TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
-                            WoodControlId = 1,
-                            WorkingPressure = "240"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            BrutLiftingTorque190Bar = "11,5",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "-",
-                            CraneWeight = "185",
-                            Description = "",
-                            LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "-",
-                            LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "-",
-                            LiftAtFullReach240Bar = "-",
-                            MaxReach = "4.2",
-                            Name = "PALMS 1.42",
-                            PillarSlewingAngle = "330",
-                            Price = "3025",
-                            RecommendedOilFlow = "-",
-                            RotatorMaximumLoad = "10",
-                            Series = "1",
-                            ShippingId = 2,
-                            SlewingCylinder = "2",
-                            SlewingTorque = "2.1",
-                            TelescopeLength = "1,2",
-                            WorkingPressure = "180"
+                            Code = "",
+                            Name = "Daru szállítása Észtországból Magyarországra",
+                            Price = "750"
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.BoomGuard", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1419,7 +813,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1562,7 +956,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1596,7 +990,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneControlBlock", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4452,7 +3846,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneLight", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4486,7 +3880,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneOilCooler", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneOilCooler", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4520,7 +3914,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Damping", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4568,7 +3962,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ElectricalFloating", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4602,7 +3996,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4721,7 +4115,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Grapple", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4880,7 +4274,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.HoseGuard", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HoseGuard", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4921,7 +4315,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4955,7 +4349,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Linkage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -4989,7 +4383,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.OperatorSeat", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5023,7 +4417,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ProtectionSleeves", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ProtectionSleeves", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5078,7 +4472,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Rotator", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5161,7 +4555,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.RotatorBrake", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.RotatorBrake", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5230,48 +4624,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Shipping");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "",
-                            Name = "Pótkocsi szállítása Észtországból Magyarországra",
-                            Price = "750"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "",
-                            Name = "Daru szállítása Észtországból Magyarországra",
-                            Price = "750"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.SupportLegCounterPlate", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5305,7 +4658,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.TurningDeviceCounterPlate", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5339,7 +4692,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ValveBlock", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5373,7 +4726,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Winch", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Winch", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5421,7 +4774,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.WoodControl", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5455,7 +4808,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BBox", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5517,7 +4870,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BolsterLock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BolsterLock", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5551,7 +4904,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Brake", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5802,7 +5155,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkAdapter", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkAdapter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5843,7 +5196,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkExtension", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5884,7 +5237,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.ChainsawHolder", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.ChainsawHolder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -5918,7 +5271,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Drawbar", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Drawbar", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6036,7 +5389,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.FrameExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6070,7 +5423,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.HandBrake", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HandBrake", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6104,7 +5457,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.HydroPack", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6138,7 +5491,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.MOT", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6172,7 +5525,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.OilPump", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6255,7 +5608,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTank", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.OilTank", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6331,7 +5684,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Platform", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Platform", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6372,7 +5725,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Propulsion", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Propulsion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -6475,7 +5828,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Stanchion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7377,7 +6730,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.StanchionExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.StanchionExtension", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7411,7 +6764,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.SupportLeg", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupportLeg", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7459,7 +6812,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerCraneConfiguration", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerCraneConfiguration", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7594,7 +6947,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerFrameTypeConfiguration", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerFrameTypeConfiguration", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7617,7 +6970,7 @@ namespace CalcAppAPI.Migrations
                     b.ToTable("TrailerFrameTypeConfiguration");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerLights", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7679,7 +7032,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerOilCooler", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerOilCooler", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7720,7 +7073,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Tyre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7851,7 +7204,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.UnderrunProtection", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.UnderrunProtection", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7892,7 +7245,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.WoodSorter", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.WoodSorter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -7926,7 +7279,688 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Trailer", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanTrailer");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "",
+                            Name = "Krpan GP 11 D",
+                            Price = ""
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("BoomGuardId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BrutLiftingTorque190Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BrutLiftingTorque215Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BrutLiftingTorque240Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CoverId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CraneOilCoolerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CraneWeight")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ElectricalFloatingId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("JoystickHolderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LiftAtFourMeters190Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiftAtFourMeters215Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiftAtFourMeters240Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiftAtFullReach190Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiftAtFullReach215Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LiftAtFullReach240Bar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("LightId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LinkageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MaxReach")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OperatorSeatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PillarSlewingAngle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProtectionSleevesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RecommendedOilFlow")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RotatorMaximumLoad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Series")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ShippingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SlewingCylinder")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SlewingTorque")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SupportLegCounterPlateId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TelescopeLength")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TurningDeviceCounterPlateId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ValveBlockId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("WoodControlId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("WorkingPressure")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BoomGuardId");
+
+                    b.HasIndex("CoverId");
+
+                    b.HasIndex("CraneOilCoolerId");
+
+                    b.HasIndex("ElectricalFloatingId");
+
+                    b.HasIndex("JoystickHolderId");
+
+                    b.HasIndex("LightId");
+
+                    b.HasIndex("LinkageId");
+
+                    b.HasIndex("OperatorSeatId");
+
+                    b.HasIndex("ProtectionSleevesId");
+
+                    b.HasIndex("ShippingId");
+
+                    b.HasIndex("SupportLegCounterPlateId");
+
+                    b.HasIndex("TurningDeviceCounterPlateId");
+
+                    b.HasIndex("ValveBlockId");
+
+                    b.HasIndex("WoodControlId");
+
+                    b.ToTable("Crane");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BrutLiftingTorque190Bar = "26",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneWeight = "360",
+                            Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "570",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "540",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "4.2",
+                            Name = "PALMS 2.42",
+                            PillarSlewingAngle = "370",
+                            Price = "5165",
+                            ProtectionSleevesId = 1,
+                            RecommendedOilFlow = "20-35",
+                            RotatorMaximumLoad = "45",
+                            Series = "2",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "7.8",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "-",
+                            TurningDeviceCounterPlateId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BrutLiftingTorque190Bar = "26",
+                            BrutLiftingTorque215Bar = "29",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneWeight = "400",
+                            Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "530",
+                            LiftAtFourMeters215Bar = "600",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "370",
+                            LiftAtFullReach215Bar = "410",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "5.4",
+                            Name = "PALMS 2.54",
+                            PillarSlewingAngle = "370",
+                            Price = "6285",
+                            ProtectionSleevesId = 1,
+                            RecommendedOilFlow = "20-35",
+                            RotatorMaximumLoad = "45",
+                            Series = "2",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "7.8",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "1,33",
+                            TurningDeviceCounterPlateId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BrutLiftingTorque190Bar = "36",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneWeight = "415",
+                            Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "655",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "355",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "6.3",
+                            Name = "PALMS 3.63",
+                            PillarSlewingAngle = "370",
+                            Price = "6985",
+                            ProtectionSleevesId = 1,
+                            RecommendedOilFlow = "20-35",
+                            RotatorMaximumLoad = "45",
+                            Series = "3",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "9",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "1,85",
+                            TurningDeviceCounterPlateId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BrutLiftingTorque190Bar = "41",
+                            BrutLiftingTorque215Bar = "46",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneWeight = "620",
+                            Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "820",
+                            LiftAtFourMeters215Bar = "910",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "430",
+                            LiftAtFullReach215Bar = "480",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            MaxReach = "6.7",
+                            Name = "PALMS 3.67",
+                            PillarSlewingAngle = "370",
+                            Price = "8260",
+                            ProtectionSleevesId = 1,
+                            RecommendedOilFlow = "30-45",
+                            RotatorMaximumLoad = "45",
+                            Series = "3",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "12",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "1,85",
+                            TurningDeviceCounterPlateId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BrutLiftingTorque190Bar = "48",
+                            BrutLiftingTorque215Bar = "54",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "710",
+                            Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "960",
+                            LiftAtFourMeters215Bar = "1040",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "480",
+                            LiftAtFullReach215Bar = "535",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            MaxReach = "7.1",
+                            Name = "PALMS 4.71",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "370",
+                            Price = "9450",
+                            ProtectionSleevesId = 2,
+                            RecommendedOilFlow = "45-70",
+                            RotatorMaximumLoad = "45",
+                            Series = "4",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "15",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "1,95",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BoomGuardId = 1,
+                            BrutLiftingTorque190Bar = "56",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "820",
+                            Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "1100",
+                            LiftAtFourMeters215Bar = "1240",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "620",
+                            LiftAtFullReach215Bar = "710",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "7.2",
+                            Name = "PALMS 5.72",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "11435",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "1,95",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BoomGuardId = 1,
+                            BrutLiftingTorque190Bar = "56",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "900",
+                            Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "1050",
+                            LiftAtFourMeters215Bar = "1220",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "450",
+                            LiftAtFullReach215Bar = "520",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "8.5",
+                            Name = "PALMS 5.85",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "14265",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "3,3",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "995",
+                            Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "1235",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "490 (8,4 m)",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "8.7",
+                            Name = "PALMS 5.87Z",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "340",
+                            Price = "15385",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "50-90",
+                            RotatorMaximumLoad = "60",
+                            Series = "5",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "17",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "3,3",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WorkingPressure = "215"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BoomGuardId = 2,
+                            BrutLiftingTorque190Bar = "74",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "1170",
+                            Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "1325",
+                            LiftAtFourMeters215Bar = "1585",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "610",
+                            LiftAtFullReach215Bar = "755",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "7.5",
+                            Name = "PALMS 7.75",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "14780",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "2",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BoomGuardId = 2,
+                            BrutLiftingTorque190Bar = "74",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "1280",
+                            Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "1250",
+                            LiftAtFourMeters215Bar = "1480",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "530",
+                            LiftAtFullReach215Bar = "630",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "8.6",
+                            Name = "PALMS 7.86",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "19940",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "3,4",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "190/215"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            BoomGuardId = 2,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "83",
+                            BrutLiftingTorque240Bar = "-",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "1310",
+                            Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
+                            ElectricalFloatingId = 1,
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "1410",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "540",
+                            LiftAtFullReach240Bar = "-",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "9.4",
+                            Name = "PALMS 7.94",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "21105",
+                            ProtectionSleevesId = 3,
+                            RecommendedOilFlow = "60-120",
+                            RotatorMaximumLoad = "60",
+                            Series = "7",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "3,8",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "215"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            BoomGuardId = 3,
+                            BrutLiftingTorque190Bar = "-",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "106",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "1760",
+                            Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "2000",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "680",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "10.1",
+                            Name = "PALMS X100",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "31460",
+                            ProtectionSleevesId = 4,
+                            RecommendedOilFlow = "120",
+                            RotatorMaximumLoad = "100",
+                            Series = "X",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "30",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "4,2",
+                            TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
+                            WoodControlId = 1,
+                            WorkingPressure = "240"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            BrutLiftingTorque190Bar = "11,5",
+                            BrutLiftingTorque215Bar = "-",
+                            BrutLiftingTorque240Bar = "-",
+                            CraneWeight = "185",
+                            Description = "",
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "-",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "-",
+                            MaxReach = "4.2",
+                            Name = "PALMS 1.42",
+                            PillarSlewingAngle = "330",
+                            Price = "3025",
+                            RecommendedOilFlow = "-",
+                            RotatorMaximumLoad = "10",
+                            Series = "1",
+                            ShippingId = 2,
+                            SlewingCylinder = "2",
+                            SlewingTorque = "2.1",
+                            TelescopeLength = "1,2",
+                            WorkingPressure = "180"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -15222,54 +15256,119 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("BrakeTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Brake", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Brake", null)
                         .WithMany()
                         .HasForeignKey("BrakeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneControlBlock", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", "BoomGuard")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", "ControlBlock")
+                        .WithMany("CraneControlBlocks")
+                        .HasForeignKey("ControlBlockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", "Crane")
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ControlBlock");
+
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerCraneConfiguration", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", "Crane")
+                        .WithMany("TrailerConfigurations")
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", "SelectedFrameType")
+                        .WithMany()
+                        .HasForeignKey("SelectedFrameTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", "Trailer")
+                        .WithMany("CraneConfigurations")
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Crane");
+
+                    b.Navigation("SelectedFrameType");
+
+                    b.Navigation("Trailer");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerFrameTypeConfiguration", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", "FrameType")
+                        .WithMany("TrailerConfigurations")
+                        .HasForeignKey("FrameTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", "Trailer")
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FrameType");
+
+                    b.Navigation("Trailer");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.BoomGuard", "BoomGuard")
                         .WithMany("Crane")
                         .HasForeignKey("BoomGuardId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", "Cover")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", "Cover")
                         .WithMany("Crane")
                         .HasForeignKey("CoverId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneOilCooler", "CraneOilCooler")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneOilCooler", "CraneOilCooler")
                         .WithMany("Crane")
                         .HasForeignKey("CraneOilCoolerId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", "ElectricalFloating")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ElectricalFloating", "ElectricalFloating")
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", "JoystickHolder")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", "JoystickHolder")
                         .WithMany("Crane")
                         .HasForeignKey("JoystickHolderId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", "Light")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneLight", "Light")
                         .WithMany("Crane")
                         .HasForeignKey("LightId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", "Linkage")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Linkage", "Linkage")
                         .WithMany("Crane")
                         .HasForeignKey("LinkageId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", "OperatorSeat")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.OperatorSeat", "OperatorSeat")
                         .WithMany("Crane")
                         .HasForeignKey("OperatorSeatId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ProtectionSleeves", "ProtectionSleeves")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ProtectionSleeves", "ProtectionSleeves")
                         .WithMany("Crane")
                         .HasForeignKey("ProtectionSleevesId");
 
@@ -15277,19 +15376,19 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ShippingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", "SupportLegCounterPlate")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.SupportLegCounterPlate", "SupportLegCounterPlate")
                         .WithMany("Crane")
                         .HasForeignKey("SupportLegCounterPlateId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", "TurningDeviceCounterPlate")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.TurningDeviceCounterPlate", "TurningDeviceCounterPlate")
                         .WithMany("Crane")
                         .HasForeignKey("TurningDeviceCounterPlateId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", "ValveBlock")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ValveBlock", "ValveBlock")
                         .WithMany("Crane")
                         .HasForeignKey("ValveBlockId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", "WoodControl")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.WoodControl", "WoodControl")
                         .WithMany("Crane")
                         .HasForeignKey("WoodControlId");
 
@@ -15322,106 +15421,41 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("WoodControl");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneControlBlock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", "ControlBlock")
-                        .WithMany("CraneControlBlocks")
-                        .HasForeignKey("ControlBlockId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Crane", "Crane")
-                        .WithMany()
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ControlBlock");
-
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerCraneConfiguration", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Crane", "Crane")
-                        .WithMany("TrailerConfigurations")
-                        .HasForeignKey("CraneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", "SelectedFrameType")
-                        .WithMany()
-                        .HasForeignKey("SelectedFrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", "Trailer")
-                        .WithMany("CraneConfigurations")
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Crane");
-
-                    b.Navigation("SelectedFrameType");
-
-                    b.Navigation("Trailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerFrameTypeConfiguration", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", "FrameType")
-                        .WithMany("TrailerConfigurations")
-                        .HasForeignKey("FrameTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CalcAppAPI.Models.Trailer", "Trailer")
-                        .WithMany()
-                        .HasForeignKey("TrailerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("FrameType");
-
-                    b.Navigation("Trailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Trailer", b =>
-                {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", "BBox")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BBox", "BBox")
                         .WithMany("Trailer")
                         .HasForeignKey("BBoxId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.BolsterLock", "BolsterLock")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BolsterLock", "BolsterLock")
                         .WithMany("Trailer")
                         .HasForeignKey("BolsterLockId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkAdapter", "BunkAdapter")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkAdapter", "BunkAdapter")
                         .WithMany("Trailer")
                         .HasForeignKey("BunkAdapterId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkExtension", "BunkExtension")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkExtension", "BunkExtension")
                         .WithMany("Trailer")
                         .HasForeignKey("BunkExtensionId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.ChainsawHolder", "ChainsawHolder")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.ChainsawHolder", "ChainsawHolder")
                         .WithMany("Trailer")
                         .HasForeignKey("ChainsawHolderId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.FrameExtension", "FrameExtension")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", "FrameExtension")
                         .WithMany("Trailer")
                         .HasForeignKey("FrameExtensionId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.HandBrake", "HandBrake")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HandBrake", "HandBrake")
                         .WithMany("Trailer")
                         .HasForeignKey("HandBrakeId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.HydroPack", "HydroPack")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", "HydroPack")
                         .WithMany("Trailer")
                         .HasForeignKey("HydroPackId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", "MOT")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.MOT", "MOT")
                         .WithMany("Trailer")
                         .HasForeignKey("MOTId");
 
@@ -15429,19 +15463,19 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("ShippingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.StanchionExtension", "StanchionExtension")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.StanchionExtension", "StanchionExtension")
                         .WithMany("Trailer")
                         .HasForeignKey("StanchionExtensionId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerOilCooler", "TrailerOilCooler")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerOilCooler", "TrailerOilCooler")
                         .WithMany("Trailer")
                         .HasForeignKey("TrailerOilCoolerId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.UnderrunProtection", "UnderrunProtection")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.UnderrunProtection", "UnderrunProtection")
                         .WithMany("Trailer")
                         .HasForeignKey("UnderrunProtectionId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.WoodSorter", "WoodSorter")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.WoodSorter", "WoodSorter")
                         .WithMany("Trailer")
                         .HasForeignKey("WoodSorterId");
 
@@ -15476,13 +15510,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("ControlBlockCrane", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", null)
                         .WithMany()
                         .HasForeignKey("ControlBlockId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15491,13 +15525,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("ControlBlockFrameType", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", null)
                         .WithMany()
                         .HasForeignKey("AvailableForFrameTypesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", null)
                         .WithMany()
                         .HasForeignKey("ControlBlockId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15506,13 +15540,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneDamping", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Damping", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Damping", null)
                         .WithMany()
                         .HasForeignKey("DampingId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15521,13 +15555,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneFrameType", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", null)
                         .WithMany()
                         .HasForeignKey("FrameTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15536,13 +15570,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneGrapple", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Grapple", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Grapple", null)
                         .WithMany()
                         .HasForeignKey("GrappleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15551,13 +15585,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneHoseGuard", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.HoseGuard", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HoseGuard", null)
                         .WithMany()
                         .HasForeignKey("HoseGuardId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15566,13 +15600,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneRotator", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Rotator", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Rotator", null)
                         .WithMany()
                         .HasForeignKey("RotatorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15581,13 +15615,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneRotatorBrake", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.RotatorBrake", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.RotatorBrake", null)
                         .WithMany()
                         .HasForeignKey("RotatorBrakeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15596,13 +15630,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15611,13 +15645,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CraneWinch", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Crane", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
                         .WithMany()
                         .HasForeignKey("CraneId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Cranes.Winch", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Winch", null)
                         .WithMany()
                         .HasForeignKey("WinchId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15626,13 +15660,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("DrawbarTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Drawbar", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Drawbar", null)
                         .WithMany()
                         .HasForeignKey("DrawbarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15641,13 +15675,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("OilPumpTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilPump", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.OilPump", null)
                         .WithMany()
                         .HasForeignKey("OilPumpId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15656,13 +15690,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("OilTankTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.OilTank", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.OilTank", null)
                         .WithMany()
                         .HasForeignKey("OilTankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15671,13 +15705,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("PlatformTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Platform", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Platform", null)
                         .WithMany()
                         .HasForeignKey("PlatformId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15686,13 +15720,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("PropulsionTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Propulsion", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Propulsion", null)
                         .WithMany()
                         .HasForeignKey("PropulsionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15701,13 +15735,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("StanchionTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Stanchion", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Stanchion", null)
                         .WithMany()
                         .HasForeignKey("StanchionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15716,13 +15750,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("SupportLegTrailer", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.SupportLeg", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupportLeg", null)
                         .WithMany()
                         .HasForeignKey("SupportLegId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15731,13 +15765,13 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("TrailerTrailerLights", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerLights", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerLights", null)
                         .WithMany()
                         .HasForeignKey("LightId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -15746,77 +15780,17 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("TrailerTyre", b =>
                 {
-                    b.HasOne("CalcAppAPI.Models.Trailer", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
                         .WithMany()
                         .HasForeignKey("TrailerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Trailers.Tyre", null)
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Tyre", null)
                         .WithMany()
                         .HasForeignKey("TyreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Crane", b =>
-                {
-                    b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.BoomGuard", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ControlBlock", b =>
-                {
-                    b.Navigation("CraneControlBlocks");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Cover", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneLight", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.CraneOilCooler", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ElectricalFloating", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.FrameType", b =>
-                {
-                    b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.JoystickHolder", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Linkage", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.OperatorSeat", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ProtectionSleeves", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.Shipping", b =>
@@ -15826,92 +15800,152 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.SupportLegCounterPlate", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.BoomGuard", b =>
                 {
                     b.Navigation("Crane");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.TurningDeviceCounterPlate", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", b =>
+                {
+                    b.Navigation("CraneControlBlocks");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", b =>
                 {
                     b.Navigation("Crane");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.ValveBlock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneLight", b =>
                 {
                     b.Navigation("Crane");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Cranes.WoodControl", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneOilCooler", b =>
                 {
                     b.Navigation("Crane");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BBox", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ElectricalFloating", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", b =>
+                {
+                    b.Navigation("TrailerConfigurations");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Linkage", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.OperatorSeat", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ProtectionSleeves", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.SupportLegCounterPlate", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.TurningDeviceCounterPlate", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ValveBlock", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.WoodControl", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BBox", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BolsterLock", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BolsterLock", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkAdapter", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkAdapter", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.BunkExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.BunkExtension", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.ChainsawHolder", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.ChainsawHolder", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.FrameExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.HandBrake", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HandBrake", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.HydroPack", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.MOT", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.MOT", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.StanchionExtension", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.StanchionExtension", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.TrailerOilCooler", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.TrailerOilCooler", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.UnderrunProtection", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.UnderrunProtection", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Trailers.WoodSorter", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.WoodSorter", b =>
                 {
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Trailer", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", b =>
+                {
+                    b.Navigation("TrailerConfigurations");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", b =>
                 {
                     b.Navigation("CraneConfigurations");
                 });

@@ -1,11 +1,15 @@
-﻿using CalcAppAPI.Data.Extensions.Connect.Cranes;
-using CalcAppAPI.Data.Extensions.Connect.Trailers;
+﻿using CalcAppAPI.Data.Extensions.Connect.Palms.Cranes;
+using CalcAppAPI.Data.Extensions.Connect.Palms.Trailers;
+using CalcAppAPI.Data.Extensions.Krpan.Trailers;
 using CalcAppAPI.Data.Extensions.Palms.Common;
 using CalcAppAPI.Data.Extensions.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Palms.Trailers;
-using CalcAppAPI.Models;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Trailers;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
+using CalcAppAPI.Models.Machine.Krpan.Trailers;
+using CalcAppAPI.Models.Machine.Palms.Cranes;
+using CalcAppAPI.Models.Machine.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data
@@ -13,6 +17,8 @@ namespace CalcAppAPI.Data
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> options) : base (options) { }
+
+        // PALMS
         public DbSet<Trailer> Trailer { get; set; }
         public DbSet<Stanchion> Stanchion { get; set; }
         public DbSet<Brake> Brake { get; set; }
@@ -63,6 +69,8 @@ namespace CalcAppAPI.Data
         public DbSet<HydroPack> HydroPack { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
+        // KRPAN
+        public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {         
@@ -477,6 +485,10 @@ namespace CalcAppAPI.Data
                 .WithOne(o => o.Shipping)
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);
+
+
+            // KRPAN
+            modelBuilder.ConfigureMultipleKrpanTrailers();
 
             base.OnModelCreating(modelBuilder);
         }

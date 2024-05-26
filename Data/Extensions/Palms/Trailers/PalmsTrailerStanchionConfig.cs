@@ -1,5 +1,5 @@
 ﻿using CalcAppAPI.Models;
-using CalcAppAPI.Models.Machine.Configurations.Trailers;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Palms.Trailers

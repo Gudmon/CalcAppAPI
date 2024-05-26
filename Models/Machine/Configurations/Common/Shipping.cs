@@ -1,4 +1,7 @@
-﻿namespace CalcAppAPI.Models.Machine.Configurations.Cranes
+﻿using CalcAppAPI.Models.Machine.Palms.Cranes;
+using CalcAppAPI.Models.Machine.Palms.Trailers;
+
+namespace CalcAppAPI.Models.Machine.Configurations.Cranes
 {
     public class Shipping
     {

@@ -1,7 +1,7 @@
 ﻿using CalcAppAPI.Data;
 using CalcAppAPI.Models;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Trailers;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using CalcAppAPI.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
