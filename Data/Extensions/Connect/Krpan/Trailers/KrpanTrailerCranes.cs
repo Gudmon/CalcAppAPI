@@ -1,10 +1,9 @@
 ﻿using CalcAppAPI.Models.Machine.Krpan.Trailers;
-using CalcAppAPI.Models.Machine.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
-namespace CalcAppAPI.Data.Extensions.Connect.Krpan
+namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
 {
-    public static class KrpanTrailerCrane
+    public static class KrpanTrailerCranes
     {
         public static void ConnectKrpanTrailersWithCranes(this ModelBuilder modelBuilder)
         {
@@ -27,24 +26,24 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan
                         new { KrpanTrailerId = 3, KrpanCraneId = 1 },
                         new { KrpanTrailerId = 3, KrpanCraneId = 3 },
 
-                        //KRPAN GP 11 D
-                        new { KrpanTrailerId = 4, KrpanCraneId = 1 },
-                        new { KrpanTrailerId = 4, KrpanCraneId = 2 },
-                        new { KrpanTrailerId = 4, KrpanCraneId = 3 },
-
                         //KRPAN GP 12 DF
+                        new { KrpanTrailerId = 4, KrpanCraneId = 2 },
+                        new { KrpanTrailerId = 4, KrpanCraneId = 4 },
+                        new { KrpanTrailerId = 4, KrpanCraneId = 5 },
+                        new { KrpanTrailerId = 4, KrpanCraneId = 6 },
+
+                        //KRPAN GP 14 DF
                         new { KrpanTrailerId = 5, KrpanCraneId = 2 },
                         new { KrpanTrailerId = 5, KrpanCraneId = 4 },
                         new { KrpanTrailerId = 5, KrpanCraneId = 5 },
                         new { KrpanTrailerId = 5, KrpanCraneId = 6 },
 
-                        //KRPAN GP 13 D
+                        //KRPAN GP 11 D
+                        new { KrpanTrailerId = 6, KrpanCraneId = 1 },
                         new { KrpanTrailerId = 6, KrpanCraneId = 2 },
-                        new { KrpanTrailerId = 6, KrpanCraneId = 4 },
-                        new { KrpanTrailerId = 6, KrpanCraneId = 5 },
-                        new { KrpanTrailerId = 6, KrpanCraneId = 6 },
+                        new { KrpanTrailerId = 6, KrpanCraneId = 3 },
 
-                        //KRPAN GP 14 DF
+                        //KRPAN GP 13 D
                         new { KrpanTrailerId = 7, KrpanCraneId = 2 },
                         new { KrpanTrailerId = 7, KrpanCraneId = 4 },
                         new { KrpanTrailerId = 7, KrpanCraneId = 5 },

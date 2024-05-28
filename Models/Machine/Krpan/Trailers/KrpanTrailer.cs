@@ -1,4 +1,5 @@
-﻿using CalcAppAPI.Models.Machine.Krpan.Cranes;
+﻿using CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers;
+using CalcAppAPI.Models.Machine.Krpan.Cranes;
 using System.ComponentModel.DataAnnotations;
 
 namespace CalcAppAPI.Models.Machine.Krpan.Trailers
@@ -21,5 +22,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public string FrameSteeringCylinders { get; set; }
         public string DrawbarAngle { get; set; }
         public IEnumerable<KrpanCrane> KrpanCrane { get; set; }
+        public IEnumerable<KrpanTyre> KrpanTyre { get; set; }
+        public IEnumerable<KrpanBrake> KrpanBrake { get; set; }
     }
 }
