@@ -11,14 +11,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new HayBaleFrame
                {
                    Id = 1,
-                   Name = "Széna bála keret (D típushoz)",
+                   Name = "Szénabála keret (D típushoz)",
                    Code = "HBF",
                    Price = "2650",
                },
                new HayBaleFrame
                {
                    Id = 2,
-                   Name = "Széna bála keret (U típushoz)",
+                   Name = "Szénabála keret (U típushoz)",
                    Code = "HBF",
                    Price = "2650",
                }

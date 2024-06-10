@@ -24,6 +24,7 @@ namespace CalcAppAPI.Services
             { "TrailerOilCooler", "Pótkocsi olajhűtő" },
             { "BolsterLock", "Rakonca rögzítő" },
             { "BBox", "Biomasszás box" },
+            { "HayBaleFrame", "Szénabála keret" },
             { "WoodSorter", "Faosztályozó" },
             { "HandBrake", "Kézifék" },
             { "ChainsawHolder", "Láncfűrész tartó" },
