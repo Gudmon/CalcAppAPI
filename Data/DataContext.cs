@@ -34,6 +34,7 @@ namespace CalcAppAPI.Data
         public DbSet<TrailerOilCooler> TrailerOilCooler { get; set; }
         public DbSet<BolsterLock> BolsterLock { get; set; }
         public DbSet<BBox> BBox { get; set; }
+        public DbSet<HayBaleFrame> HayBaleFrame { get; set; }
         public DbSet<WoodSorter> WoodSorter { get; set; }
         public DbSet<HandBrake> HandBrake { get; set; }
         public DbSet<ChainsawHolder> ChainsawHolder { get; set; }
@@ -77,6 +78,8 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
         public DbSet<KrpanTyre> KrpanTyre { get; set; }
         public DbSet<KrpanBrake> KrpanBrake { get; set; }
+        public DbSet<KrpanDrawhead> KrpanDrawHead { get; set; }
+        public DbSet<KrpanDrawbar> KrpanDrawbar { get; set; }
         public DbSet<KrpanCrane> KrpanCrane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -94,6 +97,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsTrailerOilCoolers();
             modelBuilder.ConfigureMultiplePalmsBolsterLocks();
             modelBuilder.ConfigureMultiplePalmsBBoxes();
+            modelBuilder.ConfigureMultiplePalmsHayBaleFrames();
             modelBuilder.ConfigureMultiplePalmsWoodSorters();
             modelBuilder.ConfigureMultiplePalmsHandBrakes();
             modelBuilder.ConfigureMultiplePalmsChainsawHolders();
@@ -285,6 +289,13 @@ namespace CalcAppAPI.Data
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.BBox)
                 .HasForeignKey(o => o.BBoxId)
+                .IsRequired(false);
+
+            //HAY BALE FRAME
+            modelBuilder.Entity<HayBaleFrame>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.HayBaleFrame)
+                .HasForeignKey(o => o.HayBaleFrameId)
                 .IsRequired(false);
 
             //WOOD SORTER
@@ -494,10 +505,12 @@ namespace CalcAppAPI.Data
                 .IsRequired(false);
 
 
-            // KRPAN
+            ////// KRPAN
             modelBuilder.ConfigureMultipleKrpanTrailers();
             modelBuilder.ConfigureMultipleKrpanTyres();
             modelBuilder.ConfigureMultipleKrpanBrakes();
+            modelBuilder.ConfigureMultipleKrpanDrawheads();
+            modelBuilder.ConfigureMultipleKrpanDrawbars();
 
             modelBuilder.ConfigureMultipleKrpanCranes();
 
@@ -505,6 +518,20 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConnectKrpanTrailersWithTyres();
             modelBuilder.ConnectKrpanTrailersWithBrakes();
+
+            //DRAWHEAD
+            modelBuilder.Entity<KrpanDrawhead>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanDrawHead)
+                .HasForeignKey(o => o.KrpanDrawHeadId)
+                .IsRequired(false);
+
+            //DRAWBAR
+            modelBuilder.Entity<KrpanDrawbar>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanDrawbar)
+                .HasForeignKey(o => o.KrpanDrawbarId)
+                .IsRequired(false);
 
             base.OnModelCreating(modelBuilder);
         }

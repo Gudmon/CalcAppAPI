@@ -41,6 +41,8 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public int? BolsterLockId { get; set; }
         public BBox? BBox { get; set; }
         public int? BBoxId { get; set; }
+        public HayBaleFrame? HayBaleFrame { get; set; }
+        public int? HayBaleFrameId { get; set; }
         public WoodSorter? WoodSorter { get; set; }
         public int? WoodSorterId { get; set; }
         public HandBrake? HandBrake { get; set; }

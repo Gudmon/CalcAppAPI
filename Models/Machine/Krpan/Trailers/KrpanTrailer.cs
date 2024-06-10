@@ -1,4 +1,5 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using CalcAppAPI.Models.Machine.Krpan.Cranes;
 using System.ComponentModel.DataAnnotations;
 
@@ -24,5 +25,9 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public IEnumerable<KrpanCrane> KrpanCrane { get; set; }
         public IEnumerable<KrpanTyre> KrpanTyre { get; set; }
         public IEnumerable<KrpanBrake> KrpanBrake { get; set; }
+        public KrpanDrawhead? KrpanDrawHead { get; set; }
+        public int? KrpanDrawHeadId { get; set; }
+        public KrpanDrawbar? KrpanDrawbar { get; set; }
+        public int? KrpanDrawbarId { get; set; }
     }
 }

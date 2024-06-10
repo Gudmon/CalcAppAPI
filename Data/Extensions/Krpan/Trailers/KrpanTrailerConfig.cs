@@ -7,6 +7,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
     {
         public static void ConfigureMultipleKrpanTrailers(this ModelBuilder modelBuilder)
         {
+            //TODO: ADD Drawbar/drawhead id
             modelBuilder.Entity<KrpanTrailer>().HasData(
                 new KrpanTrailer
                 {
@@ -23,7 +24,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2067",
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -40,7 +43,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2067",
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -57,7 +62,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2067",
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -74,7 +81,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2122",
                     Weight = "2100",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -91,7 +100,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2222",
                     Weight = "2300",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
 
                 new KrpanTrailer
@@ -109,7 +120,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2152",
                     Weight = "1734",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -126,7 +139,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2200",
                     Weight = "2144",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 },
                 new KrpanTrailer
                 {
@@ -143,7 +158,9 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     TotalWidth = "2318",
                     Weight = "2352",
                     FrameSteeringCylinders = "2",
-                    DrawbarAngle = "40"
+                    DrawbarAngle = "40",
+                    KrpanDrawHeadId = null,
+                    KrpanDrawbarId = null,
                 }
                 );
         }

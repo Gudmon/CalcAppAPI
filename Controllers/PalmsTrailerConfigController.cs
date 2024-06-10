@@ -120,6 +120,15 @@ namespace CalcAppAPI.Controllers
             return Ok(bBOx);
         }
 
+        [HttpGet("trailers/{id}/haybaleframe")]
+        public async Task<ActionResult<HayBaleFrame>> GetHayBaleFrame(int id)
+        {
+            var hayBaleFrame = await _dbContext.HayBaleFrame
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(hayBaleFrame);
+        }
+
         [HttpGet("trailers/{id}/woodsorter")]
         public async Task<ActionResult<WoodSorter>> GetWoodSorter(int id)
         {
