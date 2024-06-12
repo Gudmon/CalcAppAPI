@@ -526,12 +526,7 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.KrpanDrawHeadId)
                 .IsRequired(false);
 
-            //DRAWBAR
-            modelBuilder.Entity<KrpanDrawbar>()
-                .HasMany(o => o.KrpanTrailer)
-                .WithOne(o => o.KrpanDrawbar)
-                .HasForeignKey(o => o.KrpanDrawbarId)
-                .IsRequired(false);
+            modelBuilder.ConnectKrpanTrailersWithDrawbars();
 
             base.OnModelCreating(modelBuilder);
         }

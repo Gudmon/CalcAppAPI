@@ -25,8 +25,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -44,8 +43,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -63,8 +61,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "1690",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -82,8 +79,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "2100",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -101,8 +97,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "2300",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 1,
                 },
 
                 new KrpanTrailer
@@ -121,8 +116,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "1734",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 2,
                 },
                 new KrpanTrailer
                 {
@@ -140,8 +134,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "2144",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 2,
                 },
                 new KrpanTrailer
                 {
@@ -159,8 +152,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Weight = "2352",
                     FrameSteeringCylinders = "2",
                     DrawbarAngle = "40",
-                    KrpanDrawHeadId = null,
-                    KrpanDrawbarId = null,
+                    KrpanDrawHeadId = 2,
                 }
                 );
         }
