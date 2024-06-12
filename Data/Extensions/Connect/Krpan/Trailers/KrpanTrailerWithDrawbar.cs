@@ -7,7 +7,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
     {
         public static void ConnectKrpanTrailersWithDrawbars(this ModelBuilder modelBuilder)
         {
-            // BRAKE
+            // DRAWBAR
             modelBuilder.Entity<KrpanTrailer>()
                 .HasMany(t => t.KrpanDrawbar)
                 .WithMany(c => c.KrpanTrailer)

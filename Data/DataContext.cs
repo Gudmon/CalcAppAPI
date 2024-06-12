@@ -78,8 +78,27 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
         public DbSet<KrpanTyre> KrpanTyre { get; set; }
         public DbSet<KrpanBrake> KrpanBrake { get; set; }
+        public DbSet<KrpanHandBrake> KrpanHandBrake { get; set; }
+        public DbSet<KrpanExtraStanchion> KrpanExtraStanchion { get; set; }
+        public DbSet<KrpanExtraForwarderStanchion> KrpanExtraForwarderStanchion { get; set; }
+        public DbSet<KrpanTopConnection> KrpanTopConnection { get; set; }
+        public DbSet<KrpanClutch> KrpanClutch { get; set; }
         public DbSet<KrpanDrawhead> KrpanDrawHead { get; set; }
         public DbSet<KrpanDrawbar> KrpanDrawbar { get; set; }
+        public DbSet<KrpanCardanShaft> KrpanCardanShaft { get; set; }
+        public DbSet<KrpanBBox> KrpanBBox { get; set; }
+        public DbSet<KrpanBaleTransportPlatform> KrpanBaleTransportPlatform { get; set; }
+        public DbSet<KrpanCargoSpaceExtension> KrpanCargoSpaceExtension { get; set; }
+        public DbSet<KrpanAxeHolder> KrpanAxeHolder { get; set; }
+        public DbSet<KrpanChainsawHolder> KrpanChainsawHolder { get; set; }
+        public DbSet<KrpanFuelTankHolder> KrpanFuelTankHolder { get; set; }
+        public DbSet<KrpanToolBox> KrpanToolBox { get; set; }
+        public DbSet<KrpanPlato> KrpanPlato { get; set; }
+        public DbSet<KrpanExtension> KrpanExtension { get; set; }
+        public DbSet<KrpanHydraulicSupportLeg> KrpanHydraulicSupportLeg { get; set; }
+        public DbSet<KrpanGrappleLocation> KrpanGrappleLocation { get; set; }
+
+
         public DbSet<KrpanCrane> KrpanCrane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -509,8 +528,26 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultipleKrpanTrailers();
             modelBuilder.ConfigureMultipleKrpanTyres();
             modelBuilder.ConfigureMultipleKrpanBrakes();
+            modelBuilder.ConfigureMultipleKrpanHandBrakes();
+            modelBuilder.ConfigureMultipleKrpanExtraStanchions();
+            modelBuilder.ConfigureMultipleKrpanExtraForwarderStanchions();
+            modelBuilder.ConfigureMultipleKrpanTopConnections();
+            modelBuilder.ConfigureMultipleKrpanClutches();
             modelBuilder.ConfigureMultipleKrpanDrawheads();
             modelBuilder.ConfigureMultipleKrpanDrawbars();
+            modelBuilder.ConfigureMultipleKrpanCardanShafts();
+            modelBuilder.ConfigureMultipleKrpanBBoxes();
+            modelBuilder.ConfigureMultipleKrpanBaleTransportPlatforms();
+            modelBuilder.ConfigureMultipleKrpanCargoSpaceExtensions();
+            modelBuilder.ConfigureMultipleKrpanAxeHolders();
+            modelBuilder.ConfigureMultipleKrpanChainsawHolders();
+            modelBuilder.ConfigureMultipleKrpanFuelTankHolders();
+            modelBuilder.ConfigureMultipleKrpanToolBoxes();
+            modelBuilder.ConfigureMultipleKrpanPlatos();
+            modelBuilder.ConfigureMultipleKrpanExtensions();
+            modelBuilder.ConfigureMultipleKrpanHydraulicSupportLegs();
+            modelBuilder.ConfigureMultipleKrpanGrappleLocations();
+
 
             modelBuilder.ConfigureMultipleKrpanCranes();
 
@@ -518,6 +555,36 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConnectKrpanTrailersWithTyres();
             modelBuilder.ConnectKrpanTrailersWithBrakes();
+
+            //HANDBRAKE
+            modelBuilder.Entity<KrpanHandBrake>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanHandBrake)
+                .HasForeignKey(o => o.KrpanHandBrakeId)
+                .IsRequired(false);
+
+            //EXTRA STANCHION
+            modelBuilder.Entity<KrpanExtraStanchion>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanExtraStanchion)
+                .HasForeignKey(o => o.KrpanExtraStanchionId)
+                .IsRequired(false);
+
+            //EXTRA FORWARDER STANCHION
+            modelBuilder.Entity<KrpanExtraForwarderStanchion>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanExtraForwarderStanchion)
+                .HasForeignKey(o => o.KrpanExtraForwarderStanchionId)
+                .IsRequired(false);
+
+            //TOP CONNECTION
+            modelBuilder.Entity<KrpanTopConnection>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanTopConnection)
+                .HasForeignKey(o => o.KrpanTopConnectionId)
+                .IsRequired(false);
+
+            modelBuilder.ConnectKrpanTrailersWithClutches();
 
             //DRAWHEAD
             modelBuilder.Entity<KrpanDrawhead>()
@@ -527,6 +594,90 @@ namespace CalcAppAPI.Data
                 .IsRequired(false);
 
             modelBuilder.ConnectKrpanTrailersWithDrawbars();
+
+            //CARDAN SHAFT
+            modelBuilder.Entity<KrpanCardanShaft>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanCardanShaft)
+                .HasForeignKey(o => o.KrpanCardanShaftId)
+                .IsRequired(false);
+
+            //KRPAN BBOX
+            modelBuilder.Entity<KrpanBBox>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanBBox)
+                .HasForeignKey(o => o.KrpanBBoxId)
+                .IsRequired(false);
+
+            //BALE TRANSPORT PLATFORM
+            modelBuilder.Entity<KrpanBaleTransportPlatform>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanBaleTransportPlatform)
+                .HasForeignKey(o => o.KrpanBaleTransportPlatformId)
+                .IsRequired(false);
+
+            //CARGO SPACE EXTENSION
+            modelBuilder.Entity<KrpanCargoSpaceExtension>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanCargoSpaceExtension)
+                .HasForeignKey(o => o.KrpanCargoSpaceExtensionId)
+                .IsRequired(false);
+
+            //AXE HOLDER
+            modelBuilder.Entity<KrpanAxeHolder>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanAxeHolder)
+                .HasForeignKey(o => o.KrpanAxeHolderId)
+                .IsRequired(false);
+
+            //CHAINSAW HOLDER
+            modelBuilder.Entity<KrpanChainsawHolder>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanChainsawHolder)
+                .HasForeignKey(o => o.KrpanChainsawHolderId)
+                .IsRequired(false);
+
+            //FUEL TANK HOLDER
+            modelBuilder.Entity<KrpanFuelTankHolder>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanFuelTankHolder)
+                .HasForeignKey(o => o.KrpanFuelTankHolderId)
+                .IsRequired(false);
+
+            //TOOLBOX
+            modelBuilder.Entity<KrpanToolBox>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanToolBox)
+                .HasForeignKey(o => o.KrpanToolBoxId)
+                .IsRequired(false);
+
+            //PLATO
+            modelBuilder.Entity<KrpanPlato>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanPlato)
+                .HasForeignKey(o => o.KrpanPlatoId)
+                .IsRequired(false);
+
+            //EXTENSION
+            modelBuilder.Entity<KrpanExtension>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanExtension)
+                .HasForeignKey(o => o.KrpanExtensionId)
+                .IsRequired(false);
+
+            //HYDRAULIC SUPPORT LEG
+            modelBuilder.Entity<KrpanHydraulicSupportLeg>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanHydraulicSupportLeg)
+                .HasForeignKey(o => o.KrpanHydraulicSupportLegId)
+                .IsRequired(false);
+
+            //GRAPPLE LOCATION
+            modelBuilder.Entity<KrpanGrappleLocation>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanGrappleLocation)
+                .HasForeignKey(o => o.KrpanGrappleLocationId)
+                .IsRequired(false);
 
             base.OnModelCreating(modelBuilder);
         }

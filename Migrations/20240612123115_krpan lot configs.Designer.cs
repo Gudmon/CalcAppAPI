@@ -4,6 +4,7 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240612123115_krpan lot configs")]
+    partial class krpanlotconfigs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1186,39 +1189,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtension", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanExtension");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300015365",
-                            Name = "Hosszabbítás (GP15D pótkocsihoz 1,8 m)",
-                            Price = "675"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtraForwarderStanchion", b =>
                 {
                     b.Property<int>("Id")
@@ -1292,72 +1262,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFuelTankHolder", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanFuelTankHolder");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300007925",
-                            Name = "Üzemanyagtartály tartó",
-                            Price = "40"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanGrappleLocation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanGrappleLocation");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "",
-                            Name = "Kanál lerakási helyének megerősítése",
-                            Price = "180"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHandBrake", b =>
                 {
                     b.Property<int>("Id")
@@ -1388,105 +1292,6 @@ namespace CalcAppAPI.Migrations
                             Code = "",
                             Name = "Kézifék",
                             Price = "0"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanHydraulicSupportLeg");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300013635",
-                            Name = "Hidraulikus támasztóláb GP pótkocsihoz (Z darunál kötelező)",
-                            Price = "530"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPlato", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanPlato");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300015209",
-                            Name = "Plató (GP 15 D pótkocsihoz)",
-                            Price = "6185"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanToolBox", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanToolBox");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300015651",
-                            Name = "Szerszámos láda",
-                            Price = "145"
                         });
                 });
 
@@ -8390,31 +8195,13 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("KrpanDrawHeadId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KrpanExtensionId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("KrpanExtraForwarderStanchionId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanExtraStanchionId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KrpanFuelTankHolderId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanGrappleLocationId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("KrpanHandBrakeId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanHydraulicSupportLegId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanPlatoId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanToolBoxId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanTopConnectionId")
@@ -8472,23 +8259,11 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("KrpanDrawHeadId");
 
-                    b.HasIndex("KrpanExtensionId");
-
                     b.HasIndex("KrpanExtraForwarderStanchionId");
 
                     b.HasIndex("KrpanExtraStanchionId");
 
-                    b.HasIndex("KrpanFuelTankHolderId");
-
-                    b.HasIndex("KrpanGrappleLocationId");
-
                     b.HasIndex("KrpanHandBrakeId");
-
-                    b.HasIndex("KrpanHydraulicSupportLegId");
-
-                    b.HasIndex("KrpanPlatoId");
-
-                    b.HasIndex("KrpanToolBoxId");
 
                     b.HasIndex("KrpanTopConnectionId");
 
@@ -8510,9 +8285,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 1,
                             KrpanDrawHeadId = 1,
                             KrpanExtraStanchionId = 1,
-                            KrpanFuelTankHolderId = 1,
-                            KrpanGrappleLocationId = 1,
-                            KrpanToolBoxId = 1,
                             KrpanTopConnectionId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3582",
@@ -8539,9 +8311,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 1,
                             KrpanDrawHeadId = 1,
                             KrpanExtraStanchionId = 1,
-                            KrpanFuelTankHolderId = 1,
-                            KrpanGrappleLocationId = 1,
-                            KrpanToolBoxId = 1,
                             KrpanTopConnectionId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3582",
@@ -8568,9 +8337,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 1,
                             KrpanDrawHeadId = 1,
                             KrpanExtraStanchionId = 1,
-                            KrpanFuelTankHolderId = 1,
-                            KrpanGrappleLocationId = 1,
-                            KrpanToolBoxId = 1,
                             KrpanTopConnectionId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3582",
@@ -8597,9 +8363,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 1,
                             KrpanDrawHeadId = 1,
                             KrpanExtraStanchionId = 1,
-                            KrpanFuelTankHolderId = 1,
-                            KrpanGrappleLocationId = 1,
-                            KrpanToolBoxId = 1,
                             KrpanTopConnectionId = 1,
                             LoadCapacity = "12000",
                             LoadingLength = "3975",
@@ -8626,9 +8389,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 1,
                             KrpanDrawHeadId = 1,
                             KrpanExtraStanchionId = 1,
-                            KrpanFuelTankHolderId = 1,
-                            KrpanGrappleLocationId = 1,
-                            KrpanToolBoxId = 1,
                             KrpanTopConnectionId = 1,
                             LoadCapacity = "14000",
                             LoadingLength = "4325",
@@ -8653,7 +8413,6 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawHeadId = 2,
                             KrpanExtraForwarderStanchionId = 1,
                             KrpanExtraStanchionId = 2,
-                            KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             LoadCapacity = "11000",
                             LoadingLength = "3707",
@@ -8678,7 +8437,6 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawHeadId = 2,
                             KrpanExtraForwarderStanchionId = 1,
                             KrpanExtraStanchionId = 2,
-                            KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             LoadCapacity = "13000",
                             LoadingLength = "3975",
@@ -8701,12 +8459,9 @@ namespace CalcAppAPI.Migrations
                             KrpanBaleTransportPlatformId = 4,
                             KrpanCardanShaftId = 1,
                             KrpanDrawHeadId = 2,
-                            KrpanExtensionId = 1,
                             KrpanExtraForwarderStanchionId = 1,
                             KrpanExtraStanchionId = 2,
-                            KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
-                            KrpanPlatoId = 1,
                             LoadCapacity = "14800",
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
@@ -17329,10 +17084,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanDrawHeadId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtension", "KrpanExtension")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanExtensionId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtraForwarderStanchion", "KrpanExtraForwarderStanchion")
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanExtraForwarderStanchionId");
@@ -17341,29 +17092,9 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanExtraStanchionId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFuelTankHolder", "KrpanFuelTankHolder")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanFuelTankHolderId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanGrappleLocation", "KrpanGrappleLocation")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanGrappleLocationId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHandBrake", "KrpanHandBrake")
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanHandBrakeId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", "KrpanHydraulicSupportLeg")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanHydraulicSupportLegId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPlato", "KrpanPlato")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanPlatoId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanToolBox", "KrpanToolBox")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanToolBoxId");
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTopConnection", "KrpanTopConnection")
                         .WithMany("KrpanTrailer")
@@ -17383,23 +17114,11 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("KrpanDrawHead");
 
-                    b.Navigation("KrpanExtension");
-
                     b.Navigation("KrpanExtraForwarderStanchion");
 
                     b.Navigation("KrpanExtraStanchion");
 
-                    b.Navigation("KrpanFuelTankHolder");
-
-                    b.Navigation("KrpanGrappleLocation");
-
                     b.Navigation("KrpanHandBrake");
-
-                    b.Navigation("KrpanHydraulicSupportLeg");
-
-                    b.Navigation("KrpanPlato");
-
-                    b.Navigation("KrpanToolBox");
 
                     b.Navigation("KrpanTopConnection");
                 });
@@ -17986,11 +17705,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTrailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtension", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtraForwarderStanchion", b =>
                 {
                     b.Navigation("KrpanTrailer");
@@ -18001,32 +17715,7 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTrailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFuelTankHolder", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanGrappleLocation", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHandBrake", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPlato", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanToolBox", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });
