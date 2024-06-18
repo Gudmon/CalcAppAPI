@@ -33,5 +33,25 @@ namespace CalcAppAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while sending the email.");
             }
         }
+
+        [HttpPost("file")]
+        public async Task<ActionResult> UploadDocument([FromForm] IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return BadRequest(new { message = "The file field is required." });
+            }
+
+            try
+            {
+                await _emailSender.SendEmailAsync(file);
+                return Ok(new { message = "Email sent successfully" });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error during sending email");
+                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while sending the email.");
+            }
+        }
     }
 }

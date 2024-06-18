@@ -4,6 +4,8 @@ using MimeKit;
 using MailKit.Net.Smtp;
 using CalcAppAPI.Models.Email;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Azure.Storage.Blobs;
 
 namespace CalcAppAPI.Services
 {
@@ -80,6 +82,54 @@ namespace CalcAppAPI.Services
                 await smtp.ConnectAsync("smtp.gmail.com", 587, false);
                 await smtp.AuthenticateAsync(fromMail, fromPassword);
 
+                await smtp.SendAsync(emailToSend);
+                await smtp.DisconnectAsync(true);
+            }
+        }
+
+        public async Task SendEmailAsync(IFormFile file)
+        {
+            string fromMail = "clearglobecalculator@gmail.com";
+            string toMail = "gudmonmarcellwork@gmail.com";
+            string ccMail = "clearglobecalculator@gmail.com";
+            string fromPassword = "lwszbrsnccpqunfe";
+
+            var emailToSend = new MimeMessage();
+
+            emailToSend.From.Add(new MailboxAddress("", fromMail));
+            emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
+            emailToSend.Cc.Add(new MailboxAddress("", ccMail));
+
+            emailToSend.Subject = "ÁTK e-mail";
+
+            var multipart = new Multipart("mixed");
+            multipart.Add(new TextPart(MimeKit.Text.TextFormat.Html)
+            {
+                Text = ""
+            });
+
+            if (file != null && file.Length > 0)
+            {
+                var memoryStream = new MemoryStream();
+                await file.CopyToAsync(memoryStream);
+                memoryStream.Position = 0;
+
+                var fileAttachment = new MimePart(file.ContentType)
+                {
+                    Content = new MimeContent(memoryStream),
+                    ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                    ContentTransferEncoding = ContentEncoding.Base64,
+                    FileName = file.FileName
+                };
+                multipart.Add(fileAttachment);
+            }
+
+            emailToSend.Body = multipart;
+
+            using (var smtp = new SmtpClient())
+            {
+                await smtp.ConnectAsync("smtp.gmail.com", 587, false);
+                await smtp.AuthenticateAsync(fromMail, fromPassword);
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
             }
