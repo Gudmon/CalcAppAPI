@@ -23,6 +23,9 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public string FrameSteeringCylinders { get; set; }
         public string DrawbarAngle { get; set; }
         public IEnumerable<KrpanCrane> KrpanCrane { get; set; }
+        public IEnumerable<KrpanPropulsion> KrpanPropulsion { get; set; }
+        public KrpanAdjustableDrive? KrpanAdjustableDrive { get; set; }
+        public int? KrpanAdjustableDriveId { get; set; }
         public IEnumerable<KrpanTyre> KrpanTyre { get; set; }
         public IEnumerable<KrpanBrake> KrpanBrake { get; set; }
         public KrpanHandBrake? KrpanHandBrake { get; set; }

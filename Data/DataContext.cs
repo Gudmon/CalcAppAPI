@@ -76,6 +76,8 @@ namespace CalcAppAPI.Data
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
+        public DbSet<KrpanPropulsion> KrpanPropulsion { get; set; }
+        public DbSet<KrpanAdjustableDrive> KrpanAdjustableDrive { get; set; }
         public DbSet<KrpanTyre> KrpanTyre { get; set; }
         public DbSet<KrpanBrake> KrpanBrake { get; set; }
         public DbSet<KrpanHandBrake> KrpanHandBrake { get; set; }
@@ -526,6 +528,8 @@ namespace CalcAppAPI.Data
 
             ////// KRPAN
             modelBuilder.ConfigureMultipleKrpanTrailers();
+            modelBuilder.ConfigureMultipleKrpanPropulsions();
+            modelBuilder.ConfigureMultipleKrpanAdjustableDrives();
             modelBuilder.ConfigureMultipleKrpanTyres();
             modelBuilder.ConfigureMultipleKrpanBrakes();
             modelBuilder.ConfigureMultipleKrpanHandBrakes();
@@ -552,6 +556,15 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultipleKrpanCranes();
 
             modelBuilder.ConnectKrpanTrailersWithCranes();
+
+            modelBuilder.ConnectKrpanTrailersWithPropulsions();
+
+            //ADJUSTABLE DRIVE
+            modelBuilder.Entity<KrpanAdjustableDrive>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanAdjustableDrive)
+                .HasForeignKey(o => o.KrpanAdjustableDriveId)
+                .IsRequired(false);
 
             modelBuilder.ConnectKrpanTrailersWithTyres();
             modelBuilder.ConnectKrpanTrailersWithBrakes();

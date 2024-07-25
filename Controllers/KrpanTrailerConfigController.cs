@@ -19,6 +19,25 @@ namespace CalcAppAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [HttpGet("trailers/{id}/propulsions")]
+        public async Task<ActionResult<IEnumerable<KrpanPropulsion>>> GetKrpanPropulsions(int id)
+        {
+            var krpanPropulsions = await _dbContext.KrpanPropulsion
+                .Where(s => s.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(krpanPropulsions);
+        }
+
+        [HttpGet("trailers/{id}/adjustabledrive")]
+        public async Task<ActionResult<KrpanAdjustableDrive>> GetKrpanAdjustableDrive(int id)
+        {
+            var krpanAdjustableDrive = await _dbContext.KrpanAdjustableDrive
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(krpanAdjustableDrive);
+        }
+
         [HttpGet("trailers/{id}/tyres")]
         public async Task<ActionResult<IEnumerable<KrpanTyre>>> GetKrpanTyres(int id)
         {
