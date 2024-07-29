@@ -76,6 +76,11 @@ namespace CalcAppAPI.Data
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
+        public DbSet<KrpanHydraulicAdjustableChassis> KrpanHydraulicAdjustableChassis { get; set; }
+        public DbSet<KrpanTrailerLamp> KrpanTrailerLamp { get; set; }
+        public DbSet<KrpanChock> KrpanChock { get; set; }
+        public DbSet<KrpanDrawbarSteering> KrpanDrawbarSteering { get; set; }
+        public DbSet<KrpanTrailerSupportLeg> KrpanTrailerSupportLeg { get; set; }
         public DbSet<KrpanPropulsion> KrpanPropulsion { get; set; }
         public DbSet<KrpanAdjustableDrive> KrpanAdjustableDrive { get; set; }
         public DbSet<KrpanTyre> KrpanTyre { get; set; }
@@ -528,6 +533,11 @@ namespace CalcAppAPI.Data
 
             ////// KRPAN
             modelBuilder.ConfigureMultipleKrpanTrailers();
+            modelBuilder.ConfigureMultipleKrpanHydraulicAdjustableChassis();
+            modelBuilder.ConfigureMultipleKrpanTrailerLamps();
+            modelBuilder.ConfigureMultipleKrpanChocks();
+            modelBuilder.ConfigureMultipleKrpanDrawbarSteerings();
+            modelBuilder.ConfigureMultipleKrpanTrailerSupportLegs();
             modelBuilder.ConfigureMultipleKrpanPropulsions();
             modelBuilder.ConfigureMultipleKrpanAdjustableDrives();
             modelBuilder.ConfigureMultipleKrpanTyres();
@@ -557,6 +567,42 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConnectKrpanTrailersWithCranes();
 
+            //HYDRAULIC ADJUSTABLE CHASSIS
+            modelBuilder.Entity<KrpanHydraulicAdjustableChassis>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanHydraulicAdjustableChassis)
+                .HasForeignKey(o => o.KrpanHydraulicAdjustableChassisId)
+                .IsRequired(false);
+
+            //TRAILER LAMP
+            modelBuilder.Entity<KrpanTrailerLamp>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanTrailerLamp)
+                .HasForeignKey(o => o.KrpanTrailerLampId)
+                .IsRequired(false);
+
+            //CHOCK
+            modelBuilder.Entity<KrpanChock>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanChock)
+                .HasForeignKey(o => o.KrpanChockId)
+                .IsRequired(false);
+
+            //DRAWBAR STEERING
+            modelBuilder.Entity<KrpanDrawbarSteering>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanDrawbarSteering)
+                .HasForeignKey(o => o.KrpanDrawbarSteeringId)
+                .IsRequired(false);
+
+            //TRAILER SUPPORT LEG
+            modelBuilder.Entity<KrpanTrailerSupportLeg>()
+                .HasMany(o => o.KrpanTrailer)
+                .WithOne(o => o.KrpanTrailerSupportLeg)
+                .HasForeignKey(o => o.KrpanTrailerSupportLegId)
+                .IsRequired(false);
+
+            modelBuilder.ConnectKrpanTrailersWithBrakes();
             modelBuilder.ConnectKrpanTrailersWithPropulsions();
 
             //ADJUSTABLE DRIVE
@@ -567,7 +613,6 @@ namespace CalcAppAPI.Data
                 .IsRequired(false);
 
             modelBuilder.ConnectKrpanTrailersWithTyres();
-            modelBuilder.ConnectKrpanTrailersWithBrakes();
 
             //HANDBRAKE
             modelBuilder.Entity<KrpanHandBrake>()

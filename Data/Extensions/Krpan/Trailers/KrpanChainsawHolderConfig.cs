@@ -13,6 +13,13 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Id = 1,
                     Name = "Motorfűrész tartó",
                     Code = "300015821",
+                    Price = "0",
+                },
+                new KrpanChainsawHolder
+                {
+                    Id = 2,
+                    Name = "Motorfűrész tartó",
+                    Code = "300015821",
                     Price = "45",
                 }
                 );

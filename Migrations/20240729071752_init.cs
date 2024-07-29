@@ -287,6 +287,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HayBaleFrame",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HayBaleFrame", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "HoseGuard",
                 columns: table => new
                 {
@@ -302,6 +317,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HydroPack",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HydroPack", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "JoystickHolder",
                 columns: table => new
                 {
@@ -314,6 +344,454 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_JoystickHolder", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanAdjustableDrive",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanAdjustableDrive", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanAxeHolder",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanAxeHolder", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanBaleTransportPlatform",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanBaleTransportPlatform", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanBBox",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanBBox", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanBrake",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanBrake", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanCardanShaft",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanCardanShaft", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanCargoSpaceExtension",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanCargoSpaceExtension", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanChainsawHolder",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanChainsawHolder", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanChock",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanChock", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanClutch",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanClutch", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanCrane",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MaxReach = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MaxReachWithGrabOpen = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NetLiftingTorque = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BrutLiftingTorque = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LiftCapacityAtFourMeters = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LiftCapacityAtMaxReach = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Weight = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SlewTorque = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SlewingAngle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SystemPressure = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OilQuantityInTank = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SlewCylinders = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TelescopicStages = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanCrane", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanDrawbar",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanDrawbar", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanDrawbarSteering",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanDrawbarSteering", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanDrawHead",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanDrawHead", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanExtension",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanExtension", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanExtraForwarderStanchion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanExtraForwarderStanchion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanExtraStanchion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanExtraStanchion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanFuelTankHolder",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanFuelTankHolder", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanGrappleLocation",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanGrappleLocation", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanHandBrake",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanHandBrake", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanHydraulicAdjustableChassis",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanHydraulicAdjustableChassis", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanHydraulicSupportLeg",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanHydraulicSupportLeg", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanPlato",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanPlato", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanPropulsion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanPropulsion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanToolBox",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanToolBox", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanTopConnection",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTopConnection", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanTrailerLamp",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTrailerLamp", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanTrailerSupportLeg",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTrailerSupportLeg", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanTyre",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTyre", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -496,6 +974,21 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Stanchion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StanchionExtension",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StanchionExtension", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -688,6 +1181,169 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "KrpanTrailer",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LoadCapacity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CentralBeams = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LoadingLength = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LoadingLengthWithExtension = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TotalLength = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TotalLengthWithExtension = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TotalWidth = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Weight = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FrameSteeringCylinders = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DrawbarAngle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    KrpanHydraulicAdjustableChassisId = table.Column<int>(type: "int", nullable: true),
+                    KrpanTrailerLampId = table.Column<int>(type: "int", nullable: true),
+                    KrpanChockId = table.Column<int>(type: "int", nullable: true),
+                    KrpanDrawbarSteeringId = table.Column<int>(type: "int", nullable: true),
+                    KrpanTrailerSupportLegId = table.Column<int>(type: "int", nullable: true),
+                    KrpanAdjustableDriveId = table.Column<int>(type: "int", nullable: true),
+                    KrpanHandBrakeId = table.Column<int>(type: "int", nullable: true),
+                    KrpanDrawHeadId = table.Column<int>(type: "int", nullable: true),
+                    KrpanExtraStanchionId = table.Column<int>(type: "int", nullable: true),
+                    KrpanExtraForwarderStanchionId = table.Column<int>(type: "int", nullable: true),
+                    KrpanTopConnectionId = table.Column<int>(type: "int", nullable: true),
+                    KrpanCardanShaftId = table.Column<int>(type: "int", nullable: true),
+                    KrpanBBoxId = table.Column<int>(type: "int", nullable: true),
+                    KrpanBaleTransportPlatformId = table.Column<int>(type: "int", nullable: true),
+                    KrpanCargoSpaceExtensionId = table.Column<int>(type: "int", nullable: true),
+                    KrpanAxeHolderId = table.Column<int>(type: "int", nullable: true),
+                    KrpanChainsawHolderId = table.Column<int>(type: "int", nullable: true),
+                    KrpanFuelTankHolderId = table.Column<int>(type: "int", nullable: true),
+                    KrpanToolBoxId = table.Column<int>(type: "int", nullable: true),
+                    KrpanPlatoId = table.Column<int>(type: "int", nullable: true),
+                    KrpanExtensionId = table.Column<int>(type: "int", nullable: true),
+                    KrpanHydraulicSupportLegId = table.Column<int>(type: "int", nullable: true),
+                    KrpanGrappleLocationId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTrailer", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanAdjustableDrive_KrpanAdjustableDriveId",
+                        column: x => x.KrpanAdjustableDriveId,
+                        principalTable: "KrpanAdjustableDrive",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanAxeHolder_KrpanAxeHolderId",
+                        column: x => x.KrpanAxeHolderId,
+                        principalTable: "KrpanAxeHolder",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanBBox_KrpanBBoxId",
+                        column: x => x.KrpanBBoxId,
+                        principalTable: "KrpanBBox",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanBaleTransportPlatform_KrpanBaleTransportPlatformId",
+                        column: x => x.KrpanBaleTransportPlatformId,
+                        principalTable: "KrpanBaleTransportPlatform",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanCardanShaft_KrpanCardanShaftId",
+                        column: x => x.KrpanCardanShaftId,
+                        principalTable: "KrpanCardanShaft",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanCargoSpaceExtension_KrpanCargoSpaceExtensionId",
+                        column: x => x.KrpanCargoSpaceExtensionId,
+                        principalTable: "KrpanCargoSpaceExtension",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanChainsawHolder_KrpanChainsawHolderId",
+                        column: x => x.KrpanChainsawHolderId,
+                        principalTable: "KrpanChainsawHolder",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanChock_KrpanChockId",
+                        column: x => x.KrpanChockId,
+                        principalTable: "KrpanChock",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanDrawHead_KrpanDrawHeadId",
+                        column: x => x.KrpanDrawHeadId,
+                        principalTable: "KrpanDrawHead",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanDrawbarSteering_KrpanDrawbarSteeringId",
+                        column: x => x.KrpanDrawbarSteeringId,
+                        principalTable: "KrpanDrawbarSteering",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanExtension_KrpanExtensionId",
+                        column: x => x.KrpanExtensionId,
+                        principalTable: "KrpanExtension",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanExtraForwarderStanchion_KrpanExtraForwarderStanchionId",
+                        column: x => x.KrpanExtraForwarderStanchionId,
+                        principalTable: "KrpanExtraForwarderStanchion",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanExtraStanchion_KrpanExtraStanchionId",
+                        column: x => x.KrpanExtraStanchionId,
+                        principalTable: "KrpanExtraStanchion",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanFuelTankHolder_KrpanFuelTankHolderId",
+                        column: x => x.KrpanFuelTankHolderId,
+                        principalTable: "KrpanFuelTankHolder",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanGrappleLocation_KrpanGrappleLocationId",
+                        column: x => x.KrpanGrappleLocationId,
+                        principalTable: "KrpanGrappleLocation",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanHandBrake_KrpanHandBrakeId",
+                        column: x => x.KrpanHandBrakeId,
+                        principalTable: "KrpanHandBrake",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanHydraulicAdjustableChassis_KrpanHydraulicAdjustableChassisId",
+                        column: x => x.KrpanHydraulicAdjustableChassisId,
+                        principalTable: "KrpanHydraulicAdjustableChassis",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanHydraulicSupportLeg_KrpanHydraulicSupportLegId",
+                        column: x => x.KrpanHydraulicSupportLegId,
+                        principalTable: "KrpanHydraulicSupportLeg",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanPlato_KrpanPlatoId",
+                        column: x => x.KrpanPlatoId,
+                        principalTable: "KrpanPlato",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanToolBox_KrpanToolBoxId",
+                        column: x => x.KrpanToolBoxId,
+                        principalTable: "KrpanToolBox",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanTopConnection_KrpanTopConnectionId",
+                        column: x => x.KrpanTopConnectionId,
+                        principalTable: "KrpanTopConnection",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanTrailerLamp_KrpanTrailerLampId",
+                        column: x => x.KrpanTrailerLampId,
+                        principalTable: "KrpanTrailerLamp",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_KrpanTrailer_KrpanTrailerSupportLeg_KrpanTrailerSupportLegId",
+                        column: x => x.KrpanTrailerSupportLegId,
+                        principalTable: "KrpanTrailerSupportLeg",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Crane",
                 columns: table => new
                 {
@@ -829,6 +1485,7 @@ namespace CalcAppAPI.Migrations
                     TrailerOilCoolerId = table.Column<int>(type: "int", nullable: true),
                     BolsterLockId = table.Column<int>(type: "int", nullable: true),
                     BBoxId = table.Column<int>(type: "int", nullable: true),
+                    HayBaleFrameId = table.Column<int>(type: "int", nullable: true),
                     WoodSorterId = table.Column<int>(type: "int", nullable: true),
                     HandBrakeId = table.Column<int>(type: "int", nullable: true),
                     ChainsawHolderId = table.Column<int>(type: "int", nullable: true),
@@ -837,7 +1494,9 @@ namespace CalcAppAPI.Migrations
                     BunkExtensionId = table.Column<int>(type: "int", nullable: true),
                     FrameExtensionId = table.Column<int>(type: "int", nullable: true),
                     ShippingId = table.Column<int>(type: "int", nullable: true),
-                    MOTId = table.Column<int>(type: "int", nullable: true)
+                    MOTId = table.Column<int>(type: "int", nullable: true),
+                    StanchionExtensionId = table.Column<int>(type: "int", nullable: true),
+                    HydroPackId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -878,6 +1537,16 @@ namespace CalcAppAPI.Migrations
                         principalTable: "HandBrake",
                         principalColumn: "Id");
                     table.ForeignKey(
+                        name: "FK_Trailer_HayBaleFrame_HayBaleFrameId",
+                        column: x => x.HayBaleFrameId,
+                        principalTable: "HayBaleFrame",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_HydroPack_HydroPackId",
+                        column: x => x.HydroPackId,
+                        principalTable: "HydroPack",
+                        principalColumn: "Id");
+                    table.ForeignKey(
                         name: "FK_Trailer_MOT_MOTId",
                         column: x => x.MOTId,
                         principalTable: "MOT",
@@ -886,6 +1555,11 @@ namespace CalcAppAPI.Migrations
                         name: "FK_Trailer_Shipping_ShippingId",
                         column: x => x.ShippingId,
                         principalTable: "Shipping",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Trailer_StanchionExtension_StanchionExtensionId",
+                        column: x => x.StanchionExtensionId,
+                        principalTable: "StanchionExtension",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Trailer_TrailerOilCooler_TrailerOilCoolerId",
@@ -902,6 +1576,150 @@ namespace CalcAppAPI.Migrations
                         column: x => x.WoodSorterId,
                         principalTable: "WoodSorter",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanBrakeTrailer",
+                columns: table => new
+                {
+                    KrpanBrakeId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanBrakeTrailer", x => new { x.KrpanBrakeId, x.KrpanTrailerId });
+                    table.ForeignKey(
+                        name: "FK_KrpanBrakeTrailer_KrpanBrake_KrpanBrakeId",
+                        column: x => x.KrpanBrakeId,
+                        principalTable: "KrpanBrake",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanBrakeTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanClutchTrailer",
+                columns: table => new
+                {
+                    KrpanClutchId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanClutchTrailer", x => new { x.KrpanClutchId, x.KrpanTrailerId });
+                    table.ForeignKey(
+                        name: "FK_KrpanClutchTrailer_KrpanClutch_KrpanClutchId",
+                        column: x => x.KrpanClutchId,
+                        principalTable: "KrpanClutch",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanClutchTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanCraneTrailer",
+                columns: table => new
+                {
+                    KrpanCraneId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanCraneTrailer", x => new { x.KrpanCraneId, x.KrpanTrailerId });
+                    table.ForeignKey(
+                        name: "FK_KrpanCraneTrailer_KrpanCrane_KrpanCraneId",
+                        column: x => x.KrpanCraneId,
+                        principalTable: "KrpanCrane",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanCraneTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanDrawbarTrailer",
+                columns: table => new
+                {
+                    KrpanDrawbarId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanDrawbarTrailer", x => new { x.KrpanDrawbarId, x.KrpanTrailerId });
+                    table.ForeignKey(
+                        name: "FK_KrpanDrawbarTrailer_KrpanDrawbar_KrpanDrawbarId",
+                        column: x => x.KrpanDrawbarId,
+                        principalTable: "KrpanDrawbar",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanDrawbarTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanPropulsionTrailer",
+                columns: table => new
+                {
+                    KrpanPropulsionId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanPropulsionTrailer", x => new { x.KrpanPropulsionId, x.KrpanTrailerId });
+                    table.ForeignKey(
+                        name: "FK_KrpanPropulsionTrailer_KrpanPropulsion_KrpanPropulsionId",
+                        column: x => x.KrpanPropulsionId,
+                        principalTable: "KrpanPropulsion",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanPropulsionTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "KrpanTyreTrailer",
+                columns: table => new
+                {
+                    KrpanTrailerId = table.Column<int>(type: "int", nullable: false),
+                    KrpanTyreId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KrpanTyreTrailer", x => new { x.KrpanTrailerId, x.KrpanTyreId });
+                    table.ForeignKey(
+                        name: "FK_KrpanTyreTrailer_KrpanTrailer_KrpanTrailerId",
+                        column: x => x.KrpanTrailerId,
+                        principalTable: "KrpanTrailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KrpanTyreTrailer_KrpanTyre_KrpanTyreId",
+                        column: x => x.KrpanTyreId,
+                        principalTable: "KrpanTyre",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -1454,7 +2272,8 @@ namespace CalcAppAPI.Migrations
                     { 1, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "2825" },
                     { 2, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3150" },
                     { 3, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3360" },
-                    { 4, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3200" }
+                    { 4, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3200" },
+                    { 5, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "905" }
                 });
 
             migrationBuilder.InsertData(
@@ -1558,7 +2377,7 @@ namespace CalcAppAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Cover",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "JKK", "Védőhuzat bőrből A2-A7-hez, A11-hez, A12-höz és A14-hez", "50" });
+                values: new object[] { 1, "JKK", "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz", "50" });
 
             migrationBuilder.InsertData(
                 table: "CraneLight",
@@ -1624,7 +2443,8 @@ namespace CalcAppAPI.Migrations
                     { 7, "B9", "474", "B9 FD típusú, különösen erős letalpaló (HD)", "3530" },
                     { 8, "B10", "520", "Talpaló Z daruhoz", "3685" },
                     { 9, "B011", "440", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül (csak A21-A42 vezértömbhöz)", "4830" },
-                    { 10, "B11", "772", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)", "7300" }
+                    { 10, "B11", "772", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)", "7300" },
+                    { 11, "B1", "50", "FD talpaló", "695" }
                 });
 
             migrationBuilder.InsertData(
@@ -1645,13 +2465,23 @@ namespace CalcAppAPI.Migrations
                     { 11, "0.25", "C11", "223", "Biomasszás kanál 0,25 Palms (FL)", "3450" },
                     { 12, "0.28", "C10", "205", "Palms 0,28-as kanál (FL)", "3125" },
                     { 13, null, "C175", null, "Palms vágó kanál a Nisula-tól", "6500" },
-                    { 14, null, "GB3", "195", "Aprítékos kiegészítő C3-hoz", "910" }
+                    { 14, null, "GB3", "195", "Aprítékos kiegészítő C3-hoz", "910" },
+                    { 15, null, "C009", null, "Palms 0,09 kanál", "620" }
                 });
 
             migrationBuilder.InsertData(
                 table: "HandBrake",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[] { 1, "PB1", "Kézifék, kerékről működtethető", "105" });
+
+            migrationBuilder.InsertData(
+                table: "HayBaleFrame",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "HBF", "Szénabála keret (D típushoz)", "2650" },
+                    { 2, "HBF", "Szénabála keret (U típushoz)", "2650" }
+                });
 
             migrationBuilder.InsertData(
                 table: "HoseGuard",
@@ -1663,9 +2493,236 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "HydroPack",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "HyP", "Hydropack 6,5 lóerő - 12 l/min", "2195" });
+
+            migrationBuilder.InsertData(
                 table: "JoystickHolder",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[] { 1, "JL", "Joystick tartó A11-A42 vezértömbhöz", "370" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanAdjustableDrive",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Proporcionálisan állítható meghajtás (BB5 esetén kötelező)", "2235" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanAxeHolder",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300015366", "Csákány és fejsze tartó", "0" },
+                    { 2, "300015366", "Csákány és fejsze tartó", "40" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanBBox",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300014957", "Biomasszás vájú", "3450" },
+                    { 2, "300010813", "Biomasszás vájú", "3450" },
+                    { 3, "300011065", "Biomasszás vájú", "3450" },
+                    { 4, "300006476", "Biomasszás vájú", "3450" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanBaleTransportPlatform",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300014965", "Platform bálaszállításhoz", "1935" },
+                    { 2, "300011152", "Platform bálaszállításhoz", "1935" },
+                    { 3, "300011151", "Platform bálaszállításhoz", "1935" },
+                    { 4, "300011149", "Platform bálaszállításhoz", "1935" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanBrake",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "", "Hidraulikus fék 4 keréken", "0" },
+                    { 2, "", "Pneumatikus fék 4 keréken", "2160" },
+                    { 3, "", "Kombinált fék 4 keréken (hidraulikus és ráfutófék)", "2160" },
+                    { 4, "", "Kombinált fék 4 keréken (hidraulikus és pneumatikus)", "4140" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanCardanShaft",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "200004712", "Kardántengely Walterscheid WWE 2480-SDF25-910 (egyik oldalon nagy hajlásszögű)", "540" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanCargoSpaceExtension",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300014961", "Raktér hosszabbítás (80 cm)", "0" },
+                    { 2, "300014961", "Raktér hosszabbítás (80 cm)", "490" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanChainsawHolder",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300015821", "Motorfűrész tartó", "0" },
+                    { 2, "300015821", "Motorfűrész tartó", "45" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanChock",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Ékek", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanClutch",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "", "Alsó tengelykapcsoló", "0" },
+                    { 2, "", "Felső tengelykapcsoló (a felső tengelykapcsoló és a kétkörös öntöttvas tandem szivattyú kombinációja nem lehetséges)", "145" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanCrane",
+                columns: new[] { "Id", "BrutLiftingTorque", "Description", "LiftCapacityAtFourMeters", "LiftCapacityAtMaxReach", "MaxReach", "MaxReachWithGrabOpen", "Name", "NetLiftingTorque", "OilQuantityInTank", "Price", "SlewCylinders", "SlewTorque", "SlewingAngle", "SystemPressure", "TelescopicStages", "Weight" },
+                values: new object[,]
+                {
+                    { 1, "50", "", "1020", "600", "6.6", "7.2", "GD 6,6 K", "40", "70", "13715", "4", "16", "375", "220", "1", "900" },
+                    { 2, "80", "", "1860", "850", "7.4", "8.0", "GD 7,4 K", "63", "100", "24475", "4", "22", "380", "230", "1", "1516" },
+                    { 3, "49", "", "1020", "500", "7.6", "8.2", "GD 7,6 K", "39", "70", "15335", "4", "16", "375", "220", "1", "930" },
+                    { 4, "82", "", "1670", "680", "8.6", "9.2", "GD 8,6 K", "58", "100", "27150", "4", "19", "380", "230", "2", "1706" },
+                    { 5, "82", "", "1460", "894", "7.2", "7.8", "GD 7,2 Z", "62", "100", "26000", "4", "22", "370", "230", "1", "1530" },
+                    { 6, "84", "", "1427", "760", "8.4", "9.0", "GD 8,4 Z", "60", "100", "29200", "4", "22", "370", "230", "2", "1855" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanDrawHead",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300012588", "Vonófej K80", "340" },
+                    { 2, "300012588", "Vonófej K80", "415" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanDrawbar",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300012585", "Rögzített vonószem Ø 50", "150" },
+                    { 2, "300012587", "Forgó vonószem Ø 50", "325" },
+                    { 3, "300012587", "Forgó vonószem Ø 50", "400" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanDrawbarSteering",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "vonórúd kormányzás + 40°", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanExtension",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "300015365", "Hosszabbítás (GP15D pótkocsihoz 1,8 m)", "675" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanExtraForwarderStanchion",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "300019196", "Extra forwarder rakonca pár", "1025" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanExtraStanchion",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300011090", "Extra rakonca pár (3 pár széria)", "545" },
+                    { 2, "300010875", "Extra rakonca pár (4 pár széria)", "545" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanFuelTankHolder",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300007925", "Üzemanyagtartály tartó", "0" },
+                    { 2, "300007925", "Üzemanyagtartály tartó", "40" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanGrappleLocation",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Kanál lerakási helyének megerősítése", "180" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanHandBrake",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Kézifék", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanHydraulicAdjustableChassis",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Hidraulikusan állítható futómű", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanHydraulicSupportLeg",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "300013635", "Hidraulikus támasztóláb GP pótkocsihoz (Z darunál kötelező)", "530" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanPlato",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "300015209", "Plató (GP 15 D pótkocsihoz)", "6185" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanPropulsion",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "", "2 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)", "9875" },
+                    { 2, "", "2 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)", "12355" },
+                    { 3, "", "4 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)", "21210" },
+                    { 4, "", "4 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)", "26165" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanToolBox",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "300015651", "Szerszámos láda", "0" },
+                    { 2, "300015651", "Szerszámos láda", "145" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTopConnection",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Felső csatlakozás", "145" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTrailerLamp",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Lámpa", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTrailerSupportLeg",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "", "Kitámasztó láb", "0" });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTyre",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "", "400/60-15,5; 14 rétegű", "0" },
+                    { 2, "", "400/60-15,5; 18 rétegű", "0" },
+                    { 3, "", "480/45-17; 14 rétegű", "1435" },
+                    { 4, "", "500/50-17; 18 rétegű", "1435" },
+                    { 5, "", "550/45-22,5; 20 rétegű", "3050" },
+                    { 6, "", "400/55-22,5; 20 rétegű", "3050" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Linkage",
@@ -1709,7 +2766,7 @@ namespace CalcAppAPI.Migrations
             migrationBuilder.InsertData(
                 table: "OperatorSeat",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "HSB", "Kezelő ülés a függőleges gém tetejére, csak A12-höz, nem kompatibilis a csörlővel", "1890" });
+                values: new object[] { 1, "HSB", "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel", "1890" });
 
             migrationBuilder.InsertData(
                 table: "Platform",
@@ -1732,7 +2789,8 @@ namespace CalcAppAPI.Migrations
                     { 5, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "4845" },
                     { 6, "RWD+", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.", "Robson WD dörzshajtás elektronikus vezérlőrendszerrel", "7170" },
                     { 7, "45WDB", "", "4WD BlackBruin elektronikus teljesítmény szabályozással", "0" },
-                    { 8, "45WDB.1", "", "4WD BlackBruin elektronikus teljesítmény szabályozással, ISOBUS-hoz előkészítve", "1135" }
+                    { 8, "45WDB.1", "", "4WD BlackBruin elektronikus teljesítmény szabályozással, ISOBUS-hoz előkészítve", "1135" },
+                    { 9, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "2040" }
                 });
 
             migrationBuilder.InsertData(
@@ -1757,7 +2815,8 @@ namespace CalcAppAPI.Migrations
                     { 4, "R45", "45 kN-os rotátor FL (talpas)", "620" },
                     { 5, "R55", "55 kN-os rotátor FL (talpas)", "915" },
                     { 6, "R60", "60 kN-os rotátor FL Indexator GV6 (talpas)", "1600" },
-                    { 7, "R90", "100 kN-os rotátor FL Indexator T10 (talpas)", "1880" }
+                    { 7, "R90", "100 kN-os rotátor FL Indexator T10 (talpas)", "1880" },
+                    { 8, "R10", "Rotátor 1000 kN (csapos - Finrotor)", "245" }
                 });
 
             migrationBuilder.InsertData(
@@ -1907,8 +2966,16 @@ namespace CalcAppAPI.Migrations
                     { 119, "A4F", "Pótkocsi 4 pár forwarder típusú rakoncával", "57475" },
                     { 120, "A5F", "Pótkocsi 5 pár forwarder típusú rakoncával", "58605" },
                     { 121, "A4FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával", "60175" },
-                    { 122, "A5FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával", "61305" }
+                    { 122, "A5FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával", "61305" },
+                    { 123, "A3", "Pótkocsi 3 pár rakoncával", "2490" },
+                    { 124, "A4", "Pótkocsi 4 pár rakoncával", "2595" },
+                    { 125, "A5", "Pótkocsi 5 pár rakoncával", "2700" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "StanchionExtension",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "PE", "Rakonca hosszabbítás (az ár 1 db-ra vonatkozik)", "55" });
 
             migrationBuilder.InsertData(
                 table: "SupportLeg",
@@ -1969,7 +3036,8 @@ namespace CalcAppAPI.Migrations
                     { 11, "WH9.8V", "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás", "6425" },
                     { 12, "WH7.8", "600/50-22,5 RF-felni, 8 lyukas, Alliance", "5410" },
                     { 13, "WH7.10", "600/50-22,5 RF-felni, 10 lyukas, Nokian", "11020" },
-                    { 14, "WH9.10", "710/40-22,5 RF-felni, 10 lyukas, Nokian", "11150" }
+                    { 14, "WH9.10", "710/40-22,5 RF-felni, 10 lyukas, Nokian", "11150" },
+                    { 15, "WH1.4", "22/11-8", "465" }
                 });
 
             migrationBuilder.InsertData(
@@ -2022,35 +3090,52 @@ namespace CalcAppAPI.Migrations
                     { 9, 2, "74", "83", "-", 1, 1, "1170", "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.", 1, 1, "1325", "1585", "-", "610", "755", "-", 1, 1, "7.5", "PALMS 7.75", 1, "380", "14780", 3, "60-120", "60", "7", 2, "4", "21", 1, "2", 1, 1, 1, "190/215" },
                     { 10, 2, "74", "83", "-", 1, 1, "1280", "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.", 1, 1, "1250", "1480", "-", "530", "630", "-", 1, 1, "8.6", "PALMS 7.86", 1, "380", "19940", 3, "60-120", "60", "7", 2, "4", "21", 1, "3,4", 1, 1, 1, "190/215" },
                     { 11, 2, "-", "83", "-", 1, 1, "1310", "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.", 1, 1, "-", "1410", "-", "-", "540", "-", 1, 1, "9.4", "PALMS 7.94", 1, "380", "21105", 3, "60-120", "60", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "215" },
-                    { 12, 3, "-", "-", "106", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "31460", 4, "120", "100", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" }
+                    { 12, 3, "-", "-", "106", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "31460", 4, "120", "100", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" },
+                    { 13, null, "11,5", "-", "-", null, null, "185", "", null, null, "-", "-", "-", "-", "-", "-", null, null, "4.2", "PALMS 1.42", null, "330", "3025", null, "-", "10", "1", 2, "2", "2.1", null, "1,2", null, null, null, "180" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTrailer",
+                columns: new[] { "Id", "CentralBeams", "Description", "DrawbarAngle", "FrameSteeringCylinders", "KrpanAdjustableDriveId", "KrpanAxeHolderId", "KrpanBBoxId", "KrpanBaleTransportPlatformId", "KrpanCardanShaftId", "KrpanCargoSpaceExtensionId", "KrpanChainsawHolderId", "KrpanChockId", "KrpanDrawHeadId", "KrpanDrawbarSteeringId", "KrpanExtensionId", "KrpanExtraForwarderStanchionId", "KrpanExtraStanchionId", "KrpanFuelTankHolderId", "KrpanGrappleLocationId", "KrpanHandBrakeId", "KrpanHydraulicAdjustableChassisId", "KrpanHydraulicSupportLegId", "KrpanPlatoId", "KrpanToolBoxId", "KrpanTopConnectionId", "KrpanTrailerLampId", "KrpanTrailerSupportLegId", "LoadCapacity", "LoadingLength", "LoadingLengthWithExtension", "Name", "Price", "TotalLength", "TotalLengthWithExtension", "TotalWidth", "Weight" },
+                values: new object[,]
+                {
+                    { 1, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, null, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "8000", "3582", "4477", "GP 8 DF", "10300", "5919", "6814", "2067", "1690" },
+                    { 2, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, null, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "9000", "3582", "4477", "GP 9 DF", "10865", "5919", "6814", "2067", "1690" },
+                    { 3, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, null, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "10000", "3582", "4477", "GP 10 DF", "11430", "5919", "6814", "2067", "1690" },
+                    { 4, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, 1, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "12000", "3975", "4755", "GP 12 DF", "13060", "6209", "7100", "2122", "2100" },
+                    { 5, "2/200×100x8", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, 1, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "14000", "4325", "5105", "GP 14 DF", "14915", "6559", "7545", "2222", "2300" },
+                    { 6, "2/180×100x6", "", "40", "2", 1, 1, 2, 2, 1, null, 1, 1, 2, 1, null, null, 2, 1, 1, 1, 1, null, null, 1, null, 1, 1, "11000", "3707", "4487", "GP 11 D", "13510", "5944", "6724", "2152", "1734" },
+                    { 7, "2/200×100x6", "", "40", "2", 1, 1, 3, 3, 1, null, 1, 1, 2, 1, null, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "13000", "3975", "4755", "GP 13 D", "15310", "6334", "7144", "2200", "2144" },
+                    { 8, "2/200×100x8", "", "40", "2", 1, 1, 4, 4, 1, null, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "14800", "4325", "5105", "GP 15 D", "16960", "6686", "6686", "2318", "2352" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Trailer",
-                columns: new[] { "Id", "BBoxId", "BeamType", "BolsterLockId", "BunkAdapterId", "BunkExtensionId", "ChainsawHolderId", "CurbWeight", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionId", "FrameExtensionLength", "GrossWeight", "HandBrakeId", "LoadingAreaCross", "LoadingAreaLength", "MOTId", "MaxCraneSize", "Name", "Price", "ShippingId", "StandardWheelSize", "TotalLength", "TrailerOilCoolerId", "UnderrunProtectionId", "WidthWithStandardWheels", "WoodSorterId" },
+                columns: new[] { "Id", "BBoxId", "BeamType", "BolsterLockId", "BunkAdapterId", "BunkExtensionId", "ChainsawHolderId", "CurbWeight", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionId", "FrameExtensionLength", "GrossWeight", "HandBrakeId", "HayBaleFrameId", "HydroPackId", "LoadingAreaCross", "LoadingAreaLength", "MOTId", "MaxCraneSize", "Name", "Price", "ShippingId", "StanchionExtensionId", "StandardWheelSize", "TotalLength", "TrailerOilCoolerId", "UnderrunProtectionId", "WidthWithStandardWheels", "WoodSorterId" },
                 values: new object[,]
                 {
-                    { 1, null, "Egyalvázas", null, null, null, 1, "890", "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és magasabb maradványértéket biztosít.", "1", "140x140x6", null, "-", "8500", null, "1,5", "3000", 1, "35", "PALMS 6S", "", 1, "400/60-15,5", "4900", 1, null, "1950", null },
-                    { 2, 1, "Egyalvázas", 1, null, null, 1, "1180", "A PALMS 8SX egy egyalvázas erdészeti pótkocsi, amelynek össztömege 10.000 kg. Ez a modell népszerű választás számos kis erdőbirtokos és gazdálkodó körében. A pótkocsi egyszerű, mégis robusztus kialakítása és tartóssága megbízható társává teszi különböző erdészeti és mezőgazdasági feladatokban.", "2", "160x160x8", null, "0,61", "10000", 1, "2", "3550", 1, "47", "PALMS 8SX", "", 1, "400/60-15,5", "5690", 1, 2, "2070", 1 },
-                    { 3, 1, "Dupla alvázas", 1, null, null, 1, "1510", "A PALMS 8D erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni.", "2", "2x200x100x8", null, "0,85", "10000", 1, "1,95", "3975", 1, "85", "PALMS 8D", "", 1, "400/60-15,5", "6200", 1, 1, "2095", 1 },
-                    { 4, 1, "Dupla alvázas", 1, null, null, 1, "1510", "A PALMS 8DWD erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni, ugyanakkor a kétkerék hajtásnak köszönhetően mindenféle terepen megállja helyét.", "2", "2x200x100x8", null, "0,85", "10000", 1, "1,95", "3975", 1, "85", "PALMS 8DWD", "", 1, "400/60-15,5", "6200", 1, 1, "2095", 1 },
-                    { 5, 1, "Egyalvázas", 1, null, null, 1, "1425", "A PALMS 9SC a termékpalettánk legnagyobb egyalvázas pótkocsija, össztömege 12000 kg. Ideális választás azoknak, akik preferálják az egyalvázas pótkocsi egyszerűségét, miközben hosszabb kinyúlást igényelnek egy erdészeti darutól. Emellett a Palms 9SC kiemelkedik a felhasználói kényelem terén más, szintén egyalvázas pótkocsik közül a csapszeges vonórúd zár megoldásával és a szabadalmaztatott rakonca rögzítéssel.", "2", "200x200x6", null, "0,70", "12000", 1, "2,15", "3870", 1, "65", "PALMS 9SC", "", 1, "400/60-15,5", "6095", 1, 2, "2135", 1 },
-                    { 6, 1, "Dupla alvázas", 1, null, null, 1, "1765", "A PALMS 10D duplaalvázas pótkocsi, melynek össztömege 13000 kg, az egyik legkeresettebb erdészeti pótkocsi a PALMS terméksorozatában. Kiválóan párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, lehetővé téve az egyéni igény szerinti felszereltséget, hogy olyan konstrukciót alkosson, amely pontosan megfelel az elvárásainak.", "2", "2x200x100x8", null, "0,85", "13000", 1, "2,4", "3975", 1, "85", "PALMS 10D", "", 1, "400/60-15,5", "6200", 1, 1, "2165", 1 },
-                    { 7, 1, "Dupla alvázas", 1, null, null, 1, "1765", "A PALMS 10DWD duplaalvázas pótkocsi, melynek össztömege 12500 kg, és amely a 10D alapváltozathoz hasonlóan a másik legkeresettebb erdészeti pótkocsi a PALMS kínálatában. Szintén jól párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, ugyanakkor viszont olyan kétkerék hajtással ellátott változat, mely nemcsak igény szerinti, kiváló konstrukciót jelent, hanem kiváló közlekedést biztosít mindenfajta terepen és emellett természetesen elvárásainak is mindenben megfelel.", "2", "2x200x100x8", null, "0,85", "12500", 1, "2,4", "3975", 1, "85", "PALMS 10DWD", "", 1, "400/60-15,5", "6200", 1, 1, "2165", 1 },
-                    { 8, 1, "Dupla alvázas", 1, null, null, 1, "2030", "A PALMS 12D duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival.  ", "2", "2x200x100x8", null, "0,85", "15000", 1, "2,7", "3975", 1, "85", "PALMS 12D", "", 1, "500/50-17", "6200", 1, 1, "2350", 1 },
-                    { 9, 1, "Dupla alvázas", 1, null, null, 1, "2030", "A PALMS 12DWD duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival. Ennek a modellnek az előnye, hogy kétkerék hajtással rendelkezik, amely alkalmassá teszi, hogy bármilyen talajviszonyok között kiváló teljesítményt nyújtson a kiközelítés során.", "2", "2x200x100x8", null, "0,85", "15000", 1, "2,7", "3975", 1, "85", "PALMS 12DWD", "", 1, "500/50-17", "6200", 1, 1, "2350", 1 },
-                    { 10, 1, "Dupla alvázas", 1, null, null, 1, "2375", "A PALMS 14D a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. ", "2", "2x200x120x10", null, "0,86", "18000", 1, "3,0", "4080", 1, "112", "PALMS 14D", "", 1, "500/50-17", "6300", 1, 1, "2450", 1 },
-                    { 11, 1, "Dupla alvázas", 1, null, null, 1, "2375", "A PALMS 14DWD a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. Ugyanakkor ez a kétkerék hajtással is ellátott változat alkalmas az összes, akár extrém terepviszony leküzdésére is.", "2", "2x200x120x10", null, "0,86", "18000", 1, "3,0", "4080", 1, "112", "PALMS 14DWD", "", 1, "500/50-17", "6300", 1, 1, "2450", 1 },
-                    { 12, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", "A PALMS 10U erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ", "2", "unibody", 1, "1,085", "15000", 1, "2.4", "3990", 1, "120", "PALMS 10U", "", 1, "500/50-17", "6215", 1, 2, "2245", null },
-                    { 13, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", "A PALMS 10UWD erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. Az UWD változat kétkerék hajtással is rendelkezik, mely által a terepviszonyok is kiválóan kezelhetők.  ", "2", "unibody", 1, "1,085", "15000", 1, "2.4", "3990", 1, "120", "PALMS 10UWD", "", 1, "500/50-17", "6215", 1, 2, "2245", null },
-                    { 14, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12U pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését.", "2", "unibody", 1, "1,085", "17000", 1, "2.75", "3990", 1, "120", "PALMS 12U", "", 1, "500/50-22,5", "6215", 1, 2, "2245", null },
-                    { 15, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12UWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy kétkerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, "2.75", "3990", 1, "120", "PALMS 12UWD", "", 1, "500/50-22,5", "6215", 1, 2, "2245", null },
-                    { 16, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12UAWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy négykerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, "2.75", "3990", 1, "120", "PALMS 12UAWD", "", 1, "500/50-22,5", "6215", 1, 2, "2245", null },
-                    { 17, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. ", "2", "unibody", 1, "1,085", "19000", 1, "3.2", "4175", 1, "120", "PALMS 15U", "", 1, "500/50-22,5", "6415", 1, 2, "2450", null },
-                    { 18, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus kétkerék hajtással is rendelkezik, mely által mindenféle terepen könnyen mozgatható.", "2", "unibody", 1, "1,085", "19000", 1, "3.2", "4175", 1, "120", "PALMS 15UWD", "", 1, "500/50-22,5", "6415", 1, 2, "2450", null },
-                    { 19, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus már négykerék hajtással rendelkezik, ezáltal bármilyen tereppel könnyedén megbirkózik.", "2", "unibody", 1, "1,085", "19000", 1, "3.2", "4175", 1, "120", "PALMS 15UAWD", "", 1, "500/50-22,5", "6415", 1, 2, "2450", null },
-                    { 20, 4, "Unibody (Forwarder)", null, 2, 2, null, "4700", "Ismerje meg a PALMS MWD sorozatú forwarder típusú pótkocsit, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.", "2", "unibody", null, "1.085", "18000", null, "3.2", "4235", 1, "120", "PALMS MWD 3.2", "", 1, "600/50x22.5", "6430", null, null, "2470", null },
-                    { 21, 4, "Unibody (Forwarder)", null, 2, 2, null, "4920", "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.", "2", "unibody", null, "1.085", "18000", null, "3.2", "4185", 1, "120", "PALMS HMWD 3.2", "", 1, "600/50x22.5", "6430", 2, null, "2470", null }
+                    { 1, null, "Egyalvázas", null, null, null, 1, "890", "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és magasabb maradványértéket biztosít.", "1", "140x140x6", null, "-", "8500", null, null, null, "1,5", "3000", 1, "35", "PALMS 6S", "", 1, null, "400/60-15,5", "4900", 1, null, "1950", null },
+                    { 2, 1, "Egyalvázas", 1, null, null, 1, "1180", "A PALMS 8SX egy egyalvázas erdészeti pótkocsi, amelynek össztömege 10.000 kg. Ez a modell népszerű választás számos kis erdőbirtokos és gazdálkodó körében. A pótkocsi egyszerű, mégis robusztus kialakítása és tartóssága megbízható társává teszi különböző erdészeti és mezőgazdasági feladatokban.", "2", "160x160x8", null, "0,61", "10000", 1, null, null, "2", "3550", 1, "47", "PALMS 8SX", "", 1, null, "400/60-15,5", "5690", 1, 2, "2070", 1 },
+                    { 3, 1, "Dupla alvázas", 1, null, null, 1, "1510", "A PALMS 8D erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni.", "2", "2x200x100x8", null, "0,85", "10000", 1, 1, null, "1,95", "3975", 1, "85", "PALMS 8D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2095", 1 },
+                    { 4, 1, "Dupla alvázas", 1, null, null, 1, "1510", "A PALMS 8DWD erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni, ugyanakkor a kétkerék hajtásnak köszönhetően mindenféle terepen megállja helyét.", "2", "2x200x100x8", null, "0,85", "10000", 1, 1, null, "1,95", "3975", 1, "85", "PALMS 8DWD", "", 1, null, "400/60-15,5", "6200", 1, 1, "2095", 1 },
+                    { 5, 1, "Egyalvázas", 1, null, null, 1, "1425", "A PALMS 9SC a termékpalettánk legnagyobb egyalvázas pótkocsija, össztömege 12000 kg. Ideális választás azoknak, akik preferálják az egyalvázas pótkocsi egyszerűségét, miközben hosszabb kinyúlást igényelnek egy erdészeti darutól. Emellett a Palms 9SC kiemelkedik a felhasználói kényelem terén más, szintén egyalvázas pótkocsik közül a csapszeges vonórúd zár megoldásával és a szabadalmaztatott rakonca rögzítéssel.", "2", "200x200x6", null, "0,70", "12000", 1, null, null, "2,15", "3870", 1, "65", "PALMS 9SC", "", 1, null, "400/60-15,5", "6095", 1, 2, "2135", 1 },
+                    { 6, 1, "Dupla alvázas", 1, null, null, 1, "1765", "A PALMS 10D duplaalvázas pótkocsi, melynek össztömege 13000 kg, az egyik legkeresettebb erdészeti pótkocsi a PALMS terméksorozatában. Kiválóan párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, lehetővé téve az egyéni igény szerinti felszereltséget, hogy olyan konstrukciót alkosson, amely pontosan megfelel az elvárásainak.", "2", "2x200x100x8", null, "0,85", "13000", 1, 1, null, "2,4", "3975", 1, "85", "PALMS 10D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2165", 1 },
+                    { 7, 1, "Dupla alvázas", 1, null, null, 1, "1765", "A PALMS 10DWD duplaalvázas pótkocsi, melynek össztömege 12500 kg, és amely a 10D alapváltozathoz hasonlóan a másik legkeresettebb erdészeti pótkocsi a PALMS kínálatában. Szintén jól párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, ugyanakkor viszont olyan kétkerék hajtással ellátott változat, mely nemcsak igény szerinti, kiváló konstrukciót jelent, hanem kiváló közlekedést biztosít mindenfajta terepen és emellett természetesen elvárásainak is mindenben megfelel.", "2", "2x200x100x8", null, "0,85", "12500", 1, 1, null, "2,4", "3975", 1, "85", "PALMS 10DWD", "", 1, null, "400/60-15,5", "6200", 1, 1, "2165", 1 },
+                    { 8, 1, "Dupla alvázas", 1, null, null, 1, "2030", "A PALMS 12D duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival.  ", "2", "2x200x100x8", null, "0,85", "15000", 1, 1, null, "2,7", "3975", 1, "85", "PALMS 12D", "", 1, null, "500/50-17", "6200", 1, 1, "2350", 1 },
+                    { 9, 1, "Dupla alvázas", 1, null, null, 1, "2030", "A PALMS 12DWD duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival. Ennek a modellnek az előnye, hogy kétkerék hajtással rendelkezik, amely alkalmassá teszi, hogy bármilyen talajviszonyok között kiváló teljesítményt nyújtson a kiközelítés során.", "2", "2x200x100x8", null, "0,85", "15000", 1, 1, null, "2,7", "3975", 1, "85", "PALMS 12DWD", "", 1, null, "500/50-17", "6200", 1, 1, "2350", 1 },
+                    { 10, 1, "Dupla alvázas", 1, null, null, 1, "2375", "A PALMS 14D a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. ", "2", "2x200x120x10", null, "0,86", "18000", 1, 1, null, "3,0", "4080", 1, "112", "PALMS 14D", "", 1, null, "500/50-17", "6300", 1, 1, "2450", 1 },
+                    { 11, 1, "Dupla alvázas", 1, null, null, 1, "2375", "A PALMS 14DWD a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. Ugyanakkor ez a kétkerék hajtással is ellátott változat alkalmas az összes, akár extrém terepviszony leküzdésére is.", "2", "2x200x120x10", null, "0,86", "18000", 1, 1, null, "3,0", "4080", 1, "112", "PALMS 14DWD", "", 1, null, "500/50-17", "6300", 1, 1, "2450", 1 },
+                    { 12, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", "A PALMS 10U erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ", "2", "unibody", 1, "1,085", "15000", 1, 2, null, "2.4", "3990", 1, "120", "PALMS 10U", "", 1, null, "500/50-17", "6215", 1, 2, "2245", null },
+                    { 13, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", "A PALMS 10UWD erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. Az UWD változat kétkerék hajtással is rendelkezik, mely által a terepviszonyok is kiválóan kezelhetők.  ", "2", "unibody", 1, "1,085", "15000", 1, 2, null, "2.4", "3990", 1, "120", "PALMS 10UWD", "", 1, null, "500/50-17", "6215", 1, 2, "2245", null },
+                    { 14, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12U pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését.", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12U", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
+                    { 15, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12UWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy kétkerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12UWD", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
+                    { 16, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12UAWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy négykerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12UAWD", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
+                    { 17, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. ", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15U", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
+                    { 18, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus kétkerék hajtással is rendelkezik, mely által mindenféle terepen könnyen mozgatható.", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15UWD", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
+                    { 19, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus már négykerék hajtással rendelkezik, ezáltal bármilyen tereppel könnyedén megbirkózik.", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15UAWD", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
+                    { 20, 4, "Unibody (Forwarder)", null, 2, 2, null, "4700", "Ismerje meg a PALMS MWD sorozatú forwarder típusú pótkocsit, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4235", 1, "120", "PALMS MWD 3.2", "", 1, 1, "600/50x22.5", "6430", null, null, "2470", null },
+                    { 21, 4, "Unibody (Forwarder)", null, 2, 2, null, "4920", "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4185", 1, "120", "PALMS HMWD 3.2", "", 1, 1, "600/50x22.5", "6430", 2, null, "2470", null },
+                    { 22, 5, "Dupla alvázas", null, null, null, 1, "260", "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.", "1", "2x4 mm C-alváz", null, "-", "1500", null, 1, 1, "0,6", "2450", 1, "12", "PALMS 2D", "", 1, null, "22/11-8", "3865", null, null, "1285", null }
                 });
 
             migrationBuilder.InsertData(
@@ -2207,6 +3292,7 @@ namespace CalcAppAPI.Migrations
                     { 2, 3 },
                     { 2, 4 },
                     { 2, 5 },
+                    { 2, 13 },
                     { 3, 2 },
                     { 3, 3 },
                     { 3, 4 },
@@ -2852,7 +3938,8 @@ namespace CalcAppAPI.Migrations
                     { 12, 18 },
                     { 12, 19 },
                     { 12, 20 },
-                    { 12, 21 }
+                    { 12, 21 },
+                    { 13, 22 }
                 });
 
             migrationBuilder.InsertData(
@@ -2912,6 +3999,7 @@ namespace CalcAppAPI.Migrations
                     { 1, 19 },
                     { 1, 20 },
                     { 1, 21 },
+                    { 1, 22 },
                     { 2, 1 },
                     { 2, 2 },
                     { 2, 3 },
@@ -3105,7 +4193,8 @@ namespace CalcAppAPI.Migrations
                     { 12, 6 },
                     { 12, 7 },
                     { 12, 9 },
-                    { 12, 10 }
+                    { 12, 10 },
+                    { 13, 11 }
                 });
 
             migrationBuilder.InsertData(
@@ -3210,7 +4299,8 @@ namespace CalcAppAPI.Migrations
                     { 12, 10 },
                     { 12, 11 },
                     { 12, 12 },
-                    { 12, 14 }
+                    { 12, 14 },
+                    { 13, 15 }
                 });
 
             migrationBuilder.InsertData(
@@ -3231,6 +4321,156 @@ namespace CalcAppAPI.Migrations
                     { 11, 1 },
                     { 11, 2 },
                     { 12, 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanBrakeTrailer",
+                columns: new[] { "KrpanBrakeId", "KrpanTrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 1, 4 },
+                    { 1, 5 },
+                    { 1, 6 },
+                    { 1, 7 },
+                    { 1, 8 },
+                    { 2, 1 },
+                    { 2, 2 },
+                    { 2, 3 },
+                    { 2, 4 },
+                    { 2, 5 },
+                    { 2, 6 },
+                    { 2, 7 },
+                    { 2, 8 },
+                    { 3, 4 },
+                    { 3, 5 },
+                    { 4, 6 },
+                    { 4, 7 },
+                    { 4, 8 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanClutchTrailer",
+                columns: new[] { "KrpanClutchId", "KrpanTrailerId" },
+                values: new object[,]
+                {
+                    { 1, 6 },
+                    { 1, 7 },
+                    { 1, 8 },
+                    { 2, 6 },
+                    { 2, 7 },
+                    { 2, 8 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanCraneTrailer",
+                columns: new[] { "KrpanCraneId", "KrpanTrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 1, 6 },
+                    { 2, 4 },
+                    { 2, 5 },
+                    { 2, 6 },
+                    { 2, 7 },
+                    { 2, 8 },
+                    { 3, 1 },
+                    { 3, 2 },
+                    { 3, 3 },
+                    { 3, 6 },
+                    { 4, 4 },
+                    { 4, 5 },
+                    { 4, 7 },
+                    { 4, 8 },
+                    { 5, 4 },
+                    { 5, 5 },
+                    { 5, 7 },
+                    { 5, 8 },
+                    { 6, 4 },
+                    { 6, 5 },
+                    { 6, 7 },
+                    { 6, 8 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanDrawbarTrailer",
+                columns: new[] { "KrpanDrawbarId", "KrpanTrailerId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 1, 4 },
+                    { 1, 5 },
+                    { 2, 1 },
+                    { 2, 2 },
+                    { 2, 3 },
+                    { 2, 4 },
+                    { 2, 5 },
+                    { 3, 6 },
+                    { 3, 7 },
+                    { 3, 8 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanPropulsionTrailer",
+                columns: new[] { "KrpanPropulsionId", "KrpanTrailerId" },
+                values: new object[,]
+                {
+                    { 1, 4 },
+                    { 1, 5 },
+                    { 1, 6 },
+                    { 1, 7 },
+                    { 1, 8 },
+                    { 2, 4 },
+                    { 2, 5 },
+                    { 2, 6 },
+                    { 2, 7 },
+                    { 2, 8 },
+                    { 3, 4 },
+                    { 3, 5 },
+                    { 3, 7 },
+                    { 3, 8 },
+                    { 4, 4 },
+                    { 4, 5 },
+                    { 4, 7 },
+                    { 4, 8 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "KrpanTyreTrailer",
+                columns: new[] { "KrpanTrailerId", "KrpanTyreId" },
+                values: new object[,]
+                {
+                    { 1, 1 },
+                    { 1, 3 },
+                    { 2, 1 },
+                    { 2, 3 },
+                    { 3, 1 },
+                    { 3, 3 },
+                    { 4, 1 },
+                    { 4, 4 },
+                    { 4, 5 },
+                    { 4, 6 },
+                    { 5, 1 },
+                    { 5, 4 },
+                    { 5, 5 },
+                    { 5, 6 },
+                    { 6, 2 },
+                    { 6, 3 },
+                    { 6, 4 },
+                    { 7, 2 },
+                    { 7, 4 },
+                    { 7, 5 },
+                    { 7, 6 },
+                    { 8, 2 },
+                    { 8, 4 },
+                    { 8, 5 },
+                    { 8, 6 }
                 });
 
             migrationBuilder.InsertData(
@@ -3568,7 +4808,8 @@ namespace CalcAppAPI.Migrations
                     { 7, 16 },
                     { 7, 19 },
                     { 8, 16 },
-                    { 8, 19 }
+                    { 8, 19 },
+                    { 9, 22 }
                 });
 
             migrationBuilder.InsertData(
@@ -3665,7 +4906,8 @@ namespace CalcAppAPI.Migrations
                     { 11, 7 },
                     { 12, 1 },
                     { 12, 6 },
-                    { 12, 7 }
+                    { 12, 7 },
+                    { 13, 8 }
                 });
 
             migrationBuilder.InsertData(
@@ -3786,7 +5028,10 @@ namespace CalcAppAPI.Migrations
                     { 115, 21 },
                     { 116, 21 },
                     { 117, 21 },
-                    { 118, 21 }
+                    { 118, 21 },
+                    { 123, 22 },
+                    { 124, 22 },
+                    { 125, 22 }
                 });
 
             migrationBuilder.InsertData(
@@ -3946,7 +5191,8 @@ namespace CalcAppAPI.Migrations
                     { 20, 13 },
                     { 20, 14 },
                     { 21, 13 },
-                    { 21, 14 }
+                    { 21, 14 },
+                    { 22, 15 }
                 });
 
             migrationBuilder.InsertData(
@@ -4114,6 +5360,151 @@ namespace CalcAppAPI.Migrations
                 column: "HoseGuardId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_KrpanBrakeTrailer_KrpanTrailerId",
+                table: "KrpanBrakeTrailer",
+                column: "KrpanTrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanClutchTrailer_KrpanTrailerId",
+                table: "KrpanClutchTrailer",
+                column: "KrpanTrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanCraneTrailer_KrpanTrailerId",
+                table: "KrpanCraneTrailer",
+                column: "KrpanTrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanDrawbarTrailer_KrpanTrailerId",
+                table: "KrpanDrawbarTrailer",
+                column: "KrpanTrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanPropulsionTrailer_KrpanTrailerId",
+                table: "KrpanPropulsionTrailer",
+                column: "KrpanTrailerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanAdjustableDriveId",
+                table: "KrpanTrailer",
+                column: "KrpanAdjustableDriveId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanAxeHolderId",
+                table: "KrpanTrailer",
+                column: "KrpanAxeHolderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanBaleTransportPlatformId",
+                table: "KrpanTrailer",
+                column: "KrpanBaleTransportPlatformId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanBBoxId",
+                table: "KrpanTrailer",
+                column: "KrpanBBoxId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanCardanShaftId",
+                table: "KrpanTrailer",
+                column: "KrpanCardanShaftId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanCargoSpaceExtensionId",
+                table: "KrpanTrailer",
+                column: "KrpanCargoSpaceExtensionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanChainsawHolderId",
+                table: "KrpanTrailer",
+                column: "KrpanChainsawHolderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanChockId",
+                table: "KrpanTrailer",
+                column: "KrpanChockId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanDrawbarSteeringId",
+                table: "KrpanTrailer",
+                column: "KrpanDrawbarSteeringId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanDrawHeadId",
+                table: "KrpanTrailer",
+                column: "KrpanDrawHeadId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanExtensionId",
+                table: "KrpanTrailer",
+                column: "KrpanExtensionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanExtraForwarderStanchionId",
+                table: "KrpanTrailer",
+                column: "KrpanExtraForwarderStanchionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanExtraStanchionId",
+                table: "KrpanTrailer",
+                column: "KrpanExtraStanchionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanFuelTankHolderId",
+                table: "KrpanTrailer",
+                column: "KrpanFuelTankHolderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanGrappleLocationId",
+                table: "KrpanTrailer",
+                column: "KrpanGrappleLocationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanHandBrakeId",
+                table: "KrpanTrailer",
+                column: "KrpanHandBrakeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanHydraulicAdjustableChassisId",
+                table: "KrpanTrailer",
+                column: "KrpanHydraulicAdjustableChassisId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanHydraulicSupportLegId",
+                table: "KrpanTrailer",
+                column: "KrpanHydraulicSupportLegId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanPlatoId",
+                table: "KrpanTrailer",
+                column: "KrpanPlatoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanToolBoxId",
+                table: "KrpanTrailer",
+                column: "KrpanToolBoxId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanTopConnectionId",
+                table: "KrpanTrailer",
+                column: "KrpanTopConnectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanTrailerLampId",
+                table: "KrpanTrailer",
+                column: "KrpanTrailerLampId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTrailer_KrpanTrailerSupportLegId",
+                table: "KrpanTrailer",
+                column: "KrpanTrailerSupportLegId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KrpanTyreTrailer_KrpanTyreId",
+                table: "KrpanTyreTrailer",
+                column: "KrpanTyreId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LightTrailer_TrailerId",
                 table: "LightTrailer",
                 column: "TrailerId");
@@ -4194,6 +5585,16 @@ namespace CalcAppAPI.Migrations
                 column: "HandBrakeId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Trailer_HayBaleFrameId",
+                table: "Trailer",
+                column: "HayBaleFrameId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_HydroPackId",
+                table: "Trailer",
+                column: "HydroPackId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Trailer_MOTId",
                 table: "Trailer",
                 column: "MOTId");
@@ -4202,6 +5603,11 @@ namespace CalcAppAPI.Migrations
                 name: "IX_Trailer_ShippingId",
                 table: "Trailer",
                 column: "ShippingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Trailer_StanchionExtensionId",
+                table: "Trailer",
+                column: "StanchionExtensionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Trailer_TrailerOilCoolerId",
@@ -4288,6 +5694,24 @@ namespace CalcAppAPI.Migrations
                 name: "HoseGuardCrane");
 
             migrationBuilder.DropTable(
+                name: "KrpanBrakeTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanClutchTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanCraneTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanDrawbarTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanPropulsionTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTyreTrailer");
+
+            migrationBuilder.DropTable(
                 name: "LightTrailer");
 
             migrationBuilder.DropTable(
@@ -4345,6 +5769,27 @@ namespace CalcAppAPI.Migrations
                 name: "HoseGuard");
 
             migrationBuilder.DropTable(
+                name: "KrpanBrake");
+
+            migrationBuilder.DropTable(
+                name: "KrpanClutch");
+
+            migrationBuilder.DropTable(
+                name: "KrpanCrane");
+
+            migrationBuilder.DropTable(
+                name: "KrpanDrawbar");
+
+            migrationBuilder.DropTable(
+                name: "KrpanPropulsion");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTrailer");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTyre");
+
+            migrationBuilder.DropTable(
                 name: "TrailerLight");
 
             migrationBuilder.DropTable(
@@ -4387,6 +5832,75 @@ namespace CalcAppAPI.Migrations
                 name: "Winch");
 
             migrationBuilder.DropTable(
+                name: "KrpanAdjustableDrive");
+
+            migrationBuilder.DropTable(
+                name: "KrpanAxeHolder");
+
+            migrationBuilder.DropTable(
+                name: "KrpanBBox");
+
+            migrationBuilder.DropTable(
+                name: "KrpanBaleTransportPlatform");
+
+            migrationBuilder.DropTable(
+                name: "KrpanCardanShaft");
+
+            migrationBuilder.DropTable(
+                name: "KrpanCargoSpaceExtension");
+
+            migrationBuilder.DropTable(
+                name: "KrpanChainsawHolder");
+
+            migrationBuilder.DropTable(
+                name: "KrpanChock");
+
+            migrationBuilder.DropTable(
+                name: "KrpanDrawHead");
+
+            migrationBuilder.DropTable(
+                name: "KrpanDrawbarSteering");
+
+            migrationBuilder.DropTable(
+                name: "KrpanExtension");
+
+            migrationBuilder.DropTable(
+                name: "KrpanExtraForwarderStanchion");
+
+            migrationBuilder.DropTable(
+                name: "KrpanExtraStanchion");
+
+            migrationBuilder.DropTable(
+                name: "KrpanFuelTankHolder");
+
+            migrationBuilder.DropTable(
+                name: "KrpanGrappleLocation");
+
+            migrationBuilder.DropTable(
+                name: "KrpanHandBrake");
+
+            migrationBuilder.DropTable(
+                name: "KrpanHydraulicAdjustableChassis");
+
+            migrationBuilder.DropTable(
+                name: "KrpanHydraulicSupportLeg");
+
+            migrationBuilder.DropTable(
+                name: "KrpanPlato");
+
+            migrationBuilder.DropTable(
+                name: "KrpanToolBox");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTopConnection");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTrailerLamp");
+
+            migrationBuilder.DropTable(
+                name: "KrpanTrailerSupportLeg");
+
+            migrationBuilder.DropTable(
                 name: "BBox");
 
             migrationBuilder.DropTable(
@@ -4408,7 +5922,16 @@ namespace CalcAppAPI.Migrations
                 name: "HandBrake");
 
             migrationBuilder.DropTable(
+                name: "HayBaleFrame");
+
+            migrationBuilder.DropTable(
+                name: "HydroPack");
+
+            migrationBuilder.DropTable(
                 name: "MOT");
+
+            migrationBuilder.DropTable(
+                name: "StanchionExtension");
 
             migrationBuilder.DropTable(
                 name: "TrailerOilCooler");

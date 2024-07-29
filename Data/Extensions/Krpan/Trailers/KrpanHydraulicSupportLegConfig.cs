@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
 {
-    public static class KrpanHydraulicSupportLegSupport
+    public static class KrpanHydraulicSupportLegConfig
     {
         public static void ConfigureMultipleKrpanHydraulicSupportLegs(this ModelBuilder modelBuilder)
         {

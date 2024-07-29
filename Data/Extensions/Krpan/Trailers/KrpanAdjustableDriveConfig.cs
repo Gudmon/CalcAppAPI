@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                 new KrpanAdjustableDrive
                 {
                     Id = 1,
-                    Name = "Proporcionálisan állítható meghajtás",
+                    Name = "Proporcionálisan állítható meghajtás (BB5 esetén kötelező)",
                     Code = "",
                     Price = "2235",
                 }

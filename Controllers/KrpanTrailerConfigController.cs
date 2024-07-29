@@ -19,6 +19,51 @@ namespace CalcAppAPI.Controllers
             _dbContext = dbContext;
         }
 
+        [HttpGet("trailers/{id}/hydraulicadjustablechassis")]
+        public async Task<ActionResult<KrpanHydraulicAdjustableChassis>> GetKrpanHydraulicAdjustableChassis(int id)
+        {
+            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanHydraulicAdjustableChassis
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(krpanHydraulicAdjustableChassis);
+        }
+
+        [HttpGet("trailers/{id}/lamp")]
+        public async Task<ActionResult<KrpanTrailerLamp>> GetKrpanTrailerLamp(int id)
+        {
+            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanHydraulicAdjustableChassis
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(krpanHydraulicAdjustableChassis);
+        }
+
+        [HttpGet("trailers/{id}/chock")]
+        public async Task<ActionResult<KrpanChock>> GetKrpanChock(int id)
+        {
+            var chock = await _dbContext.KrpanChock
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(chock);
+        }
+
+        [HttpGet("trailers/{id}/drawbarsteering")]
+        public async Task<ActionResult<KrpanDrawbarSteering>> GetKrpanDrawbarSteering(int id)
+        {
+            var drawbarSteering = await _dbContext.KrpanDrawbarSteering
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(drawbarSteering);
+        }
+
+        [HttpGet("trailers/{id}/supportleg")]
+        public async Task<ActionResult<KrpanTrailerSupportLeg>> GetKrpanTrailerSupportLeg(int id)
+        {
+            var trailerSupportLeg = await _dbContext.KrpanTrailerSupportLeg
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(trailerSupportLeg);
+        }
+
         [HttpGet("trailers/{id}/propulsions")]
         public async Task<ActionResult<IEnumerable<KrpanPropulsion>>> GetKrpanPropulsions(int id)
         {

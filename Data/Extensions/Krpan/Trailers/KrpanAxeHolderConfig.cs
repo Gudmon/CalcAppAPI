@@ -13,6 +13,13 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Id = 1,
                     Name = "Csákány és fejsze tartó",
                     Code = "300015366",
+                    Price = "0",
+                },
+                new KrpanAxeHolder
+                {
+                    Id = 2,
+                    Name = "Csákány és fejsze tartó",
+                    Code = "300015366",
                     Price = "40",
                 }
                 );

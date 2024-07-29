@@ -13,6 +13,13 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Id = 1,
                     Name = "Üzemanyagtartály tartó",
                     Code = "300007925",
+                    Price = "0",
+                },
+                new KrpanFuelTankHolder
+                {
+                    Id = 2,
+                    Name = "Üzemanyagtartály tartó",
+                    Code = "300007925",
                     Price = "40",
                 }
                 );

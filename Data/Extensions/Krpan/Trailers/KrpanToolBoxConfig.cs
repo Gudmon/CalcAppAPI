@@ -13,6 +13,13 @@ namespace CalcAppAPI.Data.Extensions.Krpan.Trailers
                     Id = 1,
                     Name = "Szerszámos láda",
                     Code = "300015651",
+                    Price = "0",
+                },
+                new KrpanToolBox
+                {
+                    Id = 2,
+                    Name = "Szerszámos láda",
+                    Code = "300015651",
                     Price = "145",
                 }
                 );
