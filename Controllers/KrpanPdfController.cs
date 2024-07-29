@@ -1,21 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using CalcAppAPI.Models.Pdf;
+﻿using CalcAppAPI.Models.Pdf;
 using CalcAppAPI.Services;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Http;
+using CalcAppAPI.Services.Krpan;
 using CalcAppAPI.Services.Palms;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CalcAppAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class PdfController : ControllerBase
+    public class KrpanPdfController : ControllerBase
     {
         private readonly ILogger<PdfController> _logger;
-        private readonly IDealerPdfGenerator _dealerPdfGenerator;
-        private readonly IUserPdfGenerator _userPdfGenerator;
+        private readonly IKrpanDealerPdfGenerator _dealerPdfGenerator;
+        private readonly IKrpanUserPdfGenerator _userPdfGenerator;
 
-        public PdfController(ILogger<PdfController> logger, [FromServices] IDealerPdfGenerator dealerPdfGenerator, [FromServices] IUserPdfGenerator userPdfGenerator)
+        public KrpanPdfController(ILogger<PdfController> logger, [FromServices] IKrpanDealerPdfGenerator dealerPdfGenerator, [FromServices] IKrpanUserPdfGenerator userPdfGenerator)
         {
             _logger = logger;
             _dealerPdfGenerator = dealerPdfGenerator;
@@ -52,7 +52,7 @@ namespace CalcAppAPI.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> AddPdf([FromBody] Pdf pdfModel)
+        public async Task<ActionResult> AddPdf([FromBody] KrpanPdf pdfModel)
         {
             string pdfId = Util.RandomId();
             try

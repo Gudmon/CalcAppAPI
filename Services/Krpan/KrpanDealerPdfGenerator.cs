@@ -4,41 +4,48 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace CalcAppAPI.Services
+namespace CalcAppAPI.Services.Krpan
 {
-    public class UserPdfGenerator : IUserPdfGenerator
+    public class KrpanDealerPdfGenerator : IKrpanDealerPdfGenerator
     {
         private string _connectionString = MyOptions.BlobConnection;
-        private const string _containerName = "pdf";
+        private const string _containerName = "krpan";
 
         private static readonly Dictionary<string, string> PropertyDisplayNameMapping = new Dictionary<string, string>
-        {       
-            { "Stanchion", "Rakonca" },
-            { "Brake", "Fék" },
-            { "Propulsion", "Hajtás" },
-            { "Drawbar", "Vonórúd" },
-            { "Platform", "Kezelő platform" },
-            { "HydroPack", "Hydropack" },
-            { "OilPump", "Olajpumpa" },
-            { "OilTank", "Olajtank" },
-            { "TrailerOilCooler", "Pótkocsi olajhűtő" },
-            { "BolsterLock", "Rakonca rögzítő" },
-            { "BBox", "Biomasszás box" },
-            { "HayBaleFrame", "Szénabála keret" },
-            { "WoodSorter", "Faosztályozó" },
-            { "HandBrake", "Kézifék" },
-            { "ChainsawHolder", "Láncfűrész tartó" },
-            { "UnderrunProtection", "Aláfutásgátló" },
-            { "BunkAdapter", "Bunk adapter" },
-            { "BunkExtension", "Bunk kiterjesztés" },
-            { "FrameExtension", "Raktér hosszabbítás" },
-            { "StanchionExtension", "Rakonca hosszabbítás" },
-            { "TrailerLight", "Pótkocsi világítás" },
+        {
+            { "ExtraStanchion", "Extra rakonca" },
+            { "ExtraForwarderStanchion", "Extra forwarder rakonca" },
+            { "HydraulicAdjustableChassis", "Hidraulikusan állítható futómű" },
+            { "Lamp", "Lámpa" },
+            { "Chock", "Ékek" },
+            { "DrawbarSteering", "Vonórúd kormányzás" },
             { "SupportLeg", "Kitámasztó láb" },
             { "Tyre", "Kerék" },
+            { "Brake", "Fék" },
+            { "HandBrake", "Kézifék" },
+            { "Propulsion", "Meghajtás" },
+            { "AdjustableDrive", "Proporcionálisan állítható meghajtás" },
+            { "TopConnection", "Felső csatlakozás" },
+            { "Clutch", "Tengelykapcsoló" },
+            { "DrawHead", "Vonófej" },
+            { "DrawBar", "Vonórúd" },
+            { "CardanShaft", "Kardántengely" },
+            { "BBox", "Biomasszás vájú" },
+            { "BaleTransportPlatform", "Platform bálaszállításhoz" },
+            { "CargoSpaceExtension", "Raktér hosszabbítás" },
+            { "AxeHolder", "Csákány és fejsze tartó" },
+            { "ChainsawHolder", "Motorfűrész tartó" },
+            { "FueltankHolder", "Üzemanyagtartály tartó" },
+            { "ToolBox", "Szerszámos láda" },
+            { "Plato", "Plató" },
+            { "Extension", "Hosszabbítás" },
+            { "HydraulicSupportLeg", "Hidraulikus támasztóláb" },
+            { "GrappleLocation", "Kanál helye" },
+
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },
-            
+
+
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },
             { "FrameType", "Talpaló" },
@@ -65,7 +72,7 @@ namespace CalcAppAPI.Services
             { "CraneShipping", "Szállítás" },
         };
 
-        public async Task<string> GenerateAndSaveUserPdfAsync(Pdf pdfModel, string blobName)
+        public async Task<string> GenerateAndSaveDealerPdfAsync(KrpanPdf pdfModel, string blobName)
         {
             var pdf = Document.Create(container =>
             {
@@ -77,11 +84,13 @@ namespace CalcAppAPI.Services
                 });
             });
 
+
             var container = new BlobContainerClient(_connectionString, _containerName);
-            var blob = container.GetBlobClient($"{blobName}.pdf");
+            var blob = container.GetBlobClient($"{blobName}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
+
                 pdf.GeneratePdf(stream);
                 stream.Position = 0;
 
@@ -91,9 +100,9 @@ namespace CalcAppAPI.Services
             return blobName;
         }
 
-        public async Task<byte[]> GetUserPdfAsync(string id)
+        public async Task<byte[]> GetDealerPdfAsync(string blobName)
         {
-            var blobClient = new BlobClient(_connectionString, _containerName, $"{id}.pdf");
+            var blobClient = new BlobClient(_connectionString, _containerName, $"{blobName}-clear-globe.pdf");
 
             using (var stream = new MemoryStream())
             {
@@ -104,13 +113,17 @@ namespace CalcAppAPI.Services
 
         void ComposeHeader(IContainer container)
         {
-            container.Column(col =>
+            container.Background("#e60005").PaddingLeft(20).Row(row =>
             {
-                col.Item().Text("");
+                row.RelativeItem().Padding(2).Column(col =>
+                {
+                    col.Item()
+                        .Hyperlink("https://victorious-island-03de76e03.5.azurestaticapps.net")
+                        .Text("KRPAN").ApplyCommonTextStyle();
+                });
             });
         }
-
-        void ComposeContent(IContainer container, Pdf pdfModel, string blobName)
+        void ComposeContent(IContainer container, KrpanPdf pdfModel, string blobName)
         {
             container.Column(col =>
             {
@@ -123,22 +136,26 @@ namespace CalcAppAPI.Services
                     row.RelativeItem(2).PaddingBottom(10).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
                 });
 
+
                 col.Item().Table(table =>
                 {
                     table.ColumnsDefinition(columns =>
                     {
                         columns.RelativeColumn(2);
-                        columns.RelativeColumn(5);
+                        columns.RelativeColumn(4);
+                        columns.RelativeColumn(1);
                         columns.RelativeColumn(1);
                     });
                     table.Header(header =>
                     {
                         header.Cell().BorderBottom(1).Text("Konfiguráció").Bold().FontFamily("Cambria");
                         header.Cell().BorderBottom(1).Text("Megnevezés").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Kód").Bold().FontFamily("Cambria");
                         header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
-                    foreach (var property in typeof(Pdf).GetProperties())
+
+                    foreach (var property in typeof(KrpanPdf).GetProperties())
                     {
                         var propertyValue = property.GetValue(pdfModel);
 
@@ -168,7 +185,6 @@ namespace CalcAppAPI.Services
                 });
             });
         }
-
         void ComposeFooter(IContainer container)
         {
             container.Background("#8ac73c").Padding(20).Row(row =>
@@ -176,7 +192,7 @@ namespace CalcAppAPI.Services
                 row.RelativeItem().Padding(0).Column(col =>
                 {
                     col.Item()
-                        .Hyperlink("https://polite-ocean-00cf7d503.4.azurestaticapps.net")
+                        .Hyperlink("https://www.clear-globe.com")
                         .Text("clear-globe").ApplyCommonTextStyle();
                 });
                 row.RelativeItem().AlignRight().Text(text =>
@@ -187,30 +203,24 @@ namespace CalcAppAPI.Services
                 });
             });
         }
-
-        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem, Pdf pdf)
+        private void MapAndAddRow(TableDescriptor table, string propertyName, PdfItem pdfItem, KrpanPdf pdf)
         {
             var displayName = PropertyDisplayNameMapping.ContainsKey(propertyName) ? PropertyDisplayNameMapping[propertyName] : propertyName;
 
             table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
 
-            if (displayName == "Daru")
-            {
-                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Price} €").FontFamily("Cambria");
-            }
-            else if (displayName == "Rakonca")
+            if (displayName == "Rakonca")
             {
                 table.Cell().PaddingBottom(15).Text($"{pdf.TrailerName} {pdfItem?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text($"{pdfItem?.Price} €").FontFamily("Cambria");
             }
             else
             {
                 table.Cell().PaddingBottom(15).Text($"{pdfItem?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
             }
+
+            table.Cell().PaddingBottom(15).Text(pdfItem?.Code).FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text($"{pdfItem.Price} €").FontFamily("Cambria");
         }
     }
-
 }
 

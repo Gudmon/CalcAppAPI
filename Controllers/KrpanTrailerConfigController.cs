@@ -31,7 +31,7 @@ namespace CalcAppAPI.Controllers
         [HttpGet("trailers/{id}/lamp")]
         public async Task<ActionResult<KrpanTrailerLamp>> GetKrpanTrailerLamp(int id)
         {
-            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanHydraulicAdjustableChassis
+            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanTrailerLamp
                 .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
 
             return Ok(krpanHydraulicAdjustableChassis);

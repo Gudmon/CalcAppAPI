@@ -1,6 +1,6 @@
 ﻿using CalcAppAPI.Models.Email;
 
-namespace CalcAppAPI.Services
+namespace CalcAppAPI.Services.Palms
 {
     public interface IEmailSender
     {

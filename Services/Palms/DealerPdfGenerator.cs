@@ -4,7 +4,7 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 
-namespace CalcAppAPI.Services
+namespace CalcAppAPI.Services.Palms
 {
     public class DealerPdfGenerator : IDealerPdfGenerator
     {
@@ -38,7 +38,7 @@ namespace CalcAppAPI.Services
             { "Tyre", "Kerék" },
             { "TrailerShipping", "Szállítás" },
             { "MOT", "Műszaki vizsga" },
-            
+
             { "Crane", "Daru" },
             { "ControlBlock", "Vezértömb" },
             { "FrameType", "Talpaló" },
@@ -83,7 +83,7 @@ namespace CalcAppAPI.Services
 
             using (var stream = new MemoryStream())
             {
-                
+
                 pdf.GeneratePdf(stream);
                 stream.Position = 0;
 
@@ -106,9 +106,14 @@ namespace CalcAppAPI.Services
 
         void ComposeHeader(IContainer container)
         {
-            container.Column(col =>
+            container.Background("#a32116").PaddingLeft(20).Row(row =>
             {
-                col.Item().Text("");
+                row.RelativeItem().Padding(2).Column(col =>
+                {
+                    col.Item()
+                        .Hyperlink("https://www.palmsmagyarorszag.hu")
+                        .Text("PALMS").ApplyCommonTextStyle();
+                });
             });
         }
         void ComposeContent(IContainer container, Pdf pdfModel, string blobName)
@@ -123,7 +128,7 @@ namespace CalcAppAPI.Services
                     row.RelativeItem(2).PaddingBottom(10).Text(pdfModel?.Crane?.Name);
                     row.RelativeItem(2).PaddingBottom(10).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
                 });
-                
+
 
                 col.Item().Table(table =>
                 {
@@ -142,7 +147,7 @@ namespace CalcAppAPI.Services
                         header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
-                    
+
                     foreach (var property in typeof(Pdf).GetProperties())
                     {
                         var propertyValue = property.GetValue(pdfModel);
@@ -180,7 +185,7 @@ namespace CalcAppAPI.Services
                 row.RelativeItem().Padding(0).Column(col =>
                 {
                     col.Item()
-                        .Hyperlink("https://polite-ocean-00cf7d503.4.azurestaticapps.net")
+                        .Hyperlink("https://www.clear-globe.com")
                         .Text("clear-globe").ApplyCommonTextStyle();
                 });
                 row.RelativeItem().AlignRight().Text(text =>
@@ -211,4 +216,4 @@ namespace CalcAppAPI.Services
         }
     }
 
- }
+}

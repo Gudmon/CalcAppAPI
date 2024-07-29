@@ -1,6 +1,6 @@
 ﻿using CalcAppAPI.Models.Pdf;
 
-namespace CalcAppAPI.Services
+namespace CalcAppAPI.Services.Palms
 {
     public interface IUserPdfGenerator
     {

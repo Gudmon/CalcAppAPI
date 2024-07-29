@@ -1,20 +1,16 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using MimeKit;
+﻿using MimeKit;
 using MailKit.Net.Smtp;
 using CalcAppAPI.Models.Email;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using Azure.Storage.Blobs;
 
-namespace CalcAppAPI.Services
+namespace CalcAppAPI.Services.Krpan
 {
-    public class EmailSender : IEmailSender
+    public class KrpanEmailSender : IKrpanEmailSender
     {
-        private readonly IDealerPdfGenerator _dealerPdfGenerator;
-        private readonly IUserPdfGenerator _userPdfGenerator;
+        private readonly IKrpanDealerPdfGenerator _dealerPdfGenerator;
+        private readonly IKrpanUserPdfGenerator _userPdfGenerator;
 
-        public EmailSender([FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
+        public KrpanEmailSender([FromServices] IKrpanDealerPdfGenerator dealerPdfGenerator, IKrpanUserPdfGenerator userPdfGenerator)
         {
             _dealerPdfGenerator = dealerPdfGenerator;
             _userPdfGenerator = userPdfGenerator;
@@ -23,8 +19,8 @@ namespace CalcAppAPI.Services
         public async Task SendEmailAsync(Email email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "gudmonmarcellwork@gmail.com";
-            string toMail = "info@clear-globe.com";
+            string toMail = "gudmonmarcellwork@gmail.com";
+            //string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
 
@@ -34,7 +30,7 @@ namespace CalcAppAPI.Services
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
             emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
-            emailToSend.Subject = email.Subject + " - " + email.FromEmail + " - " + email.Name;
+            emailToSend.Subject = "KRPAN" + " " + email.Subject + " - " + email.FromEmail + " - " + email.Name;
 
             string formattedBody = $"{email.Body}" +
                 $"<br/><br/>Név: {email.Name}" +
@@ -90,8 +86,8 @@ namespace CalcAppAPI.Services
         public async Task SendEmailAsync(IFormFile file)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "gudmonmarcellwork@gmail.com";
-            string toMail = "info@clear-globe.com";
+            string toMail = "gudmonmarcellwork@gmail.com";
+            //string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
 

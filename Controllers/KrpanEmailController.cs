@@ -1,19 +1,17 @@
 ﻿using CalcAppAPI.Models.Email;
-using CalcAppAPI.Models.Pdf;
-using CalcAppAPI.Services.Palms;
-using Microsoft.AspNetCore.Http;
+using CalcAppAPI.Services.Krpan;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CalcAppAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class EmailController : ControllerBase
+    public class KrpanEmailController : ControllerBase
     {
-        private readonly ILogger<EmailController> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly ILogger<KrpanEmailController> _logger;
+        private readonly IKrpanEmailSender _emailSender;
 
-        public EmailController(ILogger<EmailController> logger, IEmailSender emailSender)
+        public KrpanEmailController(ILogger<KrpanEmailController> logger, IKrpanEmailSender emailSender)
         {
             _logger = logger;
             _emailSender = emailSender;

@@ -2,9 +2,10 @@ using CalcAppAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using QuestPDF.Infrastructure;
-using CalcAppAPI.Services;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
+using CalcAppAPI.Services.Palms;
+using CalcAppAPI.Services.Krpan;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +17,16 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 QuestPDF.Settings.License = LicenseType.Community;
-
+// PALMS
 builder.Services.AddScoped<IDealerPdfGenerator, DealerPdfGenerator>();
 builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
+
+// KRPAN
+builder.Services.AddScoped<IKrpanDealerPdfGenerator, KrpanDealerPdfGenerator>();
+builder.Services.AddScoped<IKrpanUserPdfGenerator, KrpanUserPdfGenerator>();
+builder.Services.AddScoped<IKrpanEmailSender, KrpanEmailSender>();
+
 var kvUri = "https://calc-app-keyvault.vault.azure.net/";
 
 var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
