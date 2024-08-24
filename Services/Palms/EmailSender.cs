@@ -34,6 +34,7 @@ namespace CalcAppAPI.Services.Palms
 
             string formattedBody = $"{email.Body}" +
                 $"<br/><br/>Név: {email.Name}" +
+                $"<br/><br/>Telefonszám: {email.CountryCode}{email.PhoneNumber}" +
                 $"<br/><br/>Email: {email.FromEmail}";
 
             var multipart = new Multipart("mixed");
