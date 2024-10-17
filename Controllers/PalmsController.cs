@@ -55,8 +55,8 @@ namespace CalcAppAPI.Controllers
         {
             var desiredOrder = new List<string> {
                 "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
-                "PALMS 3.67", "PALMS 4.71", "PALMS 5.72", "PALMS 5.85", "PALMS 5.87Z",
-                "PALMS 7.75", "PALMS 7.86", "PALMS 7.94", "PALMS X100"
+                "PALMS 3.67", "PALMS 4.71", "PALMS 5.75", "PALMS 5.85", "PALMS 5.87Z",
+                "PALMS 7.78", "PALMS 7.87", "PALMS 7.94", "PALMS X100"
             };
 
             var allCranes = await _dbContext.Crane.ToListAsync();
