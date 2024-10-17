@@ -11,14 +11,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new HoseGuard()
               {
                   Id = 1,
-                  Name = "Tömlő védő B3 és B6.1 talpaló esetén",
+                  Name = "Tömlő védő B3 és B6 talpaló esetén",
                   Code = "HG1",
                   Price = "105"
               },
               new HoseGuard
               {
                   Id = 2,
-                  Name = "Tömlő védő  B09 és B9 talpaló esetén",
+                  Name = "Tömlő védő B9 talpaló esetén",
                   Code = "HG2",
                   Price = "105"
               }
