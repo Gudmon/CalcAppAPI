@@ -20,15 +20,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new Grapple
               {
                   Id = 2,
-                  Name = "Kanál 0,16 Palms (csapos rotátorhoz)",
-                  Code = "C01",
-                  Price = "1105",
-                  Area = "0.16",
-                  Mass = "69"
-              },
-              new Grapple
-              {
-                  Id = 3,
                   Name = "Kanál 0,16 Palms (FL)",
                   Code = "C02",
                   Price = "1085",
@@ -37,7 +28,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 4,
+                  Id = 3,
                   Name = "Kanál 0,18 Palms (FL)",
                   Code = "C1",
                   Price = "1395",
@@ -46,7 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 5,
+                  Id = 4,
                   Name = "Kanál 0,23 Palms (FL)",
                   Code = "C3",
                   Price = "1745",
@@ -55,7 +46,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 6,
+                  Id = 5,
                   Name = "Kanál 0,25 Grippen (FL)",
                   Code = "C5.1",
                   Price = "3015",
@@ -64,16 +55,16 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 7,
+                  Id = 6,
                   Name = "Kanál 0,26 Palms (FL)",
                   Code = "C5.2",
-                  Price = "3090",
+                  Price = "2615",
                   Area = "0.26",
                   Mass = "174"
               },
               new Grapple
               {
-                  Id = 8,
+                  Id = 7,
                   Name = "Biomasszás kanál 0,21 Palms (FL)",
                   Code = "C36",
                   Price = "2230",
@@ -82,7 +73,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 9,
+                  Id = 8,
                   Name = "Biomasszás kanál 0,25 Grippen (FL)",
                   Code = "C7.1",
                   Price = "3345",
@@ -91,7 +82,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 10,
+                  Id = 9,
                   Name = "Biomasszás kanál 0,23 Palms (FL)",
                   Code = "C7.2",
                   Price = "3020",
@@ -100,7 +91,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 11,
+                  Id = 10,
                   Name = "Biomasszás kanál 0,25 Palms (FL)",
                   Code = "C11",
                   Price = "3450",
@@ -109,7 +100,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 12,
+                  Id = 11,
                   Name = "Palms 0,28-as kanál (FL)",
                   Code = "C10",
                   Price = "3125",
@@ -118,7 +109,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 13,
+                  Id = 12,
                   Name = "Palms vágó kanál a Nisula-tól",
                   Code = "C175",
                   Price = "6500",
@@ -127,8 +118,26 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
+                  Id = 13,
+                  Name = "Aprítékos kiegészítő 0,16 Palms (FL) kanálhoz",
+                  Code = "GB16",
+                  Price = "475",
+                  Area = null,
+                  Mass = "99"
+              },
+              new Grapple
+              {
                   Id = 14,
-                  Name = "Aprítékos kiegészítő C3-hoz",
+                  Name = "Aprítékos kiegészítő 0,18 Palms (FL) kanálhoz",
+                  Code = "GB18",
+                  Price = "610",
+                  Area = null,
+                  Mass = "130"
+              },
+              new Grapple
+              {
+                  Id = 15,
+                  Name = "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz",
                   Code = "GB3",
                   Price = "910",
                   Area = null,
@@ -136,7 +145,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new Grapple
               {
-                  Id = 15,
+                  Id = 16,
                   Name = "Palms 0,09 kanál",
                   Code = "C009",
                   Price = "620",

@@ -14,28 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Id = 1,
                    Name = "Védőhüvely a tömlőhöz",
                    Code = "PSH",
-                   Price = "70",
-               },
-               new ProtectionSleeves
-               {
-                   Id = 2,
-                   Name = "Védőhüvely a tömlőhöz",
-                   Code = "PSH",
-                   Price = "75",
-               },
-               new ProtectionSleeves
-               {
-                   Id = 3,
-                   Name = "Védőhüvely a tömlőhöz",
-                   Code = "PSH",
                    Price = "95",
-               },
-               new ProtectionSleeves
-               {
-                   Id = 4,
-                   Name = "Védőhüvely a tömlőhöz",
-                   Code = "PSH",
-                   Price = "105",
                });
         }
     }

@@ -11,46 +11,38 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               new ControlBlock
               {
                   Id = 1,
-                  Name = "A2 5/7 XY vezértömb, 195 bar",
-                  Code = "A2",
-                  Price = "795",
-                  Description = "Egyszerű és kompakt szelepblokk darukhoz teleszkópos hosszabbító gémek nélkül"
-              },
-              new ControlBlock
-              {
-                  Id = 2,
                   Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
                   Code = "A3.1",
-                  Price = "805",
+                  Price = "840",
                   Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
               },
               new ControlBlock
               {
-                  Id = 3,
+                  Id = 2,
                   Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
                   Code = "A4",
-                  Price = "1390",
+                  Price = "1410",
+                  Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
+              },
+              new ControlBlock
+              {
+                  Id = 3,
+                  Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
+                  Code = "A4.2",
+                  Price = "1445",
                   Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
               {
                   Id = 4,
-                  Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
-                  Code = "A4.2",
-                  Price = "1500",
+                  Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
+                  Code = "A7",
+                  Price = "1410",
                   Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
               {
                   Id = 5,
-                  Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
-                  Code = "A7",
-                  Price = "1360",
-                  Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
-              },
-              new ControlBlock
-              {
-                  Id = 6,
                   Name = "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
                   Code = "A12",
                   Price = "4720",
@@ -58,11 +50,19 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
               },
               new ControlBlock
               {
-                   Id = 7,
+                   Id = 6,
                    Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
                    Code = "A14",
-                   Price = "6635",
+                   Price = "6295",
                    Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
+              },
+              new ControlBlock
+              {
+                  Id = 7,
+                  Name = "A19 El.propo 8 szekciós, Walvoil DPX100, joystick, 215 bar + HPF",
+                  Code = "A19",
+                  Price = "6295",
+                  Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
               },
               new ControlBlock
               {

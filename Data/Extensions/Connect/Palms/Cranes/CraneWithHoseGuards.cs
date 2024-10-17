@@ -34,16 +34,15 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
 
                         //PALMS 5.87Z
 
-                        //PALMS 7.75
+                        //PALMS 7.78
                         new { CraneId = 9, HoseGuardId = 1 },
                         new { CraneId = 9, HoseGuardId = 2 },
 
-                        //PALMS 7.86
+                        //PALMS 7.87
                         new { CraneId = 10, HoseGuardId = 1 },
                         new { CraneId = 10, HoseGuardId = 2 },
 
                         //PALMS 7.94
-                        new { CraneId = 11, HoseGuardId = 1 },
                         new { CraneId = 11, HoseGuardId = 2 },
 
                         //PALMS X100

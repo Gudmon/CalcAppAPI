@@ -172,19 +172,28 @@ namespace CalcAppAPI.Controllers
         [HttpGet("cranes/{id}/light")]
         public async Task<ActionResult<CraneLight>> GetLight(int id)
         {
-            var lights = await _dbContext.CraneLight
+            var light = await _dbContext.CraneLight
                 .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
-            return Ok(lights);
+            return Ok(light);
         }
 
         [HttpGet("cranes/{id}/operatorseat")]
         public async Task<ActionResult<OperatorSeat>> GetOperatorSeat(int id)
         {
-            var operatorSeats = await _dbContext.OperatorSeat
+            var operatorSeat = await _dbContext.OperatorSeat
                 .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
-            return Ok(operatorSeats);
+            return Ok(operatorSeat);
+        }
+
+        [HttpGet("cranes/{id}/highperformanceoilfilter")]
+        public async Task<ActionResult<OperatorSeat>> GetHighPerformanceOilFilter(int id)
+        {
+            var highPerformanceOilFilter = await _dbContext.HighPerformanceOilFilter
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(highPerformanceOilFilter);
         }
 
         [HttpGet("cranes/{id}/oilcooler")]

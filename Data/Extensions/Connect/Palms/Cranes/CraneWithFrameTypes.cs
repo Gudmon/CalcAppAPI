@@ -35,62 +35,50 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         //PALMS 4.71
                         new { CraneId = 5, FrameTypeId = 1 },
                         new { CraneId = 5, FrameTypeId = 3 },
+                        new { CraneId = 5, FrameTypeId = 4 },
                         new { CraneId = 5, FrameTypeId = 5 },
 
-                        //PALMS 5.72
+                        //PALMS 5.75
                         new { CraneId = 6, FrameTypeId = 1 },
                         new { CraneId = 6, FrameTypeId = 3 },
                         new { CraneId = 6, FrameTypeId = 5 },
                         new { CraneId = 6, FrameTypeId = 6 },
-                        new { CraneId = 6, FrameTypeId = 7 },
-                        new { CraneId = 6, FrameTypeId = 9 },
-                        new { CraneId = 6, FrameTypeId = 10 },
+                        new { CraneId = 6, FrameTypeId = 8 },
 
                         //PALMS 5.85
                         new { CraneId = 7, FrameTypeId = 1 },
                         new { CraneId = 7, FrameTypeId = 3 },
                         new { CraneId = 7, FrameTypeId = 5 },
                         new { CraneId = 7, FrameTypeId = 6 },
-                        new { CraneId = 7, FrameTypeId = 7 },
-                        new { CraneId = 7, FrameTypeId = 9 },
-                        new { CraneId = 7, FrameTypeId = 10 },
+                        new { CraneId = 7, FrameTypeId = 8 },
 
                         //PALMS 5.87Z
-                        new { CraneId = 8, FrameTypeId = 8 },
+                        new { CraneId = 8, FrameTypeId = 7 },
 
-                        //PALMS 7.75
+                        //PALMS 7.78
                         new { CraneId = 9, FrameTypeId = 1 },
                         new { CraneId = 9, FrameTypeId = 5 },
                         new { CraneId = 9, FrameTypeId = 6 },
-                        new { CraneId = 9, FrameTypeId = 7 },
-                        new { CraneId = 9, FrameTypeId = 9 },
-                        new { CraneId = 9, FrameTypeId = 10 },
+                        new { CraneId = 9, FrameTypeId = 8 },
 
-                        //PALMS 7.86
+                        //PALMS 7.87
                         new { CraneId = 10, FrameTypeId = 1 },
                         new { CraneId = 10, FrameTypeId = 5 },
                         new { CraneId = 10, FrameTypeId = 6 },
-                        new { CraneId = 10, FrameTypeId = 7 },
-                        new { CraneId = 10, FrameTypeId = 9 },
-                        new { CraneId = 10, FrameTypeId = 10 },
+                        new { CraneId = 10, FrameTypeId = 8 },
 
                         //PALMS 7.94
                         new { CraneId = 11, FrameTypeId = 1 },
-                        new { CraneId = 11, FrameTypeId = 5 },
                         new { CraneId = 11, FrameTypeId = 6 },
-                        new { CraneId = 11, FrameTypeId = 7 },
-                        new { CraneId = 11, FrameTypeId = 9 },
-                        new { CraneId = 11, FrameTypeId = 10 },
+                        new { CraneId = 11, FrameTypeId = 8 },
 
                         //PALMS X100
                         new { CraneId = 12, FrameTypeId = 1 },
                         new { CraneId = 12, FrameTypeId = 6 },
-                        new { CraneId = 12, FrameTypeId = 7 },
-                        new { CraneId = 12, FrameTypeId = 9 },
-                        new { CraneId = 12, FrameTypeId = 10 },
+                        new { CraneId = 12, FrameTypeId = 8 },
 
                         //PALMS 1.42
-                        new { CraneId = 13, FrameTypeId = 11 }
+                        new { CraneId = 13, FrameTypeId = 9 }
                     )
 
                 );

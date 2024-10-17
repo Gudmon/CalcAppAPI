@@ -36,38 +36,30 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                new FrameType
                {
                    Id = 4,
-                   Name = "FD típusú economy letalpaló",
-                   Code = "B4e",
+                   Name = "FD típusú economy talpaló",
+                   Code = "B4",
                    Price = "2100",
                    Mass = "237"
                },
                new FrameType
                {
                    Id = 5,
-                   Name = "B6.1 FD típusú letalpaló, 3 pontos csatlakozással",
-                   Code = "B6.1",
-                   Price = "3090",
+                   Name = "FD típusú letalpaló, 3 pontos csatlakozással",
+                   Code = "B6",
+                   Price = "3020",
                    Mass = "449"
                },
                new FrameType
                {
                    Id = 6,
-                   Name = "B09 Különösen erős alap, talpaló lábak nélkül",
-                   Code = "B09",
-                   Price = "1155",
-                   Mass = "231"
-               },
-               new FrameType
-               {
-                   Id = 7,
-                   Name = "B9 FD típusú, különösen erős letalpaló (HD)",
+                   Name = "FD típusú, különösen erős letalpaló (HD)",
                    Code = "B9",
-                   Price = "3530",
+                   Price = "3520",
                    Mass = "474"
                },
                new FrameType
                {
-                   Id = 8,
+                   Id = 7,
                    Name = "Talpaló Z daruhoz",
                    Code = "B10",
                    Price = "3685",
@@ -75,15 +67,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                },
                new FrameType
                {
-                   Id = 9,
-                   Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül (csak A21-A42 vezértömbhöz)",
-                   Code = "B011",
-                   Price = "4830",
-                   Mass = "440"
-               },
-               new FrameType
-               {
-                   Id = 10,
+                   Id = 8,
                    Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
                    Code = "B11",
                    Price = "7300",
@@ -91,7 +75,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                },
                new FrameType
                {
-                   Id = 11,
+                   Id = 9,
                    Name = "FD talpaló",
                    Code = "B1",
                    Price = "695",

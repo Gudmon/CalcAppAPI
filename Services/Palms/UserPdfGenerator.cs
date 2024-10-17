@@ -52,6 +52,7 @@ namespace CalcAppAPI.Services.Palms
             { "Damping", "Csillapító" },
             { "CraneLight", "LED munkalámpák" },
             { "OperatorSeat", "Kezelő ülés" },
+            { "HighPerformanceOilFilter", "Nagynyomású olajszűrő" },
             { "CraneOilCooler", "Olajhűtő eleketromos csatlakozással" },
             { "RotatorBrake", "Rotátor fék" },
             { "JoystickHolder", "Joystick tartó" },

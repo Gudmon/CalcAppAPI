@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240729075145_cargo space ext")]
-    partial class cargospaceext
+    [Migration("20241017183319_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1264,7 +1264,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "vonórúd kormányzás + 40°",
+                            Name = "Vonórúd kormányzás + 40°",
                             Price = "0"
                         });
                 });
@@ -1961,46 +1961,38 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "A2",
-                            Description = "Egyszerű és kompakt szelepblokk darukhoz teleszkópos hosszabbító gémek nélkül",
-                            Name = "A2 5/7 XY vezértömb, 195 bar",
-                            Price = "795"
+                            Code = "A3.1",
+                            Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára",
+                            Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
+                            Price = "840"
                         },
                         new
                         {
                             Id = 2,
-                            Code = "A3.1",
-                            Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára",
-                            Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
-                            Price = "805"
+                            Code = "A4",
+                            Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
+                            Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
+                            Price = "1410"
                         },
                         new
                         {
                             Id = 3,
-                            Code = "A4",
+                            Code = "A4.2",
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
-                            Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
-                            Price = "1390"
+                            Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
+                            Price = "1445"
                         },
                         new
                         {
                             Id = 4,
-                            Code = "A4.2",
+                            Code = "A7",
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
-                            Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
-                            Price = "1500"
+                            Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
+                            Price = "1410"
                         },
                         new
                         {
                             Id = 5,
-                            Code = "A7",
-                            Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
-                            Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
-                            Price = "1360"
-                        },
-                        new
-                        {
-                            Id = 6,
                             Code = "A12",
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             Name = "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
@@ -2008,11 +2000,19 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 6,
                             Code = "A14",
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
-                            Price = "6635"
+                            Price = "6295"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "A19",
+                            Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
+                            Name = "A19 El.propo 8 szekciós, Walvoil DPX100, joystick, 215 bar + HPF",
+                            Price = "6295"
                         },
                         new
                         {
@@ -5168,38 +5168,30 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 4,
-                            Code = "B4e",
+                            Code = "B4",
                             Mass = "237",
-                            Name = "FD típusú economy letalpaló",
+                            Name = "FD típusú economy talpaló",
                             Price = "2100"
                         },
                         new
                         {
                             Id = 5,
-                            Code = "B6.1",
+                            Code = "B6",
                             Mass = "449",
-                            Name = "B6.1 FD típusú letalpaló, 3 pontos csatlakozással",
-                            Price = "3090"
+                            Name = "FD típusú letalpaló, 3 pontos csatlakozással",
+                            Price = "3020"
                         },
                         new
                         {
                             Id = 6,
-                            Code = "B09",
-                            Mass = "231",
-                            Name = "B09 Különösen erős alap, talpaló lábak nélkül",
-                            Price = "1155"
+                            Code = "B9",
+                            Mass = "474",
+                            Name = "FD típusú, különösen erős letalpaló (HD)",
+                            Price = "3520"
                         },
                         new
                         {
                             Id = 7,
-                            Code = "B9",
-                            Mass = "474",
-                            Name = "B9 FD típusú, különösen erős letalpaló (HD)",
-                            Price = "3530"
-                        },
-                        new
-                        {
-                            Id = 8,
                             Code = "B10",
                             Mass = "520",
                             Name = "Talpaló Z daruhoz",
@@ -5207,15 +5199,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 9,
-                            Code = "B011",
-                            Mass = "440",
-                            Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül (csak A21-A42 vezértömbhöz)",
-                            Price = "4830"
-                        },
-                        new
-                        {
-                            Id = 10,
+                            Id = 8,
                             Code = "B11",
                             Mass = "772",
                             Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
@@ -5223,7 +5207,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 11,
+                            Id = 9,
                             Code = "B1",
                             Mass = "50",
                             Name = "FD talpaló",
@@ -5273,15 +5257,6 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Area = "0.16",
-                            Code = "C01",
-                            Mass = "69",
-                            Name = "Kanál 0,16 Palms (csapos rotátorhoz)",
-                            Price = "1105"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Area = "0.16",
                             Code = "C02",
                             Mass = "66",
                             Name = "Kanál 0,16 Palms (FL)",
@@ -5289,7 +5264,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 4,
+                            Id = 3,
                             Area = "0.18",
                             Code = "C1",
                             Mass = "88",
@@ -5298,7 +5273,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 5,
+                            Id = 4,
                             Area = "0.23",
                             Code = "C3",
                             Mass = "114",
@@ -5307,7 +5282,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 5,
                             Area = "0.25",
                             Code = "C5.1",
                             Name = "Kanál 0,25 Grippen (FL)",
@@ -5315,16 +5290,16 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 6,
                             Area = "0.26",
                             Code = "C5.2",
                             Mass = "174",
                             Name = "Kanál 0,26 Palms (FL)",
-                            Price = "3090"
+                            Price = "2615"
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 7,
                             Area = "0.21",
                             Code = "C36",
                             Mass = "127",
@@ -5333,7 +5308,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 8,
                             Area = "0.25",
                             Code = "C7.1",
                             Name = "Biomasszás kanál 0,25 Grippen (FL)",
@@ -5341,7 +5316,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 10,
+                            Id = 9,
                             Area = "0.23",
                             Code = "C7.2",
                             Mass = "118",
@@ -5350,7 +5325,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 11,
+                            Id = 10,
                             Area = "0.25",
                             Code = "C11",
                             Mass = "223",
@@ -5359,7 +5334,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 12,
+                            Id = 11,
                             Area = "0.28",
                             Code = "C10",
                             Mass = "205",
@@ -5368,25 +5343,75 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            Id = 13,
+                            Id = 12,
                             Code = "C175",
                             Name = "Palms vágó kanál a Nisula-tól",
                             Price = "6500"
                         },
                         new
                         {
+                            Id = 13,
+                            Code = "GB16",
+                            Mass = "99",
+                            Name = "Aprítékos kiegészítő 0,16 Palms (FL) kanálhoz",
+                            Price = "475"
+                        },
+                        new
+                        {
                             Id = 14,
-                            Code = "GB3",
-                            Mass = "195",
-                            Name = "Aprítékos kiegészítő C3-hoz",
-                            Price = "910"
+                            Code = "GB18",
+                            Mass = "130",
+                            Name = "Aprítékos kiegészítő 0,18 Palms (FL) kanálhoz",
+                            Price = "610"
                         },
                         new
                         {
                             Id = 15,
+                            Code = "GB3",
+                            Mass = "195",
+                            Name = "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz",
+                            Price = "910"
+                        },
+                        new
+                        {
+                            Id = 16,
                             Code = "C009",
                             Name = "Palms 0,09 kanál",
                             Price = "620"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HighPerformanceOilFilter");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "HPF",
+                            Name = "Nagynyomású olajszűrő",
+                            Price = "395"
                         });
                 });
 
@@ -5563,28 +5588,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "PSH",
                             Name = "Védőhüvely a tömlőhöz",
-                            Price = "70"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "PSH",
-                            Name = "Védőhüvely a tömlőhöz",
-                            Price = "75"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Code = "PSH",
-                            Name = "Védőhüvely a tömlőhöz",
                             Price = "95"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Code = "PSH",
-                            Name = "Védőhüvely a tömlőhöz",
-                            Price = "105"
                         });
                 });
 
@@ -9144,6 +9148,9 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("ElectricalFloatingId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("HighPerformanceOilFilterId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("JoystickHolderId")
                         .HasColumnType("int");
 
@@ -9252,6 +9259,8 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ElectricalFloatingId");
 
+                    b.HasIndex("HighPerformanceOilFilterId");
+
                     b.HasIndex("JoystickHolderId");
 
                     b.HasIndex("LightId");
@@ -9284,17 +9293,17 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "360",
                             Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "570",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "540",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
+                            LinkageId = 1,
                             MaxReach = "4.2",
                             Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
-                            Price = "5165",
+                            Price = "5555",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
@@ -9317,6 +9326,8 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "400",
                             Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
+                            ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "530",
                             LiftAtFourMeters215Bar = "600",
@@ -9324,10 +9335,11 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "370",
                             LiftAtFullReach215Bar = "410",
                             LiftAtFullReach240Bar = "-",
+                            LinkageId = 1,
                             MaxReach = "5.4",
                             Name = "PALMS 2.54",
                             PillarSlewingAngle = "370",
-                            Price = "6285",
+                            Price = "6695",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
@@ -9338,6 +9350,7 @@ namespace CalcAppAPI.Migrations
                             SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,33",
                             TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
                             WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
@@ -9350,17 +9363,18 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            JoystickHolderId = 1,
+                            HighPerformanceOilFilterId = 1,
                             LiftAtFourMeters190Bar = "655",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "355",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
+                            LinkageId = 1,
                             MaxReach = "6.3",
                             Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
-                            Price = "6985",
+                            Price = "7245",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorMaximumLoad = "45",
@@ -9383,6 +9397,8 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "620",
                             Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
+                            ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "820",
                             LiftAtFourMeters215Bar = "910",
@@ -9391,10 +9407,11 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "480",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
+                            LinkageId = 1,
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
-                            Price = "8260",
+                            Price = "8335",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "30-45",
                             RotatorMaximumLoad = "45",
@@ -9405,6 +9422,7 @@ namespace CalcAppAPI.Migrations
                             SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,85",
                             TurningDeviceCounterPlateId = 1,
+                            ValveBlockId = 1,
                             WoodControlId = 1,
                             WorkingPressure = "190/215"
                         },
@@ -9419,6 +9437,7 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "710",
                             Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "960",
                             LiftAtFourMeters215Bar = "1040",
@@ -9427,12 +9446,13 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach215Bar = "535",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
+                            LinkageId = 1,
                             MaxReach = "7.1",
                             Name = "PALMS 4.71",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "370",
-                            Price = "9450",
-                            ProtectionSleevesId = 2,
+                            Price = "9740",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "45-70",
                             RotatorMaximumLoad = "45",
                             Series = "4",
@@ -9450,29 +9470,30 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 6,
                             BoomGuardId = 1,
-                            BrutLiftingTorque190Bar = "56",
-                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque190Bar = "63",
+                            BrutLiftingTorque215Bar = "69",
                             BrutLiftingTorque240Bar = "-",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
-                            CraneWeight = "820",
-                            Description = "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.",
+                            CraneWeight = "940",
+                            Description = "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1100",
-                            LiftAtFourMeters215Bar = "1240",
+                            LiftAtFourMeters190Bar = "1150",
+                            LiftAtFourMeters215Bar = "1350",
                             LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "620",
-                            LiftAtFullReach215Bar = "710",
+                            LiftAtFullReach190Bar = "540",
+                            LiftAtFullReach215Bar = "620",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
-                            MaxReach = "7.2",
-                            Name = "PALMS 5.72",
+                            MaxReach = "7.5",
+                            Name = "PALMS 5.75",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "11435",
-                            ProtectionSleevesId = 3,
+                            Price = "11865",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
@@ -9480,7 +9501,7 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
                             SupportLegCounterPlateId = 1,
-                            TelescopeLength = "1,95",
+                            TelescopeLength = "2,0",
                             TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
                             WoodControlId = 1,
@@ -9496,8 +9517,9 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "900",
-                            Description = "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.",
+                            Description = "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1050",
                             LiftAtFourMeters215Bar = "1220",
@@ -9511,8 +9533,8 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.85",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "14265",
-                            ProtectionSleevesId = 3,
+                            Price = "14450",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
@@ -9536,6 +9558,7 @@ namespace CalcAppAPI.Migrations
                             CraneOilCoolerId = 1,
                             CraneWeight = "995",
                             Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1235",
@@ -9549,8 +9572,8 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.87Z",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "340",
-                            Price = "15385",
-                            ProtectionSleevesId = 3,
+                            Price = "15585",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorMaximumLoad = "60",
                             Series = "5",
@@ -9567,29 +9590,30 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 9,
                             BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "74",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
+                            BrutLiftingTorque190Bar = "78",
+                            BrutLiftingTorque215Bar = "86",
+                            BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
-                            CraneWeight = "1170",
+                            CraneWeight = "1220",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
-                            LiftAtFourMeters190Bar = "1325",
-                            LiftAtFourMeters215Bar = "1585",
+                            LiftAtFourMeters190Bar = "1380",
+                            LiftAtFourMeters215Bar = "1580",
                             LiftAtFourMeters240Bar = "-",
-                            LiftAtFullReach190Bar = "610",
-                            LiftAtFullReach215Bar = "755",
+                            LiftAtFullReach190Bar = "580",
+                            LiftAtFullReach215Bar = "670",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
-                            MaxReach = "7.5",
-                            Name = "PALMS 7.75",
+                            MaxReach = "7.8",
+                            Name = "PALMS 7.78",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "14780",
-                            ProtectionSleevesId = 3,
+                            Price = "14850",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
@@ -9597,7 +9621,7 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             SupportLegCounterPlateId = 1,
-                            TelescopeLength = "2",
+                            TelescopeLength = "2,15",
                             TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
                             WoodControlId = 1,
@@ -9607,14 +9631,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 10,
                             BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "74",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
+                            BrutLiftingTorque190Bar = "78",
+                            BrutLiftingTorque215Bar = "86",
+                            BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1250",
                             LiftAtFourMeters215Bar = "1480",
@@ -9624,12 +9649,12 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
-                            MaxReach = "8.6",
-                            Name = "PALMS 7.86",
+                            MaxReach = "8.7",
+                            Name = "PALMS 7.87",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "19940",
-                            ProtectionSleevesId = 3,
+                            Price = "19315",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
@@ -9637,7 +9662,7 @@ namespace CalcAppAPI.Migrations
                             SlewingCylinder = "4",
                             SlewingTorque = "21",
                             SupportLegCounterPlateId = 1,
-                            TelescopeLength = "3,4",
+                            TelescopeLength = "3,8",
                             TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
                             WoodControlId = 1,
@@ -9647,14 +9672,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 11,
                             BoomGuardId = 2,
-                            BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "83",
-                            BrutLiftingTorque240Bar = "-",
+                            BrutLiftingTorque190Bar = "78",
+                            BrutLiftingTorque215Bar = "86",
+                            BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
                             ElectricalFloatingId = 1,
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1410",
@@ -9668,8 +9694,8 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 7.94",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "21105",
-                            ProtectionSleevesId = 3,
+                            Price = "20055",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorMaximumLoad = "60",
                             Series = "7",
@@ -9688,12 +9714,13 @@ namespace CalcAppAPI.Migrations
                             Id = 12,
                             BoomGuardId = 3,
                             BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "-",
-                            BrutLiftingTorque240Bar = "106",
+                            BrutLiftingTorque215Bar = "102",
+                            BrutLiftingTorque240Bar = "112",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
                             Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
+                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "-",
@@ -9707,8 +9734,8 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS X100",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "31460",
-                            ProtectionSleevesId = 4,
+                            Price = "29350",
+                            ProtectionSleevesId = 1,
                             RecommendedOilFlow = "120",
                             RotatorMaximumLoad = "100",
                             Series = "X",
@@ -10555,6 +10582,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 1,
+                            CraneId = 2
+                        },
+                        new
+                        {
                             ControlBlockId = 2,
                             CraneId = 2
                         },
@@ -10575,23 +10607,13 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            ControlBlockId = 6,
+                            ControlBlockId = 7,
                             CraneId = 2
                         },
                         new
                         {
-                            ControlBlockId = 8,
-                            CraneId = 2
-                        },
-                        new
-                        {
-                            ControlBlockId = 9,
-                            CraneId = 2
-                        },
-                        new
-                        {
-                            ControlBlockId = 11,
-                            CraneId = 2
+                            ControlBlockId = 1,
+                            CraneId = 3
                         },
                         new
                         {
@@ -10600,13 +10622,13 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            ControlBlockId = 3,
+                            ControlBlockId = 4,
                             CraneId = 3
                         },
                         new
                         {
-                            ControlBlockId = 5,
-                            CraneId = 3
+                            ControlBlockId = 1,
+                            CraneId = 4
                         },
                         new
                         {
@@ -10630,23 +10652,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            ControlBlockId = 6,
-                            CraneId = 4
-                        },
-                        new
-                        {
-                            ControlBlockId = 8,
-                            CraneId = 4
-                        },
-                        new
-                        {
-                            ControlBlockId = 9,
+                            ControlBlockId = 7,
                             CraneId = 4
                         },
                         new
                         {
                             ControlBlockId = 11,
                             CraneId = 4
+                        },
+                        new
+                        {
+                            ControlBlockId = 1,
+                            CraneId = 5
                         },
                         new
                         {
@@ -10675,6 +10692,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 7,
+                            CraneId = 5
+                        },
+                        new
+                        {
                             ControlBlockId = 8,
                             CraneId = 5
                         },
@@ -10685,8 +10707,28 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 10,
+                            CraneId = 5
+                        },
+                        new
+                        {
                             ControlBlockId = 11,
                             CraneId = 5
+                        },
+                        new
+                        {
+                            ControlBlockId = 12,
+                            CraneId = 5
+                        },
+                        new
+                        {
+                            ControlBlockId = 13,
+                            CraneId = 5
+                        },
+                        new
+                        {
+                            ControlBlockId = 2,
+                            CraneId = 6
                         },
                         new
                         {
@@ -10745,6 +10787,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 2,
+                            CraneId = 7
+                        },
+                        new
+                        {
                             ControlBlockId = 3,
                             CraneId = 7
                         },
@@ -10800,6 +10847,26 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 2,
+                            CraneId = 8
+                        },
+                        new
+                        {
+                            ControlBlockId = 3,
+                            CraneId = 8
+                        },
+                        new
+                        {
+                            ControlBlockId = 4,
+                            CraneId = 8
+                        },
+                        new
+                        {
+                            ControlBlockId = 5,
+                            CraneId = 8
+                        },
+                        new
+                        {
                             ControlBlockId = 6,
                             CraneId = 8
                         },
@@ -10840,6 +10907,16 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 3,
+                            CraneId = 9
+                        },
+                        new
+                        {
+                            ControlBlockId = 5,
+                            CraneId = 9
+                        },
+                        new
+                        {
                             ControlBlockId = 6,
                             CraneId = 9
                         },
@@ -10877,6 +10954,16 @@ namespace CalcAppAPI.Migrations
                         {
                             ControlBlockId = 13,
                             CraneId = 9
+                        },
+                        new
+                        {
+                            ControlBlockId = 3,
+                            CraneId = 10
+                        },
+                        new
+                        {
+                            ControlBlockId = 5,
+                            CraneId = 10
                         },
                         new
                         {
@@ -10925,6 +11012,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            ControlBlockId = 5,
+                            CraneId = 11
+                        },
+                        new
+                        {
                             ControlBlockId = 6,
                             CraneId = 11
                         },
@@ -10970,7 +11062,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            ControlBlockId = 7,
+                            ControlBlockId = 6,
                             CraneId = 12
                         },
                         new
@@ -11245,6 +11337,11 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 5,
+                            FrameTypeId = 4
+                        },
+                        new
+                        {
+                            CraneId = 5,
                             FrameTypeId = 5
                         },
                         new
@@ -11270,60 +11367,40 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 6,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            FrameTypeId = 10
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 1
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 3
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 6
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            FrameTypeId = 10
-                        },
-                        new
-                        {
-                            CraneId = 8,
                             FrameTypeId = 8
                         },
                         new
                         {
+                            CraneId = 7,
+                            FrameTypeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            FrameTypeId = 3
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            FrameTypeId = 5
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            FrameTypeId = 6
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            FrameTypeId = 8
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
                             CraneId = 9,
                             FrameTypeId = 1
                         },
@@ -11340,17 +11417,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 9,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            FrameTypeId = 10
+                            FrameTypeId = 8
                         },
                         new
                         {
@@ -11370,17 +11437,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 10,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            FrameTypeId = 10
+                            FrameTypeId = 8
                         },
                         new
                         {
@@ -11390,27 +11447,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 11,
-                            FrameTypeId = 5
-                        },
-                        new
-                        {
-                            CraneId = 11,
                             FrameTypeId = 6
                         },
                         new
                         {
                             CraneId = 11,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            FrameTypeId = 10
+                            FrameTypeId = 8
                         },
                         new
                         {
@@ -11425,22 +11467,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 12,
-                            FrameTypeId = 7
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            FrameTypeId = 9
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            FrameTypeId = 10
+                            FrameTypeId = 8
                         },
                         new
                         {
                             CraneId = 13,
-                            FrameTypeId = 11
+                            FrameTypeId = 9
                         });
                 });
 
@@ -11477,7 +11509,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 1,
-                            GrappleId = 4
+                            GrappleId = 13
+                        },
+                        new
+                        {
+                            CraneId = 1,
+                            GrappleId = 14
                         },
                         new
                         {
@@ -11497,7 +11534,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 2,
-                            GrappleId = 4
+                            GrappleId = 13
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            GrappleId = 14
                         },
                         new
                         {
@@ -11517,7 +11559,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 3,
-                            GrappleId = 4
+                            GrappleId = 13
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            GrappleId = 14
                         },
                         new
                         {
@@ -11542,12 +11589,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 4,
-                            GrappleId = 5
+                            GrappleId = 7
                         },
                         new
                         {
                             CraneId = 4,
-                            GrappleId = 8
+                            GrappleId = 13
                         },
                         new
                         {
@@ -11556,6 +11603,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 4,
+                            GrappleId = 15
+                        },
+                        new
+                        {
                             CraneId = 5,
                             GrappleId = 1
                         },
@@ -11577,12 +11629,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 5,
-                            GrappleId = 5
+                            GrappleId = 7
                         },
                         new
                         {
                             CraneId = 5,
-                            GrappleId = 8
+                            GrappleId = 12
                         },
                         new
                         {
@@ -11596,8 +11648,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 5,
+                            GrappleId = 15
+                        },
+                        new
+                        {
                             CraneId = 6,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 6,
+                            GrappleId = 3
                         },
                         new
                         {
@@ -11647,17 +11709,22 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 6,
-                            GrappleId = 13
+                            GrappleId = 14
                         },
                         new
                         {
                             CraneId = 6,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 7,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            GrappleId = 3
                         },
                         new
                         {
@@ -11707,17 +11774,22 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 7,
-                            GrappleId = 13
+                            GrappleId = 14
                         },
                         new
                         {
                             CraneId = 7,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 8,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            GrappleId = 3
                         },
                         new
                         {
@@ -11732,6 +11804,11 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 8,
+                            GrappleId = 6
+                        },
+                        new
+                        {
+                            CraneId = 8,
                             GrappleId = 7
                         },
                         new
@@ -11742,6 +11819,11 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 8,
+                            GrappleId = 9
+                        },
+                        new
+                        {
+                            CraneId = 8,
                             GrappleId = 10
                         },
                         new
@@ -11751,8 +11833,23 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 8,
+                            GrappleId = 14
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            GrappleId = 15
+                        },
+                        new
+                        {
                             CraneId = 9,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            GrappleId = 4
                         },
                         new
                         {
@@ -11792,17 +11889,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 9,
-                            GrappleId = 12
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 10,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            GrappleId = 4
                         },
                         new
                         {
@@ -11842,17 +11939,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 10,
-                            GrappleId = 12
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 11,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            GrappleId = 4
                         },
                         new
                         {
@@ -11892,17 +11989,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 11,
-                            GrappleId = 12
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 12,
                             GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            GrappleId = 4
                         },
                         new
                         {
@@ -11942,17 +12039,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 12,
-                            GrappleId = 12
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            GrappleId = 14
+                            GrappleId = 15
                         },
                         new
                         {
                             CraneId = 13,
-                            GrappleId = 15
+                            GrappleId = 16
                         });
                 });
 
@@ -12020,11 +12112,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 10,
                             HoseGuardId = 2
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            HoseGuardId = 1
                         },
                         new
                         {
@@ -12378,12 +12465,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 5,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
                             CraneId = 5,
-                            RotatorBrakeId = 4
+                            RotatorBrakeId = 5
                         },
                         new
                         {
@@ -13273,6 +13360,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 4,
                             WinchId = 2
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            WinchId = 3
                         },
                         new
                         {
@@ -17950,6 +18042,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", "HighPerformanceOilFilter")
+                        .WithMany("Crane")
+                        .HasForeignKey("HighPerformanceOilFilterId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", "JoystickHolder")
                         .WithMany("Crane")
                         .HasForeignKey("JoystickHolderId");
@@ -17997,6 +18093,8 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("CraneOilCooler");
 
                     b.Navigation("ElectricalFloating");
+
+                    b.Navigation("HighPerformanceOilFilter");
 
                     b.Navigation("JoystickHolder");
 
@@ -18642,6 +18740,11 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", b =>
                 {
                     b.Navigation("TrailerConfigurations");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", b =>
+                {
+                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", b =>

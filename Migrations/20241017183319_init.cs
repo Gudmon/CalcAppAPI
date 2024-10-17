@@ -302,6 +302,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HighPerformanceOilFilter",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HighPerformanceOilFilter", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "HoseGuard",
                 columns: table => new
                 {
@@ -1376,6 +1391,7 @@ namespace CalcAppAPI.Migrations
                     ValveBlockId = table.Column<int>(type: "int", nullable: true),
                     LightId = table.Column<int>(type: "int", nullable: true),
                     OperatorSeatId = table.Column<int>(type: "int", nullable: true),
+                    HighPerformanceOilFilterId = table.Column<int>(type: "int", nullable: true),
                     CraneOilCoolerId = table.Column<int>(type: "int", nullable: true),
                     JoystickHolderId = table.Column<int>(type: "int", nullable: true),
                     TurningDeviceCounterPlateId = table.Column<int>(type: "int", nullable: true),
@@ -1413,6 +1429,11 @@ namespace CalcAppAPI.Migrations
                         name: "FK_Crane_ElectricalFloating_ElectricalFloatingId",
                         column: x => x.ElectricalFloatingId,
                         principalTable: "ElectricalFloating",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Crane_HighPerformanceOilFilter_HighPerformanceOilFilterId",
+                        column: x => x.HighPerformanceOilFilterId,
+                        principalTable: "HighPerformanceOilFilter",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Crane_JoystickHolder_JoystickHolderId",
@@ -2358,13 +2379,13 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "Code", "Description", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "A2", "Egyszerű és kompakt szelepblokk darukhoz teleszkópos hosszabbító gémek nélkül", "A2 5/7 XY vezértömb, 195 bar", "795" },
-                    { 2, "A3.1", "Egyszerű és megbízható szelepblokk kisebb daruk számára", "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar", "805" },
-                    { 3, "A4", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar", "1390" },
-                    { 4, "A4.2", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar", "1500" },
-                    { 5, "A7", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)", "1360" },
-                    { 6, "A12", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF", "4720" },
-                    { 7, "A14", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF", "6635" },
+                    { 1, "A3.1", "Egyszerű és megbízható szelepblokk kisebb daruk számára", "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar", "840" },
+                    { 2, "A4", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar", "1410" },
+                    { 3, "A4.2", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar", "1445" },
+                    { 4, "A7", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)", "1410" },
+                    { 5, "A12", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF", "4720" },
+                    { 6, "A14", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF", "6295" },
+                    { 7, "A19", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A19 El.propo 8 szekciós, Walvoil DPX100, joystick, 215 bar + HPF", "6295" },
                     { 8, "A23", "Parker LC6 mini joystickek. Leginkább PALMS 5., 7. és X-sorozatú darukhoz használják", "A23 El.propo 8 szekciós, IQAN LC6, mini joystick-ok, (LS komp.) + Parker L90pro, 215/240 bar + HPF", "8470" },
                     { 9, "A235", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A235 El.propo 8 szekciós, IQAN LC5 joystick-ok, (LS komp) Parker L90pro, 215/240 bar + HPF", "8470" },
                     { 10, "A25.1", "Parker LC6 mini joystick kijelzővel", "A25.1 El.propo 8 szekciós (A23) + MD3 kijelző + HPF", "9415" },
@@ -2437,14 +2458,12 @@ namespace CalcAppAPI.Migrations
                     { 1, "B0", "", "Talpaló nélkül", "0" },
                     { 2, "B2.1", "174", "A típusú kis letalpaló, 3 pontos csatlakozással", "1680" },
                     { 3, "B3", "313", "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással", "2100" },
-                    { 4, "B4e", "237", "FD típusú economy letalpaló", "2100" },
-                    { 5, "B6.1", "449", "B6.1 FD típusú letalpaló, 3 pontos csatlakozással", "3090" },
-                    { 6, "B09", "231", "B09 Különösen erős alap, talpaló lábak nélkül", "1155" },
-                    { 7, "B9", "474", "B9 FD típusú, különösen erős letalpaló (HD)", "3530" },
-                    { 8, "B10", "520", "Talpaló Z daruhoz", "3685" },
-                    { 9, "B011", "440", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábak nélkül (csak A21-A42 vezértömbhöz)", "4830" },
-                    { 10, "B11", "772", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)", "7300" },
-                    { 11, "B1", "50", "FD talpaló", "695" }
+                    { 4, "B4", "237", "FD típusú economy talpaló", "2100" },
+                    { 5, "B6", "449", "FD típusú letalpaló, 3 pontos csatlakozással", "3020" },
+                    { 6, "B9", "474", "FD típusú, különösen erős letalpaló (HD)", "3520" },
+                    { 7, "B10", "520", "Talpaló Z daruhoz", "3685" },
+                    { 8, "B11", "772", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)", "7300" },
+                    { 9, "B1", "50", "FD talpaló", "695" }
                 });
 
             migrationBuilder.InsertData(
@@ -2453,20 +2472,21 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, null, "C0", null, "Rönkfogó kanál nélkül", "0" },
-                    { 2, "0.16", "C01", "69", "Kanál 0,16 Palms (csapos rotátorhoz)", "1105" },
-                    { 3, "0.16", "C02", "66", "Kanál 0,16 Palms (FL)", "1085" },
-                    { 4, "0.18", "C1", "88", "Kanál 0,18 Palms (FL)", "1395" },
-                    { 5, "0.23", "C3", "114", "Kanál 0,23 Palms (FL)", "1745" },
-                    { 6, "0.25", "C5.1", null, "Kanál 0,25 Grippen (FL)", "3015" },
-                    { 7, "0.26", "C5.2", "174", "Kanál 0,26 Palms (FL)", "3090" },
-                    { 8, "0.21", "C36", "127", "Biomasszás kanál 0,21 Palms (FL)", "2230" },
-                    { 9, "0.25", "C7.1", null, "Biomasszás kanál 0,25 Grippen (FL)", "3345" },
-                    { 10, "0.23", "C7.2", "118", "Biomasszás kanál 0,23 Palms (FL)", "3020" },
-                    { 11, "0.25", "C11", "223", "Biomasszás kanál 0,25 Palms (FL)", "3450" },
-                    { 12, "0.28", "C10", "205", "Palms 0,28-as kanál (FL)", "3125" },
-                    { 13, null, "C175", null, "Palms vágó kanál a Nisula-tól", "6500" },
-                    { 14, null, "GB3", "195", "Aprítékos kiegészítő C3-hoz", "910" },
-                    { 15, null, "C009", null, "Palms 0,09 kanál", "620" }
+                    { 2, "0.16", "C02", "66", "Kanál 0,16 Palms (FL)", "1085" },
+                    { 3, "0.18", "C1", "88", "Kanál 0,18 Palms (FL)", "1395" },
+                    { 4, "0.23", "C3", "114", "Kanál 0,23 Palms (FL)", "1745" },
+                    { 5, "0.25", "C5.1", null, "Kanál 0,25 Grippen (FL)", "3015" },
+                    { 6, "0.26", "C5.2", "174", "Kanál 0,26 Palms (FL)", "2615" },
+                    { 7, "0.21", "C36", "127", "Biomasszás kanál 0,21 Palms (FL)", "2230" },
+                    { 8, "0.25", "C7.1", null, "Biomasszás kanál 0,25 Grippen (FL)", "3345" },
+                    { 9, "0.23", "C7.2", "118", "Biomasszás kanál 0,23 Palms (FL)", "3020" },
+                    { 10, "0.25", "C11", "223", "Biomasszás kanál 0,25 Palms (FL)", "3450" },
+                    { 11, "0.28", "C10", "205", "Palms 0,28-as kanál (FL)", "3125" },
+                    { 12, null, "C175", null, "Palms vágó kanál a Nisula-tól", "6500" },
+                    { 13, null, "GB16", "99", "Aprítékos kiegészítő 0,16 Palms (FL) kanálhoz", "475" },
+                    { 14, null, "GB18", "130", "Aprítékos kiegészítő 0,18 Palms (FL) kanálhoz", "610" },
+                    { 15, null, "GB3", "195", "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz", "910" },
+                    { 16, null, "C009", null, "Palms 0,09 kanál", "620" }
                 });
 
             migrationBuilder.InsertData(
@@ -2482,6 +2502,11 @@ namespace CalcAppAPI.Migrations
                     { 1, "HBF", "Szénabála keret (D típushoz)", "2650" },
                     { 2, "HBF", "Szénabála keret (U típushoz)", "2650" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "HighPerformanceOilFilter",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "HPF", "Nagynyomású olajszűrő", "395" });
 
             migrationBuilder.InsertData(
                 table: "HoseGuard",
@@ -2621,7 +2646,7 @@ namespace CalcAppAPI.Migrations
             migrationBuilder.InsertData(
                 table: "KrpanDrawbarSteering",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "", "vonórúd kormányzás + 40°", "0" });
+                values: new object[] { 1, "", "Vonórúd kormányzás + 40°", "0" });
 
             migrationBuilder.InsertData(
                 table: "KrpanExtension",
@@ -2796,13 +2821,7 @@ namespace CalcAppAPI.Migrations
             migrationBuilder.InsertData(
                 table: "ProtectionSleeves",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[,]
-                {
-                    { 1, "PSH", "Védőhüvely a tömlőhöz", "70" },
-                    { 2, "PSH", "Védőhüvely a tömlőhöz", "75" },
-                    { 3, "PSH", "Védőhüvely a tömlőhöz", "95" },
-                    { 4, "PSH", "Védőhüvely a tömlőhöz", "105" }
-                });
+                values: new object[] { 1, "PSH", "Védőhüvely a tömlőhöz", "95" });
 
             migrationBuilder.InsertData(
                 table: "Rotator",
@@ -3076,22 +3095,22 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "Crane",
-                columns: new[] { "Id", "BoomGuardId", "BrutLiftingTorque190Bar", "BrutLiftingTorque215Bar", "BrutLiftingTorque240Bar", "CoverId", "CraneOilCoolerId", "CraneWeight", "Description", "ElectricalFloatingId", "JoystickHolderId", "LiftAtFourMeters190Bar", "LiftAtFourMeters215Bar", "LiftAtFourMeters240Bar", "LiftAtFullReach190Bar", "LiftAtFullReach215Bar", "LiftAtFullReach240Bar", "LightId", "LinkageId", "MaxReach", "Name", "OperatorSeatId", "PillarSlewingAngle", "Price", "ProtectionSleevesId", "RecommendedOilFlow", "RotatorMaximumLoad", "Series", "ShippingId", "SlewingCylinder", "SlewingTorque", "SupportLegCounterPlateId", "TelescopeLength", "TurningDeviceCounterPlateId", "ValveBlockId", "WoodControlId", "WorkingPressure" },
+                columns: new[] { "Id", "BoomGuardId", "BrutLiftingTorque190Bar", "BrutLiftingTorque215Bar", "BrutLiftingTorque240Bar", "CoverId", "CraneOilCoolerId", "CraneWeight", "Description", "ElectricalFloatingId", "HighPerformanceOilFilterId", "JoystickHolderId", "LiftAtFourMeters190Bar", "LiftAtFourMeters215Bar", "LiftAtFourMeters240Bar", "LiftAtFullReach190Bar", "LiftAtFullReach215Bar", "LiftAtFullReach240Bar", "LightId", "LinkageId", "MaxReach", "Name", "OperatorSeatId", "PillarSlewingAngle", "Price", "ProtectionSleevesId", "RecommendedOilFlow", "RotatorMaximumLoad", "Series", "ShippingId", "SlewingCylinder", "SlewingTorque", "SupportLegCounterPlateId", "TelescopeLength", "TurningDeviceCounterPlateId", "ValveBlockId", "WoodControlId", "WorkingPressure" },
                 values: new object[,]
                 {
-                    { 1, null, "26", "-", "-", 1, null, "360", "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, 1, "570", "-", "-", "540", "-", "-", null, null, "4.2", "PALMS 2.42", null, "370", "5165", 1, "20-35", "45", "2", 2, "4", "7.8", 1, "-", 1, null, 1, "190" },
-                    { 2, null, "26", "29", "-", 1, null, "400", "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, 1, "530", "600", "-", "370", "410", "-", null, null, "5.4", "PALMS 2.54", null, "370", "6285", 1, "20-35", "45", "2", 2, "4", "7.8", 1, "1,33", 1, null, 1, "190/215" },
-                    { 3, null, "36", "-", "-", 1, null, "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, 1, "655", "-", "-", "355", "-", "-", null, null, "6.3", "PALMS 3.63", null, "370", "6985", 1, "20-35", "45", "3", 2, "4", "9", 1, "1,85", 1, null, 1, "190" },
-                    { 4, null, "41", "46", "-", 1, null, "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", null, 1, "820", "910", "-", "430", "480", "-", 1, null, "6.7", "PALMS 3.67", null, "370", "8260", 1, "30-45", "45", "3", 2, "4", "12", 1, "1,85", 1, null, 1, "190/215" },
-                    { 5, null, "48", "54", "-", 1, 1, "710", "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival", 1, 1, "960", "1040", "-", "480", "535", "-", 1, null, "7.1", "PALMS 4.71", 1, "370", "9450", 2, "45-70", "45", "4", 2, "4", "15", 1, "1,95", 1, 1, 1, "190/215" },
-                    { 6, 1, "56", "63", "-", 1, 1, "820", "Naponta használt, professzionális erdészeti műveletekre tervezett daru lágy talajon, közepes méretű traktorokhoz optimalizálva, és kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1100", "1240", "-", "620", "710", "-", 1, 1, "7.2", "PALMS 5.72", 1, "380", "11435", 3, "50-90", "60", "5", 2, "4", "17", 1, "1,95", 1, 1, 1, "190/215" },
-                    { 7, 1, "56", "63", "-", 1, 1, "900", "Professzionális erdészeti daru, dupla teleszkópos kinyúlási boommal felszerelve. Kifejezetten tervezve a mindennapi erdészeti műveletekhez lágy talajon. Optimalizálva a közepes méretű traktorok használatához, és kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1050", "1220", "-", "450", "520", "-", 1, 1, "8.5", "PALMS 5.85", 1, "380", "14265", 3, "50-90", "60", "5", 2, "4", "17", 1, "3,3", 1, 1, 1, "190/215" },
-                    { 8, null, "-", "63", "-", 1, 1, "995", "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.", null, 1, "-", "1235", "-", "-", "490 (8,4 m)", "-", 1, 1, "8.7", "PALMS 5.87Z", 1, "340", "15385", 3, "50-90", "60", "5", 2, "4", "17", 1, "3,3", 1, 1, null, "215" },
-                    { 9, 2, "74", "83", "-", 1, 1, "1170", "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.", 1, 1, "1325", "1585", "-", "610", "755", "-", 1, 1, "7.5", "PALMS 7.75", 1, "380", "14780", 3, "60-120", "60", "7", 2, "4", "21", 1, "2", 1, 1, 1, "190/215" },
-                    { 10, 2, "74", "83", "-", 1, 1, "1280", "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.", 1, 1, "1250", "1480", "-", "530", "630", "-", 1, 1, "8.6", "PALMS 7.86", 1, "380", "19940", 3, "60-120", "60", "7", 2, "4", "21", 1, "3,4", 1, 1, 1, "190/215" },
-                    { 11, 2, "-", "83", "-", 1, 1, "1310", "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.", 1, 1, "-", "1410", "-", "-", "540", "-", 1, 1, "9.4", "PALMS 7.94", 1, "380", "21105", 3, "60-120", "60", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "215" },
-                    { 12, 3, "-", "-", "106", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "31460", 4, "120", "100", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" },
-                    { 13, null, "11,5", "-", "-", null, null, "185", "", null, null, "-", "-", "-", "-", "-", "-", null, null, "4.2", "PALMS 1.42", null, "330", "3025", null, "-", "10", "1", 2, "2", "2.1", null, "1,2", null, null, null, "180" }
+                    { 1, null, "26", "-", "-", 1, null, "360", "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, null, null, "570", "-", "-", "540", "-", "-", null, 1, "4.2", "PALMS 2.42", null, "370", "5555", 1, "20-35", "45", "2", 2, "4", "7.8", 1, "-", 1, null, 1, "190" },
+                    { 2, null, "26", "29", "-", 1, null, "400", "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", 1, 1, 1, "530", "600", "-", "370", "410", "-", null, 1, "5.4", "PALMS 2.54", null, "370", "6695", 1, "20-35", "45", "2", 2, "4", "7.8", 1, "1,33", 1, 1, 1, "190/215" },
+                    { 3, null, "36", "-", "-", 1, null, "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, 1, null, "655", "-", "-", "355", "-", "-", null, 1, "6.3", "PALMS 3.63", null, "370", "7245", 1, "20-35", "45", "3", 2, "4", "9", 1, "1,85", 1, null, 1, "190" },
+                    { 4, null, "41", "46", "-", 1, null, "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", 1, 1, 1, "820", "910", "-", "430", "480", "-", 1, 1, "6.7", "PALMS 3.67", null, "370", "8335", 1, "30-45", "45", "3", 2, "4", "12", 1, "1,85", 1, 1, 1, "190/215" },
+                    { 5, null, "48", "54", "-", 1, 1, "710", "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival", 1, 1, 1, "960", "1040", "-", "480", "535", "-", 1, 1, "7.1", "PALMS 4.71", 1, "370", "9740", 1, "45-70", "45", "4", 2, "4", "15", 1, "1,95", 1, 1, 1, "190/215" },
+                    { 6, 1, "63", "69", "-", 1, 1, "940", "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, 1, "1150", "1350", "-", "540", "620", "-", 1, 1, "7.5", "PALMS 5.75", 1, "380", "11865", 1, "50-90", "60", "5", 2, "4", "17", 1, "2,0", 1, 1, 1, "190/215" },
+                    { 7, 1, "56", "63", "-", 1, 1, "900", "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, 1, "1050", "1220", "-", "450", "520", "-", 1, 1, "8.5", "PALMS 5.85", 1, "380", "14450", 1, "50-90", "60", "5", 2, "4", "17", 1, "3,3", 1, 1, 1, "190/215" },
+                    { 8, null, "-", "63", "-", 1, 1, "995", "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.", null, 1, 1, "-", "1235", "-", "-", "490 (8,4 m)", "-", 1, 1, "8.7", "PALMS 5.87Z", 1, "340", "15585", 1, "50-90", "60", "5", 2, "4", "17", 1, "3,3", 1, 1, null, "215" },
+                    { 9, 2, "78", "86", "96", 1, 1, "1220", "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.", 1, 1, 1, "1380", "1580", "-", "580", "670", "-", 1, 1, "7.8", "PALMS 7.78", 1, "380", "14850", 1, "60-120", "60", "7", 2, "4", "21", 1, "2,15", 1, 1, 1, "190/215" },
+                    { 10, 2, "78", "86", "96", 1, 1, "1280", "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.", 1, 1, 1, "1250", "1480", "-", "530", "630", "-", 1, 1, "8.7", "PALMS 7.87", 1, "380", "19315", 1, "60-120", "60", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "190/215" },
+                    { 11, 2, "78", "86", "96", 1, 1, "1310", "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.", 1, 1, 1, "-", "1410", "-", "-", "540", "-", 1, 1, "9.4", "PALMS 7.94", 1, "380", "20055", 1, "60-120", "60", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "215" },
+                    { 12, 3, "-", "102", "112", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "29350", 1, "120", "100", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" },
+                    { 13, null, "11,5", "-", "-", null, null, "185", "", null, null, null, "-", "-", "-", "-", "-", "-", null, null, "4.2", "PALMS 1.42", null, "330", "3025", null, "-", "10", "1", 2, "2", "2.1", null, "1,2", null, null, null, "180" }
                 });
 
             migrationBuilder.InsertData(
@@ -3104,9 +3123,9 @@ namespace CalcAppAPI.Migrations
                     { 3, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, null, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "10000", "3582", "4477", "GP 10 DF", "11430", "5919", "6814", "2067", "1690" },
                     { 4, "2/180×100x6", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, 1, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "12000", "3975", "4755", "GP 12 DF", "13060", "6209", "7100", "2122", "2100" },
                     { 5, "2/200×100x8", "", "40", "2", 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, null, 1, 1, 2, 1, 1, null, null, null, 2, 1, 1, 1, "14000", "4325", "5105", "GP 14 DF", "14915", "6559", "7545", "2222", "2300" },
-                    { 6, "2/180×100x6", "", "40", "2", 1, 1, 2, 2, 1, null, 1, 1, 2, 1, null, null, 2, 1, 1, 1, 1, null, null, 1, null, 1, 1, "11000", "3707", "4487", "GP 11 D", "13510", "5944", "6724", "2152", "1734" },
-                    { 7, "2/200×100x6", "", "40", "2", 1, 1, 3, 3, 1, null, 1, 1, 2, 1, null, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "13000", "3975", "4755", "GP 13 D", "15310", "6334", "7144", "2200", "2144" },
-                    { 8, "2/200×100x8", "", "40", "2", 1, 1, 4, 4, 1, null, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "14800", "4325", "5105", "GP 15 D", "16960", "6686", "6686", "2318", "2352" }
+                    { 6, "2/180×100x6", "", "40", "2", 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, null, null, 2, 1, 1, 1, 1, null, null, 1, null, 1, 1, "11000", "3707", "4487", "GP 11 D", "13510", "5944", "6724", "2152", "1734" },
+                    { 7, "2/200×100x6", "", "40", "2", 1, 1, 3, 3, 1, 1, 1, 1, 2, 1, null, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "13000", "3975", "4755", "GP 13 D", "15310", "6334", "7144", "2200", "2144" },
+                    { 8, "2/200×100x8", "", "40", "2", 1, 1, 4, 4, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, null, 1, 1, null, 1, 1, "14800", "4325", "5105", "GP 15 D", "16960", "6686", "6686", "2318", "2352" }
                 });
 
             migrationBuilder.InsertData(
@@ -3288,30 +3307,42 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, 1 },
+                    { 1, 2 },
+                    { 1, 3 },
+                    { 1, 4 },
+                    { 1, 5 },
                     { 2, 2 },
                     { 2, 3 },
                     { 2, 4 },
                     { 2, 5 },
+                    { 2, 6 },
+                    { 2, 7 },
+                    { 2, 8 },
                     { 2, 13 },
                     { 3, 2 },
-                    { 3, 3 },
                     { 3, 4 },
                     { 3, 5 },
                     { 3, 6 },
                     { 3, 7 },
+                    { 3, 8 },
+                    { 3, 9 },
+                    { 3, 10 },
                     { 4, 2 },
+                    { 4, 3 },
                     { 4, 4 },
                     { 4, 5 },
                     { 4, 6 },
                     { 4, 7 },
+                    { 4, 8 },
                     { 5, 2 },
-                    { 5, 3 },
                     { 5, 4 },
                     { 5, 5 },
                     { 5, 6 },
                     { 5, 7 },
-                    { 6, 2 },
-                    { 6, 4 },
+                    { 5, 8 },
+                    { 5, 9 },
+                    { 5, 10 },
+                    { 5, 11 },
                     { 6, 5 },
                     { 6, 6 },
                     { 6, 7 },
@@ -3319,15 +3350,16 @@ namespace CalcAppAPI.Migrations
                     { 6, 9 },
                     { 6, 10 },
                     { 6, 11 },
+                    { 6, 12 },
+                    { 7, 2 },
+                    { 7, 4 },
+                    { 7, 5 },
                     { 7, 6 },
                     { 7, 7 },
                     { 7, 8 },
                     { 7, 9 },
                     { 7, 10 },
                     { 7, 11 },
-                    { 7, 12 },
-                    { 8, 2 },
-                    { 8, 4 },
                     { 8, 5 },
                     { 8, 6 },
                     { 8, 7 },
@@ -3336,8 +3368,6 @@ namespace CalcAppAPI.Migrations
                     { 8, 10 },
                     { 8, 11 },
                     { 8, 12 },
-                    { 9, 2 },
-                    { 9, 4 },
                     { 9, 5 },
                     { 9, 6 },
                     { 9, 7 },
@@ -3346,6 +3376,7 @@ namespace CalcAppAPI.Migrations
                     { 9, 10 },
                     { 9, 11 },
                     { 9, 12 },
+                    { 10, 5 },
                     { 10, 6 },
                     { 10, 7 },
                     { 10, 8 },
@@ -3353,7 +3384,6 @@ namespace CalcAppAPI.Migrations
                     { 10, 10 },
                     { 10, 11 },
                     { 10, 12 },
-                    { 11, 2 },
                     { 11, 4 },
                     { 11, 5 },
                     { 11, 6 },
@@ -3363,6 +3393,7 @@ namespace CalcAppAPI.Migrations
                     { 11, 10 },
                     { 11, 11 },
                     { 11, 12 },
+                    { 12, 5 },
                     { 12, 6 },
                     { 12, 7 },
                     { 12, 8 },
@@ -3370,6 +3401,7 @@ namespace CalcAppAPI.Migrations
                     { 12, 10 },
                     { 12, 11 },
                     { 12, 12 },
+                    { 13, 5 },
                     { 13, 6 },
                     { 13, 7 },
                     { 13, 8 },
@@ -4155,46 +4187,34 @@ namespace CalcAppAPI.Migrations
                     { 4, 5 },
                     { 5, 1 },
                     { 5, 3 },
+                    { 5, 4 },
                     { 5, 5 },
                     { 6, 1 },
                     { 6, 3 },
                     { 6, 5 },
                     { 6, 6 },
-                    { 6, 7 },
-                    { 6, 9 },
-                    { 6, 10 },
+                    { 6, 8 },
                     { 7, 1 },
                     { 7, 3 },
                     { 7, 5 },
                     { 7, 6 },
-                    { 7, 7 },
-                    { 7, 9 },
-                    { 7, 10 },
-                    { 8, 8 },
+                    { 7, 8 },
+                    { 8, 7 },
                     { 9, 1 },
                     { 9, 5 },
                     { 9, 6 },
-                    { 9, 7 },
-                    { 9, 9 },
-                    { 9, 10 },
+                    { 9, 8 },
                     { 10, 1 },
                     { 10, 5 },
                     { 10, 6 },
-                    { 10, 7 },
-                    { 10, 9 },
-                    { 10, 10 },
+                    { 10, 8 },
                     { 11, 1 },
-                    { 11, 5 },
                     { 11, 6 },
-                    { 11, 7 },
-                    { 11, 9 },
-                    { 11, 10 },
+                    { 11, 8 },
                     { 12, 1 },
                     { 12, 6 },
-                    { 12, 7 },
-                    { 12, 9 },
-                    { 12, 10 },
-                    { 13, 11 }
+                    { 12, 8 },
+                    { 13, 9 }
                 });
 
             migrationBuilder.InsertData(
@@ -4205,31 +4225,37 @@ namespace CalcAppAPI.Migrations
                     { 1, 1 },
                     { 1, 2 },
                     { 1, 3 },
-                    { 1, 4 },
+                    { 1, 13 },
+                    { 1, 14 },
                     { 2, 1 },
                     { 2, 2 },
                     { 2, 3 },
-                    { 2, 4 },
+                    { 2, 13 },
+                    { 2, 14 },
                     { 3, 1 },
                     { 3, 2 },
                     { 3, 3 },
-                    { 3, 4 },
+                    { 3, 13 },
+                    { 3, 14 },
                     { 4, 1 },
                     { 4, 2 },
                     { 4, 3 },
                     { 4, 4 },
-                    { 4, 5 },
-                    { 4, 8 },
+                    { 4, 7 },
+                    { 4, 13 },
                     { 4, 14 },
+                    { 4, 15 },
                     { 5, 1 },
                     { 5, 2 },
                     { 5, 3 },
                     { 5, 4 },
-                    { 5, 5 },
-                    { 5, 8 },
+                    { 5, 7 },
+                    { 5, 12 },
                     { 5, 13 },
                     { 5, 14 },
+                    { 5, 15 },
                     { 6, 1 },
+                    { 6, 3 },
                     { 6, 4 },
                     { 6, 5 },
                     { 6, 6 },
@@ -4239,9 +4265,10 @@ namespace CalcAppAPI.Migrations
                     { 6, 10 },
                     { 6, 11 },
                     { 6, 12 },
-                    { 6, 13 },
                     { 6, 14 },
+                    { 6, 15 },
                     { 7, 1 },
+                    { 7, 3 },
                     { 7, 4 },
                     { 7, 5 },
                     { 7, 6 },
@@ -4251,16 +4278,22 @@ namespace CalcAppAPI.Migrations
                     { 7, 10 },
                     { 7, 11 },
                     { 7, 12 },
-                    { 7, 13 },
                     { 7, 14 },
+                    { 7, 15 },
                     { 8, 1 },
+                    { 8, 3 },
                     { 8, 4 },
                     { 8, 5 },
+                    { 8, 6 },
                     { 8, 7 },
                     { 8, 8 },
+                    { 8, 9 },
                     { 8, 10 },
                     { 8, 11 },
+                    { 8, 14 },
+                    { 8, 15 },
                     { 9, 1 },
+                    { 9, 4 },
                     { 9, 5 },
                     { 9, 6 },
                     { 9, 7 },
@@ -4268,9 +4301,9 @@ namespace CalcAppAPI.Migrations
                     { 9, 9 },
                     { 9, 10 },
                     { 9, 11 },
-                    { 9, 12 },
-                    { 9, 14 },
+                    { 9, 15 },
                     { 10, 1 },
+                    { 10, 4 },
                     { 10, 5 },
                     { 10, 6 },
                     { 10, 7 },
@@ -4278,9 +4311,9 @@ namespace CalcAppAPI.Migrations
                     { 10, 9 },
                     { 10, 10 },
                     { 10, 11 },
-                    { 10, 12 },
-                    { 10, 14 },
+                    { 10, 15 },
                     { 11, 1 },
+                    { 11, 4 },
                     { 11, 5 },
                     { 11, 6 },
                     { 11, 7 },
@@ -4288,9 +4321,9 @@ namespace CalcAppAPI.Migrations
                     { 11, 9 },
                     { 11, 10 },
                     { 11, 11 },
-                    { 11, 12 },
-                    { 11, 14 },
+                    { 11, 15 },
                     { 12, 1 },
+                    { 12, 4 },
                     { 12, 5 },
                     { 12, 6 },
                     { 12, 7 },
@@ -4298,9 +4331,8 @@ namespace CalcAppAPI.Migrations
                     { 12, 9 },
                     { 12, 10 },
                     { 12, 11 },
-                    { 12, 12 },
-                    { 12, 14 },
-                    { 13, 15 }
+                    { 12, 15 },
+                    { 13, 16 }
                 });
 
             migrationBuilder.InsertData(
@@ -4318,7 +4350,6 @@ namespace CalcAppAPI.Migrations
                     { 9, 2 },
                     { 10, 1 },
                     { 10, 2 },
-                    { 11, 1 },
                     { 11, 2 },
                     { 12, 2 }
                 });
@@ -4830,8 +4861,8 @@ namespace CalcAppAPI.Migrations
                     { 4, 2 },
                     { 4, 4 },
                     { 5, 1 },
-                    { 5, 2 },
-                    { 5, 4 },
+                    { 5, 3 },
+                    { 5, 5 },
                     { 6, 1 },
                     { 6, 3 },
                     { 6, 5 },
@@ -5208,6 +5239,7 @@ namespace CalcAppAPI.Migrations
                     { 3, 2 },
                     { 4, 1 },
                     { 4, 2 },
+                    { 4, 3 },
                     { 5, 1 },
                     { 5, 2 },
                     { 5, 3 },
@@ -5268,6 +5300,11 @@ namespace CalcAppAPI.Migrations
                 name: "IX_Crane_ElectricalFloatingId",
                 table: "Crane",
                 column: "ElectricalFloatingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Crane_HighPerformanceOilFilterId",
+                table: "Crane",
+                column: "HighPerformanceOilFilterId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Crane_JoystickHolderId",
@@ -5956,6 +5993,9 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "ElectricalFloating");
+
+            migrationBuilder.DropTable(
+                name: "HighPerformanceOilFilter");
 
             migrationBuilder.DropTable(
                 name: "JoystickHolder");

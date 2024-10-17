@@ -47,6 +47,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? Damping { get; set; }
         public PdfItem? CraneLight { get; set; }
         public PdfItem? OperatorSeat { get; set; }
+        public PdfItem? HighPerformanceOilFilter { get; set; }
         public PdfItem? CraneOilCooler { get; set; }
         public PdfItem? RotatorBrake { get; set; }
         public PdfItem? JoystickHolder { get; set; }

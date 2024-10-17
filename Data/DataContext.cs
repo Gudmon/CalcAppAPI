@@ -55,6 +55,7 @@ namespace CalcAppAPI.Data
         public DbSet<Damping> Damping { get; set; }
         public DbSet<CraneLight> CraneLight { get; set; }
         public DbSet<OperatorSeat> OperatorSeat { get; set; }
+        public DbSet<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; }
         public DbSet<CraneOilCooler> CraneOilCooler { get; set; }
         public DbSet<RotatorBrake> RotatorBrake { get; set; }
         public DbSet<JoystickHolder> JoystickHolder { get; set; }
@@ -149,6 +150,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsDampings();
             modelBuilder.ConfigureMultiplePalmsCraneLights();
             modelBuilder.ConfigureMultiplePalmsCraneOperatorSeats();
+            modelBuilder.ConfigureMultiplePalmsCraneHighPerformanceOilFilters();
             modelBuilder.ConfigureMultiplePalmsCraneOilCoolers();
             modelBuilder.ConfigureMultiplePalmsCraneRotatorBrakes();
             modelBuilder.ConfigureMultiplePalmsCraneJoyStickHolders();
@@ -452,6 +454,13 @@ namespace CalcAppAPI.Data
                 .HasMany(o => o.Crane)
                 .WithOne(o => o.OperatorSeat)
                 .HasForeignKey(o => o.OperatorSeatId)
+                .IsRequired(false);
+
+            //HIGH PERFORMANCE OIL FILTER
+            modelBuilder.Entity<HighPerformanceOilFilter>()
+                .HasMany(o => o.Crane)
+                .WithOne(o => o.HighPerformanceOilFilter)
+                .HasForeignKey(o => o.HighPerformanceOilFilterId)
                 .IsRequired(false);
 
             //CRANE OILCOOLER
