@@ -14,61 +14,52 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                 .UsingEntity(j => j.ToTable("SupportLegTrailer")
                     .HasData
                     (
+                        //PALMS 6S
                         new { TrailerId = 1, SupportLegId = 1 },
 
+                        //PALMS 8SX
                         new { TrailerId = 2, SupportLegId = 2 },
                         new { TrailerId = 2, SupportLegId = 3 },
 
+                        //PALMS 8D
                         new { TrailerId = 3, SupportLegId = 2 },
                         new { TrailerId = 3, SupportLegId = 3 },
 
+                        //PALMS 9SC
                         new { TrailerId = 4, SupportLegId = 2 },
                         new { TrailerId = 4, SupportLegId = 3 },
 
+                        //PALMS 10D
                         new { TrailerId = 5, SupportLegId = 2 },
                         new { TrailerId = 5, SupportLegId = 3 },
 
+                        //PALMS 12D
                         new { TrailerId = 6, SupportLegId = 2 },
                         new { TrailerId = 6, SupportLegId = 3 },
 
+                        //PALMS 14D
                         new { TrailerId = 7, SupportLegId = 2 },
                         new { TrailerId = 7, SupportLegId = 3 },
 
+                        //PALMS 10U
                         new { TrailerId = 8, SupportLegId = 2 },
                         new { TrailerId = 8, SupportLegId = 3 },
 
+                        //PALMS 12U
                         new { TrailerId = 9, SupportLegId = 2 },
                         new { TrailerId = 9, SupportLegId = 3 },
 
+                        //PALMS 12UAWD
                         new { TrailerId = 10, SupportLegId = 2 },
                         new { TrailerId = 10, SupportLegId = 3 },
 
+                        //PALMS 15U
                         new { TrailerId = 11, SupportLegId = 2 },
                         new { TrailerId = 11, SupportLegId = 3 },
 
+                        //PALMS 15UAWD
                         new { TrailerId = 12, SupportLegId = 2 },
-                        new { TrailerId = 12, SupportLegId = 3 },
-
-                        new { TrailerId = 13, SupportLegId = 2 },
-                        new { TrailerId = 13, SupportLegId = 3 },
-
-                        new { TrailerId = 14, SupportLegId = 2 },
-                        new { TrailerId = 14, SupportLegId = 3 },
-
-                        new { TrailerId = 15, SupportLegId = 2 },
-                        new { TrailerId = 15, SupportLegId = 3 },
-
-                        new { TrailerId = 16, SupportLegId = 2 },
-                        new { TrailerId = 16, SupportLegId = 3 },
-
-                        new { TrailerId = 17, SupportLegId = 2 },
-                        new { TrailerId = 17, SupportLegId = 3 },
-
-                        new { TrailerId = 18, SupportLegId = 2 },
-                        new { TrailerId = 18, SupportLegId = 3 },
-
-                        new { TrailerId = 19, SupportLegId = 2 },
-                        new { TrailerId = 19, SupportLegId = 3 }
+                        new { TrailerId = 12, SupportLegId = 3 }
                     )
                 );
         }

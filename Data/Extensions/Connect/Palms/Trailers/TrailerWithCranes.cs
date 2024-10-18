@@ -36,22 +36,22 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 3, CraneId = 9 },
                         new { TrailerId = 3, CraneId = 10 },
 
-                        //PALMS 8DWD
+                        //PALMS 9SC
                         new { TrailerId = 4, CraneId = 4 },
                         new { TrailerId = 4, CraneId = 5 },
                         new { TrailerId = 4, CraneId = 6 },
                         new { TrailerId = 4, CraneId = 7 },
-                        new { TrailerId = 4, CraneId = 8 },
-                        new { TrailerId = 4, CraneId = 9 },
-                        new { TrailerId = 4, CraneId = 10 },
 
-                        //PALMS 9SC
+                        //PALMS 10D
                         new { TrailerId = 5, CraneId = 4 },
                         new { TrailerId = 5, CraneId = 5 },
                         new { TrailerId = 5, CraneId = 6 },
                         new { TrailerId = 5, CraneId = 7 },
+                        new { TrailerId = 5, CraneId = 8 },
+                        new { TrailerId = 5, CraneId = 9 },
+                        new { TrailerId = 5, CraneId = 10 },
 
-                        //PALMS 10D
+                        //PALMS 12D
                         new { TrailerId = 6, CraneId = 4 },
                         new { TrailerId = 6, CraneId = 5 },
                         new { TrailerId = 6, CraneId = 6 },
@@ -59,18 +59,19 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 6, CraneId = 8 },
                         new { TrailerId = 6, CraneId = 9 },
                         new { TrailerId = 6, CraneId = 10 },
+                        new { TrailerId = 6, CraneId = 11 },
 
-                        //PALMS 10DWD
-                        new { TrailerId = 7, CraneId = 4 },
+                        //PALMS 14D
                         new { TrailerId = 7, CraneId = 5 },
                         new { TrailerId = 7, CraneId = 6 },
                         new { TrailerId = 7, CraneId = 7 },
                         new { TrailerId = 7, CraneId = 8 },
                         new { TrailerId = 7, CraneId = 9 },
                         new { TrailerId = 7, CraneId = 10 },
+                        new { TrailerId = 7, CraneId = 11 },
+                        new { TrailerId = 7, CraneId = 12 },
 
-                        //PALMS 12D
-                        new { TrailerId = 8, CraneId = 4 },
+                        //PALMS 10U
                         new { TrailerId = 8, CraneId = 5 },
                         new { TrailerId = 8, CraneId = 6 },
                         new { TrailerId = 8, CraneId = 7 },
@@ -78,9 +79,9 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 8, CraneId = 9 },
                         new { TrailerId = 8, CraneId = 10 },
                         new { TrailerId = 8, CraneId = 11 },
+                        new { TrailerId = 8, CraneId = 12 },
 
-                        //PALMS 12DWD
-                        new { TrailerId = 9, CraneId = 4 },
+                        //PALMS 12U
                         new { TrailerId = 9, CraneId = 5 },
                         new { TrailerId = 9, CraneId = 6 },
                         new { TrailerId = 9, CraneId = 7 },
@@ -88,8 +89,9 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 9, CraneId = 9 },
                         new { TrailerId = 9, CraneId = 10 },
                         new { TrailerId = 9, CraneId = 11 },
+                        new { TrailerId = 9, CraneId = 12 },
 
-                        //PALMS 14D
+                        //PALMS 12UAWD
                         new { TrailerId = 10, CraneId = 5 },
                         new { TrailerId = 10, CraneId = 6 },
                         new { TrailerId = 10, CraneId = 7 },
@@ -99,8 +101,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 10, CraneId = 11 },
                         new { TrailerId = 10, CraneId = 12 },
 
-                        //PALMS 14DWD
-                        new { TrailerId = 11, CraneId = 5 },
+                        //PALMS 15U
                         new { TrailerId = 11, CraneId = 6 },
                         new { TrailerId = 11, CraneId = 7 },
                         new { TrailerId = 11, CraneId = 8 },
@@ -109,8 +110,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 11, CraneId = 11 },
                         new { TrailerId = 11, CraneId = 12 },
 
-                        //PALMS 10U
-                        new { TrailerId = 12, CraneId = 5 },
+                        //PALMS 15UAWD
                         new { TrailerId = 12, CraneId = 6 },
                         new { TrailerId = 12, CraneId = 7 },
                         new { TrailerId = 12, CraneId = 8 },
@@ -119,87 +119,20 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 12, CraneId = 11 },
                         new { TrailerId = 12, CraneId = 12 },
 
-                        //PALMS 10UWD
-                        new { TrailerId = 13, CraneId = 5 },
-                        new { TrailerId = 13, CraneId = 6 },
-                        new { TrailerId = 13, CraneId = 7 },
-                        new { TrailerId = 13, CraneId = 8 },
+                        //PALMS MWD3.2
                         new { TrailerId = 13, CraneId = 9 },
                         new { TrailerId = 13, CraneId = 10 },
                         new { TrailerId = 13, CraneId = 11 },
                         new { TrailerId = 13, CraneId = 12 },
 
-                        //PALMS 12U
-                        new { TrailerId = 14, CraneId = 5 },
-                        new { TrailerId = 14, CraneId = 6 },
-                        new { TrailerId = 14, CraneId = 7 },
-                        new { TrailerId = 14, CraneId = 8 },
+                        //PALMS HMWD3.2
                         new { TrailerId = 14, CraneId = 9 },
                         new { TrailerId = 14, CraneId = 10 },
                         new { TrailerId = 14, CraneId = 11 },
                         new { TrailerId = 14, CraneId = 12 },
 
-                        //PALMS 12UWD
-                        new { TrailerId = 15, CraneId = 5 },
-                        new { TrailerId = 15, CraneId = 6 },
-                        new { TrailerId = 15, CraneId = 7 },
-                        new { TrailerId = 15, CraneId = 8 },
-                        new { TrailerId = 15, CraneId = 9 },
-                        new { TrailerId = 15, CraneId = 10 },
-                        new { TrailerId = 15, CraneId = 11 },
-                        new { TrailerId = 15, CraneId = 12 },
-
-                        //PALMS 12UAWD
-                        new { TrailerId = 16, CraneId = 5 },
-                        new { TrailerId = 16, CraneId = 6 },
-                        new { TrailerId = 16, CraneId = 7 },
-                        new { TrailerId = 16, CraneId = 8 },
-                        new { TrailerId = 16, CraneId = 9 },
-                        new { TrailerId = 16, CraneId = 10 },
-                        new { TrailerId = 16, CraneId = 11 },
-                        new { TrailerId = 16, CraneId = 12 },
-
-                        //PALMS 15U
-                        new { TrailerId = 17, CraneId = 6 },
-                        new { TrailerId = 17, CraneId = 7 },
-                        new { TrailerId = 17, CraneId = 8 },
-                        new { TrailerId = 17, CraneId = 9 },
-                        new { TrailerId = 17, CraneId = 10 },
-                        new { TrailerId = 17, CraneId = 11 },
-                        new { TrailerId = 17, CraneId = 12 },
-
-                        //PALMS 15UWD
-                        new { TrailerId = 18, CraneId = 6 },
-                        new { TrailerId = 18, CraneId = 7 },
-                        new { TrailerId = 18, CraneId = 8 },
-                        new { TrailerId = 18, CraneId = 9 },
-                        new { TrailerId = 18, CraneId = 10 },
-                        new { TrailerId = 18, CraneId = 11 },
-                        new { TrailerId = 18, CraneId = 12 },
-
-                        //PALMS 15UAWD
-                        new { TrailerId = 19, CraneId = 6 },
-                        new { TrailerId = 19, CraneId = 7 },
-                        new { TrailerId = 19, CraneId = 8 },
-                        new { TrailerId = 19, CraneId = 9 },
-                        new { TrailerId = 19, CraneId = 10 },
-                        new { TrailerId = 19, CraneId = 11 },
-                        new { TrailerId = 19, CraneId = 12 },
-
-                        //PALMS MWD3.2
-                        new { TrailerId = 20, CraneId = 9 },
-                        new { TrailerId = 20, CraneId = 10 },
-                        new { TrailerId = 20, CraneId = 11 },
-                        new { TrailerId = 20, CraneId = 12 },
-
-                        //PALMS HMWD3.2
-                        new { TrailerId = 21, CraneId = 9 },
-                        new { TrailerId = 21, CraneId = 10 },
-                        new { TrailerId = 21, CraneId = 11 },
-                        new { TrailerId = 21, CraneId = 12 },
-
                         //PALMS 2D
-                        new { TrailerId = 22, CraneId = 13 }
+                        new { TrailerId = 15, CraneId = 13 }
                     )
 
                 );

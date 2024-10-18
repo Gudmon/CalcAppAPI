@@ -30,121 +30,76 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                        new { TrailerId = 3, TyreId = 5 },
                        new { TrailerId = 3, TyreId = 7 },
 
-                       //PALMS 8DWD
-                       new { TrailerId = 4, TyreId = 4 },
-                       new { TrailerId = 4, TyreId = 6 },
-                       new { TrailerId = 4, TyreId = 8 },
-
                        //PALMS 9SC
+                       new { TrailerId = 4, TyreId = 1 },
+                       new { TrailerId = 4, TyreId = 2 },
+                       new { TrailerId = 4, TyreId = 3 },
+                       new { TrailerId = 4, TyreId = 5 },
+                       new { TrailerId = 4, TyreId = 7 },
+
+                       //PALMS 10D
                        new { TrailerId = 5, TyreId = 1 },
                        new { TrailerId = 5, TyreId = 2 },
                        new { TrailerId = 5, TyreId = 3 },
                        new { TrailerId = 5, TyreId = 5 },
                        new { TrailerId = 5, TyreId = 7 },
 
-                       //PALMS 10D
-                       new { TrailerId = 6, TyreId = 1 },
-                       new { TrailerId = 6, TyreId = 2 },
-                       new { TrailerId = 6, TyreId = 3 },
-                       new { TrailerId = 6, TyreId = 5 },
-                       new { TrailerId = 6, TyreId = 7 },
+                       //PALMS 12D
+                       new { TrailerId = 6, TyreId = 6 },
+                       new { TrailerId = 6, TyreId = 8 },
+                       new { TrailerId = 6, TyreId = 9 },
+                       new { TrailerId = 6, TyreId = 10 },
 
-                       //PALMS 10DWD
-                       new { TrailerId = 7, TyreId = 4 },
+                       //PALMS 14D
                        new { TrailerId = 7, TyreId = 6 },
                        new { TrailerId = 7, TyreId = 8 },
+                       new { TrailerId = 7, TyreId = 9 },
+                       new { TrailerId = 7, TyreId = 12 },
 
-                       //PALMS 12D
-                       new { TrailerId = 8, TyreId = 6 },
-                       new { TrailerId = 8, TyreId = 8 },
-                       new { TrailerId = 8, TyreId = 9 },
-                       new { TrailerId = 8, TyreId = 10 },
+                       //PALMS 10U
+                       new { TrailerId = 8, TyreId = 3 },
+                       new { TrailerId = 8, TyreId = 5 },
+                       new { TrailerId = 8, TyreId = 7 },
 
-                       //PALMS 12DWD
+                       //PALMS 12U
                        new { TrailerId = 9, TyreId = 6 },
                        new { TrailerId = 9, TyreId = 8 },
                        new { TrailerId = 9, TyreId = 9 },
                        new { TrailerId = 9, TyreId = 10 },
+                       new { TrailerId = 9, TyreId = 11 },
+                       new { TrailerId = 9, TyreId = 12 },
 
-                       //PALMS 14D
-                       new { TrailerId = 10, TyreId = 6 },
+                       //PALMS 12UAWD
                        new { TrailerId = 10, TyreId = 8 },
                        new { TrailerId = 10, TyreId = 9 },
+                       new { TrailerId = 10, TyreId = 10 },
+                       new { TrailerId = 10, TyreId = 11 },
                        new { TrailerId = 10, TyreId = 12 },
 
-                       //PALMS 14DWD
-                       new { TrailerId = 11, TyreId = 6 },
+                       //PALMS 15U
                        new { TrailerId = 11, TyreId = 8 },
                        new { TrailerId = 11, TyreId = 9 },
                        new { TrailerId = 11, TyreId = 10 },
                        new { TrailerId = 11, TyreId = 11 },
                        new { TrailerId = 11, TyreId = 12 },
 
-                       //PALMS 10U
-                       new { TrailerId = 12, TyreId = 3 },
-                       new { TrailerId = 12, TyreId = 5 },
-                       new { TrailerId = 12, TyreId = 7 },
-
-                       //PALMS 10UWD
-                       new { TrailerId = 13, TyreId = 6 },
-                       new { TrailerId = 13, TyreId = 8 },
-                       new { TrailerId = 13, TyreId = 9 },
-                       new { TrailerId = 13, TyreId = 10 },
-
-                       //PALMS 12U
-                       new { TrailerId = 14, TyreId = 6 },
-                       new { TrailerId = 14, TyreId = 8 },
-                       new { TrailerId = 14, TyreId = 9 },
-                       new { TrailerId = 14, TyreId = 10 },
-                       new { TrailerId = 14, TyreId = 11 },
-                       new { TrailerId = 14, TyreId = 12 },
-
-                       //PALMS 12UWD
-                       new { TrailerId = 15, TyreId = 6 },
-                       new { TrailerId = 15, TyreId = 8 },
-                       new { TrailerId = 15, TyreId = 9 },
-                       new { TrailerId = 15, TyreId = 10 },
-                       new { TrailerId = 15, TyreId = 11 },
-                       new { TrailerId = 15, TyreId = 12 },
-
-                       //PALMS 12UAWD
-                       new { TrailerId = 16, TyreId = 8 },
-                       new { TrailerId = 16, TyreId = 9 },
-                       new { TrailerId = 16, TyreId = 10 },
-                       new { TrailerId = 16, TyreId = 11 },
-                       new { TrailerId = 16, TyreId = 12 },
-
-                       //PALMS 15U
-                       new { TrailerId = 17, TyreId = 8 },
-                       new { TrailerId = 17, TyreId = 9 },
-                       new { TrailerId = 17, TyreId = 10 },
-                       new { TrailerId = 17, TyreId = 11 },
-                       new { TrailerId = 17, TyreId = 12 },
-
-                       //PALMS 15UWD
-                       new { TrailerId = 18, TyreId = 8 },
-                       new { TrailerId = 18, TyreId = 9 },
-                       new { TrailerId = 18, TyreId = 10 },
-                       new { TrailerId = 18, TyreId = 11 },
-                       new { TrailerId = 18, TyreId = 12 },
-
                        //PALMS 15UAWD
-                       new { TrailerId = 19, TyreId = 8 },
-                       new { TrailerId = 19, TyreId = 9 },
-                       new { TrailerId = 19, TyreId = 10 },
-                       new { TrailerId = 19, TyreId = 11 },
-                       new { TrailerId = 19, TyreId = 12 },
+                       new { TrailerId = 12, TyreId = 8 },
+                       new { TrailerId = 12, TyreId = 9 },
+                       new { TrailerId = 12, TyreId = 10 },
+                       new { TrailerId = 12, TyreId = 11 },
+                       new { TrailerId = 12, TyreId = 12 },
 
                        //PALMS MWD3.2
-                       new { TrailerId = 20, TyreId = 13 },
-                       new { TrailerId = 20, TyreId = 14 },
+                       new { TrailerId = 13, TyreId = 13 },
+                       new { TrailerId = 13, TyreId = 14 },
 
                        //PALMS HMWD3.2
-                       new { TrailerId = 21, TyreId = 13 },
-                       new { TrailerId = 21, TyreId = 14 },
+                       new { TrailerId = 14, TyreId = 13 },
+                       new { TrailerId = 14, TyreId = 14 },
 
                        //PALMS 2D
-                       new { TrailerId = 22, TyreId = 15 }
+                       new { TrailerId = 15, TyreId = 15 }
                    )
                );
         }

@@ -27,28 +27,28 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 3,
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
-                   Price = "1810",
+                   Price = "1870",
                },
                new Brake
                {
                    Id = 4,
                    Name = "2 keréken légfék",
                    Code = "B3",
-                   Price = "1615",
+                   Price = "1620",
                },
                new Brake
                {
                    Id = 5,
                    Name = "4 keréken légfék",
                    Code = "B4",
-                   Price = "2640",
+                   Price = "2710",
                },
                new Brake
                {
                    Id = 6,
                    Name = "Légfék",
                    Code = "BA-EU",
-                   Price = "2095",
+                   Price = "2100",
                },
                new Brake
                {
@@ -63,174 +63,117 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 8,
                    Name = "Légfék",
                    Code = "BA-EU",
-                   Price = "3125",
+                   Price = "3195",
                },
                new Brake
                {
                    Id = 9,
                    Name = "Hidraulikus fék",
                    Code = "BH-EU",
-                   Price = "4295",
+                   Price = "4360",
                },
-
                new Brake
                {
                    Id = 10,
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
-                   Price = "1255",
+                   Price = "1155",
                },
                new Brake
                {
                    Id = 11,
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
-                   Price = "4545",
+                   Price = "2205",
                },
                new Brake
                {
                    Id = 12,
                    Name = "2 keréken légfék",
                    Code = "B3",
-                   Price = "1915",
+                   Price = "1815",
                },
                new Brake
                {
                    Id = 13,
                    Name = "4 keréken légfék",
                    Code = "B4",
-                   Price = "5385",
+                   Price = "3045",
                },
                new Brake
                {
                    Id = 14,
                    Name = "Légfék",
                    Code = "BA-EU",
-                   Price = "5605",
+                   Price = "3530",
                },
                new Brake
                {
                    Id = 15,
                    Name = "Hidraulikus fék",
                    Code = "BH-EU",
-                   Price = "6770",
+                   Price = "4695",
                },
                new Brake
                {
                    Id = 16,
-                   Name = "4 keréken hidraulikus fék",
-                   Code = "B2",
-                   Price = "2415",
+                   Name = "2 keréken hidraulikus fék",
+                   Code = "B1",
+                   Price = "3150",
                },
                new Brake
                {
                    Id = 17,
-                   Name = "4 keréken légfék",
-                   Code = "B4",
-                   Price = "3255",
+                   Name = "4 keréken hidraulikus fék",
+                   Code = "B2",
+                   Price = "6195",
                },
                new Brake
                {
                    Id = 18,
-                   Name = "Légfék",
-                   Code = "BA-EU",
-                   Price = "3740",
+                   Name = "2 keréken légfék",
+                   Code = "B3",
+                   Price = "3810",
                },
                new Brake
                {
                    Id = 19,
-                   Name = "Hidraulikus fék",
-                   Code = "BH-EU",
-                   Price = "4905",
+                   Name = "4 keréken légfék",
+                   Code = "B4",
+                   Price = "7035",
                },
                new Brake
                {
                    Id = 20,
-                   Name = "2 keréken hidraulikus fék",
-                   Code = "B1",
-                   Price = "3390",
+                   Name = "Légfék",
+                   Code = "BA-EU",
+                   Price = "7520",
                },
                new Brake
                {
                    Id = 21,
-                   Name = "4 keréken hidraulikus fék",
-                   Code = "B2",
-                   Price = "6670",
+                   Name = "Hidraulikus fék",
+                   Code = "BH-EU",
+                   Price = "8685",
                },
                new Brake
                {
                    Id = 22,
                    Name = "2 keréken légfék",
                    Code = "B3",
-                   Price = "4045",
-               },
-               new Brake
-               {
-                   Id = 23,
-                   Name = "4 keréken légfék",
-                   Code = "B4",
-                   Price = "7510",
-               },
-               new Brake
-               {
-                   Id = 24,
-                   Name = "Légfék",
-                   Code = "BA-EU",
-                   Price = "7465",
-               },
-               new Brake
-               {
-                   Id = 25,
-                   Name = "Hidraulikus fék",
-                   Code = "BH-EU",
-                   Price = "8635",
-               },
-               new Brake
-               {
-                   Id = 26,
-                   Name = "4 keréken hidraulikus fék",
-                   Code = "B2",
-                   Price = "2305",
-               },
-               new Brake
-               {
-                   Id = 27,
-                   Name = "2 keréken légfék",
-                   Code = "B3",
-                   Price = "1860",
-               },
-               new Brake
-               {
-                   Id = 28,
-                   Name = "4 keréken légfék",
-                   Code = "B4",
-                   Price = "3145",
-               },
-               new Brake
-               {
-                   Id = 29,
-                   Name = "Légfék",
-                   Code = "BA-EU",
-                   Price = "3620",
-               },
-               new Brake
-               {
-                   Id = 30,
-                   Name = "Hidraulikus fék",
-                   Code = "BH-EU",
-                   Price = "4795",
+                   Price = "3625",
                },
 
                new Brake
                {
-                   Id = 31,
+                   Id = 23,
                    Name = "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)",
                    Code = "B2",
                    Price = "250",
                },
                new Brake
                {
-                   Id = 32,
+                   Id = 24,
                    Name = "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)",
                    Code = "B4",
                    Price = "3035",

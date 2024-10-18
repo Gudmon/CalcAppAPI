@@ -24,10 +24,10 @@ namespace CalcAppAPI.Controllers
         public async Task<ActionResult<IEnumerable<PalmsTrailerOverview>>> GetAllTrailers()
         {
             var desiredOrder = new List<string> {
-                "PALMS 6S", "PALMS 8SX", "PALMS 8D", "PALMS 8DWD",
-                "PALMS 9SC", "PALMS 10D", "PALMS 10DWD", "PALMS 12D", "PALMS 12DWD",
-                "PALMS 14D", "PALMS 14DWD", "PALMS 10U", "PALMS 10UWD", "PALMS 12U",
-                "PALMS 12UWD", "PALMS 12UAWD", "PALMS 15U", "PALMS 15UWD", "PALMS 15UAWD",
+                "PALMS 6S", "PALMS 8SX", "PALMS 8D",
+                "PALMS 9SC", "PALMS 10D", "PALMS 12D",
+                "PALMS 14D", "PALMS 10U", "PALMS 12U",
+                "PALMS 12UAWD", "PALMS 15U", "PALMS 15UAWD",
                 "PALMS MWD 3.2", "PALMS HMWD 3.2"
             };
 
