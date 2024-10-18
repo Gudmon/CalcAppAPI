@@ -27,6 +27,9 @@ namespace CalcAppAPI.Models.Machine.Palms.Cranes
         public string SlewingTorque { get; set; }
         public string WorkingPressure { get; set; }
         public string RotatorMaximumLoad { get; set; }
+        public string RotatorCapacity { get; set; }
+        public string RotatorType { get; set; }
+        public string RotatorConnection { get; set; }
         public string CraneWeight { get; set; }
         public string PillarSlewingAngle { get; set; }
         public string RecommendedOilFlow { get; set; }
