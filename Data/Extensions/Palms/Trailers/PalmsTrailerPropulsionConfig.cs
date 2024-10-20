@@ -27,7 +27,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Propulsion
                {
                    Id = 3,
-                   Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve",
+                   Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "24WDF",
                    Price = "12885",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
@@ -35,7 +35,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Propulsion
                {
                    Id = 4,
-                   Name = "2WD hajtás (BB240 az hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve",
+                   Name = "2WD hajtás (BB240 az hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "24WDRe",
                    Price = "11130",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
