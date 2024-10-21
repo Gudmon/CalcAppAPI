@@ -188,12 +188,13 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpGet("cranes/{id}/highperformanceoilfilter")]
-        public async Task<ActionResult<OperatorSeat>> GetHighPerformanceOilFilter(int id)
+        public async Task<ActionResult<IEnumerable<HighPerformanceOilFilter>>> GetHighPerformanceOilFilters(int id)
         {
-            var highPerformanceOilFilter = await _dbContext.HighPerformanceOilFilter
-                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+            var highPerformanceOilFilters = await _dbContext.HighPerformanceOilFilter
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
 
-            return Ok(highPerformanceOilFilter);
+            return Ok(highPerformanceOilFilters);
         }
 
         [HttpGet("cranes/{id}/oilcooler")]

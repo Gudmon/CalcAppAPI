@@ -5163,6 +5163,13 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "HPF",
                             Name = "Nagynyomású olajszűrő",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "HPF",
+                            Name = "Nagynyomású olajszűrő",
                             Price = "395"
                         });
                 });
@@ -8633,9 +8640,6 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("ElectricalFloatingId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("HighPerformanceOilFilterId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("JoystickHolderId")
                         .HasColumnType("int");
 
@@ -8756,8 +8760,6 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ElectricalFloatingId");
 
-                    b.HasIndex("HighPerformanceOilFilterId");
-
                     b.HasIndex("JoystickHolderId");
 
                     b.HasIndex("LightId");
@@ -8827,7 +8829,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "400",
                             Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "530",
                             LiftAtFourMeters215Bar = "600",
@@ -8866,7 +8867,6 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            HighPerformanceOilFilterId = 1,
                             LiftAtFourMeters190Bar = "655",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
@@ -8904,7 +8904,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "620",
                             Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "820",
                             LiftAtFourMeters215Bar = "910",
@@ -8946,7 +8945,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "710",
                             Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "960",
                             LiftAtFourMeters215Bar = "1040",
@@ -8990,7 +8988,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "940",
                             Description = "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1150",
                             LiftAtFourMeters215Bar = "1350",
@@ -9034,7 +9031,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "900",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1050",
                             LiftAtFourMeters215Bar = "1220",
@@ -9076,7 +9072,6 @@ namespace CalcAppAPI.Migrations
                             CraneOilCoolerId = 1,
                             CraneWeight = "995",
                             Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1235",
@@ -9119,7 +9114,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1220",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1380",
                             LiftAtFourMeters215Bar = "1580",
@@ -9163,7 +9157,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1250",
                             LiftAtFourMeters215Bar = "1480",
@@ -9207,7 +9200,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1410",
@@ -9250,7 +9242,6 @@ namespace CalcAppAPI.Migrations
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
                             Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "-",
@@ -11374,6 +11365,133 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 13,
                             GrappleId = 16
+                        });
+                });
+
+            modelBuilder.Entity("CraneHighPerformanceOilFilter", b =>
+                {
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HighPerformanceOilFilterId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CraneId", "HighPerformanceOilFilterId");
+
+                    b.HasIndex("HighPerformanceOilFilterId");
+
+                    b.ToTable("HighPerformanceOilFilterCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CraneId = 2,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 6,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 6,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            HighPerformanceOilFilterId = 2
                         });
                 });
 
@@ -16066,10 +16184,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", "HighPerformanceOilFilter")
-                        .WithMany("Crane")
-                        .HasForeignKey("HighPerformanceOilFilterId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", "JoystickHolder")
                         .WithMany("Crane")
                         .HasForeignKey("JoystickHolderId");
@@ -16117,8 +16231,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("CraneOilCooler");
 
                     b.Navigation("ElectricalFloating");
-
-                    b.Navigation("HighPerformanceOilFilter");
 
                     b.Navigation("JoystickHolder");
 
@@ -16305,6 +16417,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Grapple", null)
                         .WithMany()
                         .HasForeignKey("GrappleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CraneHighPerformanceOilFilter", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", null)
+                        .WithMany()
+                        .HasForeignKey("HighPerformanceOilFilterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -16764,11 +16891,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", b =>
                 {
                     b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", b =>

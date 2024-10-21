@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241018165910_change trailers and prices")]
-    partial class changetrailersandprices
+    [Migration("20241021102335_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -152,67 +152,67 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            BrakeId = 10,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 11,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 13,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 14,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 15,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 5
-                        },
-                        new
-                        {
                             BrakeId = 2,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             BrakeId = 3,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             BrakeId = 4,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             BrakeId = 5,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             BrakeId = 6,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             BrakeId = 7,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            BrakeId = 1,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 2,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 3,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 4,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 5,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 8,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            BrakeId = 9,
                             TrailerId = 5
                         },
                         new
@@ -222,102 +222,102 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            BrakeId = 2,
+                            BrakeId = 10,
                             TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 11,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 12,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 13,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 14,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 15,
+                            TrailerId = 6
+                        },
+                        new
+                        {
+                            BrakeId = 1,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 10,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 11,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 12,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 13,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 14,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 15,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            BrakeId = 1,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            BrakeId = 2,
+                            TrailerId = 8
                         },
                         new
                         {
                             BrakeId = 3,
-                            TrailerId = 6
+                            TrailerId = 8
                         },
                         new
                         {
                             BrakeId = 4,
-                            TrailerId = 6
+                            TrailerId = 8
                         },
                         new
                         {
                             BrakeId = 5,
-                            TrailerId = 6
+                            TrailerId = 8
                         },
                         new
                         {
                             BrakeId = 8,
-                            TrailerId = 6
+                            TrailerId = 8
                         },
                         new
                         {
                             BrakeId = 9,
-                            TrailerId = 6
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 11,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 13,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 14,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 15,
-                            TrailerId = 7
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 16,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 17,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 18,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            BrakeId = 19,
                             TrailerId = 8
                         },
                         new
@@ -362,17 +362,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            BrakeId = 10,
-                            TrailerId = 10
-                        },
-                        new
-                        {
                             BrakeId = 16,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            BrakeId = 12,
                             TrailerId = 10
                         },
                         new
@@ -392,338 +382,103 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            BrakeId = 1,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 11,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 13,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 14,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 15,
-                            TrailerId = 11
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 2,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 3,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 4,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 5,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 8,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 9,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 11,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 13,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 14,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 15,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 26,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 27,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 28,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 29,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 30,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 11,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 12,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 13,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 14,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 15,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
                             BrakeId = 20,
-                            TrailerId = 16
+                            TrailerId = 10
                         },
                         new
                         {
                             BrakeId = 21,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            BrakeId = 22,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            BrakeId = 23,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            BrakeId = 24,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            BrakeId = 25,
-                            TrailerId = 16
+                            TrailerId = 10
                         },
                         new
                         {
                             BrakeId = 1,
-                            TrailerId = 17
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 10,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 26,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 27,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 28,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 29,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 30,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            BrakeId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            BrakeId = 10,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 11,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 12,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 13,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 14,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 15,
-                            TrailerId = 18
+                            TrailerId = 11
                         },
                         new
                         {
                             BrakeId = 1,
-                            TrailerId = 19
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            BrakeId = 16,
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            BrakeId = 17,
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            BrakeId = 18,
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            BrakeId = 19,
+                            TrailerId = 12
                         },
                         new
                         {
                             BrakeId = 20,
-                            TrailerId = 19
+                            TrailerId = 12
                         },
                         new
                         {
                             BrakeId = 21,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            BrakeId = 22,
-                            TrailerId = 19
+                            TrailerId = 12
                         },
                         new
                         {
                             BrakeId = 23,
-                            TrailerId = 19
+                            TrailerId = 13
                         },
                         new
                         {
                             BrakeId = 24,
-                            TrailerId = 19
+                            TrailerId = 13
                         },
                         new
                         {
-                            BrakeId = 25,
-                            TrailerId = 19
+                            BrakeId = 23,
+                            TrailerId = 14
                         },
                         new
                         {
-                            BrakeId = 31,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            BrakeId = 32,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            BrakeId = 31,
-                            TrailerId = 21
-                        },
-                        new
-                        {
-                            BrakeId = 32,
-                            TrailerId = 21
+                            BrakeId = 24,
+                            TrailerId = 14
                         });
                 });
 
@@ -5411,6 +5166,13 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "HPF",
                             Name = "Nagynyomású olajszűrő",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "HPF",
+                            Name = "Nagynyomású olajszűrő",
                             Price = "395"
                         });
                 });
@@ -6068,28 +5830,28 @@ namespace CalcAppAPI.Migrations
                             Id = 3,
                             Code = "B2",
                             Name = "4 keréken hidraulikus fék",
-                            Price = "1810"
+                            Price = "1870"
                         },
                         new
                         {
                             Id = 4,
                             Code = "B3",
                             Name = "2 keréken légfék",
-                            Price = "1615"
+                            Price = "1620"
                         },
                         new
                         {
                             Id = 5,
                             Code = "B4",
                             Name = "4 keréken légfék",
-                            Price = "2640"
+                            Price = "2710"
                         },
                         new
                         {
                             Id = 6,
                             Code = "BA-EU",
                             Name = "Légfék",
-                            Price = "2095"
+                            Price = "2100"
                         },
                         new
                         {
@@ -6103,172 +5865,116 @@ namespace CalcAppAPI.Migrations
                             Id = 8,
                             Code = "BA-EU",
                             Name = "Légfék",
-                            Price = "3125"
+                            Price = "3195"
                         },
                         new
                         {
                             Id = 9,
                             Code = "BH-EU",
                             Name = "Hidraulikus fék",
-                            Price = "4295"
+                            Price = "4360"
                         },
                         new
                         {
                             Id = 10,
                             Code = "B1",
                             Name = "2 keréken hidraulikus fék",
-                            Price = "1255"
+                            Price = "1155"
                         },
                         new
                         {
                             Id = 11,
                             Code = "B2",
                             Name = "4 keréken hidraulikus fék",
-                            Price = "4545"
+                            Price = "2205"
                         },
                         new
                         {
                             Id = 12,
                             Code = "B3",
                             Name = "2 keréken légfék",
-                            Price = "1915"
+                            Price = "1815"
                         },
                         new
                         {
                             Id = 13,
                             Code = "B4",
                             Name = "4 keréken légfék",
-                            Price = "5385"
+                            Price = "3045"
                         },
                         new
                         {
                             Id = 14,
                             Code = "BA-EU",
                             Name = "Légfék",
-                            Price = "5605"
+                            Price = "3530"
                         },
                         new
                         {
                             Id = 15,
                             Code = "BH-EU",
                             Name = "Hidraulikus fék",
-                            Price = "6770"
+                            Price = "4695"
                         },
                         new
                         {
                             Id = 16,
-                            Code = "B2",
-                            Name = "4 keréken hidraulikus fék",
-                            Price = "2415"
+                            Code = "B1",
+                            Name = "2 keréken hidraulikus fék",
+                            Price = "3150"
                         },
                         new
                         {
                             Id = 17,
-                            Code = "B4",
-                            Name = "4 keréken légfék",
-                            Price = "3255"
+                            Code = "B2",
+                            Name = "4 keréken hidraulikus fék",
+                            Price = "6195"
                         },
                         new
                         {
                             Id = 18,
-                            Code = "BA-EU",
-                            Name = "Légfék",
-                            Price = "3740"
+                            Code = "B3",
+                            Name = "2 keréken légfék",
+                            Price = "3810"
                         },
                         new
                         {
                             Id = 19,
-                            Code = "BH-EU",
-                            Name = "Hidraulikus fék",
-                            Price = "4905"
+                            Code = "B4",
+                            Name = "4 keréken légfék",
+                            Price = "7035"
                         },
                         new
                         {
                             Id = 20,
-                            Code = "B1",
-                            Name = "2 keréken hidraulikus fék",
-                            Price = "3390"
+                            Code = "BA-EU",
+                            Name = "Légfék",
+                            Price = "7520"
                         },
                         new
                         {
                             Id = 21,
-                            Code = "B2",
-                            Name = "4 keréken hidraulikus fék",
-                            Price = "6670"
+                            Code = "BH-EU",
+                            Name = "Hidraulikus fék",
+                            Price = "8685"
                         },
                         new
                         {
                             Id = 22,
                             Code = "B3",
                             Name = "2 keréken légfék",
-                            Price = "4045"
+                            Price = "3625"
                         },
                         new
                         {
                             Id = 23,
-                            Code = "B4",
-                            Name = "4 keréken légfék",
-                            Price = "7510"
-                        },
-                        new
-                        {
-                            Id = 24,
-                            Code = "BA-EU",
-                            Name = "Légfék",
-                            Price = "7465"
-                        },
-                        new
-                        {
-                            Id = 25,
-                            Code = "BH-EU",
-                            Name = "Hidraulikus fék",
-                            Price = "8635"
-                        },
-                        new
-                        {
-                            Id = 26,
-                            Code = "B2",
-                            Name = "4 keréken hidraulikus fék",
-                            Price = "2305"
-                        },
-                        new
-                        {
-                            Id = 27,
-                            Code = "B3",
-                            Name = "2 keréken légfék",
-                            Price = "1860"
-                        },
-                        new
-                        {
-                            Id = 28,
-                            Code = "B4",
-                            Name = "4 keréken légfék",
-                            Price = "3145"
-                        },
-                        new
-                        {
-                            Id = 29,
-                            Code = "BA-EU",
-                            Name = "Légfék",
-                            Price = "3620"
-                        },
-                        new
-                        {
-                            Id = 30,
-                            Code = "BH-EU",
-                            Name = "Hidraulikus fék",
-                            Price = "4795"
-                        },
-                        new
-                        {
-                            Id = 31,
                             Code = "B2",
                             Name = "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)",
                             Price = "250"
                         },
                         new
                         {
-                            Id = 32,
+                            Id = 24,
                             Code = "B4",
                             Name = "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)",
                             Price = "3035"
@@ -6934,18 +6640,18 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 3,
-                            Code = "25WDF",
+                            Code = "24WDF",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
-                            Name = "2WD agyhajtás (BB 250 az első tengelyen elektronikus vezérléssel)",
-                            Price = "0"
+                            Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "12885"
                         },
                         new
                         {
                             Id = 4,
-                            Code = "25WDR",
+                            Code = "24WDRe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
-                            Name = "2WD agyhajtás (BB 250 a hátsó tengelyen elektronikus vezérléssel)",
-                            Price = "0"
+                            Name = "2WD hajtás (BB240 az hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "11130"
                         },
                         new
                         {
@@ -6966,22 +6672,126 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 7,
-                            Code = "45WDB",
-                            Description = "",
-                            Name = "4WD BlackBruin elektronikus teljesítmény szabályozással",
-                            Price = "0"
+                            Code = "25WDF",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "15375"
                         },
                         new
                         {
                             Id = 8,
-                            Code = "45WDB.1",
-                            Description = "",
-                            Name = "4WD BlackBruin elektronikus teljesítmény szabályozással, ISOBUS-hoz előkészítve",
-                            Price = "1135"
+                            Code = "25WDR",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "15375"
                         },
                         new
                         {
                             Id = 9,
+                            Code = "25WDFe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "13880"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "25WDRe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "13880"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "45WDB.1",
+                            Description = "",
+                            Name = "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Code = "25WDF",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "14805"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Code = "25WDR",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "14805"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "25WDFe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "12810"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "25WDRe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "12810"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Code = "25WDF",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "14450"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Code = "25WDR",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
+                            Price = "14450"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Code = "25WDFe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                            Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "12455"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Code = "25WDRe",
+                            Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                            Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
+                            Price = "12455"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Code = "45WDB",
+                            Description = "",
+                            Name = "4WD BlackBruin hajtás elektronikus vezérléssel",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Code = "45WDB.1",
+                            Description = "",
+                            Name = "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz",
+                            Price = "1135"
+                        },
+                        new
+                        {
+                            Id = 22,
                             Code = "RWD",
                             Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
@@ -7955,7 +7765,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "WH2.6e",
                             Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
-                            Price = "1250"
+                            Price = "1220"
                         },
                         new
                         {
@@ -7974,83 +7784,76 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 4,
-                            Code = "WH4.8",
-                            Name = "480/45-17 RF-felni, 8 lyukas, Starco",
-                            Price = "2310"
-                        },
-                        new
-                        {
-                            Id = 5,
                             Code = "WH3.6",
                             Name = "500/50-17 RF-felni, 6 lyukas, BKT",
                             Price = "2500"
                         },
                         new
                         {
-                            Id = 6,
+                            Id = 5,
                             Code = "WH3.8",
                             Name = "500/50-17 RF-felni, 8 lyukas, BKT",
                             Price = "2500"
                         },
                         new
                         {
-                            Id = 7,
+                            Id = 6,
                             Code = "WH5.6",
                             Name = "400/55-22,5 RF-felni, 6 lyukas, Alliance",
                             Price = "3215"
                         },
                         new
                         {
-                            Id = 8,
+                            Id = 7,
                             Code = "WH8.8",
                             Name = "500/55-22,5 RF-felni, 8 lyukas, BKT",
                             Price = "3770"
                         },
                         new
                         {
-                            Id = 9,
+                            Id = 8,
                             Code = "WH6.8",
                             Name = "550/45-22,5 RF-felni, 8 lyukas, BKT",
                             Price = "4010"
                         },
                         new
                         {
-                            Id = 10,
+                            Id = 9,
                             Code = "WH6.8V",
                             Name = "550/45-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
                             Price = "4410"
                         },
                         new
                         {
-                            Id = 11,
+                            Id = 10,
                             Code = "WH9.8V",
                             Name = "600/40-22,5 RF-felni, 8 lyukas, BKT - traktor mintás",
                             Price = "6425"
                         },
                         new
                         {
-                            Id = 12,
+                            Id = 11,
                             Code = "WH7.8",
                             Name = "600/50-22,5 RF-felni, 8 lyukas, Alliance",
                             Price = "5410"
                         },
                         new
                         {
-                            Id = 13,
+                            Id = 12,
                             Code = "WH7.10",
                             Name = "600/50-22,5 RF-felni, 10 lyukas, Nokian",
                             Price = "11020"
                         },
                         new
                         {
-                            Id = 14,
+                            Id = 13,
                             Code = "WH9.10",
                             Name = "710/40-22,5 RF-felni, 10 lyukas, Nokian",
                             Price = "11150"
                         },
                         new
                         {
-                            Id = 15,
+                            Id = 14,
                             Code = "WH1.4",
                             Name = "22/11-8",
                             Price = "465"
@@ -8840,9 +8643,6 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("ElectricalFloatingId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("HighPerformanceOilFilterId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("JoystickHolderId")
                         .HasColumnType("int");
 
@@ -8963,8 +8763,6 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ElectricalFloatingId");
 
-                    b.HasIndex("HighPerformanceOilFilterId");
-
                     b.HasIndex("JoystickHolderId");
 
                     b.HasIndex("LightId");
@@ -9034,7 +8832,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "400",
                             Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "530",
                             LiftAtFourMeters215Bar = "600",
@@ -9073,7 +8870,6 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
-                            HighPerformanceOilFilterId = 1,
                             LiftAtFourMeters190Bar = "655",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
@@ -9111,7 +8907,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "620",
                             Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "820",
                             LiftAtFourMeters215Bar = "910",
@@ -9153,7 +8948,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "710",
                             Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "960",
                             LiftAtFourMeters215Bar = "1040",
@@ -9197,7 +8991,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "940",
                             Description = "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1150",
                             LiftAtFourMeters215Bar = "1350",
@@ -9241,7 +9034,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "900",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1050",
                             LiftAtFourMeters215Bar = "1220",
@@ -9283,7 +9075,6 @@ namespace CalcAppAPI.Migrations
                             CraneOilCoolerId = 1,
                             CraneWeight = "995",
                             Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1235",
@@ -9326,7 +9117,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1220",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1380",
                             LiftAtFourMeters215Bar = "1580",
@@ -9370,7 +9160,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1250",
                             LiftAtFourMeters215Bar = "1480",
@@ -9414,7 +9203,6 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
                             ElectricalFloatingId = 1,
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "1410",
@@ -9457,7 +9245,6 @@ namespace CalcAppAPI.Migrations
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
                             Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
-                            HighPerformanceOilFilterId = 1,
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "-",
@@ -9709,7 +9496,7 @@ namespace CalcAppAPI.Migrations
                             LoadingAreaCross = "2",
                             LoadingAreaLength = "3550",
                             MOTId = 1,
-                            MaxCraneSize = "47",
+                            MaxCraneSize = "58",
                             Name = "PALMS 8SX",
                             Price = "",
                             ShippingId = 1,
@@ -9735,10 +9522,10 @@ namespace CalcAppAPI.Migrations
                             GrossWeight = "10000",
                             HandBrakeId = 1,
                             HayBaleFrameId = 1,
-                            LoadingAreaCross = "1,95",
+                            LoadingAreaCross = "2",
                             LoadingAreaLength = "3975",
                             MOTId = 1,
-                            MaxCraneSize = "85",
+                            MaxCraneSize = "65",
                             Name = "PALMS 8D",
                             Price = "",
                             ShippingId = 1,
@@ -9884,7 +9671,7 @@ namespace CalcAppAPI.Migrations
                             LoadingAreaCross = "2.4",
                             LoadingAreaLength = "3990",
                             MOTId = 1,
-                            MaxCraneSize = "120",
+                            MaxCraneSize = "90",
                             Name = "PALMS 10U",
                             Price = "",
                             ShippingId = 1,
@@ -11584,6 +11371,133 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CraneHighPerformanceOilFilter", b =>
+                {
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HighPerformanceOilFilterId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CraneId", "HighPerformanceOilFilterId");
+
+                    b.HasIndex("HighPerformanceOilFilterId");
+
+                    b.ToTable("HighPerformanceOilFilterCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CraneId = 2,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 6,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 6,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 7,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 11,
+                            HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            HighPerformanceOilFilterId = 2
+                        });
+                });
+
             modelBuilder.Entity("CraneHoseGuard", b =>
                 {
                     b.Property<int>("CraneId")
@@ -12227,21 +12141,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 8,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 4
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 4
-                        },
-                        new
-                        {
                             CraneId = 4,
                             TrailerId = 5
                         },
@@ -12262,6 +12161,21 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 8,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            CraneId = 9,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            CraneId = 10,
+                            TrailerId = 5
+                        },
+                        new
+                        {
                             CraneId = 4,
                             TrailerId = 6
                         },
@@ -12297,8 +12211,8 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 4,
-                            TrailerId = 7
+                            CraneId = 11,
+                            TrailerId = 6
                         },
                         new
                         {
@@ -12332,8 +12246,13 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 4,
-                            TrailerId = 8
+                            CraneId = 11,
+                            TrailerId = 7
+                        },
+                        new
+                        {
+                            CraneId = 12,
+                            TrailerId = 7
                         },
                         new
                         {
@@ -12372,8 +12291,8 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 4,
-                            TrailerId = 9
+                            CraneId = 12,
+                            TrailerId = 8
                         },
                         new
                         {
@@ -12408,6 +12327,11 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 11,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            CraneId = 12,
                             TrailerId = 9
                         },
                         new
@@ -12452,11 +12376,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 5,
-                            TrailerId = 11
-                        },
-                        new
-                        {
                             CraneId = 6,
                             TrailerId = 11
                         },
@@ -12489,11 +12408,6 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             TrailerId = 11
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 12
                         },
                         new
                         {
@@ -12532,26 +12446,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 5,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 13
-                        },
-                        new
-                        {
                             CraneId = 9,
                             TrailerId = 13
                         },
@@ -12572,26 +12466,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 5,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 14
-                        },
-                        new
-                        {
                             CraneId = 9,
                             TrailerId = 14
                         },
@@ -12609,236 +12483,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             TrailerId = 14
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            CraneId = 5,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            CraneId = 6,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 7,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            CraneId = 9,
-                            TrailerId = 21
-                        },
-                        new
-                        {
-                            CraneId = 10,
-                            TrailerId = 21
-                        },
-                        new
-                        {
-                            CraneId = 11,
-                            TrailerId = 21
-                        },
-                        new
-                        {
-                            CraneId = 12,
-                            TrailerId = 21
                         },
                         new
                         {
                             CraneId = 13,
-                            TrailerId = 22
+                            TrailerId = 15
                         });
                 });
 
@@ -13246,6 +12895,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            DrawbarId = 8,
+                            TrailerId = 6
+                        },
+                        new
+                        {
                             DrawbarId = 9,
                             TrailerId = 6
                         },
@@ -13281,6 +12935,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            DrawbarId = 8,
+                            TrailerId = 7
+                        },
+                        new
+                        {
                             DrawbarId = 9,
                             TrailerId = 7
                         },
@@ -13491,343 +13150,63 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            DrawbarId = 2,
-                            TrailerId = 13
-                        },
-                        new
-                        {
                             DrawbarId = 3,
                             TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 2,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 4,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 5,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 6,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 8,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 9,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            DrawbarId = 1,
-                            TrailerId = 20
-                        },
-                        new
-                        {
-                            DrawbarId = 3,
-                            TrailerId = 20
                         },
                         new
                         {
                             DrawbarId = 10,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             DrawbarId = 11,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             DrawbarId = 12,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             DrawbarId = 13,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             DrawbarId = 1,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 3,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 10,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 11,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 12,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 13,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             DrawbarId = 1,
-                            TrailerId = 22
+                            TrailerId = 15
                         });
                 });
 
@@ -14775,16 +14154,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilPumpId = 2,
-                            TrailerId = 10
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 10
-                        },
-                        new
-                        {
                             OilPumpId = 4,
                             TrailerId = 10
                         },
@@ -14845,16 +14214,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilPumpId = 2,
-                            TrailerId = 12
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 12
-                        },
-                        new
-                        {
                             OilPumpId = 4,
                             TrailerId = 12
                         },
@@ -14872,221 +14231,11 @@ namespace CalcAppAPI.Migrations
                         {
                             OilPumpId = 7,
                             TrailerId = 12
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 2,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 2,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilPumpId = 1,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilPumpId = 4,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilPumpId = 5,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilPumpId = 6,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilPumpId = 7,
-                            TrailerId = 19
                         },
                         new
                         {
                             OilPumpId = 8,
-                            TrailerId = 21
+                            TrailerId = 14
                         });
                 });
 
@@ -15232,17 +14381,17 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilTankId = 2,
-                            TrailerId = 8
-                        },
-                        new
-                        {
                             OilTankId = 3,
                             TrailerId = 8
                         },
                         new
                         {
-                            OilTankId = 4,
+                            OilTankId = 5,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            OilTankId = 6,
                             TrailerId = 8
                         },
                         new
@@ -15252,17 +14401,17 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilTankId = 2,
-                            TrailerId = 9
-                        },
-                        new
-                        {
                             OilTankId = 3,
                             TrailerId = 9
                         },
                         new
                         {
-                            OilTankId = 4,
+                            OilTankId = 5,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            OilTankId = 6,
                             TrailerId = 9
                         },
                         new
@@ -15272,17 +14421,17 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilTankId = 2,
-                            TrailerId = 10
-                        },
-                        new
-                        {
                             OilTankId = 3,
                             TrailerId = 10
                         },
                         new
                         {
-                            OilTankId = 4,
+                            OilTankId = 5,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            OilTankId = 6,
                             TrailerId = 10
                         },
                         new
@@ -15292,17 +14441,17 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            OilTankId = 2,
-                            TrailerId = 11
-                        },
-                        new
-                        {
                             OilTankId = 3,
                             TrailerId = 11
                         },
                         new
                         {
-                            OilTankId = 4,
+                            OilTankId = 5,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            OilTankId = 6,
                             TrailerId = 11
                         },
                         new
@@ -15324,151 +14473,11 @@ namespace CalcAppAPI.Migrations
                         {
                             OilTankId = 6,
                             TrailerId = 12
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            OilTankId = 1,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilTankId = 3,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilTankId = 5,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            OilTankId = 6,
-                            TrailerId = 19
                         },
                         new
                         {
                             OilTankId = 7,
-                            TrailerId = 21
+                            TrailerId = 14
                         });
                 });
 
@@ -15519,11 +14528,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            PlatformId = 2,
-                            TrailerId = 4
-                        },
-                        new
-                        {
                             PlatformId = 1,
                             TrailerId = 5
                         },
@@ -15561,41 +14565,6 @@ namespace CalcAppAPI.Migrations
                         {
                             PlatformId = 1,
                             TrailerId = 12
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            PlatformId = 1,
-                            TrailerId = 19
                         });
                 });
 
@@ -15627,21 +14596,71 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             PropulsionId = 3,
-                            TrailerId = 4
+                            TrailerId = 3
                         },
                         new
                         {
                             PropulsionId = 4,
-                            TrailerId = 4
+                            TrailerId = 3
                         },
                         new
                         {
                             PropulsionId = 1,
-                            TrailerId = 5
+                            TrailerId = 4
                         },
                         new
                         {
                             PropulsionId = 2,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            PropulsionId = 3,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            PropulsionId = 4,
+                            TrailerId = 4
+                        },
+                        new
+                        {
+                            PropulsionId = 5,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 6,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 3,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 4,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 7,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 8,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 9,
+                            TrailerId = 5
+                        },
+                        new
+                        {
+                            PropulsionId = 10,
                             TrailerId = 5
                         },
                         new
@@ -15656,108 +14675,138 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            PropulsionId = 3,
-                            TrailerId = 7
+                            PropulsionId = 12,
+                            TrailerId = 6
                         },
                         new
                         {
-                            PropulsionId = 4,
-                            TrailerId = 7
+                            PropulsionId = 13,
+                            TrailerId = 6
                         },
                         new
                         {
-                            PropulsionId = 5,
-                            TrailerId = 8
+                            PropulsionId = 14,
+                            TrailerId = 6
                         },
                         new
                         {
-                            PropulsionId = 6,
-                            TrailerId = 8
-                        },
-                        new
-                        {
-                            PropulsionId = 3,
-                            TrailerId = 9
-                        },
-                        new
-                        {
-                            PropulsionId = 4,
-                            TrailerId = 9
+                            PropulsionId = 15,
+                            TrailerId = 6
                         },
                         new
                         {
                             PropulsionId = 5,
-                            TrailerId = 10
+                            TrailerId = 7
                         },
                         new
                         {
                             PropulsionId = 6,
-                            TrailerId = 10
+                            TrailerId = 7
                         },
                         new
                         {
-                            PropulsionId = 3,
-                            TrailerId = 11
+                            PropulsionId = 12,
+                            TrailerId = 7
                         },
                         new
                         {
-                            PropulsionId = 4,
-                            TrailerId = 11
+                            PropulsionId = 13,
+                            TrailerId = 7
                         },
                         new
                         {
-                            PropulsionId = 3,
-                            TrailerId = 13
+                            PropulsionId = 14,
+                            TrailerId = 7
                         },
                         new
                         {
-                            PropulsionId = 4,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            PropulsionId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            PropulsionId = 4,
-                            TrailerId = 15
+                            PropulsionId = 15,
+                            TrailerId = 7
                         },
                         new
                         {
                             PropulsionId = 7,
-                            TrailerId = 16
+                            TrailerId = 8
                         },
                         new
                         {
                             PropulsionId = 8,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            PropulsionId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            PropulsionId = 4,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            PropulsionId = 7,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            PropulsionId = 8,
-                            TrailerId = 19
+                            TrailerId = 8
                         },
                         new
                         {
                             PropulsionId = 9,
-                            TrailerId = 22
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            PropulsionId = 10,
+                            TrailerId = 8
+                        },
+                        new
+                        {
+                            PropulsionId = 16,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            PropulsionId = 17,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            PropulsionId = 18,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            PropulsionId = 19,
+                            TrailerId = 9
+                        },
+                        new
+                        {
+                            PropulsionId = 20,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            PropulsionId = 21,
+                            TrailerId = 10
+                        },
+                        new
+                        {
+                            PropulsionId = 16,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            PropulsionId = 17,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            PropulsionId = 18,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            PropulsionId = 19,
+                            TrailerId = 11
+                        },
+                        new
+                        {
+                            PropulsionId = 20,
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            PropulsionId = 21,
+                            TrailerId = 12
+                        },
+                        new
+                        {
+                            PropulsionId = 22,
+                            TrailerId = 15
                         });
                 });
 
@@ -16312,76 +15361,6 @@ namespace CalcAppAPI.Migrations
                         {
                             SupportLegId = 3,
                             TrailerId = 12
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            SupportLegId = 2,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            SupportLegId = 3,
-                            TrailerId = 19
                         });
                 });
 
@@ -16577,128 +15556,23 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            LightId = 1,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 13
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 14
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 15
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 16
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 17
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 18
-                        },
-                        new
-                        {
-                            LightId = 1,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            LightId = 2,
-                            TrailerId = 19
-                        },
-                        new
-                        {
-                            LightId = 3,
-                            TrailerId = 19
-                        },
-                        new
-                        {
                             LightId = 4,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             LightId = 5,
-                            TrailerId = 20
+                            TrailerId = 13
                         },
                         new
                         {
                             LightId = 4,
-                            TrailerId = 21
+                            TrailerId = 14
                         },
                         new
                         {
                             LightId = 5,
-                            TrailerId = 21
+                            TrailerId = 14
                         });
                 });
 
@@ -16760,12 +15634,27 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 3,
-                            TyreId = 5
+                            TyreId = 4
                         },
                         new
                         {
                             TrailerId = 3,
-                            TyreId = 7
+                            TyreId = 6
+                        },
+                        new
+                        {
+                            TrailerId = 4,
+                            TyreId = 1
+                        },
+                        new
+                        {
+                            TrailerId = 4,
+                            TyreId = 2
+                        },
+                        new
+                        {
+                            TrailerId = 4,
+                            TyreId = 3
                         },
                         new
                         {
@@ -16776,11 +15665,6 @@ namespace CalcAppAPI.Migrations
                         {
                             TrailerId = 4,
                             TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 4,
-                            TyreId = 8
                         },
                         new
                         {
@@ -16800,7 +15684,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 5,
+                            TyreId = 4
+                        },
+                        new
+                        {
+                            TrailerId = 5,
                             TyreId = 5
+                        },
+                        new
+                        {
+                            TrailerId = 5,
+                            TyreId = 6
                         },
                         new
                         {
@@ -16809,18 +15703,13 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            TrailerId = 6,
-                            TyreId = 1
+                            TrailerId = 5,
+                            TyreId = 8
                         },
                         new
                         {
-                            TrailerId = 6,
-                            TyreId = 2
-                        },
-                        new
-                        {
-                            TrailerId = 6,
-                            TyreId = 3
+                            TrailerId = 5,
+                            TyreId = 9
                         },
                         new
                         {
@@ -16834,23 +15723,68 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            TrailerId = 6,
+                            TyreId = 8
+                        },
+                        new
+                        {
+                            TrailerId = 6,
+                            TyreId = 9
+                        },
+                        new
+                        {
                             TrailerId = 7,
+                            TyreId = 5
+                        },
+                        new
+                        {
+                            TrailerId = 7,
+                            TyreId = 7
+                        },
+                        new
+                        {
+                            TrailerId = 7,
+                            TyreId = 8
+                        },
+                        new
+                        {
+                            TrailerId = 7,
+                            TyreId = 9
+                        },
+                        new
+                        {
+                            TrailerId = 7,
+                            TyreId = 10
+                        },
+                        new
+                        {
+                            TrailerId = 7,
+                            TyreId = 11
+                        },
+                        new
+                        {
+                            TrailerId = 8,
+                            TyreId = 3
+                        },
+                        new
+                        {
+                            TrailerId = 8,
                             TyreId = 4
                         },
                         new
                         {
-                            TrailerId = 7,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 7,
-                            TyreId = 8
+                            TrailerId = 8,
+                            TyreId = 5
                         },
                         new
                         {
                             TrailerId = 8,
                             TyreId = 6
+                        },
+                        new
+                        {
+                            TrailerId = 8,
+                            TyreId = 7
                         },
                         new
                         {
@@ -16870,7 +15804,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 9,
-                            TyreId = 6
+                            TyreId = 5
+                        },
+                        new
+                        {
+                            TrailerId = 9,
+                            TyreId = 7
                         },
                         new
                         {
@@ -16889,8 +15828,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            TrailerId = 9,
+                            TyreId = 11
+                        },
+                        new
+                        {
                             TrailerId = 10,
-                            TyreId = 6
+                            TyreId = 5
+                        },
+                        new
+                        {
+                            TrailerId = 10,
+                            TyreId = 7
                         },
                         new
                         {
@@ -16905,12 +15854,22 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             TrailerId = 10,
-                            TyreId = 12
+                            TyreId = 10
+                        },
+                        new
+                        {
+                            TrailerId = 10,
+                            TyreId = 11
                         },
                         new
                         {
                             TrailerId = 11,
-                            TyreId = 6
+                            TyreId = 5
+                        },
+                        new
+                        {
+                            TrailerId = 11,
+                            TyreId = 7
                         },
                         new
                         {
@@ -16931,16 +15890,6 @@ namespace CalcAppAPI.Migrations
                         {
                             TrailerId = 11,
                             TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 11,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 12,
-                            TyreId = 3
                         },
                         new
                         {
@@ -16954,208 +15903,48 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            TrailerId = 12,
+                            TyreId = 8
+                        },
+                        new
+                        {
+                            TrailerId = 12,
+                            TyreId = 9
+                        },
+                        new
+                        {
+                            TrailerId = 12,
+                            TyreId = 10
+                        },
+                        new
+                        {
+                            TrailerId = 12,
+                            TyreId = 11
+                        },
+                        new
+                        {
                             TrailerId = 13,
-                            TyreId = 6
+                            TyreId = 12
                         },
                         new
                         {
                             TrailerId = 13,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 13,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 13,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 14,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 6
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 15,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 16,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 16,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 16,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 16,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 16,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 17,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 17,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 17,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 17,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 17,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 18,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 18,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 18,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 18,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 18,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 19,
-                            TyreId = 8
-                        },
-                        new
-                        {
-                            TrailerId = 19,
-                            TyreId = 9
-                        },
-                        new
-                        {
-                            TrailerId = 19,
-                            TyreId = 10
-                        },
-                        new
-                        {
-                            TrailerId = 19,
-                            TyreId = 11
-                        },
-                        new
-                        {
-                            TrailerId = 19,
-                            TyreId = 12
-                        },
-                        new
-                        {
-                            TrailerId = 20,
                             TyreId = 13
                         },
                         new
                         {
-                            TrailerId = 20,
-                            TyreId = 14
+                            TrailerId = 14,
+                            TyreId = 12
                         },
                         new
                         {
-                            TrailerId = 21,
+                            TrailerId = 14,
                             TyreId = 13
                         },
                         new
                         {
-                            TrailerId = 21,
+                            TrailerId = 15,
                             TyreId = 14
-                        },
-                        new
-                        {
-                            TrailerId = 22,
-                            TyreId = 15
                         });
                 });
 
@@ -17398,10 +16187,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("ElectricalFloatingId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", "HighPerformanceOilFilter")
-                        .WithMany("Crane")
-                        .HasForeignKey("HighPerformanceOilFilterId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", "JoystickHolder")
                         .WithMany("Crane")
                         .HasForeignKey("JoystickHolderId");
@@ -17449,8 +16234,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("CraneOilCooler");
 
                     b.Navigation("ElectricalFloating");
-
-                    b.Navigation("HighPerformanceOilFilter");
 
                     b.Navigation("JoystickHolder");
 
@@ -17637,6 +16420,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Grapple", null)
                         .WithMany()
                         .HasForeignKey("GrappleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CraneHighPerformanceOilFilter", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Cranes.Crane", null)
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", null)
+                        .WithMany()
+                        .HasForeignKey("HighPerformanceOilFilterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -18096,11 +16894,6 @@ namespace CalcAppAPI.Migrations
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.FrameType", b =>
                 {
                     b.Navigation("TrailerConfigurations");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.HighPerformanceOilFilter", b =>
-                {
-                    b.Navigation("Crane");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.JoystickHolder", b =>

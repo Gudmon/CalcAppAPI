@@ -51,8 +51,7 @@ namespace CalcAppAPI.Models.Machine.Palms.Cranes
         public int? LightId { get; set; }
         public OperatorSeat? OperatorSeat { get; set; }
         public int? OperatorSeatId { get; set; }
-        public HighPerformanceOilFilter? HighPerformanceOilFilter { get; set; }
-        public int? HighPerformanceOilFilterId { get; set; }
+        public IEnumerable<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; }
         public CraneOilCooler? CraneOilCooler { get; set; }
         public int? CraneOilCoolerId { get; set; }
         public IEnumerable<RotatorBrake> RotatorBrake { get; set; }

@@ -456,12 +456,8 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.OperatorSeatId)
                 .IsRequired(false);
 
-            //HIGH PERFORMANCE OIL FILTER
-            modelBuilder.Entity<HighPerformanceOilFilter>()
-                .HasMany(o => o.Crane)
-                .WithOne(o => o.HighPerformanceOilFilter)
-                .HasForeignKey(o => o.HighPerformanceOilFilterId)
-                .IsRequired(false);
+            //HIGH PERFORMANCE OIL FILTERS
+            modelBuilder.ConnectCranesWithHighPerformanceOilFilters();
 
             //CRANE OILCOOLER
             modelBuilder.Entity<CraneOilCooler>()
