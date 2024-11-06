@@ -46,14 +46,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Brake
                {
                    Id = 6,
-                   Name = "Légfék",
+                   Name = "EU jóváhagyott szett, légfék 2 keréken, PB1",
                    Code = "BA-EU",
                    Price = "2100",
                },
                new Brake
                {
                    Id = 7,
-                   Name = "Hidraulikus fék",
+                   Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
                    Price = "3450",
                },
@@ -61,14 +61,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Brake
                {
                    Id = 8,
-                   Name = "Légfék",
+                   Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
                    Code = "BA-EU",
                    Price = "3195",
                },
                new Brake
                {
                    Id = 9,
-                   Name = "Hidraulikus fék",
+                   Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
                    Price = "4360",
                },
@@ -103,14 +103,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Brake
                {
                    Id = 14,
-                   Name = "Légfék",
+                   Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
                    Code = "BA-EU",
                    Price = "3530",
                },
                new Brake
                {
                    Id = 15,
-                   Name = "Hidraulikus fék",
+                   Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
                    Price = "4695",
                },
@@ -145,14 +145,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Brake
                {
                    Id = 20,
-                   Name = "Légfék",
+                   Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
                    Code = "BA-EU",
                    Price = "7520",
                },
                new Brake
                {
                    Id = 21,
-                   Name = "Hidraulikus fék",
+                   Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
                    Price = "8685",
                },
