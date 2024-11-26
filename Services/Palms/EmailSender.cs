@@ -21,8 +21,8 @@ namespace CalcAppAPI.Services.Palms
         public async Task SendEmailAsync(CompetitionEmail email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            string toMail = "gudmonmarcellwork@gmail.com";
-            //string toMail = "info@clear-globe.com";
+            //string toMail = "gudmonmarcellwork@gmail.com";
+            string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
             var now = DateTime.UtcNow.AddHours(2).ToString("yyyy/MM/dd HH:mm");
