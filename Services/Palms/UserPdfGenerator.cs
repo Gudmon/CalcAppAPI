@@ -216,6 +216,122 @@ namespace CalcAppAPI.Services.Palms
                 table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
             }
         }
+
+        public async Task<byte[]> GenerateCompetitionPdfAsync(CompetitionPdf pdfModel)
+        {
+            var pdf = Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Header().Element(ComposeCompetitionHeader);
+                    page.Content().Padding(20).Element(c => ComposeCompetitionContent(c, pdfModel));
+                    page.Footer().Element(ComposeCompetitionFooter);
+                });
+            });
+
+            using (var stream = new MemoryStream())
+            {
+                pdf.GeneratePdf(stream);
+                return stream.ToArray();
+            }
+        }
+
+        void ComposeCompetitionHeader(IContainer container)
+        {
+            container.Background("#a32116").PaddingLeft(20).Row(row =>
+            {
+                row.RelativeItem().Padding(2).Column(col =>
+                {
+                    col.Item()
+                        .Hyperlink("https://www.palmsmagyarorszag.hu")
+                        .Text("PALMS").ApplyCommonTextStyle();
+                });
+            });
+        }
+
+        void ComposeCompetitionContent(IContainer container, CompetitionPdf pdfModel)
+        {
+            var now = DateTime.UtcNow.AddHours(2).ToString("yyyy/MM/dd HH:mm");
+            container.Column(col =>
+            {
+                col.Item().Row(row =>
+                {
+                    row.Spacing(20);
+                    row.RelativeItem(7).PaddingBottom(10).Text("Ginop plusz 1.2.4-24").FontFamily("Cambria").FontSize(20).Bold();
+                row.RelativeItem(5).PaddingBottom(10).Text($"{now}").FontFamily("Cambria").FontSize(20).Bold();
+                });
+
+                col.Item().Table(table =>
+                {
+                    table.ColumnsDefinition(columns =>
+                    {
+                        columns.RelativeColumn(7);
+                        columns.RelativeColumn(5);
+                    });
+                    table.Header(header =>
+                    {
+                        header.Cell().BorderBottom(1).PaddingBottom(5).Text("Megnevezés").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).PaddingBottom(5).Text("Érték").Bold().FontFamily("Cambria");
+                    });
+
+                    foreach (var property in typeof(CompetitionPdf).GetProperties())
+                    {
+                        var displayName = CompetitionPropertyDisplayNameMapping.ContainsKey(property.Name)
+                            ? CompetitionPropertyDisplayNameMapping[property.Name]
+                            : property.Name;
+
+                        var value = property.GetValue(pdfModel)?.ToString() ?? "N/A";
+
+                        table.Cell().Padding(5).Text(displayName).FontFamily("Cambria");
+                        table.Cell().Padding(5).Text(value).FontFamily("Cambria");
+                    }
+                });
+            });
+        }
+
+
+        void ComposeCompetitionFooter(IContainer container)
+        {
+            container.Background("#8ac73c").Padding(20).Row(row =>
+            {
+                row.RelativeItem().Padding(0).Column(col =>
+                {
+                    col.Item()
+                        .Hyperlink("https://www.clear-globe.com")
+                        .Text("clear-globe").ApplyCommonTextStyle();
+                });
+                row.RelativeItem().AlignRight().Text(text =>
+                {
+                    text.CurrentPageNumber().ApplyCommonTextStyle();
+                    text.Span(" / ").ApplyCommonTextStyle();
+                    text.TotalPages().ApplyCommonTextStyle();
+                });
+            });
+        }
+
+        private static readonly Dictionary<string, string> CompetitionPropertyDisplayNameMapping = new Dictionary<string, string>
+        {
+            { "FromEmail", "Email" },
+            { "Name", "Név" },
+            { "CountryCode", "Előhívószám" },
+            { "PhoneNumber", "Telefonszám" },
+            { "BusinessForm", "Vállalkozási forma" },
+            { "Category", "Vállalkozás helye" },
+            { "Kata", "KATA" },
+            { "BusinessYear", "1 lezárt üzleti év" },
+            { "ManPower", "Átlagos statisztikai létszám min. 1 fő" },
+            { "Revenue", "Árbevétel mezőgazdasági tevékenységből" },
+        };
+
+        private void CompetitionMapAndAddRow(TableDescriptor table, string propertyName, CompetitionPdf pdf)
+        {
+            var displayName = CompetitionPropertyDisplayNameMapping.ContainsKey(propertyName) ? CompetitionPropertyDisplayNameMapping[propertyName] : propertyName;
+
+            table.Cell().PaddingBottom(15).Text(displayName).FontFamily("Cambria");
+
+            table.Cell().PaddingBottom(15).Text("test").FontFamily("Cambria");
+            table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
+        }
     }
 
 }
