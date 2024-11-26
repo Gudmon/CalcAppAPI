@@ -25,7 +25,7 @@ namespace CalcAppAPI.Services.Palms
             string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
             string fromPassword = "lwszbrsnccpqunfe";
-            var now = DateTime.UtcNow.AddHours(2).ToString("yyyy/MM/dd HH:mm");
+            var now = DateTime.UtcNow.ToString("yyyy/MM/dd");
 
             var emailToSend = new MimeMessage();
 

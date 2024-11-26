@@ -251,7 +251,7 @@ namespace CalcAppAPI.Services.Palms
 
         void ComposeCompetitionContent(IContainer container, CompetitionPdf pdfModel)
         {
-            var now = DateTime.UtcNow.AddHours(2).ToString("yyyy/MM/dd HH:mm");
+            var now = DateTime.UtcNow.ToString("yyyy/MM/dd");
             container.Column(col =>
             {
                 col.Item().Row(row =>
