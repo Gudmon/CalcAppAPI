@@ -276,14 +276,17 @@ namespace CalcAppAPI.Services.Palms
 
                     foreach (var property in typeof(CompetitionPdf).GetProperties())
                     {
-                        var displayName = CompetitionPropertyDisplayNameMapping.ContainsKey(property.Name)
-                            ? CompetitionPropertyDisplayNameMapping[property.Name]
-                            : property.Name;
+                        var value = property.GetValue(pdfModel)?.ToString();
 
-                        var value = property.GetValue(pdfModel)?.ToString() ?? "N/A";
+                        if (!string.IsNullOrEmpty(value))
+                        {
+                            var displayName = CompetitionPropertyDisplayNameMapping.ContainsKey(property.Name)
+                                                        ? CompetitionPropertyDisplayNameMapping[property.Name]
+                                                        : property.Name;
 
-                        table.Cell().Padding(5).Text(displayName).FontFamily("Cambria");
-                        table.Cell().Padding(5).Text(value).FontFamily("Cambria");
+                            table.Cell().Padding(5).Text(displayName).FontFamily("Cambria");
+                            table.Cell().Padding(5).Text(value).FontFamily("Cambria");
+                        }
                     }
                 });
             });
@@ -321,6 +324,7 @@ namespace CalcAppAPI.Services.Palms
             { "BusinessYear", "1 lezárt üzleti év" },
             { "ManPower", "Átlagos statisztikai létszám min. 1 fő" },
             { "Revenue", "Árbevétel mezőgazdasági tevékenységből" },
+            { "Message", "Megjegyzés" },
         };
 
         private void CompetitionMapAndAddRow(TableDescriptor table, string propertyName, CompetitionPdf pdf)

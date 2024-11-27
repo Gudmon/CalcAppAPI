@@ -35,7 +35,24 @@ namespace CalcAppAPI.Services.Palms
 
             emailToSend.Subject = "PALMS" + " - " + email.Subject + " - " + email.FromEmail + " - " + email.Name + " - " + now;
 
-            string formattedBody =
+            string formattedBody;
+
+            if (!string.IsNullOrEmpty(email.Message))
+            {
+                formattedBody =
+                $"<br/><br/>Név: {email.Name}" +
+                $"<br/><br/>Telefonszám: {email.CountryCode}{email.PhoneNumber}" +
+                $"<br/><br/>Email: {email.FromEmail}" +
+                $"<br/><br/>Vállalkozási forma: {email.BusinessForm}" +
+                $"<br/><br/>Vállalkozás helye: {email.Category}" +
+                $"<br/><br/>KATA: {email.Kata}" +
+                $"<br/><br/>1 lezárt üzleti év: {email.BusinessYear}" +
+                $"<br/><br/>Átlagos statisztikai létszám min. 1 fő: {email.ManPower}" +
+                $"<br/><br/>Árbevétel mezőgazdasági tevékenységből: {email.Revenue}" +
+                $"<br/><br/>Megjegyzés: {email.Message}";
+            } else
+            {
+                formattedBody =
                 $"<br/><br/>Név: {email.Name}" +
                 $"<br/><br/>Telefonszám: {email.CountryCode}{email.PhoneNumber}" +
                 $"<br/><br/>Email: {email.FromEmail}" +
@@ -45,6 +62,7 @@ namespace CalcAppAPI.Services.Palms
                 $"<br/><br/>1 lezárt üzleti év: {email.BusinessYear}" +
                 $"<br/><br/>Átlagos statisztikai létszám min. 1 fő: {email.ManPower}" +
                 $"<br/><br/>Árbevétel mezőgazdasági tevékenységből: {email.Revenue}";
+            }
 
             var multipart = new Multipart("mixed");
             multipart.Add(new TextPart(MimeKit.Text.TextFormat.Html)
@@ -64,6 +82,7 @@ namespace CalcAppAPI.Services.Palms
                 Name = email.Name,
                 PhoneNumber = email.PhoneNumber,
                 Revenue = email.Revenue,
+                Message = email.Message
             };
 
             var fileName = email.Subject + " - " + email.Name + " - " + now;

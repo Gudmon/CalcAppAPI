@@ -12,5 +12,6 @@
         public string BusinessYear { get; set; }
         public string ManPower { get; set; }
         public string Revenue { get; set; }
+        public string? Message { get; set; }
     }
 }
