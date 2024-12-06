@@ -119,6 +119,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Code = "A42",
                   Price = "14660",
                   Description = "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban."
+              },
+              new ControlBlock
+              {
+                  Id = 15,
+                  Name = "A3.1 - 6/8 XY vezértömb, BLB BM50 (50 l/min.) 195 bar",
+                  Code = "A3.1",
+                  Price = "805",
+                  Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
               }
               );
 

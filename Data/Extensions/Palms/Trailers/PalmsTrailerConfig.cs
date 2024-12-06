@@ -528,7 +528,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BunkExtensionId = null,
                     FrameExtensionId = null,
                     ShippingId = 1,
-                    MOTId = 1,
+                    MOTId = null,
                     StanchionExtensionId = null,
                     HydroPackId = 1,
                 }
