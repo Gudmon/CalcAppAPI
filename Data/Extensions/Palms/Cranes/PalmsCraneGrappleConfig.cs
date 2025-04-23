@@ -149,8 +149,8 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Name = "Palms 0,09 kanál",
                   Code = "C009",
                   Price = "620",
-                  Area = null,
-                  Mass = null
+                  Area = "0.09",
+                  Mass = "36"
               }
               );
         }
