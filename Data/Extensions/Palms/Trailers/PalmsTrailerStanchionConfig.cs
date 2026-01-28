@@ -9,7 +9,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
         public static void ConfigureMultiplePalmsStanchions(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Stanchion>().HasData(
-                //PALMS 6S
+               //PALMS 6S
                new Stanchion
                {
                    Id = 1,
@@ -25,7 +25,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Price = "5975",
                },
 
-               //PALMS 8SX
+                //PALMS 8SX
                 new Stanchion
                 {
                     Id = 3,

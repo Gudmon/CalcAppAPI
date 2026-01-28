@@ -26,7 +26,7 @@ namespace CalcAppAPI.Controllers
             var desiredOrder = new List<string> {
                 "PALMS 6S", "PALMS 8SX", "PALMS 8D",
                 "PALMS 9SC", "PALMS 10D", "PALMS 12D",
-                "PALMS 14D", "PALMS 10U", "PALMS 12U",
+                "PALMS 14D", "PALMS 10U", "PALMS 11UX", "PALMS 12U",
                 "PALMS 12UAWD", "PALMS 15U", "PALMS 15UAWD",
                 "PALMS MWD 3.2", "PALMS HMWD 3.2"
             };
