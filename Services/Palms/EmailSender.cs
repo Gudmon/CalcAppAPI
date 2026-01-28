@@ -1,30 +1,32 @@
-﻿using MimeKit;
-using MailKit.Net.Smtp;
-using CalcAppAPI.Models.Email;
-using Microsoft.AspNetCore.Mvc;
+﻿using CalcAppAPI.Models.Email;
 using CalcAppAPI.Models.Pdf;
+using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using MimeKit;
 using System.Text;
 
 namespace CalcAppAPI.Services.Palms
 {
     public class EmailSender : IEmailSender
     {
+        private readonly EmailOptions _emailOptions;
         private readonly IDealerPdfGenerator _dealerPdfGenerator;
         private readonly IUserPdfGenerator _userPdfGenerator;
 
-        public EmailSender([FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
+        public EmailSender(IOptions<EmailOptions> emailOptions, [FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
         {
+            _emailOptions = emailOptions.Value;
             _dealerPdfGenerator = dealerPdfGenerator;
             _userPdfGenerator = userPdfGenerator;
         }
 
         public async Task SendEmailAsync(CompetitionEmail email)
         {
-            string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "gudmonmarcellwork@gmail.com";
-            string toMail = "info@clear-globe.com";
-            string ccMail = "clearglobecalculator@gmail.com";
-            string fromPassword = "lwszbrsnccpqunfe";
+            string fromMail = _emailOptions.FromEmailAddress;
+            //string toMail = _emailOptions.ToEmailAddressTest;
+            string toMail = _emailOptions.ToEmailAddress;
+            string ccMail = _emailOptions.FromEmailAddress;
             var now = DateTime.UtcNow.ToString("yyyy/MM/dd");
 
             var emailToSend = new MimeMessage();
@@ -105,8 +107,16 @@ namespace CalcAppAPI.Services.Palms
 
             using (var smtp = new SmtpClient())
             {
-                await smtp.ConnectAsync("smtp.gmail.com", 587, false);
-                await smtp.AuthenticateAsync(fromMail, fromPassword);
+                smtp.CheckCertificateRevocation = false;
+
+                await smtp.ConnectAsync(
+                    _emailOptions.SmtpHost,
+                    _emailOptions.SmtpPort,
+                     MailKit.Security.SecureSocketOptions.StartTls);
+
+                await smtp.AuthenticateAsync(
+                    _emailOptions.FromEmailAddress,
+                    _emailOptions.FromEmailPw);
 
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
@@ -115,11 +125,10 @@ namespace CalcAppAPI.Services.Palms
 
         public async Task SendEmailAsync(Email email)
         {
-            string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "gudmonmarcellwork@gmail.com";
-            string toMail = "info@clear-globe.com";
-            string ccMail = "clearglobecalculator@gmail.com";
-            string fromPassword = "lwszbrsnccpqunfe";
+            string fromMail = _emailOptions.FromEmailAddress;
+            string toMail = _emailOptions.ToEmailAddressTest;
+            //string toMail = _emailOptions.ToEmailAddress;
+            string ccMail = _emailOptions.FromEmailAddress;
 
             var emailToSend = new MimeMessage();
 
@@ -173,8 +182,16 @@ namespace CalcAppAPI.Services.Palms
 
             using (var smtp = new SmtpClient())
             {
-                await smtp.ConnectAsync("smtp.gmail.com", 587, false);
-                await smtp.AuthenticateAsync(fromMail, fromPassword);
+                smtp.CheckCertificateRevocation = false;
+
+                await smtp.ConnectAsync(
+                    _emailOptions.SmtpHost,
+                    _emailOptions.SmtpPort,
+                     MailKit.Security.SecureSocketOptions.StartTls);
+
+                await smtp.AuthenticateAsync(
+                    _emailOptions.FromEmailAddress,
+                    _emailOptions.FromEmailPw);
 
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
@@ -183,11 +200,10 @@ namespace CalcAppAPI.Services.Palms
 
         public async Task SendEmailAsync(IFormFile file)
         {
-            string fromMail = "clearglobecalculator@gmail.com";
-            //string toMail = "gudmonmarcellwork@gmail.com";
-            string toMail = "info@clear-globe.com";
-            string ccMail = "clearglobecalculator@gmail.com";
-            string fromPassword = "lwszbrsnccpqunfe";
+            string fromMail = _emailOptions.FromEmailAddress;
+            //string toMail = _emailOptions.ToEmailAddressTest;
+            string toMail = _emailOptions.ToEmailAddress;
+            string ccMail = _emailOptions.FromEmailAddress;
 
             var emailToSend = new MimeMessage();
 
@@ -223,8 +239,17 @@ namespace CalcAppAPI.Services.Palms
 
             using (var smtp = new SmtpClient())
             {
-                await smtp.ConnectAsync("smtp.gmail.com", 587, false);
-                await smtp.AuthenticateAsync(fromMail, fromPassword);
+                smtp.CheckCertificateRevocation = false;
+
+                await smtp.ConnectAsync(
+                    _emailOptions.SmtpHost,
+                    _emailOptions.SmtpPort,
+                     MailKit.Security.SecureSocketOptions.StartTls);
+
+                await smtp.AuthenticateAsync(
+                    _emailOptions.FromEmailAddress,
+                    _emailOptions.FromEmailPw);
+
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
             }

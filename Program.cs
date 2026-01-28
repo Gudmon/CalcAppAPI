@@ -1,11 +1,12 @@
-using CalcAppAPI.Data;
-using Microsoft.EntityFrameworkCore;
-using System.Text.Json.Serialization;
-using QuestPDF.Infrastructure;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
-using CalcAppAPI.Services.Palms;
+using CalcAppAPI.Data;
+using CalcAppAPI.Models.Email;
 using CalcAppAPI.Services.Krpan;
+using CalcAppAPI.Services.Palms;
+using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,21 @@ MyOptions.BlobConnection = blobSecret.Value.Value.Trim('"');
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(dbSecret.Value.Value.Trim('"'));
+});
+
+var fromEmailAddress = await client.GetSecretAsync("FromEmailAddress");
+var toEmailAddress = await client.GetSecretAsync("ToEmailAddress");
+var toEmailAddressTest = await client.GetSecretAsync("ToEmailAddressTest");
+var fromEmailPw = await client.GetSecretAsync("FromEmailPassword");
+
+builder.Services.Configure<EmailOptions>(options =>
+{
+    options.FromEmailAddress = fromEmailAddress.Value.Value.Trim('"');
+    options.ToEmailAddress = toEmailAddress.Value.Value.Trim('"');
+    options.ToEmailAddressTest = toEmailAddressTest.Value.Value.Trim('"');
+    options.FromEmailPw = fromEmailPw.Value.Value.Trim('"');
+    options.SmtpHost = "smtp.gmail.com";
+    options.SmtpPort = 587;
 });
 
 builder.Services.AddEndpointsApiExplorer();
