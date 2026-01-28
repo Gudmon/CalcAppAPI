@@ -11,12 +11,14 @@ namespace CalcAppAPI.Services.Palms
     public class EmailSender : IEmailSender
     {
         private readonly EmailOptions _emailOptions;
+        private readonly PhoneOptions _phoneOptions;
         private readonly IDealerPdfGenerator _dealerPdfGenerator;
         private readonly IUserPdfGenerator _userPdfGenerator;
 
-        public EmailSender(IOptions<EmailOptions> emailOptions, [FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
+        public EmailSender(IOptions<EmailOptions> emailOptions, IOptions<PhoneOptions> phoneOptions, [FromServices] IDealerPdfGenerator dealerPdfGenerator, IUserPdfGenerator userPdfGenerator)
         {
             _emailOptions = emailOptions.Value;
+            _phoneOptions = phoneOptions.Value;
             _dealerPdfGenerator = dealerPdfGenerator;
             _userPdfGenerator = userPdfGenerator;
         }
@@ -180,22 +182,42 @@ namespace CalcAppAPI.Services.Palms
 
             emailToSend.Body = multipart;
 
-            using (var smtp = new SmtpClient())
+            try
             {
-                smtp.CheckCertificateRevocation = false;
+                using (var smtp = new SmtpClient())
+                {
+                    smtp.CheckCertificateRevocation = false;
 
-                await smtp.ConnectAsync(
-                    _emailOptions.SmtpHost,
-                    _emailOptions.SmtpPort,
-                     MailKit.Security.SecureSocketOptions.StartTls);
+                    await smtp.ConnectAsync(
+                        _emailOptions.SmtpHost,
+                        _emailOptions.SmtpPort,
+                         MailKit.Security.SecureSocketOptions.StartTls);
 
-                await smtp.AuthenticateAsync(
-                    _emailOptions.FromEmailAddress,
-                    _emailOptions.FromEmailPw);
+                    await smtp.AuthenticateAsync(
+                        _emailOptions.FromEmailAddress,
+                        _emailOptions.FromEmailPw);
 
-                await smtp.SendAsync(emailToSend);
-                await smtp.DisconnectAsync(true);
+                    await smtp.SendAsync(emailToSend);
+                    await smtp.DisconnectAsync(true);
+                }
             }
+            catch (Exception ex)
+            {
+                var phones = string.Join(" / ", _phoneOptions.PhoneNumbers);
+
+                throw new EmailSendException(
+                    header: "E-mail küldési hiba",
+                    message: string.Format(
+                        "Az e-mail nem került elküldésre. Kérem jelezze a megadott elérhetőségek egyikén az 'Ön azonosítója megadásával': {0} / {1}. Az Ön azonosítója: {2}",
+                        _emailOptions.ToEmailAddress,
+                        phones,
+                        email.BlobName
+                    ),
+                    blobName: email.BlobName,
+                    inner: ex
+                );
+            }
+
         }
 
         public async Task SendEmailAsync(IFormFile file)

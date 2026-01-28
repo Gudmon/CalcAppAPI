@@ -56,6 +56,18 @@ builder.Services.Configure<EmailOptions>(options =>
     options.SmtpPort = 587;
 });
 
+var machineryPhoneNr = await client.GetSecretAsync("MachineryPhoneNr");
+var officePhoneNr = await client.GetSecretAsync("OfficePhoneNr");
+
+builder.Services.Configure<PhoneOptions>(options =>
+{
+    options.PhoneNumbers = new[]
+    {
+        machineryPhoneNr.Value.Value.Trim('"'),
+        officePhoneNr.Value.Value.Trim('"')
+    };
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

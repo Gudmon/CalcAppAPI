@@ -27,10 +27,35 @@ namespace CalcAppAPI.Controllers
                 await _emailSender.SendEmailAsync(email);
                 return Ok(new { message = "Email sent succesfully" });
             }
+            catch (EmailSendException ex)
+            {
+                _logger.LogError(
+                    ex,
+                    "Email sending failed. BlobName: {BlobName}",
+                    ex.BlobName
+                );
+
+                return StatusCode(
+                    StatusCodes.Status500InternalServerError,
+                    new
+                    {
+                        header = ex.Header,
+                        message = ex.Message,
+                        blobName = ex.BlobName
+                    }
+                );
+            }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error during sending email");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while sending the email.");
+                _logger.LogError(ex, "Unexpected error during email sending");
+                return StatusCode(
+                    StatusCodes.Status500InternalServerError,
+                    new
+                    {
+                        header = "Ismeretlen hiba",
+                        message = "Váratlan hiba történt. Kérjük, próbálja meg később."
+                    }
+                );
             }
         }
 
