@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new BolsterLock
                {
                    Id = 1,
-                   Name = "Rakconca rögzítő az első pár rakoncához",
+                   Name = "Rakonca rögzítő az első pár rakoncához",
                    Code = "BL",
                    Price = "0",
                });

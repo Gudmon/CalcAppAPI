@@ -14,7 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Id = 1,
                    Name = "Védőhüvely a tömlőhöz",
                    Code = "PSH",
-                   Price = "95",
+                   Price = "105",
                });
         }
     }

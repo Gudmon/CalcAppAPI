@@ -20,7 +20,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 2,
                    Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
                    Code = "WH2.6",
-                   Price = "1450",
+                   Price = "1490",
                },
                new Tyre
                {

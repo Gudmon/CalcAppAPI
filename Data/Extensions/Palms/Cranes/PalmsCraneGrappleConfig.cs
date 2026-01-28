@@ -49,7 +49,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 5,
                   Name = "Kanál 0,25 Grippen (FL)",
                   Code = "C5.1",
-                  Price = "3015",
+                  Price = "3380",
                   Area = "0.25",
                   Mass = null
               },
@@ -76,7 +76,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 8,
                   Name = "Biomasszás kanál 0,25 Grippen (FL)",
                   Code = "C7.1",
-                  Price = "3345",
+                  Price = "3715",
                   Area = "0.25",
                   Mass = null
               },
@@ -139,7 +139,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 15,
                   Name = "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz",
                   Code = "GB3",
-                  Price = "910",
+                  Price = "935",
                   Area = null,
                   Mass = "195"
               },

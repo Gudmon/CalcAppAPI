@@ -21,7 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 2,
                   Name = "Rotátor fék",
                   Code = "Br1",
-                  Price = "75",
+                  Price = "85",
                   Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               },
               new RotatorBrake
@@ -37,7 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 4,
                   Name = "Dupla rotátor fék",
                   Code = "Br2",
-                  Price = "115",
+                  Price = "125",
                   Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
               },
               new RotatorBrake

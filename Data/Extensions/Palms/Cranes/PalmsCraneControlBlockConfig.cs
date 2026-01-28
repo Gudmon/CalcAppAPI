@@ -13,7 +13,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 1,
                   Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
                   Code = "A3.1",
-                  Price = "840",
+                  Price = "870",
                   Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
               },
               new ControlBlock
@@ -21,7 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 2,
                   Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
                   Code = "A4",
-                  Price = "1410",
+                  Price = "1500",
                   Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
@@ -29,7 +29,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 3,
                   Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
                   Code = "A4.2",
-                  Price = "1445",
+                  Price = "1500",
                   Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock
@@ -37,7 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                   Id = 4,
                   Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
                   Code = "A7",
-                  Price = "1410",
+                  Price = "1480",
                   Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára"
               },
               new ControlBlock

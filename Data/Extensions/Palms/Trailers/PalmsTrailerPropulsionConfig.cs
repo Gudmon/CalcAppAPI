@@ -29,7 +29,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 3,
                    Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "24WDF",
-                   Price = "12885",
+                   Price = "13200",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -37,7 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 4,
                    Name = "2WD hajtás (BB240 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "24WDRe",
-                   Price = "11130",
+                   Price = "11445",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -61,7 +61,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 7,
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
-                   Price = "15375",
+                   Price = "15585",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -69,7 +69,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 8,
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
-                   Price = "15375",
+                   Price = "15585",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -77,7 +77,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 9,
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
-                   Price = "13880",
+                   Price = "13590",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -85,7 +85,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 10,
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
-                   Price = "13880",
+                   Price = "13590",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -101,7 +101,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 12,
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
-                   Price = "14805",
+                   Price = "15015",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -109,7 +109,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 13,
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
-                   Price = "14805",
+                   Price = "15015",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -117,7 +117,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 14,
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
-                   Price = "12810",
+                   Price = "13020",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -125,7 +125,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 15,
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
-                   Price = "12810",
+                   Price = "13020",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -133,7 +133,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 16,
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
-                   Price = "14450",
+                   Price = "14660",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -141,7 +141,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 17,
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
-                   Price = "14450",
+                   Price = "14660",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion
@@ -149,7 +149,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 18,
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
-                   Price = "12455",
+                   Price = "12665",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
                },
                new Propulsion
@@ -157,7 +157,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 19,
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
-                   Price = "12455",
+                   Price = "12665",
                    Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
                },
                new Propulsion

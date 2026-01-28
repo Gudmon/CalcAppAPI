@@ -13,14 +13,14 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 1,
                    Name = "Szénabála keret (D típushoz)",
                    Code = "HBF",
-                   Price = "2650",
+                   Price = "2785",
                },
                new HayBaleFrame
                {
                    Id = 2,
                    Name = "Szénabála keret (U típushoz)",
                    Code = "HBF",
-                   Price = "2650",
+                   Price = "2785",
                }
                );
         }

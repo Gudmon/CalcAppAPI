@@ -22,7 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Id = 2,
                    Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                    Code = "B2.1",
-                   Price = "1680",
+                   Price = "1575",
                    Mass = "174"
                },
                new FrameType
@@ -46,7 +46,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Id = 5,
                    Name = "B6, FD típusú letalpaló, 3 pontos csatlakozással",
                    Code = "B6",
-                   Price = "3020",
+                   Price = "3005",
                    Mass = "449"
                },
                new FrameType
@@ -62,7 +62,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Cranes
                    Id = 7,
                    Name = "Talpaló Z daruhoz",
                    Code = "B10",
-                   Price = "3685",
+                   Price = "3730",
                    Mass = "520"
                },
                new FrameType

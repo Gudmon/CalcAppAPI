@@ -48,7 +48,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                    Id = 6,
                    Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel",
                    Code = "T2SOV+",
-                   Price = "1495"
+                   Price = "1490"
                },
                new OilTank
                {
