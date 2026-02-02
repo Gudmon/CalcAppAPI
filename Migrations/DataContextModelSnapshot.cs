@@ -5754,8 +5754,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "Bbox",
-                            Name = "Biomasszás boksz 4 mm-es Strenx acélból",
-                            Price = "905"
+                            Name = "Biomasszás boksz 2mm HARDOX",
+                            Price = "1000"
                         });
                 });
 
@@ -6104,6 +6104,40 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DBox");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "Dbox",
+                            Name = "Billenős boksz HARDOX",
+                            Price = "2615"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Drawbar", b =>
                 {
                     b.Property<int>("Id")
@@ -6219,6 +6253,20 @@ namespace CalcAppAPI.Migrations
                             Code = "CY",
                             Name = "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel",
                             Price = "8380"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "C1",
+                            Name = "Normál típusú vonórúd K50-es vonófejjel",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "C1.1",
+                            Name = "Normál típusú vonórúd D35-ös vonófejjel",
+                            Price = "0"
                         });
                 });
 
@@ -6251,8 +6299,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "Hex",
-                            Name = "Hidraulikus működtetésű raktér hosszabbítás ",
+                            Name = "Hidraulikus működtetésű raktér hosszabbítás",
                             Price = "210"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "LF",
+                            Name = "Raktér hosszabbítás (100mm-enként)",
+                            Price = "0"
                         });
                 });
 
@@ -6359,9 +6414,57 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "HyP",
-                            Name = "Hydropack 6,5 lóerő - 12 l/min",
-                            Price = "2195"
+                            Code = "HyP1",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 1 szekciós",
+                            Price = "1575"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "HyP4",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós",
+                            Price = "2365"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "HyP4+",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós + elektronikus indítás és akkumulátor",
+                            Price = "1510"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HydroPackControl");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "ETC",
+                            Name = "Elektronikus pótkocsi kontrol (dörzshajtáshoz és vonórúdhoz) + csörlő control",
+                            Price = "410"
                         });
                 });
 
@@ -6802,7 +6905,7 @@ namespace CalcAppAPI.Migrations
                             Code = "RWD",
                             Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
-                            Price = "2040"
+                            Price = "2185"
                         });
                 });
 
@@ -7382,21 +7485,21 @@ namespace CalcAppAPI.Migrations
                             Id = 79,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "2490"
+                            Price = "2730"
                         },
                         new
                         {
                             Id = 80,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "2595"
+                            Price = "2855"
                         },
                         new
                         {
                             Id = 81,
                             Code = "A5",
                             Name = "Pótkocsi 5 pár rakoncával",
-                            Price = "2700"
+                            Price = "2985"
                         });
                 });
 
@@ -7431,6 +7534,47 @@ namespace CalcAppAPI.Migrations
                             Code = "PE",
                             Name = "Rakonca hosszabbítás (az ár 1 db-ra vonatkozik)",
                             Price = "55"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupplyFormat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SupplyFormat");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "POP",
+                            Name = "Raklapra csomagolva",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "FA",
+                            Name = "Teljesen összeszerelve",
+                            Price = "195"
                         });
                 });
 
@@ -7861,9 +8005,9 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 14,
-                            Code = "WH1.4",
-                            Name = "22/11-8",
-                            Price = "465"
+                            Code = "WH2.4",
+                            Name = "300/65-12",
+                            Price = "885"
                         });
                 });
 
@@ -9346,6 +9490,9 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DBoxId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -9375,7 +9522,7 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("HayBaleFrameId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("HydroPackId")
+                    b.Property<int?>("HydropackControlId")
                         .HasColumnType("int");
 
                     b.Property<string>("LoadingAreaCross")
@@ -9440,13 +9587,15 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ChainsawHolderId");
 
+                    b.HasIndex("DBoxId");
+
                     b.HasIndex("FrameExtensionId");
 
                     b.HasIndex("HandBrakeId");
 
                     b.HasIndex("HayBaleFrameId");
 
-                    b.HasIndex("HydroPackId");
+                    b.HasIndex("HydropackControlId");
 
                     b.HasIndex("MOTId");
 
@@ -9873,10 +10022,11 @@ namespace CalcAppAPI.Migrations
                             Description = "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.",
                             DrawbarControlCylinders = "1",
                             Frame = "2x4 mm C-alváz",
+                            FrameExtensionId = 2,
                             FrameExtensionLength = "-",
                             GrossWeight = "1500",
                             HayBaleFrameId = 1,
-                            HydroPackId = 1,
+                            HydropackControlId = 1,
                             LoadingAreaCross = "0,6",
                             LoadingAreaLength = "2450",
                             MaxCraneSize = "12",
@@ -9890,23 +10040,19 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 16,
-                            BBoxId = 5,
                             BeamType = "Unibody (Forwarder)",
-                            ChainsawHolderId = 1,
                             CurbWeight = "2320",
-                            Description = "TBD",
+                            Description = "",
                             DrawbarControlCylinders = "2",
                             Frame = "unibody",
                             FrameExtensionLength = "1,138",
                             GrossWeight = "15000",
                             HayBaleFrameId = 1,
-                            HydroPackId = 1,
                             LoadingAreaCross = "2.4-2.9",
                             LoadingAreaLength = "3976",
                             MaxCraneSize = "90",
                             Name = "PALMS 11UX",
                             Price = "",
-                            ShippingId = 1,
                             StandardWheelSize = "500/50-17",
                             TotalLength = "6285",
                             WidthWithStandardWheels = "2312"
@@ -13235,7 +13381,44 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            DrawbarId = 1,
+                            DrawbarId = 14,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            DrawbarId = 15,
+                            TrailerId = 15
+                        });
+                });
+
+            modelBuilder.Entity("HydroPackTrailer", b =>
+                {
+                    b.Property<int>("HydroPackId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("HydroPackId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("HydroPackTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            HydroPackId = 1,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            HydroPackId = 2,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            HydroPackId = 3,
                             TrailerId = 15
                         });
                 });
@@ -15262,6 +15445,33 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("SupplyFormatTrailer", b =>
+                {
+                    b.Property<int>("SupplyFormatId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SupplyFormatId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("SupplyFormatTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            SupplyFormatId = 1,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            SupplyFormatId = 2,
+                            TrailerId = 15
+                        });
+                });
+
             modelBuilder.Entity("SupportLegTrailer", b =>
                 {
                     b.Property<int>("SupportLegId")
@@ -15391,6 +15601,11 @@ namespace CalcAppAPI.Migrations
                         {
                             SupportLegId = 3,
                             TrailerId = 12
+                        },
+                        new
+                        {
+                            SupportLegId = 1,
+                            TrailerId = 15
                         });
                 });
 
@@ -15603,6 +15818,11 @@ namespace CalcAppAPI.Migrations
                         {
                             LightId = 5,
                             TrailerId = 14
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 15
                         });
                 });
 
@@ -16308,6 +16528,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("ChainsawHolderId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", "DBox")
+                        .WithMany("Trailer")
+                        .HasForeignKey("DBoxId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", "FrameExtension")
                         .WithMany("Trailer")
                         .HasForeignKey("FrameExtensionId");
@@ -16320,9 +16544,9 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("HayBaleFrameId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", "HydroPack")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", "HydropackControl")
                         .WithMany("Trailer")
-                        .HasForeignKey("HydroPackId");
+                        .HasForeignKey("HydropackControlId");
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.MOT", "MOT")
                         .WithMany("Trailer")
@@ -16358,13 +16582,15 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("ChainsawHolder");
 
+                    b.Navigation("DBox");
+
                     b.Navigation("FrameExtension");
 
                     b.Navigation("HandBrake");
 
                     b.Navigation("HayBaleFrame");
 
-                    b.Navigation("HydroPack");
+                    b.Navigation("HydropackControl");
 
                     b.Navigation("MOT");
 
@@ -16559,6 +16785,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HydroPackTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", null)
+                        .WithMany()
+                        .HasForeignKey("HydroPackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("KrpanBrakeKrpanTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanBrake", null)
@@ -16714,6 +16955,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Stanchion", null)
                         .WithMany()
                         .HasForeignKey("StanchionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SupplyFormatTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupplyFormat", null)
+                        .WithMany()
+                        .HasForeignKey("SupplyFormatId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -16991,6 +17247,11 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", b =>
+                {
+                    b.Navigation("Trailer");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", b =>
                 {
                     b.Navigation("Trailer");
@@ -17006,7 +17267,7 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", b =>
                 {
                     b.Navigation("Trailer");
                 });

@@ -79,7 +79,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
 
                        //PALMS HMWD3.2
                        new { TrailerId = 14, LightId = 4 },
-                       new { TrailerId = 14, LightId = 5 }
+                       new { TrailerId = 14, LightId = 5 },
+
+                        //PALMS 2D
+                       new { TrailerId = 15, LightId = 3 }
                    )
                );
         }

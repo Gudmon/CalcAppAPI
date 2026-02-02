@@ -11,9 +11,16 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new FrameExtension
                {
                    Id = 1,
-                   Name = "Hidraulikus működtetésű raktér hosszabbítás ",
+                   Name = "Hidraulikus működtetésű raktér hosszabbítás",
                    Code = "Hex",
                    Price = "210",
+               },
+               new FrameExtension
+               {
+                   Id = 2,
+                   Name = "Raktér hosszabbítás (100mm-enként)",
+                   Code = "LF",
+                   Price = "0",
                });
         }
     }

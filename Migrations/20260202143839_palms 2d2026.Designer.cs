@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CalcAppAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241106070928_fix brakes and propulsions")]
-    partial class fixbrakesandpropulsions
+    [Migration("20260202143839_palms 2d2026")]
+    partial class palms2d2026
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1719,7 +1719,7 @@ namespace CalcAppAPI.Migrations
                             Code = "A3.1",
                             Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára",
                             Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
-                            Price = "840"
+                            Price = "870"
                         },
                         new
                         {
@@ -1727,7 +1727,7 @@ namespace CalcAppAPI.Migrations
                             Code = "A4",
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
-                            Price = "1410"
+                            Price = "1500"
                         },
                         new
                         {
@@ -1735,7 +1735,7 @@ namespace CalcAppAPI.Migrations
                             Code = "A4.2",
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
-                            Price = "1445"
+                            Price = "1500"
                         },
                         new
                         {
@@ -1743,7 +1743,7 @@ namespace CalcAppAPI.Migrations
                             Code = "A7",
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
-                            Price = "1410"
+                            Price = "1480"
                         },
                         new
                         {
@@ -1824,6 +1824,14 @@ namespace CalcAppAPI.Migrations
                             Description = "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban.",
                             Name = "A42 Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF",
                             Price = "14660"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "A3.1",
+                            Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára",
+                            Name = "A3.1 - 6/8 XY vezértömb, BLB BM50 (50 l/min.) 195 bar",
+                            Price = "805"
                         });
                 });
 
@@ -1857,7 +1865,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "JKK",
                             Name = "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz",
-                            Price = "50"
+                            Price = "60"
                         });
                 });
 
@@ -4815,21 +4823,21 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "D1",
                             Name = "Csillapító a munkahenger elforgatáshoz",
-                            Price = "805"
+                            Price = "945"
                         },
                         new
                         {
                             Id = 2,
                             Code = "D2",
                             Name = "Csillapító a munkahenger elforgatáshoz és emeléshez",
-                            Price = "1375"
+                            Price = "1610"
                         },
                         new
                         {
                             Id = 3,
                             Code = "D3",
                             Name = "Csillapító emeléshez",
-                            Price = "805"
+                            Price = "665"
                         });
                 });
 
@@ -4863,7 +4871,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "FP",
                             Name = "Elektromos úszó pozíció emelő és fordító funkcióhoz (A11-A41 vezértömbhöz)",
-                            Price = "1035"
+                            Price = "1065"
                         });
                 });
 
@@ -4910,7 +4918,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B2.1",
                             Mass = "174",
                             Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
-                            Price = "1680"
+                            Price = "1575"
                         },
                         new
                         {
@@ -4934,7 +4942,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B6",
                             Mass = "449",
                             Name = "B6, FD típusú letalpaló, 3 pontos csatlakozással",
-                            Price = "3020"
+                            Price = "3005"
                         },
                         new
                         {
@@ -4950,7 +4958,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B10",
                             Mass = "520",
                             Name = "Talpaló Z daruhoz",
-                            Price = "3685"
+                            Price = "3730"
                         },
                         new
                         {
@@ -5041,7 +5049,7 @@ namespace CalcAppAPI.Migrations
                             Area = "0.25",
                             Code = "C5.1",
                             Name = "Kanál 0,25 Grippen (FL)",
-                            Price = "3015"
+                            Price = "3380"
                         },
                         new
                         {
@@ -5067,7 +5075,7 @@ namespace CalcAppAPI.Migrations
                             Area = "0.25",
                             Code = "C7.1",
                             Name = "Biomasszás kanál 0,25 Grippen (FL)",
-                            Price = "3345"
+                            Price = "3715"
                         },
                         new
                         {
@@ -5125,12 +5133,14 @@ namespace CalcAppAPI.Migrations
                             Code = "GB3",
                             Mass = "195",
                             Name = "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz",
-                            Price = "910"
+                            Price = "935"
                         },
                         new
                         {
                             Id = 16,
+                            Area = "0.09",
                             Code = "C009",
+                            Mass = "36",
                             Name = "Palms 0,09 kanál",
                             Price = "620"
                         });
@@ -5316,7 +5326,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "HSB",
                             Name = "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel",
-                            Price = "1890"
+                            Price = "1955"
                         });
                 });
 
@@ -5350,7 +5360,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "PSH",
                             Name = "Védőhüvely a tömlőhöz",
-                            Price = "95"
+                            Price = "105"
                         });
                 });
 
@@ -5478,7 +5488,7 @@ namespace CalcAppAPI.Migrations
                             Code = "Br1",
                             Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
                             Name = "Rotátor fék",
-                            Price = "75"
+                            Price = "85"
                         },
                         new
                         {
@@ -5494,7 +5504,7 @@ namespace CalcAppAPI.Migrations
                             Code = "Br2",
                             Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
                             Name = "Dupla rotátor fék",
-                            Price = "115"
+                            Price = "125"
                         },
                         new
                         {
@@ -5645,14 +5655,14 @@ namespace CalcAppAPI.Migrations
                             Id = 2,
                             Code = "W1",
                             Name = "Rádió távvezérlésű 1400-as csörlő (A11-A41 vezértömbhöz)",
-                            Price = "2365"
+                            Price = "2415"
                         },
                         new
                         {
                             Id = 3,
                             Code = "W2",
                             Name = "Rádió távvezérlésű 2200-as csörlő (A11-A41 vezértömbhöz)",
-                            Price = "2845"
+                            Price = "2930"
                         });
                 });
 
@@ -5747,8 +5757,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "Bbox",
-                            Name = "Biomasszás boksz 4 mm-es Strenx acélból",
-                            Price = "905"
+                            Name = "Biomasszás boksz 2mm HARDOX",
+                            Price = "1000"
                         });
                 });
 
@@ -5781,7 +5791,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "BL",
-                            Name = "Rakconca rögzítő az első pár rakoncához",
+                            Name = "Rakonca rögzítő az első pár rakoncához",
                             Price = "0"
                         });
                 });
@@ -6097,6 +6107,40 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DBox");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "Dbox",
+                            Name = "Billenős boksz HARDOX",
+                            Price = "2615"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Drawbar", b =>
                 {
                     b.Property<int>("Id")
@@ -6212,6 +6256,20 @@ namespace CalcAppAPI.Migrations
                             Code = "CY",
                             Name = "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel",
                             Price = "8380"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "C1",
+                            Name = "Normál típusú vonórúd K50-es vonófejjel",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "C1.1",
+                            Name = "Normál típusú vonórúd D35-ös vonófejjel",
+                            Price = "0"
                         });
                 });
 
@@ -6244,8 +6302,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "Hex",
-                            Name = "Hidraulikus működtetésű raktér hosszabbítás ",
+                            Name = "Hidraulikus működtetésű raktér hosszabbítás",
                             Price = "210"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "LF",
+                            Name = "Raktér hosszabbítás (100mm-enként)",
+                            Price = "0"
                         });
                 });
 
@@ -6313,14 +6378,14 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "HBF",
                             Name = "Szénabála keret (D típushoz)",
-                            Price = "2650"
+                            Price = "2785"
                         },
                         new
                         {
                             Id = 2,
                             Code = "HBF",
                             Name = "Szénabála keret (U típushoz)",
-                            Price = "2650"
+                            Price = "2785"
                         });
                 });
 
@@ -6352,9 +6417,57 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "HyP",
-                            Name = "Hydropack 6,5 lóerő - 12 l/min",
-                            Price = "2195"
+                            Code = "HyP1",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 1 szekciós",
+                            Price = "1575"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "HyP4",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós",
+                            Price = "2365"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "HyP4+",
+                            Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós + elektronikus indítás és akkumulátor",
+                            Price = "1510"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HydroPackControl");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "ETC",
+                            Name = "Elektronikus pótkocsi kontrol (dörzshajtáshoz és vonórúdhoz) + csörlő control",
+                            Price = "410"
                         });
                 });
 
@@ -6540,7 +6653,7 @@ namespace CalcAppAPI.Migrations
                             Id = 6,
                             Code = "T2SOV+",
                             Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel",
-                            Price = "1495"
+                            Price = "1490"
                         },
                         new
                         {
@@ -6643,7 +6756,7 @@ namespace CalcAppAPI.Migrations
                             Code = "24WDF",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "12885"
+                            Price = "13200"
                         },
                         new
                         {
@@ -6651,7 +6764,7 @@ namespace CalcAppAPI.Migrations
                             Code = "24WDRe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD hajtás (BB240 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "11130"
+                            Price = "11445"
                         },
                         new
                         {
@@ -6675,7 +6788,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDF",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "15375"
+                            Price = "15585"
                         },
                         new
                         {
@@ -6683,7 +6796,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDR",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "15375"
+                            Price = "15585"
                         },
                         new
                         {
@@ -6691,7 +6804,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDFe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "13880"
+                            Price = "13590"
                         },
                         new
                         {
@@ -6699,7 +6812,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDRe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "13880"
+                            Price = "13590"
                         },
                         new
                         {
@@ -6715,7 +6828,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDF",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "14805"
+                            Price = "15015"
                         },
                         new
                         {
@@ -6723,7 +6836,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDR",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "14805"
+                            Price = "15015"
                         },
                         new
                         {
@@ -6731,7 +6844,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDFe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "12810"
+                            Price = "13020"
                         },
                         new
                         {
@@ -6739,7 +6852,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDRe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "12810"
+                            Price = "13020"
                         },
                         new
                         {
@@ -6747,7 +6860,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDF",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "14450"
+                            Price = "14660"
                         },
                         new
                         {
@@ -6755,7 +6868,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDR",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "14450"
+                            Price = "14660"
                         },
                         new
                         {
@@ -6763,7 +6876,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDFe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "12455"
+                            Price = "12665"
                         },
                         new
                         {
@@ -6771,7 +6884,7 @@ namespace CalcAppAPI.Migrations
                             Code = "25WDRe",
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "12455"
+                            Price = "12665"
                         },
                         new
                         {
@@ -6795,7 +6908,7 @@ namespace CalcAppAPI.Migrations
                             Code = "RWD",
                             Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
-                            Price = "2040"
+                            Price = "2185"
                         });
                 });
 
@@ -6829,210 +6942,210 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "5285"
+                            Price = "5460"
                         },
                         new
                         {
                             Id = 2,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "5800"
+                            Price = "5975"
                         },
                         new
                         {
                             Id = 3,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "6930"
+                            Price = "6995"
                         },
                         new
                         {
                             Id = 4,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "7450"
+                            Price = "7515"
                         },
                         new
                         {
                             Id = 5,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "7785"
+                            Price = "7850"
                         },
                         new
                         {
                             Id = 6,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással ",
-                            Price = "8305"
+                            Price = "8370"
                         },
                         new
                         {
                             Id = 7,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "6930"
+                            Price = "7245"
                         },
                         new
                         {
                             Id = 8,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "6930"
+                            Price = "7245"
                         },
                         new
                         {
                             Id = 9,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "7450"
+                            Price = "7655"
                         },
                         new
                         {
                             Id = 10,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "7450"
+                            Price = "7655"
                         },
                         new
                         {
                             Id = 11,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "7785"
+                            Price = "8245"
                         },
                         new
                         {
                             Id = 12,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "7785"
+                            Price = "8245"
                         },
                         new
                         {
                             Id = 13,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "8305"
+                            Price = "8650"
                         },
                         new
                         {
                             Id = 14,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "8305"
+                            Price = "8650"
                         },
                         new
                         {
                             Id = 15,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "7920"
+                            Price = "8065"
                         },
                         new
                         {
                             Id = 16,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "8465"
+                            Price = "8610"
                         },
                         new
                         {
                             Id = 17,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "8920"
+                            Price = "9065"
                         },
                         new
                         {
                             Id = 18,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "9465"
+                            Price = "9615"
                         },
                         new
                         {
                             Id = 19,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "8400"
+                            Price = "8505"
                         },
                         new
                         {
                             Id = 20,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "8795"
+                            Price = "8900"
                         },
                         new
                         {
                             Id = 21,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "9415"
+                            Price = "9520"
                         },
                         new
                         {
                             Id = 22,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "9810"
+                            Price = "9915"
                         },
                         new
                         {
                             Id = 23,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "10500"
+                            Price = "10700"
                         },
                         new
                         {
                             Id = 24,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "10895"
+                            Price = "11095"
                         },
                         new
                         {
                             Id = 25,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "11515"
+                            Price = "11715"
                         },
                         new
                         {
                             Id = 26,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "11910"
+                            Price = "12105"
                         },
                         new
                         {
                             Id = 27,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "11970"
+                            Price = "12245"
                         },
                         new
                         {
                             Id = 28,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "12470"
+                            Price = "12745"
                         },
                         new
                         {
                             Id = 29,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "13240"
+                            Price = "13515"
                         },
                         new
                         {
                             Id = 30,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "13740"
+                            Price = "14015"
                         },
                         new
                         {
@@ -7095,224 +7208,224 @@ namespace CalcAppAPI.Migrations
                             Id = 39,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "11760"
+                            Price = "12285"
                         },
                         new
                         {
                             Id = 40,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "11760"
+                            Price = "12285"
                         },
                         new
                         {
                             Id = 41,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "12430"
+                            Price = "112950"
                         },
                         new
                         {
                             Id = 42,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "12430"
+                            Price = "112950"
                         },
                         new
                         {
                             Id = 43,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "13155"
+                            Price = "13675"
                         },
                         new
                         {
                             Id = 44,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "13155"
+                            Price = "13675"
                         },
                         new
                         {
                             Id = 45,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "13820"
+                            Price = "14345"
                         },
                         new
                         {
                             Id = 46,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "13820"
+                            Price = "14345"
                         },
                         new
                         {
                             Id = 47,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "37160"
+                            Price = "38075"
                         },
                         new
                         {
                             Id = 48,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "37160"
+                            Price = "38075"
                         },
                         new
                         {
                             Id = 49,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "37830"
+                            Price = "38740"
                         },
                         new
                         {
                             Id = 50,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "37830"
+                            Price = "38740"
                         },
                         new
                         {
                             Id = 51,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "38550"
+                            Price = "39465"
                         },
                         new
                         {
                             Id = 52,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "38550"
+                            Price = "39465"
                         },
                         new
                         {
                             Id = 53,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "39220"
+                            Price = "40130"
                         },
                         new
                         {
                             Id = 54,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "39220"
+                            Price = "40130"
                         },
                         new
                         {
                             Id = 55,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "14070"
+                            Price = "14660"
                         },
                         new
                         {
                             Id = 56,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "14070"
+                            Price = "14660"
                         },
                         new
                         {
                             Id = 57,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "14990"
+                            Price = "15575"
                         },
                         new
                         {
                             Id = 58,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "14990"
+                            Price = "15575"
                         },
                         new
                         {
                             Id = 59,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "15715"
+                            Price = "16300"
                         },
                         new
                         {
                             Id = 60,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "15715"
+                            Price = "16300"
                         },
                         new
                         {
                             Id = 61,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "16635"
+                            Price = "17220"
                         },
                         new
                         {
                             Id = 62,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "16635"
+                            Price = "17220"
                         },
                         new
                         {
                             Id = 63,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "39470"
+                            Price = "40445"
                         },
                         new
                         {
                             Id = 64,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "39470"
+                            Price = "40445"
                         },
                         new
                         {
                             Id = 65,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "40390"
+                            Price = "41365"
                         },
                         new
                         {
                             Id = 66,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "40390"
+                            Price = "41365"
                         },
                         new
                         {
                             Id = 67,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "41115"
+                            Price = "42090"
                         },
                         new
                         {
                             Id = 68,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "41115"
+                            Price = "42090"
                         },
                         new
                         {
                             Id = 69,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "42030"
+                            Price = "43010"
                         },
                         new
                         {
                             Id = 70,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "42030"
+                            Price = "43010"
                         },
                         new
                         {
@@ -7375,21 +7488,21 @@ namespace CalcAppAPI.Migrations
                             Id = 79,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "2490"
+                            Price = "2730"
                         },
                         new
                         {
                             Id = 80,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "2595"
+                            Price = "2855"
                         },
                         new
                         {
                             Id = 81,
                             Code = "A5",
                             Name = "Pótkocsi 5 pár rakoncával",
-                            Price = "2700"
+                            Price = "2985"
                         });
                 });
 
@@ -7424,6 +7537,47 @@ namespace CalcAppAPI.Migrations
                             Code = "PE",
                             Name = "Rakonca hosszabbítás (az ár 1 db-ra vonatkozik)",
                             Price = "55"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupplyFormat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SupplyFormat");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "POP",
+                            Name = "Raklapra csomagolva",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "FA",
+                            Name = "Teljesen összeszerelve",
+                            Price = "195"
                         });
                 });
 
@@ -7772,7 +7926,7 @@ namespace CalcAppAPI.Migrations
                             Id = 2,
                             Code = "WH2.6",
                             Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
-                            Price = "1450"
+                            Price = "1490"
                         },
                         new
                         {
@@ -7854,9 +8008,9 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 14,
-                            Code = "WH1.4",
-                            Name = "22/11-8",
-                            Price = "465"
+                            Code = "WH2.4",
+                            Name = "300/65-12",
+                            Price = "885"
                         });
                 });
 
@@ -8805,7 +8959,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "4.2",
                             Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
-                            Price = "5555",
+                            Price = "5870",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -8843,7 +8997,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "5.4",
                             Name = "PALMS 2.54",
                             PillarSlewingAngle = "370",
-                            Price = "6695",
+                            Price = "7215",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -8880,7 +9034,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "6.3",
                             Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
-                            Price = "7245",
+                            Price = "7480",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -8919,7 +9073,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
-                            Price = "8335",
+                            Price = "8400",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "30-45",
                             RotatorCapacity = "30",
@@ -8961,7 +9115,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 4.71",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "370",
-                            Price = "9740",
+                            Price = "9800",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "45-70",
                             RotatorCapacity = "45",
@@ -9004,7 +9158,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.75",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "11865",
+                            Price = "12445",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorCapacity = "55",
@@ -9047,7 +9201,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.85",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "14450",
+                            Price = "14595",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorCapacity = "55",
@@ -9088,7 +9242,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.87Z",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "340",
-                            Price = "15585",
+                            Price = "16060",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorCapacity = "55",
@@ -9130,7 +9284,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 7.78",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "14850",
+                            Price = "15855",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorCapacity = "60",
@@ -9173,7 +9327,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 7.87",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "19315",
+                            Price = "19835",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorCapacity = "60",
@@ -9216,7 +9370,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 7.94",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "20055",
+                            Price = "20675",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "60-120",
                             RotatorCapacity = "60",
@@ -9258,7 +9412,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS X100",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "29350",
+                            Price = "31235",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "120",
                             RotatorCapacity = "100",
@@ -9339,6 +9493,9 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DBoxId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -9368,7 +9525,7 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("HayBaleFrameId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("HydroPackId")
+                    b.Property<int?>("HydropackControlId")
                         .HasColumnType("int");
 
                     b.Property<string>("LoadingAreaCross")
@@ -9433,13 +9590,15 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("ChainsawHolderId");
 
+                    b.HasIndex("DBoxId");
+
                     b.HasIndex("FrameExtensionId");
 
                     b.HasIndex("HandBrakeId");
 
                     b.HasIndex("HayBaleFrameId");
 
-                    b.HasIndex("HydroPackId");
+                    b.HasIndex("HydropackControlId");
 
                     b.HasIndex("MOTId");
 
@@ -9866,13 +10025,13 @@ namespace CalcAppAPI.Migrations
                             Description = "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.",
                             DrawbarControlCylinders = "1",
                             Frame = "2x4 mm C-alváz",
+                            FrameExtensionId = 2,
                             FrameExtensionLength = "-",
                             GrossWeight = "1500",
                             HayBaleFrameId = 1,
-                            HydroPackId = 1,
+                            HydropackControlId = 1,
                             LoadingAreaCross = "0,6",
                             LoadingAreaLength = "2450",
-                            MOTId = 1,
                             MaxCraneSize = "12",
                             Name = "PALMS 2D",
                             Price = "",
@@ -9880,6 +10039,26 @@ namespace CalcAppAPI.Migrations
                             StandardWheelSize = "22/11-8",
                             TotalLength = "3865",
                             WidthWithStandardWheels = "1285"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            BeamType = "Unibody (Forwarder)",
+                            CurbWeight = "2320",
+                            Description = "",
+                            DrawbarControlCylinders = "2",
+                            Frame = "unibody",
+                            FrameExtensionLength = "1,138",
+                            GrossWeight = "15000",
+                            HayBaleFrameId = 1,
+                            LoadingAreaCross = "2.4-2.9",
+                            LoadingAreaLength = "3976",
+                            MaxCraneSize = "90",
+                            Name = "PALMS 11UX",
+                            Price = "",
+                            StandardWheelSize = "500/50-17",
+                            TotalLength = "6285",
+                            WidthWithStandardWheels = "2312"
                         });
                 });
 
@@ -10425,7 +10604,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            ControlBlockId = 2,
+                            ControlBlockId = 15,
                             CraneId = 13
                         });
                 });
@@ -13205,7 +13384,44 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            DrawbarId = 1,
+                            DrawbarId = 14,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            DrawbarId = 15,
+                            TrailerId = 15
+                        });
+                });
+
+            modelBuilder.Entity("HydroPackTrailer", b =>
+                {
+                    b.Property<int>("HydroPackId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("HydroPackId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("HydroPackTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            HydroPackId = 1,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            HydroPackId = 2,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            HydroPackId = 3,
                             TrailerId = 15
                         });
                 });
@@ -15232,6 +15448,33 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("SupplyFormatTrailer", b =>
+                {
+                    b.Property<int>("SupplyFormatId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("SupplyFormatId", "TrailerId");
+
+                    b.HasIndex("TrailerId");
+
+                    b.ToTable("SupplyFormatTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            SupplyFormatId = 1,
+                            TrailerId = 15
+                        },
+                        new
+                        {
+                            SupplyFormatId = 2,
+                            TrailerId = 15
+                        });
+                });
+
             modelBuilder.Entity("SupportLegTrailer", b =>
                 {
                     b.Property<int>("SupportLegId")
@@ -15361,6 +15604,11 @@ namespace CalcAppAPI.Migrations
                         {
                             SupportLegId = 3,
                             TrailerId = 12
+                        },
+                        new
+                        {
+                            SupportLegId = 1,
+                            TrailerId = 15
                         });
                 });
 
@@ -15573,6 +15821,11 @@ namespace CalcAppAPI.Migrations
                         {
                             LightId = 5,
                             TrailerId = 14
+                        },
+                        new
+                        {
+                            LightId = 3,
+                            TrailerId = 15
                         });
                 });
 
@@ -16278,6 +16531,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("ChainsawHolderId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", "DBox")
+                        .WithMany("Trailer")
+                        .HasForeignKey("DBoxId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", "FrameExtension")
                         .WithMany("Trailer")
                         .HasForeignKey("FrameExtensionId");
@@ -16290,9 +16547,9 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Trailer")
                         .HasForeignKey("HayBaleFrameId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", "HydroPack")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", "HydropackControl")
                         .WithMany("Trailer")
-                        .HasForeignKey("HydroPackId");
+                        .HasForeignKey("HydropackControlId");
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.MOT", "MOT")
                         .WithMany("Trailer")
@@ -16328,13 +16585,15 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("ChainsawHolder");
 
+                    b.Navigation("DBox");
+
                     b.Navigation("FrameExtension");
 
                     b.Navigation("HandBrake");
 
                     b.Navigation("HayBaleFrame");
 
-                    b.Navigation("HydroPack");
+                    b.Navigation("HydropackControl");
 
                     b.Navigation("MOT");
 
@@ -16529,6 +16788,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HydroPackTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", null)
+                        .WithMany()
+                        .HasForeignKey("HydroPackId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("KrpanBrakeKrpanTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanBrake", null)
@@ -16684,6 +16958,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.Stanchion", null)
                         .WithMany()
                         .HasForeignKey("StanchionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Palms.Trailers.Trailer", null)
+                        .WithMany()
+                        .HasForeignKey("TrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SupplyFormatTrailer", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.SupplyFormat", null)
+                        .WithMany()
+                        .HasForeignKey("SupplyFormatId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -16961,6 +17250,11 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.DBox", b =>
+                {
+                    b.Navigation("Trailer");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.FrameExtension", b =>
                 {
                     b.Navigation("Trailer");
@@ -16976,7 +17270,7 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPack", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Trailers.HydroPackControl", b =>
                 {
                     b.Navigation("Trailer");
                 });

@@ -27,6 +27,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Single,
                     Frame = "140x140x6",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = null,
                     BBoxId = null,
                     HayBaleFrameId = null,
@@ -40,7 +41,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -62,6 +62,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Single,
                     Frame = "160x160x8",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = null,
@@ -75,7 +76,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -97,6 +97,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Double,
                     Frame = "2x200x100x8",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = 1,
@@ -110,7 +111,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -132,6 +132,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Single,
                     Frame = "200x200x6",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = null,
@@ -145,7 +146,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -167,6 +167,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Double,
                     Frame = "2x200x100x8",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = 1,
@@ -180,7 +181,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -202,6 +202,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Double,
                     Frame = "2x200x100x8",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = 1,
@@ -215,7 +216,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -237,6 +237,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Double,
                     Frame = "2x200x120x10",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 1,
                     HayBaleFrameId = 1,
@@ -250,7 +251,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -272,6 +272,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 2,
                     HayBaleFrameId = 2,
@@ -285,7 +286,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -307,6 +307,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 2,
                     HayBaleFrameId = 2,
@@ -320,7 +321,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -342,6 +342,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 2,
                     HayBaleFrameId = 2,
@@ -355,7 +356,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -377,6 +377,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 3,
                     HayBaleFrameId = 2,
@@ -390,7 +391,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -412,6 +412,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 1,
+                    HydropackControlId = null,
                     BolsterLockId = 1,
                     BBoxId = 3,
                     HayBaleFrameId = 2,
@@ -425,7 +426,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -447,6 +447,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = null,
+                    HydropackControlId = null,
                     BolsterLockId = null,
                     BBoxId = 4,
                     HayBaleFrameId = 2,
@@ -460,7 +461,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -482,6 +482,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = 2,
+                    HydropackControlId = null,
                     BolsterLockId = null,
                     BBoxId = 4,
                     HayBaleFrameId = 2,
@@ -495,7 +496,6 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
-                    HydroPackId = null,
                 },
 
                 new Trailer
@@ -517,6 +517,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Double,
                     Frame = "2x4 mm C-alváz",
                     TrailerOilCoolerId = null,
+                    HydropackControlId = 1,
                     BolsterLockId = null,
                     BBoxId = 5,
                     HayBaleFrameId = 1,
@@ -526,11 +527,10 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     UnderrunProtectionId = null,
                     BunkAdapterId = null,
                     BunkExtensionId = null,
-                    FrameExtensionId = null,
+                    FrameExtensionId = 2,
                     ShippingId = 1,
                     MOTId = null,
                     StanchionExtensionId = null,
-                    HydroPackId = 1,
                 },
 
                 new Trailer
@@ -552,20 +552,20 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                     BeamType = Static.BeamTypes.Unibody,
                     Frame = "unibody",
                     TrailerOilCoolerId = null,
+                    HydropackControlId = null,
                     BolsterLockId = null,
-                    BBoxId = 5,
+                    BBoxId = null,
                     HayBaleFrameId = 1,
                     WoodSorterId = null,
                     HandBrakeId = null,
-                    ChainsawHolderId = 1,
+                    ChainsawHolderId = null,
                     UnderrunProtectionId = null,
                     BunkAdapterId = null,
                     BunkExtensionId = null,
                     FrameExtensionId = null,
-                    ShippingId = 1,
+                    ShippingId = null,
                     MOTId = null,
                     StanchionExtensionId = null,
-                    HydroPackId = 1,
                 }
             );
         }

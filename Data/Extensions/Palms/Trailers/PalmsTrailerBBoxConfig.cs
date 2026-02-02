@@ -39,9 +39,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new BBox
                {
                    Id = 5,
-                   Name = "Biomasszás boksz 4 mm-es Strenx acélból",
+                   Name = "Biomasszás boksz 2mm HARDOX",
                    Code = "Bbox",
-                   Price = "905",
+                   Price = "1000",
                }
                );
         }

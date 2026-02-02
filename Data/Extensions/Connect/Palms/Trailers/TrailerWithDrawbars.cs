@@ -146,7 +146,8 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 14, DrawbarId = 13 },
 
                         //PALMS 2D
-                        new { TrailerId = 15, DrawbarId = 1 }
+                        new { TrailerId = 15, DrawbarId = 14 },
+                        new { TrailerId = 15, DrawbarId = 15 }
                     )
                 );
         }

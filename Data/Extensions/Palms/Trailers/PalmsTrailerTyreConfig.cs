@@ -102,9 +102,9 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new Tyre
                {
                    Id = 14,
-                   Name = "22/11-8",
-                   Code = "WH1.4",
-                   Price = "465",
+                   Name = "300/65-12",
+                   Code = "WH2.4",
+                   Price = "885",
                }
                );
         }

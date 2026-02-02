@@ -250,13 +250,15 @@ namespace CalcAppAPI.Controllers
             return Ok(stanchionExtension);
         }
 
-        [HttpGet("trailers/{id}/hydropack")]
-        public async Task<ActionResult<Shipping>> GetHydroPack(int id)
+        [HttpGet("trailers/{id}/hydropacks")]
+        public async Task<ActionResult<IEnumerable<HydroPack>>> GetHydroPack(int id)
         {
-            var hydroPack = await _dbContext.HydroPack
-                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+            var hydroPacks = await _dbContext.HydroPack
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
 
-            return Ok(hydroPack);
+            return Ok(hydroPacks);
         }
+
     }
 }

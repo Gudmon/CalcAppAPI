@@ -34,6 +34,7 @@ namespace CalcAppAPI.Data
         public DbSet<TrailerOilCooler> TrailerOilCooler { get; set; }
         public DbSet<BolsterLock> BolsterLock { get; set; }
         public DbSet<BBox> BBox { get; set; }
+        public DbSet<DBox> DBox { get; set; }
         public DbSet<HayBaleFrame> HayBaleFrame { get; set; }
         public DbSet<WoodSorter> WoodSorter { get; set; }
         public DbSet<HandBrake> HandBrake { get; set; }
@@ -73,6 +74,8 @@ namespace CalcAppAPI.Data
         public DbSet<MOT> MOT { get; set; }
         public DbSet<StanchionExtension> StanchionExtension { get; set; }
         public DbSet<HydroPack> HydroPack { get; set; }
+        public DbSet<HydroPackControl> HydroPackControl { get; set; }
+        public DbSet<SupplyFormat> SupplyFormat { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
         // KRPAN
@@ -124,6 +127,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsTrailerOilCoolers();
             modelBuilder.ConfigureMultiplePalmsBolsterLocks();
             modelBuilder.ConfigureMultiplePalmsBBoxes();
+            modelBuilder.ConfigureMultiplePalmsDBoxes();
             modelBuilder.ConfigureMultiplePalmsHayBaleFrames();
             modelBuilder.ConfigureMultiplePalmsWoodSorters();
             modelBuilder.ConfigureMultiplePalmsHandBrakes();
@@ -136,8 +140,10 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsBunkExtensions();
             modelBuilder.ConfigureMultiplePalmsFrameExtensions();
             modelBuilder.ConfigureMultiplePalmsStanchionExtensions();
-            modelBuilder.ConfigureMultiplePalmsHydroPacks();
+            modelBuilder.ConfigureMultiplePalmsHydropacks();
+            modelBuilder.ConfigureMultiplePalmsHydropackControls();
             modelBuilder.ConfigureMultiplePalmsMOTs();
+            modelBuilder.ConfigureMultiplePalmsSupplyFormats();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
@@ -319,6 +325,23 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.BBoxId)
                 .IsRequired(false);
 
+            //DBOX
+            modelBuilder.Entity<DBox>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.DBox)
+                .HasForeignKey(o => o.DBoxId)
+                .IsRequired(false);
+
+            //HYDROPACKS
+            modelBuilder.ConnectTrailersWithHydropacks();
+
+            //HYDROPACK CONTROLS
+            modelBuilder.Entity<HydroPackControl>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.HydropackControl)
+                .HasForeignKey(o => o.HydropackControlId)
+                .IsRequired(false);
+
             //HAY BALE FRAME
             modelBuilder.Entity<HayBaleFrame>()
                 .HasMany(o => o.Trailer)
@@ -400,16 +423,11 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.StanchionExtensionId)
                 .IsRequired(false);
 
-            //HYDROPACK
-            modelBuilder.Entity<HydroPack>()
-                .HasMany(o => o.Trailer)
-                .WithOne(o => o.HydroPack)
-                .HasForeignKey(o => o.HydroPackId)
-                .IsRequired(false);
-
             modelBuilder.Entity<ControlBlock>()
                 .HasMany(cb => cb.AvailableForFrameTypes)
                 .WithMany();
+
+            modelBuilder.ConnectTrailersWithSupplyFormats();
 
             modelBuilder.ConnectCranesWithFrameTypes();
             modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
@@ -534,6 +552,7 @@ namespace CalcAppAPI.Data
                 .WithOne(o => o.Shipping)
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);
+
 
 
             ////// KRPAN

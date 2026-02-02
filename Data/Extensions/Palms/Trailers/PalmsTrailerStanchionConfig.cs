@@ -591,21 +591,21 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                   Id = 79,
                   Name = "Pótkocsi 3 pár rakoncával",
                   Code = "A3",
-                  Price = "2490",
+                  Price = "2730",
               },
               new Stanchion
               {
                   Id = 80,
                   Name = "Pótkocsi 4 pár rakoncával",
                   Code = "A4",
-                  Price = "2595",
+                  Price = "2855",
               },
               new Stanchion
               {
                   Id = 81,
                   Name = "Pótkocsi 5 pár rakoncával",
                   Code = "A5",
-                  Price = "2700",
+                  Price = "2985",
               }
               );
         }

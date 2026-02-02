@@ -7,7 +7,7 @@
 namespace CalcAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class palms2d2026 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -194,6 +194,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "DBox",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DBox", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Drawbar",
                 columns: table => new
                 {
@@ -344,6 +359,21 @@ namespace CalcAppAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HydroPack", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HydroPackControl",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HydroPackControl", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -1007,6 +1037,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SupplyFormat",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupplyFormat", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SupportLeg",
                 columns: table => new
                 {
@@ -1503,6 +1548,7 @@ namespace CalcAppAPI.Migrations
                     TrailerOilCoolerId = table.Column<int>(type: "int", nullable: true),
                     BolsterLockId = table.Column<int>(type: "int", nullable: true),
                     BBoxId = table.Column<int>(type: "int", nullable: true),
+                    DBoxId = table.Column<int>(type: "int", nullable: true),
                     HayBaleFrameId = table.Column<int>(type: "int", nullable: true),
                     WoodSorterId = table.Column<int>(type: "int", nullable: true),
                     HandBrakeId = table.Column<int>(type: "int", nullable: true),
@@ -1514,7 +1560,7 @@ namespace CalcAppAPI.Migrations
                     ShippingId = table.Column<int>(type: "int", nullable: true),
                     MOTId = table.Column<int>(type: "int", nullable: true),
                     StanchionExtensionId = table.Column<int>(type: "int", nullable: true),
-                    HydroPackId = table.Column<int>(type: "int", nullable: true)
+                    HydropackControlId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -1545,6 +1591,11 @@ namespace CalcAppAPI.Migrations
                         principalTable: "ChainsawHolder",
                         principalColumn: "Id");
                     table.ForeignKey(
+                        name: "FK_Trailer_DBox_DBoxId",
+                        column: x => x.DBoxId,
+                        principalTable: "DBox",
+                        principalColumn: "Id");
+                    table.ForeignKey(
                         name: "FK_Trailer_FrameExtension_FrameExtensionId",
                         column: x => x.FrameExtensionId,
                         principalTable: "FrameExtension",
@@ -1560,9 +1611,9 @@ namespace CalcAppAPI.Migrations
                         principalTable: "HayBaleFrame",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Trailer_HydroPack_HydroPackId",
-                        column: x => x.HydroPackId,
-                        principalTable: "HydroPack",
+                        name: "FK_Trailer_HydroPackControl_HydropackControlId",
+                        column: x => x.HydropackControlId,
+                        principalTable: "HydroPackControl",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Trailer_MOT_MOTId",
@@ -2056,6 +2107,30 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "HydroPackTrailer",
+                columns: table => new
+                {
+                    HydroPackId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HydroPackTrailer", x => new { x.HydroPackId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_HydroPackTrailer_HydroPack_HydroPackId",
+                        column: x => x.HydroPackId,
+                        principalTable: "HydroPack",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_HydroPackTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "LightTrailer",
                 columns: table => new
                 {
@@ -2200,6 +2275,30 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "SupplyFormatTrailer",
+                columns: table => new
+                {
+                    SupplyFormatId = table.Column<int>(type: "int", nullable: false),
+                    TrailerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupplyFormatTrailer", x => new { x.SupplyFormatId, x.TrailerId });
+                    table.ForeignKey(
+                        name: "FK_SupplyFormatTrailer_SupplyFormat_SupplyFormatId",
+                        column: x => x.SupplyFormatId,
+                        principalTable: "SupplyFormat",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_SupplyFormatTrailer_Trailer_TrailerId",
+                        column: x => x.TrailerId,
+                        principalTable: "Trailer",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SupportLegTrailer",
                 columns: table => new
                 {
@@ -2315,13 +2414,13 @@ namespace CalcAppAPI.Migrations
                     { 2, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3150" },
                     { 3, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3360" },
                     { 4, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "3200" },
-                    { 5, "Bbox", "Biomasszás boksz 4 mm-es Strenx acélból", "905" }
+                    { 5, "Bbox", "Biomasszás boksz 2mm HARDOX", "1000" }
                 });
 
             migrationBuilder.InsertData(
                 table: "BolsterLock",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "BL", "Rakconca rögzítő az első pár rakoncához", "0" });
+                values: new object[] { 1, "BL", "Rakonca rögzítő az első pár rakoncához", "0" });
 
             migrationBuilder.InsertData(
                 table: "BoomGuard",
@@ -2343,22 +2442,22 @@ namespace CalcAppAPI.Migrations
                     { 3, "B2", "4 keréken hidraulikus fék", "1870" },
                     { 4, "B3", "2 keréken légfék", "1620" },
                     { 5, "B4", "4 keréken légfék", "2710" },
-                    { 6, "BA-EU", "Légfék", "2100" },
-                    { 7, "BH-EU", "Hidraulikus fék", "3450" },
-                    { 8, "BA-EU", "Légfék", "3195" },
-                    { 9, "BH-EU", "Hidraulikus fék", "4360" },
+                    { 6, "BA-EU", "EU jóváhagyott szett, légfék 2 keréken, PB1", "2100" },
+                    { 7, "BH-EU", "EU jóváhagyott szett, hidraulikus fék, PB1", "3450" },
+                    { 8, "BA-EU", "EU jóváhagyott szett, légfék 4 keréken, PB1", "3195" },
+                    { 9, "BH-EU", "EU jóváhagyott szett, hidraulikus fék, PB1", "4360" },
                     { 10, "B1", "2 keréken hidraulikus fék", "1155" },
                     { 11, "B2", "4 keréken hidraulikus fék", "2205" },
                     { 12, "B3", "2 keréken légfék", "1815" },
                     { 13, "B4", "4 keréken légfék", "3045" },
-                    { 14, "BA-EU", "Légfék", "3530" },
-                    { 15, "BH-EU", "Hidraulikus fék", "4695" },
+                    { 14, "BA-EU", "EU jóváhagyott szett, légfék 4 keréken, PB1", "3530" },
+                    { 15, "BH-EU", "EU jóváhagyott szett, hidraulikus fék, PB1", "4695" },
                     { 16, "B1", "2 keréken hidraulikus fék", "3150" },
                     { 17, "B2", "4 keréken hidraulikus fék", "6195" },
                     { 18, "B3", "2 keréken légfék", "3810" },
                     { 19, "B4", "4 keréken légfék", "7035" },
-                    { 20, "BA-EU", "Légfék", "7520" },
-                    { 21, "BH-EU", "Hidraulikus fék", "8685" },
+                    { 20, "BA-EU", "EU jóváhagyott szett, légfék 4 keréken, PB1", "7520" },
+                    { 21, "BH-EU", "EU jóváhagyott szett, hidraulikus fék, PB1", "8685" },
                     { 22, "B3", "2 keréken légfék", "3625" },
                     { 23, "B2", "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)", "250" },
                     { 24, "B4", "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)", "3035" }
@@ -2392,10 +2491,10 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "Code", "Description", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "A3.1", "Egyszerű és megbízható szelepblokk kisebb daruk számára", "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar", "840" },
-                    { 2, "A4", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar", "1410" },
-                    { 3, "A4.2", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar", "1445" },
-                    { 4, "A7", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)", "1410" },
+                    { 1, "A3.1", "Egyszerű és megbízható szelepblokk kisebb daruk számára", "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar", "870" },
+                    { 2, "A4", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar", "1500" },
+                    { 3, "A4.2", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar", "1500" },
+                    { 4, "A7", "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára", "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)", "1480" },
                     { 5, "A12", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF", "4720" },
                     { 6, "A14", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF", "6295" },
                     { 7, "A19", "Leginkább a PALMS 5. és 7. sorozatú darukkal használható", "A19 El.propo 8 szekciós, Walvoil DPX100, joystick, 215 bar + HPF", "6295" },
@@ -2405,13 +2504,14 @@ namespace CalcAppAPI.Migrations
                     { 11, "A26", "IMET rádió vezérlés PALMS erdészeti daruhoz", "A26 IMET rádió távirányítás, (LS komp.) Parker L90pro (max. 150 l/min.), 215/240 bar + HPF", "9110" },
                     { 12, "A36", "IMET rádióvezérlés Parker LC6 mini joystickekkel", "A36 Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + HPF", "11840" },
                     { 13, "A36.1", "IMET rádióvezérlés és Parker LC6 mini joystick kijelzővel", "A36.1 Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + MD3 kijelző + HPF", "12785" },
-                    { 14, "A42", "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban.", "A42 Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF", "14660" }
+                    { 14, "A42", "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban.", "A42 Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF", "14660" },
+                    { 15, "A3.1", "Egyszerű és megbízható szelepblokk kisebb daruk számára", "A3.1 - 6/8 XY vezértömb, BLB BM50 (50 l/min.) 195 bar", "805" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Cover",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "JKK", "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz", "50" });
+                values: new object[] { 1, "JKK", "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz", "60" });
 
             migrationBuilder.InsertData(
                 table: "CraneLight",
@@ -2424,13 +2524,18 @@ namespace CalcAppAPI.Migrations
                 values: new object[] { 1, "CP1", "Olajhűtő csomag elektromos csatlakozással a traktorhoz", "1035" });
 
             migrationBuilder.InsertData(
+                table: "DBox",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "Dbox", "Billenős boksz HARDOX", "2615" });
+
+            migrationBuilder.InsertData(
                 table: "Damping",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "D1", "Csillapító a munkahenger elforgatáshoz", "805" },
-                    { 2, "D2", "Csillapító a munkahenger elforgatáshoz és emeléshez", "1375" },
-                    { 3, "D3", "Csillapító emeléshez", "805" }
+                    { 1, "D1", "Csillapító a munkahenger elforgatáshoz", "945" },
+                    { 2, "D2", "Csillapító a munkahenger elforgatáshoz és emeléshez", "1610" },
+                    { 3, "D3", "Csillapító emeléshez", "665" }
                 });
 
             migrationBuilder.InsertData(
@@ -2450,18 +2555,24 @@ namespace CalcAppAPI.Migrations
                     { 10, "C5", "Osztrák típusú alacsony vonórúd vonószemmel", "315" },
                     { 11, "C8", "K-80 típusú alacsony vonórúd vonószemmel", "535" },
                     { 12, "C9", "Osztrák típusú alacsony vonórúd elforduló vonószemmel", "500" },
-                    { 13, "CY", "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel", "8380" }
+                    { 13, "CY", "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel", "8380" },
+                    { 14, "C1", "Normál típusú vonórúd K50-es vonófejjel", "0" },
+                    { 15, "C1.1", "Normál típusú vonórúd D35-ös vonófejjel", "0" }
                 });
 
             migrationBuilder.InsertData(
                 table: "ElectricalFloating",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "FP", "Elektromos úszó pozíció emelő és fordító funkcióhoz (A11-A41 vezértömbhöz)", "1035" });
+                values: new object[] { 1, "FP", "Elektromos úszó pozíció emelő és fordító funkcióhoz (A11-A41 vezértömbhöz)", "1065" });
 
             migrationBuilder.InsertData(
                 table: "FrameExtension",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "Hex", "Hidraulikus működtetésű raktér hosszabbítás ", "210" });
+                values: new object[,]
+                {
+                    { 1, "Hex", "Hidraulikus működtetésű raktér hosszabbítás", "210" },
+                    { 2, "LF", "Raktér hosszabbítás (100mm-enként)", "0" }
+                });
 
             migrationBuilder.InsertData(
                 table: "FrameType",
@@ -2469,12 +2580,12 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, "B0", "", "Talpaló nélkül", "0" },
-                    { 2, "B2.1", "174", "A típusú kis letalpaló, 3 pontos csatlakozással", "1680" },
+                    { 2, "B2.1", "174", "A típusú kis letalpaló, 3 pontos csatlakozással", "1575" },
                     { 3, "B3", "313", "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással", "2100" },
                     { 4, "B4", "237", "FD típusú economy talpaló", "2100" },
-                    { 5, "B6", "449", "B6, FD típusú letalpaló, 3 pontos csatlakozással", "3020" },
+                    { 5, "B6", "449", "B6, FD típusú letalpaló, 3 pontos csatlakozással", "3005" },
                     { 6, "B9", "474", "B9, FD típusú, különösen erős letalpaló (HD)", "3520" },
-                    { 7, "B10", "520", "Talpaló Z daruhoz", "3685" },
+                    { 7, "B10", "520", "Talpaló Z daruhoz", "3730" },
                     { 8, "B11", "772", "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)", "7300" },
                     { 9, "B1", "50", "FD talpaló", "695" }
                 });
@@ -2488,18 +2599,18 @@ namespace CalcAppAPI.Migrations
                     { 2, "0.16", "C02", "66", "Kanál 0,16 Palms (FL)", "1085" },
                     { 3, "0.18", "C1", "88", "Kanál 0,18 Palms (FL)", "1395" },
                     { 4, "0.23", "C3", "114", "Kanál 0,23 Palms (FL)", "1745" },
-                    { 5, "0.25", "C5.1", null, "Kanál 0,25 Grippen (FL)", "3015" },
+                    { 5, "0.25", "C5.1", null, "Kanál 0,25 Grippen (FL)", "3380" },
                     { 6, "0.26", "C5.2", "174", "Kanál 0,26 Palms (FL)", "2615" },
                     { 7, "0.21", "C36", "127", "Biomasszás kanál 0,21 Palms (FL)", "2230" },
-                    { 8, "0.25", "C7.1", null, "Biomasszás kanál 0,25 Grippen (FL)", "3345" },
+                    { 8, "0.25", "C7.1", null, "Biomasszás kanál 0,25 Grippen (FL)", "3715" },
                     { 9, "0.23", "C7.2", "118", "Biomasszás kanál 0,23 Palms (FL)", "3020" },
                     { 10, "0.25", "C11", "223", "Biomasszás kanál 0,25 Palms (FL)", "3450" },
                     { 11, "0.28", "C10", "205", "Palms 0,28-as kanál (FL)", "3125" },
                     { 12, null, "C175", null, "Palms vágó kanál a Nisula-tól", "6500" },
                     { 13, null, "GB16", "99", "Aprítékos kiegészítő 0,16 Palms (FL) kanálhoz", "475" },
                     { 14, null, "GB18", "130", "Aprítékos kiegészítő 0,18 Palms (FL) kanálhoz", "610" },
-                    { 15, null, "GB3", "195", "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz", "910" },
-                    { 16, null, "C009", null, "Palms 0,09 kanál", "620" }
+                    { 15, null, "GB3", "195", "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz", "935" },
+                    { 16, "0.09", "C009", "36", "Palms 0,09 kanál", "620" }
                 });
 
             migrationBuilder.InsertData(
@@ -2512,8 +2623,8 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "HBF", "Szénabála keret (D típushoz)", "2650" },
-                    { 2, "HBF", "Szénabála keret (U típushoz)", "2650" }
+                    { 1, "HBF", "Szénabála keret (D típushoz)", "2785" },
+                    { 2, "HBF", "Szénabála keret (U típushoz)", "2785" }
                 });
 
             migrationBuilder.InsertData(
@@ -2537,7 +2648,17 @@ namespace CalcAppAPI.Migrations
             migrationBuilder.InsertData(
                 table: "HydroPack",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "HyP", "Hydropack 6,5 lóerő - 12 l/min", "2195" });
+                values: new object[,]
+                {
+                    { 1, "HyP1", "Hydropack 6,5 lóerő - 12 l/min, 1 szekciós", "1575" },
+                    { 2, "HyP4", "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós", "2365" },
+                    { 3, "HyP4+", "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós + elektronikus indítás és akkumulátor", "1510" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "HydroPackControl",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[] { 1, "ETC", "Elektronikus pótkocsi kontrol (dörzshajtáshoz és vonórúdhoz) + csörlő control", "410" });
 
             migrationBuilder.InsertData(
                 table: "JoystickHolder",
@@ -2801,14 +2922,14 @@ namespace CalcAppAPI.Migrations
                     { 3, "T2SOV", "95 l-es olajtartály HVLP olajjal, elzáró csappal", "1200" },
                     { 4, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", "1490" },
                     { 5, "T2+", "95 l-es olajtartály HVLP olajjal", "1295" },
-                    { 6, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", "1495" },
+                    { 6, "T2SOV+", "95 l-es olajtartály HVLP olajjal, elzáró csappal, olajszűrővel", "1490" },
                     { 7, "T4+", "100 l-es olajtartály HVLP olajjal", "1610" }
                 });
 
             migrationBuilder.InsertData(
                 table: "OperatorSeat",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "HSB", "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel", "1890" });
+                values: new object[] { 1, "HSB", "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel", "1955" });
 
             migrationBuilder.InsertData(
                 table: "Platform",
@@ -2826,32 +2947,32 @@ namespace CalcAppAPI.Migrations
                 {
                     { 1, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "5280" },
                     { 2, "RWD+", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.", "Robson WD dörzshajtás elektronikus vezérlőrendszerrel", "7600" },
-                    { 3, "24WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "12885" },
-                    { 4, "24WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB240 az hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "11130" },
+                    { 3, "24WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "13200" },
+                    { 4, "24WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB240 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "11445" },
                     { 5, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "4845" },
                     { 6, "RWD+", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.", "Robson WD dörzshajtás elektronikus vezérlőrendszerrel", "7170" },
-                    { 7, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15375" },
-                    { 8, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15375" },
-                    { 9, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13880" },
-                    { 10, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13880" },
+                    { 7, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15585" },
+                    { 8, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15585" },
+                    { 9, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13590" },
+                    { 10, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13590" },
                     { 11, "45WDB.1", "", "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz", "0" },
-                    { 12, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14805" },
-                    { 13, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14805" },
-                    { 14, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12810" },
-                    { 15, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12810" },
-                    { 16, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14450" },
-                    { 17, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14450" },
-                    { 18, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12455" },
-                    { 19, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12455" },
+                    { 12, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15015" },
+                    { 13, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "15015" },
+                    { 14, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13020" },
+                    { 15, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "13020" },
+                    { 16, "25WDF", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14660" },
+                    { 17, "25WDR", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)", "14660" },
+                    { 18, "25WDFe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.", "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12665" },
+                    { 19, "25WDRe", "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.", "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)", "12665" },
                     { 20, "45WDB", "", "4WD BlackBruin hajtás elektronikus vezérléssel", "0" },
                     { 21, "45WDB.1", "", "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz", "1135" },
-                    { 22, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "2040" }
+                    { 22, "RWD", "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.", "Robson WD dörzshajtás (traktor hidarulikáról)", "2185" }
                 });
 
             migrationBuilder.InsertData(
                 table: "ProtectionSleeves",
                 columns: new[] { "Id", "Code", "Name", "Price" },
-                values: new object[] { 1, "PSH", "Védőhüvely a tömlőhöz", "95" });
+                values: new object[] { 1, "PSH", "Védőhüvely a tömlőhöz", "105" });
 
             migrationBuilder.InsertData(
                 table: "Rotator",
@@ -2874,9 +2995,9 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, "Br0", null, "Rotátorfék  nélkül", "0" },
-                    { 2, "Br1", "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Rotátor fék", "75" },
+                    { 2, "Br1", "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Rotátor fék", "85" },
                     { 3, "Br1", "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Rotátor fék", "55" },
-                    { 4, "Br2", "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Dupla rotátor fék", "115" },
+                    { 4, "Br2", "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Dupla rotátor fék", "125" },
                     { 5, "Br2", "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.", "Dupla rotátor fék", "220" }
                 });
 
@@ -2894,36 +3015,36 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[,]
                 {
-                    { 1, "A3", "Pótkocsi 3 pár rakoncával", "5285" },
-                    { 2, "A4", "Pótkocsi 4 pár rakoncával", "5800" },
-                    { 3, "A3", "Pótkocsi 3 pár rakoncával", "6930" },
-                    { 4, "A4", "Pótkocsi 4 pár rakoncával", "7450" },
-                    { 5, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "7785" },
-                    { 6, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással ", "8305" },
-                    { 7, "A3", "Pótkocsi 3 pár rakoncával", "6930" },
-                    { 8, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "6930" },
-                    { 9, "A4", "Pótkocsi 4 pár rakoncával", "7450" },
-                    { 10, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "7450" },
-                    { 11, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "7785" },
-                    { 12, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "7785" },
-                    { 13, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "8305" },
-                    { 14, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "8305" },
-                    { 15, "A3", "Pótkocsi 3 pár rakoncával", "7920" },
-                    { 16, "A4", "Pótkocsi 4 pár rakoncával", "8465" },
-                    { 17, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "8920" },
-                    { 18, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "9465" },
-                    { 19, "A3", "Pótkocsi 3 pár rakoncával", "8400" },
-                    { 20, "A4", "Pótkocsi 4 pár rakoncával", "8795" },
-                    { 21, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "9415" },
-                    { 22, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "9810" },
-                    { 23, "A3", "Pótkocsi 3 pár rakoncával", "10500" },
-                    { 24, "A4", "Pótkocsi 4 pár rakoncával", "10895" },
-                    { 25, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "11515" },
-                    { 26, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "11910" },
-                    { 27, "A3", "Pótkocsi 3 pár rakoncával", "11970" },
-                    { 28, "A4", "Pótkocsi 4 pár rakoncával", "12470" },
-                    { 29, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "13240" },
-                    { 30, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "13740" },
+                    { 1, "A3", "Pótkocsi 3 pár rakoncával", "5460" },
+                    { 2, "A4", "Pótkocsi 4 pár rakoncával", "5975" },
+                    { 3, "A3", "Pótkocsi 3 pár rakoncával", "6995" },
+                    { 4, "A4", "Pótkocsi 4 pár rakoncával", "7515" },
+                    { 5, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "7850" },
+                    { 6, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással ", "8370" },
+                    { 7, "A3", "Pótkocsi 3 pár rakoncával", "7245" },
+                    { 8, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "7245" },
+                    { 9, "A4", "Pótkocsi 4 pár rakoncával", "7655" },
+                    { 10, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "7655" },
+                    { 11, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "8245" },
+                    { 12, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "8245" },
+                    { 13, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "8650" },
+                    { 14, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "8650" },
+                    { 15, "A3", "Pótkocsi 3 pár rakoncával", "8065" },
+                    { 16, "A4", "Pótkocsi 4 pár rakoncával", "8610" },
+                    { 17, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "9065" },
+                    { 18, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "9615" },
+                    { 19, "A3", "Pótkocsi 3 pár rakoncával", "8505" },
+                    { 20, "A4", "Pótkocsi 4 pár rakoncával", "8900" },
+                    { 21, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "9520" },
+                    { 22, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "9915" },
+                    { 23, "A3", "Pótkocsi 3 pár rakoncával", "10700" },
+                    { 24, "A4", "Pótkocsi 4 pár rakoncával", "11095" },
+                    { 25, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "11715" },
+                    { 26, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "12105" },
+                    { 27, "A3", "Pótkocsi 3 pár rakoncával", "12245" },
+                    { 28, "A4", "Pótkocsi 4 pár rakoncával", "12745" },
+                    { 29, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "13515" },
+                    { 30, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "14015" },
                     { 31, "A3", "Pótkocsi 3 pár rakoncával", "10495" },
                     { 32, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "10495" },
                     { 33, "A4", "Pótkocsi 4 pár rakoncával", "11125" },
@@ -2932,38 +3053,38 @@ namespace CalcAppAPI.Migrations
                     { 36, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "11850" },
                     { 37, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "12480" },
                     { 38, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "12480" },
-                    { 39, "A3", "Pótkocsi 3 pár rakoncával", "11760" },
-                    { 40, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "11760" },
-                    { 41, "A4", "Pótkocsi 4 pár rakoncával", "12430" },
-                    { 42, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "12430" },
-                    { 43, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "13155" },
-                    { 44, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "13155" },
-                    { 45, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "13820" },
-                    { 46, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "13820" },
-                    { 47, "A3", "Pótkocsi 3 pár rakoncával", "37160" },
-                    { 48, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "37160" },
-                    { 49, "A4", "Pótkocsi 4 pár rakoncával", "37830" },
-                    { 50, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "37830" },
-                    { 51, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "38550" },
-                    { 52, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "38550" },
-                    { 53, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "39220" },
-                    { 54, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "39220" },
-                    { 55, "A3", "Pótkocsi 3 pár rakoncával", "14070" },
-                    { 56, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "14070" },
-                    { 57, "A4", "Pótkocsi 4 pár rakoncával", "14990" },
-                    { 58, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "14990" },
-                    { 59, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "15715" },
-                    { 60, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "15715" },
-                    { 61, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "16635" },
-                    { 62, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "16635" },
-                    { 63, "A3", "Pótkocsi 3 pár rakoncával", "39470" },
-                    { 64, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "39470" },
-                    { 65, "A4", "Pótkocsi 4 pár rakoncával", "40390" },
-                    { 66, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "40390" },
-                    { 67, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "41115" },
-                    { 68, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "41115" },
-                    { 69, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "42030" },
-                    { 70, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "42030" },
+                    { 39, "A3", "Pótkocsi 3 pár rakoncával", "12285" },
+                    { 40, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "12285" },
+                    { 41, "A4", "Pótkocsi 4 pár rakoncával", "112950" },
+                    { 42, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "112950" },
+                    { 43, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "13675" },
+                    { 44, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "13675" },
+                    { 45, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "14345" },
+                    { 46, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "14345" },
+                    { 47, "A3", "Pótkocsi 3 pár rakoncával", "38075" },
+                    { 48, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "38075" },
+                    { 49, "A4", "Pótkocsi 4 pár rakoncával", "38740" },
+                    { 50, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "38740" },
+                    { 51, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "39465" },
+                    { 52, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "39465" },
+                    { 53, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "40130" },
+                    { 54, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "40130" },
+                    { 55, "A3", "Pótkocsi 3 pár rakoncával", "14660" },
+                    { 56, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "14660" },
+                    { 57, "A4", "Pótkocsi 4 pár rakoncával", "15575" },
+                    { 58, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "15575" },
+                    { 59, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "16300" },
+                    { 60, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "16300" },
+                    { 61, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "17220" },
+                    { 62, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "17220" },
+                    { 63, "A3", "Pótkocsi 3 pár rakoncával", "40445" },
+                    { 64, "A3F", "Pótkocsi 3 pár forwarder rakoncával", "40445" },
+                    { 65, "A4", "Pótkocsi 4 pár rakoncával", "41365" },
+                    { 66, "A4F", "Pótkocsi 4 pár forwarder rakoncával", "41365" },
+                    { 67, "A4Ex", "Pótkocsi 4 pár rakoncával és raktérhosszabbítással", "42090" },
+                    { 68, "A4FEx", "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással", "42090" },
+                    { 69, "A5Ex", "Pótkocsi 5 pár rakoncával és raktérhosszabbítással", "43010" },
+                    { 70, "A5FEx", "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással", "43010" },
                     { 71, "A4F", "Pótkocsi 4 pár forwarder típusú rakoncával", "52325" },
                     { 72, "A5F", "Pótkocsi 5 pár forwarder típusú rakoncával", "53455" },
                     { 73, "A4FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával", "55025" },
@@ -2972,15 +3093,24 @@ namespace CalcAppAPI.Migrations
                     { 76, "A5F", "Pótkocsi 5 pár forwarder típusú rakoncával", "57945" },
                     { 77, "A4FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 4 pár forwarder típusú rakoncával", "59515" },
                     { 78, "A5FHEx", "Pótkocsi hidraulikus raktér hosszabbítással és 5 pár forwarder típusú rakoncával", "60645" },
-                    { 79, "A3", "Pótkocsi 3 pár rakoncával", "2490" },
-                    { 80, "A4", "Pótkocsi 4 pár rakoncával", "2595" },
-                    { 81, "A5", "Pótkocsi 5 pár rakoncával", "2700" }
+                    { 79, "A3", "Pótkocsi 3 pár rakoncával", "2730" },
+                    { 80, "A4", "Pótkocsi 4 pár rakoncával", "2855" },
+                    { 81, "A5", "Pótkocsi 5 pár rakoncával", "2985" }
                 });
 
             migrationBuilder.InsertData(
                 table: "StanchionExtension",
                 columns: new[] { "Id", "Code", "Name", "Price" },
                 values: new object[] { 1, "PE", "Rakonca hosszabbítás (az ár 1 db-ra vonatkozik)", "55" });
+
+            migrationBuilder.InsertData(
+                table: "SupplyFormat",
+                columns: new[] { "Id", "Code", "Name", "Price" },
+                values: new object[,]
+                {
+                    { 1, "POP", "Raklapra csomagolva", "0" },
+                    { 2, "FA", "Teljesen összeszerelve", "195" }
+                });
 
             migrationBuilder.InsertData(
                 table: "SupportLeg",
@@ -3029,7 +3159,7 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, "WH2.6e", "400/60-15,5 standard felni, 6 lyukas, Starco", "1220" },
-                    { 2, "WH2.6", "400/60-15,5 RF-felni, 6 lyukas, Starco", "1450" },
+                    { 2, "WH2.6", "400/60-15,5 RF-felni, 6 lyukas, Starco", "1490" },
                     { 3, "WH4.6", "480/45-17 RF-felni, 6 lyukas, Starco", "2310" },
                     { 4, "WH3.6", "500/50-17 RF-felni, 6 lyukas, BKT", "2500" },
                     { 5, "WH3.8", "500/50-17 RF-felni, 8 lyukas, BKT", "2500" },
@@ -3041,7 +3171,7 @@ namespace CalcAppAPI.Migrations
                     { 11, "WH7.8", "600/50-22,5 RF-felni, 8 lyukas, Alliance", "5410" },
                     { 12, "WH7.10", "600/50-22,5 RF-felni, 10 lyukas, Nokian", "11020" },
                     { 13, "WH9.10", "710/40-22,5 RF-felni, 10 lyukas, Nokian", "11150" },
-                    { 14, "WH1.4", "22/11-8", "465" }
+                    { 14, "WH2.4", "300/65-12", "885" }
                 });
 
             migrationBuilder.InsertData(
@@ -3064,8 +3194,8 @@ namespace CalcAppAPI.Migrations
                 values: new object[,]
                 {
                     { 1, "W0", "Csörlő előkészítés a főgémen", "70" },
-                    { 2, "W1", "Rádió távvezérlésű 1400-as csörlő (A11-A41 vezértömbhöz)", "2365" },
-                    { 3, "W2", "Rádió távvezérlésű 2200-as csörlő (A11-A41 vezértömbhöz)", "2845" }
+                    { 2, "W1", "Rádió távvezérlésű 1400-as csörlő (A11-A41 vezértömbhöz)", "2415" },
+                    { 3, "W2", "Rádió távvezérlésű 2200-as csörlő (A11-A41 vezértömbhöz)", "2930" }
                 });
 
             migrationBuilder.InsertData(
@@ -3083,18 +3213,18 @@ namespace CalcAppAPI.Migrations
                 columns: new[] { "Id", "BoomGuardId", "BrutLiftingTorque190Bar", "BrutLiftingTorque215Bar", "BrutLiftingTorque240Bar", "CoverId", "CraneOilCoolerId", "CraneWeight", "Description", "ElectricalFloatingId", "JoystickHolderId", "LiftAtFourMeters190Bar", "LiftAtFourMeters215Bar", "LiftAtFourMeters240Bar", "LiftAtFullReach190Bar", "LiftAtFullReach215Bar", "LiftAtFullReach240Bar", "LightId", "LinkageId", "MaxReach", "Name", "OperatorSeatId", "PillarSlewingAngle", "Price", "ProtectionSleevesId", "RecommendedOilFlow", "RotatorCapacity", "RotatorConnection", "RotatorMaximumLoad", "RotatorType", "Series", "ShippingId", "SlewingCylinder", "SlewingTorque", "SupportLegCounterPlateId", "TelescopeLength", "TurningDeviceCounterPlateId", "ValveBlockId", "WoodControlId", "WorkingPressure" },
                 values: new object[,]
                 {
-                    { 1, null, "26", "-", "-", 1, null, "360", "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, null, "570", "-", "-", "540", "-", "-", null, 1, "4.2", "PALMS 2.42", null, "370", "5555", 1, "20-35", "30", "FR", "45", "FL", "2", 2, "4", "7.8", 1, "-", 1, null, 1, "190" },
-                    { 2, null, "26", "29", "-", 1, null, "400", "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", 1, 1, "530", "600", "-", "370", "410", "-", null, 1, "5.4", "PALMS 2.54", null, "370", "6695", 1, "20-35", "30", "FR", "45", "FL", "2", 2, "4", "7.8", 1, "1,33", 1, 1, 1, "190/215" },
-                    { 3, null, "36", "-", "-", 1, null, "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, null, "655", "-", "-", "355", "-", "-", null, 1, "6.3", "PALMS 3.63", null, "370", "7245", 1, "20-35", "30", "FR", "45", "FL", "3", 2, "4", "9", 1, "1,85", 1, null, 1, "190" },
-                    { 4, null, "41", "46", "-", 1, null, "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", 1, 1, "820", "910", "-", "430", "480", "-", 1, 1, "6.7", "PALMS 3.67", null, "370", "8335", 1, "30-45", "30", "FR", "45", "FL", "3", 2, "4", "12", 1, "1,85", 1, 1, 1, "190/215" },
-                    { 5, null, "48", "54", "-", 1, 1, "710", "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival", 1, 1, "960", "1040", "-", "480", "535", "-", 1, 1, "7.1", "PALMS 4.71", 1, "370", "9740", 1, "45-70", "45", "Palms", "45", "FL", "4", 2, "4", "15", 1, "1,95", 1, 1, 1, "190/215" },
-                    { 6, 1, "63", "69", "-", 1, 1, "940", "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1150", "1350", "-", "540", "620", "-", 1, 1, "7.5", "PALMS 5.75", 1, "380", "11865", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "2,0", 1, 1, 1, "190/215" },
-                    { 7, 1, "56", "63", "-", 1, 1, "900", "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1050", "1220", "-", "450", "520", "-", 1, 1, "8.5", "PALMS 5.85", 1, "380", "14450", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "3,3", 1, 1, 1, "190/215" },
-                    { 8, null, "-", "63", "-", 1, 1, "995", "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.", null, 1, "-", "1235", "-", "-", "490 (8,4 m)", "-", 1, 1, "8.7", "PALMS 5.87Z", 1, "340", "15585", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "3,3", 1, 1, null, "215" },
-                    { 9, 2, "78", "86", "96", 1, 1, "1220", "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.", 1, 1, "1380", "1580", "-", "580", "670", "-", 1, 1, "7.8", "PALMS 7.78", 1, "380", "14850", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "2,15", 1, 1, 1, "190/215" },
-                    { 10, 2, "78", "86", "96", 1, 1, "1280", "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.", 1, 1, "1250", "1480", "-", "530", "630", "-", 1, 1, "8.7", "PALMS 7.87", 1, "380", "19315", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "190/215" },
-                    { 11, 2, "78", "86", "96", 1, 1, "1310", "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.", 1, 1, "-", "1410", "-", "-", "540", "-", 1, 1, "9.4", "PALMS 7.94", 1, "380", "20055", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "215" },
-                    { 12, 3, "-", "102", "112", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "29350", 1, "120", "100", "Palms", "100", "FL (Indexator-tól)", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" },
+                    { 1, null, "26", "-", "-", 1, null, "360", "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, null, "570", "-", "-", "540", "-", "-", null, 1, "4.2", "PALMS 2.42", null, "370", "5870", 1, "20-35", "30", "FR", "45", "FL", "2", 2, "4", "7.8", 1, "-", 1, null, 1, "190" },
+                    { 2, null, "26", "29", "-", 1, null, "400", "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", 1, 1, "530", "600", "-", "370", "410", "-", null, 1, "5.4", "PALMS 2.54", null, "370", "7215", 1, "20-35", "30", "FR", "45", "FL", "2", 2, "4", "7.8", 1, "1,33", 1, 1, 1, "190/215" },
+                    { 3, null, "36", "-", "-", 1, null, "415", "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.", null, null, "655", "-", "-", "355", "-", "-", null, 1, "6.3", "PALMS 3.63", null, "370", "7480", 1, "20-35", "30", "FR", "45", "FL", "3", 2, "4", "9", 1, "1,85", 1, null, 1, "190" },
+                    { 4, null, "41", "46", "-", 1, null, "620", "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.", 1, 1, "820", "910", "-", "430", "480", "-", 1, 1, "6.7", "PALMS 3.67", null, "370", "8400", 1, "30-45", "30", "FR", "45", "FL", "3", 2, "4", "12", 1, "1,85", 1, 1, 1, "190/215" },
+                    { 5, null, "48", "54", "-", 1, 1, "710", "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival", 1, 1, "960", "1040", "-", "480", "535", "-", 1, 1, "7.1", "PALMS 4.71", 1, "370", "9800", 1, "45-70", "45", "Palms", "45", "FL", "4", 2, "4", "15", 1, "1,95", 1, 1, 1, "190/215" },
+                    { 6, 1, "63", "69", "-", 1, 1, "940", "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1150", "1350", "-", "540", "620", "-", 1, 1, "7.5", "PALMS 5.75", 1, "380", "12445", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "2,0", 1, 1, 1, "190/215" },
+                    { 7, 1, "56", "63", "-", 1, 1, "900", "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.", 1, 1, "1050", "1220", "-", "450", "520", "-", 1, 1, "8.5", "PALMS 5.85", 1, "380", "14595", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "3,3", 1, 1, 1, "190/215" },
+                    { 8, null, "-", "63", "-", 1, 1, "995", "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.", null, 1, "-", "1235", "-", "-", "490 (8,4 m)", "-", 1, 1, "8.7", "PALMS 5.87Z", 1, "340", "16060", 1, "50-90", "55", "Palms", "60", "FL", "5", 2, "4", "17", 1, "3,3", 1, 1, null, "215" },
+                    { 9, 2, "78", "86", "96", 1, 1, "1220", "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.", 1, 1, "1380", "1580", "-", "580", "670", "-", 1, 1, "7.8", "PALMS 7.78", 1, "380", "15855", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "2,15", 1, 1, 1, "190/215" },
+                    { 10, 2, "78", "86", "96", 1, 1, "1280", "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.", 1, 1, "1250", "1480", "-", "530", "630", "-", 1, 1, "8.7", "PALMS 7.87", 1, "380", "19835", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "190/215" },
+                    { 11, 2, "78", "86", "96", 1, 1, "1310", "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.", 1, 1, "-", "1410", "-", "-", "540", "-", 1, 1, "9.4", "PALMS 7.94", 1, "380", "20675", 1, "60-120", "60", "Palms", "60", "FL (Indexator-tól)", "7", 2, "4", "21", 1, "3,8", 1, 1, 1, "215" },
+                    { 12, 3, "-", "102", "112", 1, 1, "1760", "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.", null, 1, "-", "-", "2000", "-", "-", "680", 1, 1, "10.1", "PALMS X100", 1, "380", "31235", 1, "120", "100", "Palms", "100", "FL (Indexator-tól)", "X", 2, "4", "30", 1, "4,2", 1, 1, 1, "240" },
                     { 13, null, "11,5", "-", "-", null, null, "185", "", null, null, "-", "-", "-", "-", "-", "-", null, null, "4.2", "PALMS 1.42", null, "330", "3025", null, "-", "10", "csapos", "10", "Finrotor", "1", 2, "2", "2.1", null, "1,2", null, null, null, "180" }
                 });
 
@@ -3115,24 +3245,25 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "Trailer",
-                columns: new[] { "Id", "BBoxId", "BeamType", "BolsterLockId", "BunkAdapterId", "BunkExtensionId", "ChainsawHolderId", "CurbWeight", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionId", "FrameExtensionLength", "GrossWeight", "HandBrakeId", "HayBaleFrameId", "HydroPackId", "LoadingAreaCross", "LoadingAreaLength", "MOTId", "MaxCraneSize", "Name", "Price", "ShippingId", "StanchionExtensionId", "StandardWheelSize", "TotalLength", "TrailerOilCoolerId", "UnderrunProtectionId", "WidthWithStandardWheels", "WoodSorterId" },
+                columns: new[] { "Id", "BBoxId", "BeamType", "BolsterLockId", "BunkAdapterId", "BunkExtensionId", "ChainsawHolderId", "CurbWeight", "DBoxId", "Description", "DrawbarControlCylinders", "Frame", "FrameExtensionId", "FrameExtensionLength", "GrossWeight", "HandBrakeId", "HayBaleFrameId", "HydropackControlId", "LoadingAreaCross", "LoadingAreaLength", "MOTId", "MaxCraneSize", "Name", "Price", "ShippingId", "StanchionExtensionId", "StandardWheelSize", "TotalLength", "TrailerOilCoolerId", "UnderrunProtectionId", "WidthWithStandardWheels", "WoodSorterId" },
                 values: new object[,]
                 {
-                    { 1, null, "Egyalvázas", null, null, null, 1, "890", "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és magasabb maradványértéket biztosít.", "1", "140x140x6", null, "-", "8500", null, null, null, "1,5", "3000", 1, "35", "PALMS 6S", "", 1, null, "400/60-15,5", "4900", 1, null, "1950", null },
-                    { 2, 1, "Egyalvázas", 1, null, null, 1, "1180", "A PALMS 8SX egy egyalvázas erdészeti pótkocsi, amelynek össztömege 10.000 kg. Ez a modell népszerű választás számos kis erdőbirtokos és gazdálkodó körében. A pótkocsi egyszerű, mégis robusztus kialakítása és tartóssága megbízható társává teszi különböző erdészeti és mezőgazdasági feladatokban.", "2", "160x160x8", null, "0,61", "10000", 1, null, null, "2", "3550", 1, "58", "PALMS 8SX", "", 1, null, "400/60-15,5", "5690", 1, 2, "2070", 1 },
-                    { 3, 1, "Dupla alvázas", 1, null, null, 1, "1510", "A PALMS 8D erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni.", "2", "2x200x100x8", null, "0,85", "10000", 1, 1, null, "2", "3975", 1, "65", "PALMS 8D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2095", 1 },
-                    { 4, 1, "Egyalvázas", 1, null, null, 1, "1425", "A PALMS 9SC a termékpalettánk legnagyobb egyalvázas pótkocsija, össztömege 12000 kg. Ideális választás azoknak, akik preferálják az egyalvázas pótkocsi egyszerűségét, miközben hosszabb kinyúlást igényelnek egy erdészeti darutól. Emellett a Palms 9SC kiemelkedik a felhasználói kényelem terén más, szintén egyalvázas pótkocsik közül a csapszeges vonórúd zár megoldásával és a szabadalmaztatott rakonca rögzítéssel.", "2", "200x200x6", null, "0,70", "12000", 1, null, null, "2,15", "3870", 1, "65", "PALMS 9SC", "", 1, null, "400/60-15,5", "6095", 1, 2, "2135", 1 },
-                    { 5, 1, "Dupla alvázas", 1, null, null, 1, "1765", "A PALMS 10D duplaalvázas pótkocsi, melynek össztömege 13000 kg, az egyik legkeresettebb erdészeti pótkocsi a PALMS terméksorozatában. Kiválóan párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, lehetővé téve az egyéni igény szerinti felszereltséget, hogy olyan konstrukciót alkosson, amely pontosan megfelel az elvárásainak.", "2", "2x200x100x8", null, "0,85", "13000", 1, 1, null, "2,4", "3975", 1, "85", "PALMS 10D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2165", 1 },
-                    { 6, 1, "Dupla alvázas", 1, null, null, 1, "2030", "A PALMS 12D duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival.  ", "2", "2x200x100x8", null, "0,85", "15000", 1, 1, null, "2,7", "3975", 1, "85", "PALMS 12D", "", 1, null, "500/50-17", "6200", 1, 1, "2350", 1 },
-                    { 7, 1, "Dupla alvázas", 1, null, null, 1, "2375", "A PALMS 14D a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. ", "2", "2x200x120x10", null, "0,86", "18000", 1, 1, null, "3,0", "4080", 1, "112", "PALMS 14D", "", 1, null, "500/50-17", "6300", 1, 1, "2450", 1 },
-                    { 8, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", "A PALMS 10U erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ", "2", "unibody", 1, "1,085", "15000", 1, 2, null, "2.4", "3990", 1, "90", "PALMS 10U", "", 1, null, "500/50-17", "6215", 1, 2, "2245", null },
-                    { 9, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12U pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését.", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12U", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
-                    { 10, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", "A PALMS 12UAWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy négykerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12UAWD", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
-                    { 11, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. ", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15U", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
-                    { 12, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus már négykerék hajtással rendelkezik, ezáltal bármilyen tereppel könnyedén megbirkózik.", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15UAWD", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
-                    { 13, 4, "Unibody (Forwarder)", null, 2, 2, null, "4700", "Ismerje meg a PALMS MWD sorozatú forwarder típusú pótkocsit, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4235", 1, "120", "PALMS MWD 3.2", "", 1, 1, "600/50x22.5", "6430", null, null, "2470", null },
-                    { 14, 4, "Unibody (Forwarder)", null, 2, 2, null, "4920", "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4185", 1, "120", "PALMS HMWD 3.2", "", 1, 1, "600/50x22.5", "6430", 2, null, "2470", null },
-                    { 15, 5, "Dupla alvázas", null, null, null, 1, "260", "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.", "1", "2x4 mm C-alváz", null, "-", "1500", null, 1, 1, "0,6", "2450", 1, "12", "PALMS 2D", "", 1, null, "22/11-8", "3865", null, null, "1285", null }
+                    { 1, null, "Egyalvázas", null, null, null, 1, "890", null, "A PALMS 6S egy egyalvázas erdészeti pótkocsi, melynek össztömege 8500 kg. Könnyű és kompakt kialakítása tökéletes választás kisebb traktorokhoz, ideális erdőgazdálkodáshoz és gazdálkodóknak. A PALMS 6S hasonló technológiákat használ, mint nagyobb pótkocsijaink, beleértve a magas minőségű KTL és porfestési bevonatot, ami hosszabb élettartamot és magasabb maradványértéket biztosít.", "1", "140x140x6", null, "-", "8500", null, null, null, "1,5", "3000", 1, "35", "PALMS 6S", "", 1, null, "400/60-15,5", "4900", 1, null, "1950", null },
+                    { 2, 1, "Egyalvázas", 1, null, null, 1, "1180", null, "A PALMS 8SX egy egyalvázas erdészeti pótkocsi, amelynek össztömege 10.000 kg. Ez a modell népszerű választás számos kis erdőbirtokos és gazdálkodó körében. A pótkocsi egyszerű, mégis robusztus kialakítása és tartóssága megbízható társává teszi különböző erdészeti és mezőgazdasági feladatokban.", "2", "160x160x8", null, "0,61", "10000", 1, null, null, "2", "3550", 1, "58", "PALMS 8SX", "", 1, null, "400/60-15,5", "5690", 1, 2, "2070", 1 },
+                    { 3, 1, "Dupla alvázas", 1, null, null, 1, "1510", null, "A PALMS 8D erdészeti pótkocsi, melynek össztömege 10000 kg. Ez a modell már duplaalvázas kivitelű, a legkompaktabb pótkocsi a kínálatunkban. Azoknak a felhasználóknak ajánljuk, akik könnyebb pótkocsit keresnek, de mégis már egy duplaalvázas kivitel nagyobb szilárdságát és merevségét szeretnék kihasználni.", "2", "2x200x100x8", null, "0,85", "10000", 1, 1, null, "2", "3975", 1, "65", "PALMS 8D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2095", 1 },
+                    { 4, 1, "Egyalvázas", 1, null, null, 1, "1425", null, "A PALMS 9SC a termékpalettánk legnagyobb egyalvázas pótkocsija, össztömege 12000 kg. Ideális választás azoknak, akik preferálják az egyalvázas pótkocsi egyszerűségét, miközben hosszabb kinyúlást igényelnek egy erdészeti darutól. Emellett a Palms 9SC kiemelkedik a felhasználói kényelem terén más, szintén egyalvázas pótkocsik közül a csapszeges vonórúd zár megoldásával és a szabadalmaztatott rakonca rögzítéssel.", "2", "200x200x6", null, "0,70", "12000", 1, null, null, "2,15", "3870", 1, "65", "PALMS 9SC", "", 1, null, "400/60-15,5", "6095", 1, 2, "2135", 1 },
+                    { 5, 1, "Dupla alvázas", 1, null, null, 1, "1765", null, "A PALMS 10D duplaalvázas pótkocsi, melynek össztömege 13000 kg, az egyik legkeresettebb erdészeti pótkocsi a PALMS terméksorozatában. Kiválóan párosítható a legtöbb Palms daruval és egyéb kiegészítőkkel, lehetővé téve az egyéni igény szerinti felszereltséget, hogy olyan konstrukciót alkosson, amely pontosan megfelel az elvárásainak.", "2", "2x200x100x8", null, "0,85", "13000", 1, 1, null, "2,4", "3975", 1, "85", "PALMS 10D", "", 1, null, "400/60-15,5", "6200", 1, 1, "2165", 1 },
+                    { 6, 1, "Dupla alvázas", 1, null, null, 1, "2030", null, "A PALMS 12D duplaalvázas erdészeti pótkocsi, melynek összetömege 15000 kg. Akár mindennapi, akár nagyobb munkálatok elvégzésére is kiválóan alkalmas, nagyszerű kompatibilitás nyújtva a Palms 5-ös és 7-es szériás daruival.  ", "2", "2x200x100x8", null, "0,85", "15000", 1, 1, null, "2,7", "3975", 1, "85", "PALMS 12D", "", 1, null, "500/50-17", "6200", 1, 1, "2350", 1 },
+                    { 7, 1, "Dupla alvázas", 1, null, null, 1, "2375", null, "A PALMS 14D a Palms gyár termékkínálatának legnagyobb dupla alvázas pótkocsija, jelentős, 18000 kg össztömegével. Nemcsak a legnagyobb rakfelülettel rendelkezik, hanem kiterjesztett rakfelületet kínál más dupla alvázas pótkocsikhoz képest. További előnye, hogy kompatibilis a Palms legnagyobb, legprofibb erdészeti darujával, az X100-sal is. ", "2", "2x200x120x10", null, "0,86", "18000", 1, 1, null, "3,0", "4080", 1, "112", "PALMS 14D", "", 1, null, "500/50-17", "6300", 1, 1, "2450", 1 },
+                    { 8, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2170", null, "A PALMS 10U erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ", "2", "unibody", 1, "1,085", "15000", 1, 2, null, "2.4", "3990", 1, "90", "PALMS 10U", "", 1, null, "500/50-17", "6215", 1, 2, "2245", null },
+                    { 9, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", null, "A PALMS 12U pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését.", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12U", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
+                    { 10, 2, "Unibody (Forwarder)", 1, 1, null, 1, "2270", null, "A PALMS 12UAWD pótkocsi össztömege 17000 kg, unibody típusú erdészeti pótkocsi, melyet kifejezetten a mindennapi, szakmai erdészeti munkákhoz terveztek. Magas hasmagassággal rendelkezik, ez és a forwarder típusú keret elősegíti, hogy az elakadás kockázata minél kisebb legyen. Mivel az összes hidraulikus alkatrész ebben a keretben került elhelyezésre, így azok védve vannak, ugyanakkor viszont könnyű hozzáférhetőség biztosítja a karbantartás elvégzését. Ennek a típusnak további előnye, hogy négykerék hajtással rendelkezik, amely alkalmassá teszi arra, hogy akár extrém talajviszonyok között is megállja a helyét. ", "2", "unibody", 1, "1,085", "17000", 1, 2, null, "2.75", "3990", 1, "120", "PALMS 12UAWD", "", 1, null, "500/50-22,5", "6215", 1, 2, "2245", null },
+                    { 11, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", null, "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. ", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15U", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
+                    { 12, 3, "Unibody (Forwarder)", 1, 1, 1, 1, "2545", null, "A PALMS 15U pótkocsi a legnagyobb a Palms U típusú pótkocsi kínálatában, össztömege 19000 kg. Az U pótkocsikat nehéz fakitermelésre tervezték, a kialakításának köszönhetően tartósak és igazán nagy terheket képesek vinni. Ez a pótkocsi nagysága ellenére igen könnyen mozog, gumikerekes kivitele környezetkímélő. Nagyobb mennyiségű fa kitermelésére alkalmas, megkönnyíti az erdészeti munkát. Nagy hasmagassággal rendelkezik, ez és a forwarder típusú keret az elakadás kockázatát csökkentik. A hidraulikus alkatrészek a keretben kerültek elhelyezésre, hogy védettek legyenek a külső behatás ellen, ugyanakkor karbantartásilag könnyen elérhetők. Ez a típus már négykerék hajtással rendelkezik, ezáltal bármilyen tereppel könnyedén megbirkózik.", "2", "unibody", 1, "1,085", "19000", 1, 2, null, "3.2", "4175", 1, "120", "PALMS 15UAWD", "", 1, null, "500/50-22,5", "6415", 1, 2, "2450", null },
+                    { 13, 4, "Unibody (Forwarder)", null, 2, 2, null, "4700", null, "Ismerje meg a PALMS MWD sorozatú forwarder típusú pótkocsit, amelyet a legnehezebb terepek legyőzésére terveztek. Az összes MWD pótkocsi mechanikus áttétele egyedileg lesz testre szabva minden ügyfelünk traktorához.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4235", 1, "120", "PALMS MWD 3.2", "", 1, 1, "600/50x22.5", "6430", null, null, "2470", null },
+                    { 14, 4, "Unibody (Forwarder)", null, 2, 2, null, "4920", null, "Ismerje meg a PALMS hidromechanikus meghajtású pótkocsiját, amelyet a legnehezebb terepek legyőzésére terveztek. A hidromechanikus 4x4 rendszer alkalmas minden méretű traktorhoz, amelynek TLT hajtása van.", "2", "unibody", null, "1.085", "18000", null, 2, null, "3.2", "4185", 1, "120", "PALMS HMWD 3.2", "", 1, 1, "600/50x22.5", "6430", 2, null, "2470", null },
+                    { 15, 5, "Dupla alvázas", null, null, null, 1, "260", null, "Tökéletes kompakt traktorokhoz és terepjárókhoz. Strenx Performance acélból készült strapabíró duplaalvázzal, fokozott korrózióállósággal (KTL+por bevonatt), valamint 1500 kg névleges teherbírással rendelkezik.", "1", "2x4 mm C-alváz", 2, "-", "1500", null, 1, 1, "0,6", "2450", null, "12", "PALMS 2D", "", 1, null, "22/11-8", "3865", null, null, "1285", null },
+                    { 16, null, "Unibody (Forwarder)", null, null, null, null, "2320", null, "", "2", "unibody", null, "1,138", "15000", null, 1, null, "2.4-2.9", "3976", null, "90", "PALMS 11UX", "", null, null, "500/50-17", "6285", null, null, "2312", null }
                 });
 
             migrationBuilder.InsertData(
@@ -3247,7 +3378,6 @@ namespace CalcAppAPI.Migrations
                     { 2, 6 },
                     { 2, 7 },
                     { 2, 8 },
-                    { 2, 13 },
                     { 3, 2 },
                     { 3, 4 },
                     { 3, 5 },
@@ -3340,7 +3470,8 @@ namespace CalcAppAPI.Migrations
                     { 13, 12 },
                     { 14, 10 },
                     { 14, 11 },
-                    { 14, 12 }
+                    { 14, 12 },
+                    { 15, 13 }
                 });
 
             migrationBuilder.InsertData(
@@ -3900,7 +4031,6 @@ namespace CalcAppAPI.Migrations
                     { 1, 12 },
                     { 1, 13 },
                     { 1, 14 },
-                    { 1, 15 },
                     { 2, 1 },
                     { 2, 2 },
                     { 2, 3 },
@@ -3989,7 +4119,9 @@ namespace CalcAppAPI.Migrations
                     { 12, 13 },
                     { 12, 14 },
                     { 13, 13 },
-                    { 13, 14 }
+                    { 13, 14 },
+                    { 14, 15 },
+                    { 15, 15 }
                 });
 
             migrationBuilder.InsertData(
@@ -4206,6 +4338,16 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "HydroPackTrailer",
+                columns: new[] { "HydroPackId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 15 },
+                    { 2, 15 },
+                    { 3, 15 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "KrpanBrakeTrailer",
                 columns: new[] { "KrpanBrakeId", "KrpanTrailerId" },
                 values: new object[,]
@@ -4395,6 +4537,7 @@ namespace CalcAppAPI.Migrations
                     { 3, 10 },
                     { 3, 11 },
                     { 3, 12 },
+                    { 3, 15 },
                     { 4, 13 },
                     { 4, 14 },
                     { 5, 13 },
@@ -4794,11 +4937,21 @@ namespace CalcAppAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "SupplyFormatTrailer",
+                columns: new[] { "SupplyFormatId", "TrailerId" },
+                values: new object[,]
+                {
+                    { 1, 15 },
+                    { 2, 15 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "SupportLegTrailer",
                 columns: new[] { "SupportLegId", "TrailerId" },
                 values: new object[,]
                 {
                     { 1, 1 },
+                    { 1, 15 },
                     { 2, 2 },
                     { 2, 3 },
                     { 2, 4 },
@@ -5094,6 +5247,11 @@ namespace CalcAppAPI.Migrations
                 column: "HoseGuardId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_HydroPackTrailer_TrailerId",
+                table: "HydroPackTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_KrpanBrakeTrailer_KrpanTrailerId",
                 table: "KrpanBrakeTrailer",
                 column: "KrpanTrailerId");
@@ -5279,6 +5437,11 @@ namespace CalcAppAPI.Migrations
                 column: "TrailerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_SupplyFormatTrailer_TrailerId",
+                table: "SupplyFormatTrailer",
+                column: "TrailerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_SupportLegTrailer_TrailerId",
                 table: "SupportLegTrailer",
                 column: "TrailerId");
@@ -5309,6 +5472,11 @@ namespace CalcAppAPI.Migrations
                 column: "ChainsawHolderId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Trailer_DBoxId",
+                table: "Trailer",
+                column: "DBoxId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Trailer_FrameExtensionId",
                 table: "Trailer",
                 column: "FrameExtensionId");
@@ -5324,9 +5492,9 @@ namespace CalcAppAPI.Migrations
                 column: "HayBaleFrameId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Trailer_HydroPackId",
+                name: "IX_Trailer_HydropackControlId",
                 table: "Trailer",
-                column: "HydroPackId");
+                column: "HydropackControlId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Trailer_MOTId",
@@ -5431,6 +5599,9 @@ namespace CalcAppAPI.Migrations
                 name: "HoseGuardCrane");
 
             migrationBuilder.DropTable(
+                name: "HydroPackTrailer");
+
+            migrationBuilder.DropTable(
                 name: "KrpanBrakeTrailer");
 
             migrationBuilder.DropTable(
@@ -5473,6 +5644,9 @@ namespace CalcAppAPI.Migrations
                 name: "StanchionTrailer");
 
             migrationBuilder.DropTable(
+                name: "SupplyFormatTrailer");
+
+            migrationBuilder.DropTable(
                 name: "SupportLegTrailer");
 
             migrationBuilder.DropTable(
@@ -5507,6 +5681,9 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "HoseGuard");
+
+            migrationBuilder.DropTable(
+                name: "HydroPack");
 
             migrationBuilder.DropTable(
                 name: "KrpanBrake");
@@ -5552,6 +5729,9 @@ namespace CalcAppAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "Stanchion");
+
+            migrationBuilder.DropTable(
+                name: "SupplyFormat");
 
             migrationBuilder.DropTable(
                 name: "SupportLeg");
@@ -5656,6 +5836,9 @@ namespace CalcAppAPI.Migrations
                 name: "ChainsawHolder");
 
             migrationBuilder.DropTable(
+                name: "DBox");
+
+            migrationBuilder.DropTable(
                 name: "FrameExtension");
 
             migrationBuilder.DropTable(
@@ -5665,7 +5848,7 @@ namespace CalcAppAPI.Migrations
                 name: "HayBaleFrame");
 
             migrationBuilder.DropTable(
-                name: "HydroPack");
+                name: "HydroPackControl");
 
             migrationBuilder.DropTable(
                 name: "MOT");

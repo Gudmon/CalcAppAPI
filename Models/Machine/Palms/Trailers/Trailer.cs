@@ -41,6 +41,8 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public int? BolsterLockId { get; set; }
         public BBox? BBox { get; set; }
         public int? BBoxId { get; set; }
+        public DBox? DBox { get; set; }
+        public int? DBoxId { get; set; }
         public HayBaleFrame? HayBaleFrame { get; set; }
         public int? HayBaleFrameId { get; set; }
         public WoodSorter? WoodSorter { get; set; }
@@ -63,8 +65,10 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public int? MOTId { get; set; }
         public StanchionExtension? StanchionExtension { get; set; }
         public int? StanchionExtensionId { get; set; }
-        public HydroPack? HydroPack { get; set; }
-        public int? HydroPackId { get; set; }
+        public IEnumerable<HydroPack> HydroPack { get; set; }
+        public HydroPackControl? HydropackControl { get; set; }
+        public int? HydropackControlId { get; set; }
+        public IEnumerable<SupplyFormat> SupplyFormat { get; set; }
         public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }
