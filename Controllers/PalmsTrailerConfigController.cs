@@ -114,10 +114,19 @@ namespace CalcAppAPI.Controllers
         [HttpGet("trailers/{id}/bbox")]
         public async Task<ActionResult<BBox>> GetBBox(int id)
         {
-            var bBOx = await _dbContext.BBox
+            var bBox = await _dbContext.BBox
                 .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
 
-            return Ok(bBOx);
+            return Ok(bBox);
+        }
+
+        [HttpGet("trailers/{id}/dbox")]
+        public async Task<ActionResult<DBox>> GetDBox(int id)
+        {
+            var dBox = await _dbContext.DBox
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(dBox);
         }
 
         [HttpGet("trailers/{id}/haybaleframe")]
