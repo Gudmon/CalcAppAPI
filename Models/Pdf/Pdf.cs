@@ -18,6 +18,7 @@ namespace CalcAppAPI.Models.Pdf
         public PdfItem? TrailerOilCooler { get; set; }
         public PdfItem? BolsterLock { get; set; }
         public PdfItem? BBox { get; set; }
+        public PdfItem? DBox { get; set; }
         public PdfItem? HayBaleFrame { get; set; }
         public PdfItem? WoodSorter { get; set; }
         public PdfItem? HandBrake { get; set; }
