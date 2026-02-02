@@ -269,5 +269,14 @@ namespace CalcAppAPI.Controllers
             return Ok(hydroPacks);
         }
 
+        [HttpGet("trailers/{id}/supplyformats")]
+        public async Task<ActionResult<IEnumerable<SupplyFormat>>> GetSupplyFormats(int id)
+        {
+            var supplyFormats = await _dbContext.SupplyFormat
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(supplyFormats);
+        }
     }
 }
