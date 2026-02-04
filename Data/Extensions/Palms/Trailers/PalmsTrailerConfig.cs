@@ -567,7 +567,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                 {
                     Id = 16,
                     Name = "PALMS 11UX",
-                    Description = "A PALMS 11UX az önhordó váz szerkezeti előnyeit – mint például a fokozott szilárdság, a kiváló terepjáró képességek és az egyszerű karbantartás – kínálja, a D-szériás pótkocsik árkategóriájában. Ezenkívül számos új fejlesztést is tartalmaz, beleértve a teljesen védett, vázba integrált opcionális légtartályt; az újonnan tervezett, könnyen kihúzható, szállítógép-típusú szélesítést, valamint az új vonórudat.",
+                    Description = "A PALMS 11UX az önhordó váz szerkezeti előnyeit – mint például a fokozott szilárdság, a kiváló terepjáró képességek és az egyszerű karbantartás – kínálja, a D-szériás pótkocsik árkategóriájában. Ezenkívül számos új fejlesztést is tartalmaz, beleértve a teljesen védett, vázba integrált opcionális légtartályt; az újonnan tervezett, könnyen kihúzható, forwarder-típusú szélesítést, valamint az új vonórudat.",
                     Price = "",
                     LoadingAreaCross = "2.4-2.9",
                     LoadingAreaLength = "3976",
