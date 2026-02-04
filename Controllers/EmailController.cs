@@ -75,7 +75,8 @@ namespace CalcAppAPI.Controllers
         }
 
         [HttpPost("file")]
-        public async Task<ActionResult> UploadDocument([FromForm] IFormFile file)
+        [Consumes("multipart/form-data")]
+        public async Task<ActionResult> UploadDocument(IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
