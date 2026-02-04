@@ -76,6 +76,7 @@ namespace CalcAppAPI.Data
         public DbSet<HydroPack> HydroPack { get; set; }
         public DbSet<HydroPackControl> HydroPackControl { get; set; }
         public DbSet<SupplyFormat> SupplyFormat { get; set; }
+        public DbSet<Toolbox> Toolbox { get; set; }
         public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
         // KRPAN
@@ -144,6 +145,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsHydropackControls();
             modelBuilder.ConfigureMultiplePalmsMOTs();
             modelBuilder.ConfigureMultiplePalmsSupplyFormats();
+            modelBuilder.ConfigureMultiplePalmsToolboxes();
 
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
@@ -340,6 +342,13 @@ namespace CalcAppAPI.Data
                 .HasMany(o => o.Trailer)
                 .WithOne(o => o.HydropackControl)
                 .HasForeignKey(o => o.HydropackControlId)
+                .IsRequired(false);
+
+            //TOOLBOX
+            modelBuilder.Entity<Toolbox>()
+                .HasMany(o => o.Trailer)
+                .WithOne(o => o.Toolbox)
+                .HasForeignKey(o => o.ToolboxId)
                 .IsRequired(false);
 
             //HAY BALE FRAME

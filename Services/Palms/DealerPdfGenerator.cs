@@ -25,6 +25,7 @@ namespace CalcAppAPI.Services.Palms
             { "BolsterLock", "Rakonca rögzítő" },
             { "BBox", "Biomasszás boksz" },
             { "DBox", "Billenős boksz" },
+            { "Toolbox", "Szerszámláda" },
             { "HayBaleFrame", "Szénabála keret" },
             { "WoodSorter", "Faosztályozó" },
             { "HandBrake", "Kézifék" },

@@ -278,5 +278,14 @@ namespace CalcAppAPI.Controllers
 
             return Ok(supplyFormats);
         }
+
+        [HttpGet("trailers/{id}/toolbox")]
+        public async Task<ActionResult<StanchionExtension>> GetToolbox(int id)
+        {
+            var toolbox = await _dbContext.Toolbox
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(toolbox);
+        }
     }
 }
