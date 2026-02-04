@@ -1,4 +1,5 @@
-﻿using CalcAppAPI.Data;
+﻿using CalcAppAPI.Application.Interfaces;
+using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Palms.Trailers;
 using CalcAppAPI.Responses;
@@ -14,10 +15,13 @@ namespace CalcAppAPI.API.Controllers
         private readonly ILogger<PalmsController> _logger;
         private readonly DataContext _dbContext;
 
-        public PalmsController(ILogger<PalmsController> logger, DataContext dbContext)
+        private readonly IPalmsQueryHandler _queryHandler;
+
+        public PalmsController(ILogger<PalmsController> logger, DataContext dbContext, IPalmsQueryHandler queryHandler)
         {
             _logger = logger;
             _dbContext = dbContext;
+            _queryHandler = queryHandler;
         }
 
         [HttpGet("trailers")]
@@ -79,6 +83,17 @@ namespace CalcAppAPI.API.Controllers
 
             return Ok(orderedCranes);
         }
+
+        //[HttpGet("trailers/{id}")]
+        //public async Task<IActionResult> GetTrailer(int id)
+        //{
+        //    var result = await _queryHandler.GetTrailerAsync(id);
+
+        //    if (result == null)
+        //        return NotFound();
+
+        //    return Ok(result);
+        //}
 
         [HttpGet("trailers/{id}")]
         public async Task<ActionResult<Trailer>> GetTrailer(int id)

@@ -1,10 +1,12 @@
+using CalcAppAPI.Application.Interfaces;
+using CalcAppAPI.Application.Queries;
 using CalcAppAPI.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
 using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
+    .MinimumLevel.Debug()
     .Enrich.FromLogContext()
     .WriteTo.Console()
     .CreateLogger();
@@ -20,7 +22,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<IPalmsQueryHandler, PalmsQueryHandler>();
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", p =>

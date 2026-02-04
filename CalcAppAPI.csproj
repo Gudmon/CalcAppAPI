@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.0.0" />
     <PackageReference Include="Azure.Identity" Version="1.17.1" />
     <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.8.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.27.0" />
@@ -34,8 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\Dtos\Palms\Trailer\" />
-    <Folder Include="Application\Interfaces\" />
     <Folder Include="Data\Extensions\Connect\Krpan\Cranes\" />
     <Folder Include="Models\Machine\Configurations\Krpan\Cranes\" />
   </ItemGroup>
