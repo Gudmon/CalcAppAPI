@@ -1,6 +1,7 @@
 using CalcAppAPI.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Serilog;
+using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information()
@@ -15,6 +16,8 @@ builder.Host.UseSerilog();
 builder.Services.AddApplicationInsightsTelemetry();
 
 builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
