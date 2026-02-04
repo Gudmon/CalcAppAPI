@@ -10,7 +10,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
         public string Mass { get; set; }
         public string Code { get; set; }
         public string Price { get; set; }
-        public IEnumerable<TrailerFrameTypeConfiguration> TrailerConfigurations { get; set; }
         public IEnumerable<Crane> Crane { get; set; }
     }
 }

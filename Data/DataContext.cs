@@ -77,7 +77,6 @@ namespace CalcAppAPI.Data
         public DbSet<HydroPackControl> HydroPackControl { get; set; }
         public DbSet<SupplyFormat> SupplyFormat { get; set; }
         public DbSet<Toolbox> Toolbox { get; set; }
-        public DbSet<TrailerCraneConfiguration> TrailerCraneConfigurations { get; set; }
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
@@ -169,133 +168,7 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureMultiplePalmsCraneCovers();
             modelBuilder.ConfigureMultiplePalmsCraneWoodControls();
             modelBuilder.ConfigureMultiplePalmsCraneLinkages();
-
             modelBuilder.ConfigureMultiplePalmsShippings();
-
-            modelBuilder.Entity<Trailer>()
-                .HasMany(t => t.CraneConfigurations)
-                .WithOne(tc => tc.Trailer)
-                .HasForeignKey(tc => tc.TrailerId);
-
-            modelBuilder.Entity<Crane>()
-                .HasMany(c => c.TrailerConfigurations)
-                .WithOne(tc => tc.Crane)
-                .HasForeignKey(tc => tc.CraneId);
-
-            modelBuilder.Entity<TrailerCraneConfiguration>().HasData(
-                new TrailerCraneConfiguration
-                {
-                    Id = 1,
-                    TrailerId = 1,
-                    CraneId = 1, 
-                    SelectedFrameTypeId = 1 
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 2,
-                    TrailerId = 1,
-                    CraneId = 1,
-                    SelectedFrameTypeId = 2 
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 3,
-                    TrailerId = 1,
-                    CraneId = 2, 
-                    SelectedFrameTypeId = 1 
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 4,
-                    TrailerId = 1,
-                    CraneId = 2,
-                    SelectedFrameTypeId = 2
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 5,
-                    TrailerId = 1,
-                    CraneId = 3,
-                    SelectedFrameTypeId = 1
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 6,
-                    TrailerId = 1,
-                    CraneId = 3,
-                    SelectedFrameTypeId = 2
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 7,
-                    TrailerId = 2,
-                    CraneId = 1,
-                    SelectedFrameTypeId = 1
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 8,
-                    TrailerId = 2,
-                    CraneId = 1,
-                    SelectedFrameTypeId = 2
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 9,
-                    TrailerId = 2,
-                    CraneId = 2,
-                    SelectedFrameTypeId = 1
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 10,
-                    TrailerId = 2,
-                    CraneId = 2,
-                    SelectedFrameTypeId = 2
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 11,
-                    TrailerId = 2,
-                    CraneId = 3,
-                    SelectedFrameTypeId = 1
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 12,
-                    TrailerId = 2,
-                    CraneId = 3,
-                    SelectedFrameTypeId = 2
-                },
-
-                new TrailerCraneConfiguration
-                {
-                    Id = 13,
-                    TrailerId = 2,
-                    CraneId = 4,
-                    SelectedFrameTypeId = 1
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 14,
-                    TrailerId = 2,
-                    CraneId = 4,
-                    SelectedFrameTypeId = 3
-                },
-                new TrailerCraneConfiguration
-                {
-                    Id = 15,
-                    TrailerId = 2,
-                    CraneId = 4,
-                    SelectedFrameTypeId = 4
-                }
-
-            );
 
             modelBuilder.ConnectTrailersWithCranes();
             modelBuilder.ConnectTrailersWithStanchions();

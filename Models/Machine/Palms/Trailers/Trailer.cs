@@ -71,6 +71,5 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public IEnumerable<SupplyFormat> SupplyFormat { get; set; }
         public Toolbox? Toolbox { get; set; }
         public int? ToolboxId { get; set; }
-        public IEnumerable<TrailerCraneConfiguration> CraneConfigurations { get; set; }
     }
 }

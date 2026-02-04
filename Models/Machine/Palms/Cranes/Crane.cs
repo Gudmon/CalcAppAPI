@@ -34,7 +34,6 @@ namespace CalcAppAPI.Models.Machine.Palms.Cranes
         public string PillarSlewingAngle { get; set; }
         public string RecommendedOilFlow { get; set; }
         public IEnumerable<Trailer> Trailer { get; set; }
-        public IEnumerable<TrailerCraneConfiguration> TrailerConfigurations { get; set; }
         public IEnumerable<FrameType> FrameType { get; set; }
         public IEnumerable<ControlBlock> ControlBlock { get; set; }
         public IEnumerable<Rotator> Rotator { get; set; }
