@@ -68,7 +68,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 7, OilPumpId = 6 },
                         new { TrailerId = 7, OilPumpId = 7 },
 
-                        //PALMS 10U
+                        //PALMS 10UX
                         new { TrailerId = 8, OilPumpId = 1 },
                         new { TrailerId = 8, OilPumpId = 2 },
                         new { TrailerId = 8, OilPumpId = 3 },
@@ -110,7 +110,16 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 12, OilPumpId = 7 },
 
                         //PALMS HMWD3.2
-                        new { TrailerId = 14, OilPumpId = 8 }
+                        new { TrailerId = 14, OilPumpId = 8 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, OilPumpId = 1 },
+                        new { TrailerId = 16, OilPumpId = 2 },
+                        new { TrailerId = 16, OilPumpId = 3 },
+                        new { TrailerId = 16, OilPumpId = 4 },
+                        new { TrailerId = 16, OilPumpId = 5 },
+                        new { TrailerId = 16, OilPumpId = 6 },
+                        new { TrailerId = 16, OilPumpId = 7 }
                     )
                 );
         }

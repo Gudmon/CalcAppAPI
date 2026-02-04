@@ -60,7 +60,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                new OilPump
                {
                    Id = 8,
-                   Name = "LS fajtájú olajmpumpa multiplikátorral, 500 p/min - 118 l/min",
+                   Name = "LS fajtájú olajpumpa multiplikátorral, 500 p/min - 118 l/min",
                    Code = "P6",
                    Price = "5190",
                }

@@ -50,38 +50,44 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 7, OilTankId = 3 },
                         new { TrailerId = 7, OilTankId = 4 },
 
-                        //PALMS 10U
+                        //PALMS 10UX
                         new { TrailerId = 8, OilTankId = 1 },
+                        new { TrailerId = 8, OilTankId = 2 },
                         new { TrailerId = 8, OilTankId = 3 },
-                        new { TrailerId = 8, OilTankId = 5 },
-                        new { TrailerId = 8, OilTankId = 6 },
+                        new { TrailerId = 8, OilTankId = 4 },
 
                         //PALMS 12U
                         new { TrailerId = 9, OilTankId = 1 },
+                        new { TrailerId = 9, OilTankId = 2 },
                         new { TrailerId = 9, OilTankId = 3 },
-                        new { TrailerId = 9, OilTankId = 5 },
-                        new { TrailerId = 9, OilTankId = 6 },
+                        new { TrailerId = 9, OilTankId = 4 },
 
                         //PALMS 12UAWD
                         new { TrailerId = 10, OilTankId = 1 },
+                        new { TrailerId = 10, OilTankId = 2 },
                         new { TrailerId = 10, OilTankId = 3 },
-                        new { TrailerId = 10, OilTankId = 5 },
-                        new { TrailerId = 10, OilTankId = 6 },
+                        new { TrailerId = 10, OilTankId = 4 },
 
                         //PALMS 15U
                         new { TrailerId = 11, OilTankId = 1 },
+                        new { TrailerId = 11, OilTankId = 2 },
                         new { TrailerId = 11, OilTankId = 3 },
-                        new { TrailerId = 11, OilTankId = 5 },
-                        new { TrailerId = 11, OilTankId = 6 },
+                        new { TrailerId = 11, OilTankId = 4 },
 
                         //PALMS 15UAWD
                         new { TrailerId = 12, OilTankId = 1 },
+                        new { TrailerId = 12, OilTankId = 2 },
                         new { TrailerId = 12, OilTankId = 3 },
-                        new { TrailerId = 12, OilTankId = 5 },
-                        new { TrailerId = 12, OilTankId = 6 },
+                        new { TrailerId = 12, OilTankId = 4 },
 
                         //PALMS HMWD3.2
-                        new { TrailerId = 14, OilTankId = 7 }
+                        new { TrailerId = 14, OilTankId = 7 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, OilTankId = 1 },
+                        new { TrailerId = 16, OilTankId = 2 },
+                        new { TrailerId = 16, OilTankId = 3 },
+                        new { TrailerId = 16, OilTankId = 4 }
                     )
                 );
         }

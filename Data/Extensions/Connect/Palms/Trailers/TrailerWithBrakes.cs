@@ -77,7 +77,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 7, BrakeId = 14 },
                         new { TrailerId = 7, BrakeId = 15 },
 
-                        //PALMS 10U
+                        //PALMS 10UX
                         new { TrailerId = 8, BrakeId = 1 },
                         new { TrailerId = 8, BrakeId = 2 },
                         new { TrailerId = 8, BrakeId = 3 },
@@ -128,7 +128,16 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
 
                         //PALMS HMWD3.2
                         new { TrailerId = 14, BrakeId = 23 },
-                        new { TrailerId = 14, BrakeId = 24 }
+                        new { TrailerId = 14, BrakeId = 24 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, BrakeId = 1 },
+                        new { TrailerId = 16, BrakeId = 10 },
+                        new { TrailerId = 16, BrakeId = 11 },
+                        new { TrailerId = 16, BrakeId = 12 },
+                        new { TrailerId = 16, BrakeId = 13 },
+                        new { TrailerId = 16, BrakeId = 14 },
+                        new { TrailerId = 16, BrakeId = 15 }
                     )
                 );
         }

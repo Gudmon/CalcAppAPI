@@ -62,7 +62,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                        new { TrailerId = 7, TyreId = 10 },
                        new { TrailerId = 7, TyreId = 11 },
 
-                       //PALMS 10U
+                       //PALMS 10UX
                        new { TrailerId = 8, TyreId = 3 },
                        new { TrailerId = 8, TyreId = 4 },
                        new { TrailerId = 8, TyreId = 5 },
@@ -113,7 +113,13 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                        new { TrailerId = 14, TyreId = 13 },
 
                        //PALMS 2D
-                       new { TrailerId = 15, TyreId = 14 }
+                       new { TrailerId = 15, TyreId = 14 },
+
+                       //PALMS 11UX
+                       new { TrailerId = 16, TyreId = 5 },
+                       new { TrailerId = 16, TyreId = 7 },
+                       new { TrailerId = 16, TyreId = 8 },
+                       new { TrailerId = 16, TyreId = 9 }
                    )
                );
         }

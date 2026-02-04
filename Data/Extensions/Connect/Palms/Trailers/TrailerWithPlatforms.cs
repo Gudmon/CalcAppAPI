@@ -16,6 +16,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                     (
                         //PALMS 6S
                         new { TrailerId = 1, PlatformId = 1 },
+                        new { TrailerId = 1, PlatformId = 2 },
 
                         //PALMS 8SX
                         new { TrailerId = 2, PlatformId = 1 },
@@ -37,7 +38,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         //PALMS 14D
                         new { TrailerId = 7, PlatformId = 1 },
 
-                        //PALMS 10U
+                        //PALMS 10UX
                         new { TrailerId = 8, PlatformId = 1 },
 
                         //PALMS 12U
@@ -50,7 +51,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 11, PlatformId = 1 },
 
                         //PALMS 15UAWD
-                        new { TrailerId = 12, PlatformId = 1 }
+                        new { TrailerId = 12, PlatformId = 1 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, PlatformId = 1 }
                     )
                 );
         }

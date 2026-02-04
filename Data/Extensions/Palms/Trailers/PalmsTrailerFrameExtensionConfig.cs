@@ -12,7 +12,7 @@ namespace CalcAppAPI.Data.Extensions.Palms.Trailers
                {
                    Id = 1,
                    Name = "Hidraulikus működtetésű raktér hosszabbítás",
-                   Code = "Hex",
+                   Code = "HEX",
                    Price = "210",
                },
                new FrameExtension

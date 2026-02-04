@@ -58,14 +58,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 7, StanchionId = 29 },
                         new { TrailerId = 7, StanchionId = 30 },
 
-                        //PALMS 10U
-                        new { TrailerId = 8, StanchionId = 31 },
+                        //PALMS 10UX
                         new { TrailerId = 8, StanchionId = 32 },
-                        new { TrailerId = 8, StanchionId = 33 },
                         new { TrailerId = 8, StanchionId = 34 },
-                        new { TrailerId = 8, StanchionId = 35 },
                         new { TrailerId = 8, StanchionId = 36 },
-                        new { TrailerId = 8, StanchionId = 37 },
                         new { TrailerId = 8, StanchionId = 38 },
 
                         //PALMS 12U
@@ -123,7 +119,13 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         //PALMS 2D
                         new { TrailerId = 15, StanchionId = 79 },
                         new { TrailerId = 15, StanchionId = 80 },
-                        new { TrailerId = 15, StanchionId = 81 }
+                        new { TrailerId = 15, StanchionId = 81 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, StanchionId = 82 },
+                        new { TrailerId = 16, StanchionId = 83 },
+                        new { TrailerId = 16, StanchionId = 84 },
+                        new { TrailerId = 16, StanchionId = 85 }
                     )
                 );
         }

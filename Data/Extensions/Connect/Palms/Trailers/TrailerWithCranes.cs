@@ -71,7 +71,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 7, CraneId = 11 },
                         new { TrailerId = 7, CraneId = 12 },
 
-                        //PALMS 10U
+                        //PALMS 10UX
                         new { TrailerId = 8, CraneId = 5 },
                         new { TrailerId = 8, CraneId = 6 },
                         new { TrailerId = 8, CraneId = 7 },
@@ -132,7 +132,16 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 14, CraneId = 12 },
 
                         //PALMS 2D
-                        new { TrailerId = 15, CraneId = 13 }
+                        new { TrailerId = 15, CraneId = 13 },
+
+                        //PALMS 11UX
+                        new { TrailerId = 16, CraneId = 6 },
+                        new { TrailerId = 16, CraneId = 7 },
+                        new { TrailerId = 16, CraneId = 8 },
+                        new { TrailerId = 16, CraneId = 9 },
+                        new { TrailerId = 16, CraneId = 10 },
+                        new { TrailerId = 16, CraneId = 11 },
+                        new { TrailerId = 16, CraneId = 12 }
                     )
 
                 );
