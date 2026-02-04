@@ -46,7 +46,6 @@ namespace CalcAppAPI.Data
         public DbSet<Crane> Crane { get; set; }
         public DbSet<FrameType> FrameType { get; set; }
         public DbSet<ControlBlock> ControlBlocks { get; set; }
-        public DbSet<CraneControlBlock> CraneControlBlocks { get; set; }
         public DbSet<Rotator> Rotator { get; set; }
         public DbSet<Grapple> Grapple { get; set; }
         public DbSet<Winch> Winch { get; set; }
@@ -195,7 +194,7 @@ namespace CalcAppAPI.Data
 
             //BBOX
             modelBuilder.Entity<BBox>()
-                .HasMany(o => o.Trailer)
+                .HasMany(o => o.Trailers)
                 .WithOne(o => o.BBox)
                 .HasForeignKey(o => o.BBoxId)
                 .IsRequired(false);
@@ -305,14 +304,9 @@ namespace CalcAppAPI.Data
                 .HasForeignKey(o => o.StanchionExtensionId)
                 .IsRequired(false);
 
-            modelBuilder.Entity<ControlBlock>()
-                .HasMany(cb => cb.AvailableForFrameTypes)
-                .WithMany();
-
             modelBuilder.ConnectTrailersWithSupplyFormats();
 
             modelBuilder.ConnectCranesWithFrameTypes();
-            modelBuilder.ConnectCranesWithFrameTypesAndControlBlocks();
             modelBuilder.ConnectCranesWithControlBlocks();
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithGrapples();

@@ -115,7 +115,7 @@ namespace CalcAppAPI.API.Controllers
         public async Task<ActionResult<BBox>> GetBBox(int id)
         {
             var bBox = await _dbContext.BBox
-                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+                .FirstOrDefaultAsync(b => b.Trailers.Any(t => t.Id == id));
 
             return Ok(bBox);
         }
