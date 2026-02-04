@@ -10,6 +10,10 @@ namespace CalcAppAPI.Infrastructure.KeyVault
         public AzureKeyVaultSecretProvider(IConfiguration config)
         {
             var uri = config["KeyVault:Uri"];
+
+            if (string.IsNullOrWhiteSpace(uri))
+                throw new InvalidOperationException("KeyVault:Uri configuration is missing.");
+
             _client = new SecretClient(new Uri(uri!), new DefaultAzureCredential());
         }
 
