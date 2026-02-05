@@ -29,8 +29,8 @@ namespace CalcAppAPI.Application.Services.Palms.Email
         public async Task SendEmailAsync(EmailData email)
         {
             string fromMail = _emailOptions.FromEmailAddress;
-            string toMail = _emailOptions.ToEmailAddressTest;
-            //string toMail = _emailOptions.ToEmailAddress;
+            //string toMail = _emailOptions.ToEmailAddressTest;
+            string toMail = _emailOptions.ToEmailAddress;
             string ccMail = _emailOptions.FromEmailAddress;
 
             var emailToSend = new MimeMessage();
