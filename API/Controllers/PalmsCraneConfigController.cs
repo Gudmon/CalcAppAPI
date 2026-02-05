@@ -40,68 +40,6 @@ namespace CalcAppAPI.API.Controllers
             return Ok(frameTypes);
         }
 
-        //[HttpGet("cranes/{trailerId}/{craneId}/availableFrameTypes")]
-        //public ActionResult<IEnumerable<FrameType>> GetAvailableFrameTypes(int trailerId, int craneId)
-        //{
-        //    var trailer = _dbContext.Trailer
-        //        .Include(t => t.CraneConfigurations)
-        //            .ThenInclude(tc => tc.Crane)
-        //        .FirstOrDefault(t => t.Id == trailerId);
-
-        //    if (trailer == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var craneConfigurations = trailer.CraneConfigurations.Where(tc => tc.CraneId == craneId).Select(tc => tc.Crane).ToList();
-
-        //    var frameTypes = craneConfigurations.SelectMany(crane =>
-        //        _dbContext.TrailerCraneConfigurations
-        //            .Where(tc => tc.CraneId == crane.Id && tc.TrailerId == trailerId)
-        //            .Select(tc => tc.SelectedFrameType)
-        //    ).Distinct().ToList();
-
-        //    return Ok(frameTypes);
-        //}
-
-        //[HttpGet("cranes/{craneId}/{frameTypeId}/controlblocks")]
-        //public IActionResult GetAvailableControlBlocks(int craneId, int frameTypeId)
-        //{
-        //    var availableControlBlocks = _dbContext.CraneControlBlocks
-        //        .Where(ccb => ccb.CraneId == craneId && ccb.FrameTypeId == frameTypeId)
-        //        .Select(ccb => ccb.ControlBlock)
-        //        .ToList();
-
-        //    return Ok(availableControlBlocks);
-        //}
-
-        //[HttpGet("cranes/{craneId}/{controlBlockId}/frametypes")]
-        //public ActionResult<IEnumerable<FrameType>> GetFrameTypes(int craneId, int controlBlockId)
-        //{
-        //    var availableFrameTypes = _dbContext.FrameType
-        //        .Join(
-        //            _dbContext.CraneControlBlocks,
-        //            ft => ft.Id,
-        //            ccb => ccb.FrameTypeId,
-        //            (ft, ccb) => new { FrameType = ft, CraneControlBlock = ccb })
-        //        .Join(
-        //            _dbContext.ControlBlocks,
-        //            x => x.CraneControlBlock.ControlBlockId,
-        //            cb => cb.Id,
-        //            (x, cb) => new { x.FrameType, x.CraneControlBlock, ControlBlock = cb })
-        //        .Where(x => x.CraneControlBlock.CraneId == craneId && x.CraneControlBlock.ControlBlockId == controlBlockId)
-        //        .Select(x => x.FrameType)
-        //        .OrderBy(ft => ft.Id)
-        //        .ToList();
-
-        //    if (availableFrameTypes == null || !availableFrameTypes.Any())
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(availableFrameTypes);
-        //}
-
         [HttpGet("cranes/{id}/rotators")]
         public async Task<ActionResult<IEnumerable<Rotator>>> GetRotators(int id)
         {
@@ -294,7 +232,7 @@ namespace CalcAppAPI.API.Controllers
         public async Task<ActionResult<Shipping>> GetShipping(int id)
         {
             var shipping = await _dbContext.Shipping
-                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+                .FirstOrDefaultAsync(b => b.Cranes.Any(t => t.Id == id));
 
             return Ok(shipping);
         }

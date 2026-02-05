@@ -171,12 +171,13 @@ namespace CalcAppAPI.Data
 
             modelBuilder.ConnectTrailersWithCranes();
             modelBuilder.ConnectTrailersWithStanchions();
-            modelBuilder.ConnectTrailersWithBrakes();
             modelBuilder.ConnectTrailersWithPropulsions();
             modelBuilder.ConnectTrailersWithDrawbars();
             modelBuilder.ConnectTrailersWithPlatforms();
             modelBuilder.ConnectTrailersWithOilPumps();
             modelBuilder.ConnectTrailersWithOilTanks();
+
+            modelBuilder.ConnectAllPalmsTrailerOptions();
 
             //OIL TANK COOLER
             modelBuilder.Entity<TrailerOilCooler>()
@@ -194,7 +195,7 @@ namespace CalcAppAPI.Data
 
             //BBOX
             modelBuilder.Entity<BBox>()
-                .HasMany(o => o.Trailers)
+                .HasMany(o => o.Trailer)
                 .WithOne(o => o.BBox)
                 .HasForeignKey(o => o.BBoxId)
                 .IsRequired(false);
@@ -285,7 +286,7 @@ namespace CalcAppAPI.Data
 
             //TRAILER SHIPPING
             modelBuilder.Entity<Shipping>()
-                .HasMany(o => o.Trailer)
+                .HasMany(o => o.Trailers)
                 .WithOne(o => o.Shipping)
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);
@@ -424,7 +425,7 @@ namespace CalcAppAPI.Data
 
             //CRANE SHIPPING
             modelBuilder.Entity<Shipping>()
-                .HasMany(o => o.Crane)
+                .HasMany(o => o.Cranes)
                 .WithOne(o => o.Shipping)
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);

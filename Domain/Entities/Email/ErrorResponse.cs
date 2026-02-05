@@ -2,7 +2,7 @@
 {
     public class ErrorResponse
     {
-        public string Header { get; set; }
-        public string Message { get; set; }
+        public string Header { get; set; } = string.Empty;
+        public string Message { get; set; } = string.Empty;
     }
 }

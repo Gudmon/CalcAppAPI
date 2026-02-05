@@ -1,15 +1,14 @@
-﻿using CalcAppAPI.Models.Machine.Palms.Cranes;
+﻿using CalcAppAPI.Models.Machine.Configurations.Common;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
+using CalcAppAPI.Models.Machine.Palms.Cranes;
 using CalcAppAPI.Models.Machine.Palms.Trailers;
 
 namespace CalcAppAPI.Models.Machine.Configurations.Cranes
 {
-    public class Shipping
+    public class Shipping : MachineOption
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Code { get; set; }
-        public string Price { get; set; }
-        public IEnumerable<Crane> Crane { get; set; }
-        public IEnumerable<Trailer> Trailer { get; set; }
+        public IEnumerable<Crane> Cranes { get; set; } = Enumerable.Empty<Crane>();
+        public IEnumerable<Trailer> Trailers { get; set; } = Enumerable.Empty<Trailer>();
     }
 }

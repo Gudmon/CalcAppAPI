@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Extensions\Connect\Krpan\Cranes\" />
+    <Folder Include="Models\Machine\Configurations\JoinEntities\Cranes\" />
     <Folder Include="Models\Machine\Configurations\Krpan\Cranes\" />
   </ItemGroup>
 

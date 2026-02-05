@@ -1,15 +1,7 @@
-﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
-using CalcAppAPI.Models.Machine.Palms.Cranes;
-
-namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
+﻿namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
 {
-    public class FrameType
+    public class FrameType : CraneOption
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Mass { get; set; }
-        public string Code { get; set; }
-        public string Price { get; set; }
-        public IEnumerable<Crane> Crane { get; set; }
+        public string Mass { get; set; } = string.Empty;
     }
 }
