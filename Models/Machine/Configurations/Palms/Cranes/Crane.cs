@@ -1,8 +1,7 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Palms.Trailers;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 
-namespace CalcAppAPI.Models.Machine.Palms.Cranes
+namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
 {
     public class Crane
     {

@@ -2,6 +2,7 @@
 using CalcAppAPI.Application.Dtos.Palms.Trailer;
 using CalcAppAPI.Application.Interfaces;
 using CalcAppAPI.Data;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Application.Queries
@@ -69,7 +70,7 @@ namespace CalcAppAPI.Application.Queries
         }
 
         private IEnumerable<TrailerOptionDto> BuildOptions(
-            Models.Machine.Palms.Trailers.Trailer trailer)
+            Trailer trailer)
         {
             var list = new List<TrailerOptionDto>();
 

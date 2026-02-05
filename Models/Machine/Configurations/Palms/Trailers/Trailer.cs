@@ -1,9 +1,8 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.JoinEntities.Trailers;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
-using CalcAppAPI.Models.Machine.Palms.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 
-namespace CalcAppAPI.Models.Machine.Palms.Trailers
+namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
 {
     public class Trailer
     {

@@ -1,5 +1,4 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Palms.Cranes;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes

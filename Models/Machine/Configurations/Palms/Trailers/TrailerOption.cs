@@ -1,5 +1,4 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Common;
-using CalcAppAPI.Models.Machine.Palms.Trailers;
 
 namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
 {
