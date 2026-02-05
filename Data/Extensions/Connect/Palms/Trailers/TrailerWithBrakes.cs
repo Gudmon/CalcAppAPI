@@ -10,18 +10,18 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
         public static void ConnectTrailersWithBrakes(this ModelBuilder modelBuilder)
         {
             modelBuilder.ConnectMachineOptionManyToMany<
-            Trailer,
-            Brake,
-            TrailerBrakeJoinEntity>(
-            machineNavigation: t => t.Brake,
-            optionNavigation: b => b.Trailer,
-            compositeKeyExpression: x => new { x.TrailerId, x.BrakeId },
-            joinToMachine: x => x.Trailer,
-            joinToOption: x => x.Brake,
-            machineFk: x => x.TrailerId,
-            optionFk: x => x.BrakeId,
-            seedData: new[]
-            {
+             Trailer,
+             Brake,
+             TrailerBrakeJoinEntity>(
+             machineNavigation: t => t.Brake,
+             optionNavigation: b => b.Trailer,
+             compositeKeyExpression: x => new { x.TrailerId, x.BrakeId },
+             joinToMachine: x => x.Trailer,
+             joinToOption: x => x.Brake,
+             machineFk: x => x.TrailerId,
+             optionFk: x => x.BrakeId,
+             seedData: new[]
+             {
                 //PALMS 6S
                 new TrailerBrakeJoinEntity { TrailerId = 1, BrakeId = 1 },
                 new TrailerBrakeJoinEntity { TrailerId = 1, BrakeId = 2 },
