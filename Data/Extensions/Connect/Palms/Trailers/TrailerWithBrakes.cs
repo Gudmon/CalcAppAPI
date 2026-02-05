@@ -1,5 +1,4 @@
-﻿using CalcAppAPI.Models.Machine.Configurations.JoinEntities.Trailers;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
+﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers

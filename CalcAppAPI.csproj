@@ -35,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Application\Services\Pdf\Generators\" />
     <Folder Include="Data\Extensions\Connect\Krpan\Cranes\" />
     <Folder Include="Models\Machine\Configurations\Krpan\Cranes\" />
   </ItemGroup>

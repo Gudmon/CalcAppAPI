@@ -6,6 +6,7 @@ using CalcAppAPI.Application.Services.Krpan.Pdf;
 
 namespace CalcAppAPI.Application.Services.Krpan.Email
 {
+    //TODO: Refactor
     public class KrpanEmailSender : IKrpanEmailSender
     {
         private readonly IKrpanDealerPdfGenerator _dealerPdfGenerator;
@@ -23,7 +24,6 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
             string toMail = "gudmonmarcellwork@gmail.com";
             //string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
-            string fromPassword = "lwszbrsnccpqunfe";
 
             var emailToSend = new MimeMessage();
 
@@ -78,7 +78,7 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
             using (var smtp = new SmtpClient())
             {
                 await smtp.ConnectAsync("smtp.gmail.com", 587, false);
-                await smtp.AuthenticateAsync(fromMail, fromPassword);
+                //await smtp.AuthenticateAsync(fromMail, fromPassword);
 
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
@@ -91,7 +91,6 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
             string toMail = "gudmonmarcellwork@gmail.com";
             //string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
-            string fromPassword = "lwszbrsnccpqunfe";
 
             var emailToSend = new MimeMessage();
 
@@ -128,7 +127,7 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
             using (var smtp = new SmtpClient())
             {
                 await smtp.ConnectAsync("smtp.gmail.com", 587, false);
-                await smtp.AuthenticateAsync(fromMail, fromPassword);
+                //await smtp.AuthenticateAsync(fromMail, fromPassword);
                 await smtp.SendAsync(emailToSend);
                 await smtp.DisconnectAsync(true);
             }

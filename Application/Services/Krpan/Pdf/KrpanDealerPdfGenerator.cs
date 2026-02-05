@@ -7,9 +7,9 @@ using QuestPDF.Infrastructure;
 
 namespace CalcAppAPI.Application.Services.Krpan.Pdf
 {
+    //TODO: Refactor
     public class KrpanDealerPdfGenerator : IKrpanDealerPdfGenerator
     {
-        //TODO: fix conn string
         private string _connectionString = "";
         private const string _containerName = "krpan";
 
