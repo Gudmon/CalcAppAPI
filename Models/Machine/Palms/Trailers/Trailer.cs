@@ -22,19 +22,19 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public string StandardWheelSize { get; set; } = string.Empty;
         public string MaxCraneSize { get; set; } = string.Empty;
         public string DrawbarControlCylinders { get; set; } = string.Empty;
-        public IEnumerable<Crane> Crane { get; set; } = Enumerable.Empty<Crane>();
-        public IEnumerable<Stanchion> Stanchion { get; set; } = Enumerable.Empty<Stanchion>();
-        public IEnumerable<Brake> Brake { get; set; } = Enumerable.Empty<Brake>();
-        public IEnumerable<Propulsion> Propulsion { get; set; } = Enumerable.Empty<Propulsion>();
-        public IEnumerable<Drawbar> Drawbar { get; set; } = Enumerable.Empty<Drawbar>();
-        public IEnumerable<Platform> Platform { get; set; } = Enumerable.Empty<Platform>();
-        public IEnumerable<OilPump> OilPump { get; set; } = Enumerable.Empty<OilPump>();
-        public IEnumerable<OilTank> OilTank { get; set; } = Enumerable.Empty<OilTank>();
+        public ICollection<Crane> Crane { get; set; } = new List<Crane>();
+        public ICollection<Stanchion> Stanchion { get; set; } = new List<Stanchion>();
+        public ICollection<Brake> Brake { get; set; } = new List<Brake>();
+        public ICollection<Propulsion> Propulsion { get; set; } = new List<Propulsion>();
+        public ICollection<Drawbar> Drawbar { get; set; } = new List<Drawbar>();
+        public ICollection<Platform> Platform { get; set; } = new List<Platform>();
+        public ICollection<OilPump> OilPump { get; set; } = new List<OilPump>();
+        public ICollection<OilTank> OilTank { get; set; } = new List<OilTank>();
         public TrailerOilCooler? TrailerOilCooler { get; set; }
         public int? TrailerOilCoolerId { get; set; }
-        public IEnumerable<SupportLeg> SupportLeg { get; set; } = Enumerable.Empty<SupportLeg>();
-        public IEnumerable<TrailerLights> Light { get; set; } = Enumerable.Empty<TrailerLights>();
-        public IEnumerable<Tyre> Tyre { get; set; } = Enumerable.Empty<Tyre>();
+        public ICollection<SupportLeg> SupportLeg { get; set; } = new List<SupportLeg>();
+        public ICollection<TrailerLights> Light { get; set; } = new List<TrailerLights>();
+        public ICollection<Tyre> Tyre { get; set; } = new List<Tyre>();
         public BolsterLock? BolsterLock { get; set; }
         public int? BolsterLockId { get; set; }
         public BBox? BBox { get; set; }
@@ -63,10 +63,10 @@ namespace CalcAppAPI.Models.Machine.Palms.Trailers
         public int? MOTId { get; set; }
         public StanchionExtension? StanchionExtension { get; set; }
         public int? StanchionExtensionId { get; set; }
-        public IEnumerable<HydroPack> HydroPack { get; set; } = Enumerable.Empty<HydroPack>();
+        public ICollection<HydroPack> HydroPack { get; set; } = new List<HydroPack>();
         public HydroPackControl? HydropackControl { get; set; }
         public int? HydropackControlId { get; set; }
-        public IEnumerable<SupplyFormat> SupplyFormat { get; set; } = Enumerable.Empty<SupplyFormat>();
+        public ICollection<SupplyFormat> SupplyFormat { get; set; } = new List<SupplyFormat>();
         public Toolbox? Toolbox { get; set; }
         public int? ToolboxId { get; set; }
     }

@@ -32,30 +32,30 @@ namespace CalcAppAPI.Models.Machine.Palms.Cranes
         public string CraneWeight { get; set; } = string.Empty;
         public string PillarSlewingAngle { get; set; } = string.Empty;
         public string RecommendedOilFlow { get; set; } = string.Empty;
-        public IEnumerable<Trailer> Trailer { get; set; } = Enumerable.Empty<Trailer>();
-        public IEnumerable<FrameType> FrameType { get; set; } = Enumerable.Empty<FrameType>();
-        public IEnumerable<ControlBlock> ControlBlock { get; set; } = Enumerable.Empty<ControlBlock>();
-        public IEnumerable<Rotator> Rotator { get; set; } = Enumerable.Empty<Rotator>();
-        public IEnumerable<Grapple> Grapple { get; set; } = Enumerable.Empty<Grapple>();
-        public IEnumerable<Winch> Winch { get; set; } = Enumerable.Empty<Winch>();
+        public ICollection<Trailer> Trailer { get; set; } = new List<Trailer>();
+        public ICollection<FrameType> FrameType { get; set; } = new List<FrameType>();
+        public ICollection<ControlBlock> ControlBlock { get; set; } = new List<ControlBlock>();
+        public ICollection<Rotator> Rotator { get; set; } = new List<Rotator>();
+        public ICollection<Grapple> Grapple { get; set; } = new List<Grapple>();
+        public ICollection<Winch> Winch { get; set; } = new List<Winch>();
         public ProtectionSleeves? ProtectionSleeves { get; set; }
         public int? ProtectionSleevesId { get; set; }
         public ElectricalFloating? ElectricalFloating { get; set; }
         public int? ElectricalFloatingId { get; set; }
         public ValveBlock? ValveBlock { get; set; }
         public int? ValveBlockId { get; set; }
-        public IEnumerable<Damping> Damping { get; set; }
+        public ICollection<Damping> Damping { get; set; } = new List<Damping>();
         public CraneLight? Light { get; set; }
         public int? LightId { get; set; }
         public OperatorSeat? OperatorSeat { get; set; }
         public int? OperatorSeatId { get; set; }
-        public IEnumerable<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; } = Enumerable.Empty<HighPerformanceOilFilter>();
+        public ICollection<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; } = new List<HighPerformanceOilFilter>();
         public CraneOilCooler? CraneOilCooler { get; set; }
         public int? CraneOilCoolerId { get; set; }
-        public IEnumerable<RotatorBrake> RotatorBrake { get; set; } = Enumerable.Empty<RotatorBrake>();
+        public ICollection<RotatorBrake> RotatorBrake { get; set; } = new List<RotatorBrake>();
         public JoystickHolder? JoystickHolder { get; set; }
         public int? JoystickHolderId { get; set; }
-        public IEnumerable<HoseGuard> HoseGuard { get; set; } = Enumerable.Empty<HoseGuard>();
+        public ICollection<HoseGuard> HoseGuard { get; set; } = new List<HoseGuard>();
         public TurningDeviceCounterPlate? TurningDeviceCounterPlate { get; set; }
         public int? TurningDeviceCounterPlateId { get; set; }
         public SupportLegCounterPlate? SupportLegCounterPlate { get; set; }
