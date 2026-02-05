@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CalcAppAPI.Models.Pdf;
 using CalcAppAPI.Services;
-using CalcAppAPI.Application.Services.Palms.Pdf;
+using CalcAppAPI.Application.Services.Pdf.Generators;
 
 namespace CalcAppAPI.API.Controllers
 {
@@ -25,7 +25,7 @@ namespace CalcAppAPI.API.Controllers
         {
             try
             {
-                var pdfBytes = await _userPdfGenerator.GetUserPdfAsync(id);
+                var pdfBytes = await _userPdfGenerator.GetPdfAsync(id);
                 return File(pdfBytes, "application/pdf", $"{id}.pdf");
             }
             catch (Exception ex)
@@ -39,7 +39,7 @@ namespace CalcAppAPI.API.Controllers
         {
             try
             {
-                var pdfBytes = await _dealerPdfGenerator.GetDealerPdfAsync(id);
+                var pdfBytes = await _dealerPdfGenerator.GetPdfAsync(id);
                 return File(pdfBytes, "application/pdf", $"{id}-clear-globe.pdf");
             }
             catch (Exception ex)
@@ -55,8 +55,8 @@ namespace CalcAppAPI.API.Controllers
             string pdfId = Util.RandomId();
             try
             {
-                await _dealerPdfGenerator.GenerateAndSaveDealerPdfAsync(pdfModel, pdfId);
-                await _userPdfGenerator.GenerateAndSaveUserPdfAsync(pdfModel, pdfId);
+                await _dealerPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId);
+                await _userPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId);
                 return Ok(new { id = pdfId });
             }
             catch (Exception ex)

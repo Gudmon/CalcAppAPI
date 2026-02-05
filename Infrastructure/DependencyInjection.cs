@@ -1,4 +1,5 @@
 ﻿using CalcAppAPI.Data;
+using CalcAppAPI.Domain.Entities.Email;
 using CalcAppAPI.Infrastructure.KeyVault;
 using CalcAppAPI.Infrastructure.Options;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,10 @@ namespace CalcAppAPI.Infrastructure
 
             var dbConnection = await secretProvider.GetSecretAsync("DBConnection");
             var blobConnection = await secretProvider.GetSecretAsync("BlobConnection");
+            var fromEmailAddress = await secretProvider.GetSecretAsync("FromEmailAddress");
+            var toEmailAddress = await secretProvider.GetSecretAsync("ToEmailAddress");
+            var toEmailAddressTest = await secretProvider.GetSecretAsync("ToEmailAddressTest");
+            var fromEmailPw = await secretProvider.GetSecretAsync("FromEmailPassword");
 
             services.AddDbContext<DataContext>(options =>
             {
@@ -27,6 +32,15 @@ namespace CalcAppAPI.Infrastructure
             services.Configure<BlobOptions>(opt =>
             {
                 opt.ConnectionString = blobConnection;
+            });
+            services.Configure<EmailOptions>(options =>
+            {
+                options.FromEmailAddress = fromEmailAddress.Trim('"');
+                options.ToEmailAddress = toEmailAddress.Trim('"');
+                options.ToEmailAddressTest = toEmailAddressTest.Trim('"');
+                options.FromEmailPw = fromEmailPw.Trim('"');
+                options.SmtpHost = "smtp.gmail.com";
+                options.SmtpPort = 587;
             });
         }
     }

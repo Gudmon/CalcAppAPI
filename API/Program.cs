@@ -1,8 +1,17 @@
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
 using CalcAppAPI.Application.Interfaces;
 using CalcAppAPI.Application.Queries;
+using CalcAppAPI.Application.Services.Palms.Email;
+using CalcAppAPI.Application.Services.Pdf;
+using CalcAppAPI.Application.Services.Pdf.Generators;
+using CalcAppAPI.Application.Services.Pdf.Layout;
+using CalcAppAPI.Application.Services.Pdf.Mapping;
 using CalcAppAPI.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
+using QuestPDF.Infrastructure;
 using Serilog;
+using System;
 using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
@@ -13,6 +22,7 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
+QuestPDF.Settings.License = LicenseType.Community;
 builder.Host.UseSerilog();
 
 builder.Services.AddApplicationInsightsTelemetry();
@@ -32,6 +42,17 @@ builder.Services.AddCors(opt =>
 });
 
 await builder.Services.AddInfrastructureAsync(builder.Configuration);
+
+builder.Services.AddScoped<IPropertyDisplayNameResolver, PropertyDisplayNameResolver>();
+builder.Services.AddScoped<IBlobStorageService, BlobStorageService>();
+
+builder.Services.AddScoped<IDealerPdfLayout, DealerPdfLayout>();
+builder.Services.AddScoped<IUserPdfLayout, UserPdfLayout>();
+
+builder.Services.AddScoped<IDealerPdfGenerator, DealerPdfGenerator>();
+builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 

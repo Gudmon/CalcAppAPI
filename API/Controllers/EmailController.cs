@@ -58,21 +58,6 @@ namespace CalcAppAPI.API.Controllers
             }
         }
 
-        [HttpPost("competition")]
-        public async Task<ActionResult> SendCompetitionEmail([FromBody] CompetitionEmail email)
-        {
-            try
-            {
-                await _emailSender.SendEmailAsync(email);
-                return Ok(new { message = "Email sent succesfully" });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error during sending email");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while sending the email.");
-            }
-        }
-
         [HttpPost("file")]
         [Consumes("multipart/form-data")]
         public async Task<ActionResult> UploadDocument(IFormFile file)

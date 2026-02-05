@@ -1,8 +1,6 @@
 ﻿using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Krpan.Cranes;
 using CalcAppAPI.Models.Machine.Krpan.Trailers;
-using CalcAppAPI.Models.Machine.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Palms.Trailers;
 using CalcAppAPI.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
