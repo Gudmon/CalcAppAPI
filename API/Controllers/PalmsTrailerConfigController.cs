@@ -34,10 +34,9 @@ namespace CalcAppAPI.API.Controllers
         [HttpGet("trailers/{id}/brakes")]
         public async Task<ActionResult<IEnumerable<Brake>>> GetBrakes(int id)
         {
-            var brakes = await _dbContext.Trailer
-            .Where(t => t.Id == id)
-            .SelectMany(t => t.Brake)
-            .ToListAsync();
+            var brakes = await _dbContext.Brake
+                .Where(s => s.Trailer.Any(t => t.Id == id))
+                .ToListAsync();
 
             return Ok(brakes);
         }

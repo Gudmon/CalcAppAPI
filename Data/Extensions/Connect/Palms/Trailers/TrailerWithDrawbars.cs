@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithDrawbars(this ModelBuilder modelBuilder)
         {
-            // DRAWBARS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Drawbar)
                 .WithMany(c => c.Trailer)

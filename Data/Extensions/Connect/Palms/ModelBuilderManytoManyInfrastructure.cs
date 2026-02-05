@@ -7,39 +7,37 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms
     public static class ModelBuilderManyToManyInfrastructure
     {
         public static void ConnectMachineOptionManyToMany<
-        TMachine,
-        TOption,
-        TJoin>(
-        this ModelBuilder modelBuilder,
-        Expression<Func<TMachine, ICollection<TOption>>> machineNavigation,
-        Expression<Func<TOption, ICollection<TMachine>>> optionNavigation,
-        Expression<Func<TJoin, object>> compositeKeyExpression,
-        Expression<Func<TJoin, TMachine>> joinToMachine,
-        Expression<Func<TJoin, TOption>> joinToOption,
-        Expression<Func<TJoin, object>> machineFk,
-        Expression<Func<TJoin, object>> optionFk,
-        IEnumerable<TJoin>? seedData = null)
-        where TMachine : class
-        where TOption : MachineOption
-        where TJoin : class
+            TMachine,
+            TOption>(
+            this ModelBuilder modelBuilder,
+            string tableName,
+            Expression<Func<TMachine, IEnumerable<TOption>>> machineNavigation,
+            Expression<Func<TOption, IEnumerable<TMachine>>> optionNavigation,
+            IEnumerable<object>? seedData = null)
+            where TMachine : class
+            where TOption : MachineOption
         {
-            modelBuilder.Entity<TJoin>()
-                .HasKey(compositeKeyExpression);
+            modelBuilder.Entity<TMachine>()
+                .HasMany(machineNavigation)
+                .WithMany(optionNavigation)
+                .UsingEntity<Dictionary<string, object>>(
+                    tableName,
+                    j => j.HasOne<TOption>()
+                          .WithMany()
+                          .HasForeignKey("OptionId")
+                          .OnDelete(DeleteBehavior.Cascade),
+                    j => j.HasOne<TMachine>()
+                          .WithMany()
+                          .HasForeignKey("MachineId")
+                          .OnDelete(DeleteBehavior.Cascade),
+                    j =>
+                    {
+                        j.HasKey("MachineId", "OptionId");
 
-            modelBuilder.Entity<TJoin>()
-                .HasOne(joinToMachine)
-                .WithMany()
-                .HasForeignKey(machineFk)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<TJoin>()
-                .HasOne(joinToOption)
-                .WithMany()
-                .HasForeignKey(optionFk)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            if (seedData != null)
-                modelBuilder.Entity<TJoin>().HasData(seedData);
+                        if (seedData != null)
+                            j.HasData(seedData);
+                    });
         }
     }
+
 }
