@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithLights(this ModelBuilder modelBuilder)
         {
-            // LIGHT
             modelBuilder.Entity<Trailer>()
                .HasMany(t => t.Light)
                .WithMany(c => c.Trailer)

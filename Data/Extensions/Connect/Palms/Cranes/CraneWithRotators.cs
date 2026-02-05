@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
     {
         public static void ConnectCranesWithRotators(this ModelBuilder modelBuilder)
         {
-            //ROTATORS
             modelBuilder.Entity<Crane>()
                 .HasMany(t => t.Rotator)
                 .WithMany(c => c.Crane)

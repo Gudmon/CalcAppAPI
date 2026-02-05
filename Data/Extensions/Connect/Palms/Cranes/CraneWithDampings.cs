@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
     {
         public static void ConnectCranesWithDampings(this ModelBuilder modelBuilder)
         {
-            //ROTATORS
             modelBuilder.Entity<Crane>()
                 .HasMany(t => t.Damping)
                 .WithMany(c => c.Crane)

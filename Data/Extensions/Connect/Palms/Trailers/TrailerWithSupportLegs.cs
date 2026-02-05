@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithSupportLegs(this ModelBuilder modelBuilder)
         {
-            // SUPPORT LEG
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.SupportLeg)
                 .WithMany(c => c.Trailer)

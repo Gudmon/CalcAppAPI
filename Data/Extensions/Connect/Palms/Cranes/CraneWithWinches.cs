@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
     {
         public static void ConnectCranesWithWinches(this ModelBuilder modelBuilder)
         {
-            //WINCHES
             modelBuilder.Entity<Crane>()
                 .HasMany(t => t.Winch)
                 .WithMany(c => c.Crane)

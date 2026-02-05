@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithSupplyFormats(this ModelBuilder modelBuilder)
         {
-            // LIGHT
             modelBuilder.Entity<Trailer>()
                .HasMany(t => t.SupplyFormat)
                .WithMany(c => c.Trailer)

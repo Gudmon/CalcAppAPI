@@ -8,7 +8,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
     {
         public static void ConnectCranesWithHighPerformanceOilFilters(this ModelBuilder modelBuilder)
         {
-            //HIGHPERFORMANCEOILFILTERS
             modelBuilder.Entity<Crane>()
                 .HasMany(t => t.HighPerformanceOilFilter)
                 .WithMany(c => c.Crane)

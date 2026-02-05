@@ -15,6 +15,20 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
             modelBuilder.ConnectCranesWithRotatorBrakes();
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithWinches();
+            modelBuilder.ConnectCranesWithBoomGuard();
+            modelBuilder.ConnectCranesWithCover();
+            modelBuilder.ConnectCranesWithElectricalFloating();
+            modelBuilder.ConnectCranesWithJoystickHolder();
+            modelBuilder.ConnectCranesWithLight();
+            modelBuilder.ConnectCranesWithLinkage();
+            modelBuilder.ConnectCranesWithOilCooler();
+            modelBuilder.ConnectCranesWithOperatorSeat();
+            modelBuilder.ConnectCranesWithProtectionSleeve();
+            modelBuilder.ConnectCranesWithShipping();
+            modelBuilder.ConnectCranesWithSupportLegCounterPlate();
+            modelBuilder.ConnectCranesWithTurningDeviceCounterPlate();
+            modelBuilder.ConnectCranesWithValveBlock();
+            modelBuilder.ConnectCranesWithWoodControl();
         }
     }
 }

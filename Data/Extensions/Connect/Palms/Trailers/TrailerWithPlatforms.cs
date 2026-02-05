@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithPlatforms(this ModelBuilder modelBuilder)
         {
-            // PLATFORMS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Platform)
                 .WithMany(c => c.Trailer)

@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithTyres(this ModelBuilder modelBuilder)
         {
-            // TYRE
             modelBuilder.Entity<Trailer>()
                .HasMany(t => t.Tyre)
                .WithMany(c => c.Trailer)

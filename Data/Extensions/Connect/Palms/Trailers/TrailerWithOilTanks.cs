@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithOilTanks(this ModelBuilder modelBuilder)
         {
-            // OIL TANKS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.OilTank)
                 .WithMany(c => c.Trailer)

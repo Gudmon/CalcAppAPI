@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithStanchions(this ModelBuilder modelBuilder)
         {
-            // STANCHIONS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Stanchion)
                 .WithMany(c => c.Trailer)

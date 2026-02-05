@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
     {
         public static void ConnectCranesWithFrameTypes(this ModelBuilder modelBuilder)
         {
-            //FRAME TYPES
             modelBuilder.Entity<Crane>()
                 .HasMany(t => t.FrameType)
                 .WithMany(c => c.Crane)

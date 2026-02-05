@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
     {
         public static void ConnectTrailersWithPropulsions(this ModelBuilder modelBuilder)
         {
-            // PROPULSIONS
             modelBuilder.Entity<Trailer>()
                 .HasMany(t => t.Propulsion)
                 .WithMany(c => c.Trailer)
