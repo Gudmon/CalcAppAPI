@@ -104,6 +104,7 @@ namespace CalcAppAPI.Application.Queries
                     {
                         Id = c.Id,
                         Name = c.Name,
+                        Price = c.Price,
                         MaxReach = c.MaxReach,
                         BrutLiftingTorque215Bar = c.BrutLiftingTorque215Bar,
                         BrutLiftingTorque190Bar = c.BrutLiftingTorque190Bar,

@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Price { get; set; }
         public string MaxReach { get; set; }
         public string BrutLiftingTorque215Bar { get; set; }
         public string BrutLiftingTorque190Bar { get; set; }
