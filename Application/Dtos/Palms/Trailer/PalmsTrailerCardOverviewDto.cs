@@ -1,6 +1,6 @@
-﻿namespace CalcAppAPI.Responses
+﻿namespace CalcAppAPI.Application.Dtos.Palms.Trailer
 {
-    public class PalmsTrailerOverview
+    public class PalmsTrailerCardOverviewDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

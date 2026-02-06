@@ -52,24 +52,11 @@ builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 
+
 var app = builder.Build();
 
 app.UseSerilogRequestLogging();
-
-app.UseExceptionHandler(errorApp =>
-{
-    errorApp.Run(async context =>
-    {
-        var feature = context.Features.Get<IExceptionHandlerFeature>();
-        if (feature?.Error != null)
-        {
-            Log.Error(feature.Error, "Unhandled exception");
-        }
-
-        context.Response.StatusCode = 500;
-        await context.Response.WriteAsJsonAsync(new { message = "Internal Server Error" });
-    });
-});
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {

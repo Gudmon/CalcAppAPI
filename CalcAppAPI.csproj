@@ -40,4 +40,8 @@
     <Folder Include="Models\Machine\Configurations\Krpan\Cranes\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Domain\Entities\Errors\ErrorType.cs" />
+  </ItemGroup>
+
 </Project>

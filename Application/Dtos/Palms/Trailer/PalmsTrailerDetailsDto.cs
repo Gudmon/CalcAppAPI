@@ -2,7 +2,7 @@
 
 namespace CalcAppAPI.Application.Dtos.Palms.Trailer
 {
-    public class TrailerDetailsDto
+    public class PalmsTrailerDetailsDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -20,8 +20,6 @@ namespace CalcAppAPI.Application.Dtos.Palms.Trailer
         public string StandardWheelSize { get; set; }
         public string MaxCraneSize { get; set; }
         public string DrawbarControlCylinders { get; set; }
-
-        public IEnumerable<CraneNestedDto> Cranes { get; set; }
-        public IEnumerable<TrailerOptionDto> Options { get; set; }
+        public IEnumerable<PalmsCraneCardOverviewDto> Cranes { get; set; }
     }
 }
