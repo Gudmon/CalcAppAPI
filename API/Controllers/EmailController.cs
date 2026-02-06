@@ -57,26 +57,5 @@ namespace CalcAppAPI.API.Controllers
                 );
             }
         }
-
-        [HttpPost("file")]
-        [Consumes("multipart/form-data")]
-        public async Task<ActionResult> UploadDocument(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-            {
-                return BadRequest(new { message = "The file field is required." });
-            }
-
-            try
-            {
-                await _emailSender.SendEmailAsync(file);
-                return Ok(new { message = "Email sent successfully" });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error during sending email");
-                return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while sending the email.");
-            }
-        }
     }
 }
