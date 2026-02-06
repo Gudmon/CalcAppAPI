@@ -6,7 +6,6 @@ using CalcAppAPI.Application.Services.Palms.Email;
 using CalcAppAPI.Application.Services.Pdf;
 using CalcAppAPI.Application.Services.Pdf.Generators;
 using CalcAppAPI.Application.Services.Pdf.Layout;
-using CalcAppAPI.Application.Services.Pdf.Mapping;
 using CalcAppAPI.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using QuestPDF.Infrastructure;
@@ -43,7 +42,6 @@ builder.Services.AddCors(opt =>
 
 await builder.Services.AddInfrastructureAsync(builder.Configuration);
 
-builder.Services.AddScoped<IPropertyDisplayNameResolver, PropertyDisplayNameResolver>();
 builder.Services.AddScoped<IBlobStorageService, BlobStorageService>();
 
 builder.Services.AddScoped<IDealerPdfLayout, DealerPdfLayout>();

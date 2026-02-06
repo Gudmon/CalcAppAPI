@@ -1,24 +1,18 @@
 ﻿using CalcAppAPI.Models.Pdf;
+using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 namespace CalcAppAPI.Application.Services.Pdf.Util
 {
     public static class PdfDataFlattener
     {
-        public static IEnumerable<(string Property, PdfItem Item)> Flatten(PdfData data)
+        public static string GetDisplayName(this OptionGroup group)
         {
-            foreach (var property in typeof(PdfData).GetProperties())
-            {
-                var value = property.GetValue(data);
+            var field = group.GetType().GetField(group.ToString());
+            var attribute = field?
+                .GetCustomAttribute<DisplayAttribute>();
 
-                if (value is PdfItem item)
-                    yield return (property.Name, item);
-
-                if (value is IEnumerable<PdfItem> list)
-                {
-                    foreach (var i in list)
-                        yield return (property.Name, i);
-                }
-            }
+            return attribute?.Name ?? group.ToString();
         }
     }
 }

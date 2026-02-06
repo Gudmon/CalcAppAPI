@@ -1,4 +1,4 @@
-﻿using CalcAppAPI.Application.Services.Pdf.Mapping;
+﻿using CalcAppAPI.Application.Services.Pdf.Util;
 using CalcAppAPI.Models.Pdf;
 using CalcAppAPI.Services;
 using QuestPDF.Fluent;
@@ -9,24 +9,14 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
 {
     public class UserPdfLayout : IUserPdfLayout
     {
-        private readonly IPropertyDisplayNameResolver _resolver;
-
-        public UserPdfLayout(IPropertyDisplayNameResolver resolver)
-        {
-            _resolver = resolver;
-        }
-
         public void ComposeHeader(IContainer container, PdfData model, string name)
         {
-            container.Background("#a32116").PaddingLeft(20).Row(row =>
-            {
-                row.RelativeItem().Padding(2).Column(col =>
-                {
-                    col.Item()
-                        .Hyperlink("https://www.palmsmagyarorszag.hu")
-                        .Text("PALMS").ApplyCommonTextStyle();
-                });
-            });
+            container
+               .Background("#a32116")
+               .PaddingLeft(20)
+               .Text("PALMS")
+               .FontColor(Colors.White)
+               .Bold();
         }
 
         public void ComposeContent(IContainer container, PdfData model, string name)
@@ -38,7 +28,7 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
                     row.Spacing(20);
                     row.RelativeItem(3).PaddingBottom(10).Text(name).FontFamily("Cambria").FontSize(20).Bold();
                     row.RelativeItem(2).PaddingBottom(10).Text(model?.TrailerName);
-                    row.RelativeItem(2).PaddingBottom(10).Text(model?.Crane?.Name);
+                    row.RelativeItem(2).PaddingBottom(10).Text(model?.CraneName);
                     row.RelativeItem(2).PaddingBottom(10).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
                 });
 
@@ -57,16 +47,18 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
                         header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
                     });
 
-                    foreach (var property in typeof(PdfData).GetProperties())
+                    foreach (var single in model.SingleOptions)
                     {
-                        var value = property.GetValue(model);
+                        AddRow(table, single.Group, single.Option, model);
 
-                        if (value is PdfItem item)
-                            AddRow(table, property.Name, item, model);
+                    }
 
-                        if (value is IEnumerable<PdfItem> list)
-                            foreach (var i in list)
-                                AddRow(table, property.Name, i, model);
+                    foreach (var multi in model.MultipleOptions)
+                    {
+                        foreach (var item in multi.Options)
+                        {
+                            AddRow(table, multi.Group, item, model);
+                        }
                     }
                 });
 
@@ -102,29 +94,46 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
             });
         }
 
-        private void AddRow(TableDescriptor table, string propertyName, PdfItem item, PdfData pdf)
+        private void AddRow(TableDescriptor table, OptionGroup group, PdfItem item, PdfData pdf)
         {
             if (item == null)
                 return;
 
-            var display = _resolver.Resolve(propertyName);
+            var display = group.GetDisplayName();
 
-            table.Cell().PaddingBottom(15).Text(display).FontFamily("Cambria");
+            table.Cell().PaddingBottom(15)
+                .Text(display)
+                .FontFamily("Cambria");
 
-            if (display == "Daru")
+            if (group == OptionGroup.Crane)
             {
-                table.Cell().PaddingBottom(15).Text($"{item?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text($"{item?.Price} €").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15)
+                    .Text($"{item?.Name}")
+                    .FontFamily("Cambria");
+
+                table.Cell().PaddingBottom(15)
+                    .Text($"{item?.Price} €")
+                    .FontFamily("Cambria");
             }
-            else if (display == "Rakonca")
+            else if (group == OptionGroup.Stanchion)
             {
-                table.Cell().PaddingBottom(15).Text($"{pdf.TrailerName} {item?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text($"{item?.Price} €").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15)
+                    .Text($"{pdf.TrailerName} {item?.Name}")
+                    .FontFamily("Cambria");
+
+                table.Cell().PaddingBottom(15)
+                    .Text($"{item?.Price} €")
+                    .FontFamily("Cambria");
             }
             else
             {
-                table.Cell().PaddingBottom(15).Text($"{item?.Name}").FontFamily("Cambria");
-                table.Cell().PaddingBottom(15).Text("").FontFamily("Cambria");
+                table.Cell().PaddingBottom(15)
+                    .Text($"{item?.Name}")
+                    .FontFamily("Cambria");
+
+                table.Cell().PaddingBottom(15)
+                    .Text("")
+                    .FontFamily("Cambria");
             }
         }
     }

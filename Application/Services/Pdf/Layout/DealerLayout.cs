@@ -1,5 +1,5 @@
 ﻿using CalcAppAPI.Application.Services.Pdf.Layout;
-using CalcAppAPI.Application.Services.Pdf.Mapping;
+using CalcAppAPI.Application.Services.Pdf.Util;
 using CalcAppAPI.Models.Pdf;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
@@ -7,13 +7,6 @@ using QuestPDF.Infrastructure;
 
 public class DealerPdfLayout : IDealerPdfLayout
 {
-    private readonly IPropertyDisplayNameResolver _resolver;
-
-    public DealerPdfLayout(IPropertyDisplayNameResolver resolver)
-    {
-        _resolver = resolver;
-    }
-
     public void ComposeHeader(IContainer container, PdfData model, string name)
     {
         container
@@ -32,7 +25,7 @@ public class DealerPdfLayout : IDealerPdfLayout
             {
                 row.RelativeItem(3).Text(name).FontSize(20).Bold();
                 row.RelativeItem(2).Text(model?.TrailerName);
-                row.RelativeItem(2).Text(model?.Crane?.Name);
+                row.RelativeItem(2).Text(model?.CraneName);
                 row.RelativeItem(2).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
             });
 
@@ -54,25 +47,30 @@ public class DealerPdfLayout : IDealerPdfLayout
                     header.Cell().BorderBottom(1).Text("Ár").Bold();
                 });
 
-                foreach (var property in typeof(PdfData).GetProperties())
+                foreach (var single in model.SingleOptions)
                 {
-                    var value = property.GetValue(model);
+                    AddRow(table, single.Group, single.Option, model);
 
-                    if (value is PdfItem item)
-                        AddRow(table, property.Name, item, model);
+                }
 
-                    if (value is IEnumerable<PdfItem> list)
-                        foreach (var i in list)
-                            AddRow(table, property.Name, i, model);
+                foreach (var multi in model.MultipleOptions)
+                {
+                    foreach (var item in multi.Options)
+                    {
+                        AddRow(table, multi.Group, item, model);
+                    }
                 }
             });
 
-            col.Item().LineHorizontal(1);
+            col.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Black);
 
             col.Item().Row(row =>
             {
-                row.RelativeItem(7).Text("Összesen:").Bold();
-                row.RelativeItem(1).Text($"{model.TotalPrice} €").Bold();
+                row.Spacing(20);
+                row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
+                row.RelativeItem(4).PaddingBottom(10).Text("");
+                row.RelativeItem(4).PaddingBottom(10).Text("");
+                row.RelativeItem(2).PaddingBottom(10).Text(model.TotalPrice + " €").FontFamily("Cambria").Bold().FontSize(14);
             });
         });
     }
@@ -91,20 +89,42 @@ public class DealerPdfLayout : IDealerPdfLayout
             });
     }
 
-    private void AddRow(TableDescriptor table, string propertyName, PdfItem item, PdfData pdf)
-    {
-        var display = _resolver.Resolve(propertyName);
+    private void AddRow(TableDescriptor table, OptionGroup group, PdfItem item, PdfData pdf)
+{
+    if (item == null)
+        return;
 
-        table.Cell().PaddingBottom(10).Text(display);
+    var display = group.GetDisplayName();
 
-        if (display == "Rakonca")
-            table.Cell().PaddingBottom(10).Text($"{pdf.TrailerName} {item.Name}");
-        else
-            table.Cell().PaddingBottom(10).Text(item.Name);
+    // Konfiguráció
+    table.Cell().PaddingBottom(10)
+        .AlignTop()
+        .Text(display)
+        .FontFamily("Cambria");
 
-        table.Cell().PaddingBottom(10).Text(item.Code);
-        table.Cell().PaddingBottom(10).Text($"{item.Price} €");
-    }
+    // Megnevezés
+    table.Cell().PaddingBottom(10)
+        .AlignTop()
+        .Text(group == OptionGroup.Stanchion
+            ? $"{pdf.TrailerName} {item.Name}"
+            : item.Name)
+        .FontFamily("Cambria");
+
+    // Kód
+    table.Cell().PaddingBottom(10)
+        .AlignTop()
+        .Text(item.Code ?? "")
+        .FontFamily("Cambria");
+
+    // Ár
+    table.Cell().PaddingBottom(10)
+        .AlignTop()
+        .Text(group == OptionGroup.Stanchion || group == OptionGroup.Crane
+            ? $"{item.Price} €"
+            : "")
+        .FontFamily("Cambria");
+}
+
 }
 
 
