@@ -35,7 +35,7 @@ namespace CalcAppAPI.Data
         public DbSet<ChainsawHolder> ChainsawHolder { get; set; }
         public DbSet<UnderrunProtection> UnderrunProtection { get; set; }
         public DbSet<SupportLeg> SupportLeg { get; set; }
-        public DbSet<TrailerLights> TrailerLight { get; set; }
+        public DbSet<TrailerLight> TrailerLight { get; set; }
         public DbSet<Tyre> Tyre { get; set; }
         public DbSet<Crane> Crane { get; set; }
         public DbSet<FrameType> FrameType { get; set; }

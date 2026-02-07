@@ -7,6 +7,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Cranes
     public class Shipping : MachineOption
     {
         public IEnumerable<Crane> Cranes { get; set; } = Enumerable.Empty<Crane>();
-        public IEnumerable<Trailer> Trailers { get; set; } = Enumerable.Empty<Trailer>();
+        public IEnumerable<Trailer> Trailer { get; set; } = Enumerable.Empty<Trailer>();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using CalcAppAPI.Domain.Entities.Errors;
 using CalcAppAPI.Domain.Entities.Exceptions;
+using System.Data.Common;
 
 namespace CalcAppAPI.Infrastructure
 {
@@ -36,17 +37,28 @@ namespace CalcAppAPI.Infrastructure
                     type = ex.Type.ToString()
                 });
             }
-            catch (Exception ex)
+            catch (DbException ex)
             {
-                _logger.LogError(ex, "Unhandled error");
+                _logger.LogError(ex, "Database error");
 
-                context.Response.StatusCode = 500;
+                context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
 
                 await context.Response.WriteAsJsonAsync(new
                 {
-                    code = "UNKNOWN_ERROR",
-                    message = "Unexpected server error",
-                    type = "Unknown"
+                    code = "DATABASE_UNAVAILABLE",
+                    message = "Az adatbázis átmenetileg nem elérhető."
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Unhandled exception");
+
+                context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    code = "UNEXPECTED_ERROR",
+                    message = "Váratlan hiba."
                 });
             }
         }
@@ -57,8 +69,8 @@ namespace CalcAppAPI.Infrastructure
                 ErrorType.NotFound => 404,
                 ErrorType.Validation => 400,
                 ErrorType.Business => 400,
-                ErrorType.Infrastructure => 503,
                 ErrorType.Unauthorized => 401,
+                ErrorType.Infrastructure => 503,
                 _ => 500
             };
     }

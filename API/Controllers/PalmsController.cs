@@ -1,10 +1,8 @@
 ﻿using CalcAppAPI.Application.Dtos.Palms.Crane;
 using CalcAppAPI.Application.Dtos.Palms.Trailer;
 using CalcAppAPI.Application.Interfaces;
-using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.API.Controllers
 {
@@ -30,6 +28,13 @@ namespace CalcAppAPI.API.Controllers
         public async Task<ActionResult<PalmsTrailerDetailsDto>> GetTrailer(int id)
         {
             var result = await _queryHandler.GetTrailerAsync(id);
+            return Ok(result);
+        }
+
+        [HttpGet("trailers/{id}/configs")]
+        public async Task<ActionResult<PalmsTrailerConfigurationsDto>> GetConfigs(int id)
+        {
+            var result = await _queryHandler.GetTrailerConfigurationsAsync(id);
             return Ok(result);
         }
 

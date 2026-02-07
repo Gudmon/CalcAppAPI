@@ -9,5 +9,6 @@ namespace CalcAppAPI.Application.Interfaces
         Task<PalmsTrailerDetailsDto> GetTrailerAsync(int id);
         Task<IEnumerable<PalmsCraneCardOverviewDto>> GetCranesAsync();
         Task<PalmsCraneDetailsDto> GetCraneAsync(int id);
+        Task<PalmsTrailerConfigurationsDto> GetTrailerConfigurationsAsync(int trailerId);
     }
 }

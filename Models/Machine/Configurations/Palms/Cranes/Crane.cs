@@ -69,5 +69,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
         public int? LinkageId { get; set; }
         public Shipping? Shipping { get; set; }
         public int? ShippingId { get; set; }
+        public string[]? ImageUrls { get; set; }
     }
 }

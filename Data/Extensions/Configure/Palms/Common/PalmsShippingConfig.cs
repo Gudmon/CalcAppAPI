@@ -13,7 +13,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Common
                   Id = 1,
                   Name = "Pótkocsi szállítása Észtországból Magyarországra",
                   Code = "",
-                  Price = "750"
+                  Price = "750",
               },
               new Shipping
               {

@@ -1,8 +1,7 @@
-﻿using CalcAppAPI.Data;
-using CalcAppAPI.Models;
+﻿using CalcAppAPI.Application.Interfaces;
+using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
-using CalcAppAPI.Responses;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,11 +13,13 @@ namespace CalcAppAPI.API.Controllers
     {
         private readonly ILogger<PalmsTrailerConfigController> _logger;
         private readonly DataContext _dbContext;
+        private readonly IPalmsQueryHandler _queryHandler;
 
-        public PalmsTrailerConfigController(ILogger<PalmsTrailerConfigController> logger, DataContext dbContext)
+        public PalmsTrailerConfigController(ILogger<PalmsTrailerConfigController> logger, DataContext dbContext, IPalmsQueryHandler queryHandler)
         {
             _logger = logger;
             _dbContext = dbContext;
+            _queryHandler = queryHandler;
         }
 
         [HttpGet("trailers/{id}/stanchions")]
@@ -185,7 +186,7 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpGet("trailers/{id}/lights")]
-        public async Task<ActionResult<IEnumerable<TrailerLights>>> GetLights(int id)
+        public async Task<ActionResult<IEnumerable<TrailerLight>>> GetLights(int id)
         {
             var lights = await _dbContext.TrailerLight
                 .Where(s => s.Trailer.Any(t => t.Id == id))
@@ -235,7 +236,7 @@ namespace CalcAppAPI.API.Controllers
         public async Task<ActionResult<Shipping>> GetShipping(int id)
         {
             var shipping = await _dbContext.Shipping
-                .FirstOrDefaultAsync(b => b.Trailers.Any(t => t.Id == id));
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
 
             return Ok(shipping);
         }

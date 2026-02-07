@@ -1,5 +1,4 @@
-using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
+using CalcAppAPI.Application.Dtos.Palms;
 using CalcAppAPI.Application.Interfaces;
 using CalcAppAPI.Application.Queries;
 using CalcAppAPI.Application.Services.Palms.Email;
@@ -7,10 +6,8 @@ using CalcAppAPI.Application.Services.Pdf;
 using CalcAppAPI.Application.Services.Pdf.Generators;
 using CalcAppAPI.Application.Services.Pdf.Layout;
 using CalcAppAPI.Infrastructure;
-using Microsoft.AspNetCore.Diagnostics;
 using QuestPDF.Infrastructure;
 using Serilog;
-using System;
 using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
@@ -51,7 +48,7 @@ builder.Services.AddScoped<IDealerPdfGenerator, DealerPdfGenerator>();
 builder.Services.AddScoped<IUserPdfGenerator, UserPdfGenerator>();
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
-
+builder.Services.AddScoped<MachineConfigurationLoader>();
 
 var app = builder.Build();
 

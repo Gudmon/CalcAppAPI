@@ -7,6 +7,5 @@
         Business,
         Infrastructure,
         Unauthorized,
-        Unknown
     }
 }

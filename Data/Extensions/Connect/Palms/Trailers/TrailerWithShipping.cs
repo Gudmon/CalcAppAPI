@@ -8,7 +8,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
         public static void ConnectTrailersWithShipping(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Shipping>()
-                .HasMany(o => o.Trailers)
+                .HasMany(o => o.Trailer)
                 .WithOne(o => o.Shipping)
                 .HasForeignKey(o => o.ShippingId)
                 .IsRequired(false);

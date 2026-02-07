@@ -32,7 +32,7 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
         public TrailerOilCooler? TrailerOilCooler { get; set; }
         public int? TrailerOilCoolerId { get; set; }
         public ICollection<SupportLeg> SupportLeg { get; set; } = new List<SupportLeg>();
-        public ICollection<TrailerLights> Light { get; set; } = new List<TrailerLights>();
+        public ICollection<TrailerLight> Light { get; set; } = new List<TrailerLight>();
         public ICollection<Tyre> Tyre { get; set; } = new List<Tyre>();
         public BolsterLock? BolsterLock { get; set; }
         public int? BolsterLockId { get; set; }
@@ -68,5 +68,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
         public ICollection<SupplyFormat> SupplyFormat { get; set; } = new List<SupplyFormat>();
         public Toolbox? Toolbox { get; set; }
         public int? ToolboxId { get; set; }
+        public string[]? ImageUrls { get; set; }
     }
 }

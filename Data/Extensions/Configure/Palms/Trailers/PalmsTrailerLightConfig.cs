@@ -7,36 +7,36 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
     {
         public static void ConfigureMultiplePalmsTrailerLights(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TrailerLights>().HasData(
-               new TrailerLights
+            modelBuilder.Entity<TrailerLight>().HasData(
+               new TrailerLight
                {
                    Id = 1,
                    Name = "Összecsukható hátsó lámpák",
                    Code = "L1",
                    Price = "420",
                },
-               new TrailerLights
+               new TrailerLight
                {
                    Id = 2,
                    Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
                    Code = "L2",
                    Price = "465",
                },
-               new TrailerLights
+               new TrailerLight
                {
                    Id = 3,
                    Name = "Fix hátsó LED lámpák",
                    Code = "L4",
                    Price = "420",
                },
-               new TrailerLights
+               new TrailerLight
                {
                    Id = 4,
                    Name = "Összecsukható hátsó lámpák",
                    Code = "L1",
                    Price = "340",
                },
-               new TrailerLights
+               new TrailerLight
                {
                    Id = 5,
                    Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
