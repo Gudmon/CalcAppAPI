@@ -1,4 +1,5 @@
-﻿using CalcAppAPI.Data.Extensions.Configure.Palms.Cranes;
+﻿using CalcAppAPI.Data.Extensions.Configure.Krpan;
+using CalcAppAPI.Data.Extensions.Configure.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Configure.Palms.Trailers;
 using CalcAppAPI.Data.Extensions.Connect.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Connect.Palms.Trailers;
@@ -14,7 +15,7 @@ namespace CalcAppAPI.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base (options) { }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         // PALMS
         public DbSet<Trailer> Trailer { get; set; }
@@ -109,6 +110,8 @@ namespace CalcAppAPI.Data
             modelBuilder.ConfigureAllPalmsCraneOptions();
             modelBuilder.ConnectAllPalmsTrailerOptions();
             modelBuilder.ConnectAllPalmsCraneOptions();
+
+            modelBuilder.ConfigureAllKrpanMachineOptions();
 
             base.OnModelCreating(modelBuilder);
         }
