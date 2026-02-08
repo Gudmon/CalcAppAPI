@@ -357,7 +357,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    ImageUrls = ["PALMS-12U/12UAWD-1", "PALMS-12U/12UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                    ImageUrls = ["PALMS-12U-UAWD-1", "PALMS-12U-UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
                         "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
                         "Available-With", "Centralized-Greasing",
                     ],
@@ -399,7 +399,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    ImageUrls = ["PALMS-12U/UAWD-1", "PALMS-12U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                    ImageUrls = ["PALMS-12U-UAWD-1", "PALMS-12U-UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
                         "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
                         "Available-With", "Centralized-Greasing"],
                     VideoUrls = ["akmzrXf3EnU"]
@@ -440,7 +440,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    ImageUrls = ["PALMS-15U/UAWD-1", "PALMS-15U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                    ImageUrls = ["PALMS-15U-UAWD-1", "PALMS-15U-UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
                         "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
                         "Available-With", "Centralized-Greasing"],
                     VideoUrls = ["cH3t306elVs"]
@@ -481,7 +481,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
-                    ImageUrls = ["PALMS-15U/UAWD-1", "PALMS-15U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                    ImageUrls = ["PALMS-15U-UAWD-1", "PALMS-15U-UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
                         "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
                         "Available-With", "Centralized-Greasing"],
                     VideoUrls = ["cH3t306elVs"]
