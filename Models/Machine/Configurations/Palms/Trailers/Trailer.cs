@@ -69,5 +69,6 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
         public Toolbox? Toolbox { get; set; }
         public int? ToolboxId { get; set; }
         public string[]? ImageUrls { get; set; }
+        public string[]? VideoUrls { get; set; }
     }
 }

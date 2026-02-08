@@ -30,6 +30,8 @@ namespace CalcAppAPI.Application.Dtos.Palms.Crane
         public string CraneWeight { get; set; } = string.Empty;
         public string PillarSlewingAngle { get; set; } = string.Empty;
         public string RecommendedOilFlow { get; set; } = string.Empty;
+        public string[]? ImageUrls { get; set; }
+        public string[]? VideoUrls { get; set; }
         public IEnumerable<PalmsTrailerCardOverviewDto> Trailers { get; set; }
     }
 }

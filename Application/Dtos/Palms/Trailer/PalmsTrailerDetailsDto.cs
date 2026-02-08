@@ -20,6 +20,8 @@ namespace CalcAppAPI.Application.Dtos.Palms.Trailer
         public string StandardWheelSize { get; set; }
         public string MaxCraneSize { get; set; }
         public string DrawbarControlCylinders { get; set; }
+        public string[]? ImageUrls { get; set; }
+        public string[]? VideoUrls { get; set; }
         public IEnumerable<PalmsCraneCardOverviewDto> Cranes { get; set; }
     }
 }

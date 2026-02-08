@@ -87,7 +87,6 @@ namespace CalcAppAPI.Application.Queries
                 StandardWheelSize = trailer.StandardWheelSize,
                 MaxCraneSize = trailer.MaxCraneSize,
                 DrawbarControlCylinders = trailer.DrawbarControlCylinders,
-
                 Cranes = trailer.Crane.Select(c => new PalmsCraneCardOverviewDto
                 {
                     Id = c.Id,
@@ -100,6 +99,8 @@ namespace CalcAppAPI.Application.Queries
                     SlewingCylinder = c.SlewingCylinder,
                     SlewingTorque = c.SlewingTorque
                 }),
+                ImageUrls = trailer.ImageUrls,
+                VideoUrls = trailer.VideoUrls,
             };
         }
 
@@ -186,7 +187,8 @@ namespace CalcAppAPI.Application.Queries
                     DrawbarControlCylinders = c.DrawbarControlCylinders,
                     BeamType = c.BeamType
                 }),
-
+                ImageUrls = crane.ImageUrls,
+                VideoUrls = crane.VideoUrls,
             };
         }
 

@@ -50,6 +50,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-2.42-1", "PALMS-2.42-2"],
+                   VideoUrls = ["fEDDjo_K3E8"]
                },
 
                new Crane
@@ -94,6 +96,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-2.54-1, PALMS-2.54-2, PALMS-2.54-3", "PALMS-2.54-4", "PALMS-2.54-5"],
+                   VideoUrls = ["fEDDjo_K3E8", "OUXj3T4seD0"]
                },
 
 
@@ -139,6 +143,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-3.63-1, PALMS-3.63-2, PALMS-3.63-3"],
+                   VideoUrls = ["9VS2BuQwv"]
                },
 
                new Crane
@@ -183,6 +189,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-3.67-1", "PALMS-3.67-2", "PALMS-3.67-3", "PALMS-3.67-4", "PALMS-3.67-5", "PALMS-3.67-6"],
+                   VideoUrls = ["9VS2BuQwv"]
                },
 
                new Crane
@@ -218,7 +226,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    ValveBlockId = 1,
                    LightId = 1,
                    OperatorSeatId = 1,
-                   CraneOilCoolerId = 1,    
+                   CraneOilCoolerId = 1,
                    JoystickHolderId = 1,
                    TurningDeviceCounterPlateId = 1,
                    SupportLegCounterPlateId = 1,
@@ -227,6 +235,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-4.71-1", "PALMS-4.71-2", "PALMS-4.71-3", "PALMS-4.71-4", "PALMS-4.71-5"],
+                   VideoUrls = ["NYLCfmf-Nfc"]
                },
                new Crane
                {
@@ -236,10 +246,10 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Price = "12445",
                    Series = "5",
                    MaxReach = "7.5",
-                   LiftAtFullReach240Bar = "-", 
+                   LiftAtFullReach240Bar = "-",
                    LiftAtFullReach215Bar = "620",
                    LiftAtFullReach190Bar = "540",
-                   LiftAtFourMeters240Bar = "-", 
+                   LiftAtFourMeters240Bar = "-",
                    LiftAtFourMeters215Bar = "1350",
                    LiftAtFourMeters190Bar = "1150",
                    BrutLiftingTorque240Bar = "-",
@@ -270,6 +280,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-5.75-1", "PALMS-5.75-2", "PALMS-5.75-3"],
+                   VideoUrls = ["-f0tPn8V78g"]
                },
                new Crane
                {
@@ -313,6 +325,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-5.85-1", "PALMS-5.85-2", "PALMS-5.85-3", "PALMS-5.85-4", "PALMS-5.85-5"],
+                   VideoUrls = ["-f0tPn8V78g"]
                },
                new Crane
                {
@@ -356,6 +370,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = null,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-5.87Z-1", "PALMS-5.87Z-2", "PALMS-5.87Z-3", "PALMS-5.87Z-4", "PALMS-5.87Z-5", "PALMS-5.87Z-6"],
+                   VideoUrls = ["pLvH1NAPEzI"]
                },
                new Crane
                {
@@ -399,6 +415,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-7.78-1", "PALMS-7.78-2", "PALMS-7.78-3", "PALMS-7.78-4"],
+                   VideoUrls = ["z55HswaDwSA"]
                },
                new Crane
                {
@@ -442,6 +460,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-7.87-1", "PALMS-7.87-2", "PALMS-7.87-3", "PALMS-7.87-4", "PALMS-7.87-5", "PALMS-7.87-6"],
+                   VideoUrls = ["z55HswaDwSA"]
                },
                new Crane
                {
@@ -485,6 +505,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-7.94-1", "PALMS-7.94-2", "PALMS-7.94-3"],
+                   VideoUrls = ["z55HswaDwSA"]
                },
                new Crane
                {
@@ -528,6 +550,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-X100-1", "PALMS-X100-2", "PALMS-X100-3", "PALMS-X100-4", "PALMS-X100-5", "PALMS-X100-6", "PALMS-X100-7"],
+                   VideoUrls = ["x9GnpJnvNVU"]
                },
 
                new Crane
@@ -572,6 +596,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = null,
                    LinkageId = null,
                    ShippingId = 2,
+                   ImageUrls = ["PALMS-1.42-1", "PALMS-1.42-2", "PALMS-1.42-3", "PALMS-1.42-4"],
+                   VideoUrls = ["25Y2HRXtohQ", "2r7Po4NpYHw"]
                }
            );
         }

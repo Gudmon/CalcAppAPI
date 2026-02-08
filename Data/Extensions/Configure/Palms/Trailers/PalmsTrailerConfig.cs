@@ -43,6 +43,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-6S-1", "PALMS-6S-2", "PALMS-6S-3", "PALMS-6S-4"],
+                    VideoUrls = ["5-tqIrDOU0I", "OUXj3T4seD0"]
                 },
 
                 new Trailer
@@ -80,6 +82,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-8SX-1", "PALMS-8SX-2"],
+                    VideoUrls = ["VEvGOG-aFyM"]
                 },
 
                 new Trailer
@@ -117,6 +121,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-8D-1", "PALMS-8D-2", "PALMS-8D-3", "PALMS-8D-4", "PALMS-8D-5"],
+                    VideoUrls = ["cdz1OF0USqI", "PEdgbkWowyQ"]
                 },
 
                 new Trailer
@@ -154,6 +160,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-9SC-1", "PALMS-9SC-2", "Patented-Bolster-Lock", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Lightweight-Frame"],
+                    VideoUrls = ["4ZeFp4Yofak"]
                 },
 
                 new Trailer
@@ -191,6 +199,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-10D-1", "PALMS-10D-2", "PALMS-10D-3", "PALMS-10D-4", "PALMS-10D-5",
+                    "Patented-Bolster-Lock", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Durable-Double-Frame", "Protected"],
+                    VideoUrls = ["0u8VqxRevL4"]
                 },
 
                 new Trailer
@@ -228,6 +239,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-12D-1", "PALMS-12D-2", "Patented-Bolster-Lock", "Fast-Drawbar-Locking",
+                        "Extended-Product-Lifespan", "Durable-Double-Frame", "Protected"],
                 },
 
                 new Trailer
@@ -265,6 +278,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-14D-1", "PALMS-14D-2", "PALMS-14D-3", "PALMS-14D-4", "Patented-Bolster-Lock",
+                        "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Durable-Double-Frame", "Protected"]
                 },
 
                 new Trailer
@@ -302,6 +317,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-10UX-1", "PALMS-10UX-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                        "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
+                        "Available-With", "Centralized-Greasing"]
                 },
 
                 new Trailer
@@ -339,6 +357,11 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-12U/12UAWD-1", "PALMS-12U/12UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                        "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
+                        "Available-With", "Centralized-Greasing",
+                    ],
+                    VideoUrls = ["akmzrXf3EnU"]
                 },
 
                 new Trailer
@@ -376,6 +399,10 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-12U/UAWD-1", "PALMS-12U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                        "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
+                        "Available-With", "Centralized-Greasing"],
+                    VideoUrls = ["akmzrXf3EnU"]
                 },
 
                 new Trailer
@@ -413,6 +440,10 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-15U/UAWD-1", "PALMS-15U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                        "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
+                        "Available-With", "Centralized-Greasing"],
+                    VideoUrls = ["cH3t306elVs"]
                 },
 
                 new Trailer
@@ -450,6 +481,10 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-15U/UAWD-1", "PALMS-15U/UAWD-2", "Fast-Drawbar-Locking", "Extended-Product-Lifespan", "Easy-Access",
+                        "Reduced-Weight", "Easily-Replaceable", "Stronger-And-Stiffer", "Multiple-Bolster", "Uniform-Frame-Bottom",
+                        "Available-With", "Centralized-Greasing"],
+                    VideoUrls = ["cH3t306elVs"]
                 },
 
                 new Trailer
@@ -487,6 +522,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
+                    ImageUrls = ["PALMS-MWD3.2-1", "PALMS-MWD3.2-2", "PALMS-MWD"],
+                    VideoUrls = ["hxtfyL4ONy0"]
                 },
 
                 new Trailer
@@ -524,6 +561,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = 1,
+                    ImageUrls = ["PALMS-HMWD3.2-1", "PALMS-HMWD3.2-2", "PALMS-HMWD3.2-3", "PALMS-HMWD3.2-4", "PALMS-MWD"]
                 },
 
                 new Trailer
@@ -561,6 +599,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = null,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-2D-1", "PALMS-2D-2", "PALMS-2D-3", "PALMS-2D-4", "PALMS-2D-5", "PALMS-2D-6", "PALMS-2D-7", "PALMS-2D-8"],
+                    VideoUrls = ["n6LnRTycDZM", "2r7Po4NpYHw", "25Y2HRXtohQ"]
                 },
 
                 new Trailer
@@ -598,6 +638,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     ShippingId = 1,
                     MOTId = 1,
                     StanchionExtensionId = null,
+                    ImageUrls = ["PALMS-11UX-1", "PALMS-11UX-2", "PALMS-11UX-3", "PALMS-11UX-4",
+                        "PALMS-11UX-5", "PALMS-11UX-6", "PALMS-11UX-7", "PALMS-11UX-8"],
+                    VideoUrls = ["Wl0s4WdzNDM"]
                 }
             );
         }
