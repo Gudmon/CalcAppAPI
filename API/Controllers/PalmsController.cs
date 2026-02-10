@@ -18,37 +18,37 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpGet("trailers")]
-        public async Task<ActionResult<IEnumerable<PalmsTrailerCardOverviewDto>>> GetAllTrailers()
+        public async Task<ActionResult<IEnumerable<PalmsTrailerCardOverviewDto>>> GetAllTrailers(CancellationToken cancellationToken)
         {
-            var result = await _queryHandler.GetTrailersAsync();
+            var result = await _queryHandler.GetTrailersAsync(cancellationToken);
             return Ok(result);
         }
 
         [HttpGet("trailers/{id}")]
-        public async Task<ActionResult<PalmsTrailerDetailsDto>> GetTrailer(int id)
+        public async Task<ActionResult<PalmsTrailerDetailsDto>> GetTrailer(int id, CancellationToken cancellationToken)
         {
-            var result = await _queryHandler.GetTrailerAsync(id);
+            var result = await _queryHandler.GetTrailerAsync(id, cancellationToken);
             return Ok(result);
         }
 
         [HttpGet("trailers/{id}/configs")]
-        public async Task<ActionResult<PalmsTrailerConfigurationsDto>> GetConfigs(int id)
+        public async Task<ActionResult<PalmsTrailerConfigurationsDto>> GetConfigs(int id, CancellationToken cancellationToken)
         {
-            var result = await _queryHandler.GetTrailerConfigurationsAsync(id);
+            var result = await _queryHandler.GetTrailerConfigurationsAsync(id, cancellationToken);
             return Ok(result);
         }
 
         [HttpGet("cranes")]
-        public async Task<ActionResult<IEnumerable<PalmsCraneCardOverviewDto>>> GetAllCranes()
+        public async Task<ActionResult<IEnumerable<PalmsCraneCardOverviewDto>>> GetAllCranes(CancellationToken cancellationToken)
         {
-            var result = await _queryHandler.GetCranesAsync();
+            var result = await _queryHandler.GetCranesAsync(cancellationToken);
             return Ok(result);
         }
 
         [HttpGet("cranes/{id}")]
-        public async Task<ActionResult<Crane>> GetCrane(int id)
+        public async Task<ActionResult<Crane>> GetCrane(int id, CancellationToken cancellationToken)
         {
-            var result = await _queryHandler.GetCraneAsync(id);
+            var result = await _queryHandler.GetCraneAsync(id, cancellationToken);
             return Ok(result);
         }
     }

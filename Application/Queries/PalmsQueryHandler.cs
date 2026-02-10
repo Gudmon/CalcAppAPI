@@ -23,9 +23,10 @@ namespace CalcAppAPI.Application.Queries
             _configurationLoader = configurationLoader;
         }
 
-        public async Task<IEnumerable<PalmsTrailerCardOverviewDto>> GetTrailersAsync()
+        public async Task<IEnumerable<PalmsTrailerCardOverviewDto>> GetTrailersAsync(CancellationToken cancellationToken)
         {
-            var desiredOrder = new List<string> {
+            var desiredOrder = new List<string>
+            {
                 "PALMS 2D", "PALMS 6S", "PALMS 8SX", "PALMS 8D",
                 "PALMS 9SC", "PALMS 10D", "PALMS 12D",
                 "PALMS 14D", "PALMS 10UX", "PALMS 11UX", "PALMS 12U",
@@ -33,16 +34,12 @@ namespace CalcAppAPI.Application.Queries
                 "PALMS MWD 3.2", "PALMS HMWD 3.2"
             };
 
-            var allTrailers = await _context.Trailer
-                .AsNoTracking()
-                .ToListAsync();
+            var orderMap = desiredOrder
+            .Select((name, index) => new { name, index })
+            .ToDictionary(x => x.name, x => x.index);
 
-            var orderedTrailers = allTrailers
-                .OrderBy(t =>
-                {
-                    var index = desiredOrder.IndexOf(t.Name);
-                    return index == -1 ? int.MaxValue : index;
-                })
+            var trailers = await _context.Trailer
+                .AsNoTracking()
                 .Select(t => new PalmsTrailerCardOverviewDto
                 {
                     Id = t.Id,
@@ -54,17 +51,20 @@ namespace CalcAppAPI.Application.Queries
                     DrawbarControlCylinders = t.DrawbarControlCylinders,
                     BeamType = t.BeamType
                 })
-                .ToList();
+                .ToListAsync(cancellationToken);
 
-            return orderedTrailers;
+            return trailers
+                .OrderBy(t => orderMap.TryGetValue(t.Name, out var i) ? i : int.MaxValue)
+                .ToList();
         }
 
-        public async Task<PalmsTrailerDetailsDto> GetTrailerAsync(int id)
+
+        public async Task<PalmsTrailerDetailsDto> GetTrailerAsync(int id, CancellationToken cancellationToken)
         {
             var trailer = await _context.Trailer
                 .AsNoTracking()
                 .Include(t => t.Crane)
-                .FirstOrDefaultAsync(t => t.Id == id);
+                .FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
 
             if (trailer == null)
                 throw Errors.Trailer.NotFound(id);
@@ -104,7 +104,7 @@ namespace CalcAppAPI.Application.Queries
             };
         }
 
-        public async Task<IEnumerable<PalmsCraneCardOverviewDto>> GetCranesAsync()
+        public async Task<IEnumerable<PalmsCraneCardOverviewDto>> GetCranesAsync(CancellationToken cancellationToken)
         {
             var desiredOrder = new List<string> {
                 "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
@@ -112,16 +112,12 @@ namespace CalcAppAPI.Application.Queries
                 "PALMS 7.78", "PALMS 7.87", "PALMS 7.94", "PALMS X100"
             };
 
-            var allCranes = await _context.Crane
-                .AsNoTracking()
-                .ToListAsync();
+            var orderMap = desiredOrder
+            .Select((name, index) => new { name, index })
+            .ToDictionary(x => x.name, x => x.index);
 
-            var orderedCranes = allCranes
-                .OrderBy(t =>
-                {
-                    var index = desiredOrder.IndexOf(t.Name);
-                    return index == -1 ? int.MaxValue : index;
-                })
+            var cranes = await _context.Crane
+                .AsNoTracking()
                 .Select(t => new PalmsCraneCardOverviewDto
                 {
                     Id = t.Id,
@@ -133,17 +129,19 @@ namespace CalcAppAPI.Application.Queries
                     SlewingCylinder = t.SlewingCylinder,
                     SlewingTorque = t.SlewingTorque
                 })
-                .ToList();
+                .ToListAsync(cancellationToken);
 
-            return orderedCranes;
+            return cranes
+                .OrderBy(t => orderMap.TryGetValue(t.Name, out var i) ? i : int.MaxValue)
+                .ToList();
         }
 
-        public async Task<PalmsCraneDetailsDto> GetCraneAsync(int id)
+        public async Task<PalmsCraneDetailsDto> GetCraneAsync(int id, CancellationToken cancellationToken)
         {
             var crane = await _context.Crane
                 .AsNoTracking()
                 .Include(t => t.Trailer)
-                .FirstOrDefaultAsync(t => t.Id == id);
+                .FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
 
             if (crane == null)
                 throw Errors.Crane.NotFound(id);
@@ -192,14 +190,14 @@ namespace CalcAppAPI.Application.Queries
             };
         }
 
-        public async Task<PalmsTrailerConfigurationsDto> GetTrailerConfigurationsAsync(int trailerId)
+        public async Task<PalmsTrailerConfigurationsDto> GetTrailerConfigurationsAsync(int trailerId, CancellationToken cancellationToken)
         {
             var dto = await _context.Trailer
                 .AsNoTracking()
                 .AsSplitQuery()
                 .Where(t => t.Id == trailerId)
                 .Select(ToConfigurationsDto)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(cancellationToken);
 
             if (dto == null)
                 throw Errors.Trailer.NotFound(trailerId);

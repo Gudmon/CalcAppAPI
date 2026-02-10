@@ -5,10 +5,10 @@ namespace CalcAppAPI.Application.Interfaces
 {
     public interface IPalmsQueryHandler
     {
-        Task<IEnumerable<PalmsTrailerCardOverviewDto>> GetTrailersAsync();
-        Task<PalmsTrailerDetailsDto> GetTrailerAsync(int id);
-        Task<IEnumerable<PalmsCraneCardOverviewDto>> GetCranesAsync();
-        Task<PalmsCraneDetailsDto> GetCraneAsync(int id);
-        Task<PalmsTrailerConfigurationsDto> GetTrailerConfigurationsAsync(int trailerId);
+        Task<IEnumerable<PalmsTrailerCardOverviewDto>> GetTrailersAsync(CancellationToken cancellationToken);
+        Task<PalmsTrailerDetailsDto> GetTrailerAsync(int id, CancellationToken cancellationToken);
+        Task<IEnumerable<PalmsCraneCardOverviewDto>> GetCranesAsync(CancellationToken cancellationToken);
+        Task<PalmsCraneDetailsDto> GetCraneAsync(int id, CancellationToken cancellationToken);
+        Task<PalmsTrailerConfigurationsDto> GetTrailerConfigurationsAsync(int trailerId, CancellationToken cancellationToken);
     }
 }

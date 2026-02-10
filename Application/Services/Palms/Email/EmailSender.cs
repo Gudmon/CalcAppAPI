@@ -1,12 +1,10 @@
 ﻿using CalcAppAPI.Application.Services.Pdf.Generators;
 using CalcAppAPI.Domain.Entities.Email;
 using CalcAppAPI.Models.Email;
-using CalcAppAPI.Models.Pdf;
 using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using System.Text;
 
 namespace CalcAppAPI.Application.Services.Palms.Email
 {
