@@ -12,6 +12,7 @@ public class DealerPdfLayout : IDealerPdfLayout
         container
             .Background("#a32116")
             .PaddingLeft(20)
+            .DefaultTextStyle(x => x.FontFamily("Cambria"))
             .Text("PALMS")
             .FontColor(Colors.White)
             .Bold();
@@ -19,14 +20,17 @@ public class DealerPdfLayout : IDealerPdfLayout
 
     public void ComposeContent(IContainer container, PdfData model, string name)
     {
-        container.Column(col =>
+        container.DefaultTextStyle(x => x.FontFamily("Cambria")).Column(col =>
         {
             col.Item().Row(row =>
             {
                 row.RelativeItem(3).Text(name).FontSize(20).Bold();
-                row.RelativeItem(2).Text(model?.TrailerName);
-                row.RelativeItem(2).Text(model?.CraneName);
-                row.RelativeItem(2).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
+                row.RelativeItem(2).Text(model?.TrailerName).FontSize(15).Bold();
+                row.RelativeItem(2).Text(model?.CraneName).FontSize(15).Bold();
+                var hungaryTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Europe Standard Time");
+                var hungaryTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, hungaryTimeZone);
+                row.RelativeItem(2)
+                   .Text(hungaryTime.ToString("yyyy-MM-dd HH:mm"));
             });
 
             col.Item().Table(table =>
@@ -70,7 +74,7 @@ public class DealerPdfLayout : IDealerPdfLayout
                 row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
                 row.RelativeItem(4).PaddingBottom(10).Text("");
                 row.RelativeItem(4).PaddingBottom(10).Text("");
-                row.RelativeItem(2).PaddingBottom(10).Text(model.TotalPrice + " €").FontFamily("Cambria").Bold().FontSize(14);
+                row.RelativeItem(2).PaddingBottom(10).Text(model.TotalPrice + " €").Bold().FontSize(14);
             });
         });
     }
@@ -80,6 +84,7 @@ public class DealerPdfLayout : IDealerPdfLayout
         container
             .Background("#8ac73c")
             .Padding(20)
+            .DefaultTextStyle(x => x.FontFamily("Cambria"))
             .AlignRight()
             .Text(text =>
             {
@@ -90,41 +95,66 @@ public class DealerPdfLayout : IDealerPdfLayout
     }
 
     private void AddRow(TableDescriptor table, OptionGroup group, PdfItem item, PdfData pdf)
-{
-    if (item == null)
-        return;
+    {
+        if (item == null)
+            return;
 
-    var display = group.GetDisplayName();
+        var bg = "#EEEEEE";
 
-    // Konfiguráció
-    table.Cell().PaddingBottom(10)
-        .AlignTop()
-        .Text(display)
-        .FontFamily("Cambria");
+        var display = group.GetDisplayName();
 
-    // Megnevezés
-    table.Cell().PaddingBottom(10)
-        .AlignTop()
-        .Text(group == OptionGroup.Stanchion
-            ? $"{pdf.TrailerName} {item.Name}"
-            : item.Name)
-        .FontFamily("Cambria");
+        if (group == OptionGroup.Stanchion)
+        {
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text(display).Bold();
 
-    // Kód
-    table.Cell().PaddingBottom(10)
-        .AlignTop()
-        .Text(item.Code ?? "")
-        .FontFamily("Cambria");
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{pdf.TrailerName} {item?.Name}").Bold();
 
-    // Ár
-    table.Cell().PaddingBottom(10)
-        .AlignTop()
-        .Text(group == OptionGroup.Stanchion || group == OptionGroup.Crane
-            ? $"{item.Price} €"
-            : "")
-        .FontFamily("Cambria");
-}
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{item?.Code}").Bold();
 
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{item?.Price} €").Bold();
+
+        }
+        else if (group == OptionGroup.Crane)
+        {
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text(display).Bold();
+
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{item?.Name}").Bold();
+
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{item?.Code}").Bold();
+
+            table.Cell().PaddingBottom(15)
+                .Background(bg)
+                .Text($"{item?.Price} €").Bold();
+        }
+        else
+        {
+            table.Cell().PaddingBottom(15)
+                .Text(display);
+
+            table.Cell().PaddingBottom(15)
+                .Text($"{item?.Name}");
+
+            table.Cell().PaddingBottom(15)
+                .Text($"{item?.Code}");
+
+            table.Cell().PaddingBottom(15)
+                .Text("");
+        }
+    }
 }
 
 

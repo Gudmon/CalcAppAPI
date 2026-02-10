@@ -14,6 +14,7 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
             container
                .Background("#a32116")
                .PaddingLeft(20)
+               .DefaultTextStyle(x => x.FontFamily("Cambria"))
                .Text("PALMS")
                .FontColor(Colors.White)
                .Bold();
@@ -21,15 +22,19 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
 
         public void ComposeContent(IContainer container, PdfData model, string name)
         {
-            container.Column(col =>
+            container.DefaultTextStyle(x => x.FontFamily("Cambria")).Column(col =>
+
             {
                 col.Item().Row(row =>
                 {
                     row.Spacing(20);
-                    row.RelativeItem(3).PaddingBottom(10).Text(name).FontFamily("Cambria").FontSize(20).Bold();
-                    row.RelativeItem(2).PaddingBottom(10).Text(model?.TrailerName);
-                    row.RelativeItem(2).PaddingBottom(10).Text(model?.CraneName);
-                    row.RelativeItem(2).PaddingBottom(10).Text(DateTime.UtcNow.AddHours(2).ToString("yyyy-MM-dd HH:mm"));
+                    row.RelativeItem(3).PaddingBottom(10).Text(name).FontSize(20).Bold();
+                    row.RelativeItem(2).PaddingBottom(10).Text(model?.TrailerName).FontSize(15).Bold();
+                    row.RelativeItem(2).PaddingBottom(10).Text(model?.CraneName).FontSize(15).Bold();
+                    var hungaryTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Central Europe Standard Time");
+                    var hungaryTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, hungaryTimeZone);
+                    row.RelativeItem(2)
+                       .Text(hungaryTime.ToString("yyyy-MM-dd HH:mm"));
                 });
 
                 col.Item().Table(table =>
@@ -42,9 +47,9 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
                     });
                     table.Header(header =>
                     {
-                        header.Cell().BorderBottom(1).Text("Konfiguráció").Bold().FontFamily("Cambria");
-                        header.Cell().BorderBottom(1).Text("Megnevezés").Bold().FontFamily("Cambria");
-                        header.Cell().BorderBottom(1).Text("Ár").Bold().FontFamily("Cambria");
+                        header.Cell().BorderBottom(1).Text("Konfiguráció").Bold();
+                        header.Cell().BorderBottom(1).Text("Megnevezés").Bold();
+                        header.Cell().BorderBottom(1).Text("Ár").Bold();
                     });
 
                     foreach (var single in model.SingleOptions)
@@ -70,14 +75,14 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
                     row.RelativeItem(3).PaddingBottom(10).Text("Összesen:").ExtraBold().FontSize(14);
                     row.RelativeItem(4).PaddingBottom(10).Text("");
                     row.RelativeItem(4).PaddingBottom(10).Text("");
-                    row.RelativeItem(2).PaddingBottom(10).Text(model.TotalPrice + " €").FontFamily("Cambria").Bold().FontSize(14);
+                    row.RelativeItem(2).PaddingBottom(10).Text(model.TotalPrice + " €").Bold().FontSize(14);
                 });
             });
         }
 
         public void ComposeFooter(IContainer container)
         {
-            container.Background("#8ac73c").Padding(20).Row(row =>
+            container.DefaultTextStyle(x => x.FontFamily("Cambria")).Background("#8ac73c").Padding(20).Row(row =>
             {
                 row.RelativeItem().Padding(0).Column(col =>
                 {
@@ -99,41 +104,49 @@ namespace CalcAppAPI.Application.Services.Pdf.Layout
             if (item == null)
                 return;
 
+            var bg = "#EEEEEE";
+
             var display = group.GetDisplayName();
 
-            table.Cell().PaddingBottom(15)
-                .Text(display)
-                .FontFamily("Cambria");
-
-            if (group == OptionGroup.Crane)
+            if (group == OptionGroup.Stanchion)
             {
                 table.Cell().PaddingBottom(15)
-                    .Text($"{item?.Name}")
-                    .FontFamily("Cambria");
+                    .Background(bg)
+                    .Text(display).Bold();
 
                 table.Cell().PaddingBottom(15)
-                    .Text($"{item?.Price} €")
-                    .FontFamily("Cambria");
+                    .Background(bg)
+                    .Text($"{pdf.TrailerName} {item?.Name}").Bold();
+
+                table.Cell().PaddingBottom(15)
+                    .Background(bg)
+                    .Text($"{item?.Price} €").Bold();
+
             }
-            else if (group == OptionGroup.Stanchion)
+            else if (group == OptionGroup.Crane)
             {
                 table.Cell().PaddingBottom(15)
-                    .Text($"{pdf.TrailerName} {item?.Name}")
-                    .FontFamily("Cambria");
+                    .Background(bg)
+                    .Text(display).Bold();
 
                 table.Cell().PaddingBottom(15)
-                    .Text($"{item?.Price} €")
-                    .FontFamily("Cambria");
+                    .Background(bg)
+                    .Text($"{item?.Name}").Bold();
+
+                table.Cell().PaddingBottom(15)
+                    .Background(bg)
+                    .Text($"{item?.Price} €").Bold();
             }
             else
             {
                 table.Cell().PaddingBottom(15)
-                    .Text($"{item?.Name}")
-                    .FontFamily("Cambria");
+                    .Text(display);
 
                 table.Cell().PaddingBottom(15)
-                    .Text("")
-                    .FontFamily("Cambria");
+                    .Text($"{item?.Name}");
+
+                table.Cell().PaddingBottom(15)
+                    .Text("");
             }
         }
     }
