@@ -291,7 +291,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     LoadingAreaCross = "2.4",
                     LoadingAreaLength = "3990",
                     FrameExtensionLength = "1,085",
-                    GrossWeight = "15000",
+                    GrossWeight = "13000",
                     CurbWeight = "2170",
                     TotalLength = "6215",
                     WidthWithStandardWheels = "2245",
