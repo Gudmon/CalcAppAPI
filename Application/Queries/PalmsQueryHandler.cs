@@ -50,9 +50,7 @@ namespace CalcAppAPI.Application.Queries
                     MaxCraneSize = t.MaxCraneSize,
                     DrawbarControlCylinders = t.DrawbarControlCylinders,
                     BeamType = t.BeamType,
-                    ImageUrl = t.ImageUrls != null && t.ImageUrls.Any()
-                        ? t.ImageUrls.First()
-                        : ""
+                    ImageUrl = t.ImageUrls.FirstOrDefault() ?? ""
                 })
                 .ToListAsync(cancellationToken);
 
@@ -131,9 +129,7 @@ namespace CalcAppAPI.Application.Queries
                     TelescopeLength = c.TelescopeLength,
                     SlewingCylinder = c.SlewingCylinder,
                     SlewingTorque = c.SlewingTorque,
-                    ImageUrl = c.ImageUrls != null && c.ImageUrls.Any()
-                        ? c.ImageUrls.First()
-                        : ""
+                    ImageUrl = c.ImageUrls.FirstOrDefault() ?? ""
                 })
                 .ToListAsync(cancellationToken);
 
