@@ -144,7 +144,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    LinkageId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-3.63-1", "PALMS-3.63-2", "PALMS-3.63-3"],
-                   VideoUrls = ["9VS2BuQwv"]
+                   VideoUrls = ["z9VS2BuQwvM"]
                },
 
                new Crane
@@ -190,7 +190,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    LinkageId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-3.67-1", "PALMS-3.67-2", "PALMS-3.67-3", "PALMS-3.67-4", "PALMS-3.67-5", "PALMS-3.67-6"],
-                   VideoUrls = ["9VS2BuQwv"]
+                   VideoUrls = ["z9VS2BuQwvM"]
                },
 
                new Crane
