@@ -286,7 +286,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                 {
                     Id = 8,
                     Name = "PALMS 10UX",
-                    Description = "A PALMS 10UX erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 15000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ",
+                    Description = "A PALMS 10UX erdészeti pótkocsi az U-sorozat legkisebb változata, mely a duplaalvázas kivitel mellett az úgynevezett unibody típusú rakoncákkal van szerelve. Össztömege 13000 kg. Nagy hasmagassága és az unibody keret csökkenti az elakadás kockázatát. A hidraulikus alkatrészek az unibody keretben vannak elhelyezve, védve ezzel azokat, mégis könnyű hozzáférést biztosít a karbantartáshoz. ",
                     Price = "",
                     LoadingAreaCross = "2.4",
                     LoadingAreaLength = "3990",
