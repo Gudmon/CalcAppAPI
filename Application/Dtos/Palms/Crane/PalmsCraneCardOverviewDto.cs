@@ -11,5 +11,6 @@
         public string TelescopeLength { get; set; }
         public string SlewingCylinder { get; set; }
         public string SlewingTorque { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

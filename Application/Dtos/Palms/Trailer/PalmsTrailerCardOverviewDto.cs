@@ -10,5 +10,6 @@
         public string MaxCraneSize { get; set; }
         public string DrawbarControlCylinders { get; set; }
         public string BeamType { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

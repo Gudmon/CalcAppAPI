@@ -49,7 +49,10 @@ namespace CalcAppAPI.Application.Queries
                     LoadingAreaCross = t.LoadingAreaCross,
                     MaxCraneSize = t.MaxCraneSize,
                     DrawbarControlCylinders = t.DrawbarControlCylinders,
-                    BeamType = t.BeamType
+                    BeamType = t.BeamType,
+                    ImageUrl = t.ImageUrls != null && t.ImageUrls.Any()
+                        ? t.ImageUrls.First()
+                        : ""
                 })
                 .ToListAsync(cancellationToken);
 
@@ -118,21 +121,24 @@ namespace CalcAppAPI.Application.Queries
 
             var cranes = await _context.Crane
                 .AsNoTracking()
-                .Select(t => new PalmsCraneCardOverviewDto
+                .Select(c => new PalmsCraneCardOverviewDto
                 {
-                    Id = t.Id,
-                    Name = t.Name,
-                    MaxReach = t.MaxReach,
-                    BrutLiftingTorque190Bar = t.BrutLiftingTorque190Bar,
-                    BrutLiftingTorque215Bar = t.BrutLiftingTorque215Bar,
-                    TelescopeLength = t.TelescopeLength,
-                    SlewingCylinder = t.SlewingCylinder,
-                    SlewingTorque = t.SlewingTorque
+                    Id = c.Id,
+                    Name = c.Name,
+                    MaxReach = c.MaxReach,
+                    BrutLiftingTorque190Bar = c.BrutLiftingTorque190Bar,
+                    BrutLiftingTorque215Bar = c.BrutLiftingTorque215Bar,
+                    TelescopeLength = c.TelescopeLength,
+                    SlewingCylinder = c.SlewingCylinder,
+                    SlewingTorque = c.SlewingTorque,
+                    ImageUrl = c.ImageUrls != null && c.ImageUrls.Any()
+                        ? c.ImageUrls.First()
+                        : ""
                 })
                 .ToListAsync(cancellationToken);
 
             return cranes
-                .OrderBy(t => orderMap.TryGetValue(t.Name, out var i) ? i : int.MaxValue)
+                .OrderBy(c => orderMap.TryGetValue(c.Name, out var i) ? i : int.MaxValue)
                 .ToList();
         }
 
