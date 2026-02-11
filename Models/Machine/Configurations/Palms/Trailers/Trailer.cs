@@ -54,6 +54,8 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Trailers
         public int? BunkAdapterId { get; set; }
         public BunkExtension? BunkExtension { get; set; }
         public int? BunkExtensionId { get; set; }
+        public ManualBunkExtension? ManualBunkExtension { get; set; }
+        public int? ManualBunkExtensionId { get; set; }
         public FrameExtension? FrameExtension { get; set; }
         public int? FrameExtensionId { get; set; }
         public Shipping? Shipping { get; set; }

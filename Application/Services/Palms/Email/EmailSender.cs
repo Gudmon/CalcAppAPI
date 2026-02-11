@@ -24,7 +24,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
         }
 
 
-        public async Task SendEmailAsync(EmailData email)
+        public async Task SendEmailAsync(EmailData email, CancellationToken cancellationToken)
         {
             string fromMail = _emailOptions.FromEmailAddress;
             //string toMail = _emailOptions.ToEmailAddressTest;
@@ -52,7 +52,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
 
             if (!string.IsNullOrEmpty(email.BlobName))
             {
-                var dealerPdfBytes = await _dealerPdfGenerator.GetPdfAsync(email.BlobName);
+                var dealerPdfBytes = await _dealerPdfGenerator.GetPdfAsync(email.BlobName, cancellationToken);
                 if (dealerPdfBytes != null)
                 {
                     var dealerPdfAttachment = new MimePart("application", "pdf")
@@ -65,7 +65,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
                     multipart.Add(dealerPdfAttachment);
                 }
 
-                var userPdfBytes = await _userPdfGenerator.GetPdfAsync(email.BlobName);
+                var userPdfBytes = await _userPdfGenerator.GetPdfAsync(email.BlobName, cancellationToken);
                 if (userPdfBytes != null)
                 {
                     var userPdfAttachment = new MimePart("application", "pdf")

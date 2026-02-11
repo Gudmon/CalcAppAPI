@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CalcAppAPI.Application.Services.Pdf.Generators;
 using CalcAppAPI.Models.Pdf;
 using CalcAppAPI.Services;
-using CalcAppAPI.Application.Services.Pdf.Generators;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CalcAppAPI.API.Controllers
 {
@@ -21,11 +21,11 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpGet("user/{id}")]
-        public async Task<ActionResult> GetUserPdf(string id)
+        public async Task<ActionResult> GetUserPdf(string id, CancellationToken cancellationToken)
         {
             try
             {
-                var pdfBytes = await _userPdfGenerator.GetPdfAsync(id);
+                var pdfBytes = await _userPdfGenerator.GetPdfAsync(id, cancellationToken);
                 return File(pdfBytes, "application/pdf", $"{id}.pdf");
             }
             catch (Exception ex)
@@ -35,11 +35,11 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpGet("dealer/{id}")]
-        public async Task<ActionResult> GetDealerPdf(string id)
+        public async Task<ActionResult> GetDealerPdf(string id, CancellationToken cancellationToken)
         {
             try
             {
-                var pdfBytes = await _dealerPdfGenerator.GetPdfAsync(id);
+                var pdfBytes = await _dealerPdfGenerator.GetPdfAsync(id, cancellationToken);
                 return File(pdfBytes, "application/pdf", $"{id}-clear-globe.pdf");
             }
             catch (Exception ex)
@@ -50,13 +50,13 @@ namespace CalcAppAPI.API.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> AddPdf([FromBody] PdfData pdfModel)
+        public async Task<ActionResult> AddPdf([FromBody] PdfData pdfModel, CancellationToken cancellationToken)
         {
             string pdfId = Util.RandomId();
             try
             {
-                await _dealerPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId);
-                await _userPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId);
+                await _dealerPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId, cancellationToken);
+                await _userPdfGenerator.GenerateAndSavePdfAsync(pdfModel, pdfId, cancellationToken);
                 return Ok(new { id = pdfId });
             }
             catch (Exception ex)

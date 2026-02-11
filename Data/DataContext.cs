@@ -63,6 +63,7 @@ namespace CalcAppAPI.Data
         public DbSet<Linkage> Linkage { get; set; }
         public DbSet<BunkAdapter> BunkAdapter { get; set; }
         public DbSet<BunkExtension> BunkExtension { get; set; }
+        public DbSet<ManualBunkExtension> ManualBunkExtension { get; set; }
         public DbSet<FrameExtension> FrameExtension { get; set; }
         public DbSet<Shipping> Shipping { get; set; }
         public DbSet<MOT> MOT { get; set; }

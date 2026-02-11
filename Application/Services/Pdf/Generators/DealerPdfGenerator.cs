@@ -19,7 +19,7 @@ public class DealerPdfGenerator : IDealerPdfGenerator
         _layout = layout;
     }
 
-    public async Task<string> GenerateAndSavePdfAsync(PdfData model, string name)
+    public async Task<string> GenerateAndSavePdfAsync(PdfData model, string name, CancellationToken cancellationToken)
     {
         var document = Document.Create(container =>
         {
@@ -37,15 +37,15 @@ public class DealerPdfGenerator : IDealerPdfGenerator
         await _blobService.UploadAsync(
             ContainerName,
             $"{name}-clear-globe.pdf",
-            stream);
+            stream, cancellationToken);
 
         return name;
     }
 
-    public async Task<byte[]> GetPdfAsync(string id)
+    public async Task<byte[]> GetPdfAsync(string id, CancellationToken cancellationToken)
     {
         return await _blobService.DownloadAsync(
             ContainerName,
-            $"{id}-clear-globe.pdf");
+            $"{id}-clear-globe.pdf", cancellationToken);
     }
 }

@@ -11,14 +11,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                new BunkAdapter
                {
                    Id = 1,
-                   Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
+                   Name = "Forwarder típusú bunk adapter a raktér szélesítéshez 300 mm - 1 db",
                    Code = "PA",
                    Price = "150",
                },
                new BunkAdapter
                {
                    Id = 2,
-                   Name = "Forwarder típusú bunk adapter a szélesebb rakodó felületért (az ár 1 db-ra vonatkozik)",
+                   Name = "Forwarder típusú bunk adapter a raktér szélesítéshez 300 mm - 1 db",
                    Code = "PA",
                    Price = "140",
                }

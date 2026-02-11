@@ -19,11 +19,11 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> SendEmail([FromBody] EmailData email)
+        public async Task<ActionResult> SendEmail([FromBody] EmailData email, CancellationToken cancellationToken)
         {
             try
             {
-                await _emailSender.SendEmailAsync(email);
+                await _emailSender.SendEmailAsync(email, cancellationToken);
                 return Ok(new { message = "Email sent succesfully" });
             }
             catch (EmailSendException ex)

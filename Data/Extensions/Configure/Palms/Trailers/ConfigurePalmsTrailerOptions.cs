@@ -28,6 +28,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
             modelBuilder.ConfigureMultiplePalmsTyres();
             modelBuilder.ConfigureMultiplePalmsBunkAdapters();
             modelBuilder.ConfigureMultiplePalmsBunkExtensions();
+            modelBuilder.ConfigureMultiplePalmsManualBunkExtensions();
             modelBuilder.ConfigureMultiplePalmsFrameExtensions();
             modelBuilder.ConfigureMultiplePalmsStanchionExtensions();
             modelBuilder.ConfigureMultiplePalmsHydropacks();

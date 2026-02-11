@@ -223,6 +223,15 @@ namespace CalcAppAPI.API.Controllers
             return Ok(bunkExtension);
         }
 
+        [HttpGet("trailers/{id}/manualbunkextension")]
+        public async Task<ActionResult<ManualBunkExtension>> GetManualBunkExtension(int id)
+        {
+            var manualBunkExtension = await _dbContext.BunkExtension
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(manualBunkExtension);
+        }
+
         [HttpGet("trailers/{id}/frameextension")]
         public async Task<ActionResult<FrameExtension>> GetFrameExtension(int id)
         {

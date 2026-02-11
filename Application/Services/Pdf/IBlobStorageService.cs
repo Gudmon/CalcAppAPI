@@ -2,7 +2,7 @@
 {
     public interface IBlobStorageService
     {
-        Task UploadAsync(string container, string name, Stream stream);
-        Task<byte[]> DownloadAsync(string container, string name);
+        Task UploadAsync(string container, string name, Stream stream, CancellationToken cancellationToken);
+        Task<byte[]> DownloadAsync(string container, string name, CancellationToken cancellationToken);
     }
 }

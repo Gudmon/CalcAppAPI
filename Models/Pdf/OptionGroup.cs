@@ -38,7 +38,7 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Biomasszás boksz")]
         BBox,
 
-        [Display(Name ="Billenős boksz")]
+        [Display(Name = "Billenős boksz")]
         DBox,
 
         [Display(Name = "Szerszámláda")]
@@ -62,8 +62,11 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Bunk adapter")]
         BunkAdapter,
 
-        [Display(Name = "Bunk kiterjesztés")]
+        [Display(Name = "Hidraulikus bunk kiterjesztés")]
         BunkExtension,
+
+        [Display(Name = "Manuális bunk kiterjesztés")]
+        ManualBunkExtension,
 
         [Display(Name = "Raktér hosszabbítás")]
         FrameExtension,

@@ -419,6 +419,15 @@ namespace CalcAppAPI.Application.Queries
                 ImageUrls = t.BunkExtension.ImageUrls
             },
 
+            ManualBunkExtension = t.ManualBunkExtension == null ? null : new ManualBunkExtensionDto
+            {
+                Id = t.ManualBunkExtension.Id,
+                Name = t.ManualBunkExtension.Name,
+                Code = t.ManualBunkExtension.Code,
+                Price = t.ManualBunkExtension.Price,
+                ImageUrls = t.ManualBunkExtension.ImageUrls
+            },
+
             FrameExtension = t.FrameExtension == null ? null : new FrameExtensionDto
             {
                 Id = t.FrameExtension.Id,

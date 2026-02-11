@@ -26,6 +26,7 @@ namespace CalcAppAPI.Application.Dtos.Palms.Trailer
         public UnderrunProtectionDto? UnderrunProtection { get; set; }
         public BunkAdapterDto? BunkAdapter { get; set; }
         public BunkExtensionDto? BunkExtension { get; set; }
+        public ManualBunkExtensionDto? ManualBunkExtension { get; set; }
         public FrameExtensionDto? FrameExtension { get; set; }
         public ShippingDto? Shipping { get; set; }
         public MOTDto? MOT { get; set; }
