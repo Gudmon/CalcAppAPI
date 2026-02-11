@@ -96,7 +96,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
-                   ImageUrls = ["PALMS-2.54-1, PALMS-2.54-2, PALMS-2.54-3", "PALMS-2.54-4", "PALMS-2.54-5"],
+                   ImageUrls = ["PALMS-2.54-1", "PALMS-2.54-2", "PALMS-2.54-3", "PALMS-2.54-4", "PALMS-2.54-5"],
                    VideoUrls = ["fEDDjo_K3E8", "OUXj3T4seD0"]
                },
 
@@ -143,7 +143,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    ShippingId = 2,
-                   ImageUrls = ["PALMS-3.63-1, PALMS-3.63-2, PALMS-3.63-3"],
+                   ImageUrls = ["PALMS-3.63-1", "PALMS-3.63-2", "PALMS-3.63-3"],
                    VideoUrls = ["9VS2BuQwv"]
                },
 
