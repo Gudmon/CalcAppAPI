@@ -226,7 +226,7 @@ namespace CalcAppAPI.API.Controllers
         [HttpGet("trailers/{id}/manualbunkextension")]
         public async Task<ActionResult<ManualBunkExtension>> GetManualBunkExtension(int id)
         {
-            var manualBunkExtension = await _dbContext.BunkExtension
+            var manualBunkExtension = await _dbContext.ManualBunkExtension
                 .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
 
             return Ok(manualBunkExtension);
