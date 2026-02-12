@@ -62,10 +62,10 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Bunk adapter")]
         BunkAdapter,
 
-        [Display(Name = "Hidraulikus bunk kiterjesztés")]
+        [Display(Name = "Bunk szélesítés")]
         BunkExtension,
 
-        [Display(Name = "Manuális bunk kiterjesztés")]
+        [Display(Name = "Bunk szélesítés")]
         ManualBunkExtension,
 
         [Display(Name = "Raktér hosszabbítás")]
