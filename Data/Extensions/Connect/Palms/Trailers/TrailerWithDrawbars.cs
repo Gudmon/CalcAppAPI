@@ -88,6 +88,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 8, DrawbarId = 5 },
                         new { TrailerId = 8, DrawbarId = 8 },
                         new { TrailerId = 8, DrawbarId = 9 },
+                        new { TrailerId = 8, DrawbarId = 13 },
 
                         //PALMS 12U
                         new { TrailerId = 9, DrawbarId = 1 },
@@ -98,6 +99,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 9, DrawbarId = 6 },
                         new { TrailerId = 9, DrawbarId = 8 },
                         new { TrailerId = 9, DrawbarId = 9 },
+                        new { TrailerId = 9, DrawbarId = 13 },
 
                         //PALMS 12UAWD
                         new { TrailerId = 10, DrawbarId = 1 },
@@ -108,6 +110,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 10, DrawbarId = 6 },
                         new { TrailerId = 10, DrawbarId = 8 },
                         new { TrailerId = 10, DrawbarId = 9 },
+                        new { TrailerId = 10, DrawbarId = 13 },
 
                         //PALMS 15U
                         new { TrailerId = 11, DrawbarId = 1 },
@@ -118,6 +121,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 11, DrawbarId = 6 },
                         new { TrailerId = 11, DrawbarId = 8 },
                         new { TrailerId = 11, DrawbarId = 9 },
+                        new { TrailerId = 11, DrawbarId = 13 },
 
                         //PALMS 15UAWD
                         new { TrailerId = 12, DrawbarId = 1 },
@@ -156,7 +160,8 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 16, DrawbarId = 4 },
                         new { TrailerId = 16, DrawbarId = 5 },
                         new { TrailerId = 16, DrawbarId = 8 },
-                        new { TrailerId = 16, DrawbarId = 9 }
+                        new { TrailerId = 16, DrawbarId = 9 },
+                        new { TrailerId = 16, DrawbarId = 13 }
                     )
                 );
         }

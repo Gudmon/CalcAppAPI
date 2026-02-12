@@ -98,7 +98,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 13,
                    Name = "Y vonórúd Jake rögzítő csatlakozókkal (Valtra-hoz, egyéb traktorokhoz igény szerint) elektromos vezérléssel",
                    Code = "CY",
-                   Price = "8380",
+                   Price = "8500",
                },
                new Drawbar
                {
