@@ -98,7 +98,8 @@ namespace CalcAppAPI.Application.Queries
                     BrutLiftingTorque190Bar = c.BrutLiftingTorque190Bar,
                     TelescopeLength = c.TelescopeLength,
                     SlewingCylinder = c.SlewingCylinder,
-                    SlewingTorque = c.SlewingTorque
+                    SlewingTorque = c.SlewingTorque,
+                    ImageUrl = c.ImageUrls.FirstOrDefault() ?? ""
                 }),
                 ImageUrls = trailer.ImageUrls,
                 VideoUrls = trailer.VideoUrls,
@@ -142,8 +143,8 @@ namespace CalcAppAPI.Application.Queries
         {
             var crane = await _context.Crane
                 .AsNoTracking()
-                .Include(t => t.Trailer)
-                .FirstOrDefaultAsync(t => t.Id == id, cancellationToken);
+                .Include(c => c.Trailer)
+                .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
 
             if (crane == null)
                 throw Errors.Crane.NotFound(id);
@@ -176,16 +177,17 @@ namespace CalcAppAPI.Application.Queries
                 CraneWeight = crane.CraneWeight,
                 PillarSlewingAngle = crane.PillarSlewingAngle,
                 RecommendedOilFlow = crane.RecommendedOilFlow,
-                Trailers = crane.Trailer.Select(c => new PalmsTrailerCardOverviewDto
+                Trailers = crane.Trailer.Select(t => new PalmsTrailerCardOverviewDto
                 {
-                    Id = c.Id,
-                    Name = c.Name,
-                    GrossWeight = c.GrossWeight,
-                    Frame = c.Frame,
-                    LoadingAreaCross = c.LoadingAreaCross,
-                    MaxCraneSize = c.MaxCraneSize,
-                    DrawbarControlCylinders = c.DrawbarControlCylinders,
-                    BeamType = c.BeamType
+                    Id = t.Id,
+                    Name = t.Name,
+                    GrossWeight = t.GrossWeight,
+                    Frame = t.Frame,
+                    LoadingAreaCross = t.LoadingAreaCross,
+                    MaxCraneSize = t.MaxCraneSize,
+                    DrawbarControlCylinders = t.DrawbarControlCylinders,
+                    BeamType = t.BeamType,
+                    ImageUrl = t.ImageUrls.FirstOrDefault() ?? ""
                 }),
                 ImageUrls = crane.ImageUrls,
                 VideoUrls = crane.VideoUrls,
