@@ -1,5 +1,4 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
@@ -78,7 +77,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 9,
                    Name = "FD talpaló",
                    Code = "B1",
-                   Price = "695",
+                   Price = "725",
                    Mass = "50"
                }
                );
