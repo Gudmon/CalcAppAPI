@@ -68,7 +68,10 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         //PALMS X100
                         new { CraneId = 12, WinchId = 1 },
                         new { CraneId = 12, WinchId = 2 },
-                        new { CraneId = 12, WinchId = 3 }
+                        new { CraneId = 12, WinchId = 3 },
+
+                        //PALMS 1.42
+                        new { CraneId = 13, WinchId = 4 }
                     )
                 );
         }

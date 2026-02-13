@@ -60,9 +60,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
               new Rotator
               {
                   Id = 8,
-                  Name = "Rotátor 1000 kN (csapos - Finrotor)",
+                  Name = "10 kN-os csapos rotátor, Finrotor",
                   Code = "R10",
-                  Price = "245",
+                  Price = "265",
               }
               );
         }

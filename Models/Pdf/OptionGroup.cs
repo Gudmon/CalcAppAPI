@@ -83,6 +83,9 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Kerék")]
         Tyre,
 
+        [Display(Name = "Kerék")]
+        SupportBracket,
+
         [Display(Name = "Pótkocsi szállítása")]
         TrailerShipping,
 

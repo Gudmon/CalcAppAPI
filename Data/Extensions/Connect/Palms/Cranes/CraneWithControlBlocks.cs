@@ -144,7 +144,8 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 12, ControlBlockId = 14 },
 
                         //PALMS 1.42
-                        new { CraneId = 13, ControlBlockId = 15 }
+                        new { CraneId = 13, ControlBlockId = 2 },
+                        new { CraneId = 13, ControlBlockId = 16 }
                     )
 
                 );

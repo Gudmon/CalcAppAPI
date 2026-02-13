@@ -50,11 +50,11 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
               },
               new ControlBlock
               {
-                   Id = 6,
-                   Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
-                   Code = "A14",
-                   Price = "6295",
-                   Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
+                  Id = 6,
+                  Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
+                  Code = "A14",
+                  Price = "6295",
+                  Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható"
               },
               new ControlBlock
               {
@@ -125,7 +125,15 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 15,
                   Name = "A3.1 - 6/8 XY vezértömb, BLB BM50 (50 l/min.) 195 bar",
                   Code = "A3.1",
-                  Price = "805",
+                  Price = "870",
+                  Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
+              },
+              new ControlBlock
+              {
+                  Id = 16,
+                  Name = "A3.1 - 6/8 XY vezértömb, BLB BM50 (50 l/min.) 180 bar",
+                  Code = "A3.1",
+                  Price = "870",
                   Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára"
               }
               );

@@ -72,6 +72,7 @@ namespace CalcAppAPI.Data
         public DbSet<HydroPackControl> HydroPackControl { get; set; }
         public DbSet<SupplyFormat> SupplyFormat { get; set; }
         public DbSet<Toolbox> Toolbox { get; set; }
+        public DbSet<SupportBracket> SupportBracket { get; set; }
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }

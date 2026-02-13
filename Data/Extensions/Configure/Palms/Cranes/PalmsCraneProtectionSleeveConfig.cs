@@ -1,5 +1,4 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
@@ -15,6 +14,13 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "Védőhüvely a tömlőhöz",
                    Code = "PSH",
                    Price = "105",
+               },
+               new ProtectionSleeves
+               {
+                   Id = 2,
+                   Name = "Védőhüvely a tömlőhöz",
+                   Code = "PSH",
+                   Price = "55",
                });
         }
     }

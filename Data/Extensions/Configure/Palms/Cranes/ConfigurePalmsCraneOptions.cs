@@ -30,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
             modelBuilder.ConfigureMultiplePalmsCraneCovers();
             modelBuilder.ConfigureMultiplePalmsCraneWoodControls();
             modelBuilder.ConfigureMultiplePalmsCraneLinkages();
+            modelBuilder.ConfigureMultiplePalmsCraneSupportBrackets();
             modelBuilder.ConfigureMultiplePalmsShippings();
         }
     }

@@ -67,6 +67,8 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
         public int? WoodControlId { get; set; }
         public Linkage? Linkage { get; set; }
         public int? LinkageId { get; set; }
+        public SupportBracket? SupportBracket { get; set; }
+        public int? SupportBracketId { get; set; }
         public Shipping? Shipping { get; set; }
         public int? ShippingId { get; set; }
         public string[] ImageUrls { get; set; } = Array.Empty<string>();

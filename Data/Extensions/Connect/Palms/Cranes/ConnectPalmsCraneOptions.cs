@@ -29,6 +29,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
             modelBuilder.ConnectCranesWithTurningDeviceCounterPlate();
             modelBuilder.ConnectCranesWithValveBlock();
             modelBuilder.ConnectCranesWithWoodControl();
+            modelBuilder.ConnectCranesWithSupportBracket();
         }
     }
 }

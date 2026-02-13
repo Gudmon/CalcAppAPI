@@ -1,7 +1,6 @@
 ﻿using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
-using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -226,6 +225,15 @@ namespace CalcAppAPI.API.Controllers
                 .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
 
             return Ok(linkage);
+        }
+
+        [HttpGet("cranes/{id}/supportbracket")]
+        public async Task<ActionResult<ProtectionSleeves>> GetSupportBracket(int id)
+        {
+            var supportBracket = await _dbContext.SupportBracket
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(supportBracket);
         }
 
         [HttpGet("cranes/{id}/shipping")]

@@ -14,6 +14,13 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "LED munkalámpák a darugémre, 2 db",
                   Code = "L1",
                   Price = "510"
+              },
+              new CraneLight
+              {
+                  Id = 2,
+                  Name = "LED munkalámpák a darugémre, 1 db",
+                  Code = "L1",
+                  Price = "335"
               }
               );
         }
