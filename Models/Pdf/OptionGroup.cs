@@ -83,9 +83,6 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Kerék")]
         Tyre,
 
-        [Display(Name = "Kerék")]
-        SupportBracket,
-
         [Display(Name = "Pótkocsi szállítása")]
         TrailerShipping,
 
@@ -104,9 +101,6 @@ namespace CalcAppAPI.Models.Pdf
 
         [Display(Name = "Kanál")]
         Grapple,
-
-        [Display(Name = "Rotátor")]
-        Rotator,
 
         [Display(Name = "Csörlő")]
         Winch,
@@ -135,6 +129,9 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Daru olajhűtő")]
         CraneOilCooler,
 
+        [Display(Name = "Rotátor")]
+        Rotator,
+
         [Display(Name = "Rotátor fék")]
         RotatorBrake,
 
@@ -161,6 +158,9 @@ namespace CalcAppAPI.Models.Pdf
 
         [Display(Name = "Csatlakozó adapter")]
         Linkage,
+
+        [Display(Name = "Konzol")]
+        SupportBracket,
 
         [Display(Name = "Daru szállítása")]
         CraneShipping
