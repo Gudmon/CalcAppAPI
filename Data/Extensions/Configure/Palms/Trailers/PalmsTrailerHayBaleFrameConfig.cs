@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Szénabála keret (D típushoz)",
                    Code = "HBF",
                    Price = "2785",
+                   ImageUrls = ["PALMS-trailer-hay-bale-frame-1", "PALMS-trailer-hay-bale-frame-2", "PALMS-trailer-hay-bale-frame-3", "PALMS-trailer-hay-bale-frame-d"]
                },
                new HayBaleFrame
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Szénabála keret (U típushoz)",
                    Code = "HBF",
                    Price = "2785",
+                   ImageUrls = ["PALMS-trailer-hay-bale-frame-1", "PALMS-trailer-hay-bale-frame-2", "PALMS-trailer-hay-bale-frame-3", "PALMS-trailer-hay-bale-frame-u"]
                }
                );
         }

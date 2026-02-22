@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Billenős boksz HARDOX",
                    Code = "Dbox",
                    Price = "2615",
+                   ImageUrls = ["PALMS-trailer-dbox-1"]
                }
               );
         }

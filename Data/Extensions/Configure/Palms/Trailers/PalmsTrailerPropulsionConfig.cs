@@ -7,6 +7,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
     {
         public static void ConfigureMultiplePalmsPropulsions(this ModelBuilder modelBuilder)
         {
+            //TODO: Propulsion Images on cloudinary
             modelBuilder.Entity<Propulsion>().HasData(
                new Propulsion
                {

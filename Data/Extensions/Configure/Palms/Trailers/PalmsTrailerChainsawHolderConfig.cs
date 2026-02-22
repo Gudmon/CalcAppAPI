@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Láncfűrész tartó",
                    Code = "MSH",
                    Price = "65",
+                   ImageUrls = ["PALMS-trailer-chainsawholder-1", "PALMS-trailer-chainsawholder-2"]
                });
         }
     }

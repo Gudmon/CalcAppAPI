@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Szivattyú adapter a vonórúdon",
                    Code = "P01",
                    Price = "60",
+                   ImageUrls = ["PALMS-trailer-oil-pump-1", "PALMS-trailer-oil-pump-2"]
                },
                new OilPump
                {

@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hydropack 6,5 lóerő - 12 l/min, 1 szekciós",
                    Code = "HyP1",
                    Price = "1575",
+                   ImageUrls = ["PALMS-trailer-hydropack-HyP1-1", "PALMS-trailer-hydropack-HyP1-1"]
                },
                new HydroPack
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós",
                    Code = "HyP4",
                    Price = "2365",
+                   ImageUrls = ["PALMS-trailer-hydropack-HyP4-1"]
                },
                new HydroPack
                {
@@ -28,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós + elektronikus indítás és akkumulátor",
                    Code = "HyP4+",
                    Price = "1510",
+                   ImageUrls = ["PALMS-trailer-hydropack-HyP4+-1"]
                });
         }
     }

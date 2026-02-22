@@ -14,6 +14,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Olajhűtő csomag a tartályhoz rögzítve",
                    Code = "CP2",
                    Price = "1035",
+                   ImageUrls = ["PALMS-trailer-oil-cooler-1"],
+                   VideoUrls = ["5u9NDzvA0gk"]
                },
                new TrailerOilCooler
                {
@@ -21,6 +23,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Olajhűtő csomag a tartályhoz rögzítve",
                    Code = "CP4",
                    Price = "1190",
+                   ImageUrls = ["PALMS-trailer-oil-cooler-1"],
+                   VideoUrls = ["5u9NDzvA0gk"]
                }
                );
         }

@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Összecsukható hátsó lámpák",
                    Code = "L1",
                    Price = "420",
+                   ImageUrls = ["PALMS-trailer-light-L1-1", "PALMS-trailer-light-L1-2"]
                },
                new TrailerLight
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
                    Code = "L2",
                    Price = "465",
+                   ImageUrls = ["PALMS-trailer-light-L2-1", "PALMS-trailer-light-L2-2"]
                },
                new TrailerLight
                {
@@ -28,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Fix hátsó LED lámpák",
                    Code = "L4",
                    Price = "420",
+                   ImageUrls = ["PALMS-trailer-light-L4-1", "PALMS-trailer-light-L4-2"]
                },
                new TrailerLight
                {
@@ -35,6 +38,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Összecsukható hátsó lámpák",
                    Code = "L1",
                    Price = "340",
+                   ImageUrls = ["PALMS-trailer-light-L1-1", "PALMS-trailer-light-L1-2"]
                },
                new TrailerLight
                {
@@ -42,6 +46,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hátsó LED lámpa flexibilis Kilpi karokkal",
                    Code = "L2",
                    Price = "440",
+                   ImageUrls = ["PALMS-trailer-light-L2-1", "PALMS-trailer-light-L2-2"]
                }
                );
         }

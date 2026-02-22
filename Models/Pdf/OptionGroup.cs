@@ -23,6 +23,9 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Hydropack")]
         HydroPack,
 
+        [Display(Name = "Pótkocsi control")]
+        HydroPackControl,
+
         [Display(Name = "Olajpumpa")]
         OilPump,
 

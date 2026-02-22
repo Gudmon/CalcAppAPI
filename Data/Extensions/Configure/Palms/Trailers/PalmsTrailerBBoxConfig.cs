@@ -14,6 +14,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                    Code = "Bbox",
                    Price = "2825",
+                   ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
+                   VideoUrls = ["4irHQzQZYHM"]
                },
                new BBox
                {
@@ -21,6 +23,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                    Code = "Bbox",
                    Price = "3150",
+                   ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
+                   VideoUrls = ["4irHQzQZYHM"]
                },
                new BBox
                {
@@ -28,6 +32,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                    Code = "Bbox",
                    Price = "3360",
+                   ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
+                   VideoUrls = ["4irHQzQZYHM"]
                },
                new BBox
                {
@@ -35,6 +41,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Biomasszás boksz 4 mm-es Strenx acélból",
                    Code = "Bbox",
                    Price = "3200",
+                   ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
+                   VideoUrls = ["4irHQzQZYHM"]
                },
                new BBox
                {
@@ -42,8 +50,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Biomasszás boksz 2mm HARDOX",
                    Code = "Bbox",
                    Price = "1000",
-               }
-               );
+                   ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
+                   VideoUrls = ["4irHQzQZYHM"]
+               });
         }
     }
 }

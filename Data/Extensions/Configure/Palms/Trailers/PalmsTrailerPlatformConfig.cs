@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Kezelő platform háttámlával a vonórúdon",
                    Code = "D1",
                    Price = "600",
+                   ImageUrls = ["PALMS-trailer-platform-1", "PALMS-trailer-platform-2", "PALMS-trailer-platform-3", "PALMS-trailer-platform-4"]
                },
                new Platform
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Kezelő platform háttámlával a vonórúdon túlfutásgátlós vonórúddal",
                    Code = "D2",
                    Price = "600",
+                   ImageUrls = ["PALMS-trailer-platform-1", "PALMS-trailer-platform-2", "PALMS-trailer-platform-3", "PALMS-trailer-platform-4"]
                }
                );
         }

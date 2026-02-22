@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Rakonca rögzítő az első pár rakoncához",
                    Code = "BL",
                    Price = "0",
+                   ImageUrls = ["PALMS-trailer-bolster-lock-1", "PALMS-trailer-bolster-lock-2", "PALMS-trailer-bolster-lock-3"]
                });
         }
     }

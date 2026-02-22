@@ -279,6 +279,15 @@ namespace CalcAppAPI.API.Controllers
             return Ok(hydroPacks);
         }
 
+        [HttpGet("trailers/{id}/hydropackcontrol")]
+        public async Task<ActionResult<StanchionExtension>> GetHydroPackControl(int id)
+        {
+            var hydropackControl = await _dbContext.HydroPackControl
+                .FirstOrDefaultAsync(b => b.Trailer.Any(t => t.Id == id));
+
+            return Ok(hydropackControl);
+        }
+
         [HttpGet("trailers/{id}/supplyformats")]
         public async Task<ActionResult<IEnumerable<SupplyFormat>>> GetSupplyFormats(int id)
         {

@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Hidraulikus henger a keret meghosszabbításához",
                    Code = "HEX",
                    Price = "210",
+                   ImageUrls = ["PALMS-trailer-frame-extension-1"]
                },
                new FrameExtension
                {

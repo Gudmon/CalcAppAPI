@@ -79,7 +79,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         //PALMS 1.42
                         new { CraneId = 13, FrameTypeId = 9 }
                     )
-
                 );
         }
     }

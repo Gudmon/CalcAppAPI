@@ -21,6 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
                    Price = "960",
+                   ImageUrls = ["PALMS-trailer-brake-1"]
                },
                new Brake
                {
@@ -28,6 +29,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
                    Price = "1870",
+                   ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
                {
@@ -35,6 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken légfék",
                    Code = "B3",
                    Price = "1620",
+                   ImageUrls = ["PALMS-trailer-brake-3"]
                },
                new Brake
                {
@@ -42,6 +45,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken légfék",
                    Code = "B4",
                    Price = "2710",
+                   ImageUrls = ["PALMS-trailer-brake-4"]
                },
                new Brake
                {
@@ -78,6 +82,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
                    Price = "1155",
+                   ImageUrls = ["PALMS-trailer-brake-1"]
                },
                new Brake
                {
@@ -85,6 +90,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
                    Price = "2205",
+                   ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
                {
@@ -92,6 +98,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken légfék",
                    Code = "B3",
                    Price = "1815",
+                   ImageUrls = ["PALMS-trailer-brake-3"]
                },
                new Brake
                {
@@ -99,6 +106,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken légfék",
                    Code = "B4",
                    Price = "3045",
+                   ImageUrls = ["PALMS-trailer-brake-4"]
                },
                new Brake
                {
@@ -120,6 +128,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
                    Price = "3150",
+                   ImageUrls = ["PALMS-trailer-brake-1"]
                },
                new Brake
                {
@@ -127,6 +136,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
                    Price = "6195",
+                   ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
                {
@@ -134,6 +144,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken légfék",
                    Code = "B3",
                    Price = "3810",
+                   ImageUrls = ["PALMS-trailer-brake-3"]
                },
                new Brake
                {
@@ -141,6 +152,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken légfék",
                    Code = "B4",
                    Price = "7035",
+                   ImageUrls = ["PALMS-trailer-brake-4"]
                },
                new Brake
                {
@@ -162,6 +174,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2 keréken légfék",
                    Code = "B3",
                    Price = "3625",
+                   ImageUrls = ["PALMS-trailer-brake-3"]
                },
 
                new Brake
@@ -170,6 +183,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 keréken hidraulikus többtárcsás fék (sebességváltón keresztül)",
                    Code = "B2",
                    Price = "250",
+                   ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
                {
@@ -177,6 +191,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4 kerék légfék (hidraulikusan működtetett, többtárcsás, sebességváltón keresztül)",
                    Code = "B4",
                    Price = "3035",
+                   ImageUrls = ["PALMS-trailer-brake-4"]
                }
                );
         }
