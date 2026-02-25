@@ -63,6 +63,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "10 kN-os csapos rotátor, Finrotor",
                   Code = "R10",
                   Price = "265",
+                  ImageUrls = ["PALMS-crane-rotator-1", "PALMS-crane-rotator-2"]
               }
               );
         }

@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Csapszeggel állítható kitámasztó láb a vonórúdon",
                    Code = "SL",
                    Price = "0",
+                   ImageUrls = ["PALMS-trailer-support-leg-SL"]
                },
                new SupportLeg
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Csapszeggel állítható kitámasztó láb a vonórúdon",
                    Code = "SL",
                    Price = "75",
+                   ImageUrls = ["PALMS-trailer-support-leg-SL"]
                },
                new SupportLeg
                {
@@ -28,6 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Tekerővel állítható kitámasztó láb a vonórúdon",
                    Code = "SJ",
                    Price = "420",
+                   ImageUrls = ["PALMS-trailer-support-leg-SJ"]
                }
                );
         }

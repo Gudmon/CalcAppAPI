@@ -13,14 +13,16 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "LED munkalámpák a darugémre, 2 db",
                   Code = "L1",
-                  Price = "510"
+                  Price = "510",
+                  ImageUrls = ["PALMS-crane-light-1", "PALMS-crane-light-2"]
               },
               new CraneLight
               {
                   Id = 2,
                   Name = "LED munkalámpák a darugémre, 1 db",
                   Code = "L1",
-                  Price = "335"
+                  Price = "335",
+                  ImageUrls = ["PALMS-crane-light-1", "PALMS-crane-light-2"]
               }
               );
         }

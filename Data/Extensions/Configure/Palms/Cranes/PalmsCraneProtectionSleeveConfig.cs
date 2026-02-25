@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "Védőhüvely a tömlőhöz",
                    Code = "PSH",
                    Price = "105",
+                   ImageUrls = ["PALMS-crane-protection-sleeves-1"]
                },
                new ProtectionSleeves
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "Védőhüvely a tömlőhöz",
                    Code = "PSH",
                    Price = "55",
+                   ImageUrls = ["PALMS-crane-protection-sleeves-1"]
                });
         }
     }

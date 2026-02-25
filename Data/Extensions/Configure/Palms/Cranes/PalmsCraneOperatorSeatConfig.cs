@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Kezelő ülés a függőleges gém tetejére, csak A12-es vezértömbhöz, nem kompatibilis a csörlővel",
                   Code = "HSB",
-                  Price = "1955"
+                  Price = "1955",
+                  ImageUrls = ["PALMS-crane-operator-seat-1", "PALMS-crane-operator-seat-2"]
               }
               );
         }

@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Olajhűtő csomag elektromos csatlakozással a traktorhoz",
                   Code = "CP1",
-                  Price = "1035"
+                  Price = "1035",
+                  ImageUrls = ["PALMS-crane-oil-cooler-1"]
               }
               );
         }

@@ -1,5 +1,9 @@
 ﻿using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Pqc.Crypto.Lms;
+using System.Diagnostics.Metrics;
+using static CalcAppAPI.Domain.Entities.Errors.Errors;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 
 namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
 {
@@ -13,7 +17,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Fedőlap a fordító szerkezethez",
                   Code = "PL",
-                  Price = "340"
+                  Price = "340",
+                  ImageUrls = ["PALMS-crane-turning-device-counter-plate-1"]
               }
               );
         }

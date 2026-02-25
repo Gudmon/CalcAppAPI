@@ -22,7 +22,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "Rotátor fék",
                   Code = "Br1",
                   Price = "85",
-                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
+                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
+                  ImageUrls = ["PALMS-crane-rotator-brake-BR1-1", "PALMS-crane-rotator-brake-BR1-2", "PALMS-crane-rotator-brake-BR1-3"]
               },
               new RotatorBrake
               {
@@ -30,7 +31,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "Rotátor fék",
                   Code = "Br1",
                   Price = "55",
-                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
+                  Description = "Fék az oldalirányú mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
+                  ImageUrls = ["PALMS-crane-rotator-brake-BR1-1", "PALMS-crane-rotator-brake-BR1-2", "PALMS-crane-rotator-brake-BR1-3"]
               },
               new RotatorBrake
               {
@@ -38,7 +40,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "Dupla rotátor fék",
                   Code = "Br2",
                   Price = "125",
-                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
+                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
+                  ImageUrls = ["PALMS-crane-rotator-brake-BR2-1", "PALMS-crane-rotator-brake-BR2-2", "PALMS-crane-rotator-brake-BR2-3"]
               },
               new RotatorBrake
               {
@@ -46,7 +49,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "Dupla rotátor fék",
                   Code = "Br2",
                   Price = "220",
-                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva."
+                  Description = "Fékek az oldalirányú és előre-hátra mozgáshoz. A fékek terheletlen markolókhoz vannak beállítva.",
+                  ImageUrls = ["PALMS-crane-rotator-brake-BR2-1", "PALMS-crane-rotator-brake-BR2-2", "PALMS-crane-rotator-brake-BR2-3"]
               }
               );
         }

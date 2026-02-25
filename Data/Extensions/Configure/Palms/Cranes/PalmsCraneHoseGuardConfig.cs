@@ -13,14 +13,16 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Tömlő védő B3 és B6 talpaló esetén",
                   Code = "HG1",
-                  Price = "105"
+                  Price = "105",
+                  ImageUrls = ["PALMS_crane-hose-guard-1"]
               },
               new HoseGuard
               {
                   Id = 2,
                   Name = "Tömlő védő B9 talpaló esetén",
                   Code = "HG2",
-                  Price = "105"
+                  Price = "105",
+                  ImageUrls = ["PALMS_crane-hose-guard-1"]
               }
               );
         }

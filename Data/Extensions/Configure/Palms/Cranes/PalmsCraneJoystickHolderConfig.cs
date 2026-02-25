@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Joystick tartó A11-A42 vezértömbhöz",
                   Code = "JL",
-                  Price = "370"
+                  Price = "370",
+                  ImageUrls = ["PALMS-crane-joystick-holder-1"]
               }
               );
         }

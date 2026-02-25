@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Faosztályozó rövidebb fához (1db/rakonca, az ár 1 db-ra vonatkozik)",
                    Code = "WS",
                    Price = "65",
+                   ImageUrls = ["PALMS-trailer-wood-sorter-1", "PALMS-trailer-wood-sorter-2", "PALMS-trailer-wood-sorter-3"]
                });
         }
     }

@@ -22,7 +22,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                    Code = "B2.1",
                    Price = "1575",
-                   Mass = "174"
+                   Mass = "174",
+                   ImageUrls = ["PALMS-crane-frame-type-B2.1-1", "PALMS-crane-frame-type-B2.1-2", "PALMS-crane-frame-type-B2.1-3"]
                },
                new FrameType
                {
@@ -30,7 +31,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                    Code = "B3",
                    Price = "2100",
-                   Mass = "313"
+                   Mass = "313",
+                   ImageUrls = ["PALMS-crane-frame-type-B3-1", "PALMS-crane-frame-type-B3-2", "PALMS-crane-frame-type-B3-3"]
                },
                new FrameType
                {
@@ -38,7 +40,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "FD típusú economy talpaló",
                    Code = "B4",
                    Price = "2100",
-                   Mass = "237"
+                   Mass = "237",
+                   ImageUrls = ["PALMS-crane-frame-type-B4-1", "PALMS-crane-frame-type-B4-2", "PALMS-crane-frame-type-B4-3"]
                },
                new FrameType
                {
@@ -46,7 +49,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "B6, FD típusú letalpaló, 3 pontos csatlakozással",
                    Code = "B6",
                    Price = "3005",
-                   Mass = "449"
+                   Mass = "449",
+                   ImageUrls = ["PALMS-crane-frame-type-B6-1", "PALMS-crane-frame-type-B6-2", "PALMS-crane-frame-type-B6-3"]
                },
                new FrameType
                {
@@ -54,7 +58,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "B9, FD típusú, különösen erős letalpaló (HD)",
                    Code = "B9",
                    Price = "3520",
-                   Mass = "474"
+                   Mass = "474",
+                   ImageUrls = ["PALMS-crane-frame-type-B9-1", "PALMS-crane-frame-type-B9-2", "PALMS-crane-frame-type-B9-3"]
                },
                new FrameType
                {
@@ -62,7 +67,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "Talpaló Z daruhoz",
                    Code = "B10",
                    Price = "3730",
-                   Mass = "520"
+                   Mass = "520",
+                   ImageUrls = ["PALMS-crane-frame-type-B10-1", "PALMS-crane-frame-type-B10-2", "PALMS-crane-frame-type-B10-3"]
                },
                new FrameType
                {
@@ -70,7 +76,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
                    Code = "B11",
                    Price = "7300",
-                   Mass = "772"
+                   Mass = "772",
+                   ImageUrls = ["PALMS-crane-frame-type-B11-1", "PALMS-crane-frame-type-B11-2", "PALMS-crane-frame-type-B11-3"],
+                   VideoUrls = ["ybEUttbOiMU"]
                },
                new FrameType
                {
@@ -78,7 +86,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Name = "FD talpaló",
                    Code = "B1",
                    Price = "725",
-                   Mass = "50"
+                   Mass = "50",
+                   ImageUrls = ["PALMS-crane-frame-type-B1-1", "PALMS-crane-frame-type-B1-2", "PALMS-crane-frame-type-B1-3"]
                }
                );
 

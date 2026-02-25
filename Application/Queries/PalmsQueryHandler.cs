@@ -209,7 +209,6 @@ namespace CalcAppAPI.Application.Queries
             return dto;
         }
 
-        // Refactor: Single method for mapping
         public static Expression<Func<Trailer, PalmsTrailerConfigurationsDto>> ToConfigurationsDto
         => t => new PalmsTrailerConfigurationsDto
         {
@@ -219,7 +218,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             Stanchions = t.Stanchion.Select(x => new StanchionDto
@@ -228,7 +228,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             Propulsions = t.Propulsion.Select(x => new PropulsionDto
@@ -238,7 +239,8 @@ namespace CalcAppAPI.Application.Queries
                 Code = x.Code,
                 Price = x.Price,
                 Description = x.Description,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             Drawbars = t.Drawbar.Select(x => new DrawbarDto
@@ -247,7 +249,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             Platforms = t.Platform.Select(x => new PlatformDto
@@ -256,7 +259,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             OilPumps = t.OilPump.Select(x => new OilPumpDto
@@ -265,7 +269,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             OilTanks = t.OilTank.Select(x => new OilTankDto
@@ -274,7 +279,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             SupportLegs = t.SupportLeg.Select(x => new SupportLegDto
@@ -283,7 +289,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             TrailerLights = t.Light.Select(x => new TrailerLightDto
@@ -292,7 +299,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             Tyres = t.Tyre.Select(x => new TyreDto
@@ -301,7 +309,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             HydroPacks = t.HydroPack.Select(x => new HydroPackDto
@@ -310,7 +319,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             SupplyFormats = t.SupplyFormat.Select(x => new SupplyFormatDto
@@ -319,7 +329,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = x.Name,
                 Code = x.Code,
                 Price = x.Price,
-                ImageUrls = x.ImageUrls
+                ImageUrls = x.ImageUrls,
+                VideoUrls = x.VideoUrls,
             }),
 
             TrailerOilCooler = t.TrailerOilCooler == null ? null : new TrailerOilCoolerDto
@@ -328,7 +339,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.TrailerOilCooler.Name,
                 Code = t.TrailerOilCooler.Code,
                 Price = t.TrailerOilCooler.Price,
-                ImageUrls = t.TrailerOilCooler.ImageUrls
+                ImageUrls = t.TrailerOilCooler.ImageUrls,
+                VideoUrls = t.TrailerOilCooler.VideoUrls,
             },
 
             BolsterLock = t.BolsterLock == null ? null : new BolsterLockDto
@@ -337,7 +349,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.BolsterLock.Name,
                 Code = t.BolsterLock.Code,
                 Price = t.BolsterLock.Price,
-                ImageUrls = t.BolsterLock.ImageUrls
+                ImageUrls = t.BolsterLock.ImageUrls,
+                VideoUrls = t.BolsterLock.VideoUrls,
             },
 
             BBox = t.BBox == null ? null : new BBoxDto
@@ -346,7 +359,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.BBox.Name,
                 Code = t.BBox.Code,
                 Price = t.BBox.Price,
-                ImageUrls = t.BBox.ImageUrls
+                ImageUrls = t.BBox.ImageUrls,
+                VideoUrls = t.BBox.VideoUrls,
             },
 
             DBox = t.DBox == null ? null : new DBoxDto
@@ -355,7 +369,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.DBox.Name,
                 Code = t.DBox.Code,
                 Price = t.DBox.Price,
-                ImageUrls = t.DBox.ImageUrls
+                ImageUrls = t.DBox.ImageUrls,
+                VideoUrls = t.DBox.VideoUrls
             },
 
             HayBaleFrame = t.HayBaleFrame == null ? null : new HayBaleFrameDto
@@ -364,7 +379,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.HayBaleFrame.Name,
                 Code = t.HayBaleFrame.Code,
                 Price = t.HayBaleFrame.Price,
-                ImageUrls = t.HayBaleFrame.ImageUrls
+                ImageUrls = t.HayBaleFrame.ImageUrls,
+                VideoUrls = t.HayBaleFrame.VideoUrls
             },
 
             WoodSorter = t.WoodSorter == null ? null : new WoodSorterDto
@@ -373,7 +389,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.WoodSorter.Name,
                 Code = t.WoodSorter.Code,
                 Price = t.WoodSorter.Price,
-                ImageUrls = t.WoodSorter.ImageUrls
+                ImageUrls = t.WoodSorter.ImageUrls,
+                VideoUrls = t.WoodSorter.VideoUrls
             },
 
             HandBrake = t.HandBrake == null ? null : new HandBrakeDto
@@ -382,7 +399,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.HandBrake.Name,
                 Code = t.HandBrake.Code,
                 Price = t.HandBrake.Price,
-                ImageUrls = t.HandBrake.ImageUrls
+                ImageUrls = t.HandBrake.ImageUrls,
+                VideoUrls = t.HandBrake.VideoUrls
             },
 
             ChainsawHolder = t.ChainsawHolder == null ? null : new ChainsawHolderDto
@@ -391,7 +409,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.ChainsawHolder.Name,
                 Code = t.ChainsawHolder.Code,
                 Price = t.ChainsawHolder.Price,
-                ImageUrls = t.ChainsawHolder.ImageUrls
+                ImageUrls = t.ChainsawHolder.ImageUrls,
+                VideoUrls= t.ChainsawHolder.VideoUrls
             },
 
             UnderrunProtection = t.UnderrunProtection == null ? null : new UnderrunProtectionDto
@@ -400,7 +419,8 @@ namespace CalcAppAPI.Application.Queries
                 Code = t.UnderrunProtection.Code,
                 Name = t.UnderrunProtection.Name,
                 Price = t.UnderrunProtection.Price,
-                ImageUrls = t.UnderrunProtection.ImageUrls
+                ImageUrls = t.UnderrunProtection.ImageUrls,
+                VideoUrls = t.UnderrunProtection.VideoUrls
             },
 
             BunkAdapter = t.BunkAdapter == null ? null : new BunkAdapterDto
@@ -409,7 +429,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.BunkAdapter.Name,
                 Code = t.BunkAdapter.Code,
                 Price = t.BunkAdapter.Price,
-                ImageUrls = t.BunkAdapter.ImageUrls
+                ImageUrls = t.BunkAdapter.ImageUrls,
+                VideoUrls = t.BunkAdapter.VideoUrls
             },
 
             BunkExtension = t.BunkExtension == null ? null : new BunkExtensionDto
@@ -418,7 +439,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.BunkExtension.Name,
                 Code = t.BunkExtension.Code,
                 Price = t.BunkExtension.Price,
-                ImageUrls = t.BunkExtension.ImageUrls
+                ImageUrls = t.BunkExtension.ImageUrls,
+                VideoUrls = t.BunkExtension.VideoUrls
             },
 
             ManualBunkExtension = t.ManualBunkExtension == null ? null : new ManualBunkExtensionDto
@@ -427,7 +449,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.ManualBunkExtension.Name,
                 Code = t.ManualBunkExtension.Code,
                 Price = t.ManualBunkExtension.Price,
-                ImageUrls = t.ManualBunkExtension.ImageUrls
+                ImageUrls = t.ManualBunkExtension.ImageUrls,
+                VideoUrls = t.ManualBunkExtension.VideoUrls
             },
 
             FrameExtension = t.FrameExtension == null ? null : new FrameExtensionDto
@@ -436,7 +459,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.FrameExtension.Name,
                 Code = t.FrameExtension.Code,
                 Price = t.FrameExtension.Price,
-                ImageUrls = t.FrameExtension.ImageUrls
+                ImageUrls = t.FrameExtension.ImageUrls,
+                VideoUrls = t.FrameExtension.VideoUrls
             },
 
             Shipping = t.Shipping == null ? null : new ShippingDto
@@ -445,7 +469,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.Shipping.Name,
                 Code = t.Shipping.Code,
                 Price = t.Shipping.Price,
-                ImageUrls = t.Shipping.ImageUrls
+                ImageUrls = t.Shipping.ImageUrls,
+                VideoUrls = t.Shipping.VideoUrls
             },
 
             MOT = t.MOT == null ? null : new MOTDto
@@ -454,7 +479,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.MOT.Name,
                 Code = t.MOT.Code,
                 Price = t.MOT.Price,
-                ImageUrls = t.MOT.ImageUrls
+                ImageUrls = t.MOT.ImageUrls,
+                VideoUrls = t.MOT.VideoUrls
             },
 
             StanchionExtension = t.StanchionExtension == null ? null : new StanchionExtensionDto
@@ -463,7 +489,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.StanchionExtension.Name,
                 Code = t.StanchionExtension.Code,
                 Price = t.StanchionExtension.Price,
-                ImageUrls = t.StanchionExtension.ImageUrls
+                ImageUrls = t.StanchionExtension.ImageUrls,
+                VideoUrls = t.StanchionExtension.VideoUrls
             },
 
             HydroPackControl = t.HydropackControl == null ? null : new HydroPackControlDto
@@ -472,7 +499,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.HydropackControl.Name,
                 Code = t.HydropackControl.Code,
                 Price = t.HydropackControl.Price,
-                ImageUrls = t.HydropackControl.ImageUrls
+                ImageUrls = t.HydropackControl.ImageUrls,
+                VideoUrls = t.HydropackControl.VideoUrls
             },
 
             Toolbox = t.Toolbox == null ? null : new ToolboxDto
@@ -481,7 +509,8 @@ namespace CalcAppAPI.Application.Queries
                 Name = t.Toolbox.Name,
                 Code = t.Toolbox.Code,
                 Price = t.Toolbox.Price,
-                ImageUrls = t.Toolbox.ImageUrls
+                ImageUrls = t.Toolbox.ImageUrls,
+                VideoUrls = t.Toolbox.VideoUrls
             }
         };
     }

@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Elektromos úszó pozíció emelő és fordító funkcióhoz (A11-A41 vezértömbhöz)",
                   Code = "FP",
-                  Price = "1065"
+                  Price = "1065",
+                  ImageUrls = ["PALMS-crane-electrical-floating-1"]
               }
               );
         }

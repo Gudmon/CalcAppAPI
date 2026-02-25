@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
     {
         public static void ConfigureMultiplePalmsPropulsions(this ModelBuilder modelBuilder)
         {
-            //TODO: Propulsion Images on cloudinary
             modelBuilder.Entity<Propulsion>().HasData(
                new Propulsion
                {
@@ -15,7 +14,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                    Code = "RWD",
                    Price = "5280",
-                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség."
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
+                   ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4"]
                },
                new Propulsion
                {
@@ -23,7 +23,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                    Code = "RWD+",
                    Price = "7600",
-                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága."
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
+                   ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4", "PALMS-trailer-propulsion-electronic"]
                },
                new Propulsion
                {
@@ -31,7 +32,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB240 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "24WDF",
                    Price = "13200",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -39,7 +42,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB240 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "24WDRe",
                    Price = "11445",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -47,7 +52,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                    Code = "RWD",
                    Price = "4845",
-                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség."
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
+                   ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4"]
                },
                new Propulsion
                {
@@ -55,7 +61,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Robson WD dörzshajtás elektronikus vezérlőrendszerrel",
                    Code = "RWD+",
                    Price = "7170",
-                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága."
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további vontatásra van szükségük pótkocsijukhoz. Előnyei a hagyományos RWD rendszerekhez képest a jobb tapadás és a sebesség állíthatósága.",
+                   ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4", "PALMS-trailer-propulsion-electronic"]
                },
                new Propulsion
                {
@@ -63,7 +70,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
                    Price = "15585",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -71,7 +80,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
                    Price = "15585",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -79,7 +90,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
                    Price = "13590",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -87,7 +100,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
                    Price = "13590",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -95,7 +110,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz",
                    Code = "45WDB.1",
                    Price = "0",
-                   Description = ""
+                   Description = "",
+                   ImageUrls = ["PALMS-trailer-propulsion-4WD", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"]
                },
                new Propulsion
                {
@@ -103,7 +119,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
                    Price = "15015",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -111,7 +129,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
                    Price = "15015",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -119,7 +139,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
                    Price = "13020",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -127,7 +149,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
                    Price = "13020",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -135,7 +159,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDF",
                    Price = "14660",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -143,7 +169,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
                    Code = "25WDR",
                    Price = "14660",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -151,7 +179,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDFe",
                    Price = "12665",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDF", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -159,7 +189,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
                    Code = "25WDRe",
                    Price = "12665",
-                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen."
+                   Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
+                   ImageUrls = ["PALMS-trailer-propulsion-2WDR", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
+                   VideoUrls = ["LKj7YS_M13E"]
                },
                new Propulsion
                {
@@ -167,7 +199,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4WD BlackBruin hajtás elektronikus vezérléssel",
                    Code = "45WDB",
                    Price = "0",
-                   Description = ""
+                   Description = "",
+                   ImageUrls = ["PALMS-trailer-propulsion-4WD", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"],
                },
                new Propulsion
                {
@@ -175,7 +208,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "4WD BlackBruin hajtás elektronikus vezérléssel ISOBUS-hoz",
                    Code = "45WDB.1",
                    Price = "1135",
-                   Description = ""
+                   Description = "",
+                   ImageUrls = ["PALMS-trailer-propulsion-4WD", "PALMS-trailer-propulsion-2WD-4WD-1", "PALMS-trailer-propulsion-2WD-4WD-2"]
                },
                //PALMS 2D
                new Propulsion
@@ -184,7 +218,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                    Code = "RWD",
                    Price = "2185",
-                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség."
+                   Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
+                   ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4"]
                }
                );
         }

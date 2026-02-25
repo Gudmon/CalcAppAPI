@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "3 pontos csatlakozó adapter (csak a B9 és B10 talpalóval kompatibilis)",
                   Code = "3PL",
-                  Price = "960"
+                  Price = "960",
+                  ImageUrls = ["PALMS-crane-linkage-1"]
               }
               );
         }

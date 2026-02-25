@@ -14,6 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Aláfutásgátló D-típushoz, hátsó lámpa és rendszámtartó",
                    Code = "RUP1",
                    Price = "1040",
+                   ImageUrls = ["PALMS-trailer-underrun-protection-1", "PALMS-trailer-underrun-protection-2"]
                },
                new UnderrunProtection
                {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "Aláfutásgátló S és U-típushoz, hátsó lámpa és rendszámtartó",
                    Code = "RUP2",
                    Price = "1040",
+                   ImageUrls = ["PALMS-trailer-underrun-protection-1", "PALMS-trailer-underrun-protection-2"]
                }
                );
         }

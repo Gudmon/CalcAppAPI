@@ -13,7 +13,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "A21-A42 vezértömb a főgémhez erősítve",
                   Code = "AH",
-                  Price = "0"
+                  Price = "0",
+                  ImageUrls = ["PALMS-crane-valve-block-1", "PALMS-crane-valve-block-2"]
               }
               );
         }

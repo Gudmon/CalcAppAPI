@@ -13,14 +13,16 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Nagynyomású olajszűrő",
                   Code = "HPF",
-                  Price = "0"
+                  Price = "0",
+                  ImageUrls = ["PALMS-crane-high-performance-filter-1", "PALMS-crane-high-performance-filter-2"]
               },
               new HighPerformanceOilFilter
               {
                   Id = 2,
                   Name = "Nagynyomású olajszűrő",
                   Code = "HPF",
-                  Price = "395"
+                  Price = "395",
+                  ImageUrls = ["PALMS-crane-high-performance-filter-1", "PALMS-crane-high-performance-filter-2"]
               }
               );
         }
