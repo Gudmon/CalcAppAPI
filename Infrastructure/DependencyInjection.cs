@@ -2,6 +2,7 @@
 using CalcAppAPI.Domain.Entities.Email;
 using CalcAppAPI.Infrastructure.KeyVault;
 using CalcAppAPI.Infrastructure.Options;
+using CalcAppAPI.Models.Email;
 using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Infrastructure
@@ -23,6 +24,8 @@ namespace CalcAppAPI.Infrastructure
             var toEmailAddress = await secretProvider.GetSecretAsync("ToEmailAddress");
             var toEmailAddressTest = await secretProvider.GetSecretAsync("ToEmailAddressTest");
             var fromEmailPw = await secretProvider.GetSecretAsync("FromEmailPassword");
+            var machineryPhoneNumber = await secretProvider.GetSecretAsync("MachineryPhoneNr");
+            var officePhoneNumber = await secretProvider.GetSecretAsync("OfficePhoneNr");
 
             services.AddDbContext<DataContext>(options =>
             {
@@ -41,6 +44,11 @@ namespace CalcAppAPI.Infrastructure
                 options.FromEmailPw = fromEmailPw.Trim('"');
                 options.SmtpHost = "smtp.gmail.com";
                 options.SmtpPort = 587;
+            });
+            services.Configure<PhoneOptions>(options =>
+            {
+                options.MachineryPhoneNr = machineryPhoneNumber.Trim('"');
+                options.OfficePhoneNr = officePhoneNumber.Trim('"');
             });
         }
     }

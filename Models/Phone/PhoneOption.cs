@@ -2,6 +2,7 @@
 {
     public class PhoneOptions
     {
-        public IEnumerable<string> PhoneNumbers { get; set; } = Enumerable.Empty<string>();
+        public string MachineryPhoneNr { get; set; } = string.Empty;
+        public string OfficePhoneNr { get; set; } = string.Empty;
     }
 }

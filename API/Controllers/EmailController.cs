@@ -23,8 +23,10 @@ namespace CalcAppAPI.API.Controllers
         {
             try
             {
-                await _emailSender.SendEmailAsync(email, cancellationToken);
-                return Ok(new { message = "Email sent succesfully" });
+                await _emailSender.SendDealerEmailAsync(email, cancellationToken);
+                await _emailSender.SendUserEmailAsync(email, cancellationToken);
+
+                return Ok(new { message = "Emails sent successfully" });
             }
             catch (EmailSendException ex)
             {
@@ -41,18 +43,6 @@ namespace CalcAppAPI.API.Controllers
                         header = ex.Header,
                         message = ex.Message,
                         blobName = ex.BlobName
-                    }
-                );
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Unexpected error during email sending");
-                return StatusCode(
-                    StatusCodes.Status500InternalServerError,
-                    new
-                    {
-                        header = "Ismeretlen hiba",
-                        message = "Váratlan hiba történt. Kérjük, próbálja meg később."
                     }
                 );
             }

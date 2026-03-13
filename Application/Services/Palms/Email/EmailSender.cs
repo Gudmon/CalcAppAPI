@@ -24,7 +24,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
         }
 
 
-        public async Task SendEmailAsync(EmailData email, CancellationToken cancellationToken)
+        public async Task SendDealerEmailAsync(EmailData email, CancellationToken cancellationToken)
         {
             string fromMail = _emailOptions.FromEmailAddress;
             //string toMail = _emailOptions.ToEmailAddressTest;
@@ -102,21 +102,116 @@ namespace CalcAppAPI.Application.Services.Palms.Email
             }
             catch (Exception ex)
             {
-                var phones = string.Join(" / ", _phoneOptions.PhoneNumbers);
-
                 throw new EmailSendException(
                     header: "E-mail küldési hiba",
                     message: string.Format(
-                        "Az e-mail nem került elküldésre. Kérem jelezze a megadott elérhetőségek egyikén az 'Ön azonosítója megadásával': {0} / {1}. Az Ön azonosítója: {2}",
-                        _emailOptions.ToEmailAddress,
-                        phones,
+                        "Az e-mail nem került elküldésre. Kérem jelezze a megadott elérhetőségek egyikén ({0} / {1}) az alábbi azonosító megadásával: {2}",
+                        _phoneOptions.MachineryPhoneNr,
+                        _phoneOptions.OfficePhoneNr,
                         email.BlobName
                     ),
                     blobName: email.BlobName,
                     inner: ex
                 );
             }
+        }
 
+        public async Task SendUserEmailAsync(EmailData email, CancellationToken cancellationToken)
+        {
+            string fromMail = _emailOptions.FromEmailAddress;
+            //string toMail = _emailOptions.ToEmailAddressTest;
+            string toMail = email.FromEmail;
+            string ccMail = _emailOptions.ToEmailAddressTest;
+
+            var emailToSend = new MimeMessage();
+
+            emailToSend.From.Add(new MailboxAddress("", fromMail));
+            emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
+            //emailToSend.Cc.Add(new MailboxAddress("", ccMail));
+
+            emailToSend.Subject = "PALMS" + " " + email.Subject;
+
+            string formattedBody = $@"
+                Kedves {email.Name}!<br/><br/>
+                Köszönjük, hogy kalkulátorunk segítségével összeállította egyedi megoldását.<br/><br/>
+                Az Ön által generált konfigurációt mellékelten küldjük ebben az e-mailben.<br/>
+                A kalkuláció azonosítója: {email.Subject.Split('-')[1].Trim('"')}<br/><br/>
+
+                Amennyiben kérdése merülne fel, készséggel állunk rendelkezésére:<br/><br/>
+
+                Gépek: {_phoneOptions.MachineryPhoneNr}<br/>
+                Iroda: {_phoneOptions.OfficePhoneNr}<br/>
+                E-mail: {_emailOptions.ToEmailAddress}<br/><br/>
+
+                Nyitvatartás (előzetes telefonos egyeztetés alapján!):<br/>
+                Hétfő – Péntek: 08:00 – 17:00<br/>
+                Szombat: 08:00 – 12:00<br/>
+                Vasárnap: Zárva<br/><br/>
+
+                Ne maradjon le az új gépbeszerzési pályázatról!<br/>
+                https://kap.gov.hu/tarsadalmasitas/kap-rd40-rd12-1-25-versenykepes-erdogazdalkodast-szolgalo-beruhazasok-tamogatasa<br/><br/>
+
+                Üdvözlettel,<br/>
+                Clear-Globe csapata
+                ";
+
+            var multipart = new Multipart("mixed");
+            multipart.Add(new TextPart(MimeKit.Text.TextFormat.Html)
+            {
+                Text = formattedBody
+            });
+
+            if (!string.IsNullOrEmpty(email.BlobName))
+            {
+                var userPdfBytes = await _userPdfGenerator.GetPdfAsync(email.BlobName, cancellationToken);
+                if (userPdfBytes != null)
+                {
+                    var userPdfAttachment = new MimePart("application", "pdf")
+                    {
+                        Content = new MimeContent(new MemoryStream(userPdfBytes)),
+                        ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                        ContentTransferEncoding = ContentEncoding.Base64,
+                        FileName = $"{email.BlobName}.pdf"
+                    };
+                    multipart.Add(userPdfAttachment);
+                }
+            }
+
+            emailToSend.Body = multipart;
+
+            try
+            {
+                using (var smtp = new SmtpClient())
+                {
+                    smtp.CheckCertificateRevocation = false;
+
+                    await smtp.ConnectAsync(
+                        _emailOptions.SmtpHost,
+                        _emailOptions.SmtpPort,
+                         MailKit.Security.SecureSocketOptions.StartTls);
+
+                    await smtp.AuthenticateAsync(
+                        _emailOptions.FromEmailAddress,
+                        _emailOptions.FromEmailPw);
+
+                    await smtp.SendAsync(emailToSend);
+                    await smtp.DisconnectAsync(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new EmailSendException(
+                    header: "E-mail küldési hiba",
+                    message: string.Format(
+                        "Az e-mail nem került elküldésre. Kérem jelezze a megadott elérhetőségek egyikén ({0} / {1}) az alábbi azonosító megadásával: {2}",
+                        _phoneOptions.MachineryPhoneNr,
+                        _phoneOptions.OfficePhoneNr,
+                        email.BlobName
+                    ),
+                    blobName: email.BlobName,
+                    inner: ex
+                );
+            }
         }
     }
 }

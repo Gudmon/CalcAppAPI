@@ -53,7 +53,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                new Tyre
                {
                    Id = 7,
-                   Name = "500/55-22,5 RF-felni, 8 lyukas, BKT",
+                   Name = "500/50-22,5 RF-felni, 8 lyukas, BKT",
                    Code = "WH8.8",
                    Price = "3770",
                },

@@ -4,6 +4,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
 {
     public interface IEmailSender
     {
-        Task SendEmailAsync(EmailData email, CancellationToken cancellationToken);
+        Task SendDealerEmailAsync(EmailData email, CancellationToken cancellationToken);
+        Task SendUserEmailAsync(EmailData email, CancellationToken cancellationToken);
     }
 }
