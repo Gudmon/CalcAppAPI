@@ -29,7 +29,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 3,
                    Name = "Hydropack 6,5 lóerő - 12 l/min, 4 szekciós + elektronikus indítás és akkumulátor",
                    Code = "HyP4+",
-                   Price = "1510",
+                   Price = "2510",
                    ImageUrls = ["PALMS-trailer-hydropack-HyP4+-1"]
                });
         }
