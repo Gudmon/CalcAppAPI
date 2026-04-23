@@ -37,7 +37,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                new FrameType
                {
                    Id = 4,
-                   Name = "FD típusú economy talpaló",
+                   Name = "FD típusú economy talpaló (csak 7SX, 8SX és 9SC pótkocsikhoz)",
                    Code = "B4",
                    Price = "2100",
                    Mass = "237",
