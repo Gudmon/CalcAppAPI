@@ -21,8 +21,8 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
         public async Task SendEmailAsync(EmailData email)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            string toMail = "gudmonmarcellwork@gmail.com";
-            //string toMail = "info@clear-globe.com";
+            //string toMail = "gudmonmarcellwork@gmail.com";
+            string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
 
             var emailToSend = new MimeMessage();
@@ -31,7 +31,7 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
             emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
-            emailToSend.Subject = "KRPAN" + " " + email.Subject + " - " + email.FromEmail + " - " + email.Name;
+            emailToSend.Subject = "KRPAN" + " " + " - " + email.FromEmail + " - " + email.Name;
 
             string formattedBody = $"{email.Body}" +
                 $"<br/><br/>Név: {email.Name}" +
@@ -88,8 +88,8 @@ namespace CalcAppAPI.Application.Services.Krpan.Email
         public async Task SendEmailAsync(IFormFile file)
         {
             string fromMail = "clearglobecalculator@gmail.com";
-            string toMail = "gudmonmarcellwork@gmail.com";
-            //string toMail = "info@clear-globe.com";
+            //string toMail = "gudmonmarcellwork@gmail.com";
+            string toMail = "info@clear-globe.com";
             string ccMail = "clearglobecalculator@gmail.com";
 
             var emailToSend = new MimeMessage();

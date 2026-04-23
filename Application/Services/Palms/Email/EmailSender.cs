@@ -37,7 +37,17 @@ namespace CalcAppAPI.Application.Services.Palms.Email
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
             emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
-            emailToSend.Subject = "PALMS" + " " + email.Subject + " - " + email.FromEmail + " - " + email.Name;
+            var parts = new List<string>();
+
+            if (!string.IsNullOrWhiteSpace(email.TrailerName))
+                parts.Add(email.TrailerName);
+
+            if (!string.IsNullOrWhiteSpace(email.CraneName))
+                parts.Add(email.CraneName);
+
+            var equipment = parts.Any() ? string.Join("+", parts) : "";
+
+            emailToSend.Subject = $"PALMS Sikeres kalkuláció - {equipment} - {email.PdfId} - {email.FromEmail} - {email.Name}";
 
             string formattedBody = $"{email.Body}" +
                 $"<br/><br/>Név: {email.Name}" +
@@ -60,7 +70,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
                         Content = new MimeContent(new MemoryStream(dealerPdfBytes)),
                         ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                         ContentTransferEncoding = ContentEncoding.Base64,
-                        FileName = $"{email.BlobName}-clear-globe.pdf"
+                        FileName = $"{email.Name}-{equipment}-{email.BlobName}-clear-globe.pdf"
                     };
                     multipart.Add(dealerPdfAttachment);
                 }
@@ -73,7 +83,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
                         Content = new MimeContent(new MemoryStream(userPdfBytes)),
                         ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                         ContentTransferEncoding = ContentEncoding.Base64,
-                        FileName = $"{email.BlobName}.pdf"
+                        FileName = $"{email.Name}-{equipment}-{email.BlobName}.pdf"
                     };
                     multipart.Add(userPdfAttachment);
                 }
@@ -129,13 +139,23 @@ namespace CalcAppAPI.Application.Services.Palms.Email
             emailToSend.To.Add(new MailboxAddress("Receiver Name", toMail));
             //emailToSend.Cc.Add(new MailboxAddress("", ccMail));
 
-            emailToSend.Subject = "PALMS" + " " + email.Subject;
+            var parts = new List<string>();
+
+            if (!string.IsNullOrWhiteSpace(email.TrailerName))
+                parts.Add(email.TrailerName);
+
+            if (!string.IsNullOrWhiteSpace(email.CraneName))
+                parts.Add(email.CraneName);
+
+            var equipment = parts.Any() ? string.Join("+", parts) : "";
+
+            emailToSend.Subject = $"PALMS Sikeres kalkuláció - {email.Name} - {equipment} - {email.PdfId}";
 
             string formattedBody = $@"
                 Kedves {email.Name}!<br/><br/>
                 Köszönjük, hogy kalkulátorunk segítségével összeállította egyedi megoldását.<br/><br/>
                 Az Ön által generált konfigurációt mellékelten küldjük ebben az e-mailben.<br/>
-                A kalkuláció azonosítója: {email.Subject.Split('-')[1].Trim('"')}<br/><br/>
+                A kalkuláció azonosítója: {email.PdfId}<br/><br/>
 
                 Amennyiben kérdése merülne fel, készséggel állunk rendelkezésére:<br/><br/>
 
@@ -171,7 +191,7 @@ namespace CalcAppAPI.Application.Services.Palms.Email
                         Content = new MimeContent(new MemoryStream(userPdfBytes)),
                         ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                         ContentTransferEncoding = ContentEncoding.Base64,
-                        FileName = $"{email.BlobName}.pdf"
+                        FileName = $"{email.Name}-{equipment}-{email.BlobName}.pdf"
                     };
                     multipart.Add(userPdfAttachment);
                 }

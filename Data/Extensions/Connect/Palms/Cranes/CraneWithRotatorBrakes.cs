@@ -15,22 +15,22 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                     (
                         //PALMS 2.42
                         new { CraneId = 1, RotatorBrakeId = 1 },
-                        new { CraneId = 1, RotatorBrakeId = 3 },
+                        new { CraneId = 1, RotatorBrakeId = 2 },
                         new { CraneId = 1, RotatorBrakeId = 4 },
 
                         //PALMS 2.54
                         new { CraneId = 2, RotatorBrakeId = 1 },
-                        new { CraneId = 2, RotatorBrakeId = 3 },
+                        new { CraneId = 2, RotatorBrakeId = 2 },
                         new { CraneId = 2, RotatorBrakeId = 4 },
 
                         //PALMS 3.61
                         new { CraneId = 3, RotatorBrakeId = 1 },
-                        new { CraneId = 3, RotatorBrakeId = 3 },
+                        new { CraneId = 3, RotatorBrakeId = 2 },
                         new { CraneId = 3, RotatorBrakeId = 4 },
 
                         //PALMS 3.67
                         new { CraneId = 4, RotatorBrakeId = 1 },
-                        new { CraneId = 4, RotatorBrakeId = 3 },
+                        new { CraneId = 4, RotatorBrakeId = 2 },
                         new { CraneId = 4, RotatorBrakeId = 4 },
 
                         //PALMS 4.71
