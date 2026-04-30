@@ -27,7 +27,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                new OilTank
                {
                    Id = 3,
-                   Name = "95 l-es olajtartály HVLP olajjal, elzáró csappal",
+                   Name = "95 l-es olajtartály elzáró csappal",
                    Code = "T2SOV",
                    Price = "1200",
                    ImageUrls = ["PALMS-trailer-oiltank-T2SOV-T2SOV+"]
