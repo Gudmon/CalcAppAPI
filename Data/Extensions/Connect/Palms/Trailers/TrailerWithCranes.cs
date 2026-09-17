@@ -141,9 +141,11 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 16, CraneId = 5 },
                         new { TrailerId = 16, CraneId = 6 },
                         new { TrailerId = 16, CraneId = 7 },
-                        new { TrailerId = 16, CraneId = 8 }
+                        new { TrailerId = 16, CraneId = 8 },
+                        new { TrailerId = 16, CraneId = 9 },
+                        new { TrailerId = 16, CraneId = 10 },
+                        new { TrailerId = 16, CraneId = 11 }
                     )
-
                 );
         }
     }
