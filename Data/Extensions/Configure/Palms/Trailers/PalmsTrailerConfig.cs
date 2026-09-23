@@ -656,7 +656,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     StanchionExtensionId = null,
                     ImageUrls = ["PALMS-11UX-1", "PALMS-11UX-2", "PALMS-11UX-3", "PALMS-11UX-4",
                         "PALMS-11UX-5", "PALMS-11UX-6", "PALMS-11UX-7", "PALMS-11UX-8"],
-                    VideoUrls = ["Wl0s4WdzNDM"]
+                    VideoUrls = ["Wl0s4WdzNDM", "kHSq-CN9i3k"]
                 }
             );
         }

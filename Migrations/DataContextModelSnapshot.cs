@@ -6910,7 +6910,7 @@ namespace CalcAppAPI.Migrations
                             ToolboxId = 1,
                             TotalLength = "6285",
                             TrailerOilCoolerId = 1,
-                            VideoUrls = "[\"Wl0s4WdzNDM\"]",
+                            VideoUrls = "[\"Wl0s4WdzNDM\",\"kHSq-CN9i3k\"]",
                             WidthWithStandardWheels = "2312"
                         });
                 });
