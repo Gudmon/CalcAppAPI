@@ -11,44 +11,85 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanTyre
                 {
                     Id = 1,
-                    Name = "400/60-15,5; 14 rétegű",
+                    Name = "300/80-15,3”; 14 rétegű",
                     Code = "",
                     Price = "0",
                 },
                 new KrpanTyre
                 {
                     Id = 2,
-                    Name = "400/60-15,5; 18 rétegű",
+                    Name = "400/60-15,5”; 16 rétegű",
                     Code = "",
                     Price = "0",
                 },
                 new KrpanTyre
                 {
                     Id = 3,
-                    Name = "480/45-17; 14 rétegű",
+                    Name = "400/60-15,5”; 18 rétegű (BKT)",
                     Code = "",
-                    Price = "1435",
+                    Price = "214,00",
                 },
                 new KrpanTyre
                 {
                     Id = 4,
-                    Name = "500/50-17; 18 rétegű",
+                    Name = "400/60-15,5”; 18 rétegű (BKT)",
                     Code = "",
-                    Price = "1435",
+                    Price = "883,00",
                 },
                 new KrpanTyre
                 {
                     Id = 5,
-                    Name = "550/45-22,5; 20 rétegű",
+                    Name = "400/55-22,5”; 16 rétegű (BKT)",
                     Code = "",
-                    Price = "3050",
+                    Price = "2347,00",
                 },
                 new KrpanTyre
                 {
                     Id = 6,
-                    Name = "400/55-22,5; 20 rétegű",
+                    Name = "480/45-17”; 14 rétegű",
                     Code = "",
-                    Price = "3050",
+                    Price = "1097,00",
+                },
+                new KrpanTyre
+                {
+                    Id = 7,
+                    Name = "480/45-17”; 14 rétegű",
+                    Code = "",
+                    Price = "1084,23",
+                },
+                new KrpanTyre
+                {
+                    Id = 8,
+                    Name = "500/50-17”; 18 rétegű",
+                    Code = "",
+                    Price = "1403,33",
+                },
+                new KrpanTyre
+                {
+                    Id = 9,
+                    Name = "500/50-17”; 18 rétegű (BKT)",
+                    Code = "",
+                    Price = "1616,33",
+                }, new KrpanTyre
+                {
+                    Id = 10,
+                    Name = "550/45-22,5”; 20 rétegű",
+                    Code = "",
+                    Price = "2989,17",
+                },
+                new KrpanTyre
+                {
+                    Id = 11,
+                    Name = "550/45-22,5”; Traktorprofilú",
+                    Code = "",
+                    Price = "4014,29",
+                },
+                new KrpanTyre
+                {
+                    Id = 12,
+                    Name = "600/50-22,5”; 16 rétegű",
+                    Code = "",
+                    Price = "3460,99",
                 }
                 );
         }

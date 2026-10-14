@@ -1,6 +1,8 @@
 ﻿using CalcAppAPI.Data.Extensions.Configure.Krpan;
+using CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes;
 using CalcAppAPI.Data.Extensions.Configure.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Configure.Palms.Trailers;
+using CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers;
 using CalcAppAPI.Data.Extensions.Connect.Palms.Cranes;
 using CalcAppAPI.Data.Extensions.Connect.Palms.Trailers;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
@@ -110,10 +112,14 @@ namespace CalcAppAPI.Data
         {
             modelBuilder.ConfigureAllPalmsTrailerOptions();
             modelBuilder.ConfigureAllPalmsCraneOptions();
+
             modelBuilder.ConnectAllPalmsTrailerOptions();
             modelBuilder.ConnectAllPalmsCraneOptions();
 
-            modelBuilder.ConfigureAllKrpanMachineOptions();
+            modelBuilder.ConfigureAllKrpanTrailerOptions();
+            modelBuilder.ConfigureAllKrpanCraneOptions();
+
+            modelBuilder.ConnectAllKrpanTrailerOptions();
 
             base.OnModelCreating(modelBuilder);
         }

@@ -11,30 +11,79 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanBrake
                 {
                     Id = 1,
-                    Name = "Hidraulikus fék 4 keréken",
+                    Name = "Hidraulikus fék 2 keréken",
                     Code = "",
                     Price = "0",
                 },
                 new KrpanBrake
                 {
                     Id = 2,
-                    Name = "Pneumatikus fék 4 keréken",
+                    Name = "Hidraulikus fék 4 keréken",
                     Code = "",
-                    Price = "2160",
+                    Price = "0",
                 },
                 new KrpanBrake
                 {
                     Id = 3,
-                    Name = "Kombinált fék 4 keréken (hidraulikus és ráfutófék)",
+                    Name = "Hidraulikus fék (mind a 4 keréken)",
                     Code = "",
-                    Price = "2160",
+                    Price = "383,33",
                 },
                 new KrpanBrake
                 {
                     Id = 4,
-                    Name = "Kombinált fék 4 keréken (hidraulikus és pneumatikus)",
+                    Name = "Hidraulikus fék vészfék funkcióval",
                     Code = "",
-                    Price = "4140",
+                    Price = "620,00",
+                },
+                new KrpanBrake
+                {
+                    Id = 5,
+                    Name = "Hidraulikus + ráfutófék (mind a 4 keréken)",
+                    Code = "",
+                    Price = "1620,00",
+                },
+                new KrpanBrake
+                {
+                    Id = 6,
+                    Name = "Pneumatikus fék(mind a 4 keréken)",
+                    Code = "",
+                    Price = "1620,00",
+                },
+                new KrpanBrake
+                {
+                    Id = 7,
+                    Name = "Hidraulikus fék vészfék funkcióval",
+                    Code = "",
+                    Price = "562,50",
+                },
+                new KrpanBrake
+                {
+                    Id = 8,
+                    Name = "Kétkörös hidraulikus fékrendszer",
+                    Code = "",
+                    Price = "2884,00",
+                },
+                new KrpanBrake
+                {
+                    Id = 9,
+                    Name = "Ráfutófék",
+                    Code = "",
+                    Price = "2118,33",
+                },
+                new KrpanBrake
+                {
+                    Id = 10,
+                    Name = "Pneumatikus fék (mind a 4 keréken)",
+                    Code = "",
+                    Price = "1722,00",
+                },
+                new KrpanBrake
+                {
+                    Id = 11,
+                    Name = "Kombinált fék (mind a 4 keréken - hidraulikus + pneumatikus)",
+                    Code = "",
+                    Price = "3166,00",
                 }
                 );
         }

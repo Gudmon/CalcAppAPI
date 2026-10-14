@@ -770,29 +770,78 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "Hidraulikus fék 4 keréken",
+                            Name = "Hidraulikus fék 2 keréken",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
                             Code = "",
-                            Name = "Pneumatikus fék 4 keréken",
-                            Price = "2160"
+                            Name = "Hidraulikus fék 4 keréken",
+                            Price = "0"
                         },
                         new
                         {
                             Id = 3,
                             Code = "",
-                            Name = "Kombinált fék 4 keréken (hidraulikus és ráfutófék)",
-                            Price = "2160"
+                            Name = "Hidraulikus fék (mind a 4 keréken)",
+                            Price = "383,33"
                         },
                         new
                         {
                             Id = 4,
                             Code = "",
-                            Name = "Kombinált fék 4 keréken (hidraulikus és pneumatikus)",
-                            Price = "4140"
+                            Name = "Hidraulikus fék vészfék funkcióval",
+                            Price = "620,00"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "",
+                            Name = "Hidraulikus + ráfutófék (mind a 4 keréken)",
+                            Price = "1620,00"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "",
+                            Name = "Pneumatikus fék(mind a 4 keréken)",
+                            Price = "1620,00"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "",
+                            Name = "Hidraulikus fék vészfék funkcióval",
+                            Price = "562,50"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "",
+                            Name = "Kétkörös hidraulikus fékrendszer",
+                            Price = "2884,00"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "",
+                            Name = "Ráfutófék",
+                            Price = "2118,33"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "",
+                            Name = "Pneumatikus fék (mind a 4 keréken)",
+                            Price = "1722,00"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "",
+                            Name = "Kombinált fék (mind a 4 keréken - hidraulikus + pneumatikus)",
+                            Price = "3166,00"
                         });
                 });
 
@@ -1634,43 +1683,85 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "400/60-15,5; 14 rétegű",
+                            Name = "300/80-15,3”; 14 rétegű",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
                             Code = "",
-                            Name = "400/60-15,5; 18 rétegű",
+                            Name = "400/60-15,5”; 16 rétegű",
                             Price = "0"
                         },
                         new
                         {
                             Id = 3,
                             Code = "",
-                            Name = "480/45-17; 14 rétegű",
-                            Price = "1435"
+                            Name = "400/60-15,5”; 18 rétegű (BKT)",
+                            Price = "214,00"
                         },
                         new
                         {
                             Id = 4,
                             Code = "",
-                            Name = "500/50-17; 18 rétegű",
-                            Price = "1435"
+                            Name = "400/60-15,5”; 18 rétegű (BKT)",
+                            Price = "883,00"
                         },
                         new
                         {
                             Id = 5,
                             Code = "",
-                            Name = "550/45-22,5; 20 rétegű",
-                            Price = "3050"
+                            Name = "400/55-22,5”; 16 rétegű (BKT)",
+                            Price = "2347,00"
                         },
                         new
                         {
                             Id = 6,
                             Code = "",
-                            Name = "400/55-22,5; 20 rétegű",
-                            Price = "3050"
+                            Name = "480/45-17”; 14 rétegű",
+                            Price = "1097,00"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "",
+                            Name = "480/45-17”; 14 rétegű",
+                            Price = "1084,23"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "",
+                            Name = "500/50-17”; 18 rétegű",
+                            Price = "1403,33"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "",
+                            Name = "500/50-17”; 18 rétegű (BKT)",
+                            Price = "1616,33"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "",
+                            Name = "550/45-22,5”; 20 rétegű",
+                            Price = "2989,17"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "",
+                            Name = "550/45-22,5”; Traktorprofilú",
+                            Price = "4014,29"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Code = "",
+                            Name = "600/50-22,5”; 16 rétegű",
+                            Price = "3460,99"
                         });
                 });
 
@@ -7456,6 +7547,46 @@ namespace CalcAppAPI.Migrations
                             SystemPressure = "230",
                             TelescopicStages = "2",
                             Weight = "1855"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BrutLiftingTorque = "",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "",
+                            LiftCapacityAtMaxReach = "",
+                            MaxReach = "",
+                            MaxReachWithGrabOpen = "",
+                            Name = "GD 5,6 K",
+                            NetLiftingTorque = "",
+                            OilQuantityInTank = "",
+                            Price = "10149,47",
+                            SlewCylinders = "",
+                            SlewTorque = "",
+                            SlewingAngle = "",
+                            SystemPressure = "",
+                            TelescopicStages = "",
+                            Weight = ""
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BrutLiftingTorque = "",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "",
+                            LiftCapacityAtMaxReach = "",
+                            MaxReach = "",
+                            MaxReachWithGrabOpen = "",
+                            Name = "GD 6,2 K",
+                            NetLiftingTorque = "",
+                            OilQuantityInTank = "",
+                            Price = "11735,30",
+                            SlewCylinders = "",
+                            SlewTorque = "",
+                            SlewingAngle = "",
+                            SystemPressure = "",
+                            TelescopicStages = "",
+                            Weight = ""
                         });
                 });
 
@@ -7476,11 +7607,9 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DrawbarAngle")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FrameSteeringCylinders")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("KrpanAdjustableDriveId")
@@ -7668,7 +7797,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
                             Name = "GP 8 DF",
-                            Price = "10300",
+                            Price = "10904,40",
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
@@ -7703,7 +7832,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
                             Name = "GP 9 DF",
-                            Price = "10865",
+                            Price = "11502,00",
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
@@ -7738,7 +7867,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
                             Name = "GP 10 DF",
-                            Price = "11430",
+                            Price = "12177,08",
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
@@ -7774,7 +7903,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
                             Name = "GP 12 DF",
-                            Price = "13060",
+                            Price = "13127,08",
                             TotalLength = "6209",
                             TotalLengthWithExtension = "7100",
                             TotalWidth = "2122",
@@ -7810,7 +7939,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
                             Name = "GP 14 DF",
-                            Price = "14915",
+                            Price = "14619,17",
                             TotalLength = "6559",
                             TotalLengthWithExtension = "7545",
                             TotalWidth = "2222",
@@ -7845,7 +7974,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3707",
                             LoadingLengthWithExtension = "4487",
                             Name = "GP 11 D",
-                            Price = "13510",
+                            Price = "13241,67",
                             TotalLength = "5944",
                             TotalLengthWithExtension = "6724",
                             TotalWidth = "2152",
@@ -7882,7 +8011,7 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
                             Name = "GP 13 D",
-                            Price = "15310",
+                            Price = "15010,00",
                             TotalLength = "6334",
                             TotalLengthWithExtension = "7144",
                             TotalWidth = "2200",
@@ -7920,11 +8049,117 @@ namespace CalcAppAPI.Migrations
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
                             Name = "GP 15 D",
-                            Price = "16960",
+                            Price = "16625,83",
                             TotalLength = "6686",
                             TotalLengthWithExtension = "6686",
                             TotalWidth = "2318",
                             Weight = "2352"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CentralBeams = "140x8",
+                            Description = "",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "6000",
+                            LoadingLength = "3407",
+                            LoadingLengthWithExtension = "4007",
+                            Name = "GP 6 XS",
+                            Price = "6243,72",
+                            TotalLength = "5583",
+                            TotalLengthWithExtension = "6259",
+                            TotalWidth = "1824",
+                            Weight = "1090"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CentralBeams = "140x8",
+                            Description = "",
+                            DrawbarAngle = "35",
+                            FrameSteeringCylinders = "1",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "7000",
+                            LoadingLength = "3407",
+                            LoadingLengthWithExtension = "4007",
+                            Name = "GP 7 XS",
+                            Price = "6882,00",
+                            TotalLength = "5620",
+                            TotalLengthWithExtension = "6284",
+                            TotalWidth = "1824",
+                            Weight = "1115"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CentralBeams = "140x8",
+                            Description = "",
+                            DrawbarAngle = "35",
+                            FrameSteeringCylinders = "1",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "8000",
+                            LoadingLength = "3407",
+                            LoadingLengthWithExtension = "4007",
+                            Name = "GP 8 XS",
+                            Price = "7022,00",
+                            TotalLength = "5620",
+                            TotalLengthWithExtension = "6284",
+                            TotalWidth = "1824",
+                            Weight = "1115"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CentralBeams = "160x6",
+                            Description = "",
+                            DrawbarAngle = "40",
+                            FrameSteeringCylinders = "2",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "8000",
+                            LoadingLength = "3600",
+                            LoadingLengthWithExtension = "4400",
+                            Name = "GP 8 S",
+                            Price = "8353,33",
+                            TotalLength = "5939",
+                            TotalLengthWithExtension = "6723",
+                            TotalWidth = "2050",
+                            Weight = "1190"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CentralBeams = "160x6",
+                            Description = "",
+                            DrawbarAngle = "+40",
+                            FrameSteeringCylinders = "2",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "9000",
+                            LoadingLength = "3600",
+                            LoadingLengthWithExtension = "4400",
+                            Name = "GP 9 S",
+                            Price = "9193,33",
+                            TotalLength = "5939",
+                            TotalLengthWithExtension = "6723",
+                            TotalWidth = "2050",
+                            Weight = "1220"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CentralBeams = "160x6",
+                            Description = "",
+                            DrawbarAngle = "40",
+                            FrameSteeringCylinders = "2",
+                            KrpanHandBrakeId = 1,
+                            LoadCapacity = "10000",
+                            LoadingLength = "3600",
+                            LoadingLengthWithExtension = "4400",
+                            Name = "GP 10 S",
+                            Price = "10043,33",
+                            TotalLength = "5939",
+                            TotalLengthWithExtension = "6723",
+                            TotalWidth = "2050",
+                            Weight = "1240"
                         });
                 });
 
@@ -11485,6 +11720,96 @@ namespace CalcAppAPI.Migrations
                         {
                             KrpanCraneId = 6,
                             KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanCraneId = 7,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanCraneId = 8,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
+                            KrpanTrailerId = 14
                         });
                 });
 
@@ -11695,7 +12020,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 1,
-                            KrpanTyreId = 1
+                            KrpanTyreId = 2
                         },
                         new
                         {
@@ -11704,53 +12029,98 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanTrailerId = 2,
-                            KrpanTyreId = 1
+                            KrpanTrailerId = 1,
+                            KrpanTyreId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 1,
+                            KrpanTyreId = 8
                         },
                         new
                         {
                             KrpanTrailerId = 2,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 2,
+                            KrpanTyreId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 2,
+                            KrpanTyreId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 2,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 3,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 3,
                             KrpanTyreId = 3
                         },
                         new
                         {
                             KrpanTrailerId = 3,
-                            KrpanTyreId = 1
+                            KrpanTyreId = 7
                         },
                         new
                         {
                             KrpanTrailerId = 3,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
                             KrpanTyreId = 3
                         },
                         new
                         {
                             KrpanTrailerId = 4,
-                            KrpanTyreId = 1
-                        },
-                        new
-                        {
-                            KrpanTrailerId = 4,
-                            KrpanTyreId = 4
-                        },
-                        new
-                        {
-                            KrpanTrailerId = 4,
                             KrpanTyreId = 5
                         },
                         new
                         {
                             KrpanTrailerId = 4,
-                            KrpanTyreId = 6
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTyreId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTyreId = 11
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTyreId = 12
                         },
                         new
                         {
                             KrpanTrailerId = 5,
-                            KrpanTyreId = 1
+                            KrpanTyreId = 2
                         },
                         new
                         {
                             KrpanTrailerId = 5,
-                            KrpanTyreId = 4
+                            KrpanTyreId = 3
                         },
                         new
                         {
@@ -11760,7 +12130,22 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 5,
-                            KrpanTyreId = 6
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 5,
+                            KrpanTyreId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 5,
+                            KrpanTyreId = 11
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 5,
+                            KrpanTyreId = 12
                         },
                         new
                         {
@@ -11775,7 +12160,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 6,
-                            KrpanTyreId = 4
+                            KrpanTyreId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 6,
+                            KrpanTyreId = 8
                         },
                         new
                         {
@@ -11785,7 +12175,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 7,
-                            KrpanTyreId = 4
+                            KrpanTyreId = 3
                         },
                         new
                         {
@@ -11795,7 +12185,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 7,
-                            KrpanTyreId = 6
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 7,
+                            KrpanTyreId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 7,
+                            KrpanTyreId = 11
                         },
                         new
                         {
@@ -11805,7 +12205,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 8,
-                            KrpanTyreId = 4
+                            KrpanTyreId = 3
                         },
                         new
                         {
@@ -11815,7 +12215,122 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 8,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 8,
+                            KrpanTyreId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 8,
+                            KrpanTyreId = 11
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 9,
+                            KrpanTyreId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 9,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 10,
+                            KrpanTyreId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 10,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 11,
+                            KrpanTyreId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 11,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
                             KrpanTyreId = 6
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTyreId = 9
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTyreId = 6
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTyreId = 9
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTyreId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTyreId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTyreId = 6
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTyreId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTyreId = 9
                         });
                 });
 

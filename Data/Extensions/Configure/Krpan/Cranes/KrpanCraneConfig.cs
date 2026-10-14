@@ -127,6 +127,46 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "100",
                     SlewCylinders = "4",
                     TelescopicStages = "2"
+                },
+                new KrpanCrane
+                {
+                    Id = 7,
+                    Name = "GD 5,6 K",
+                    Description = "",
+                    Price = "10149,47",
+                    MaxReach = "",
+                    MaxReachWithGrabOpen = "",
+                    NetLiftingTorque = "",
+                    BrutLiftingTorque = "",
+                    LiftCapacityAtFourMeters = "",
+                    LiftCapacityAtMaxReach = "",
+                    Weight = "",
+                    SlewTorque = "",
+                    SlewingAngle = "",
+                    SystemPressure = "",
+                    OilQuantityInTank = "",
+                    SlewCylinders = "",
+                    TelescopicStages = ""
+                },
+                new KrpanCrane
+                {
+                    Id = 8,
+                    Name = "GD 6,2 K",
+                    Description = "",
+                    Price = "11735,30",
+                    MaxReach = "",
+                    MaxReachWithGrabOpen = "",
+                    NetLiftingTorque = "",
+                    BrutLiftingTorque = "",
+                    LiftCapacityAtFourMeters = "",
+                    LiftCapacityAtMaxReach = "",
+                    Weight = "",
+                    SlewTorque = "",
+                    SlewingAngle = "",
+                    SystemPressure = "",
+                    OilQuantityInTank = "",
+                    SlewCylinders = "",
+                    TelescopicStages = ""
                 }
                 );
         }

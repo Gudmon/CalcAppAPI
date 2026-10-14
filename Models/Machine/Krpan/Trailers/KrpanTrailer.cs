@@ -20,8 +20,8 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public string TotalLengthWithExtension { get; set; }
         public string TotalWidth { get; set; }
         public string Weight { get; set; }
-        public string FrameSteeringCylinders { get; set; }
-        public string DrawbarAngle { get; set; }
+        public string? FrameSteeringCylinders { get; set; }
+        public string? DrawbarAngle { get; set; }
         public IEnumerable<KrpanCrane> KrpanCrane { get; set; }
         public KrpanHydraulicAdjustableChassis? KrpanHydraulicAdjustableChassis { get; set; }
         public int? KrpanHydraulicAdjustableChassisId { get; set; }
