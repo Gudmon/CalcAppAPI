@@ -31,8 +31,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanChockId { get; set; }
         public KrpanDrawbarSteering? KrpanDrawbarSteering { get; set; }
         public int? KrpanDrawbarSteeringId { get; set; }
-        public KrpanTrailerSupportLeg? KrpanTrailerSupportLeg { get; set; }
-        public int? KrpanTrailerSupportLegId { get; set; }
+        public IEnumerable<KrpanTrailerSupportLeg> KrpanTrailerSupportLegs { get; set; }
         public IEnumerable<KrpanPropulsion> KrpanPropulsion { get; set; }
         public KrpanAdjustableDrive? KrpanAdjustableDrive { get; set; }
         public int? KrpanAdjustableDriveId { get; set; }
@@ -70,9 +69,9 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanPlatoId { get; set; }
         public KrpanExtension? KrpanExtension { get; set; }
         public int? KrpanExtensionId { get; set; }
-        public KrpanHydraulicSupportLeg? KrpanHydraulicSupportLeg { get; set; }
-        public int? KrpanHydraulicSupportLegId { get; set; }
         public KrpanGrappleLocation? KrpanGrappleLocation { get; set; }
         public int? KrpanGrappleLocationId { get; set; }
+        public KrpanMechanicalAdjustableFrame? KrpanMechanicalAdjustableFrame { get; set; }
+        public int? KrpanMechanicalAdjustableFrameId { get; set; }
     }
 }

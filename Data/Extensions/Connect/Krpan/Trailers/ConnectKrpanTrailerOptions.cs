@@ -17,15 +17,12 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailerWithTrailerLamp();
             modelBuilder.ConnectKrpanTrailerWithChock();
             modelBuilder.ConnectKrpanTrailerWithDrawbarSteering();
-            modelBuilder.ConnectKrpanTrailerWithTrailerSupportLeg();
-
+            modelBuilder.ConnectKrpanTrailerWithSupportLegs();
             modelBuilder.ConnectKrpanTrailerWithAdjustableDrive();
-
             modelBuilder.ConnectKrpanTrailerWithHandBrake();
             modelBuilder.ConnectKrpanTrailerWithExtraStanchion();
             modelBuilder.ConnectKrpanTrailerWithExtraForwarderStanchion();
             modelBuilder.ConnectKrpanTrailerWithTopConnection();
-
             modelBuilder.ConnectKrpanTrailerWithDrawhead();
             modelBuilder.ConnectKrpanTrailerWithCardanShaft();
             modelBuilder.ConnectKrpanTrailerWithBBox();
@@ -37,8 +34,8 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailerWithToolBox();
             modelBuilder.ConnectKrpanTrailerWithPlato();
             modelBuilder.ConnectKrpanTrailerWithExtension();
-            modelBuilder.ConnectKrpanTrailerWithHydraulicSupportLeg();
             modelBuilder.ConnectKrpanTrailerWithGrappleLocation();
+            modelBuilder.ConnectKrpanTrailerWithMechanicalAdjustableFrame();
         }
     }
 }

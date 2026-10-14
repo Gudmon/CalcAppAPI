@@ -2,7 +2,7 @@
 
 namespace CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers
 {
-    public class KrpanHydraulicSupportLeg
+    public class KrpanMechanicalAdjustableFrame
     {
         public int Id { get; set; }
         public string Name { get; set; }

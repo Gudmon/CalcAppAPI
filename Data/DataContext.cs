@@ -104,8 +104,8 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanToolBox> KrpanToolBox { get; set; }
         public DbSet<KrpanPlato> KrpanPlato { get; set; }
         public DbSet<KrpanExtension> KrpanExtension { get; set; }
-        public DbSet<KrpanHydraulicSupportLeg> KrpanHydraulicSupportLeg { get; set; }
         public DbSet<KrpanGrappleLocation> KrpanGrappleLocation { get; set; }
+        public DbSet<KrpanMechanicalAdjustableFrame> KrpanMechanicalAdjustableFrame { get; set; }
         public DbSet<KrpanCrane> KrpanCrane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

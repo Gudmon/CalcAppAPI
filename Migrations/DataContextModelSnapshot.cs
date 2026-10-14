@@ -1396,7 +1396,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1417,15 +1417,15 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("KrpanHydraulicSupportLeg");
+                    b.ToTable("KrpanMechanicalAdjustableFrame");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            Code = "300013635",
-                            Name = "Hidraulikus támasztóláb GP pótkocsihoz (Z darunál kötelező)",
-                            Price = "530"
+                            Code = "",
+                            Name = "Mechanikusan állítható keret",
+                            Price = "0"
                         });
                 });
 
@@ -1650,8 +1650,22 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "Kitámasztó láb",
+                            Name = "Mechanikus támasztóláb - fix",
                             Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Name = "Mechanikus támasztóláb - állítható",
+                            Price = "150,00"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "",
+                            Name = "Hidraulikus támasztóláb",
+                            Price = "519,17"
                         });
                 });
 
@@ -7663,7 +7677,7 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("KrpanHydraulicAdjustableChassisId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KrpanHydraulicSupportLegId")
+                    b.Property<int?>("KrpanMechanicalAdjustableFrameId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanPlatoId")
@@ -7676,9 +7690,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanTrailerLampId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanTrailerSupportLegId")
                         .HasColumnType("int");
 
                     b.Property<string>("LoadCapacity")
@@ -7753,7 +7764,7 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("KrpanHydraulicAdjustableChassisId");
 
-                    b.HasIndex("KrpanHydraulicSupportLegId");
+                    b.HasIndex("KrpanMechanicalAdjustableFrameId");
 
                     b.HasIndex("KrpanPlatoId");
 
@@ -7762,8 +7773,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("KrpanTopConnectionId");
 
                     b.HasIndex("KrpanTrailerLampId");
-
-                    b.HasIndex("KrpanTrailerSupportLegId");
 
                     b.ToTable("KrpanTrailer");
 
@@ -7784,7 +7793,6 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
                             KrpanDrawHeadId = 1,
-                            KrpanDrawbarSteeringId = 1,
                             KrpanExtraStanchionId = 1,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
@@ -7792,7 +7800,6 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -7827,7 +7834,6 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -7862,7 +7868,6 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -7898,7 +7903,6 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "12000",
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
@@ -7934,7 +7938,6 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "14000",
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
@@ -7969,7 +7972,6 @@ namespace CalcAppAPI.Migrations
                             KrpanHydraulicAdjustableChassisId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "11000",
                             LoadingLength = "3707",
                             LoadingLengthWithExtension = "4487",
@@ -8006,7 +8008,6 @@ namespace CalcAppAPI.Migrations
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "13000",
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
@@ -8044,7 +8045,6 @@ namespace CalcAppAPI.Migrations
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
-                            KrpanTrailerSupportLegId = 1,
                             LoadCapacity = "14800",
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
@@ -8061,6 +8061,7 @@ namespace CalcAppAPI.Migrations
                             CentralBeams = "140x8",
                             Description = "",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "6000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8079,6 +8080,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "7000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8097,6 +8099,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8115,6 +8118,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8133,6 +8137,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "+40",
                             FrameSteeringCylinders = "2",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8151,6 +8156,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             KrpanHandBrakeId = 1,
+                            KrpanMechanicalAdjustableFrameId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -12002,6 +12008,163 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerSupportLeg", b =>
+                {
+                    b.Property<int>("KrpanTrailerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanTrailerSupportLegsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanTrailerId", "KrpanTrailerSupportLegsId");
+
+                    b.HasIndex("KrpanTrailerSupportLegsId");
+
+                    b.ToTable("KrpanSupportLegsTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanTrailerId = 1,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 1,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 2,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 2,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 3,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 3,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 4,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 5,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 5,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 6,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 6,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 7,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 7,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 8,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 8,
+                            KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 9,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 9,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 10,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 10,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 11,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 11,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 12,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 13,
+                            KrpanTrailerSupportLegsId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTrailerSupportLegsId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 14,
+                            KrpanTrailerSupportLegsId = 2
+                        });
+                });
+
             modelBuilder.Entity("KrpanTrailerKrpanTyre", b =>
                 {
                     b.Property<int>("KrpanTrailerId")
@@ -14896,9 +15059,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanHydraulicAdjustableChassisId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", "KrpanHydraulicSupportLeg")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", "KrpanMechanicalAdjustableFrame")
                         .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanHydraulicSupportLegId");
+                        .HasForeignKey("KrpanMechanicalAdjustableFrameId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPlato", "KrpanPlato")
                         .WithMany("KrpanTrailer")
@@ -14915,10 +15079,6 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerLamp", "KrpanTrailerLamp")
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanTrailerLampId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerSupportLeg", "KrpanTrailerSupportLeg")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanTrailerSupportLegId");
 
                     b.Navigation("KrpanAdjustableDrive");
 
@@ -14954,7 +15114,7 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("KrpanHydraulicAdjustableChassis");
 
-                    b.Navigation("KrpanHydraulicSupportLeg");
+                    b.Navigation("KrpanMechanicalAdjustableFrame");
 
                     b.Navigation("KrpanPlato");
 
@@ -14963,8 +15123,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTopConnection");
 
                     b.Navigation("KrpanTrailerLamp");
-
-                    b.Navigation("KrpanTrailerSupportLeg");
                 });
 
             modelBuilder.Entity("ControlBlockCrane", b =>
@@ -15222,6 +15380,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerSupportLeg", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerSupportLeg", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerSupportLegsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("KrpanTrailerKrpanTyre", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", null)
@@ -15464,7 +15637,7 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTrailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicSupportLeg", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });
@@ -15485,11 +15658,6 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerLamp", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerSupportLeg", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });

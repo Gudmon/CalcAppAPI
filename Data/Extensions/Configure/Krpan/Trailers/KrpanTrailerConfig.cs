@@ -7,7 +7,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
     {
         public static void ConfigureMultipleKrpanTrailers(this ModelBuilder modelBuilder)
         {
-            //TODO: HYDRAULIC SUPPORT LEG ID CHECK FOR "GP" TRAILERS, NULL NOW, NEEDS CLARIFICATION
             modelBuilder.Entity<KrpanTrailer>().HasData(
                 new KrpanTrailer
                 {
@@ -28,8 +27,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanHydraulicAdjustableChassisId = null,
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
-                    KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 1,
@@ -46,8 +43,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 2,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -69,7 +66,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 1,
@@ -86,8 +82,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 2,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -109,7 +105,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 1,
@@ -126,8 +121,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 2,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -149,7 +144,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 1,
@@ -166,8 +160,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 2,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -189,7 +183,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 1,
@@ -206,8 +199,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 2,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
 
                 new KrpanTrailer
@@ -230,7 +223,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 2,
@@ -247,8 +239,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 1,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -270,7 +262,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 2,
@@ -287,8 +278,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 1,
                     KrpanPlatoId = 1,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -310,7 +301,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = 1,
                     KrpanChockId = 1,
                     KrpanDrawbarSteeringId = 1,
-                    KrpanTrailerSupportLegId = 1,
                     KrpanAdjustableDriveId = 1,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = 2,
@@ -327,8 +317,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = 1,
                     KrpanPlatoId = 1,
                     KrpanExtensionId = 1,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = 1,
+                    KrpanMechanicalAdjustableFrameId = null,
                 },
                 new KrpanTrailer
                 {
@@ -348,7 +338,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -365,8 +354,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -388,7 +377,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -405,8 +393,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -428,7 +416,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -445,8 +432,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -468,7 +455,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -485,8 +471,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -508,7 +494,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -525,8 +510,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 },
                 new KrpanTrailer
                 {
@@ -548,7 +533,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanTrailerLampId = null,
                     KrpanChockId = null,
                     KrpanDrawbarSteeringId = null,
-                    KrpanTrailerSupportLegId = null,
                     KrpanAdjustableDriveId = null,
                     KrpanHandBrakeId = 1,
                     KrpanExtraStanchionId = null,
@@ -565,8 +549,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanToolBoxId = null,
                     KrpanPlatoId = null,
                     KrpanExtensionId = null,
-                    KrpanHydraulicSupportLegId = null,
                     KrpanGrappleLocationId = null,
+                    KrpanMechanicalAdjustableFrameId = 1,
                 }
                 );
         }

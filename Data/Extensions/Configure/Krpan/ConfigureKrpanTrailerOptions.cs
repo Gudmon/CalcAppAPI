@@ -34,8 +34,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanToolBoxes();
             modelBuilder.ConfigureMultipleKrpanPlatos();
             modelBuilder.ConfigureMultipleKrpanExtensions();
-            modelBuilder.ConfigureMultipleKrpanHydraulicSupportLegs();
             modelBuilder.ConfigureMultipleKrpanGrappleLocations();
+            modelBuilder.ConfigureMultipleKrpanMechanicalAdjustableFrames();
         }
 
     }

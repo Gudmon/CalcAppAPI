@@ -56,10 +56,11 @@ namespace CalcAppAPI.API.Controllers
         }
 
         [HttpGet("trailers/{id}/supportleg")]
-        public async Task<ActionResult<KrpanTrailerSupportLeg>> GetKrpanTrailerSupportLeg(int id)
+        public async Task<ActionResult<IEnumerable<KrpanTrailerSupportLeg>>> GetKrpanTrailerSupportLeg(int id)
         {
             var trailerSupportLeg = await _dbContext.KrpanTrailerSupportLeg
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+                .Where(s => s.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
 
             return Ok(trailerSupportLeg);
         }
@@ -258,15 +259,6 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanExtension);
         }
 
-        [HttpGet("trailers/{id}/hydraulicsupportleg")]
-        public async Task<ActionResult<KrpanHydraulicSupportLeg>> GetKrpanHydraulicSupportLeg(int id)
-        {
-            var krpanHydraulicSupportLeg = await _dbContext.KrpanHydraulicSupportLeg
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
-
-            return Ok(krpanHydraulicSupportLeg);
-        }
-
         [HttpGet("trailers/{id}/grapplelocation")]
         public async Task<ActionResult<KrpanGrappleLocation>> GetKrpanGrappleLocation(int id)
         {
@@ -274,6 +266,15 @@ namespace CalcAppAPI.API.Controllers
                 .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
 
             return Ok(krpanGrappleLocation);
+        }
+
+        [HttpGet("trailers/{id}/mechanicaladjustableframe")]
+        public async Task<ActionResult<KrpanMechanicalAdjustableFrame>> GetKrpanTrailerMechanicalAdjustableFrame(int id)
+        {
+            var mechanicalAdjustableFrame = await _dbContext.KrpanMechanicalAdjustableFrame
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(mechanicalAdjustableFrame);
         }
     }
 }
