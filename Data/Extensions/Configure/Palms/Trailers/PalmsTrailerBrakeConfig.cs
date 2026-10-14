@@ -81,7 +81,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 10,
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
-                   Price = "1155",
+                   Price = "1235",
                    ImageUrls = ["PALMS-trailer-brake-1"]
                },
                new Brake
@@ -89,7 +89,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 11,
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
-                   Price = "2205",
+                   Price = "2365",
                    ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
@@ -97,7 +97,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 12,
                    Name = "2 keréken légfék",
                    Code = "B3",
-                   Price = "1815",
+                   Price = "1890",
                    ImageUrls = ["PALMS-trailer-brake-3"]
                },
                new Brake
@@ -105,7 +105,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 13,
                    Name = "4 keréken légfék",
                    Code = "B4",
-                   Price = "3045",
+                   Price = "3200",
                    ImageUrls = ["PALMS-trailer-brake-4"]
                },
                new Brake
@@ -113,21 +113,21 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 14,
                    Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
                    Code = "BA-EU",
-                   Price = "3530",
+                   Price = "3685",
                },
                new Brake
                {
                    Id = 15,
                    Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
-                   Price = "4695",
+                   Price = "4850",
                },
                new Brake
                {
                    Id = 16,
                    Name = "2 keréken hidraulikus fék",
                    Code = "B1",
-                   Price = "3150",
+                   Price = "3310",
                    ImageUrls = ["PALMS-trailer-brake-1"]
                },
                new Brake
@@ -135,7 +135,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 17,
                    Name = "4 keréken hidraulikus fék",
                    Code = "B2",
-                   Price = "6195",
+                   Price = "6510",
                    ImageUrls = ["PALMS-trailer-brake-2"]
                },
                new Brake
@@ -143,7 +143,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 18,
                    Name = "2 keréken légfék",
                    Code = "B3",
-                   Price = "3810",
+                   Price = "3965",
                    ImageUrls = ["PALMS-trailer-brake-3"]
                },
                new Brake
@@ -151,7 +151,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 19,
                    Name = "4 keréken légfék",
                    Code = "B4",
-                   Price = "7035",
+                   Price = "7350",
                    ImageUrls = ["PALMS-trailer-brake-4"]
                },
                new Brake
@@ -159,14 +159,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 20,
                    Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
                    Code = "BA-EU",
-                   Price = "7520",
+                   Price = "7835",
                },
                new Brake
                {
                    Id = 21,
                    Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
                    Code = "BH-EU",
-                   Price = "8685",
+                   Price = "9000",
                },
                new Brake
                {

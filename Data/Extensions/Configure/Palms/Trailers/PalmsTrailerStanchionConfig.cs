@@ -15,14 +15,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 1,
                    Name = "Pótkocsi 3 pár rakoncával",
                    Code = "A3",
-                   Price = "5460",
+                   Price = "5670",
                },
                new Stanchion
                {
                    Id = 2,
                    Name = "Pótkocsi 4 pár rakoncával",
                    Code = "A4",
-                   Price = "5975",
+                   Price = "6185",
                },
 
                 //PALMS 8SX
@@ -31,28 +31,28 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     Id = 3,
                     Name = "Pótkocsi 3 pár rakoncával",
                     Code = "A3",
-                    Price = "6995",
+                    Price = "7190",
                 },
                 new Stanchion
                 {
                     Id = 4,
                     Name = "Pótkocsi 4 pár rakoncával",
                     Code = "A4",
-                    Price = "7515",
+                    Price = "7710",
                 },
                 new Stanchion
                 {
                     Id = 5,
                     Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                     Code = "A4Ex",
-                    Price = "7850",
+                    Price = "8050",
                 },
                 new Stanchion
                 {
                     Id = 6,
                     Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással ",
                     Code = "A5Ex",
-                    Price = "8370",
+                    Price = "8570",
                 },
 
                 //PALMS 8D
@@ -61,56 +61,56 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     Id = 7,
                     Name = "Pótkocsi 3 pár rakoncával",
                     Code = "A3",
-                    Price = "7245",
+                    Price = "7600",
                 },
                 new Stanchion
                 {
                     Id = 8,
                     Name = "Pótkocsi 3 pár forwarder rakoncával",
                     Code = "A3F",
-                    Price = "7245",
+                    Price = "7600",
                 },
                 new Stanchion
                 {
                     Id = 9,
                     Name = "Pótkocsi 4 pár rakoncával",
                     Code = "A4",
-                    Price = "7655",
+                    Price = "8010",
                 },
                 new Stanchion
                 {
                     Id = 10,
                     Name = "Pótkocsi 4 pár forwarder rakoncával",
                     Code = "A4F",
-                    Price = "7655",
+                    Price = "8010",
                 },
                 new Stanchion
                 {
                     Id = 11,
                     Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                     Code = "A4Ex",
-                    Price = "8245",
+                    Price = "8600",
                 },
                 new Stanchion
                 {
                     Id = 12,
                     Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                     Code = "A4FEx",
-                    Price = "8245",
+                    Price = "8600",
                 },
                 new Stanchion
                 {
                     Id = 13,
                     Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                     Code = "A5Ex",
-                    Price = "8650",
+                    Price = "9010",
                 },
                 new Stanchion
                 {
                     Id = 14,
                     Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                     Code = "A5FEx",
-                    Price = "8650",
+                    Price = "9010",
                 },
 
                 //PALMS 9SC
@@ -119,28 +119,28 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     Id = 15,
                     Name = "Pótkocsi 3 pár rakoncával",
                     Code = "A3",
-                    Price = "8065",
+                    Price = "8340",
                 },
                 new Stanchion
                 {
                     Id = 16,
                     Name = "Pótkocsi 4 pár rakoncával",
                     Code = "A4",
-                    Price = "8610",
+                    Price = "8890",
                 },
                 new Stanchion
                 {
                     Id = 17,
                     Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                     Code = "A4Ex",
-                    Price = "9065",
+                    Price = "9345",
                 },
                 new Stanchion
                 {
                     Id = 18,
                     Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                     Code = "A5Ex",
-                    Price = "9615",
+                    Price = "9890",
                 },
 
                 //PALMS 10D
@@ -149,28 +149,28 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                     Id = 19,
                     Name = "Pótkocsi 3 pár rakoncával",
                     Code = "A3",
-                    Price = "8505",
+                    Price = "8760",
                 },
                new Stanchion
                {
                    Id = 20,
                    Name = "Pótkocsi 4 pár rakoncával",
                    Code = "A4",
-                   Price = "8900",
+                   Price = "9150",
                },
                new Stanchion
                {
                    Id = 21,
                    Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                    Code = "A4Ex",
-                   Price = "9520",
+                   Price = "9770",
                },
                new Stanchion
                {
                    Id = 22,
                    Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                    Code = "A5Ex",
-                   Price = "9915",
+                   Price = "10165",
                },
 
                //PALMS 12D
@@ -186,21 +186,21 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 24,
                    Name = "Pótkocsi 4 pár rakoncával",
                    Code = "A4",
-                   Price = "11095",
+                   Price = "11410",
                },
                new Stanchion
                {
                    Id = 25,
                    Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                    Code = "A4Ex",
-                   Price = "11715",
+                   Price = "12030",
                },
                new Stanchion
                {
                    Id = 26,
                    Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                    Code = "A5Ex",
-                   Price = "12105",
+                   Price = "12420",
                },
 
 
@@ -210,28 +210,28 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 27,
                    Name = "Pótkocsi 3 pár rakoncával",
                    Code = "A3",
-                   Price = "12245",
+                   Price = "12600",
                },
                new Stanchion
                {
                    Id = 28,
                    Name = "Pótkocsi 4 pár rakoncával",
                    Code = "A4",
-                   Price = "12745",
+                   Price = "13100",
                },
                new Stanchion
                {
                    Id = 29,
                    Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                    Code = "A4Ex",
-                   Price = "13515",
+                   Price = "13870",
                },
                new Stanchion
                {
                    Id = 30,
                    Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                    Code = "A5Ex",
-                   Price = "14015",
+                   Price = "14370",
                },
 
                //PALMS 10UX
@@ -248,7 +248,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 32,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "9680",
+                   Price = "10250",
                },
               // Not used
               new Stanchion
@@ -263,7 +263,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 34,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "10240",
+                  Price = "10805",
               },
               // Not used
               new Stanchion
@@ -278,7 +278,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 36,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "10920",
+                  Price = "11490",
               },
               // Not used
               new Stanchion
@@ -293,7 +293,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 38,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "11475",
+                  Price = "12045",
               },
 
               //PALMS 12U
@@ -302,56 +302,56 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 39,
                   Name = "Pótkocsi 3 pár rakoncával",
                   Code = "A3",
-                  Price = "12285",
+                  Price = "13020",
               },
                new Stanchion
                {
                    Id = 40,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "12285",
+                   Price = "13020",
                },
               new Stanchion
               {
                   Id = 41,
                   Name = "Pótkocsi 4 pár rakoncával",
                   Code = "A4",
-                  Price = "112950",
+                  Price = "13685",
               },
               new Stanchion
               {
                   Id = 42,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "112950",
+                  Price = "13685",
               },
               new Stanchion
               {
                   Id = 43,
                   Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                   Code = "A4Ex",
-                  Price = "13675",
+                  Price = "14410",
               },
               new Stanchion
               {
                   Id = 44,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "13675",
+                  Price = "14410",
               },
               new Stanchion
               {
                   Id = 45,
                   Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                   Code = "A5Ex",
-                  Price = "14345",
+                  Price = "15080",
               },
               new Stanchion
               {
                   Id = 46,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "14345",
+                  Price = "15080",
               },
 
               //PALMS 12UAWD
@@ -360,56 +360,56 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 47,
                   Name = "Pótkocsi 3 pár rakoncával",
                   Code = "A3",
-                  Price = "38075",
+                  Price = "40895",
               },
                new Stanchion
                {
                    Id = 48,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "38075",
+                   Price = "40895",
                },
               new Stanchion
               {
                   Id = 49,
                   Name = "Pótkocsi 4 pár rakoncával",
                   Code = "A4",
-                  Price = "38740",
+                  Price = "41565",
               },
               new Stanchion
               {
                   Id = 50,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "38740",
+                  Price = "41565",
               },
               new Stanchion
               {
                   Id = 51,
                   Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                   Code = "A4Ex",
-                  Price = "39465",
+                  Price = "42290",
               },
               new Stanchion
               {
                   Id = 52,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "39465",
+                  Price = "42290",
               },
               new Stanchion
               {
                   Id = 53,
                   Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                   Code = "A5Ex",
-                  Price = "40130",
+                  Price = "42955",
               },
               new Stanchion
               {
                   Id = 54,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "40130",
+                  Price = "42955",
               },
 
               //PALMS 15U
@@ -418,56 +418,56 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 55,
                   Name = "Pótkocsi 3 pár rakoncával",
                   Code = "A3",
-                  Price = "14660",
+                  Price = "15380",
               },
                new Stanchion
                {
                    Id = 56,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "14660",
+                   Price = "15380",
                },
               new Stanchion
               {
                   Id = 57,
                   Name = "Pótkocsi 4 pár rakoncával",
                   Code = "A4",
-                  Price = "15575",
+                  Price = "16300",
               },
               new Stanchion
               {
                   Id = 58,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "15575",
+                  Price = "16300",
               },
               new Stanchion
               {
                   Id = 59,
                   Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                   Code = "A4Ex",
-                  Price = "16300",
+                  Price = "17025",
               },
               new Stanchion
               {
                   Id = 60,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "16300",
+                  Price = "17025",
               },
               new Stanchion
               {
                   Id = 61,
                   Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                   Code = "A5Ex",
-                  Price = "17220",
+                  Price = "17945",
               },
               new Stanchion
               {
                   Id = 62,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "17220",
+                  Price = "17945",
               },
 
               //PALMS 15UAWD
@@ -476,56 +476,56 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Id = 63,
                   Name = "Pótkocsi 3 pár rakoncával",
                   Code = "A3",
-                  Price = "40445",
+                  Price = "43260",
               },
                new Stanchion
                {
                    Id = 64,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "40445",
+                   Price = "43260",
                },
               new Stanchion
               {
                   Id = 65,
                   Name = "Pótkocsi 4 pár rakoncával",
                   Code = "A4",
-                  Price = "41365",
+                  Price = "44180",
               },
               new Stanchion
               {
                   Id = 66,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "41365",
+                  Price = "44180",
               },
               new Stanchion
               {
                   Id = 67,
                   Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
                   Code = "A4Ex",
-                  Price = "42090",
+                  Price = "44905",
               },
               new Stanchion
               {
                   Id = 68,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "42090",
+                  Price = "44905",
               },
               new Stanchion
               {
                   Id = 69,
                   Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
                   Code = "A5Ex",
-                  Price = "43010",
+                  Price = "45820",
               },
               new Stanchion
               {
                   Id = 70,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "43010",
+                  Price = "45820",
               },
 
               //PALMS MWD3.2
@@ -617,28 +617,28 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 82,
                    Name = "Pótkocsi 3 pár forwarder rakoncával",
                    Code = "A3F",
-                   Price = "10710",
+                   Price = "11865",
                },
               new Stanchion
               {
                   Id = 83,
                   Name = "Pótkocsi 4 pár forwarder rakoncával",
                   Code = "A4F",
-                  Price = "11335",
+                  Price = "12490",
               },
               new Stanchion
               {
                   Id = 84,
                   Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A4FEx",
-                  Price = "12020",
+                  Price = "13170",
               },
               new Stanchion
               {
                   Id = 85,
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
-                  Price = "12645",
+                  Price = "13795",
               }
               );
         }

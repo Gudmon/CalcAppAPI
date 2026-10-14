@@ -4296,7 +4296,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B1",
                             ImageUrls = "[\"PALMS-trailer-brake-1\"]",
                             Name = "2 keréken hidraulikus fék",
-                            Price = "1155"
+                            Price = "1235"
                         },
                         new
                         {
@@ -4304,7 +4304,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B2",
                             ImageUrls = "[\"PALMS-trailer-brake-2\"]",
                             Name = "4 keréken hidraulikus fék",
-                            Price = "2205"
+                            Price = "2365"
                         },
                         new
                         {
@@ -4312,7 +4312,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B3",
                             ImageUrls = "[\"PALMS-trailer-brake-3\"]",
                             Name = "2 keréken légfék",
-                            Price = "1815"
+                            Price = "1890"
                         },
                         new
                         {
@@ -4320,21 +4320,21 @@ namespace CalcAppAPI.Migrations
                             Code = "B4",
                             ImageUrls = "[\"PALMS-trailer-brake-4\"]",
                             Name = "4 keréken légfék",
-                            Price = "3045"
+                            Price = "3200"
                         },
                         new
                         {
                             Id = 14,
                             Code = "BA-EU",
                             Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
-                            Price = "3530"
+                            Price = "3685"
                         },
                         new
                         {
                             Id = 15,
                             Code = "BH-EU",
                             Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
-                            Price = "4695"
+                            Price = "4850"
                         },
                         new
                         {
@@ -4342,7 +4342,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B1",
                             ImageUrls = "[\"PALMS-trailer-brake-1\"]",
                             Name = "2 keréken hidraulikus fék",
-                            Price = "3150"
+                            Price = "3310"
                         },
                         new
                         {
@@ -4350,7 +4350,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B2",
                             ImageUrls = "[\"PALMS-trailer-brake-2\"]",
                             Name = "4 keréken hidraulikus fék",
-                            Price = "6195"
+                            Price = "6510"
                         },
                         new
                         {
@@ -4358,7 +4358,7 @@ namespace CalcAppAPI.Migrations
                             Code = "B3",
                             ImageUrls = "[\"PALMS-trailer-brake-3\"]",
                             Name = "2 keréken légfék",
-                            Price = "3810"
+                            Price = "3965"
                         },
                         new
                         {
@@ -4366,21 +4366,21 @@ namespace CalcAppAPI.Migrations
                             Code = "B4",
                             ImageUrls = "[\"PALMS-trailer-brake-4\"]",
                             Name = "4 keréken légfék",
-                            Price = "7035"
+                            Price = "7350"
                         },
                         new
                         {
                             Id = 20,
                             Code = "BA-EU",
                             Name = "EU jóváhagyott szett, légfék 4 keréken, PB1",
-                            Price = "7520"
+                            Price = "7835"
                         },
                         new
                         {
                             Id = 21,
                             Code = "BH-EU",
                             Name = "EU jóváhagyott szett, hidraulikus fék, PB1",
-                            Price = "8685"
+                            Price = "9000"
                         },
                         new
                         {
@@ -5431,7 +5431,7 @@ namespace CalcAppAPI.Migrations
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             ImageUrls = "[\"PALMS-trailer-propulsion-2WDF\",\"PALMS-trailer-propulsion-2WD-4WD-1\",\"PALMS-trailer-propulsion-2WD-4WD-2\"]",
                             Name = "2WD agyhajtás (BB250 az első tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "15015",
+                            Price = "15515",
                             VideoUrls = "[\"LKj7YS_M13E\"]"
                         },
                         new
@@ -5441,7 +5441,7 @@ namespace CalcAppAPI.Migrations
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             ImageUrls = "[\"PALMS-trailer-propulsion-2WDR\",\"PALMS-trailer-propulsion-2WD-4WD-1\",\"PALMS-trailer-propulsion-2WD-4WD-2\"]",
                             Name = "2WD agyhajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, fékhez előkészítve)",
-                            Price = "15015",
+                            Price = "15515",
                             VideoUrls = "[\"LKj7YS_M13E\"]"
                         },
                         new
@@ -5451,7 +5451,7 @@ namespace CalcAppAPI.Migrations
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal az első tengelyen.",
                             ImageUrls = "[\"PALMS-trailer-propulsion-2WDF\",\"PALMS-trailer-propulsion-2WD-4WD-1\",\"PALMS-trailer-propulsion-2WD-4WD-2\"]",
                             Name = "2WD hajtás (BB250 az első tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "13020",
+                            Price = "13440",
                             VideoUrls = "[\"LKj7YS_M13E\"]"
                         },
                         new
@@ -5461,7 +5461,7 @@ namespace CalcAppAPI.Migrations
                             Description = "2 kerék hajtásrendszer Black Bruin hidraulikus motorokkal a hátsó tengelyen.",
                             ImageUrls = "[\"PALMS-trailer-propulsion-2WDR\",\"PALMS-trailer-propulsion-2WD-4WD-1\",\"PALMS-trailer-propulsion-2WD-4WD-2\"]",
                             Name = "2WD hajtás (BB250 a hátsó tengelyen elektronikus vezérléssel, nincs fék ezen a tengelyen)",
-                            Price = "13020",
+                            Price = "13440",
                             VideoUrls = "[\"LKj7YS_M13E\"]"
                         },
                         new
@@ -5569,154 +5569,154 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "5460"
+                            Price = "5670"
                         },
                         new
                         {
                             Id = 2,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "5975"
+                            Price = "6185"
                         },
                         new
                         {
                             Id = 3,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "6995"
+                            Price = "7190"
                         },
                         new
                         {
                             Id = 4,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "7515"
+                            Price = "7710"
                         },
                         new
                         {
                             Id = 5,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "7850"
+                            Price = "8050"
                         },
                         new
                         {
                             Id = 6,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással ",
-                            Price = "8370"
+                            Price = "8570"
                         },
                         new
                         {
                             Id = 7,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "7245"
+                            Price = "7600"
                         },
                         new
                         {
                             Id = 8,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "7245"
+                            Price = "7600"
                         },
                         new
                         {
                             Id = 9,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "7655"
+                            Price = "8010"
                         },
                         new
                         {
                             Id = 10,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "7655"
+                            Price = "8010"
                         },
                         new
                         {
                             Id = 11,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "8245"
+                            Price = "8600"
                         },
                         new
                         {
                             Id = 12,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "8245"
+                            Price = "8600"
                         },
                         new
                         {
                             Id = 13,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "8650"
+                            Price = "9010"
                         },
                         new
                         {
                             Id = 14,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "8650"
+                            Price = "9010"
                         },
                         new
                         {
                             Id = 15,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "8065"
+                            Price = "8340"
                         },
                         new
                         {
                             Id = 16,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "8610"
+                            Price = "8890"
                         },
                         new
                         {
                             Id = 17,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "9065"
+                            Price = "9345"
                         },
                         new
                         {
                             Id = 18,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "9615"
+                            Price = "9890"
                         },
                         new
                         {
                             Id = 19,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "8505"
+                            Price = "8760"
                         },
                         new
                         {
                             Id = 20,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "8900"
+                            Price = "9150"
                         },
                         new
                         {
                             Id = 21,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "9520"
+                            Price = "9770"
                         },
                         new
                         {
                             Id = 22,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "9915"
+                            Price = "10165"
                         },
                         new
                         {
@@ -5730,49 +5730,49 @@ namespace CalcAppAPI.Migrations
                             Id = 24,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "11095"
+                            Price = "11410"
                         },
                         new
                         {
                             Id = 25,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "11715"
+                            Price = "12030"
                         },
                         new
                         {
                             Id = 26,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "12105"
+                            Price = "12420"
                         },
                         new
                         {
                             Id = 27,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "12245"
+                            Price = "12600"
                         },
                         new
                         {
                             Id = 28,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "12745"
+                            Price = "13100"
                         },
                         new
                         {
                             Id = 29,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "13515"
+                            Price = "13870"
                         },
                         new
                         {
                             Id = 30,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "14015"
+                            Price = "14370"
                         },
                         new
                         {
@@ -5786,7 +5786,7 @@ namespace CalcAppAPI.Migrations
                             Id = 32,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "9680"
+                            Price = "10250"
                         },
                         new
                         {
@@ -5800,7 +5800,7 @@ namespace CalcAppAPI.Migrations
                             Id = 34,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "10240"
+                            Price = "10805"
                         },
                         new
                         {
@@ -5814,7 +5814,7 @@ namespace CalcAppAPI.Migrations
                             Id = 36,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "10920"
+                            Price = "11490"
                         },
                         new
                         {
@@ -5828,231 +5828,231 @@ namespace CalcAppAPI.Migrations
                             Id = 38,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "11475"
+                            Price = "12045"
                         },
                         new
                         {
                             Id = 39,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "12285"
+                            Price = "13020"
                         },
                         new
                         {
                             Id = 40,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "12285"
+                            Price = "13020"
                         },
                         new
                         {
                             Id = 41,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "112950"
+                            Price = "13685"
                         },
                         new
                         {
                             Id = 42,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "112950"
+                            Price = "13685"
                         },
                         new
                         {
                             Id = 43,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "13675"
+                            Price = "14410"
                         },
                         new
                         {
                             Id = 44,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "13675"
+                            Price = "14410"
                         },
                         new
                         {
                             Id = 45,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "14345"
+                            Price = "15080"
                         },
                         new
                         {
                             Id = 46,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "14345"
+                            Price = "15080"
                         },
                         new
                         {
                             Id = 47,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "38075"
+                            Price = "40895"
                         },
                         new
                         {
                             Id = 48,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "38075"
+                            Price = "40895"
                         },
                         new
                         {
                             Id = 49,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "38740"
+                            Price = "41565"
                         },
                         new
                         {
                             Id = 50,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "38740"
+                            Price = "41565"
                         },
                         new
                         {
                             Id = 51,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "39465"
+                            Price = "42290"
                         },
                         new
                         {
                             Id = 52,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "39465"
+                            Price = "42290"
                         },
                         new
                         {
                             Id = 53,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "40130"
+                            Price = "42955"
                         },
                         new
                         {
                             Id = 54,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "40130"
+                            Price = "42955"
                         },
                         new
                         {
                             Id = 55,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "14660"
+                            Price = "15380"
                         },
                         new
                         {
                             Id = 56,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "14660"
+                            Price = "15380"
                         },
                         new
                         {
                             Id = 57,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "15575"
+                            Price = "16300"
                         },
                         new
                         {
                             Id = 58,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "15575"
+                            Price = "16300"
                         },
                         new
                         {
                             Id = 59,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "16300"
+                            Price = "17025"
                         },
                         new
                         {
                             Id = 60,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "16300"
+                            Price = "17025"
                         },
                         new
                         {
                             Id = 61,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "17220"
+                            Price = "17945"
                         },
                         new
                         {
                             Id = 62,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "17220"
+                            Price = "17945"
                         },
                         new
                         {
                             Id = 63,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "40445"
+                            Price = "43260"
                         },
                         new
                         {
                             Id = 64,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "40445"
+                            Price = "43260"
                         },
                         new
                         {
                             Id = 65,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "41365"
+                            Price = "44180"
                         },
                         new
                         {
                             Id = 66,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "41365"
+                            Price = "44180"
                         },
                         new
                         {
                             Id = 67,
                             Code = "A4Ex",
                             Name = "Pótkocsi 4 pár rakoncával és raktérhosszabbítással",
-                            Price = "42090"
+                            Price = "44905"
                         },
                         new
                         {
                             Id = 68,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "42090"
+                            Price = "44905"
                         },
                         new
                         {
                             Id = 69,
                             Code = "A5Ex",
                             Name = "Pótkocsi 5 pár rakoncával és raktérhosszabbítással",
-                            Price = "43010"
+                            Price = "45820"
                         },
                         new
                         {
                             Id = 70,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "43010"
+                            Price = "45820"
                         },
                         new
                         {
@@ -6136,28 +6136,28 @@ namespace CalcAppAPI.Migrations
                             Id = 82,
                             Code = "A3F",
                             Name = "Pótkocsi 3 pár forwarder rakoncával",
-                            Price = "10710"
+                            Price = "11865"
                         },
                         new
                         {
                             Id = 83,
                             Code = "A4F",
                             Name = "Pótkocsi 4 pár forwarder rakoncával",
-                            Price = "11335"
+                            Price = "12490"
                         },
                         new
                         {
                             Id = 84,
                             Code = "A4FEx",
                             Name = "Pótkocsi 4 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "12020"
+                            Price = "13170"
                         },
                         new
                         {
                             Id = 85,
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
-                            Price = "12645"
+                            Price = "13795"
                         });
                 });
 
