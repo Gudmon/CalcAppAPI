@@ -25,7 +25,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanBrake
                 {
                     Id = 3,
-                    Name = "Hidraulikus fék (mind a 4 keréken)",
+                    Name = "Hidraulikus fék 4 keréken",
                     Code = "",
                     Price = "383,33",
                 },
@@ -39,14 +39,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanBrake
                 {
                     Id = 5,
-                    Name = "Hidraulikus + ráfutófék (mind a 4 keréken)",
+                    Name = "Hidraulikus + ráfutófék 4 keréken",
                     Code = "",
                     Price = "1620,00",
                 },
                 new KrpanBrake
                 {
                     Id = 6,
-                    Name = "Pneumatikus fék(mind a 4 keréken)",
+                    Name = "Pneumatikus fék 4 keréken",
                     Code = "",
                     Price = "1620,00",
                 },
@@ -74,14 +74,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanBrake
                 {
                     Id = 10,
-                    Name = "Pneumatikus fék (mind a 4 keréken)",
+                    Name = "Pneumatikus fék 4 keréken",
                     Code = "",
                     Price = "1722,00",
                 },
                 new KrpanBrake
                 {
                     Id = 11,
-                    Name = "Kombinált fék (mind a 4 keréken - hidraulikus + pneumatikus)",
+                    Name = "Kombinált fék 4 keréken (hidraulikus + pneumatikus)",
                     Code = "",
                     Price = "3166,00",
                 }
