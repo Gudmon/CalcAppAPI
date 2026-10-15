@@ -785,7 +785,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "",
-                            Name = "Hidraulikus fék (mind a 4 keréken)",
+                            Name = "Hidraulikus fék 4 keréken",
                             Price = "383,33"
                         },
                         new
@@ -799,14 +799,14 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             Code = "",
-                            Name = "Hidraulikus + ráfutófék (mind a 4 keréken)",
+                            Name = "Hidraulikus + ráfutófék 4 keréken",
                             Price = "1620,00"
                         },
                         new
                         {
                             Id = 6,
                             Code = "",
-                            Name = "Pneumatikus fék(mind a 4 keréken)",
+                            Name = "Pneumatikus fék 4 keréken",
                             Price = "1620,00"
                         },
                         new
@@ -834,14 +834,14 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 10,
                             Code = "",
-                            Name = "Pneumatikus fék (mind a 4 keréken)",
+                            Name = "Pneumatikus fék 4 keréken",
                             Price = "1722,00"
                         },
                         new
                         {
                             Id = 11,
                             Code = "",
-                            Name = "Kombinált fék (mind a 4 keréken - hidraulikus + pneumatikus)",
+                            Name = "Kombinált fék 4 keréken (hidraulikus + pneumatikus)",
                             Price = "3166,00"
                         });
                 });

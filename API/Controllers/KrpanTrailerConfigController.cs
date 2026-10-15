@@ -169,6 +169,16 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanDrawbar);
         }
 
+        [HttpGet("trailers/{id}/couplingdevices")]
+        public async Task<ActionResult<IEnumerable<KrpanTyre>>> GetKrpanTrailerCouplingDevices(int id)
+        {
+            var couplingDevices = await _dbContext.KrpanTrailerCouplingDevice
+                .Where(s => s.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(couplingDevices);
+        }
+
         [HttpGet("trailers/{id}/cardanshaft")]
         public async Task<ActionResult<KrpanCardanShaft>> GetKrpanCardanShaft(int id)
         {
