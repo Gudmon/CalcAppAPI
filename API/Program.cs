@@ -29,6 +29,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPalmsQueryHandler, PalmsQueryHandler>();
+builder.Services.AddScoped<IKrpanQueryHandler, KrpanQueryHandler>();
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", p =>

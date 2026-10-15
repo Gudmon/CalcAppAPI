@@ -8,5 +8,6 @@
         public string LoadingLength { get; set; }
         public string LoadingLengthWithExtension { get; set; }
         public string Weight { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

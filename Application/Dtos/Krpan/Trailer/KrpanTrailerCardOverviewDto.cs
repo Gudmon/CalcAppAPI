@@ -1,0 +1,13 @@
+namespace CalcAppAPI.Application.Dtos.Krpan.Trailer
+{
+    public class KrpanTrailerCardOverviewDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string LoadCapacity { get; set; }
+        public string LoadingLength { get; set; }
+        public string LoadingLengthWithExtension { get; set; }
+        public string Weight { get; set; }
+        public string ImageUrl { get; set; }
+    }
+}
