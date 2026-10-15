@@ -759,6 +759,7 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Price")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -7839,7 +7840,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-8-DF-1\",\"GP-8-DF-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7864,7 +7865,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
-                            VideoUrls = "[]",
+                            VideoUrls = "[\"-EOIQ2Sy7M4\"]",
                             Weight = "1690"
                         },
                         new
@@ -7874,7 +7875,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-9-DF-1\",\"GP-9-DF-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7910,7 +7911,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-10-DF-1\",\"GP-10-DF-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7946,7 +7947,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-12-DF-1\",\"GP-12-DF-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7983,7 +7984,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-14-DF-1\",\"GP-14-DF-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -8010,7 +8011,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "6559",
                             TotalLengthWithExtension = "7545",
                             TotalWidth = "2222",
-                            VideoUrls = "[]",
+                            VideoUrls = "[\"6JXpN5oIUA4\"]",
                             Weight = "2300"
                         },
                         new
@@ -8020,7 +8021,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-11-D-1\",\"GP-11-D-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 2,
@@ -8056,7 +8057,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-13-D-1\",\"GP-13-D-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 3,
@@ -8094,7 +8095,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-15-D-1\",\"GP-15-D-2\"]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 4,
@@ -8153,7 +8154,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-7-XS-1\",\"GP-7-XS-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
@@ -8165,7 +8166,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5620",
                             TotalLengthWithExtension = "6284",
                             TotalWidth = "1824",
-                            VideoUrls = "[]",
+                            VideoUrls = "[\"eB66vywCgFs\",\"VJmU9TXSjW8\"]",
                             Weight = "1115"
                         },
                         new
@@ -8175,7 +8176,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-8-XS-1\",\"GP-8-XS-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
@@ -8187,7 +8188,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5620",
                             TotalLengthWithExtension = "6284",
                             TotalWidth = "1824",
-                            VideoUrls = "[]",
+                            VideoUrls = "[\"eB66vywCgFs\"]",
                             Weight = "1115"
                         },
                         new
@@ -8197,7 +8198,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-8-S-1\",\"GP-8-S-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
@@ -8209,7 +8210,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5939",
                             TotalLengthWithExtension = "6723",
                             TotalWidth = "2050",
-                            VideoUrls = "[]",
+                            VideoUrls = "[\"RG93RjpyeC4\"]",
                             Weight = "1190"
                         },
                         new
@@ -8219,7 +8220,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "+40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-9-S-1\",\"GP-9-S-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
@@ -8241,7 +8242,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
-                            ImageUrls = "[]",
+                            ImageUrls = "[\"GP-10-S-1\",\"GP-10-S-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,

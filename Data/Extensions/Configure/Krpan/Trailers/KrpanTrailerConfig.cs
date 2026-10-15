@@ -45,6 +45,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-8-DF-1", "GP-8-DF-2"],
+                    VideoUrls = ["-EOIQ2Sy7M4"],
                 },
                 new KrpanTrailer
                 {
@@ -84,6 +86,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-9-DF-1", "GP-9-DF-2"],
                 },
                 new KrpanTrailer
                 {
@@ -123,6 +126,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-10-DF-1", "GP-10-DF-2"],
                 },
                 new KrpanTrailer
                 {
@@ -162,6 +166,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-12-DF-1", "GP-12-DF-2"],
                 },
                 new KrpanTrailer
                 {
@@ -201,6 +206,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-14-DF-1", "GP-14-DF-2"],
+                    VideoUrls = ["6JXpN5oIUA4"],
                 },
 
                 new KrpanTrailer
@@ -241,6 +248,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-11-D-1", "GP-11-D-2"],
                 },
                 new KrpanTrailer
                 {
@@ -280,6 +288,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-13-D-1", "GP-13-D-2"],
                 },
                 new KrpanTrailer
                 {
@@ -319,6 +328,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = 1,
                     KrpanGrappleLocationId = 1,
                     KrpanMechanicalAdjustableFrameId = null,
+                    ImageUrls = ["GP-15-D-1", "GP-15-D-2"],
                 },
                 new KrpanTrailer
                 {
@@ -397,6 +407,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = null,
                     KrpanMechanicalAdjustableFrameId = 1,
+                    ImageUrls = ["GP-7-XS-1", "GP-7-XS-2"],
+                    VideoUrls = ["eB66vywCgFs", "VJmU9TXSjW8"],
                 },
                 new KrpanTrailer
                 {
@@ -436,6 +448,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = null,
                     KrpanMechanicalAdjustableFrameId = 1,
+                    ImageUrls = ["GP-8-XS-1", "GP-8-XS-2"],
+                    VideoUrls = ["eB66vywCgFs"],
                 },
                 new KrpanTrailer
                 {
@@ -475,6 +489,8 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = null,
                     KrpanMechanicalAdjustableFrameId = 1,
+                    ImageUrls = ["GP-8-S-1", "GP-8-S-2"],
+                    VideoUrls = ["RG93RjpyeC4"],
                 },
                 new KrpanTrailer
                 {
@@ -514,6 +530,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = null,
                     KrpanMechanicalAdjustableFrameId = 1,
+                    ImageUrls = ["GP-9-S-1", "GP-9-S-2"],
                 },
                 new KrpanTrailer
                 {
@@ -553,6 +570,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     KrpanExtensionId = null,
                     KrpanGrappleLocationId = null,
                     KrpanMechanicalAdjustableFrameId = 1,
+                    ImageUrls = ["GP-10-S-1", "GP-10-S-2"],
                 }
                 );
         }
