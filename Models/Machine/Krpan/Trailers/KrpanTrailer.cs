@@ -49,6 +49,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanTopConnectionId { get; set; }
         public IEnumerable<KrpanClutch> KrpanClutch { get; set; }
         public IEnumerable<KrpanDrawbar> KrpanDrawbar { get; set; }
+        public IEnumerable<KrpanTrailerCouplingDevice> KrpanTrailerCouplingDevice { get; set; }
         public KrpanCardanShaft? KrpanCardanShaft { get; set; }
         public int? KrpanCardanShaftId { get; set; }
         public KrpanBBox? KrpanBBox { get; set; }
@@ -73,5 +74,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanGrappleLocationId { get; set; }
         public KrpanMechanicalAdjustableFrame? KrpanMechanicalAdjustableFrame { get; set; }
         public int? KrpanMechanicalAdjustableFrameId { get; set; }
+        public string[] ImageUrls { get; set; } = Array.Empty<string>();
+        public string[] VideoUrls { get; set; } = Array.Empty<string>();
     }
 }

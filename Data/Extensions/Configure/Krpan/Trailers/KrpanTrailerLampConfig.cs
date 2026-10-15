@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanTrailerLamp
                 {
                     Id = 1,
-                    Name = "Lámpa",
+                    Name = "LED hátsó lámpák",
                     Code = "",
                     Price = "0",
                 }

@@ -1058,23 +1058,30 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "300012585",
-                            Name = "Rögzített vonószem Ø 50",
-                            Price = "150"
+                            Code = "",
+                            Name = "Vonószem Ø 40 fix",
+                            Price = "0"
                         },
                         new
                         {
                             Id = 2,
-                            Code = "300012587",
-                            Name = "Forgó vonószem Ø 50",
-                            Price = "325"
+                            Code = "300012585",
+                            Name = "Vonószem Ø 50 fix",
+                            Price = "76,67"
                         },
                         new
                         {
                             Id = 3,
-                            Code = "300012587",
-                            Name = "Forgó vonószem Ø 50",
-                            Price = "400"
+                            Code = "300018036",
+                            Name = "Vonószem Ø 50 forgó",
+                            Price = "248,33"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "300012588",
+                            Name = "Gömbfejes vonószerkezet K80",
+                            Price = "234,11"
                         });
                 });
 
@@ -1589,6 +1596,46 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerCouplingDevice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanTrailerCouplingDevice");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Name = "Alsó vonórúd",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Name = "Felső vonórúd",
+                            Price = "142,50"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerLamp", b =>
                 {
                     b.Property<int>("Id")
@@ -1617,7 +1664,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "Lámpa",
+                            Name = "LED hátsó lámpák",
                             Price = "0"
                         });
                 });
@@ -7626,6 +7673,10 @@ namespace CalcAppAPI.Migrations
                     b.Property<string>("FrameSteeringCylinders")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrls")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("KrpanAdjustableDriveId")
                         .HasColumnType("int");
 
@@ -7724,6 +7775,10 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("VideoUrls")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Weight")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7784,6 +7839,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7808,6 +7864,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
+                            VideoUrls = "[]",
                             Weight = "1690"
                         },
                         new
@@ -7817,6 +7874,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7842,6 +7900,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
+                            VideoUrls = "[]",
                             Weight = "1690"
                         },
                         new
@@ -7851,6 +7910,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7876,6 +7936,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5919",
                             TotalLengthWithExtension = "6814",
                             TotalWidth = "2067",
+                            VideoUrls = "[]",
                             Weight = "1690"
                         },
                         new
@@ -7885,6 +7946,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7911,6 +7973,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "6209",
                             TotalLengthWithExtension = "7100",
                             TotalWidth = "2122",
+                            VideoUrls = "[]",
                             Weight = "2100"
                         },
                         new
@@ -7920,6 +7983,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
@@ -7946,6 +8010,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "6559",
                             TotalLengthWithExtension = "7545",
                             TotalWidth = "2222",
+                            VideoUrls = "[]",
                             Weight = "2300"
                         },
                         new
@@ -7955,6 +8020,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 2,
@@ -7980,6 +8046,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5944",
                             TotalLengthWithExtension = "6724",
                             TotalWidth = "2152",
+                            VideoUrls = "[]",
                             Weight = "1734"
                         },
                         new
@@ -7989,6 +8056,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 3,
@@ -8016,6 +8084,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "6334",
                             TotalLengthWithExtension = "7144",
                             TotalWidth = "2200",
+                            VideoUrls = "[]",
                             Weight = "2144"
                         },
                         new
@@ -8025,6 +8094,7 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 4,
@@ -8053,6 +8123,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "6686",
                             TotalLengthWithExtension = "6686",
                             TotalWidth = "2318",
+                            VideoUrls = "[]",
                             Weight = "2352"
                         },
                         new
@@ -8060,8 +8131,10 @@ namespace CalcAppAPI.Migrations
                             Id = 9,
                             CentralBeams = "140x8",
                             Description = "",
+                            ImageUrls = "[\"GP-6-XS-1\",\"GP-6-XS-2\"]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "6000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8070,6 +8143,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5583",
                             TotalLengthWithExtension = "6259",
                             TotalWidth = "1824",
+                            VideoUrls = "[\"eB66vywCgFs\"]",
                             Weight = "1090"
                         },
                         new
@@ -8079,8 +8153,10 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
+                            ImageUrls = "[]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "7000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8089,6 +8165,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5620",
                             TotalLengthWithExtension = "6284",
                             TotalWidth = "1824",
+                            VideoUrls = "[]",
                             Weight = "1115"
                         },
                         new
@@ -8098,8 +8175,10 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
+                            ImageUrls = "[]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8108,6 +8187,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5620",
                             TotalLengthWithExtension = "6284",
                             TotalWidth = "1824",
+                            VideoUrls = "[]",
                             Weight = "1115"
                         },
                         new
@@ -8117,8 +8197,10 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8127,6 +8209,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5939",
                             TotalLengthWithExtension = "6723",
                             TotalWidth = "2050",
+                            VideoUrls = "[]",
                             Weight = "1190"
                         },
                         new
@@ -8136,8 +8219,10 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "+40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8146,6 +8231,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5939",
                             TotalLengthWithExtension = "6723",
                             TotalWidth = "2050",
+                            VideoUrls = "[]",
                             Weight = "1220"
                         },
                         new
@@ -8155,8 +8241,10 @@ namespace CalcAppAPI.Migrations
                             Description = "",
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
+                            ImageUrls = "[]",
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanTrailerLampId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8165,6 +8253,7 @@ namespace CalcAppAPI.Migrations
                             TotalLength = "5939",
                             TotalLengthWithExtension = "6723",
                             TotalWidth = "2050",
+                            VideoUrls = "[]",
                             Weight = "1240"
                         });
                 });
@@ -11846,12 +11935,32 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
                             KrpanDrawbarId = 1,
                             KrpanTrailerId = 2
                         },
                         new
                         {
                             KrpanDrawbarId = 2,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
                             KrpanTrailerId = 2
                         },
                         new
@@ -11866,12 +11975,32 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
                             KrpanDrawbarId = 1,
                             KrpanTrailerId = 4
                         },
                         new
                         {
                             KrpanDrawbarId = 2,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
                             KrpanTrailerId = 4
                         },
                         new
@@ -11883,6 +12012,26 @@ namespace CalcAppAPI.Migrations
                         {
                             KrpanDrawbarId = 2,
                             KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 6
                         },
                         new
                         {
@@ -11891,13 +12040,168 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanDrawbarId = 3,
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
                             KrpanTrailerId = 7
                         },
                         new
                         {
                             KrpanDrawbarId = 3,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
                             KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 1,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 2,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 3,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanDrawbarId = 4,
+                            KrpanTrailerId = 14
                         });
                 });
 
@@ -12005,6 +12309,163 @@ namespace CalcAppAPI.Migrations
                         {
                             KrpanPropulsionId = 4,
                             KrpanTrailerId = 8
+                        });
+                });
+
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerCouplingDevice", b =>
+                {
+                    b.Property<int>("KrpanTrailerCouplingDeviceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanTrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanTrailerCouplingDeviceId", "KrpanTrailerId");
+
+                    b.HasIndex("KrpanTrailerId");
+
+                    b.ToTable("KrpanTrailerCouplingDeviceTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 1,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanTrailerCouplingDeviceId = 2,
+                            KrpanTrailerId = 14
                         });
                 });
 
@@ -15370,6 +15831,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPropulsion", null)
                         .WithMany()
                         .HasForeignKey("KrpanPropulsionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerCouplingDevice", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerCouplingDevice", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerCouplingDeviceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

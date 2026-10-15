@@ -94,6 +94,7 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanClutch> KrpanClutch { get; set; }
         public DbSet<KrpanDrawhead> KrpanDrawHead { get; set; }
         public DbSet<KrpanDrawbar> KrpanDrawbar { get; set; }
+        public DbSet<KrpanTrailerCouplingDevice> KrpanTrailerCouplingDevice { get; set; }
         public DbSet<KrpanCardanShaft> KrpanCardanShaft { get; set; }
         public DbSet<KrpanBBox> KrpanBBox { get; set; }
         public DbSet<KrpanBaleTransportPlatform> KrpanBaleTransportPlatform { get; set; }

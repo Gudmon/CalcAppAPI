@@ -1,6 +1,7 @@
 ﻿using CalcAppAPI.Application.Interfaces;
 using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Configurations.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Trailers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -60,6 +61,16 @@ namespace CalcAppAPI.API.Controllers
                 .ToListAsync();
 
             return Ok(drawbars);
+        }
+
+        [HttpGet("trailers/{id}/couplingdevices")]
+        public async Task<ActionResult<IEnumerable<KrpanTrailerCouplingDevice>>> GetCouplingDevices(int id)
+        {
+            var couplingDevices = await _dbContext.KrpanTrailerCouplingDevice
+                .Where(c => c.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(couplingDevices);
         }
 
         [HttpGet("trailers/{id}/platforms")]

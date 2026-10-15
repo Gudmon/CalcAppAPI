@@ -24,6 +24,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanClutches();
             modelBuilder.ConfigureMultipleKrpanDrawheads();
             modelBuilder.ConfigureMultipleKrpanDrawbars();
+            modelBuilder.ConfigureMultipleKrpanTrailerCouplingDevices();
             modelBuilder.ConfigureMultipleKrpanCardanShafts();
             modelBuilder.ConfigureMultipleKrpanBBoxes();
             modelBuilder.ConfigureMultipleKrpanBaleTransportPlatforms();

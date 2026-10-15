@@ -11,6 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailersWithBrakes();
             modelBuilder.ConnectKrpanTrailersWithClutches();
             modelBuilder.ConnectKrpanTrailersWithDrawbars();
+            modelBuilder.ConnectKrpanTrailersWithCouplingDevices();
             modelBuilder.ConnectKrpanTrailersWithPropulsions();
             modelBuilder.ConnectKrpanTrailersWithTyres();
             modelBuilder.ConnectKrpanTrailerWithHydraulicAdjustableChassis();

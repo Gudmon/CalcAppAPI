@@ -11,23 +11,30 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanDrawbar
                 {
                     Id = 1,
-                    Name = "Rögzített vonószem Ø 50",
-                    Code = "300012585",
-                    Price = "150",
+                    Name = "Vonószem Ø 40 fix",
+                    Code = "",
+                    Price = "0",
                 },
                 new KrpanDrawbar
                 {
                     Id = 2,
-                    Name = "Forgó vonószem Ø 50",
-                    Code = "300012587",
-                    Price = "325",
+                    Name = "Vonószem Ø 50 fix",
+                    Code = "300012585",
+                    Price = "76,67",
                 },
                 new KrpanDrawbar
                 {
                     Id = 3,
-                    Name = "Forgó vonószem Ø 50",
-                    Code = "300012587",
-                    Price = "400",
+                    Name = "Vonószem Ø 50 forgó",
+                    Code = "300018036",
+                    Price = "248,33",
+                },
+                new KrpanDrawbar
+                {
+                    Id = 4,
+                    Name = "Gömbfejes vonószerkezet K80",
+                    Code = "300012588",
+                    Price = "234,11",
                 }
                 );
         }
