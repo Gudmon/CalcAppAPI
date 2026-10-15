@@ -13,7 +13,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Hosszú fás kiegészítő a főgémhez",
                   Code = "LWS",
-                  Price = "150",
+                  Price = "160",
                   ImageUrls = ["PALMS-crane-wood-control-1", "PALMS-crane-wood-control-2"]
               }
               );

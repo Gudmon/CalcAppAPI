@@ -33,7 +33,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 7, DampingId = 2 },
                         new { CraneId = 7, DampingId = 3 },
 
-                        //PALMS 5.87Z
+                        //PALMS 6.83Z
                         new { CraneId = 8, DampingId = 1 },
                         new { CraneId = 8, DampingId = 2 },
                         new { CraneId = 8, DampingId = 3 },

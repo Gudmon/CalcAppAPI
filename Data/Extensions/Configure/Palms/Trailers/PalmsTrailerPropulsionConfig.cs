@@ -217,7 +217,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 22,
                    Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
                    Code = "RWD",
-                   Price = "2185",
+                   Price = "2250",
                    Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                    ImageUrls = ["PALMS-trailer-propulsion-RWD-RWD+-1", "PALMS-trailer-propulsion-RWD-RWD+-2", "PALMS-trailer-propulsion-RWD-RWD+-3", "PALMS-trailer-propulsion-RWD-RWD+-4"]
                }

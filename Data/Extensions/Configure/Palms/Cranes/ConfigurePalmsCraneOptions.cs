@@ -7,6 +7,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
     {
         public static void ConfigureAllPalmsCraneOptions(this ModelBuilder modelBuilder)
         {
+            modelBuilder.ConfigureMultiplePalmsCraneLights();
             modelBuilder.ConfigureMultiplePalmsCranes();
             modelBuilder.ConfigureMultiplePalmsFrameTypes();
             modelBuilder.ConfigureMultiplePalmsControlBlocks();
@@ -17,7 +18,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
             modelBuilder.ConfigureMultiplePalmsElectricalFloatings();
             modelBuilder.ConfigureMultiplePalmsValveBlocks();
             modelBuilder.ConfigureMultiplePalmsDampings();
-            modelBuilder.ConfigureMultiplePalmsCraneLights();
             modelBuilder.ConfigureMultiplePalmsCraneOperatorSeats();
             modelBuilder.ConfigureMultiplePalmsCraneHighPerformanceOilFilters();
             modelBuilder.ConfigureMultiplePalmsCraneOilCoolers();

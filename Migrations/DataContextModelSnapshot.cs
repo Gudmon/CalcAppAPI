@@ -1927,7 +1927,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Egyszerű és megbízható szelepblokk kisebb daruk számára",
                             ImageUrls = "[\"PALMS-crane-control-block-A3.1\"]",
                             Name = "A3.1 6/8 XY vezértömb, BLB BM50 (50l/perc), 195 bar",
-                            Price = "870"
+                            Price = "890"
                         },
                         new
                         {
@@ -1936,7 +1936,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             ImageUrls = "[\"PALMS-crane-control-block-A4-A4.2\"]",
                             Name = "A4 4/8 XY+2x el.on-off vezértömb, Hydro-control D3M, 195 bar",
-                            Price = "1500"
+                            Price = "1535"
                         },
                         new
                         {
@@ -1945,7 +1945,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             ImageUrls = "[\"PALMS-crane-control-block-A4-A4.2\"]",
                             Name = "A4.2 4/8 XY+2x el.on-off vezértömb, Bucher HDS16, 215 bar",
-                            Price = "1500"
+                            Price = "1535"
                         },
                         new
                         {
@@ -1954,7 +1954,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Szelepblokk az egyszerűbb daruvezérlést kedvelő ügyfelek számára",
                             ImageUrls = "[\"PALMS-crane-control-block-A7\"]",
                             Name = "A7 4/8 XYZ vezértömb, Hydro-control, 195 bar (215 bar kérésre)",
-                            Price = "1480"
+                            Price = "1515"
                         },
                         new
                         {
@@ -1963,7 +1963,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             ImageUrls = "[\"PALMS-crane-control-block-A12-A14\"]",
                             Name = "A12 2/8 Pre-hidraulikus, +2x el.propo, Walvoil DPX100 (max. 120 l/min), 215 bar + HPF",
-                            Price = "4720"
+                            Price = "4430"
                         },
                         new
                         {
@@ -1972,7 +1972,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             ImageUrls = "[\"PALMS-crane-control-block-A12-A14\"]",
                             Name = "A14 2/8 Pre-hydraulic, +2x el.propo, Parker L90, 215 bar + HPF",
-                            Price = "6295"
+                            Price = "6050"
                         },
                         new
                         {
@@ -1981,7 +1981,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             ImageUrls = "[\"PALMS-crane-control-block-A19\"]",
                             Name = "A19 El.propo 8 szekciós, Walvoil DPX100, joystick, 215 bar + HPF",
-                            Price = "6295"
+                            Price = "5900"
                         },
                         new
                         {
@@ -1990,7 +1990,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Parker LC6 mini joystickek. Leginkább PALMS 5., 7. és X-sorozatú darukhoz használják",
                             ImageUrls = "[\"PALMS-crane-control-block-A23\"]",
                             Name = "A23 El.propo 8 szekciós, IQAN LC6, mini joystick-ok, (LS komp.) + Parker L90pro, 215/240 bar + HPF",
-                            Price = "8470"
+                            Price = "8275"
                         },
                         new
                         {
@@ -1999,7 +1999,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Leginkább a PALMS 5. és 7. sorozatú darukkal használható",
                             ImageUrls = "[\"PALMS-crane-control-block-A235\"]",
                             Name = "A235 El.propo 8 szekciós, IQAN LC5 joystick-ok, (LS komp) Parker L90pro, 215/240 bar + HPF",
-                            Price = "8470"
+                            Price = "8275"
                         },
                         new
                         {
@@ -2008,7 +2008,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Parker LC6 mini joystick kijelzővel",
                             ImageUrls = "[\"PALMS-crane-control-block-A25.1\"]",
                             Name = "A25.1 El.propo 8 szekciós (A23) + MD3 kijelző + HPF",
-                            Price = "9415"
+                            Price = "9240"
                         },
                         new
                         {
@@ -2017,7 +2017,7 @@ namespace CalcAppAPI.Migrations
                             Description = "IMET rádió vezérlés PALMS erdészeti daruhoz",
                             ImageUrls = "[\"PALMS-crane-control-block-A26\"]",
                             Name = "A26 IMET rádió távirányítás, (LS komp.) Parker L90pro (max. 150 l/min.), 215/240 bar + HPF",
-                            Price = "9110"
+                            Price = "8935"
                         },
                         new
                         {
@@ -2026,7 +2026,7 @@ namespace CalcAppAPI.Migrations
                             Description = "IMET rádióvezérlés Parker LC6 mini joystickekkel",
                             ImageUrls = "[\"PALMS-crane-control-block-A36\"]",
                             Name = "A36 Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + HPF",
-                            Price = "11840"
+                            Price = "11735"
                         },
                         new
                         {
@@ -2035,7 +2035,7 @@ namespace CalcAppAPI.Migrations
                             Description = "IMET rádióvezérlés és Parker LC6 mini joystick kijelzővel",
                             ImageUrls = "[\"PALMS-crane-control-block-A36.1\"]",
                             Name = "A36.1 Combi control (rádió távirányítás+A23),Parker  L90pro, 215/240 bar + MD3 kijelző + HPF",
-                            Price = "12785"
+                            Price = "12695"
                         },
                         new
                         {
@@ -2044,7 +2044,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Standard üzemmód, ahol a fő emelőhenger, a hosszabbító gém hengere és a teleszkóp hengere külön vezérelhető.\r\nPTC mód, ahol a markoló lineárisan mozgatható X, Y és Z irányban.",
                             ImageUrls = "[\"PALMS-crane-control-block-A42\"]",
                             Name = "A42 Palms Tip Control, IQAN joystickok, MD4 - 7 inch-es kijelző, Parker L90pro, 215/240 bar + HPF",
-                            Price = "14660"
+                            Price = "14550"
                         },
                         new
                         {
@@ -2313,7 +2313,7 @@ namespace CalcAppAPI.Migrations
                             CraneWeight = "360",
                             Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ImageUrls = "[\"PALMS-2.42-1\",\"PALMS-2.42-2\"]",
-                            LiftAtFourMeters190Bar = "570",
+                            LiftAtFourMeters190Bar = "-",
                             LiftAtFourMeters215Bar = "-",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "540",
@@ -2323,7 +2323,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "4.2",
                             Name = "PALMS 2.42",
                             PillarSlewingAngle = "370",
-                            Price = "5870",
+                            Price = "6125",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -2339,7 +2339,7 @@ namespace CalcAppAPI.Migrations
                             TurningDeviceCounterPlateId = 1,
                             VideoUrls = "[\"fEDDjo_K3E8\"]",
                             WoodControlId = 1,
-                            WorkingPressure = "190"
+                            WorkingPressure = "195"
                         },
                         new
                         {
@@ -2363,7 +2363,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "5.4",
                             Name = "PALMS 2.54",
                             PillarSlewingAngle = "370",
-                            Price = "7215",
+                            Price = "7415",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -2373,7 +2373,7 @@ namespace CalcAppAPI.Migrations
                             Series = "2",
                             ShippingId = 2,
                             SlewingCylinder = "4",
-                            SlewingTorque = "7.8",
+                            SlewingTorque = "9",
                             SupportLegCounterPlateId = 1,
                             TelescopeLength = "1,33",
                             TurningDeviceCounterPlateId = 1,
@@ -2402,7 +2402,7 @@ namespace CalcAppAPI.Migrations
                             MaxReach = "6.3",
                             Name = "PALMS 3.63",
                             PillarSlewingAngle = "370",
-                            Price = "7480",
+                            Price = "7765",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "20-35",
                             RotatorCapacity = "30",
@@ -2418,13 +2418,13 @@ namespace CalcAppAPI.Migrations
                             TurningDeviceCounterPlateId = 1,
                             VideoUrls = "[\"z9VS2BuQwvM\"]",
                             WoodControlId = 1,
-                            WorkingPressure = "190"
+                            WorkingPressure = "195"
                         },
                         new
                         {
                             Id = 4,
                             BrutLiftingTorque190Bar = "41",
-                            BrutLiftingTorque215Bar = "46",
+                            BrutLiftingTorque215Bar = "51",
                             BrutLiftingTorque240Bar = "-",
                             CoverId = 1,
                             CraneWeight = "620",
@@ -2433,17 +2433,17 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-3.67-1\",\"PALMS-3.67-2\",\"PALMS-3.67-3\",\"PALMS-3.67-4\",\"PALMS-3.67-5\",\"PALMS-3.67-6\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "820",
-                            LiftAtFourMeters215Bar = "910",
+                            LiftAtFourMeters215Bar = "1040",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "430",
-                            LiftAtFullReach215Bar = "480",
+                            LiftAtFullReach215Bar = "520",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
                             MaxReach = "6.7",
                             Name = "PALMS 3.67",
                             PillarSlewingAngle = "370",
-                            Price = "8400",
+                            Price = "8620",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "30-45",
                             RotatorCapacity = "30",
@@ -2466,7 +2466,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 5,
                             BrutLiftingTorque190Bar = "48",
-                            BrutLiftingTorque215Bar = "54",
+                            BrutLiftingTorque215Bar = "57",
                             BrutLiftingTorque240Bar = "-",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
@@ -2476,10 +2476,10 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-4.71-1\",\"PALMS-4.71-2\",\"PALMS-4.71-3\",\"PALMS-4.71-4\",\"PALMS-4.71-5\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "960",
-                            LiftAtFourMeters215Bar = "1040",
+                            LiftAtFourMeters215Bar = "1115",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "480",
-                            LiftAtFullReach215Bar = "535",
+                            LiftAtFullReach215Bar = "580",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
@@ -2487,7 +2487,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 4.71",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "370",
-                            Price = "9800",
+                            Price = "10070",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "45-70",
                             RotatorCapacity = "45",
@@ -2521,10 +2521,10 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-5.75-1\",\"PALMS-5.75-2\",\"PALMS-5.75-3\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1150",
-                            LiftAtFourMeters215Bar = "1350",
+                            LiftAtFourMeters215Bar = "1440",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "540",
-                            LiftAtFullReach215Bar = "620",
+                            LiftAtFullReach215Bar = "660",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
@@ -2532,7 +2532,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.75",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "12445",
+                            Price = "12760",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorCapacity = "55",
@@ -2555,21 +2555,21 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 7,
                             BoomGuardId = 1,
-                            BrutLiftingTorque190Bar = "56",
-                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque190Bar = "63",
+                            BrutLiftingTorque215Bar = "69",
                             BrutLiftingTorque240Bar = "-",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
-                            CraneWeight = "900",
+                            CraneWeight = "950",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.",
                             ElectricalFloatingId = 1,
                             ImageUrls = "[\"PALMS-5.85-1\",\"PALMS-5.85-2\",\"PALMS-5.85-3\",\"PALMS-5.85-4\",\"PALMS-5.85-5\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "1050",
-                            LiftAtFourMeters215Bar = "1220",
+                            LiftAtFourMeters215Bar = "1270",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "450",
-                            LiftAtFullReach215Bar = "520",
+                            LiftAtFullReach215Bar = "560",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
@@ -2577,7 +2577,7 @@ namespace CalcAppAPI.Migrations
                             Name = "PALMS 5.85",
                             OperatorSeatId = 1,
                             PillarSlewingAngle = "380",
-                            Price = "14595",
+                            Price = "15005",
                             ProtectionSleevesId = 1,
                             RecommendedOilFlow = "50-90",
                             RotatorCapacity = "55",
@@ -2600,34 +2600,34 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 8,
                             BrutLiftingTorque190Bar = "-",
-                            BrutLiftingTorque215Bar = "63",
+                            BrutLiftingTorque215Bar = "71",
                             BrutLiftingTorque240Bar = "-",
                             CoverId = 1,
                             CraneOilCoolerId = 1,
-                            CraneWeight = "995",
-                            Description = "A PALMS 5.87Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
-                            ImageUrls = "[\"PALMS-5.87Z-1\",\"PALMS-5.87Z-2\",\"PALMS-5.87Z-3\",\"PALMS-5.87Z-4\",\"PALMS-5.87Z-5\",\"PALMS-5.87Z-6\"]",
+                            CraneWeight = "1090",
+                            Description = "A PALMS 6.83Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            ImageUrls = "[\"PALMS-6.83Z-1\",\"PALMS-6.83Z-2\",\"PALMS-6.83Z-3\",\"PALMS-6.83Z-4\",\"PALMS-6.83Z-5\",\"PALMS-6.83Z-6\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
-                            LiftAtFourMeters215Bar = "1235",
+                            LiftAtFourMeters215Bar = "1190",
                             LiftAtFourMeters240Bar = "-",
                             LiftAtFullReach190Bar = "-",
-                            LiftAtFullReach215Bar = "490 (8,4 m)",
+                            LiftAtFullReach215Bar = "560 (8m)",
                             LiftAtFullReach240Bar = "-",
                             LightId = 1,
                             LinkageId = 1,
-                            MaxReach = "8.7",
-                            Name = "PALMS 5.87Z",
+                            MaxReach = "8.3",
+                            Name = "PALMS 6.83Z",
                             OperatorSeatId = 1,
-                            PillarSlewingAngle = "340",
-                            Price = "16060",
+                            PillarSlewingAngle = "380",
+                            Price = "16735",
                             ProtectionSleevesId = 1,
-                            RecommendedOilFlow = "50-90",
+                            RecommendedOilFlow = "60-100",
                             RotatorCapacity = "55",
                             RotatorConnection = "Palms",
-                            RotatorMaximumLoad = "60",
+                            RotatorMaximumLoad = "55",
                             RotatorType = "FL",
-                            Series = "5",
+                            Series = "6",
                             ShippingId = 2,
                             SlewingCylinder = "4",
                             SlewingTorque = "17",
@@ -2635,7 +2635,7 @@ namespace CalcAppAPI.Migrations
                             TelescopeLength = "3,3",
                             TurningDeviceCounterPlateId = 1,
                             ValveBlockId = 1,
-                            VideoUrls = "[\"pLvH1NAPEzI\"]",
+                            VideoUrls = "[]",
                             WorkingPressure = "215"
                         },
                         new
@@ -2832,13 +2832,13 @@ namespace CalcAppAPI.Migrations
                             LiftAtFullReach190Bar = "-",
                             LiftAtFullReach215Bar = "-",
                             LiftAtFullReach240Bar = "-",
-                            LightId = 2,
+                            LightId = 3,
                             MaxReach = "4.2",
                             Name = "PALMS 1.42",
                             PillarSlewingAngle = "330",
-                            Price = "3300",
+                            Price = "3465",
                             ProtectionSleevesId = 2,
-                            RecommendedOilFlow = "-",
+                            RecommendedOilFlow = "10-20",
                             RotatorCapacity = "10",
                             RotatorConnection = "csapos",
                             RotatorMaximumLoad = "10",
@@ -2850,7 +2850,7 @@ namespace CalcAppAPI.Migrations
                             SupportBracketId = 1,
                             TelescopeLength = "1,2",
                             VideoUrls = "[\"25Y2HRXtohQ\",\"2r7Po4NpYHw\"]",
-                            WorkingPressure = "180"
+                            WorkingPressure = "190"
                         });
                 });
 
@@ -2896,6 +2896,14 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 2,
+                            Code = "L1",
+                            ImageUrls = "[\"PALMS-crane-light-1\",\"PALMS-crane-light-2\"]",
+                            Name = "LED munkalámpák a darugémre, 1 db",
+                            Price = "340"
+                        },
+                        new
+                        {
+                            Id = 3,
                             Code = "L1",
                             ImageUrls = "[\"PALMS-crane-light-1\",\"PALMS-crane-light-2\"]",
                             Name = "LED munkalámpák a darugémre, 1 db",
@@ -3092,7 +3100,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B2.1-1\",\"PALMS-crane-frame-type-B2.1-2\",\"PALMS-crane-frame-type-B2.1-3\"]",
                             Mass = "174",
                             Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
-                            Price = "1575"
+                            Price = "1615"
                         },
                         new
                         {
@@ -3101,7 +3109,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B3-1\",\"PALMS-crane-frame-type-B3-2\",\"PALMS-crane-frame-type-B3-3\"]",
                             Mass = "313",
                             Name = "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással",
-                            Price = "2100"
+                            Price = "2150"
                         },
                         new
                         {
@@ -3110,7 +3118,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B4-1\",\"PALMS-crane-frame-type-B4-2\",\"PALMS-crane-frame-type-B4-3\"]",
                             Mass = "237",
                             Name = "FD típusú economy talpaló (csak 7SX, 8SX és 9SC pótkocsikhoz)",
-                            Price = "2100"
+                            Price = "2320"
                         },
                         new
                         {
@@ -3119,7 +3127,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B6-1\",\"PALMS-crane-frame-type-B6-2\",\"PALMS-crane-frame-type-B6-3\"]",
                             Mass = "449",
                             Name = "B6, FD típusú letalpaló, 3 pontos csatlakozással",
-                            Price = "3005"
+                            Price = "3075"
                         },
                         new
                         {
@@ -3128,7 +3136,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B9-1\",\"PALMS-crane-frame-type-B9-2\",\"PALMS-crane-frame-type-B9-3\"]",
                             Mass = "474",
                             Name = "B9, FD típusú, különösen erős letalpaló (HD)",
-                            Price = "3520"
+                            Price = "3665"
                         },
                         new
                         {
@@ -3137,7 +3145,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B10-1\",\"PALMS-crane-frame-type-B10-2\",\"PALMS-crane-frame-type-B10-3\"]",
                             Mass = "520",
                             Name = "Talpaló Z daruhoz",
-                            Price = "3730"
+                            Price = "3820"
                         },
                         new
                         {
@@ -3146,7 +3154,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-frame-type-B11-1\",\"PALMS-crane-frame-type-B11-2\",\"PALMS-crane-frame-type-B11-3\"]",
                             Mass = "772",
                             Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
-                            Price = "7300",
+                            Price = "7475",
                             VideoUrls = "[\"ybEUttbOiMU\"]"
                         },
                         new
@@ -3157,6 +3165,15 @@ namespace CalcAppAPI.Migrations
                             Mass = "50",
                             Name = "FD talpaló",
                             Price = "725"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "B13",
+                            ImageUrls = "[\"PALMS-crane-frame-type-B13-1\",\"PALMS-crane-frame-type-B13-2\",\"PALMS-crane-frame-type-B13-3\"]",
+                            Mass = "520",
+                            Name = "Teleszkópos talpaló Z daruhoz, vezérléssel (csak A14-A36 esetén)",
+                            Price = "3645"
                         });
                 });
 
@@ -3232,7 +3249,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C02-1\",\"PALMS-crane-grapple-C02-2\"]",
                             Mass = "66",
                             Name = "Kanál 0,16 Palms (FL)",
-                            Price = "1085"
+                            Price = "1120"
                         },
                         new
                         {
@@ -3247,7 +3264,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C1-1\",\"PALMS-crane-grapple-C2-2\"]",
                             Mass = "88",
                             Name = "Kanál 0,18 Palms (FL)",
-                            Price = "1395"
+                            Price = "1430"
                         },
                         new
                         {
@@ -3262,7 +3279,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C3-1\",\"PALMS-crane-grapple-C3-2\",\"PALMS-crane-grapple-C3-3\",\"PALMS-crane-grapple-C3-4\"]",
                             Mass = "114",
                             Name = "Kanál 0,23 Palms (FL)",
-                            Price = "1745"
+                            Price = "1785"
                         },
                         new
                         {
@@ -3270,7 +3287,7 @@ namespace CalcAppAPI.Migrations
                             Area = "0.25",
                             Code = "C5.1",
                             Name = "Kanál 0,25 Grippen (FL)",
-                            Price = "3380"
+                            Price = "3465"
                         },
                         new
                         {
@@ -3285,7 +3302,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C5.2-1\",\"PALMS-crane-grapple-C5.2-2\"]",
                             Mass = "174",
                             Name = "Kanál 0,26 Palms (FL)",
-                            Price = "2615"
+                            Price = "2675"
                         },
                         new
                         {
@@ -3300,7 +3317,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C36-1\",\"PALMS-crane-grapple-C36-2\",\"PALMS-crane-grapple-C36-3\"]",
                             Mass = "127",
                             Name = "Biomasszás kanál 0,21 Palms (FL)",
-                            Price = "2230"
+                            Price = "2285"
                         },
                         new
                         {
@@ -3308,7 +3325,7 @@ namespace CalcAppAPI.Migrations
                             Area = "0.25",
                             Code = "C7.1",
                             Name = "Biomasszás kanál 0,25 Grippen (FL)",
-                            Price = "3715"
+                            Price = "3805"
                         },
                         new
                         {
@@ -3323,7 +3340,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C7.2-1\",\"PALMS-crane-grapple-C7.2-2\"]",
                             Mass = "118",
                             Name = "Biomasszás kanál 0,23 Palms (FL)",
-                            Price = "3020"
+                            Price = "3090"
                         },
                         new
                         {
@@ -3338,7 +3355,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C11-1\",\"PALMS-crane-grapple-C11-2\"]",
                             Mass = "223",
                             Name = "Biomasszás kanál 0,25 Palms (FL)",
-                            Price = "3450"
+                            Price = "3540"
                         },
                         new
                         {
@@ -3353,7 +3370,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C10-1\",\"PALMS-crane-grapple-C10-2\",\"PALMS-crane-grapple-C10-3\"]",
                             Mass = "205",
                             Name = "Palms 0,28-as kanál (FL)",
-                            Price = "3125"
+                            Price = "3200"
                         },
                         new
                         {
@@ -3369,7 +3386,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-GB16-1\",\"PALMS-crane-grapple-GB16-2\",\"PALMS-crane-grapple-GB\"]",
                             Mass = "99",
                             Name = "Aprítékos kiegészítő 0,16 Palms (FL) kanálhoz",
-                            Price = "475",
+                            Price = "485",
                             VideoUrls = "[\"Ff3LQ7rCo0E\"]"
                         },
                         new
@@ -3379,7 +3396,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-GB18-1\",\"PALMS-crane-grapple-GB\"]",
                             Mass = "130",
                             Name = "Aprítékos kiegészítő 0,18 Palms (FL) kanálhoz",
-                            Price = "610",
+                            Price = "625",
                             VideoUrls = "[\"Ff3LQ7rCo0E\"]"
                         },
                         new
@@ -3389,7 +3406,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-GB3-1\",\"PALMS-crane-grapple-GB\"]",
                             Mass = "195",
                             Name = "Aprítékos kiegészítő 0,23 Palms (FL) kanálhoz",
-                            Price = "935",
+                            Price = "955",
                             VideoUrls = "[\"JbYq1cykdEc\"]"
                         },
                         new
@@ -3405,7 +3422,7 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-grapple-C009-1\",\"PALMS-crane-grapple-C009-2\",\"PALMS-crane-grapple-C009-3\"]",
                             Mass = "36",
                             Name = "Palms 0,09 kanál",
-                            Price = "660"
+                            Price = "685"
                         });
                 });
 
@@ -3585,7 +3602,7 @@ namespace CalcAppAPI.Migrations
                             Code = "3PL",
                             ImageUrls = "[\"PALMS-crane-linkage-1\"]",
                             Name = "3 pontos csatlakozó adapter (csak a B9 és B10 talpalóval kompatibilis)",
-                            Price = "960"
+                            Price = "980"
                         });
                 });
 
@@ -4052,7 +4069,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "W0",
                             Name = "Csörlő előkészítés a főgémen",
-                            Price = "70"
+                            Price = "0"
                         },
                         new
                         {
@@ -4117,7 +4134,7 @@ namespace CalcAppAPI.Migrations
                             Code = "LWS",
                             ImageUrls = "[\"PALMS-crane-wood-control-1\",\"PALMS-crane-wood-control-2\"]",
                             Name = "Hosszú fás kiegészítő a főgémhez",
-                            Price = "150"
+                            Price = "160"
                         });
                 });
 
@@ -4194,7 +4211,7 @@ namespace CalcAppAPI.Migrations
                             Code = "Bbox",
                             ImageUrls = "[\"PALMS-trailer-bbox-1\",\"PALMS-trailer-bbox-2\",\"PALMS-trailer-bbox-3\",\"PALMS-trailer-bbox-4\",\"PALMS-trailer-bbox-5\",\"PALMS-trailer-bbox-6\"]",
                             Name = "Biomasszás boksz 2mm HARDOX",
-                            Price = "1000",
+                            Price = "1040",
                             VideoUrls = "[\"4irHQzQZYHM\"]"
                         });
                 });
@@ -5577,7 +5594,7 @@ namespace CalcAppAPI.Migrations
                             Description = "Költséghatékony hajtásrendszer azoknak a felhasználóknak, akiknek időnként további pótkocsi-hajtásra van szükségük. A rendszer működtetése a traktor hidraulikájáról történik. Előnyei az RWD+ rendszerhez képest a jobb manőverezhetőség és a műszaki egyszerűség.",
                             ImageUrls = "[\"PALMS-trailer-propulsion-RWD-RWD\\u002B-1\",\"PALMS-trailer-propulsion-RWD-RWD\\u002B-2\",\"PALMS-trailer-propulsion-RWD-RWD\\u002B-3\",\"PALMS-trailer-propulsion-RWD-RWD\\u002B-4\"]",
                             Name = "Robson WD dörzshajtás (traktor hidarulikáról)",
-                            Price = "2185"
+                            Price = "2250"
                         });
                 });
 
@@ -6163,21 +6180,21 @@ namespace CalcAppAPI.Migrations
                             Id = 79,
                             Code = "A3",
                             Name = "Pótkocsi 3 pár rakoncával",
-                            Price = "2730"
+                            Price = "2785"
                         },
                         new
                         {
                             Id = 80,
                             Code = "A4",
                             Name = "Pótkocsi 4 pár rakoncával",
-                            Price = "2855"
+                            Price = "2910"
                         },
                         new
                         {
                             Id = 81,
                             Code = "A5",
                             Name = "Pótkocsi 5 pár rakoncával",
-                            Price = "2985"
+                            Price = "3035"
                         },
                         new
                         {
@@ -9087,6 +9104,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 8,
                             FrameTypeId = 7
+                        },
+                        new
+                        {
+                            CraneId = 8,
+                            FrameTypeId = 10
                         },
                         new
                         {

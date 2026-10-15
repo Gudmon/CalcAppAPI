@@ -51,8 +51,9 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 7, FrameTypeId = 6 },
                         new { CraneId = 7, FrameTypeId = 8 },
 
-                        //PALMS 5.87Z
+                        //PALMS 6.83Z
                         new { CraneId = 8, FrameTypeId = 7 },
+                        new { CraneId = 8, FrameTypeId = 10 },
 
                         //PALMS 7.78
                         new { CraneId = 9, FrameTypeId = 1 },

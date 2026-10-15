@@ -13,7 +13,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Id = 1,
                   Name = "Csörlő előkészítés a főgémen",
                   Code = "W0",
-                  Price = "70"
+                  Price = "0"
               },
               new Winch
               {

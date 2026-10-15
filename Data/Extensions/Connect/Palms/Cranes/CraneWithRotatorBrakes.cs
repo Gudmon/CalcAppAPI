@@ -48,7 +48,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 7, RotatorBrakeId = 2 },
                         new { CraneId = 7, RotatorBrakeId = 5 },
 
-                        //PALMS 5.87Z
+                        //PALMS 6.83Z
                         new { CraneId = 8, RotatorBrakeId = 1 },
                         new { CraneId = 8, RotatorBrakeId = 2 },
                         new { CraneId = 8, RotatorBrakeId = 5 },

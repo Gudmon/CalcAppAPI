@@ -21,7 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 2,
                    Name = "A típusú kis letalpaló, 3 pontos csatlakozással",
                    Code = "B2.1",
-                   Price = "1575",
+                   Price = "1615",
                    Mass = "174",
                    ImageUrls = ["PALMS-crane-frame-type-B2.1-1", "PALMS-crane-frame-type-B2.1-2", "PALMS-crane-frame-type-B2.1-3"]
                },
@@ -30,7 +30,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 3,
                    Name = "B3, A típusú normál méretű letalpaló, 3 pontos csatlakozással",
                    Code = "B3",
-                   Price = "2100",
+                   Price = "2150",
                    Mass = "313",
                    ImageUrls = ["PALMS-crane-frame-type-B3-1", "PALMS-crane-frame-type-B3-2", "PALMS-crane-frame-type-B3-3"]
                },
@@ -39,7 +39,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 4,
                    Name = "FD típusú economy talpaló (csak 7SX, 8SX és 9SC pótkocsikhoz)",
                    Code = "B4",
-                   Price = "2100",
+                   Price = "2320",
                    Mass = "237",
                    ImageUrls = ["PALMS-crane-frame-type-B4-1", "PALMS-crane-frame-type-B4-2", "PALMS-crane-frame-type-B4-3"]
                },
@@ -48,7 +48,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 5,
                    Name = "B6, FD típusú letalpaló, 3 pontos csatlakozással",
                    Code = "B6",
-                   Price = "3005",
+                   Price = "3075",
                    Mass = "449",
                    ImageUrls = ["PALMS-crane-frame-type-B6-1", "PALMS-crane-frame-type-B6-2", "PALMS-crane-frame-type-B6-3"]
                },
@@ -57,7 +57,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 6,
                    Name = "B9, FD típusú, különösen erős letalpaló (HD)",
                    Code = "B9",
-                   Price = "3520",
+                   Price = "3665",
                    Mass = "474",
                    ImageUrls = ["PALMS-crane-frame-type-B9-1", "PALMS-crane-frame-type-B9-2", "PALMS-crane-frame-type-B9-3"]
                },
@@ -66,7 +66,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 7,
                    Name = "Talpaló Z daruhoz",
                    Code = "B10",
-                   Price = "3730",
+                   Price = "3820",
                    Mass = "520",
                    ImageUrls = ["PALMS-crane-frame-type-B10-1", "PALMS-crane-frame-type-B10-2", "PALMS-crane-frame-type-B10-3"]
                },
@@ -75,7 +75,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 8,
                    Name = "Különösen erős talp daru billentéssel, vezérléssel, talpaló lábakkal (csak A21-A42 vezértömbhöz)",
                    Code = "B11",
-                   Price = "7300",
+                   Price = "7475",
                    Mass = "772",
                    ImageUrls = ["PALMS-crane-frame-type-B11-1", "PALMS-crane-frame-type-B11-2", "PALMS-crane-frame-type-B11-3"],
                    VideoUrls = ["ybEUttbOiMU"]
@@ -88,6 +88,15 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Price = "725",
                    Mass = "50",
                    ImageUrls = ["PALMS-crane-frame-type-B1-1", "PALMS-crane-frame-type-B1-2", "PALMS-crane-frame-type-B1-3"]
+               },
+               new FrameType
+               {
+                   Id = 10,
+                   Name = "Teleszkópos talpaló Z daruhoz, vezérléssel (csak A14-A36 esetén)",
+                   Code = "B13",
+                   Price = "3645",
+                   Mass = "520",
+                   ImageUrls = ["PALMS-crane-frame-type-B13-1", "PALMS-crane-frame-type-B13-2", "PALMS-crane-frame-type-B13-3"]
                }
                );
 

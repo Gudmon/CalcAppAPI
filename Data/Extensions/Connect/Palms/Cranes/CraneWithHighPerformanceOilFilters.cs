@@ -39,7 +39,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 7, HighPerformanceOilFilterId = 1 },
                         new { CraneId = 7, HighPerformanceOilFilterId = 2 },
 
-                        //PALMS 5.87Z
+                        //PALMS 6.83Z
                         new { CraneId = 8, HighPerformanceOilFilterId = 1 },
                         new { CraneId = 8, HighPerformanceOilFilterId = 2 },
 

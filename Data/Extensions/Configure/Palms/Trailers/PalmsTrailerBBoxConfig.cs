@@ -49,7 +49,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Id = 5,
                    Name = "Biomasszás boksz 2mm HARDOX",
                    Code = "Bbox",
-                   Price = "1000",
+                   Price = "1040",
                    ImageUrls = ["PALMS-trailer-bbox-1", "PALMS-trailer-bbox-2", "PALMS-trailer-bbox-3", "PALMS-trailer-bbox-4", "PALMS-trailer-bbox-5", "PALMS-trailer-bbox-6"],
                    VideoUrls = ["4irHQzQZYHM"]
                });
