@@ -49,7 +49,44 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         //KRPAN GP 15 D
                         new { KrpanTrailerId = 8, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 8, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 8, KrpanBrakeId = 4 }
+                        new { KrpanTrailerId = 8, KrpanBrakeId = 4 },
+
+                        //KRPAN GP 6 XS
+                        new { KrpanTrailerId = 9, KrpanBrakeId = 1 },
+                        new { KrpanTrailerId = 9, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 9, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 9, KrpanBrakeId = 6 },
+
+                        //KRPAN GP 7 XS
+                        new { KrpanTrailerId = 10, KrpanBrakeId = 1 },
+                        new { KrpanTrailerId = 10, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 10, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 10, KrpanBrakeId = 5 },
+                        new { KrpanTrailerId = 10, KrpanBrakeId = 6 },
+
+                        //KRPAN GP 8 XS
+                        new { KrpanTrailerId = 11, KrpanBrakeId = 1 },
+                        new { KrpanTrailerId = 11, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 11, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 11, KrpanBrakeId = 5 },
+                        new { KrpanTrailerId = 11, KrpanBrakeId = 6 },
+
+                        //KRPAN GP 8 S
+                        new { KrpanTrailerId = 12, KrpanBrakeId = 1 },
+                        new { KrpanTrailerId = 12, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 12, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 12, KrpanBrakeId = 5 },
+                        new { KrpanTrailerId = 12, KrpanBrakeId = 6 },
+
+                        //KRPAN GP 9 S
+                        new { KrpanTrailerId = 13, KrpanBrakeId = 2 },
+                        new { KrpanTrailerId = 13, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 13, KrpanBrakeId = 6 },
+
+                        //KRPAN GP 10 S
+                        new { KrpanTrailerId = 14, KrpanBrakeId = 2 },
+                        new { KrpanTrailerId = 14, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 14, KrpanBrakeId = 6 }
                     )
                 );
         }

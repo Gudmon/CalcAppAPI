@@ -11627,6 +11627,131 @@ namespace CalcAppAPI.Migrations
                         {
                             KrpanBrakeId = 4,
                             KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 1,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 3,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 1,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 3,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 5,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 1,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 3,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 5,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 1,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 3,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 5,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 12
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 2,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 13
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 2,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 4,
+                            KrpanTrailerId = 14
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 6,
+                            KrpanTrailerId = 14
                         });
                 });
 
