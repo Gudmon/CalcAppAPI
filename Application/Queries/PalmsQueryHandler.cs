@@ -27,7 +27,7 @@ namespace CalcAppAPI.Application.Queries
         {
             var desiredOrder = new List<string>
             {
-                "PALMS 2D", "PALMS 6S", "PALMS 8SX", "PALMS 8D",
+                "PALMS 2D", "PALMS 4DC", "PALMS 4D", "PALMS 6S", "PALMS 8SX", "PALMS 8D",
                 "PALMS 9SC", "PALMS 10D", "PALMS 12D",
                 "PALMS 14D", "PALMS 10UX", "PALMS 11UX", "PALMS 12U",
                 "PALMS 12UAWD", "PALMS 15U", "PALMS 15UAWD",
@@ -111,7 +111,7 @@ namespace CalcAppAPI.Application.Queries
             var desiredOrder = new List<string> {
                 "PALMS 1.42", "PALMS 2.42", "PALMS 2.54", "PALMS 3.63",
                 "PALMS 3.67", "PALMS 4.71", "PALMS 5.75", "PALMS 5.85", "PALMS 6.83Z",
-                "PALMS 7.78", "PALMS 7.87", "PALMS 7.94", "PALMS X100"
+                "PALMS 7.78", "PALMS 7.87", "PALMS 7.94", "PALMS 8.87Z", "PALMS X100"
             };
 
             var orderMap = desiredOrder
