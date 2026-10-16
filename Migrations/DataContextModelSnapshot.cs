@@ -11058,6 +11058,26 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 11,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            CraneId = 2,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            TrailerId = 18
                         });
                 });
 
