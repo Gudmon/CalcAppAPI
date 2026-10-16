@@ -18,7 +18,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
               new Grapple
               {
                  Id = 2,
-                 Name = "Kanál 0,16 Palms (FL)",
+                 Name = "Kanál 0,16 Palms",
                  Code = "C02",
                  Price = "1120",
                  Mass = "66",
@@ -202,6 +202,21 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   D = "40",
                   E = "265",
                   ImageUrls = ["PALMS-crane-grapple-C009-1", "PALMS-crane-grapple-C009-2", "PALMS-crane-grapple-C009-3"]
+              },
+              new Grapple
+              {
+                  Id = 17,
+                  Name = "Kanál 0,16 Palms",
+                  Code = "C01",
+                  Price = "1120",
+                  Mass = "66",
+                  Area = "0.16",
+                  A = "1040",
+                  B = "670",
+                  C = "410",
+                  D = "55",
+                  E = "305",
+                  ImageUrls = ["PALMS-crane-grapple-C02-1", "PALMS-crane-grapple-C02-2"]
               }
               );
         }

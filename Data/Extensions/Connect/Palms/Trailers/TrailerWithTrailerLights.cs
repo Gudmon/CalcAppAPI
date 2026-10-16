@@ -86,7 +86,13 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                        //PALMS 11UX
                        new { TrailerId = 16, LightId = 1 },
                        new { TrailerId = 16, LightId = 2 },
-                       new { TrailerId = 16, LightId = 3 }
+                       new { TrailerId = 16, LightId = 3 },
+
+                       //PALMS 4DC
+                       new { TrailerId = 17, LightId = 1 },
+
+                       //PALMS 4D
+                       new { TrailerId = 18, LightId = 1 }
                    )
                );
         }

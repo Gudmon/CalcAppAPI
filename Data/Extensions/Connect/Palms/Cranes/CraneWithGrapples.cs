@@ -19,6 +19,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 1, GrappleId = 3 },
                         new { CraneId = 1, GrappleId = 13 },
                         new { CraneId = 1, GrappleId = 14 },
+                        new { CraneId = 1, GrappleId = 17 },
 
                         //PALMS 2.54
                         new { CraneId = 2, GrappleId = 1 },
@@ -26,6 +27,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 2, GrappleId = 3 },
                         new { CraneId = 2, GrappleId = 13 },
                         new { CraneId = 2, GrappleId = 14 },
+                        new { CraneId = 2, GrappleId = 17 },
 
                         //PALMS 3.63
                         new { CraneId = 3, GrappleId = 1 },
@@ -33,6 +35,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 3, GrappleId = 3 },
                         new { CraneId = 3, GrappleId = 13 },
                         new { CraneId = 3, GrappleId = 14 },
+                        new { CraneId = 3, GrappleId = 17 },
 
                         //PALMS 3.67
                         new { CraneId = 4, GrappleId = 1 },
@@ -43,6 +46,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 4, GrappleId = 13 },
                         new { CraneId = 4, GrappleId = 14 },
                         new { CraneId = 4, GrappleId = 15 },
+                        new { CraneId = 4, GrappleId = 17 },
 
                         //PALMS 4.71
                         new { CraneId = 5, GrappleId = 1 },
@@ -54,6 +58,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 5, GrappleId = 13 },
                         new { CraneId = 5, GrappleId = 14 },
                         new { CraneId = 5, GrappleId = 15 },
+                        new { CraneId = 5, GrappleId = 17 },
 
                         //PALMS 5.75
                         new { CraneId = 6, GrappleId = 1 },
@@ -148,7 +153,20 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 12, GrappleId = 15 },
 
                         //PALMS 1.42
-                        new { CraneId = 13, GrappleId = 16 }
+                        new { CraneId = 13, GrappleId = 16 },
+
+                        //PALMS 8.87Z
+                        new { CraneId = 14, GrappleId = 1 },
+                        new { CraneId = 14, GrappleId = 4 },
+                        new { CraneId = 14, GrappleId = 5 },
+                        new { CraneId = 14, GrappleId = 6 },
+                        new { CraneId = 14, GrappleId = 7 },
+                        new { CraneId = 14, GrappleId = 8 },
+                        new { CraneId = 14, GrappleId = 9 },
+                        new { CraneId = 14, GrappleId = 10 },
+                        new { CraneId = 14, GrappleId = 11 },
+                        new { CraneId = 14, GrappleId = 14 },
+                        new { CraneId = 14, GrappleId = 15 }
                     )
                 );
         }

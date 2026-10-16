@@ -124,7 +124,15 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 16, StanchionId = 82 },
                         new { TrailerId = 16, StanchionId = 83 },
                         new { TrailerId = 16, StanchionId = 84 },
-                        new { TrailerId = 16, StanchionId = 85 }
+                        new { TrailerId = 16, StanchionId = 85 },
+
+                        //PALMS 4DC
+                        new { TrailerId = 17, StanchionId = 86 },
+                        new { TrailerId = 17, StanchionId = 87 },
+
+                        //PALMS 4D
+                        new { TrailerId = 18, StanchionId = 88 },
+                        new { TrailerId = 18, StanchionId = 89 }
                     )
                 );
         }

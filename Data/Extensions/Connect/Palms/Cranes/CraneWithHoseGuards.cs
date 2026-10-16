@@ -45,7 +45,13 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         new { CraneId = 11, HoseGuardId = 2 },
 
                         //PALMS X100
-                        new { CraneId = 12, HoseGuardId = 2 }
+                        new { CraneId = 12, HoseGuardId = 2 },
+
+                        //PALMS 2D
+
+                        //PALMS 8.87Z
+                        new { CraneId = 14, HoseGuardId = 1 },
+                        new { CraneId = 14, HoseGuardId = 2 }
                     )
                 );
         }

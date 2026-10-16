@@ -94,9 +94,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    Id = 10,
                    Name = "Teleszkópos talpaló Z daruhoz, vezérléssel (csak A14-A36 esetén)",
                    Code = "B13",
-                   Price = "3645",
+                   Price = "4645",
                    Mass = "520",
-                   ImageUrls = ["PALMS-crane-frame-type-B13-1", "PALMS-crane-frame-type-B13-2", "PALMS-crane-frame-type-B13-3"]
+                   ImageUrls = ["PALMS-crane-frame-type-B13-1", "PALMS-crane-frame-type-B13-2"]
                }
                );
 

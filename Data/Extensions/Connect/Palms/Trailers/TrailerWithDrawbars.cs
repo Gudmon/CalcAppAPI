@@ -161,7 +161,23 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Trailers
                         new { TrailerId = 16, DrawbarId = 5 },
                         new { TrailerId = 16, DrawbarId = 8 },
                         new { TrailerId = 16, DrawbarId = 9 },
-                        new { TrailerId = 16, DrawbarId = 13 }
+                        new { TrailerId = 16, DrawbarId = 13 },
+
+                        //PALMS 4DC
+                        new { TrailerId = 17, DrawbarId = 1 },
+                        new { TrailerId = 17, DrawbarId = 2 },
+                        new { TrailerId = 17, DrawbarId = 3 },
+                        new { TrailerId = 17, DrawbarId = 4 },
+                        new { TrailerId = 17, DrawbarId = 5 },
+                        new { TrailerId = 17, DrawbarId = 9 },
+
+                        //PALMS 4D
+                        new { TrailerId = 18, DrawbarId = 1 },
+                        new { TrailerId = 18, DrawbarId = 2 },
+                        new { TrailerId = 18, DrawbarId = 3 },
+                        new { TrailerId = 18, DrawbarId = 4 },
+                        new { TrailerId = 18, DrawbarId = 5 },
+                        new { TrailerId = 18, DrawbarId = 9 }
                     )
                 );
         }

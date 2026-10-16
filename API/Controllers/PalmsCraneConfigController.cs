@@ -56,7 +56,23 @@ namespace CalcAppAPI.API.Controllers
                 .Where(s => s.Crane.Any(t => t.Id == id))
                 .ToListAsync();
 
-            return Ok(grapples);
+            // Custom ordering for Grapple.Code based on requested sequence.
+            var preferredOrder = new[]
+            {
+                "C01","C02","C1","C3","C5.1","C5.2","C36",
+                "C7.1","C7.2","C11","C10","C175","GB16","GB18","GB3"
+            };
+
+            var ordered = grapples
+                .OrderBy(g =>
+                {
+                    var idx = Array.IndexOf(preferredOrder, g.Code ?? string.Empty);
+                    return idx == -1 ? int.MaxValue : idx;
+                })
+                .ThenBy(g => g.Code)
+                .ToList(); 
+
+            return Ok(ordered);
         }
 
         [HttpGet("cranes/{id}/winches")]

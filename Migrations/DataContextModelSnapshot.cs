@@ -2636,7 +2636,6 @@ namespace CalcAppAPI.Migrations
                             SupportLegCounterPlateId = 1,
                             TelescopeLength = "3,3",
                             TurningDeviceCounterPlateId = 1,
-                            ValveBlockId = 1,
                             VideoUrls = "[]",
                             WorkingPressure = "215"
                         },
@@ -2853,6 +2852,47 @@ namespace CalcAppAPI.Migrations
                             TelescopeLength = "1,2",
                             VideoUrls = "[\"25Y2HRXtohQ\",\"2r7Po4NpYHw\"]",
                             WorkingPressure = "190"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            BrutLiftingTorque190Bar = "78",
+                            BrutLiftingTorque215Bar = "86",
+                            BrutLiftingTorque240Bar = "96",
+                            CoverId = 1,
+                            CraneOilCoolerId = 1,
+                            CraneWeight = "1430",
+                            Description = "A PALMS 8.87Z daru nagy teherbírásával és kompakt szállítási méreteivel, valamint sokoldalúságával tűnik ki. Nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            ImageUrls = "[\"PALMS-8.87Z-1\",\"PALMS-8.87Z-2\"]",
+                            JoystickHolderId = 1,
+                            LiftAtFourMeters190Bar = "-",
+                            LiftAtFourMeters215Bar = "-",
+                            LiftAtFourMeters240Bar = "1690",
+                            LiftAtFullReach190Bar = "-",
+                            LiftAtFullReach215Bar = "-",
+                            LiftAtFullReach240Bar = "970 (8m)",
+                            LightId = 1,
+                            LinkageId = 1,
+                            MaxReach = "8.7",
+                            Name = "PALMS 8.87Z",
+                            OperatorSeatId = 1,
+                            PillarSlewingAngle = "380",
+                            Price = "22095",
+                            ProtectionSleevesId = 1,
+                            RecommendedOilFlow = "70-120",
+                            RotatorCapacity = "60",
+                            RotatorConnection = "Palms",
+                            RotatorMaximumLoad = "60",
+                            RotatorType = "FL",
+                            Series = "8",
+                            ShippingId = 2,
+                            SlewingCylinder = "4",
+                            SlewingTorque = "21",
+                            SupportLegCounterPlateId = 1,
+                            TelescopeLength = "3,0",
+                            TurningDeviceCounterPlateId = 1,
+                            VideoUrls = "[]",
+                            WorkingPressure = "240"
                         });
                 });
 
@@ -3172,10 +3212,10 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 10,
                             Code = "B13",
-                            ImageUrls = "[\"PALMS-crane-frame-type-B13-1\",\"PALMS-crane-frame-type-B13-2\",\"PALMS-crane-frame-type-B13-3\"]",
+                            ImageUrls = "[\"PALMS-crane-frame-type-B13-1\",\"PALMS-crane-frame-type-B13-2\"]",
                             Mass = "520",
                             Name = "Teleszkópos talpaló Z daruhoz, vezérléssel (csak A14-A36 esetén)",
-                            Price = "3645"
+                            Price = "4645"
                         });
                 });
 
@@ -3250,7 +3290,7 @@ namespace CalcAppAPI.Migrations
                             E = "305",
                             ImageUrls = "[\"PALMS-crane-grapple-C02-1\",\"PALMS-crane-grapple-C02-2\"]",
                             Mass = "66",
-                            Name = "Kanál 0,16 Palms (FL)",
+                            Name = "Kanál 0,16 Palms",
                             Price = "1120"
                         },
                         new
@@ -3425,6 +3465,21 @@ namespace CalcAppAPI.Migrations
                             Mass = "36",
                             Name = "Palms 0,09 kanál",
                             Price = "685"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            A = "1040",
+                            Area = "0.16",
+                            B = "670",
+                            C = "410",
+                            Code = "C01",
+                            D = "55",
+                            E = "305",
+                            ImageUrls = "[\"PALMS-crane-grapple-C02-1\",\"PALMS-crane-grapple-C02-2\"]",
+                            Mass = "66",
+                            Name = "Kanál 0,16 Palms",
+                            Price = "1120"
                         });
                 });
 
@@ -4932,7 +4987,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "HBF",
-                            ImageUrls = "[\"PALMS-trailer-hay-bale-frame-1\",\"PALMS-trailer-hay-bale-frame-2\",\"PALMS-trailer-hay-bale-frame-3\",\"PALMS-trailer-hay-bale-frame-d\"]",
+                            ImageUrls = "[\"PALMS-trailer-hay-bale-frame-1\",\"PALMS-trailer-hay-bale-frame-2\",\"PALMS-trailer-hay-bale-frame-3\",\"PALMS-trailer-hay-bale-frame-4\",\"PALMS-trailer-hay-bale-frame-5\",\"PALMS-trailer-hay-bale-frame-d\"]",
                             Name = "Szénabála keret (D típushoz)",
                             Price = "2785"
                         },
@@ -4940,7 +4995,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "HBF",
-                            ImageUrls = "[\"PALMS-trailer-hay-bale-frame-1\",\"PALMS-trailer-hay-bale-frame-2\",\"PALMS-trailer-hay-bale-frame-3\",\"PALMS-trailer-hay-bale-frame-u\"]",
+                            ImageUrls = "[\"PALMS-trailer-hay-bale-frame-1\",\"PALMS-trailer-hay-bale-frame-2\",\"PALMS-trailer-hay-bale-frame-3\",\"PALMS-trailer-hay-bale-frame-4\",\"PALMS-trailer-hay-bale-frame-5\",\"PALMS-trailer-hay-bale-frame-u\"]",
                             Name = "Szénabála keret (U típushoz)",
                             Price = "2785"
                         });
@@ -6225,6 +6280,34 @@ namespace CalcAppAPI.Migrations
                             Code = "A5FEx",
                             Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                             Price = "13795"
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Code = "A3",
+                            Name = "Pótkocsi 3 pár rakoncával",
+                            Price = "4150"
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Code = "A4",
+                            Name = "Pótkocsi 4 pár rakoncával",
+                            Price = "4620"
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Code = "A3",
+                            Name = "Pótkocsi 3 pár rakoncával",
+                            Price = "4880"
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Code = "A4",
+                            Name = "Pótkocsi 4 pár rakoncával",
+                            Price = "5355"
                         });
                 });
 
@@ -7084,6 +7167,58 @@ namespace CalcAppAPI.Migrations
                             TrailerOilCoolerId = 1,
                             VideoUrls = "[\"Wl0s4WdzNDM\",\"kHSq-CN9i3k\"]",
                             WidthWithStandardWheels = "2312"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            BeamType = "Dupla alvázas",
+                            ChainsawHolderId = 1,
+                            CurbWeight = "610",
+                            Description = "",
+                            DrawbarControlCylinders = "1",
+                            Frame = "2x120x80x6",
+                            FrameExtensionLength = "-",
+                            GrossWeight = "5000",
+                            ImageUrls = "[\"PALMS-4DC-1\",\"PALMS-4DC-2\"]",
+                            LoadingAreaCross = "1,3",
+                            LoadingAreaLength = "3000",
+                            MOTId = 1,
+                            MaxCraneSize = "36",
+                            Name = "PALMS 4DC",
+                            Price = "",
+                            ShippingId = 1,
+                            StandardWheelSize = "400/60-15,5",
+                            ToolboxId = 1,
+                            TotalLength = "4910",
+                            TrailerOilCoolerId = 1,
+                            VideoUrls = "[]",
+                            WidthWithStandardWheels = "1639"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            BeamType = "Dupla alvázas",
+                            ChainsawHolderId = 1,
+                            CurbWeight = "625",
+                            Description = "",
+                            DrawbarControlCylinders = "1",
+                            Frame = "2x120x80x6",
+                            FrameExtensionLength = "-",
+                            GrossWeight = "5000",
+                            ImageUrls = "[\"PALMS-4D-1\",\"PALMS-4D-2\"]",
+                            LoadingAreaCross = "1,3",
+                            LoadingAreaLength = "3000",
+                            MOTId = 1,
+                            MaxCraneSize = "36",
+                            Name = "PALMS 4D",
+                            Price = "",
+                            ShippingId = 1,
+                            StandardWheelSize = "300/60-15,5",
+                            ToolboxId = 1,
+                            TotalLength = "4915",
+                            TrailerOilCoolerId = 1,
+                            VideoUrls = "[]",
+                            WidthWithStandardWheels = "1639"
                         });
                 });
 
@@ -7339,6 +7474,41 @@ namespace CalcAppAPI.Migrations
                             Code = "WH2.4",
                             Name = "300/65-12",
                             Price = "885"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "WH2.6e",
+                            Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
+                            Price = "610"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Code = "WH2.6",
+                            Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
+                            Price = "745"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Code = "WH2.5",
+                            Name = "300/65-12 standard felni, 5 lyukas",
+                            Price = "905"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Code = "WH2.6e",
+                            Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
+                            Price = "1220"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Code = "WH2.6",
+                            Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
+                            Price = "1490"
                         });
                 });
 
@@ -8827,6 +8997,51 @@ namespace CalcAppAPI.Migrations
                         {
                             ControlBlockId = 16,
                             CraneId = 13
+                        },
+                        new
+                        {
+                            ControlBlockId = 5,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 6,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 7,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 8,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 9,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 10,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 11,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 12,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            ControlBlockId = 13,
+                            CraneId = 14
                         });
                 });
 
@@ -8963,6 +9178,21 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 12,
+                            DampingId = 3
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            DampingId = 1
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            DampingId = 2
+                        },
+                        new
+                        {
+                            CraneId = 14,
                             DampingId = 3
                         });
                 });
@@ -9186,6 +9416,16 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 13,
                             FrameTypeId = 9
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            FrameTypeId = 7
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            FrameTypeId = 10
                         });
                 });
 
@@ -9231,6 +9471,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 1,
+                            GrappleId = 17
+                        },
+                        new
+                        {
                             CraneId = 2,
                             GrappleId = 1
                         },
@@ -9256,6 +9501,11 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
+                            CraneId = 2,
+                            GrappleId = 17
+                        },
+                        new
+                        {
                             CraneId = 3,
                             GrappleId = 1
                         },
@@ -9278,6 +9528,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 3,
                             GrappleId = 14
+                        },
+                        new
+                        {
+                            CraneId = 3,
+                            GrappleId = 17
                         },
                         new
                         {
@@ -9318,6 +9573,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 4,
                             GrappleId = 15
+                        },
+                        new
+                        {
+                            CraneId = 4,
+                            GrappleId = 17
                         },
                         new
                         {
@@ -9363,6 +9623,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 5,
                             GrappleId = 15
+                        },
+                        new
+                        {
+                            CraneId = 5,
+                            GrappleId = 17
                         },
                         new
                         {
@@ -9758,6 +10023,61 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 13,
                             GrappleId = 16
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 1
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 4
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 5
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 6
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 7
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 8
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 9
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 10
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 11
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 14
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            GrappleId = 15
                         });
                 });
 
@@ -9885,6 +10205,16 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 12,
                             HighPerformanceOilFilterId = 2
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            HighPerformanceOilFilterId = 1
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            HighPerformanceOilFilterId = 2
                         });
                 });
 
@@ -9961,6 +10291,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 12,
+                            HoseGuardId = 2
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            HoseGuardId = 1
+                        },
+                        new
+                        {
+                            CraneId = 14,
                             HoseGuardId = 2
                         });
                 });
@@ -10075,7 +10415,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 5,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10090,7 +10430,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 6,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10105,7 +10445,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 7,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10120,7 +10460,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 8,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10135,7 +10475,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 9,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10150,7 +10490,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 10,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10165,7 +10505,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 11,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
@@ -10180,11 +10520,26 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             CraneId = 12,
-                            RotatorBrakeId = 2
+                            RotatorBrakeId = 3
                         },
                         new
                         {
                             CraneId = 12,
+                            RotatorBrakeId = 5
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            RotatorBrakeId = 1
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            RotatorBrakeId = 3
+                        },
+                        new
+                        {
+                            CraneId = 14,
                             RotatorBrakeId = 5
                         });
                 });
@@ -10818,16 +11173,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            CraneId = 8,
-                            WinchId = 2
-                        },
-                        new
-                        {
-                            CraneId = 8,
-                            WinchId = 3
-                        },
-                        new
-                        {
                             CraneId = 9,
                             WinchId = 1
                         },
@@ -10890,6 +11235,11 @@ namespace CalcAppAPI.Migrations
                         {
                             CraneId = 13,
                             WinchId = 4
+                        },
+                        new
+                        {
+                            CraneId = 14,
+                            WinchId = 1
                         });
                 });
 
@@ -11497,6 +11847,66 @@ namespace CalcAppAPI.Migrations
                         {
                             DrawbarId = 13,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            DrawbarId = 1,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 2,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 3,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 4,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 5,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 9,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            DrawbarId = 1,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            DrawbarId = 2,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            DrawbarId = 3,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            DrawbarId = 4,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            DrawbarId = 5,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            DrawbarId = 9,
+                            TrailerId = 18
                         });
                 });
 
@@ -13886,6 +14296,26 @@ namespace CalcAppAPI.Migrations
                         {
                             PlatformId = 1,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            PlatformId = 1,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            PlatformId = 2,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            PlatformId = 1,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            PlatformId = 2,
+                            TrailerId = 18
                         });
                 });
 
@@ -14158,6 +14588,11 @@ namespace CalcAppAPI.Migrations
                         {
                             PropulsionId = 15,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            PropulsionId = 22,
+                            TrailerId = 18
                         });
                 });
 
@@ -14580,6 +15015,26 @@ namespace CalcAppAPI.Migrations
                         {
                             StanchionId = 85,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            StanchionId = 86,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            StanchionId = 87,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            StanchionId = 88,
+                            TrailerId = 18
+                        },
+                        new
+                        {
+                            StanchionId = 89,
+                            TrailerId = 18
                         });
                 });
 
@@ -14986,6 +15441,16 @@ namespace CalcAppAPI.Migrations
                         {
                             LightId = 3,
                             TrailerId = 16
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 17
+                        },
+                        new
+                        {
+                            LightId = 1,
+                            TrailerId = 18
                         });
                 });
 
@@ -15378,6 +15843,31 @@ namespace CalcAppAPI.Migrations
                         {
                             TrailerId = 16,
                             TyreId = 9
+                        },
+                        new
+                        {
+                            TrailerId = 17,
+                            TyreId = 15
+                        },
+                        new
+                        {
+                            TrailerId = 17,
+                            TyreId = 16
+                        },
+                        new
+                        {
+                            TrailerId = 18,
+                            TyreId = 17
+                        },
+                        new
+                        {
+                            TrailerId = 18,
+                            TyreId = 18
+                        },
+                        new
+                        {
+                            TrailerId = 18,
+                            TyreId = 19
                         });
                 });
 

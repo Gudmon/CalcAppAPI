@@ -639,6 +639,38 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                   Name = "Pótkocsi 5 pár forwarder rakoncával és raktérhosszabbítással",
                   Code = "A5FEx",
                   Price = "13795",
+              },
+
+              //PALMS 4DC
+              new Stanchion
+              {
+                  Id = 86,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "4150",
+              },
+              new Stanchion
+              {
+                  Id = 87,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "4620",
+              },
+
+              //PALMS 4D
+              new Stanchion
+              {
+                  Id = 88,
+                  Name = "Pótkocsi 3 pár rakoncával",
+                  Code = "A3",
+                  Price = "4880",
+              },
+              new Stanchion
+              {
+                  Id = 89,
+                  Name = "Pótkocsi 4 pár rakoncával",
+                  Code = "A4",
+                  Price = "5355",
               }
               );
         }

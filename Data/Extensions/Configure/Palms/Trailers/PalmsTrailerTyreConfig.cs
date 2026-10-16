@@ -105,6 +105,43 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                    Name = "300/65-12",
                    Code = "WH2.4",
                    Price = "885",
+               },
+               //PALMS 4DC
+               new Tyre
+               {
+                   Id = 15,
+                   Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
+                   Code = "WH2.6e",
+                   Price = "610",
+               },
+               new Tyre
+               {
+                   Id = 16,
+                   Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
+                   Code = "WH2.6",
+                   Price = "745",
+               },
+               //PALMS 4D
+               new Tyre
+               {
+                   Id = 17,
+                   Name = "300/65-12 standard felni, 5 lyukas",
+                   Code = "WH2.5",
+                   Price = "905",
+               },
+               new Tyre
+               {
+                   Id = 18,
+                   Name = "400/60-15,5 standard felni, 6 lyukas, Starco",
+                   Code = "WH2.6e",
+                   Price = "1220",
+               },
+               new Tyre
+               {
+                   Id = 19,
+                   Name = "400/60-15,5 RF-felni, 6 lyukas, Starco",
+                   Code = "WH2.6",
+                   Price = "1490",
                }
                );
         }

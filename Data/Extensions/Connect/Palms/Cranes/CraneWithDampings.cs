@@ -56,7 +56,14 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
                         //PALMS X100
                         new { CraneId = 12, DampingId = 1 },
                         new { CraneId = 12, DampingId = 2 },
-                        new { CraneId = 12, DampingId = 3 }
+                        new { CraneId = 12, DampingId = 3 },
+
+                        //PALMS 1.42
+
+                        //PALMS 8.87Z
+                        new { CraneId = 14, DampingId = 1 },
+                        new { CraneId = 14, DampingId = 2 },
+                        new { CraneId = 14, DampingId = 3 }
                     )
                 );
         }
