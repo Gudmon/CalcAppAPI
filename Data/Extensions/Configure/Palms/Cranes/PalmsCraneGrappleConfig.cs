@@ -18,7 +18,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
               new Grapple
               {
                  Id = 2,
-                 Name = "Kanál 0,16 Palms",
+                 Name = "Kanál 0,16 Palms (FL)",
                  Code = "C02",
                  Price = "1120",
                  Mass = "66",
