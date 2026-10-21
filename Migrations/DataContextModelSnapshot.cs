@@ -907,14 +907,14 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "300014961",
-                            Name = "Raktér hosszabbítás (80 cm)",
+                            Name = "Raktér hosszabbítás",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
                             Code = "300014961",
-                            Name = "Raktér hosszabbítás (80 cm)",
+                            Name = "Raktér hosszabbítás",
                             Price = "479,17"
                         });
                 });
@@ -1744,6 +1744,13 @@ namespace CalcAppAPI.Migrations
                             Code = "",
                             Name = "Hidraulikus támasztóláb",
                             Price = "519,17"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "",
+                            Name = "Mechanikus támasztóláb - állítható",
+                            Price = "0"
                         });
                 });
 
@@ -13313,17 +13320,12 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 1,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {
                             KrpanTrailerId = 1,
-                            KrpanTrailerSupportLegsId = 3
-                        },
-                        new
-                        {
-                            KrpanTrailerId = 2,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
@@ -13332,13 +13334,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanTrailerId = 3,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerId = 2,
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
                             KrpanTrailerId = 3,
                             KrpanTrailerSupportLegsId = 3
+                        },
+                        new
+                        {
+                            KrpanTrailerId = 3,
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
@@ -13348,7 +13355,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 4,
-                            KrpanTrailerSupportLegsId = 3
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
@@ -13358,17 +13365,17 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 5,
-                            KrpanTrailerSupportLegsId = 3
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
                             KrpanTrailerId = 6,
-                            KrpanTrailerSupportLegsId = 1
+                            KrpanTrailerSupportLegsId = 2
                         },
                         new
                         {
                             KrpanTrailerId = 6,
-                            KrpanTrailerSupportLegsId = 3
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
@@ -13378,7 +13385,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 7,
-                            KrpanTrailerSupportLegsId = 3
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {
@@ -13388,7 +13395,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 8,
-                            KrpanTrailerSupportLegsId = 3
+                            KrpanTrailerSupportLegsId = 4
                         },
                         new
                         {

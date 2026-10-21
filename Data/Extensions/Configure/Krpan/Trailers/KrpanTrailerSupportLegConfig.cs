@@ -28,6 +28,13 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     Name = "Hidraulikus támasztóláb",
                     Code = "",
                     Price = "519,17",
+                },
+                new KrpanTrailerSupportLeg
+                {
+                    Id = 4,
+                    Name = "Mechanikus támasztóláb - állítható",
+                    Code = "",
+                    Price = "0",
                 }
                 );
         }
