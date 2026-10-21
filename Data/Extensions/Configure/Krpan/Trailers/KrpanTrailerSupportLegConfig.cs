@@ -25,16 +25,16 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanTrailerSupportLeg
                 {
                     Id = 3,
-                    Name = "Hidraulikus támasztóláb",
+                    Name = "Mechanikus támasztóláb - állítható",
                     Code = "",
-                    Price = "519,17",
+                    Price = "0",
                 },
                 new KrpanTrailerSupportLeg
                 {
                     Id = 4,
-                    Name = "Mechanikus támasztóláb - állítható",
+                    Name = "Hidraulikus támasztóláb",
                     Code = "",
-                    Price = "0",
+                    Price = "519,17",
                 }
                 );
         }
