@@ -13350,7 +13350,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 4,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {
@@ -13360,7 +13360,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 5,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {
@@ -13370,7 +13370,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 6,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {
@@ -13380,7 +13380,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 7,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {
@@ -13390,7 +13390,7 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanTrailerId = 8,
-                            KrpanTrailerSupportLegsId = 2
+                            KrpanTrailerSupportLegsId = 3
                         },
                         new
                         {

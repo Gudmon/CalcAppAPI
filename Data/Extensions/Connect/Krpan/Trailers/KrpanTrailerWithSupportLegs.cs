@@ -27,23 +27,23 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         new { KrpanTrailerId = 3, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 12 DF
-                        new { KrpanTrailerId = 4, KrpanTrailerSupportLegsId = 2 },
+                        new { KrpanTrailerId = 4, KrpanTrailerSupportLegsId = 3 },
                         new { KrpanTrailerId = 4, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 14 DF
-                        new { KrpanTrailerId = 5, KrpanTrailerSupportLegsId = 2 },
+                        new { KrpanTrailerId = 5, KrpanTrailerSupportLegsId = 3 },
                         new { KrpanTrailerId = 5, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 11 D
-                        new { KrpanTrailerId = 6, KrpanTrailerSupportLegsId = 2 },
+                        new { KrpanTrailerId = 6, KrpanTrailerSupportLegsId = 3 },
                         new { KrpanTrailerId = 6, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 13 D
-                        new { KrpanTrailerId = 7, KrpanTrailerSupportLegsId = 2 },
+                        new { KrpanTrailerId = 7, KrpanTrailerSupportLegsId = 3 },
                         new { KrpanTrailerId = 7, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 15 D
-                        new { KrpanTrailerId = 8, KrpanTrailerSupportLegsId = 2 },
+                        new { KrpanTrailerId = 8, KrpanTrailerSupportLegsId = 3 },
                         new { KrpanTrailerId = 8, KrpanTrailerSupportLegsId = 4 },
 
                         //KRPAN GP 6 XS
