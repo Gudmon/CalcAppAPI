@@ -2,7 +2,7 @@
 
 namespace CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers
 {
-    public class KrpanExtraStanchion
+    public class KrpanStanchion
     {
         public int Id { get; set; }
         public string Name { get; set; }

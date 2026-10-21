@@ -18,7 +18,7 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Trailer.Options
     public class KrpanDrawbarSteeringDto : SimpleOptionDto { }
     public class KrpanHandBrakeDto : SimpleOptionDto { }
     public class KrpanDrawheadDto : SimpleOptionDto { }
-    public class KrpanExtraStanchionDto : SimpleOptionDto { }
+    public class KrpanStanchionDto : SimpleOptionDto { }
     public class KrpanExtraForwarderStanchionDto : SimpleOptionDto { }
     public class KrpanTopConnectionDto : SimpleOptionDto { }
     public class KrpanClutchDto : SimpleOptionDto { }

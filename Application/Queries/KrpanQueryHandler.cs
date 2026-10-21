@@ -205,21 +205,13 @@ namespace CalcAppAPI.Application.Queries
                     Price = t.KrpanMechanicalAdjustableFrame.Price
                 },
 
-                ExtraStanchion = t.KrpanExtraStanchion == null ? null : new KrpanExtraStanchionDto
+                Stanchions = t.KrpanStanchions.Select(x => new KrpanStanchionDto
                 {
-                    Id = t.KrpanExtraStanchion.Id,
-                    Name = t.KrpanExtraStanchion.Name,
-                    Code = t.KrpanExtraStanchion.Code,
-                    Price = t.KrpanExtraStanchion.Price
-                },
-
-                ExtraForwarderStanchion = t.KrpanExtraForwarderStanchion == null ? null : new KrpanExtraForwarderStanchionDto
-                {
-                    Id = t.KrpanExtraForwarderStanchion.Id,
-                    Name = t.KrpanExtraForwarderStanchion.Name,
-                    Code = t.KrpanExtraForwarderStanchion.Code,
-                    Price = t.KrpanExtraForwarderStanchion.Price
-                },
+                    Id = x.Id,
+                    Name = x.Name,
+                    Code = x.Code,
+                    Price = x.Price
+                }),
 
                 TopConnection = t.KrpanTopConnection == null ? null : new KrpanTopConnectionDto
                 {

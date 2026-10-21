@@ -41,10 +41,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanHandBrakeId { get; set; }
         public KrpanDrawhead? KrpanDrawHead { get; set; }
         public int? KrpanDrawHeadId { get; set; }
-        public KrpanExtraStanchion? KrpanExtraStanchion { get; set; }
-        public int? KrpanExtraStanchionId { get; set; }
-        public KrpanExtraForwarderStanchion? KrpanExtraForwarderStanchion { get; set; }
-        public int? KrpanExtraForwarderStanchionId { get; set; }
+        public IEnumerable<KrpanStanchion> KrpanStanchions { get; set; }
         public KrpanTopConnection? KrpanTopConnection { get; set; }
         public int? KrpanTopConnectionId { get; set; }
         public IEnumerable<KrpanClutch> KrpanClutch { get; set; }

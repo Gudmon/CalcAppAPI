@@ -88,8 +88,7 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanTyre> KrpanTyre { get; set; }
         public DbSet<KrpanBrake> KrpanBrake { get; set; }
         public DbSet<KrpanHandBrake> KrpanHandBrake { get; set; }
-        public DbSet<KrpanExtraStanchion> KrpanExtraStanchion { get; set; }
-        public DbSet<KrpanExtraForwarderStanchion> KrpanExtraForwarderStanchion { get; set; }
+        public DbSet<KrpanStanchion> KrpanStanchion { get; set; }
         public DbSet<KrpanTopConnection> KrpanTopConnection { get; set; }
         public DbSet<KrpanClutch> KrpanClutch { get; set; }
         public DbSet<KrpanDrawhead> KrpanDrawHead { get; set; }

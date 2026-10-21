@@ -113,22 +113,14 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanHandBrake);
         }
 
-        [HttpGet("trailers/{id}/extrastanchion")]
-        public async Task<ActionResult<KrpanExtraStanchion>> GetKrpanExtraStanchion(int id)
+        [HttpGet("trailers/{id}/stanchions")]
+        public async Task<ActionResult<IEnumerable<KrpanStanchion>>> GetKrpanStanchions(int id)
         {
-            var krpanExtraStanchion = await _dbContext.KrpanExtraStanchion
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+            var krpanStanchions = await _dbContext.KrpanStanchion    
+                .Where(s => s.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
 
-            return Ok(krpanExtraStanchion);
-        }
-
-        [HttpGet("trailers/{id}/extraforwarderstanchion")]
-        public async Task<ActionResult<KrpanExtraForwarderStanchion>> GetKrpanExtraForwarderStanchion(int id)
-        {
-            var krpanExtraForwarderStanchion = await _dbContext.KrpanExtraForwarderStanchion
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
-
-            return Ok(krpanExtraForwarderStanchion);
+            return Ok(krpanStanchions);
         }
 
         [HttpGet("trailers/{id}/topconnection")]
