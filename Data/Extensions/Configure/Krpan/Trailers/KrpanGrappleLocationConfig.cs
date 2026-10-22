@@ -11,9 +11,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanGrappleLocation
                 {
                     Id = 1,
-                    Name = "Kanál lerakási helyének megerősítése",
-                    Code = "",
-                    Price = "180",
+                    Name = "A rakfelület-hosszabbítás teherbírásának megerősítése a markoló elhelyezéséhez",
+                    Code = "300029549",
+                    Price = "193,27",
                 }
                 );
         }

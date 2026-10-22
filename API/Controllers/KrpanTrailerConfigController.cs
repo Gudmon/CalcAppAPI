@@ -37,6 +37,16 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanHydraulicAdjustableChassis);
         }
 
+        [HttpGet("trailers/{id}/brakelamps")]
+        public async Task<ActionResult<IEnumerable<KrpanTrailerBrakeLamp>>> GetKrpanTrailerBrakeLamps(int id)
+        {
+            var brakeLamps = await _dbContext.KrpanTrailerBrakeLamp
+                .Where(b => b.KrpanTrailer.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(brakeLamps);
+        }
+
         [HttpGet("trailers/{id}/chock")]
         public async Task<ActionResult<KrpanChock>> GetKrpanChock(int id)
         {

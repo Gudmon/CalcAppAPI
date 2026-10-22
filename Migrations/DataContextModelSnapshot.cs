@@ -717,28 +717,42 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "300014965",
                             Name = "Platform bálaszállításhoz",
-                            Price = "1935"
+                            Price = "1897,50"
                         },
                         new
                         {
                             Id = 2,
                             Code = "300011152",
                             Name = "Platform bálaszállításhoz",
-                            Price = "1935"
+                            Price = "1897,50"
                         },
                         new
                         {
                             Id = 3,
-                            Code = "300011151",
+                            Code = "300023127",
                             Name = "Platform bálaszállításhoz",
-                            Price = "1935"
+                            Price = "1897,50"
                         },
                         new
                         {
                             Id = 4,
+                            Code = "300023255",
+                            Name = "Platform bálaszállításhoz",
+                            Price = "1897,50"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "300011151",
+                            Name = "Platform bálaszállításhoz",
+                            Price = "1897,50"
+                        },
+                        new
+                        {
+                            Id = 6,
                             Code = "300011149",
                             Name = "Platform bálaszállításhoz",
-                            Price = "1935"
+                            Price = "1897,50"
                         });
                 });
 
@@ -1226,9 +1240,9 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "",
-                            Name = "Kanál lerakási helyének megerősítése",
-                            Price = "180"
+                            Code = "300029549",
+                            Name = "A rakfelület-hosszabbítás teherbírásának megerősítése a markoló elhelyezéséhez",
+                            Price = "193,27"
                         });
                 });
 
@@ -1558,6 +1572,54 @@ namespace CalcAppAPI.Migrations
                             Code = "300015652",
                             Name = "Szerszámos láda",
                             Price = "142,50"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerBrakeLamp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanTrailerBrakeLamp");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Name = "LED féklámpák ROM",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Name = "LED féklámpák RIO",
+                            Price = "104,16"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "",
+                            Name = "LED féklámpák RIO",
+                            Price = "0"
                         });
                 });
 
@@ -8119,7 +8181,7 @@ namespace CalcAppAPI.Migrations
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
-                            KrpanBaleTransportPlatformId = 1,
+                            KrpanBaleTransportPlatformId = 3,
                             KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
@@ -8153,7 +8215,7 @@ namespace CalcAppAPI.Migrations
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
-                            KrpanBaleTransportPlatformId = 1,
+                            KrpanBaleTransportPlatformId = 4,
                             KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
@@ -8222,7 +8284,7 @@ namespace CalcAppAPI.Migrations
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 3,
-                            KrpanBaleTransportPlatformId = 3,
+                            KrpanBaleTransportPlatformId = 5,
                             KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 1,
                             KrpanChainsawHolderId = 1,
@@ -8258,7 +8320,7 @@ namespace CalcAppAPI.Migrations
                             KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 4,
-                            KrpanBaleTransportPlatformId = 4,
+                            KrpanBaleTransportPlatformId = 6,
                             KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 1,
                             KrpanChainsawHolderId = 1,
@@ -13214,6 +13276,53 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerBrakeLamp", b =>
+                {
+                    b.Property<int>("KrpanTrailerBrakeLampsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanTrailerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanTrailerBrakeLampsId", "KrpanTrailerId");
+
+                    b.HasIndex("KrpanTrailerId");
+
+                    b.ToTable("KrpanTrailerBrakeLampTrailer", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 1,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 2,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 1,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 2,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 3,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanTrailerBrakeLampsId = 3,
+                            KrpanTrailerId = 8
+                        });
+                });
+
             modelBuilder.Entity("KrpanTrailerKrpanTrailerCouplingDevice", b =>
                 {
                     b.Property<int>("KrpanTrailerCouplingDeviceId")
@@ -16810,6 +16919,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanStanchion", null)
                         .WithMany()
                         .HasForeignKey("KrpanStanchionsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("KrpanTrailerKrpanTrailerBrakeLamp", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerBrakeLamp", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanTrailerBrakeLampsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -77,6 +77,14 @@ namespace CalcAppAPI.Application.Queries
                     Price = t.KrpanTrailerLamp.Price
                 },
 
+                TrailerBrakeLamps = t.KrpanTrailerBrakeLamps.Select(x => new KrpanTrailerBrakeLampDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Code = x.Code,
+                    Price = x.Price
+                }),
+
                 Chock = t.KrpanChock == null ? null : new KrpanChockDto
                 {
                     Id = t.KrpanChock.Id,

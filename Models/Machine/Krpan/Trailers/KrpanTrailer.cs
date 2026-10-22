@@ -27,6 +27,7 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanHydraulicAdjustableChassisId { get; set; }
         public KrpanTrailerLamp? KrpanTrailerLamp { get; set; }
         public int? KrpanTrailerLampId { get; set; }
+        public IEnumerable<KrpanTrailerBrakeLamp> KrpanTrailerBrakeLamps { get; set; }
         public KrpanChock? KrpanChock { get; set; }
         public int? KrpanChockId { get; set; }
         public KrpanWheelChock? KrpanWheelChock { get; set; }

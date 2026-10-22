@@ -14,6 +14,7 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Trailer.Options
     public class KrpanTrailerSupportLegDto : SimpleOptionDto { }
     public class KrpanAdjustableDriveDto : SimpleOptionDto { }
     public class KrpanTrailerLampDto : SimpleOptionDto { }
+    public class KrpanTrailerBrakeLampDto : SimpleOptionDto { }
     public class KrpanChockDto : SimpleOptionDto { }
     public class KrpanWheelChockDto : SimpleOptionDto { }
     public class KrpanDrawbarSteeringDto : SimpleOptionDto { }
