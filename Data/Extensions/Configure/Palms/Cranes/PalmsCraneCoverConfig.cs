@@ -22,7 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Name = "Védőhuzat bőrből (bal-jobb) joystick-hoz (2db)",
                   Code = "HSBJKK",
                   Price = "60",
-                  ImageUrls = ["PALMS-crane-cover-1"]
+                  ImageUrls = ["PALMS-crane-cover-2"]
               }
               );
         }

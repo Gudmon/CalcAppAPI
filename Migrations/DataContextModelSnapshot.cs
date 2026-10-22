@@ -2156,7 +2156,7 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 2,
                             Code = "HSBJKK",
-                            ImageUrls = "[\"PALMS-crane-cover-1\"]",
+                            ImageUrls = "[\"PALMS-crane-cover-2\"]",
                             Name = "Védőhuzat bőrből (bal-jobb) joystick-hoz (2db)",
                             Price = "60"
                         });
@@ -2973,7 +2973,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "T5",
                             ImageUrls = "[\"PALMS-crane-electric-oil-cooler-kit-1\"]",
-                            Name = "Nagy olajhűtő csomag elektromos csatlakozással a traktorhoz",
+                            Name = "Szabványos olajhűtő csomag elektromos csatlakozással a traktorhoz",
                             Price = "1290"
                         });
                 });

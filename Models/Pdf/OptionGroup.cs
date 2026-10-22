@@ -129,8 +129,10 @@ namespace CalcAppAPI.Models.Pdf
         [Display(Name = "Nagynyomású olajszűrő")]
         HighPerformanceOilFilter,
 
-        [Display(Name = "Daru olajhűtő")]
+        [Display(Name = "Szabványos daru olajhűtő")]
         CraneOilCooler,
+        [Display(Name = "Nagy daru olajhűtő")]
+        CraneElectricOilCoolerKit,
 
         [Display(Name = "Rotátor")]
         Rotator,
