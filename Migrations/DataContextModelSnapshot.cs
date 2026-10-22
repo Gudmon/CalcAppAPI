@@ -947,15 +947,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "300015821",
-                            Name = "Motorfűrész tartó",
+                            Name = "Láncfűrész tartó",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
                             Code = "300015821",
-                            Name = "Motorfűrész tartó",
-                            Price = "45"
+                            Name = "Láncfűrész tartó",
+                            Price = "40,00"
                         });
                 });
 
@@ -1186,16 +1186,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "300007925",
-                            Name = "Üzemanyagtartály tartó",
+                            Code = "300020894",
+                            Name = "Üzemanyag kanna tartó",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
-                            Code = "300007925",
-                            Name = "Üzemanyagtartály tartó",
-                            Price = "40"
+                            Code = "300020894",
+                            Name = "Üzemanyag kanna tartó",
+                            Price = "36,67"
                         });
                 });
 
@@ -1548,16 +1548,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             Id = 1,
-                            Code = "300015651",
+                            Code = "300015652",
                             Name = "Szerszámos láda",
                             Price = "0"
                         },
                         new
                         {
                             Id = 2,
-                            Code = "300015651",
+                            Code = "300015652",
                             Name = "Szerszámos láda",
-                            Price = "145"
+                            Price = "142,50"
                         });
                 });
 
@@ -8292,8 +8292,11 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"GP-6-XS-1\",\"GP-6-XS-2\"]",
                             KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "6000",
@@ -8317,9 +8320,12 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"GP-7-XS-1\",\"GP-7-XS-2\"]",
                             KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
                             KrpanDrawbarSteeringId = 1,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "7000",
@@ -8343,9 +8349,12 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"GP-8-XS-1\",\"GP-8-XS-2\"]",
                             KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
                             KrpanDrawbarSteeringId = 1,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
@@ -8369,9 +8378,12 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"GP-8-S-1\",\"GP-8-S-2\"]",
                             KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
                             KrpanDrawbarSteeringId = 2,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
@@ -8395,9 +8407,12 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"GP-9-S-1\",\"GP-9-S-2\"]",
                             KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
                             KrpanDrawbarSteeringId = 2,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "9000",
@@ -8422,9 +8437,12 @@ namespace CalcAppAPI.Migrations
                             KrpanAxeHolderId = 2,
                             KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 2,
+                            KrpanChainsawHolderId = 2,
                             KrpanDrawbarSteeringId = 2,
+                            KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "10000",
