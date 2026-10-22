@@ -37,7 +37,7 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanHydraulicAdjustableChassis);
         }
 
-        [HttpGet("trailers/{id}/brakelamps")]
+        [HttpGet("trailers/{id}/trailerbrakelamps")]
         public async Task<ActionResult<IEnumerable<KrpanTrailerBrakeLamp>>> GetKrpanTrailerBrakeLamps(int id)
         {
             var brakeLamps = await _dbContext.KrpanTrailerBrakeLamp
