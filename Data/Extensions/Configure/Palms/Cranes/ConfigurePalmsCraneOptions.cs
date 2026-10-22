@@ -21,6 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
             modelBuilder.ConfigureMultiplePalmsCraneOperatorSeats();
             modelBuilder.ConfigureMultiplePalmsCraneHighPerformanceOilFilters();
             modelBuilder.ConfigureMultiplePalmsCraneOilCoolers();
+            modelBuilder.ConfigureMultiplePalmsCraneElectricOilCoolerKits();
             modelBuilder.ConfigureMultiplePalmsCraneRotatorBrakes();
             modelBuilder.ConfigureMultiplePalmsCraneJoyStickHolders();
             modelBuilder.ConfigureMultiplePalmsCraneHoseGuards();

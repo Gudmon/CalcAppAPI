@@ -22,6 +22,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
             modelBuilder.ConnectCranesWithLight();
             modelBuilder.ConnectCranesWithLinkage();
             modelBuilder.ConnectCranesWithOilCooler();
+            modelBuilder.ConnectCranesWithElectricOilCoolerKit();
             modelBuilder.ConnectCranesWithOperatorSeat();
             modelBuilder.ConnectCranesWithProtectionSleeve();
             modelBuilder.ConnectCranesWithShipping();

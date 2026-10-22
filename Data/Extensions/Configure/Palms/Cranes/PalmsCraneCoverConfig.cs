@@ -15,6 +15,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                   Code = "JKK",
                   Price = "60",
                   ImageUrls = ["PALMS-crane-cover-1"]
+              },
+              new Cover
+              {
+                  Id = 2,
+                  Name = "Védőhuzat bőrből (bal-jobb) joystick-hoz (2db)",
+                  Code = "HSBJKK",
+                  Price = "60",
+                  ImageUrls = ["PALMS-crane-cover-1"]
               }
               );
         }

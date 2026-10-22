@@ -51,6 +51,8 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
         public ICollection<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; } = new List<HighPerformanceOilFilter>();
         public CraneOilCooler? CraneOilCooler { get; set; }
         public int? CraneOilCoolerId { get; set; }
+        public CraneElectricOilCoolerKit? CraneElectricOilCoolerKit { get; set; }
+        public int? CraneElectricOilCoolerKitId { get; set; }
         public ICollection<RotatorBrake> RotatorBrake { get; set; } = new List<RotatorBrake>();
         public JoystickHolder? JoystickHolder { get; set; }
         public int? JoystickHolderId { get; set; }

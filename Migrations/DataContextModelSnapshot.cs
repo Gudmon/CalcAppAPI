@@ -2151,6 +2151,14 @@ namespace CalcAppAPI.Migrations
                             ImageUrls = "[\"PALMS-crane-cover-1\"]",
                             Name = "Védőhuzat bőrből A2-A7-es, A11-es, A12-es és A14-es vezértömbökhöz",
                             Price = "60"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "HSBJKK",
+                            ImageUrls = "[\"PALMS-crane-cover-1\"]",
+                            Name = "Védőhuzat bőrből (bal-jobb) joystick-hoz (2db)",
+                            Price = "60"
                         });
                 });
 
@@ -2178,6 +2186,9 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("CoverId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CraneElectricOilCoolerKitId")
                         .HasColumnType("int");
 
                     b.Property<int?>("CraneOilCoolerId")
@@ -2320,6 +2331,8 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("BoomGuardId");
 
                     b.HasIndex("CoverId");
+
+                    b.HasIndex("CraneElectricOilCoolerKitId");
 
                     b.HasIndex("CraneOilCoolerId");
 
@@ -2689,6 +2702,7 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
+                            CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1220",
                             Description = "Nagy teljesítményű erdészeti daru, amelyet a mindennapos profi erdészeti munkákra terveztek. Magasabb emelőkapacitása és forgatónyomatéka miatt is alkalmas vágófejjel való munkavégzésre is. Kompatibilis a Palms egyalvázas és duplaalvázat pótkocsijaval is.",
@@ -2734,6 +2748,7 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
+                            CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1280",
                             Description = "Nagy teherbírású erdészeti daru, két teleszkóppal, amelyet a mindennapos profi erdészeti munkákhoz terveztek. Magasabb emelőkapacítása és forgatónyomatéka miatt alkalmas vágókanállal történő munkavégzéshez is. Egyaránt kompatibilis a Palms egyalvázas és duplaalvázas kivitelű pótkocsijaival.",
@@ -2779,6 +2794,7 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
                             CoverId = 1,
+                            CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1310",
                             Description = "Nagy teherbírású erdészeti daru, két, kitolható teleszkóppal ellátva, a mindennapos erdészeti munkákra tervezve, profi szinten. Magas emelőkapacitással és forgatónyomatékkal rendelkezik, akár vágókanállal, biokanállal is használható. Kompatibilis a nagyobb Palms pótkocsikkal, akár egy, akár duplaalvázas kivitelű.",
@@ -2824,6 +2840,7 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque215Bar = "102",
                             BrutLiftingTorque240Bar = "112",
                             CoverId = 1,
+                            CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
                             Description = "A Palms X100-as daruja a kínálatunkban a legnagyobb kinyúlással és emelőkapacitással rendelkezik. Dupla teleszkópos kivitelű, a hidraulikus alkatrészek a teleszkópokban rejtve, mégis könnyen hozzáférhetően vannak elhelyezve, biztosítva ezzel, hogy a munkálatok során ezek az alkatrészek ne sérüljenek, mégis a folyamatos üzemelés, nagy munkabírás biztosítva van.",
@@ -2904,7 +2921,7 @@ namespace CalcAppAPI.Migrations
                             CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1430",
-                            Description = "A PALMS 8.87Z daru nagy teherbírásával és kompakt szállítási méreteivel, valamint sokoldalúságával tűnik ki. Nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                            Description = "Fedezze fel a PALMS 8.87z nagy teherbírású erdészeti darut! A professzionális rönk- és faanyagmozgatásra tervezett daru nagy emelőkapacitást és hatékony hidraulikus működést biztosít. A Z-alakú kialakításnak köszönhetően szállításkor rendkívül kompakt méretűre csukható össze, így helytakarékos szállítást és praktikus tárolást tesz lehetővé.",
                             ImageUrls = "[\"PALMS-8.87Z-1\",\"PALMS-8.87Z-2\"]",
                             JoystickHolderId = 1,
                             LiftAtFourMeters190Bar = "-",
@@ -2935,6 +2952,47 @@ namespace CalcAppAPI.Migrations
                             TurningDeviceCounterPlateId = 1,
                             VideoUrls = "[]",
                             WorkingPressure = "240"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneElectricOilCoolerKit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrls")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VideoUrls")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CraneElectricOilCoolerKit");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "T5",
+                            ImageUrls = "[\"PALMS-crane-electric-oil-cooler-kit-1\"]",
+                            Name = "Nagy olajhűtő csomag elektromos csatlakozással a traktorhoz",
+                            Price = "1290"
                         });
                 });
 
@@ -7216,7 +7274,7 @@ namespace CalcAppAPI.Migrations
                             BeamType = "Dupla alvázas",
                             ChainsawHolderId = 1,
                             CurbWeight = "610",
-                            Description = "",
+                            Description = "Ez a könnyű, 4 tonnás rönkszállító pótkocsi kis erdőtulajdonosok, gazdálkodók és területfenntartó szakemberek igényeire készült, akik megbízható megoldást keresnek a rönkfa és a tűzifa szállítására. A robusztus, dupla alvázas szerkezet és az egyszerű, egytengelyes kialakítás kiemelkedő szilárdságot, valamint minimális karbantartási igényt biztosít.",
                             DrawbarControlCylinders = "1",
                             Frame = "2x120x80x6",
                             FrameExtensionLength = "-",
@@ -7242,7 +7300,7 @@ namespace CalcAppAPI.Migrations
                             BeamType = "Dupla alvázas",
                             ChainsawHolderId = 1,
                             CurbWeight = "625",
-                            Description = "",
+                            Description = "Ez a 4 tonnás, tandem tengelyes rönkszállító pótkocsi kis erdőtulajdonosok, gazdálkodók és területfenntartó szakemberek számára készült, akiknek megbízható megoldásra van szükségük a rönkfa és a tűzifa nehéz terepen történő szállításához. A nagy teherbírású, dupla alvázas kialakítás kiemelkedő szerkezeti szilárdságot, kiváló stabilitást és hosszú élettartamot biztosít.",
                             DrawbarControlCylinders = "1",
                             Frame = "2x120x80x6",
                             FrameExtensionLength = "-",
@@ -16328,6 +16386,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("CoverId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneElectricOilCoolerKit", "CraneElectricOilCoolerKit")
+                        .WithMany("Crane")
+                        .HasForeignKey("CraneElectricOilCoolerKitId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneOilCooler", "CraneOilCooler")
                         .WithMany("Crane")
                         .HasForeignKey("CraneOilCoolerId");
@@ -16383,6 +16445,8 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("BoomGuard");
 
                     b.Navigation("Cover");
+
+                    b.Navigation("CraneElectricOilCoolerKit");
 
                     b.Navigation("CraneOilCooler");
 
@@ -17201,6 +17265,11 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", b =>
+                {
+                    b.Navigation("Crane");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneElectricOilCoolerKit", b =>
                 {
                     b.Navigation("Crane");
                 });

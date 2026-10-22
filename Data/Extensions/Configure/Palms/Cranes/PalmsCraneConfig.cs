@@ -50,6 +50,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = null,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-2.42-1", "PALMS-2.42-2"],
                    VideoUrls = ["fEDDjo_K3E8"]
@@ -97,6 +98,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = null,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-2.54-1", "PALMS-2.54-2", "PALMS-2.54-3", "PALMS-2.54-4", "PALMS-2.54-5"],
                    VideoUrls = ["fEDDjo_K3E8", "OUXj3T4seD0"]
@@ -145,6 +147,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = null,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-3.63-1", "PALMS-3.63-2", "PALMS-3.63-3"],
                    VideoUrls = ["z9VS2BuQwvM"]
@@ -192,6 +195,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = null,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-3.67-1", "PALMS-3.67-2", "PALMS-3.67-3", "PALMS-3.67-4", "PALMS-3.67-5", "PALMS-3.67-6"],
                    VideoUrls = ["z9VS2BuQwvM"]
@@ -239,6 +243,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = null,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-4.71-1", "PALMS-4.71-2", "PALMS-4.71-3", "PALMS-4.71-4", "PALMS-4.71-5"],
                    VideoUrls = ["NYLCfmf-Nfc"]
@@ -285,6 +290,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-5.75-1", "PALMS-5.75-2", "PALMS-5.75-3"],
                    VideoUrls = ["-f0tPn8V78g"]
@@ -331,6 +337,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-5.85-1", "PALMS-5.85-2", "PALMS-5.85-3", "PALMS-5.85-4", "PALMS-5.85-5"],
                    VideoUrls = ["-f0tPn8V78g"]
@@ -377,6 +384,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = null,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-6.83Z-1", "PALMS-6.83Z-2", "PALMS-6.83Z-3", "PALMS-6.83Z-4", "PALMS-6.83Z-5", "PALMS-6.83Z-6"],
                },
@@ -422,6 +430,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-7.78-1", "PALMS-7.78-2", "PALMS-7.78-3", "PALMS-7.78-4"],
                    VideoUrls = ["z55HswaDwSA"]
@@ -468,6 +477,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-7.87-1", "PALMS-7.87-2", "PALMS-7.87-3", "PALMS-7.87-4", "PALMS-7.87-5", "PALMS-7.87-6"],
                    VideoUrls = ["z55HswaDwSA"]
@@ -514,6 +524,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-7.94-1", "PALMS-7.94-2", "PALMS-7.94-3"],
                    VideoUrls = ["z55HswaDwSA"]
@@ -560,6 +571,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = 1,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = 1,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-X100-1", "PALMS-X100-2", "PALMS-X100-3", "PALMS-X100-4", "PALMS-X100-5", "PALMS-X100-6", "PALMS-X100-7"],
                    VideoUrls = ["x9GnpJnvNVU"]
@@ -607,6 +619,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = null,
                    LinkageId = null,
                    SupportBracketId = 1,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-1.42-1", "PALMS-1.42-2", "PALMS-1.42-3", "PALMS-1.42-4"],
                    VideoUrls = ["25Y2HRXtohQ", "2r7Po4NpYHw"]
@@ -615,7 +628,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                {
                    Id = 14,
                    Name = "PALMS 8.87Z",
-                   Description = "A PALMS 8.87Z daru nagy teherbírásával és kompakt szállítási méreteivel, valamint sokoldalúságával tűnik ki. Nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
+                   Description = "Fedezze fel a PALMS 8.87z nagy teherbírású erdészeti darut! A professzionális rönk- és faanyagmozgatásra tervezett daru nagy emelőkapacitást és hatékony hidraulikus működést biztosít. A Z-alakú kialakításnak köszönhetően szállításkor rendkívül kompakt méretűre csukható össze, így helytakarékos szállítást és praktikus tárolást tesz lehetővé.",
                    Price = "22095",
                    Series = "8",
                    MaxReach = "8.7",
@@ -653,6 +666,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                    WoodControlId = null,
                    LinkageId = 1,
                    SupportBracketId = null,
+                   CraneElectricOilCoolerKitId = null,
                    ShippingId = 2,
                    ImageUrls = ["PALMS-8.87Z-1", "PALMS-8.87Z-2"],
                }

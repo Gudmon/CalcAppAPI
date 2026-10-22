@@ -662,7 +662,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                 {
                     Id = 17,
                     Name = "PALMS 4DC",
-                    Description = "",
+                    Description = "Ez a könnyű, 4 tonnás rönkszállító pótkocsi kis erdőtulajdonosok, gazdálkodók és területfenntartó szakemberek igényeire készült, akik megbízható megoldást keresnek a rönkfa és a tűzifa szállítására. A robusztus, dupla alvázas szerkezet és az egyszerű, egytengelyes kialakítás kiemelkedő szilárdságot, valamint minimális karbantartási igényt biztosít.",
                     Price = "",
                     LoadingAreaCross = "1,3",
                     LoadingAreaLength = "3000",
@@ -700,7 +700,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Trailers
                 {
                     Id = 18,
                     Name = "PALMS 4D",
-                    Description = "",
+                    Description = "Ez a 4 tonnás, tandem tengelyes rönkszállító pótkocsi kis erdőtulajdonosok, gazdálkodók és területfenntartó szakemberek számára készült, akiknek megbízható megoldásra van szükségük a rönkfa és a tűzifa nehéz terepen történő szállításához. A nagy teherbírású, dupla alvázas kialakítás kiemelkedő szerkezeti szilárdságot, kiváló stabilitást és hosszú élettartamot biztosít.",
                     Price = "",
                     LoadingAreaCross = "1,3",
                     LoadingAreaLength = "3000",

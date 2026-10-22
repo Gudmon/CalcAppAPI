@@ -150,6 +150,15 @@ namespace CalcAppAPI.API.Controllers
             return Ok(highPerformanceOilFilters);
         }
 
+        [HttpGet("cranes/{id}/electricoilcoolerkit")]
+        public async Task<ActionResult<CraneElectricOilCoolerKit>> GetElectricOilCoolerKit(int id)
+        {
+            var electricOilCoolerKit = await _dbContext.CraneElectricOilCoolerKit
+                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+
+            return Ok(electricOilCoolerKit);
+        }
+
         [HttpGet("cranes/{id}/oilcooler")]
         public async Task<ActionResult<CraneOilCooler>> GetOilCooler(int id)
         {

@@ -54,6 +54,7 @@ namespace CalcAppAPI.Data
         public DbSet<OperatorSeat> OperatorSeat { get; set; }
         public DbSet<HighPerformanceOilFilter> HighPerformanceOilFilter { get; set; }
         public DbSet<CraneOilCooler> CraneOilCooler { get; set; }
+        public DbSet<CraneElectricOilCoolerKit> CraneElectricOilCoolerKit { get; set; }
         public DbSet<RotatorBrake> RotatorBrake { get; set; }
         public DbSet<JoystickHolder> JoystickHolder { get; set; }
         public DbSet<HoseGuard> HoseGuard { get; set; }
