@@ -11,7 +11,14 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanDrawbarSteering
                 {
                     Id = 1,
-                    Name = "Vonórúd kormányzás + 40°",
+                    Name = "Vonórúd kormányzási szöge ± 35˚",
+                    Code = "",
+                    Price = "0",
+                },
+                new KrpanDrawbarSteering
+                {
+                    Id = 2,
+                    Name = "Vonórúd kormányzási szöge ± 40˚",
                     Code = "",
                     Price = "0",
                 }
