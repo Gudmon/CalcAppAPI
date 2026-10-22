@@ -29,6 +29,8 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanTrailerLampId { get; set; }
         public KrpanChock? KrpanChock { get; set; }
         public int? KrpanChockId { get; set; }
+        public KrpanWheelChock? KrpanWheelChock { get; set; }
+        public int? KrpanWheelChockId { get; set; }
         public KrpanDrawbarSteering? KrpanDrawbarSteering { get; set; }
         public int? KrpanDrawbarSteeringId { get; set; }
         public IEnumerable<KrpanTrailerSupportLeg> KrpanTrailerSupportLegs { get; set; }

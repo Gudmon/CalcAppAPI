@@ -11,6 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanHydraulicAdjustableChassis();
             modelBuilder.ConfigureMultipleKrpanTrailerLamps();
             modelBuilder.ConfigureMultipleKrpanChocks();
+            modelBuilder.ConfigureMultipleKrpanWheelChocks();
             modelBuilder.ConfigureMultipleKrpanDrawbarSteerings();
             modelBuilder.ConfigureMultipleKrpanTrailerSupportLegs();
             modelBuilder.ConfigureMultipleKrpanPropulsions();

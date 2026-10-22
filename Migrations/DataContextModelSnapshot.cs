@@ -1864,6 +1864,39 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanWheelChock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanWheelChock");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Name = "Kerékékek",
+                            Price = "0"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.BoomGuard", b =>
                 {
                     b.Property<int>("Id")
@@ -7959,6 +7992,9 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("KrpanTrailerLampId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("KrpanWheelChockId")
+                        .HasColumnType("int");
+
                     b.Property<string>("LoadCapacity")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -8041,6 +8077,8 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("KrpanTrailerLampId");
 
+                    b.HasIndex("KrpanWheelChockId");
+
                     b.ToTable("KrpanTrailer");
 
                     b.HasData(
@@ -8067,6 +8105,7 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -8102,6 +8141,7 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -8137,6 +8177,7 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3582",
                             LoadingLengthWithExtension = "4477",
@@ -8172,6 +8213,7 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "12000",
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
@@ -8207,6 +8249,7 @@ namespace CalcAppAPI.Migrations
                             KrpanToolBoxId = 2,
                             KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "14000",
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
@@ -8242,6 +8285,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHydraulicAdjustableChassisId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "11000",
                             LoadingLength = "3707",
                             LoadingLengthWithExtension = "4487",
@@ -8278,6 +8322,7 @@ namespace CalcAppAPI.Migrations
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "13000",
                             LoadingLength = "3975",
                             LoadingLengthWithExtension = "4755",
@@ -8315,6 +8360,7 @@ namespace CalcAppAPI.Migrations
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "14800",
                             LoadingLength = "4325",
                             LoadingLengthWithExtension = "5105",
@@ -8336,6 +8382,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "6000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8359,6 +8406,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "7000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8382,6 +8430,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3407",
                             LoadingLengthWithExtension = "4007",
@@ -8405,6 +8454,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8428,6 +8478,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "9000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -8451,6 +8502,7 @@ namespace CalcAppAPI.Migrations
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
                             KrpanTrailerLampId = 1,
+                            KrpanWheelChockId = 1,
                             LoadCapacity = "10000",
                             LoadingLength = "3600",
                             LoadingLengthWithExtension = "4400",
@@ -16521,6 +16573,10 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanTrailerLampId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanWheelChock", "KrpanWheelChock")
+                        .WithMany("KrpanTrailer")
+                        .HasForeignKey("KrpanWheelChockId");
+
                     b.Navigation("KrpanAdjustableDrive");
 
                     b.Navigation("KrpanAxeHolder");
@@ -16560,6 +16616,8 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTopConnection");
 
                     b.Navigation("KrpanTrailerLamp");
+
+                    b.Navigation("KrpanWheelChock");
                 });
 
             modelBuilder.Entity("ControlBlockCrane", b =>
@@ -17115,6 +17173,11 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerLamp", b =>
+                {
+                    b.Navigation("KrpanTrailer");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanWheelChock", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });

@@ -12,6 +12,7 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Trailer
         public KrpanAdjustableDriveDto AdjustableDrive { get; set; }
         public KrpanTrailerLampDto TrailerLamp { get; set; }
         public KrpanChockDto Chock { get; set; }
+        public KrpanWheelChockDto WheelChock { get; set; }
         public KrpanDrawbarSteeringDto DrawbarSteering { get; set; }
         public IEnumerable<KrpanClutchDto> Clutches { get; set; }
         public IEnumerable<KrpanTrailerCouplingDeviceDto> TrailerCouplingDevices { get; set; }

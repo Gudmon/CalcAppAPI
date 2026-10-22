@@ -46,6 +46,15 @@ namespace CalcAppAPI.API.Controllers
             return Ok(chock);
         }
 
+        [HttpGet("trailers/{id}/wheelchock")]
+        public async Task<ActionResult<KrpanWheelChock>> GetKrpanWheelChock(int id)
+        {
+            var wheelChock = await _dbContext.KrpanWheelChock
+                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
+
+            return Ok(wheelChock);
+        }
+
         [HttpGet("trailers/{id}/drawbarsteering")]
         public async Task<ActionResult<KrpanDrawbarSteering>> GetKrpanDrawbarSteering(int id)
         {

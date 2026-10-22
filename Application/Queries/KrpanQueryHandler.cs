@@ -85,6 +85,14 @@ namespace CalcAppAPI.Application.Queries
                     Price = t.KrpanChock.Price
                 },
 
+                WheelChock = t.KrpanWheelChock == null ? null : new KrpanWheelChockDto
+                {
+                    Id = t.KrpanWheelChock.Id,
+                    Name = t.KrpanWheelChock.Name,
+                    Code = t.KrpanWheelChock.Code,
+                    Price = t.KrpanWheelChock.Price
+                },
+
                 DrawbarSteering = t.KrpanDrawbarSteering == null ? null : new KrpanDrawbarSteeringDto
                 {
                     Id = t.KrpanDrawbarSteering.Id,

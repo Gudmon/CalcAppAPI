@@ -81,6 +81,7 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanHydraulicAdjustableChassis> KrpanHydraulicAdjustableChassis { get; set; }
         public DbSet<KrpanTrailerLamp> KrpanTrailerLamp { get; set; }
         public DbSet<KrpanChock> KrpanChock { get; set; }
+        public DbSet<KrpanWheelChock> KrpanWheelChock { get; set; }
         public DbSet<KrpanDrawbarSteering> KrpanDrawbarSteering { get; set; }
         public DbSet<KrpanTrailerSupportLeg> KrpanTrailerSupportLeg { get; set; }
         public DbSet<KrpanPropulsion> KrpanPropulsion { get; set; }
