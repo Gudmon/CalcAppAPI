@@ -63,8 +63,7 @@ namespace CalcAppAPI.Models.Machine.Configurations.Palms.Cranes
         public int? SupportLegCounterPlateId { get; set; }
         public BoomGuard? BoomGuard { get; set; }
         public int? BoomGuardId { get; set; }
-        public Cover? Cover { get; set; }
-        public int? CoverId { get; set; }
+        public ICollection<Cover> Covers { get; set; } = new List<Cover>();
         public WoodControl? WoodControl { get; set; }
         public int? WoodControlId { get; set; }
         public Linkage? Linkage { get; set; }

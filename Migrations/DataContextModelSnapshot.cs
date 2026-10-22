@@ -2185,9 +2185,6 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CoverId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("CraneElectricOilCoolerKitId")
                         .HasColumnType("int");
 
@@ -2330,8 +2327,6 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("BoomGuardId");
 
-                    b.HasIndex("CoverId");
-
                     b.HasIndex("CraneElectricOilCoolerKitId");
 
                     b.HasIndex("CraneOilCoolerId");
@@ -2369,7 +2364,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "26",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "360",
                             Description = "Ideális választás azoknak a vásárlóknak, akik egyszerűséget, könnyűséget és kompakt méretet keresnek. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ImageUrls = "[\"PALMS-2.42-1\",\"PALMS-2.42-2\"]",
@@ -2406,7 +2400,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "26",
                             BrutLiftingTorque215Bar = "29",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "400",
                             Description = "Kompakt és könnyű daru, ideális városi parkokhoz és más környezetvédelmi érzékeny területekhez. Rögzíthető különböző platformokra, erdészeti pótkocsiktól és teherautóktól kezdve a mini-forwarderekig. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ElectricalFloatingId = 1,
@@ -2447,7 +2440,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "36",
                             BrutLiftingTorque215Bar = "-",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "415",
                             Description = "Kis erdőtulajdonosoknak tervezett daru a tűzifa előkészítésére saját maguk és szomszédos háztartások számára. Kompatibilis a PALMS 6S és 8SX pótkocsikkal.",
                             ImageUrls = "[\"PALMS-3.63-1\",\"PALMS-3.63-2\",\"PALMS-3.63-3\"]",
@@ -2485,7 +2477,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "41",
                             BrutLiftingTorque215Bar = "51",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneWeight = "620",
                             Description = "Egy gazda legjobb társa, kiváló teljesítményt nyújtva tűzifa előkészítésében és általános emelési feladatokban a gazdaságokon. Kompatibilis a PALMS 8SX, 8D, 9SC és 10D pótkocsikkal.",
                             ElectricalFloatingId = 1,
@@ -2526,7 +2517,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "48",
                             BrutLiftingTorque215Bar = "57",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "710",
                             Description = "Sokoldalú közepes méretű daru, különféle ágazatokban, például fakitermelésben és mezőgazdaságban. Kompatibilis a legtöbb PALMS pótkocsival",
@@ -2570,7 +2560,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "63",
                             BrutLiftingTorque215Bar = "69",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "940",
                             Description = "Professzionális erdészeti műveletekre tervezett daru, közepes méretű traktorokhoz optimalizálva. Kompatibilis a PALMS pótkocsik többségével.",
@@ -2615,7 +2604,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "63",
                             BrutLiftingTorque215Bar = "69",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "950",
                             Description = "Professzionális erdészeti daru, dupla teleszkópos gémmel felszerelve. Kifejezetten a mindennapi erdészeti műveletekhez tervezve. Optimalizálva a közepes méretű traktorokhoz. Kompatibilis a PALMS pótkocsik többségével.",
@@ -2659,7 +2647,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "71",
                             BrutLiftingTorque240Bar = "-",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1090",
                             Description = "A PALMS 6.83Z daru kompakt szállítási méreteivel és sokoldalúságával tűnik ki, amely nemcsak erdészeti, hanem mezőgazdasági pótkocsikhoz és teherautókhoz is illeszkedik.",
@@ -2701,7 +2688,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "78",
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
-                            CoverId = 1,
                             CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1220",
@@ -2747,7 +2733,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "78",
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
-                            CoverId = 1,
                             CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1280",
@@ -2793,7 +2778,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "78",
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
-                            CoverId = 1,
                             CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1310",
@@ -2839,7 +2823,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "-",
                             BrutLiftingTorque215Bar = "102",
                             BrutLiftingTorque240Bar = "112",
-                            CoverId = 1,
                             CraneElectricOilCoolerKitId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1760",
@@ -2918,7 +2901,6 @@ namespace CalcAppAPI.Migrations
                             BrutLiftingTorque190Bar = "78",
                             BrutLiftingTorque215Bar = "86",
                             BrutLiftingTorque240Bar = "96",
-                            CoverId = 1,
                             CraneOilCoolerId = 1,
                             CraneWeight = "1430",
                             Description = "Fedezze fel a PALMS 8.87z nagy teherbírású erdészeti darut! A professzionális rönk- és faanyagmozgatásra tervezett daru nagy emelőkapacitást és hatékony hidraulikus működést biztosít. A Z-alakú kialakításnak köszönhetően szállításkor rendkívül kompakt méretűre csukható össze, így helytakarékos szállítást és praktikus tárolást tesz lehetővé.",
@@ -9152,6 +9134,153 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             ControlBlockId = 13,
+                            CraneId = 14
+                        });
+                });
+
+            modelBuilder.Entity("CoverCrane", b =>
+                {
+                    b.Property<int>("CoversId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CraneId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CoversId", "CraneId");
+
+                    b.HasIndex("CraneId");
+
+                    b.ToTable("CoverCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 1
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 1
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 2
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 2
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 3
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 3
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 4
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 4
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 5
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 5
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 6
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 6
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 7
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 7
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 8
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 8
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 9
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 9
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 10
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 10
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 11
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 11
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 12
+                        },
+                        new
+                        {
+                            CoversId = 2,
+                            CraneId = 12
+                        },
+                        new
+                        {
+                            CoversId = 1,
+                            CraneId = 14
+                        },
+                        new
+                        {
+                            CoversId = 2,
                             CraneId = 14
                         });
                 });
@@ -16382,10 +16511,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("Crane")
                         .HasForeignKey("BoomGuardId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", "Cover")
-                        .WithMany("Crane")
-                        .HasForeignKey("CoverId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.CraneElectricOilCoolerKit", "CraneElectricOilCoolerKit")
                         .WithMany("Crane")
                         .HasForeignKey("CraneElectricOilCoolerKitId");
@@ -16443,8 +16568,6 @@ namespace CalcAppAPI.Migrations
                         .HasForeignKey("WoodControlId");
 
                     b.Navigation("BoomGuard");
-
-                    b.Navigation("Cover");
 
                     b.Navigation("CraneElectricOilCoolerKit");
 
@@ -16702,6 +16825,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.ControlBlock", null)
                         .WithMany()
                         .HasForeignKey("ControlBlockId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Crane", null)
+                        .WithMany()
+                        .HasForeignKey("CraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CoverCrane", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", null)
+                        .WithMany()
+                        .HasForeignKey("CoversId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -17260,11 +17398,6 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.BoomGuard", b =>
-                {
-                    b.Navigation("Crane");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Palms.Cranes.Cover", b =>
                 {
                     b.Navigation("Crane");
                 });

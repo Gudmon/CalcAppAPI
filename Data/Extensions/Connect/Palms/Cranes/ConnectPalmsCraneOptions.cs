@@ -16,7 +16,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Palms.Cranes
             modelBuilder.ConnectCranesWithRotators();
             modelBuilder.ConnectCranesWithWinches();
             modelBuilder.ConnectCranesWithBoomGuard();
-            modelBuilder.ConnectCranesWithCover();
+            modelBuilder.ConnectCranesWithCovers();
             modelBuilder.ConnectCranesWithElectricalFloating();
             modelBuilder.ConnectCranesWithJoystickHolder();
             modelBuilder.ConnectCranesWithLight();

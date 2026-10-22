@@ -224,14 +224,14 @@ namespace CalcAppAPI.API.Controllers
             return Ok(boomGuard);
         }
 
-
-        [HttpGet("cranes/{id}/cover")]
-        public async Task<ActionResult<Cover>> GetCover(int id)
+        [HttpGet("cranes/{id}/covers")]
+        public async Task<ActionResult<IEnumerable<Cover>>> GetCovers(int id)
         {
-            var cover = await _dbContext.Cover
-                .FirstOrDefaultAsync(b => b.Crane.Any(t => t.Id == id));
+            var covers = await _dbContext.Cover
+                .Where(s => s.Crane.Any(t => t.Id == id))
+                .ToListAsync();
 
-            return Ok(cover);
+            return Ok(covers);
         }
 
         [HttpGet("cranes/{id}/woodcontrol")]
