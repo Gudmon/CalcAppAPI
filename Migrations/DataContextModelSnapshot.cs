@@ -630,7 +630,7 @@ namespace CalcAppAPI.Migrations
                             Id = 2,
                             Code = "300015366",
                             Name = "Csákány és fejsze tartó",
-                            Price = "40"
+                            Price = "36,67"
                         });
                 });
 
@@ -1126,46 +1126,6 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanDrawhead", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanDrawHead");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "300012588",
-                            Name = "Vonófej K80",
-                            Price = "340"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Code = "300012588",
-                            Name = "Vonófej K80",
-                            Price = "415"
-                        });
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtension", b =>
                 {
                     b.Property<int>("Id")
@@ -1597,39 +1557,6 @@ namespace CalcAppAPI.Migrations
                             Id = 2,
                             Code = "300015651",
                             Name = "Szerszámos láda",
-                            Price = "145"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTopConnection", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanTopConnection");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Code = "",
-                            Name = "Felső csatlakozás",
                             Price = "145"
                         });
                 });
@@ -7963,9 +7890,6 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("KrpanChockId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KrpanDrawHeadId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("KrpanDrawbarSteeringId")
                         .HasColumnType("int");
 
@@ -7991,9 +7915,6 @@ namespace CalcAppAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanToolBoxId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanTopConnectionId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanTrailerLampId")
@@ -8060,8 +7981,6 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("KrpanChockId");
 
-                    b.HasIndex("KrpanDrawHeadId");
-
                     b.HasIndex("KrpanDrawbarSteeringId");
 
                     b.HasIndex("KrpanExtensionId");
@@ -8079,8 +7998,6 @@ namespace CalcAppAPI.Migrations
                     b.HasIndex("KrpanPlatoId");
 
                     b.HasIndex("KrpanToolBoxId");
-
-                    b.HasIndex("KrpanTopConnectionId");
 
                     b.HasIndex("KrpanTrailerLampId");
 
@@ -8105,13 +8022,11 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 1,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             KrpanToolBoxId = 2,
-                            KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "8000",
@@ -8141,13 +8056,11 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 1,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             KrpanToolBoxId = 2,
-                            KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "9000",
@@ -8177,13 +8090,11 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 1,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             KrpanToolBoxId = 2,
-                            KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "10000",
@@ -8213,13 +8124,11 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 1,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             KrpanToolBoxId = 2,
-                            KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "12000",
@@ -8249,13 +8158,11 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanChainsawHolderId = 2,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 1,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
                             KrpanToolBoxId = 2,
-                            KrpanTopConnectionId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
                             LoadCapacity = "14000",
@@ -8285,7 +8192,6 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 1,
                             KrpanChainsawHolderId = 1,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 1,
                             KrpanGrappleLocationId = 1,
@@ -8321,7 +8227,6 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 1,
                             KrpanChainsawHolderId = 1,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 1,
                             KrpanGrappleLocationId = 1,
@@ -8358,7 +8263,6 @@ namespace CalcAppAPI.Migrations
                             KrpanCargoSpaceExtensionId = 1,
                             KrpanChainsawHolderId = 1,
                             KrpanChockId = 1,
-                            KrpanDrawHeadId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanExtensionId = 1,
                             KrpanFuelTankHolderId = 1,
@@ -8386,6 +8290,7 @@ namespace CalcAppAPI.Migrations
                             CentralBeams = "140x8",
                             Description = "",
                             ImageUrls = "[\"GP-6-XS-1\",\"GP-6-XS-2\"]",
+                            KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanHandBrakeId = 1,
                             KrpanMechanicalAdjustableFrameId = 1,
@@ -8410,6 +8315,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
                             ImageUrls = "[\"GP-7-XS-1\",\"GP-7-XS-2\"]",
+                            KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanDrawbarSteeringId = 1,
                             KrpanHandBrakeId = 1,
@@ -8435,6 +8341,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "35",
                             FrameSteeringCylinders = "1",
                             ImageUrls = "[\"GP-8-XS-1\",\"GP-8-XS-2\"]",
+                            KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanDrawbarSteeringId = 1,
                             KrpanHandBrakeId = 1,
@@ -8460,6 +8367,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-8-S-1\",\"GP-8-S-2\"]",
+                            KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanHandBrakeId = 1,
@@ -8485,6 +8393,7 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "+40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-9-S-1\",\"GP-9-S-2\"]",
+                            KrpanAxeHolderId = 2,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanHandBrakeId = 1,
@@ -8510,6 +8419,8 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-10-S-1\",\"GP-10-S-2\"]",
+                            KrpanAxeHolderId = 2,
+                            KrpanCardanShaftId = 1,
                             KrpanCargoSpaceExtensionId = 2,
                             KrpanDrawbarSteeringId = 2,
                             KrpanHandBrakeId = 1,
@@ -16537,10 +16448,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanChockId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanDrawhead", "KrpanDrawHead")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanDrawHeadId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanDrawbarSteering", "KrpanDrawbarSteering")
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanDrawbarSteeringId");
@@ -16578,10 +16485,6 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanToolBoxId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTopConnection", "KrpanTopConnection")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanTopConnectionId");
-
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTrailerLamp", "KrpanTrailerLamp")
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanTrailerLampId");
@@ -16606,8 +16509,6 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("KrpanChock");
 
-                    b.Navigation("KrpanDrawHead");
-
                     b.Navigation("KrpanDrawbarSteering");
 
                     b.Navigation("KrpanExtension");
@@ -16625,8 +16526,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanPlato");
 
                     b.Navigation("KrpanToolBox");
-
-                    b.Navigation("KrpanTopConnection");
 
                     b.Navigation("KrpanTrailerLamp");
 
@@ -17135,11 +17034,6 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTrailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanDrawhead", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanExtension", b =>
                 {
                     b.Navigation("KrpanTrailer");
@@ -17176,11 +17070,6 @@ namespace CalcAppAPI.Migrations
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanToolBox", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanTopConnection", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });

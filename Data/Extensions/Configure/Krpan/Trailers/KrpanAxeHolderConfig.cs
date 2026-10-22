@@ -20,7 +20,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                     Id = 2,
                     Name = "Csákány és fejsze tartó",
                     Code = "300015366",
-                    Price = "40",
+                    Price = "36,67",
                 }
                 );
         }

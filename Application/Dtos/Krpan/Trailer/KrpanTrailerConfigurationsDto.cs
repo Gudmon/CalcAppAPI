@@ -29,8 +29,6 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Trailer
         public KrpanGrappleLocationDto GrappleLocation { get; set; }
         public KrpanMechanicalAdjustableFrameDto MechanicalAdjustableFrame { get; set; }
         public IEnumerable<KrpanStanchionDto> Stanchions { get; set; }
-        public KrpanTopConnectionDto TopConnection { get; set; }
         public KrpanHandBrakeDto HandBrake { get; set; }
-        public KrpanDrawheadDto DrawHead { get; set; }
     }
 }

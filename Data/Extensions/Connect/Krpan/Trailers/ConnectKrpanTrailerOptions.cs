@@ -23,8 +23,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailerWithAdjustableDrive();
             modelBuilder.ConnectKrpanTrailerWithHandBrake();
             modelBuilder.ConnectKrpanTrailersWithStanchions();
-            modelBuilder.ConnectKrpanTrailerWithTopConnection();
-            modelBuilder.ConnectKrpanTrailerWithDrawhead();
             modelBuilder.ConnectKrpanTrailerWithCardanShaft();
             modelBuilder.ConnectKrpanTrailerWithBBox();
             modelBuilder.ConnectKrpanTrailerWithBaleTransportPlatform();

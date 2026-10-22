@@ -20,9 +20,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanBrakes();
             modelBuilder.ConfigureMultipleKrpanHandBrakes();
             modelBuilder.ConfigureMultipleKrpanStanchions();
-            modelBuilder.ConfigureMultipleKrpanTopConnections();
             modelBuilder.ConfigureMultipleKrpanClutches();
-            modelBuilder.ConfigureMultipleKrpanDrawheads();
             modelBuilder.ConfigureMultipleKrpanDrawbars();
             modelBuilder.ConfigureMultipleKrpanTrailerCouplingDevices();
             modelBuilder.ConfigureMultipleKrpanCardanShafts();

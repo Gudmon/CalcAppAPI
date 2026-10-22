@@ -221,28 +221,12 @@ namespace CalcAppAPI.Application.Queries
                     Price = x.Price
                 }),
 
-                TopConnection = t.KrpanTopConnection == null ? null : new KrpanTopConnectionDto
-                {
-                    Id = t.KrpanTopConnection.Id,
-                    Name = t.KrpanTopConnection.Name,
-                    Code = t.KrpanTopConnection.Code,
-                    Price = t.KrpanTopConnection.Price
-                },
-
                 HandBrake = t.KrpanHandBrake == null ? null : new KrpanHandBrakeDto
                 {
                     Id = t.KrpanHandBrake.Id,
                     Name = t.KrpanHandBrake.Name,
                     Code = t.KrpanHandBrake.Code,
                     Price = t.KrpanHandBrake.Price
-                },
-
-                DrawHead = t.KrpanDrawHead == null ? null : new KrpanDrawheadDto
-                {
-                    Id = t.KrpanDrawHead.Id,
-                    Name = t.KrpanDrawHead.Name,
-                    Code = t.KrpanDrawHead.Code,
-                    Price = t.KrpanDrawHead.Price
                 }
             };
 

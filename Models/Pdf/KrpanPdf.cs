@@ -17,9 +17,7 @@
         public PdfItem? HandBrake { get; set; }
         public PdfItem? Propulsion { get; set; }
         public PdfItem? AdjustableDrive { get; set; }
-        public PdfItem? TopConnection { get; set; }
         public PdfItem? Clutch { get; set; }
-        public PdfItem? DrawHead { get; set; }
         public PdfItem? DrawBar { get; set; }
         public PdfItem? CardanShaft { get; set; }
         public PdfItem? BBox { get; set; }

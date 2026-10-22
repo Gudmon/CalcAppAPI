@@ -132,15 +132,6 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanStanchions);
         }
 
-        [HttpGet("trailers/{id}/topconnection")]
-        public async Task<ActionResult<KrpanTopConnection>> GetKrpanTopconnection(int id)
-        {
-            var krpanTopConnection = await _dbContext.KrpanTopConnection
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
-
-            return Ok(krpanTopConnection);
-        }
-
         [HttpGet("trailers/{id}/clutches")]
         public async Task<ActionResult<IEnumerable<KrpanClutch>>> GetKrpanClutches(int id)
         {
@@ -149,15 +140,6 @@ namespace CalcAppAPI.API.Controllers
                 .ToListAsync();
 
             return Ok(krpanClutch);
-        }
-
-        [HttpGet("trailers/{id}/drawhead")]
-        public async Task<ActionResult<KrpanDrawhead>> GetKrpanDrawhead(int id)
-        {
-            var krpanDrawHead = await _dbContext.KrpanDrawHead
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
-
-            return Ok(krpanDrawHead);
         }
 
         [HttpGet("trailers/{id}/drawbars")]
