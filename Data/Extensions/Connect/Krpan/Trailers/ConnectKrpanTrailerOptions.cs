@@ -14,7 +14,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailersWithCouplingDevices();
             modelBuilder.ConnectKrpanTrailersWithPropulsions();
             modelBuilder.ConnectKrpanTrailersWithTyres();
-            modelBuilder.ConnectKrpanTrailerWithHydraulicAdjustableChassis();
+            modelBuilder.ConnectKrpanTrailersWithFrame();
             modelBuilder.ConnectKrpanTrailerWithTrailerLamp();
             modelBuilder.ConnectKrpanTrailersWithBrakeLamps();
             modelBuilder.ConnectKrpanTrailerWithChock();
@@ -35,7 +35,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
             modelBuilder.ConnectKrpanTrailerWithPlato();
             modelBuilder.ConnectKrpanTrailerWithExtension();
             modelBuilder.ConnectKrpanTrailerWithGrappleLocation();
-            modelBuilder.ConnectKrpanTrailerWithMechanicalAdjustableFrame();
         }
     }
 }

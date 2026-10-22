@@ -1279,7 +1279,7 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicAdjustableChassis", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFrame", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1300,45 +1300,26 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("KrpanHydraulicAdjustableChassis");
+                    b.ToTable("KrpanFrame");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Code = "",
-                            Name = "Hidraulikusan állítható futómű",
+                            Name = "Hidraulikus keretállítás (600 mm)",
                             Price = "0"
-                        });
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Price")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("KrpanMechanicalAdjustableFrame");
-
-                    b.HasData(
+                        },
                         new
                         {
-                            Id = 1,
+                            Id = 2,
+                            Code = "",
+                            Name = "Fix keret",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 3,
                             Code = "",
                             Name = "Mechanikusan állítható keret",
                             Price = "0"
@@ -7967,10 +7948,7 @@ namespace CalcAppAPI.Migrations
                     b.Property<int?>("KrpanHandBrakeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("KrpanHydraulicAdjustableChassisId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("KrpanMechanicalAdjustableFrameId")
+                    b.Property<int?>("KrpanFrameId")
                         .HasColumnType("int");
 
                     b.Property<int?>("KrpanPlatoId")
@@ -8053,9 +8031,7 @@ namespace CalcAppAPI.Migrations
 
                     b.HasIndex("KrpanHandBrakeId");
 
-                    b.HasIndex("KrpanHydraulicAdjustableChassisId");
-
-                    b.HasIndex("KrpanMechanicalAdjustableFrameId");
+                    b.HasIndex("KrpanFrameId");
 
                     b.HasIndex("KrpanPlatoId");
 
@@ -8258,7 +8234,7 @@ namespace CalcAppAPI.Migrations
                             KrpanFuelTankHolderId = 1,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
-                            KrpanHydraulicAdjustableChassisId = 1,
+                            KrpanFrameId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8293,7 +8269,7 @@ namespace CalcAppAPI.Migrations
                             KrpanFuelTankHolderId = 1,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
-                            KrpanHydraulicAdjustableChassisId = 1,
+                            KrpanFrameId = 1,
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
@@ -8330,7 +8306,7 @@ namespace CalcAppAPI.Migrations
                             KrpanFuelTankHolderId = 1,
                             KrpanGrappleLocationId = 1,
                             KrpanHandBrakeId = 1,
-                            KrpanHydraulicAdjustableChassisId = 1,
+                            KrpanFrameId = 1,
                             KrpanPlatoId = 1,
                             KrpanToolBoxId = 1,
                             KrpanTrailerLampId = 1,
@@ -8357,7 +8333,7 @@ namespace CalcAppAPI.Migrations
                             KrpanChainsawHolderId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8386,7 +8362,7 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawbarSteeringId = 1,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8415,7 +8391,7 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawbarSteeringId = 1,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8444,7 +8420,7 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8473,7 +8449,7 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -8503,7 +8479,7 @@ namespace CalcAppAPI.Migrations
                             KrpanDrawbarSteeringId = 2,
                             KrpanFuelTankHolderId = 2,
                             KrpanHandBrakeId = 1,
-                            KrpanMechanicalAdjustableFrameId = 1,
+                            KrpanFrameId = 3,
                             KrpanToolBoxId = 2,
                             KrpanTrailerLampId = 1,
                             KrpanWheelChockId = 1,
@@ -16595,14 +16571,9 @@ namespace CalcAppAPI.Migrations
                         .WithMany("KrpanTrailer")
                         .HasForeignKey("KrpanHandBrakeId");
 
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicAdjustableChassis", "KrpanHydraulicAdjustableChassis")
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFrame", "KrpanFrame")
                         .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanHydraulicAdjustableChassisId");
-
-                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", "KrpanMechanicalAdjustableFrame")
-                        .WithMany("KrpanTrailer")
-                        .HasForeignKey("KrpanMechanicalAdjustableFrameId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("KrpanFrameId");
 
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanPlato", "KrpanPlato")
                         .WithMany("KrpanTrailer")
@@ -16646,9 +16617,7 @@ namespace CalcAppAPI.Migrations
 
                     b.Navigation("KrpanHandBrake");
 
-                    b.Navigation("KrpanHydraulicAdjustableChassis");
-
-                    b.Navigation("KrpanMechanicalAdjustableFrame");
+                    b.Navigation("KrpanFrame");
 
                     b.Navigation("KrpanPlato");
 
@@ -17196,12 +17165,7 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("KrpanTrailer");
                 });
 
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanHydraulicAdjustableChassis", b =>
-                {
-                    b.Navigation("KrpanTrailer");
-                });
-
-            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanMechanicalAdjustableFrame", b =>
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanFrame", b =>
                 {
                     b.Navigation("KrpanTrailer");
                 });

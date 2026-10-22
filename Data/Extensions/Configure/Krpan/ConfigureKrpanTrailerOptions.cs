@@ -8,7 +8,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
         public static void ConfigureAllKrpanTrailerOptions(this ModelBuilder modelBuilder)
         {
             modelBuilder.ConfigureMultipleKrpanTrailers();
-            modelBuilder.ConfigureMultipleKrpanHydraulicAdjustableChassis();
+            modelBuilder.ConfigureMultipleKrpanFrames();
             modelBuilder.ConfigureMultipleKrpanTrailerLamps();
             modelBuilder.ConfigureMultipleKrpanTrailerBrakeLamps();
             modelBuilder.ConfigureMultipleKrpanChocks();
@@ -35,7 +35,6 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanPlatos();
             modelBuilder.ConfigureMultipleKrpanExtensions();
             modelBuilder.ConfigureMultipleKrpanGrappleLocations();
-            modelBuilder.ConfigureMultipleKrpanMechanicalAdjustableFrames();
         }
 
     }

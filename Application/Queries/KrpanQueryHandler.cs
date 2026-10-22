@@ -213,12 +213,12 @@ namespace CalcAppAPI.Application.Queries
                     Price = t.KrpanGrappleLocation.Price
                 },
 
-                MechanicalAdjustableFrame = t.KrpanMechanicalAdjustableFrame == null ? null : new KrpanMechanicalAdjustableFrameDto
+                Frame = t.KrpanFrame == null ? null : new KrpanFrameDto
                 {
-                    Id = t.KrpanMechanicalAdjustableFrame.Id,
-                    Name = t.KrpanMechanicalAdjustableFrame.Name,
-                    Code = t.KrpanMechanicalAdjustableFrame.Code,
-                    Price = t.KrpanMechanicalAdjustableFrame.Price
+                    Id = t.KrpanFrame.Id,
+                    Name = t.KrpanFrame.Name,
+                    Code = t.KrpanFrame.Code,
+                    Price = t.KrpanFrame.Price
                 },
 
                 Stanchions = t.KrpanStanchions.Select(x => new KrpanStanchionDto

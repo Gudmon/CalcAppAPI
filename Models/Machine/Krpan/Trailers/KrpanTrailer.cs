@@ -23,8 +23,8 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public string? FrameSteeringCylinders { get; set; }
         public string? DrawbarAngle { get; set; }
         public IEnumerable<KrpanCrane> KrpanCrane { get; set; }
-        public KrpanHydraulicAdjustableChassis? KrpanHydraulicAdjustableChassis { get; set; }
-        public int? KrpanHydraulicAdjustableChassisId { get; set; }
+        public KrpanFrame? KrpanFrame { get; set; }
+        public int? KrpanFrameId { get; set; }
         public KrpanTrailerLamp? KrpanTrailerLamp { get; set; }
         public int? KrpanTrailerLampId { get; set; }
         public IEnumerable<KrpanTrailerBrakeLamp> KrpanTrailerBrakeLamps { get; set; }
@@ -68,8 +68,6 @@ namespace CalcAppAPI.Models.Machine.Krpan.Trailers
         public int? KrpanExtensionId { get; set; }
         public KrpanGrappleLocation? KrpanGrappleLocation { get; set; }
         public int? KrpanGrappleLocationId { get; set; }
-        public KrpanMechanicalAdjustableFrame? KrpanMechanicalAdjustableFrame { get; set; }
-        public int? KrpanMechanicalAdjustableFrameId { get; set; }
         public string[] ImageUrls { get; set; } = Array.Empty<string>();
         public string[] VideoUrls { get; set; } = Array.Empty<string>();
     }

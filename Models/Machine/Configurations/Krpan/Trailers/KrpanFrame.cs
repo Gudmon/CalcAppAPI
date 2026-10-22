@@ -1,8 +1,8 @@
-﻿using CalcAppAPI.Models.Machine.Krpan.Trailers;
+using CalcAppAPI.Models.Machine.Krpan.Trailers;
 
 namespace CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers
 {
-    public class KrpanMechanicalAdjustableFrame
+    public class KrpanFrame
     {
         public int Id { get; set; }
         public string Name { get; set; }

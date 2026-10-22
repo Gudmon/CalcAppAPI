@@ -19,22 +19,22 @@ namespace CalcAppAPI.API.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet("trailers/{id}/hydraulicadjustablechassis")]
-        public async Task<ActionResult<KrpanHydraulicAdjustableChassis>> GetKrpanHydraulicAdjustableChassis(int id)
+        [HttpGet("trailers/{id}/frame")]
+        public async Task<ActionResult<KrpanFrame>> GetKrpanFrame(int id)
         {
-            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanHydraulicAdjustableChassis
+            var krpanFrame = await _dbContext.KrpanFrame
                 .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
 
-            return Ok(krpanHydraulicAdjustableChassis);
+            return Ok(krpanFrame);
         }
 
         [HttpGet("trailers/{id}/lamp")]
         public async Task<ActionResult<KrpanTrailerLamp>> GetKrpanTrailerLamp(int id)
         {
-            var krpanHydraulicAdjustableChassis = await _dbContext.KrpanTrailerLamp
+            var krpanTrailerLamp = await _dbContext.KrpanTrailerLamp
                 .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
 
-            return Ok(krpanHydraulicAdjustableChassis);
+            return Ok(krpanTrailerLamp);
         }
 
         [HttpGet("trailers/{id}/trailerbrakelamps")]
@@ -271,13 +271,5 @@ namespace CalcAppAPI.API.Controllers
             return Ok(krpanGrappleLocation);
         }
 
-        [HttpGet("trailers/{id}/mechanicaladjustableframe")]
-        public async Task<ActionResult<KrpanMechanicalAdjustableFrame>> GetKrpanTrailerMechanicalAdjustableFrame(int id)
-        {
-            var mechanicalAdjustableFrame = await _dbContext.KrpanMechanicalAdjustableFrame
-                .FirstOrDefaultAsync(b => b.KrpanTrailer.Any(t => t.Id == id));
-
-            return Ok(mechanicalAdjustableFrame);
-        }
     }
 }

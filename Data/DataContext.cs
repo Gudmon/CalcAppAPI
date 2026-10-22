@@ -78,7 +78,7 @@ namespace CalcAppAPI.Data
 
         // KRPAN
         public DbSet<KrpanTrailer> KrpanTrailer { get; set; }
-        public DbSet<KrpanHydraulicAdjustableChassis> KrpanHydraulicAdjustableChassis { get; set; }
+        public DbSet<KrpanFrame> KrpanFrame { get; set; }
         public DbSet<KrpanTrailerLamp> KrpanTrailerLamp { get; set; }
         public DbSet<KrpanTrailerBrakeLamp> KrpanTrailerBrakeLamp { get; set; }
         public DbSet<KrpanChock> KrpanChock { get; set; }
@@ -105,7 +105,6 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanPlato> KrpanPlato { get; set; }
         public DbSet<KrpanExtension> KrpanExtension { get; set; }
         public DbSet<KrpanGrappleLocation> KrpanGrappleLocation { get; set; }
-        public DbSet<KrpanMechanicalAdjustableFrame> KrpanMechanicalAdjustableFrame { get; set; }
         public DbSet<KrpanCrane> KrpanCrane { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

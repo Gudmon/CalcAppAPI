@@ -35,6 +35,6 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Trailer.Options
     public class KrpanPlatoDto : SimpleOptionDto { }
     public class KrpanExtensionDto : SimpleOptionDto { }
     public class KrpanGrappleLocationDto : SimpleOptionDto { }
-    public class KrpanMechanicalAdjustableFrameDto : SimpleOptionDto { }
+    public class KrpanFrameDto : SimpleOptionDto { }
     public class KrpanCardanShaftSimpleDto : SimpleOptionDto { }
 }
