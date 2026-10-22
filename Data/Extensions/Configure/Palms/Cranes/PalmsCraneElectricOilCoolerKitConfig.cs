@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
 {
-    public static class PalmsCraneElectricOilCoolerKit
+    public static class PalmsCraneElectricOilCoolerKitConfig
     {
         public static void ConfigureMultiplePalmsCraneElectricOilCoolerKits(this ModelBuilder modelBuilder)
         {
@@ -11,7 +11,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Palms.Cranes
                new CraneElectricOilCoolerKit
                {
                    Id = 1,
-                   Name = "Szabványos olajhűtő csomag elektromos csatlakozással a traktorhoz",
+                   Name = "Nagy olajhűtő csomag elektromos csatlakozással a traktorhoz",
                    Code = "T5",
                    Price = "1290",
                    ImageUrls = ["PALMS-crane-electric-oil-cooler-kit-1"]

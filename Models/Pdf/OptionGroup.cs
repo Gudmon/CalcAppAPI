@@ -131,6 +131,7 @@ namespace CalcAppAPI.Models.Pdf
 
         [Display(Name = "Szabványos daru olajhűtő")]
         CraneOilCooler,
+
         [Display(Name = "Nagy daru olajhűtő")]
         CraneElectricOilCoolerKit,
 

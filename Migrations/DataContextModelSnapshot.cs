@@ -2973,7 +2973,7 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             Code = "T5",
                             ImageUrls = "[\"PALMS-crane-electric-oil-cooler-kit-1\"]",
-                            Name = "Szabványos olajhűtő csomag elektromos csatlakozással a traktorhoz",
+                            Name = "Nagy olajhűtő csomag elektromos csatlakozással a traktorhoz",
                             Price = "1290"
                         });
                 });
