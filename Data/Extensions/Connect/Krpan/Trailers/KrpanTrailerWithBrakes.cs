@@ -15,41 +15,56 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                     .HasData
                     (
                         //KRPAN GP 8 DF
-                        new { KrpanTrailerId = 1, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 1, KrpanBrakeId = 2 },
+                        new { KrpanTrailerId = 1, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 1, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 1, KrpanBrakeId = 9 },
+                        new { KrpanTrailerId = 1, KrpanBrakeId = 10 },
 
                         //KRPAN GP 9 DF
-                        new { KrpanTrailerId = 2, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 2, KrpanBrakeId = 2 },
+                        new { KrpanTrailerId = 2, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 2, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 2, KrpanBrakeId = 10 },
 
                         //KRPAN GP 10 DF
-                        new { KrpanTrailerId = 3, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 3, KrpanBrakeId = 2 },
+                        new { KrpanTrailerId = 3, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 3, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 3, KrpanBrakeId = 10 },
 
                         //KRPAN GP 12 DF
-                        new { KrpanTrailerId = 4, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 4, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 4, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 4, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 4, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 4, KrpanBrakeId = 10 },
 
                         //KRPAN GP 14 DF
-                        new { KrpanTrailerId = 5, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 5, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 5, KrpanBrakeId = 3 },
+                        new { KrpanTrailerId = 5, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 5, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 5, KrpanBrakeId = 10 },
 
                         //KRPAN GP 11 D
-                        new { KrpanTrailerId = 6, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 6, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 6, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 6, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 6, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 6, KrpanBrakeId = 10 },
+                        new { KrpanTrailerId = 6, KrpanBrakeId = 11 },
 
                         //KRPAN GP 13 D
-                        new { KrpanTrailerId = 7, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 7, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 7, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 7, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 7, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 7, KrpanBrakeId = 10 },
+                        new { KrpanTrailerId = 7, KrpanBrakeId = 11 },
 
                         //KRPAN GP 15 D
-                        new { KrpanTrailerId = 8, KrpanBrakeId = 1 },
                         new { KrpanTrailerId = 8, KrpanBrakeId = 2 },
-                        new { KrpanTrailerId = 8, KrpanBrakeId = 4 },
+                        new { KrpanTrailerId = 8, KrpanBrakeId = 7 },
+                        new { KrpanTrailerId = 8, KrpanBrakeId = 8 },
+                        new { KrpanTrailerId = 8, KrpanBrakeId = 10 },
+                        new { KrpanTrailerId = 8, KrpanBrakeId = 11 },
 
                         //KRPAN GP 6 XS
                         new { KrpanTrailerId = 9, KrpanBrakeId = 1 },

@@ -1742,15 +1742,15 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 3,
                             Code = "",
-                            Name = "Hidraulikus támasztóláb",
-                            Price = "519,17"
+                            Name = "Mechanikus támasztóláb - állítható",
+                            Price = "0"
                         },
                         new
                         {
                             Id = 4,
                             Code = "",
-                            Name = "Mechanikus támasztóláb - állítható",
-                            Price = "0"
+                            Name = "Hidraulikus támasztóláb",
+                            Price = "519,17"
                         });
                 });
 
@@ -11995,18 +11995,28 @@ namespace CalcAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 1
-                        },
-                        new
-                        {
                             KrpanBrakeId = 2,
                             KrpanTrailerId = 1
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 2
+                            KrpanBrakeId = 7,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 9,
+                            KrpanTrailerId = 1
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 1
                         },
                         new
                         {
@@ -12015,8 +12025,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 3
+                            KrpanBrakeId = 7,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 2
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 2
                         },
                         new
                         {
@@ -12025,8 +12045,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 4
+                            KrpanBrakeId = 7,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 3
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 3
                         },
                         new
                         {
@@ -12035,13 +12065,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 3,
+                            KrpanBrakeId = 7,
                             KrpanTrailerId = 4
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 5
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 4
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 4
                         },
                         new
                         {
@@ -12050,13 +12085,18 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 3,
+                            KrpanBrakeId = 7,
                             KrpanTrailerId = 5
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 6
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 5
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 5
                         },
                         new
                         {
@@ -12065,13 +12105,23 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 4,
+                            KrpanBrakeId = 7,
                             KrpanTrailerId = 6
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
-                            KrpanTrailerId = 7
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 11,
+                            KrpanTrailerId = 6
                         },
                         new
                         {
@@ -12080,22 +12130,47 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanBrakeId = 4,
+                            KrpanBrakeId = 7,
                             KrpanTrailerId = 7
                         },
                         new
                         {
-                            KrpanBrakeId = 1,
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 11,
+                            KrpanTrailerId = 7
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 2,
                             KrpanTrailerId = 8
                         },
                         new
                         {
-                            KrpanBrakeId = 2,
+                            KrpanBrakeId = 7,
                             KrpanTrailerId = 8
                         },
                         new
                         {
-                            KrpanBrakeId = 4,
+                            KrpanBrakeId = 8,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 10,
+                            KrpanTrailerId = 8
+                        },
+                        new
+                        {
+                            KrpanBrakeId = 11,
                             KrpanTrailerId = 8
                         },
                         new
