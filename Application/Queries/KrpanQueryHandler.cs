@@ -248,6 +248,17 @@ namespace CalcAppAPI.Application.Queries
 
         public async Task<IEnumerable<KrpanTrailerCardOverviewDto>> GetTrailersAsync(CancellationToken cancellationToken)
         {
+            var desiredOrder = new List<string>
+            {
+                "GP 6 XS", "GP 7 XS", "GP 8 XS", "GP 8 S", "GP 9 S", "GP 10 S",
+                "GP 8 DF", "GP 9 DF", "GP 10 DF", "GP 12 DF", "GP 14 DF",
+                "GP 11 D", "GP 13 D", "GP 15 D"
+            };
+
+            var orderMap = desiredOrder
+                .Select((name, index) => new { name, index })
+                .ToDictionary(x => x.name, x => x.index);
+
             var trailers = await _context.KrpanTrailer
                 .AsNoTracking()
                 .Select(t => new KrpanTrailerCardOverviewDto
@@ -262,7 +273,9 @@ namespace CalcAppAPI.Application.Queries
                 })
                 .ToListAsync(cancellationToken);
 
-            return trailers;
+            return trailers
+                .OrderBy(t => orderMap.TryGetValue(t.Name, out var i) ? i : int.MaxValue)
+                .ToList();
         }
 
         public async Task<KrpanTrailerDetailsDto> GetTrailerAsync(int id, CancellationToken cancellationToken)
