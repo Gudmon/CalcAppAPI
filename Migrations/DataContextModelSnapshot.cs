@@ -13133,17 +13133,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanPropulsionId = 1,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
                             KrpanPropulsionId = 2,
-                            KrpanTrailerId = 5
-                        },
-                        new
-                        {
-                            KrpanPropulsionId = 3,
                             KrpanTrailerId = 5
                         },
                         new
@@ -13178,17 +13168,7 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanPropulsionId = 1,
-                            KrpanTrailerId = 8
-                        },
-                        new
-                        {
                             KrpanPropulsionId = 2,
-                            KrpanTrailerId = 8
-                        },
-                        new
-                        {
-                            KrpanPropulsionId = 3,
                             KrpanTrailerId = 8
                         },
                         new

@@ -21,9 +21,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         new { KrpanTrailerId = 4, KrpanPropulsionId = 4 },
 
                         //KRPAN GP 14 DF
-                        new { KrpanTrailerId = 5, KrpanPropulsionId = 1 },
                         new { KrpanTrailerId = 5, KrpanPropulsionId = 2 },
-                        new { KrpanTrailerId = 5, KrpanPropulsionId = 3 },
                         new { KrpanTrailerId = 5, KrpanPropulsionId = 4 },
 
                         //KRPAN GP 11 D
@@ -36,9 +34,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         new { KrpanTrailerId = 7, KrpanPropulsionId = 4 },
 
                         //KRPAN GP 15 D
-                        new { KrpanTrailerId = 8, KrpanPropulsionId = 1 },
                         new { KrpanTrailerId = 8, KrpanPropulsionId = 2 },
-                        new { KrpanTrailerId = 8, KrpanPropulsionId = 3 },
                         new { KrpanTrailerId = 8, KrpanPropulsionId = 4 }
                     )
                 );
