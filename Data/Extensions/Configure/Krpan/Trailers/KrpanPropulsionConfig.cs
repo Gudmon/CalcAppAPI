@@ -11,30 +11,30 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Trailers
                 new KrpanPropulsion
                 {
                     Id = 1,
-                    Name = "2 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)",
+                    Name = "2WD belső dobos hajtás (2WD BB4)",
                     Code = "",
-                    Price = "9875",
+                    Price = "9681,67",
                 },
                 new KrpanPropulsion
                 {
                     Id = 2,
-                    Name = "2 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)",
+                    Name = "2WD belső dobos hajtás (2WD BB5)",
                     Code = "",
-                    Price = "12355",
+                    Price = "12111,67",
                 },
                 new KrpanPropulsion
                 {
                     Id = 3,
-                    Name = "4 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)",
+                    Name = "Dupla belső dobos hajtás (4WD BB4)",
                     Code = "",
-                    Price = "21210",
+                    Price = "19363,34",
                 },
                 new KrpanPropulsion
                 {
                     Id = 4,
-                    Name = "4 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)",
+                    Name = "Dupla belső dobos hajtás (4WD BB5)",
                     Code = "",
-                    Price = "26165",
+                    Price = "24223,34",
                 }
                 );
         }

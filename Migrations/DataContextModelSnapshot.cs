@@ -589,8 +589,8 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "Proporcionálisan állítható meghajtás (BB5 esetén kötelező)",
-                            Price = "2235"
+                            Name = "Proporcionális hajtássebesség-állítás",
+                            Price = "2187,50"
                         });
                 });
 
@@ -1387,29 +1387,29 @@ namespace CalcAppAPI.Migrations
                         {
                             Id = 1,
                             Code = "",
-                            Name = "2 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)",
-                            Price = "9875"
+                            Name = "2WD belső dobos hajtás (2WD BB4)",
+                            Price = "9681,67"
                         },
                         new
                         {
                             Id = 2,
                             Code = "",
-                            Name = "2 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)",
-                            Price = "12355"
+                            Name = "2WD belső dobos hajtás (2WD BB5)",
+                            Price = "12111,67"
                         },
                         new
                         {
                             Id = 3,
                             Code = "",
-                            Name = "4 WD (BB4, 400/60-15,5 vagy 500/50-17 gumimérethez)",
-                            Price = "21210"
+                            Name = "Dupla belső dobos hajtás (4WD BB4)",
+                            Price = "19363,34"
                         },
                         new
                         {
                             Id = 4,
                             Code = "",
-                            Name = "4 WD (BB5, 550/45-22,5 vagy 400/55-22,5 gumimérethez)",
-                            Price = "26165"
+                            Name = "Dupla belső dobos hajtás (4WD BB5)",
+                            Price = "24223,34"
                         });
                 });
 
@@ -8092,7 +8092,6 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-8-DF-1\",\"GP-8-DF-2\"]",
-                            KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
                             KrpanBaleTransportPlatformId = 1,
@@ -8127,7 +8126,6 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-9-DF-1\",\"GP-9-DF-2\"]",
-                            KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
                             KrpanBaleTransportPlatformId = 1,
@@ -8162,7 +8160,6 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-10-DF-1\",\"GP-10-DF-2\"]",
-                            KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 2,
                             KrpanBBoxId = 1,
                             KrpanBaleTransportPlatformId = 1,
@@ -8267,7 +8264,6 @@ namespace CalcAppAPI.Migrations
                             DrawbarAngle = "40",
                             FrameSteeringCylinders = "2",
                             ImageUrls = "[\"GP-11-D-1\",\"GP-11-D-2\"]",
-                            KrpanAdjustableDriveId = 1,
                             KrpanAxeHolderId = 1,
                             KrpanBBoxId = 2,
                             KrpanBaleTransportPlatformId = 2,
@@ -13158,11 +13154,6 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanPropulsionId = 1,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanPropulsionId = 2,
                             KrpanTrailerId = 6
                         },
                         new

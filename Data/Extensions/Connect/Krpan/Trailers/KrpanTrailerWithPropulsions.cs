@@ -28,7 +28,6 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
 
                         //KRPAN GP 11 D
                         new { KrpanTrailerId = 6, KrpanPropulsionId = 1 },
-                        new { KrpanTrailerId = 6, KrpanPropulsionId = 2 },
 
                         //KRPAN GP 13 D
                         new { KrpanTrailerId = 7, KrpanPropulsionId = 1 },
