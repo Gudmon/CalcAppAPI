@@ -13466,16 +13466,6 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 9
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 9
-                        },
-                        new
-                        {
                             KrpanCraneId = 7,
                             KrpanTrailerId = 10
                         },
@@ -13486,32 +13476,12 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 10
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
-                            KrpanTrailerId = 10
-                        },
-                        new
-                        {
                             KrpanCraneId = 7,
                             KrpanTrailerId = 11
                         },
                         new
                         {
                             KrpanCraneId = 8,
-                            KrpanTrailerId = 11
-                        },
-                        new
-                        {
-                            KrpanCraneId = 1,
-                            KrpanTrailerId = 11
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
                             KrpanTrailerId = 11
                         },
                         new
