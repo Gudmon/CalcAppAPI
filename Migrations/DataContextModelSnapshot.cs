@@ -13331,32 +13331,32 @@ namespace CalcAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            KrpanCraneId = 1,
+                            KrpanCraneId = 9,
                             KrpanTrailerId = 1
                         },
                         new
                         {
-                            KrpanCraneId = 3,
+                            KrpanCraneId = 11,
                             KrpanTrailerId = 1
                         },
                         new
                         {
-                            KrpanCraneId = 1,
+                            KrpanCraneId = 9,
                             KrpanTrailerId = 2
                         },
                         new
                         {
-                            KrpanCraneId = 3,
+                            KrpanCraneId = 11,
                             KrpanTrailerId = 2
                         },
                         new
                         {
-                            KrpanCraneId = 1,
+                            KrpanCraneId = 9,
                             KrpanTrailerId = 3
                         },
                         new
                         {
-                            KrpanCraneId = 3,
+                            KrpanCraneId = 11,
                             KrpanTrailerId = 3
                         },
                         new
@@ -13401,17 +13401,17 @@ namespace CalcAppAPI.Migrations
                         },
                         new
                         {
-                            KrpanCraneId = 1,
+                            KrpanCraneId = 10,
+                            KrpanTrailerId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneId = 12,
                             KrpanTrailerId = 6
                         },
                         new
                         {
                             KrpanCraneId = 2,
-                            KrpanTrailerId = 6
-                        },
-                        new
-                        {
-                            KrpanCraneId = 3,
                             KrpanTrailerId = 6
                         },
                         new
@@ -13462,6 +13462,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanCraneId = 8,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
                             KrpanTrailerId = 9
                         },
                         new
@@ -13472,6 +13482,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanCraneId = 8,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
                             KrpanTrailerId = 10
                         },
                         new
@@ -13482,6 +13502,16 @@ namespace CalcAppAPI.Migrations
                         new
                         {
                             KrpanCraneId = 8,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneId = 1,
+                            KrpanTrailerId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneId = 3,
                             KrpanTrailerId = 11
                         },
                         new

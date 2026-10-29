@@ -15,16 +15,16 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                     .HasData
                     (
                         //KRPAN GP 8 DF
-                        new { KrpanTrailerId = 1, KrpanCraneId = 1 },
-                        new { KrpanTrailerId = 1, KrpanCraneId = 3 },
+                        new { KrpanTrailerId = 1, KrpanCraneId = 9 },
+                        new { KrpanTrailerId = 1, KrpanCraneId = 11 },
 
                         //KRPAN GP 9 DF
-                        new { KrpanTrailerId = 2, KrpanCraneId = 1 },
-                        new { KrpanTrailerId = 2, KrpanCraneId = 3 },
+                        new { KrpanTrailerId = 2, KrpanCraneId = 9 },
+                        new { KrpanTrailerId = 2, KrpanCraneId = 11 },
 
                         //KRPAN GP 10 DF
-                        new { KrpanTrailerId = 3, KrpanCraneId = 1 },
-                        new { KrpanTrailerId = 3, KrpanCraneId = 3 },
+                        new { KrpanTrailerId = 3, KrpanCraneId = 9 },
+                        new { KrpanTrailerId = 3, KrpanCraneId = 11 },
 
                         //KRPAN GP 12 DF
                         new { KrpanTrailerId = 4, KrpanCraneId = 2 },
@@ -39,9 +39,9 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         new { KrpanTrailerId = 5, KrpanCraneId = 6 },
 
                         //KRPAN GP 11 D
-                        new { KrpanTrailerId = 6, KrpanCraneId = 1 },
+                        new { KrpanTrailerId = 6, KrpanCraneId = 10 },
+                        new { KrpanTrailerId = 6, KrpanCraneId = 12 },
                         new { KrpanTrailerId = 6, KrpanCraneId = 2 },
-                        new { KrpanTrailerId = 6, KrpanCraneId = 3 },
 
                         //KRPAN GP 13 D
                         new { KrpanTrailerId = 7, KrpanCraneId = 2 },
@@ -58,14 +58,20 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Trailers
                         //KRPAN GP 6 XS
                         new { KrpanTrailerId = 9, KrpanCraneId = 7 },
                         new { KrpanTrailerId = 9, KrpanCraneId = 8 },
+                        new { KrpanTrailerId = 9, KrpanCraneId = 1 },
+                        new { KrpanTrailerId = 9, KrpanCraneId = 3 },
 
                         //KRPAN GP 7 XS
                         new { KrpanTrailerId = 10, KrpanCraneId = 7 },
                         new { KrpanTrailerId = 10, KrpanCraneId = 8 },
+                        new { KrpanTrailerId = 10, KrpanCraneId = 1 },
+                        new { KrpanTrailerId = 10, KrpanCraneId = 3 },
 
                         //KRPAN GP 8 XS
                         new { KrpanTrailerId = 11, KrpanCraneId = 7 },
                         new { KrpanTrailerId = 11, KrpanCraneId = 8 },
+                        new { KrpanTrailerId = 11, KrpanCraneId = 1 },
+                        new { KrpanTrailerId = 11, KrpanCraneId = 3 },
 
                         //KRPAN GP 8 S
                         new { KrpanTrailerId = 12, KrpanCraneId = 7 },
