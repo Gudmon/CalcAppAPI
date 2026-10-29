@@ -561,6 +561,234 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneControl", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanCraneControl");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "Mechanikus EURO vezérlés ergonomikus karokkal",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Description = "",
+                            Name = "Keresztkaros vezérlés el. ON/OFF funkciókkal",
+                            Price = "702,50"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "",
+                            Description = "BASIC csomaggal elérhető",
+                            Name = "Proporcionális hidraulikus (alacsony nyomású) Joystick vezérlés",
+                            Price = "2469,17"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "",
+                            Description = "BASIC csomaggal elérhető",
+                            Name = "Proporcionális elektromos joystick vezérlés",
+                            Price = "4022,50"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "",
+                            Description = "PROFI 1 csomaggal elérhető",
+                            Name = "LX6 alacsony nyomású szelepek",
+                            Price = "4656,67"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "",
+                            Description = "PROFI 1 csomaggal elérhető",
+                            Name = "LX6 elektroszelepek",
+                            Price = "6210,00"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "",
+                            Description = "PROFI+ csomaggal elérhető",
+                            Name = "LX6 alacsony nyomású (LS) szelepek",
+                            Price = "4656,67"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "",
+                            Description = "PROFI+ csomaggal elérhető",
+                            Name = "LX6 elektro (LS) szelepek",
+                            Price = "6210,00"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "",
+                            Description = "PROFI 1 / PROFI 2 csomaggal elérhető",
+                            Name = "LX6 alacsony nyomású szelepek",
+                            Price = "4656,67"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "",
+                            Description = "PROFI 1 / PROFI 2 csomaggal elérhető",
+                            Name = "LX6 elektroszelepek",
+                            Price = "6210,00"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "",
+                            Description = "",
+                            Name = "Proporcionális hidraulikus (alacsony nyomású) Joystick vezérlés",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Code = "",
+                            Description = "BASIC csomaggal elérhető",
+                            Name = "Vezérlés mechanikus EURO karokkal",
+                            Price = "-1235,00"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Code = "",
+                            Description = "BASIC csomaggal elérhető",
+                            Name = "Keresztkaros vezérlés el. ON/OFF funkciókkal",
+                            Price = "-532,50"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Code = "",
+                            Description = "BASIC/ SEMI PROFI csomaggal elérhető",
+                            Name = "Proporcionális elektromos joystick vezérlés",
+                            Price = "1552,50"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Code = "",
+                            Description = "SEMI PROFI csomaggal elérhető",
+                            Name = "Proporcionális hidraulikus (alacsony nyomású) osztott Joystick vezérlés",
+                            Price = "1045,00"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Code = "",
+                            Description = "SEMI PROFI csomaggal elérhető",
+                            Name = "Proporcionális elektromos osztott joystick vezérlés",
+                            Price = "2597,50"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Code = "",
+                            Description = "PROFI 1 / PROFI 2 csomaggal elérhető",
+                            Name = "LX6 alacsony nyomású szelepek",
+                            Price = "2187,50"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Code = "",
+                            Description = "PROFI 1 / PROFI 2 csomaggal elérhető",
+                            Name = "LX6 elektroszelepek",
+                            Price = "3740,00"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Code = "",
+                            Description = "PROFI+ csomaggal elérhető",
+                            Name = "LX6 alacsony nyomású (LS) szelepek",
+                            Price = "1231,67"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Code = "",
+                            Description = "PROFI+ csomaggal elérhető",
+                            Name = "LX6 elektro (LS) szelepek",
+                            Price = "2784,17"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanCraneSlewingDrive");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "Olajfürdős daruforgató hajtómű",
+                            Price = "0"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanAdjustableDrive", b =>
                 {
                     b.Property<int>("Id")
@@ -7700,6 +7928,9 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("KrpanCraneSlewingDriveId")
+                        .HasColumnType("int");
+
                     b.Property<string>("LiftCapacityAtFourMeters")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -7758,6 +7989,8 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("KrpanCraneSlewingDriveId");
+
                     b.ToTable("KrpanCrane");
 
                     b.HasData(
@@ -7773,7 +8006,7 @@ namespace CalcAppAPI.Migrations
                             Name = "GD 6,6 K",
                             NetLiftingTorque = "40",
                             OilQuantityInTank = "70",
-                            Price = "13715",
+                            Price = "14051,77",
                             SlewCylinders = "4",
                             SlewTorque = "16",
                             SlewingAngle = "375",
@@ -7793,7 +8026,7 @@ namespace CalcAppAPI.Migrations
                             Name = "GD 7,4 K",
                             NetLiftingTorque = "63",
                             OilQuantityInTank = "100",
-                            Price = "24475",
+                            Price = "23994,17",
                             SlewCylinders = "4",
                             SlewTorque = "22",
                             SlewingAngle = "380",
@@ -7813,7 +8046,7 @@ namespace CalcAppAPI.Migrations
                             Name = "GD 7,6 K",
                             NetLiftingTorque = "39",
                             OilQuantityInTank = "70",
-                            Price = "15335",
+                            Price = "15708,96",
                             SlewCylinders = "4",
                             SlewTorque = "16",
                             SlewingAngle = "375",
@@ -7920,6 +8153,86 @@ namespace CalcAppAPI.Migrations
                             SystemPressure = "",
                             TelescopicStages = "",
                             Weight = ""
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BrutLiftingTorque = "50",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "1020",
+                            LiftCapacityAtMaxReach = "600",
+                            MaxReach = "6.6",
+                            MaxReachWithGrabOpen = "7.2",
+                            Name = "GD 6,6 K",
+                            NetLiftingTorque = "40",
+                            OilQuantityInTank = "70",
+                            Price = "14051,77",
+                            SlewCylinders = "4",
+                            SlewTorque = "16",
+                            SlewingAngle = "375",
+                            SystemPressure = "220",
+                            TelescopicStages = "1",
+                            Weight = "900"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BrutLiftingTorque = "50",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "1020",
+                            LiftCapacityAtMaxReach = "600",
+                            MaxReach = "6.6",
+                            MaxReachWithGrabOpen = "7.2",
+                            Name = "GD 6,6 K",
+                            NetLiftingTorque = "40",
+                            OilQuantityInTank = "70",
+                            Price = "17326,67",
+                            SlewCylinders = "4",
+                            SlewTorque = "16",
+                            SlewingAngle = "375",
+                            SystemPressure = "220",
+                            TelescopicStages = "1",
+                            Weight = "900"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            BrutLiftingTorque = "49",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "1020",
+                            LiftCapacityAtMaxReach = "500",
+                            MaxReach = "7.6",
+                            MaxReachWithGrabOpen = "8.2",
+                            Name = "GD 7,6 K",
+                            NetLiftingTorque = "39",
+                            OilQuantityInTank = "70",
+                            Price = "15708,96",
+                            SlewCylinders = "4",
+                            SlewTorque = "16",
+                            SlewingAngle = "375",
+                            SystemPressure = "220",
+                            TelescopicStages = "1",
+                            Weight = "930"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            BrutLiftingTorque = "49",
+                            Description = "",
+                            LiftCapacityAtFourMeters = "1020",
+                            LiftCapacityAtMaxReach = "500",
+                            MaxReach = "7.6",
+                            MaxReachWithGrabOpen = "8.2",
+                            Name = "GD 7,6 K",
+                            NetLiftingTorque = "39",
+                            OilQuantityInTank = "70",
+                            Price = "18912,50",
+                            SlewCylinders = "4",
+                            SlewTorque = "16",
+                            SlewingAngle = "375",
+                            SystemPressure = "220",
+                            TelescopicStages = "1",
+                            Weight = "930"
                         });
                 });
 
@@ -12567,6 +12880,428 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("KrpanCraneKrpanCraneControl", b =>
+                {
+                    b.Property<int>("KrpanCraneControlsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanCraneId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanCraneControlsId", "KrpanCraneId");
+
+                    b.HasIndex("KrpanCraneId");
+
+                    b.ToTable("KrpanCraneControlsCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 1
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 1
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 12,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 13,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 11,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 14,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 15,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 16,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 17,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 18,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 19,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 20,
+                            KrpanCraneId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 3
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 3
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 11,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 12,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 13,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 14,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 15,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 16,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 17,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 18,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 19,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 20,
+                            KrpanCraneId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 11,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 12,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 13,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 14,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 15,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 16,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 17,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 18,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 19,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 20,
+                            KrpanCraneId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 11,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 12,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 13,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 14,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 15,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 16,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 17,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 18,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 19,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 20,
+                            KrpanCraneId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 7
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 7
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 3,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 4,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 5,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 6,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 7,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 8,
+                            KrpanCraneId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 3,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 4,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 9,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 10,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 7,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 8,
+                            KrpanCraneId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 3,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 4,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 5,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 6,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 7,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 8,
+                            KrpanCraneId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 1,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 2,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 3,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 4,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 9,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 10,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 7,
+                            KrpanCraneId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneControlsId = 8,
+                            KrpanCraneId = 12
+                        });
+                });
+
             modelBuilder.Entity("KrpanCraneKrpanTrailer", b =>
                 {
                     b.Property<int>("KrpanCraneId")
@@ -16680,6 +17415,15 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("WoodSorter");
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", "KrpanCraneSlewingDrive")
+                        .WithMany("KrpanCranes")
+                        .HasForeignKey("KrpanCraneSlewingDriveId");
+
+                    b.Navigation("KrpanCraneSlewingDrive");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanAdjustableDrive", "KrpanAdjustableDrive")
@@ -17016,6 +17760,21 @@ namespace CalcAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("KrpanCraneKrpanCraneControl", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneControl", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanCraneControlsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanCraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("KrpanCraneKrpanTrailer", b =>
                 {
                     b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
@@ -17276,6 +18035,11 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Cranes");
 
                     b.Navigation("Trailer");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", b =>
+                {
+                    b.Navigation("KrpanCranes");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanAdjustableDrive", b =>

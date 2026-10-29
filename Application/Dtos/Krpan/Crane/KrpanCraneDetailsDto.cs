@@ -1,4 +1,5 @@
 using CalcAppAPI.Application.Dtos.Krpan.Trailer;
+using CalcAppAPI.Application.Dtos.Krpan.Crane.Options;
 
 namespace CalcAppAPI.Application.Dtos.Krpan.Crane
 {
@@ -21,6 +22,7 @@ namespace CalcAppAPI.Application.Dtos.Krpan.Crane
         public string OilQuantityInTank { get; set; }
         public string SlewCylinders { get; set; }
         public string TelescopicStages { get; set; }
+        public KrpanCraneSlewingDriveDto? SlewingDrive { get; set; }
         public IEnumerable<KrpanTrailerCardOverviewDto> Trailers { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using CalcAppAPI.Models.Machine.Krpan.Trailers;
+﻿using CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers;
+using CalcAppAPI.Models.Machine.Krpan.Trailers;
 
 namespace CalcAppAPI.Models.Machine.Krpan.Cranes
 {
@@ -22,5 +24,8 @@ namespace CalcAppAPI.Models.Machine.Krpan.Cranes
         public string SlewCylinders { get; set; }
         public string TelescopicStages { get; set; }
         public IEnumerable<KrpanTrailer> KrpanTrailer { get; set; }
+        public IEnumerable<KrpanCraneControl> KrpanCraneControls { get; set; }
+        public KrpanCraneSlewingDrive? KrpanCraneSlewingDrive { get; set; }
+        public int? KrpanCraneSlewingDriveId { get; set; }
     }
 }
