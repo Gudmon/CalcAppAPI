@@ -751,6 +751,44 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneControlLeverProtection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanCraneControlLeverProtection");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "Vezérlőkar védelem",
+                            Price = "0"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", b =>
                 {
                     b.Property<int>("Id")
@@ -785,6 +823,44 @@ namespace CalcAppAPI.Migrations
                             Code = "",
                             Description = "",
                             Name = "Olajfürdős daruforgató hajtómű",
+                            Price = "0"
+                        });
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneTractorHydraulics", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanCraneTractorHydraulics");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "Traktor hidraulika",
                             Price = "0"
                         });
                 });
@@ -7928,7 +8004,13 @@ namespace CalcAppAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("KrpanCraneControlLeverProtectionId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("KrpanCraneSlewingDriveId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("KrpanCraneTractorHydraulicsId")
                         .HasColumnType("int");
 
                     b.Property<string>("LiftCapacityAtFourMeters")
@@ -7989,7 +8071,11 @@ namespace CalcAppAPI.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("KrpanCraneControlLeverProtectionId");
+
                     b.HasIndex("KrpanCraneSlewingDriveId");
+
+                    b.HasIndex("KrpanCraneTractorHydraulicsId");
 
                     b.ToTable("KrpanCrane");
 
@@ -7999,7 +8085,9 @@ namespace CalcAppAPI.Migrations
                             Id = 1,
                             BrutLiftingTorque = "50",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "600",
                             MaxReach = "6.6",
@@ -8020,7 +8108,9 @@ namespace CalcAppAPI.Migrations
                             Id = 2,
                             BrutLiftingTorque = "80",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1860",
                             LiftCapacityAtMaxReach = "850",
                             MaxReach = "7.4",
@@ -8041,7 +8131,9 @@ namespace CalcAppAPI.Migrations
                             Id = 3,
                             BrutLiftingTorque = "49",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "500",
                             MaxReach = "7.6",
@@ -8062,7 +8154,9 @@ namespace CalcAppAPI.Migrations
                             Id = 4,
                             BrutLiftingTorque = "82",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1670",
                             LiftCapacityAtMaxReach = "680",
                             MaxReach = "8.6",
@@ -8083,7 +8177,9 @@ namespace CalcAppAPI.Migrations
                             Id = 5,
                             BrutLiftingTorque = "82",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1460",
                             LiftCapacityAtMaxReach = "894",
                             MaxReach = "7.2",
@@ -8104,7 +8200,9 @@ namespace CalcAppAPI.Migrations
                             Id = 6,
                             BrutLiftingTorque = "84",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1427",
                             LiftCapacityAtMaxReach = "760",
                             MaxReach = "8.4",
@@ -8125,7 +8223,9 @@ namespace CalcAppAPI.Migrations
                             Id = 7,
                             BrutLiftingTorque = "",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "",
                             LiftCapacityAtMaxReach = "",
                             MaxReach = "",
@@ -8146,7 +8246,9 @@ namespace CalcAppAPI.Migrations
                             Id = 8,
                             BrutLiftingTorque = "",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "",
                             LiftCapacityAtMaxReach = "",
                             MaxReach = "",
@@ -8167,7 +8269,9 @@ namespace CalcAppAPI.Migrations
                             Id = 9,
                             BrutLiftingTorque = "50",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "600",
                             MaxReach = "6.6",
@@ -8188,7 +8292,9 @@ namespace CalcAppAPI.Migrations
                             Id = 10,
                             BrutLiftingTorque = "50",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "600",
                             MaxReach = "6.6",
@@ -8209,7 +8315,9 @@ namespace CalcAppAPI.Migrations
                             Id = 11,
                             BrutLiftingTorque = "49",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "500",
                             MaxReach = "7.6",
@@ -8230,7 +8338,9 @@ namespace CalcAppAPI.Migrations
                             Id = 12,
                             BrutLiftingTorque = "49",
                             Description = "",
+                            KrpanCraneControlLeverProtectionId = 1,
                             KrpanCraneSlewingDriveId = 1,
+                            KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "1020",
                             LiftCapacityAtMaxReach = "500",
                             MaxReach = "7.6",
@@ -17429,11 +17539,23 @@ namespace CalcAppAPI.Migrations
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", b =>
                 {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneControlLeverProtection", "KrpanCraneControlLeverProtection")
+                        .WithMany("KrpanCranes")
+                        .HasForeignKey("KrpanCraneControlLeverProtectionId");
+
                     b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", "KrpanCraneSlewingDrive")
                         .WithMany("KrpanCranes")
                         .HasForeignKey("KrpanCraneSlewingDriveId");
 
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneTractorHydraulics", "KrpanCraneTractorHydraulics")
+                        .WithMany("KrpanCranes")
+                        .HasForeignKey("KrpanCraneTractorHydraulicsId");
+
+                    b.Navigation("KrpanCraneControlLeverProtection");
+
                     b.Navigation("KrpanCraneSlewingDrive");
+
+                    b.Navigation("KrpanCraneTractorHydraulics");
                 });
 
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Krpan.Trailers.KrpanTrailer", b =>
@@ -18049,7 +18171,17 @@ namespace CalcAppAPI.Migrations
                     b.Navigation("Trailer");
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneControlLeverProtection", b =>
+                {
+                    b.Navigation("KrpanCranes");
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", b =>
+                {
+                    b.Navigation("KrpanCranes");
+                });
+
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneTractorHydraulics", b =>
                 {
                     b.Navigation("KrpanCranes");
                 });

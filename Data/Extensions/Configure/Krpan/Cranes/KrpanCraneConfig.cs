@@ -27,7 +27,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -48,7 +50,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "100",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -69,7 +73,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -90,7 +96,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "100",
                     SlewCylinders = "4",
                     TelescopicStages = "2",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -111,7 +119,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "100",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -132,7 +142,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "100",
                     SlewCylinders = "4",
                     TelescopicStages = "2",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -153,7 +165,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "",
                     SlewCylinders = "",
                     TelescopicStages = "",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -174,7 +188,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "",
                     SlewCylinders = "",
                     TelescopicStages = "",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -195,7 +211,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -216,7 +234,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -237,7 +257,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 },
                 new KrpanCrane
                 {
@@ -258,7 +280,9 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan.Cranes
                     OilQuantityInTank = "70",
                     SlewCylinders = "4",
                     TelescopicStages = "1",
-                    KrpanCraneSlewingDriveId = 1
+                    KrpanCraneSlewingDriveId = 1,
+                    KrpanCraneControlLeverProtectionId = 1,
+                    KrpanCraneTractorHydraulicsId = 1
                 }
                 );
         }

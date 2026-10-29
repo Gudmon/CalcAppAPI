@@ -39,5 +39,27 @@ namespace CalcAppAPI.API.Controllers
 
             return Ok(craneControls);
         }
+
+        [HttpGet("cranes/{id}/controllevelprotection")]
+        public async Task<ActionResult<KrpanCraneControlLeverProtection>> GetControlLevelProection(int id)
+        {
+            var controllevelprotection = await _dbContext.KrpanCraneControlLeverProtection
+                .Include(c => c.KrpanCranes)
+                .Where(c => c.KrpanCranes.Any(t => t.Id == id))
+                .FirstOrDefaultAsync();
+
+            return Ok(controllevelprotection);
+        }
+
+        [HttpGet("cranes/{id}/tractorhydraulics")]
+        public async Task<ActionResult<KrpanCraneTractorHydraulics>> GetTractorHydraulics(int id)
+        {
+            var tractorHydraulics = await _dbContext.KrpanCraneTractorHydraulics
+                .Include(t => t.KrpanCranes)
+                .Where(t => t.KrpanCranes.Any(v => v.Id == id))
+                .FirstOrDefaultAsync();
+
+            return Ok(tractorHydraulics);
+        }
     }
 }
