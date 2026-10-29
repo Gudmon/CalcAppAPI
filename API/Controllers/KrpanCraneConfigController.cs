@@ -1,5 +1,6 @@
 ﻿using CalcAppAPI.Data;
 using CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes;
+using CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers;
 using CalcAppAPI.Models.Machine.Configurations.Palms.Cranes;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,16 @@ namespace CalcAppAPI.API.Controllers
                 .FirstOrDefaultAsync();
 
             return Ok(slewingDrive);
+        }
+
+        [HttpGet("trailers/{id}/cranecontrols")]
+        public async Task<ActionResult<IEnumerable<KrpanCraneControl>>> GetKrpanCraneControls(int id)
+        {
+            var craneControls = await _dbContext.KrpanCraneControl
+                .Where(b => b.KrpanCrane.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(craneControls);
         }
     }
 }
