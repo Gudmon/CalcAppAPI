@@ -30,7 +30,7 @@ namespace CalcAppAPI.API.Controllers
             return Ok(slewingDrive);
         }
 
-        [HttpGet("trailers/{id}/cranecontrols")]
+        [HttpGet("cranes/{id}/cranecontrols")]
         public async Task<ActionResult<IEnumerable<KrpanCraneControl>>> GetKrpanCraneControls(int id)
         {
             var craneControls = await _dbContext.KrpanCraneControl
