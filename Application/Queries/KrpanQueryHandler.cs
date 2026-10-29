@@ -325,7 +325,7 @@ namespace CalcAppAPI.Application.Queries
                 })
                 .ToListAsync(cancellationToken);
 
-            return cranes;
+            return cranes.DistinctBy(c => c.Name);
         }
 
         public async Task<KrpanCraneDetailsDto> GetCraneAsync(int id, CancellationToken cancellationToken)
