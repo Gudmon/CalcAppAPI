@@ -19,7 +19,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Cranes
                         new { KrpanCraneId = 1, KrpanCraneControlsId = 2 },
 
                         //KRPAN GD 7,4K (GP 11/13/15 D GP 12/14 DF)
-                        new { KrpanCraneId = 2, KrpanCraneControlsId = 1 },
+                        new { KrpanCraneId = 2, KrpanCraneControlsId = 11 },
                         new { KrpanCraneId = 2, KrpanCraneControlsId = 12 },
                         new { KrpanCraneId = 2, KrpanCraneControlsId = 13 },
                         new { KrpanCraneId = 2, KrpanCraneControlsId = 11 },
