@@ -8,6 +8,7 @@ namespace CalcAppAPI.Data.Extensions.Connect.Krpan.Cranes
         {
             modelBuilder.ConnectKrpanCranesWithCraneControl();
             modelBuilder.ConnectKrpanCranesWithSlewingDrive();
+            modelBuilder.ConnectKrpanCranesWithRotators();
         }
     }
 }

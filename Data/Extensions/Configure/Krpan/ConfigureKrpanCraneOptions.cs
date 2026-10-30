@@ -12,6 +12,7 @@ namespace CalcAppAPI.Data.Extensions.Configure.Krpan
             modelBuilder.ConfigureMultipleKrpanCraneSlewingDrive();
             modelBuilder.ConfigureMultipleKrpanCraneControlLeverProtections();
             modelBuilder.ConfigureMultipleKrpanCraneTractorHydraulics();
+            modelBuilder.ConfigureMultipleKrpanCraneRotators();
         }
     }
 }

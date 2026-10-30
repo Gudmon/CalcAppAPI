@@ -61,5 +61,15 @@ namespace CalcAppAPI.API.Controllers
 
             return Ok(tractorHydraulics);
         }
+
+        [HttpGet("cranes/{id}/rotators")]
+        public async Task<ActionResult<IEnumerable<KrpanCraneRotator>>> GetKrpanCraneRotators(int id)
+        {
+            var craneRotators = await _dbContext.KrpanCraneRotator
+                .Where(r => r.KrpanCranes.Any(t => t.Id == id))
+                .ToListAsync();
+
+            return Ok(craneRotators);
+        }
     }
 }

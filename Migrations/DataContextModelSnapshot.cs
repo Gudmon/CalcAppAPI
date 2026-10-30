@@ -789,6 +789,124 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneRotator", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanCraneRotator");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 30 kN",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 45 kN + karima",
+                            Price = "231,66"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 45 kN SF integrált karimával",
+                            Price = "215,00"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 55 kN + karima",
+                            Price = "566,66"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 55 kN integrált karimával",
+                            Price = "626,67"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 45 kN",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor45 kN SF integrált karimával",
+                            Price = "-16,00"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 55 kN + karima",
+                            Price = "335,00"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Code = "",
+                            Description = "",
+                            Name = "Rotátor 55 kN integrált karimával",
+                            Price = "395,01"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Code = "",
+                            Description = "",
+                            Name = "Indexator GV45 +",
+                            Price = "746,05"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Code = "",
+                            Description = "",
+                            Name = "Indexator GV6 lengéscsillapítóval",
+                            Price = "1592,97"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneSlewingDrive", b =>
                 {
                     b.Property<int>("Id")
@@ -13424,6 +13542,273 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("KrpanCraneKrpanCraneRotator", b =>
+                {
+                    b.Property<int>("KrpanCraneRotatorsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanCranesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanCraneRotatorsId", "KrpanCranesId");
+
+                    b.HasIndex("KrpanCranesId");
+
+                    b.ToTable("KrpanCraneRotators", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 1
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 1
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 1
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 6,
+                            KrpanCranesId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 7,
+                            KrpanCranesId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 8,
+                            KrpanCranesId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 9,
+                            KrpanCranesId = 2
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 3
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 3
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 3
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 6,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 7,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 8,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 9,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 10,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 11,
+                            KrpanCranesId = 4
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 6,
+                            KrpanCranesId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 7,
+                            KrpanCranesId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 8,
+                            KrpanCranesId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 9,
+                            KrpanCranesId = 5
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 6,
+                            KrpanCranesId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 7,
+                            KrpanCranesId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 8,
+                            KrpanCranesId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 9,
+                            KrpanCranesId = 6
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 7
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 7
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 7
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 8
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 4,
+                            KrpanCranesId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 5,
+                            KrpanCranesId = 9
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 4,
+                            KrpanCranesId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 5,
+                            KrpanCranesId = 10
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 4,
+                            KrpanCranesId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 5,
+                            KrpanCranesId = 11
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 1,
+                            KrpanCranesId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 2,
+                            KrpanCranesId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 3,
+                            KrpanCranesId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 4,
+                            KrpanCranesId = 12
+                        },
+                        new
+                        {
+                            KrpanCraneRotatorsId = 5,
+                            KrpanCranesId = 12
+                        });
+                });
+
             modelBuilder.Entity("KrpanCraneKrpanTrailer", b =>
                 {
                     b.Property<int>("KrpanCraneId")
@@ -17905,6 +18290,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
                         .WithMany()
                         .HasForeignKey("KrpanCraneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("KrpanCraneKrpanCraneRotator", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanCraneRotator", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanCraneRotatorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanCranesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

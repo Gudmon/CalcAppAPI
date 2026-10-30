@@ -31,5 +31,6 @@ namespace CalcAppAPI.Models.Machine.Krpan.Cranes
         public int? KrpanCraneControlLeverProtectionId { get; set; }
         public KrpanCraneTractorHydraulics? KrpanCraneTractorHydraulics { get; set; }
         public int? KrpanCraneTractorHydraulicsId { get; set; }
+        public IEnumerable<KrpanCraneRotator> KrpanCraneRotators { get; set; }
     }
 }
