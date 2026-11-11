@@ -983,6 +983,92 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanGrapple", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KrpanGrapple");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 120 karimával",
+                            Price = "0"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 130",
+                            Price = "215,83"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 150",
+                            Price = "403,33"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 23",
+                            Price = "980,00"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 27",
+                            Price = "1.275,83"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 27 BIO",
+                            Price = "2.003,33"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Code = "",
+                            Description = "",
+                            Name = "GR 130",
+                            Price = "0"
+                        });
+                });
+
             modelBuilder.Entity("CalcAppAPI.Models.Machine.Configurations.Krpan.Trailers.KrpanAdjustableDrive", b =>
                 {
                     b.Property<int>("Id")
@@ -8345,19 +8431,19 @@ namespace CalcAppAPI.Migrations
                             KrpanCraneSlewingDriveId = 1,
                             KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "",
-                            LiftCapacityAtMaxReach = "",
-                            MaxReach = "",
+                            LiftCapacityAtMaxReach = "540",
+                            MaxReach = "5.6",
                             MaxReachWithGrabOpen = "",
                             Name = "GD 5,6 K",
-                            NetLiftingTorque = "",
+                            NetLiftingTorque = "37",
                             OilQuantityInTank = "",
                             Price = "10149,47",
                             SlewCylinders = "",
-                            SlewTorque = "",
-                            SlewingAngle = "",
-                            SystemPressure = "",
+                            SlewTorque = "10",
+                            SlewingAngle = "200",
+                            SystemPressure = "190",
                             TelescopicStages = "",
-                            Weight = ""
+                            Weight = "525"
                         },
                         new
                         {
@@ -8368,19 +8454,19 @@ namespace CalcAppAPI.Migrations
                             KrpanCraneSlewingDriveId = 1,
                             KrpanCraneTractorHydraulicsId = 1,
                             LiftCapacityAtFourMeters = "",
-                            LiftCapacityAtMaxReach = "",
-                            MaxReach = "",
+                            LiftCapacityAtMaxReach = "485",
+                            MaxReach = "6.2",
                             MaxReachWithGrabOpen = "",
                             Name = "GD 6,2 K",
-                            NetLiftingTorque = "",
+                            NetLiftingTorque = "37",
                             OilQuantityInTank = "",
                             Price = "11735,30",
                             SlewCylinders = "",
-                            SlewTorque = "",
-                            SlewingAngle = "",
-                            SystemPressure = "",
+                            SlewTorque = "10",
+                            SlewingAngle = "200",
+                            SystemPressure = "190",
                             TelescopicStages = "",
-                            Weight = ""
+                            Weight = "540"
                         },
                         new
                         {
@@ -13809,6 +13895,283 @@ namespace CalcAppAPI.Migrations
                         });
                 });
 
+            modelBuilder.Entity("KrpanCraneKrpanGrapple", b =>
+                {
+                    b.Property<int>("KrpanCranesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("KrpanGrapplesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("KrpanCranesId", "KrpanGrapplesId");
+
+                    b.HasIndex("KrpanGrapplesId");
+
+                    b.ToTable("KrpanGrapplesCrane", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            KrpanCranesId = 1,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 1,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 2,
+                            KrpanGrapplesId = 7
+                        },
+                        new
+                        {
+                            KrpanCranesId = 2,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 2,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 2,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 2,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 3,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 3,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 4,
+                            KrpanGrapplesId = 7
+                        },
+                        new
+                        {
+                            KrpanCranesId = 4,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 4,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 4,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 4,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 5,
+                            KrpanGrapplesId = 7
+                        },
+                        new
+                        {
+                            KrpanCranesId = 5,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 5,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 5,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 5,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 6,
+                            KrpanGrapplesId = 7
+                        },
+                        new
+                        {
+                            KrpanCranesId = 6,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 6,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 6,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 6,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 7,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 7,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 8,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 8,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 9,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 10,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 11,
+                            KrpanGrapplesId = 6
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 1
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 2
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 3
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 4
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 5
+                        },
+                        new
+                        {
+                            KrpanCranesId = 12,
+                            KrpanGrapplesId = 6
+                        });
+                });
+
             modelBuilder.Entity("KrpanCraneKrpanTrailer", b =>
                 {
                     b.Property<int>("KrpanCraneId")
@@ -18305,6 +18668,21 @@ namespace CalcAppAPI.Migrations
                     b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
                         .WithMany()
                         .HasForeignKey("KrpanCranesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("KrpanCraneKrpanGrapple", b =>
+                {
+                    b.HasOne("CalcAppAPI.Models.Machine.Krpan.Cranes.KrpanCrane", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanCranesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CalcAppAPI.Models.Machine.Configurations.Krpan.Cranes.KrpanGrapple", null)
+                        .WithMany()
+                        .HasForeignKey("KrpanGrapplesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -113,6 +113,7 @@ namespace CalcAppAPI.Data
         public DbSet<KrpanCraneControlLeverProtection> KrpanCraneControlLeverProtection { get; set; }
         public DbSet<KrpanCraneTractorHydraulics> KrpanCraneTractorHydraulics { get; set; }
         public DbSet<KrpanCraneRotator> KrpanCraneRotator { get; set; }
+        public DbSet<KrpanGrapple> KrpanGrapple { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

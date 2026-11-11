@@ -71,5 +71,15 @@ namespace CalcAppAPI.API.Controllers
 
             return Ok(craneRotators);
         }
+
+        [HttpGet("cranes/{id}/grapples")]
+        public async Task<ActionResult<IEnumerable<KrpanGrapple>>> GetKrpanGrapples(int id)
+        {
+            var grapples = await _dbContext.KrpanGrapple
+                .Where(g => g.KrpanCranes.Any(c => c.Id == id))
+                .ToListAsync();
+
+            return Ok(grapples);
+        }
     }
 }
