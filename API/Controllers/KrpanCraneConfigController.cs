@@ -72,6 +72,7 @@ namespace CalcAppAPI.API.Controllers
             return Ok(craneRotators);
         }
 
+
         [HttpGet("cranes/{id}/grapples")]
         public async Task<ActionResult<IEnumerable<KrpanGrapple>>> GetKrpanGrapples(int id)
         {
